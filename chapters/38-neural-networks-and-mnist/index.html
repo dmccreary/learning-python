@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Build a Convolutional Neural Network (CNN) to classify MNIST digits — and get an overview of RNNs, LSTMs, and autoencoders">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>38. Neural Networks and MNIST - Learning Python</title>
+        <title>Neural Networks and MNIST - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              38. Neural Networks and MNIST
+              Neural Networks and MNIST
             
           </span>
         </div>
@@ -1164,27 +1164,150 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-convolutions" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Why Convolutions?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#key-cnn-layer-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Key CNN Layer Types
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#dropout-fighting-overfitting" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Dropout — Fighting Overfitting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-complete-cnn-for-mnist" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Complete CNN for MNIST
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-modelcompile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding model.compile()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-with-modelfit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training with model.fit()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluating-with-modelevaluate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluating with model.evaluate()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-predictions-with-modelpredict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making Predictions with model.predict()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature Extraction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-neural-network-architectures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Neural Network Architectures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Neural Network Architectures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recurrent-neural-networks-rnns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recurrent Neural Networks (RNNs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-short-term-memory-lstm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long Short-Term Memory (LSTM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autoencoders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autoencoders
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-the-cnn-shape-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together — The CNN Shape Journey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3267,150 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#why-convolutions" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Why Convolutions?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#key-cnn-layer-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Key CNN Layer Types
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#dropout-fighting-overfitting" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Dropout — Fighting Overfitting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-complete-cnn-for-mnist" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Complete CNN for MNIST
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-modelcompile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding model.compile()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-with-modelfit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training with model.fit()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluating-with-modelevaluate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluating with model.evaluate()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-predictions-with-modelpredict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making Predictions with model.predict()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature Extraction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-neural-network-architectures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Neural Network Architectures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Neural Network Architectures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recurrent-neural-networks-rnns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recurrent Neural Networks (RNNs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-short-term-memory-lstm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long Short-Term Memory (LSTM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autoencoders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autoencoders
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-the-cnn-shape-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together — The CNN Shape Journey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,44 +3435,416 @@
 
 
 <h1 id="neural-networks-and-mnist">Neural Networks and MNIST<a class="headerlink" href="#neural-networks-and-mnist" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Building on the foundations of the previous chapter, this chapter goes deeper
-into neural network architectures. You'll add convolutional layers (Conv2D),
-MaxPooling, dropout regularization, and a Flatten layer. Then you'll compile,
-train, evaluate, and run predictions on your model against the MNIST dataset.
-Brief introductions to CNNs, RNNs, LSTMs, autoencoders, and feature extraction
-round out the chapter and point toward future learning.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 13 concepts from the learning graph:</p>
-<ol>
-<li>Conv2D Convolutional Layers</li>
-<li>MaxPooling2D Pooling Layers</li>
-<li>Dropout Regularization</li>
-<li>Flatten Layer</li>
-<li>model.compile()</li>
-<li>model.fit() Training</li>
-<li>model.evaluate() Testing</li>
-<li>model.predict() Inference</li>
-<li>Convolutional Neural Networks</li>
-<li>Recurrent Networks RNN Overview</li>
-<li>LSTM Networks Overview</li>
-<li>Autoencoders Overview</li>
-<li>Feature Extraction</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../37-machine-learning-foundations/">Chapter 37: Machine Learning Foundations</a></li>
-<li><a href="../34-image-processing-pillow/">Chapter 34: Image Processing with Pillow</a></li>
+<li>Explain what makes a <strong>Convolutional Neural Network (CNN)</strong> different from a dense network</li>
+<li>Understand <strong>Conv2D</strong>, <strong>MaxPooling2D</strong>, <strong>Flatten</strong>, and <strong>Dropout</strong> layers</li>
+<li>Read and write a complete Keras CNN model</li>
+<li>Use <code>model.compile()</code>, <code>model.fit()</code>, <code>model.evaluate()</code>, and <code>model.predict()</code></li>
+<li>Describe at a high level: <strong>RNNs</strong>, <strong>LSTMs</strong>, and <strong>autoencoders</strong></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Dense networks from Chapter 37 treat an image as a flat vector — losing all spatial information.
+Convolutional networks keep the 2-D structure of images and look for <strong>local patterns</strong> like edges, corners, and shapes. This is why CNNs are the dominant architecture for image recognition.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 38!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Welcome to the final chapter of <em>Beginning Python</em>!
+You've come from printing "Hello, World!" all the way to building AI that reads handwritten digits.
+Let's finish strong! Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulkt-stdlib.js"></script>
+
+<h2 id="why-convolutions">Why Convolutions?<a class="headerlink" href="#why-convolutions" title="Permanent link">&para;</a></h2>
+<p>A dense network that takes a 28×28 image flattens it to 784 numbers — it completely discards the fact that pixel (3, 5) is next to pixel (3, 6).</p>
+<p>A <strong>convolutional</strong> layer slides a small filter (called a <strong>kernel</strong>) across the image.
+The kernel detects local patterns — a 3×3 kernel can detect a horizontal edge, a diagonal, or a corner.
+Multiple kernels at the same layer detect different features simultaneously.</p>
+<p>This gives CNNs two huge advantages:
+- <strong>Parameter efficiency</strong> — one kernel is shared across the whole image (vs dense where every pixel has its own weight for every neuron)
+- <strong>Translation invariance</strong> — a kernel that detects a "7" shape in the top-left also recognizes it in the bottom-right, because the same kernel scans everywhere</p>
+<h2 id="key-cnn-layer-types">Key CNN Layer Types<a class="headerlink" href="#key-cnn-layer-types" title="Permanent link">&para;</a></h2>
+<p>Before reading Keras code, here are the four new layer types in this chapter:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Conv2D(filters, kernel_size, activation)</code></td>
+<td>Slide <code>filters</code> kernels of size <code>kernel_size×kernel_size</code> across the image</td>
+</tr>
+<tr>
+<td><code>MaxPooling2D(pool_size)</code></td>
+<td>Shrink the spatial dimensions by taking the max in each region</td>
+</tr>
+<tr>
+<td><code>Dropout(rate)</code></td>
+<td>Randomly set <code>rate</code> fraction of neurons to zero during training — fights overfitting</td>
+</tr>
+<tr>
+<td><code>Flatten()</code></td>
+<td>Convert 2-D feature maps to a 1-D vector before the dense layers</td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>filter</strong> (or feature map) is the output of one kernel applied to the full image.
+<code>Conv2D(32, (3,3))</code> creates 32 different 3×3 kernels — producing 32 feature maps.</p>
+<p><code>MaxPooling2D((2,2))</code> divides the image into 2×2 blocks and keeps only the maximum value in each block — halving the width and height.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below simulates one step of Max Pooling on a tiny 4×4 grid.
+If the pool size is 2×2, how many output values do you expect?
+Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">def max_pool_2d(grid, pool_size=2):
+    rows = len(grid)
+    cols = len(grid[0])
+    out_rows = rows // pool_size
+    out_cols = cols // pool_size
+    result = []
+    for r in range(out_rows):
+        row = []
+        for c in range(out_cols):
+            block = [
+                grid[r*pool_size + dr][c*pool_size + dc]
+                for dr in range(pool_size)
+                for dc in range(pool_size)
+            ]
+            row.append(max(block))
+        result.append(row)
+    return result
+
+# 4x4 feature map (imagine after a convolution):
+feature_map = [
+    [1, 3, 2, 4],
+    [5, 6, 1, 2],
+    [3, 1, 7, 2],
+    [2, 4, 1, 8],
+]
+
+print("Input (4x4):")
+for row in feature_map:
+    print(" ", row)
+
+pooled = max_pool_2d(feature_map, pool_size=2)
+print("\nAfter MaxPooling 2x2:")
+for row in pooled:
+    print(" ", row)
+print(f"Output size: {len(pooled)}x{len(pooled[0])}")
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="dropout-fighting-overfitting">Dropout — Fighting Overfitting<a class="headerlink" href="#dropout-fighting-overfitting" title="Permanent link">&para;</a></h2>
+<p><strong>Dropout</strong> is a simple but powerful regularization technique.</p>
+<p>During each training step, Dropout randomly sets a fraction of neurons' outputs to zero.
+With <code>Dropout(0.5)</code>, half the neurons are randomly silenced each time — so the network can't rely on any single neuron.</p>
+<p>This forces the network to learn <strong>redundant representations</strong> — multiple ways to detect the same feature.
+At inference time (prediction), Dropout is automatically disabled and all neurons participate.</p>
+<div class="highlight"><pre><span></span><code><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>   <span class="c1"># randomly zero out 50% of inputs during training</span>
+<span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>  <span class="c1"># gentler — zero out 25%</span>
+</code></pre></div>
+<h2 id="a-complete-cnn-for-mnist">A Complete CNN for MNIST<a class="headerlink" href="#a-complete-cnn-for-mnist" title="Permanent link">&para;</a></h2>
+<p>Here is a full CNN that achieves <strong>~99% accuracy</strong> on MNIST:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+
+<span class="c1"># Load and prepare data:</span>
+<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+
+<span class="c1"># Add channel dimension: (samples, 28, 28) → (samples, 28, 28, 1)</span>
+<span class="n">x_train</span> <span class="o">=</span> <span class="n">x_train</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">255.0</span>
+<span class="n">x_test</span>  <span class="o">=</span> <span class="n">x_test</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">255.0</span>
+
+<span class="c1"># Build CNN:</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">,</span>
+                        <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
+    <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;softmax&quot;</span><span class="p">)</span>
+<span class="p">])</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="n">optimizer</span><span class="o">=</span><span class="s2">&quot;adam&quot;</span><span class="p">,</span>
+    <span class="n">loss</span><span class="o">=</span><span class="s2">&quot;sparse_categorical_crossentropy&quot;</span><span class="p">,</span>
+    <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;accuracy&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>   <span class="c1"># print layer-by-layer shape info</span>
+</code></pre></div>
+<h2 id="understanding-modelcompile">Understanding <code>model.compile()</code><a class="headerlink" href="#understanding-modelcompile" title="Permanent link">&para;</a></h2>
+<p><code>model.compile()</code> sets three key training choices:</p>
+<ul>
+<li><strong>optimizer</strong> — how weights are updated (e.g., <code>"adam"</code>, <code>"sgd"</code>)</li>
+<li><strong>loss</strong> — what to minimize during training</li>
+<li><code>"sparse_categorical_crossentropy"</code> — for integer class labels (e.g., 0, 1, 2, …, 9)</li>
+<li><code>"categorical_crossentropy"</code> — for one-hot encoded labels</li>
+<li><code>"binary_crossentropy"</code> — for two-class (yes/no) problems</li>
+<li><strong>metrics</strong> — what to track but not optimize (e.g., <code>"accuracy"</code>)</li>
+</ul>
+<h2 id="training-with-modelfit">Training with <code>model.fit()</code><a class="headerlink" href="#training-with-modelfit" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span>
+    <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+    <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.1</span>
+<span class="p">)</span>
+</code></pre></div>
+<p><code>model.fit()</code> returns a <code>history</code> object.
+<code>history.history</code> is a dict with keys <code>"accuracy"</code>, <code>"val_accuracy"</code>, <code>"loss"</code>, <code>"val_loss"</code>.</p>
+<p>You can plot training curves to visualize overfitting:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s2">&quot;accuracy&quot;</span><span class="p">],</span>     <span class="n">label</span><span class="o">=</span><span class="s2">&quot;train accuracy&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s2">&quot;val_accuracy&quot;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;val accuracy&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Training Curves&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="evaluating-with-modelevaluate">Evaluating with <code>model.evaluate()</code><a class="headerlink" href="#evaluating-with-modelevaluate" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">test_loss</span><span class="p">,</span> <span class="n">test_acc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test accuracy: </span><span class="si">{</span><span class="n">test_acc</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>   <span class="c1"># e.g., &quot;99.15%&quot;</span>
+</code></pre></div>
+<p>Call this <strong>once</strong>, at the very end, on data the model has never seen.</p>
+<h2 id="making-predictions-with-modelpredict">Making Predictions with <code>model.predict()</code><a class="headerlink" href="#making-predictions-with-modelpredict" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>   <span class="c1"># probabilities for first 10 images</span>
+<span class="n">predicted_classes</span> <span class="o">=</span> <span class="n">predictions</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicted:&quot;</span><span class="p">,</span> <span class="n">predicted_classes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;True labels:&quot;</span><span class="p">,</span> <span class="n">y_test</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+</code></pre></div>
+<p><code>predictions</code> is an array of shape <code>(10, 10)</code> — 10 images, each with 10 class probabilities.
+<code>.argmax(axis=1)</code> picks the index of the highest probability for each image.</p>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import math
+
+def softmax(vec):
+    exps = [math.exp(v) for v in vec]
+    s = sum(exps)
+    return [e/s for e in exps]
+
+def argmax(lst):
+    return lst.index(max(lst))
+
+# Simulate predictions for 5 "images":
+raw_outputs = [
+    [10.2, 0.1, 0.3, 0.0, 0.5, 0.1, 0.2, 0.0, 0.1, 0.1],  # very sure: class 0
+    [0.1, 0.0, 0.2, 0.1, 0.1, 0.0, 0.1, 9.8, 0.2, 0.1],   # very sure: class 7
+    [0.5, 0.3, 9.1, 0.2, 0.1, 0.3, 0.1, 0.2, 0.1, 0.1],   # very sure: class 2
+    [0.1, 9.5, 0.1, 0.0, 0.2, 0.1, 0.1, 0.0, 0.1, 0.0],   # very sure: class 1
+    [2.0, 0.5, 1.5, 1.0, 2.5, 0.8, 1.2, 0.9, 1.8, 2.1],   # uncertain!
+]
+true_labels = [0, 7, 2, 1, 5]
+
+for i, (logits, true) in enumerate(zip(raw_outputs, true_labels)):
+    probs = softmax(logits)
+    pred  = argmax(probs)
+    conf  = max(probs)
+    status = "✓" if pred == true else "✗"
+    print(f"  {status} True={true}, Pred={pred}, Confidence={conf:.1%}")
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="feature-extraction">Feature Extraction<a class="headerlink" href="#feature-extraction" title="Permanent link">&para;</a></h2>
+<p>A trained CNN isn't just a digit classifier — its <strong>intermediate layers</strong> have learned meaningful visual features:</p>
+<ul>
+<li>Early Conv2D layers: detect edges and corners</li>
+<li>Middle Conv2D layers: detect curves and simple shapes</li>
+<li>Later layers: detect digit-specific features</li>
+</ul>
+<p><strong>Transfer learning</strong> exploits this: take a CNN pre-trained on millions of images, cut off the last few layers, and attach new layers trained on your smaller dataset. The pre-trained features transfer to the new task.</p>
+<p>This is why a model trained on ImageNet (1.3M photos) can be quickly adapted to classify medical X-rays, satellite images, or art styles — with only hundreds of new labeled examples.</p>
+<h2 id="other-neural-network-architectures">Other Neural Network Architectures<a class="headerlink" href="#other-neural-network-architectures" title="Permanent link">&para;</a></h2>
+<h3 id="recurrent-neural-networks-rnns">Recurrent Neural Networks (RNNs)<a class="headerlink" href="#recurrent-neural-networks-rnns" title="Permanent link">&para;</a></h3>
+<p><strong>RNNs</strong> process sequences — text, audio, time series — one step at a time.
+Each step produces a <strong>hidden state</strong> that is passed to the next step, giving the network memory of the past.</p>
+<div class="highlight"><pre><span></span><code><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">SimpleRNN</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+</code></pre></div>
+<p>RNNs struggle with long sequences because the gradient signal weakens across many time steps (the "vanishing gradient" problem).</p>
+<h3 id="long-short-term-memory-lstm">Long Short-Term Memory (LSTM)<a class="headerlink" href="#long-short-term-memory-lstm" title="Permanent link">&para;</a></h3>
+<p><strong>LSTMs</strong> are a special type of RNN with gating mechanisms that let them remember or forget information over long sequences.
+They are the standard choice for language modeling, speech recognition, and time series forecasting.</p>
+<div class="highlight"><pre><span></span><code><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="autoencoders">Autoencoders<a class="headerlink" href="#autoencoders" title="Permanent link">&para;</a></h3>
+<p>An <strong>autoencoder</strong> learns to compress data into a small representation (the <strong>bottleneck</strong>) and then reconstruct the original.</p>
+<div class="highlight"><pre><span></span><code>Input (784 pixels) → Encoder → Bottleneck (32 values) → Decoder → Reconstructed image
+</code></pre></div>
+<p>Applications: anomaly detection, denoising, generative art, data compression.</p>
+<h2 id="putting-it-all-together-the-cnn-shape-journey">Putting It All Together — The CNN Shape Journey<a class="headerlink" href="#putting-it-all-together-the-cnn-shape-journey" title="Permanent link">&para;</a></h2>
+<p>The table below traces the data shape through the CNN for a single 28×28 MNIST image:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Output Shape</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>(28, 28, 1)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Conv2D(32, 3×3)</td>
+<td>(26, 26, 32)</td>
+<td>320</td>
+</tr>
+<tr>
+<td>MaxPooling2D</td>
+<td>(13, 13, 32)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Conv2D(64, 3×3)</td>
+<td>(11, 11, 64)</td>
+<td>18,496</td>
+</tr>
+<tr>
+<td>MaxPooling2D</td>
+<td>(5, 5, 64)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Flatten</td>
+<td>(1,600,)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Dense(128)</td>
+<td>(128,)</td>
+<td>204,928</td>
+</tr>
+<tr>
+<td>Dropout(0.5)</td>
+<td>(128,)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Dense(10)</td>
+<td>(10,)</td>
+<td>1,290</td>
+</tr>
+</tbody>
+</table>
+<p>Total parameters: <strong>225,034</strong> — much more efficient than a dense-only model of similar depth.</p>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Count the Parameters</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+A <code>Dense(64)</code> layer following a <code>Flatten()</code> layer with 1,600 inputs has 1,600 × 64 weights plus 64 bias values.
+Write a function that computes the parameter count for a Dense layer from its input size and neuron count!</p>
+</div>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">def dense_params(input_size, neurons):
+    weights = input_size * neurons
+    biases  = neurons
+    return weights + biases
+
+# CNN architecture:
+layers = [
+    ("Conv2D(32, 3x3)",  (3 * 3 * 1) * 32 + 32),   # kernel * in_channels * filters + bias
+    ("MaxPooling2D",     0),
+    ("Conv2D(64, 3x3)",  (3 * 3 * 32) * 64 + 64),  # 32 input channels
+    ("MaxPooling2D",     0),
+    ("Flatten",          0),
+    ("Dense(128)",       dense_params(1600, 128)),
+    ("Dropout(0.5)",     0),
+    ("Dense(10)",        dense_params(128, 10)),
+]
+
+total = 0
+print(f"{'Layer':<22} {'Parameters':>12}")
+print("-" * 36)
+for name, params in layers:
+    print(f"{name:<22} {params:>12,}")
+    total += params
+print("-" * 36)
+print(f"{'Total':<22} {total:>12,}")
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Modify the max pooling simulation to use a 3×3 pool size on a 6×6 grid. What is the output size?
+   <strong>You'll know it worked when</strong> you see a 2×2 output.</p>
+</li>
+<li>
+<p>In the prediction simulator, change the last row's logits so they favor class 5 more strongly.
+   <strong>You'll know it worked when</strong> the confidence for class 5 exceeds 70%.</p>
+</li>
+<li>
+<p>Implement <code>min_pool_2d</code> (same as <code>max_pool_2d</code> but using <code>min</code> instead of <code>max</code>). How do the outputs differ from max pooling on the same input?
+   <strong>You'll know it worked when</strong> you see that min pooling keeps darker (smaller) values.</p>
+</li>
+<li>
+<p>Compute the parameter count for a <code>Dense(256)</code> layer following a <code>Dense(128)</code> layer.
+   <strong>You'll know it worked when</strong> you get 128 × 256 + 256 = 33,024.</p>
+</li>
+<li>
+<p>Research: look up "GPT" or "BERT" and describe in 2-3 sentences how they differ from the CNN described in this chapter.
+   <strong>You'll know it worked when</strong> you can explain: what kind of data they process and what architecture they use.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You Did It — Python Graduate!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You have completed all 38 chapters of <em>Beginning Python</em>!
+You started with a turtle drawing a square and finished by building an AI that reads handwritten digits with 99% accuracy.
+You are no longer a beginner — you are a Python programmer. Go build something amazing!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

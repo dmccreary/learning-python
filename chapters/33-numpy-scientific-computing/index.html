@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Learn NumPy arrays, broadcasting, reshaping, slicing, element-wise math, and key functions like zeros, ones, linspace, argmax, mean, and std">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>33. NumPy and Scientific Computing - Learning Python</title>
+        <title>NumPy and Scientific Computing - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              33. NumPy and Scientific Computing
+              NumPy and Scientific Computing
             
           </span>
         </div>
@@ -1059,27 +1059,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#importing-numpy" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Importing NumPy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#creating-arrays-with-nparray" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Creating Arrays with np.array()
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#element-wise-math-and-broadcasting" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Element-Wise Math and Broadcasting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-arrays-automatically" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Arrays Automatically
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slicing-and-indexing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slicing and Indexing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-d-arrays-rows-and-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-D Arrays — Rows and Columns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reshaping-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reshaping Arrays
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistical-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistical Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plotting-a-sine-wave-with-numpy-and-matplotlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plotting a Sine Wave with NumPy and matplotlib
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3216,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#importing-numpy" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Importing NumPy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#creating-arrays-with-nparray" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Creating Arrays with np.array()
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#element-wise-math-and-broadcasting" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Element-Wise Math and Broadcasting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-arrays-automatically" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Arrays Automatically
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slicing-and-indexing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slicing and Indexing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-d-arrays-rows-and-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      2-D Arrays — Rows and Columns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reshaping-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reshaping Arrays
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistical-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistical Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plotting-a-sine-wave-with-numpy-and-matplotlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plotting a Sine Wave with NumPy and matplotlib
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,41 +3333,327 @@
 
 
 <h1 id="numpy-and-scientific-computing">NumPy and Scientific Computing<a class="headerlink" href="#numpy-and-scientific-computing" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>NumPy is the foundation of scientific Python. Its <em>array</em> type is like a list
-but blazing fast and capable of math on every element at once. This chapter
-covers importing numpy, creating arrays, element-wise operations and broadcasting,
-reshaping, <code>zeros()</code>/<code>ones()</code>, <code>linspace()</code> for evenly spaced values, array
-slicing, <code>mean()</code>/<code>std()</code>, argmax, and plotting a sine wave with matplotlib.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 12 concepts from the learning graph:</p>
-<ol>
-<li>Plotting a Sine Wave</li>
-<li>numpy Library Overview</li>
-<li>import numpy as np</li>
-<li>np.array() Creating Arrays</li>
-<li>np.argmax() Index of Max</li>
-<li>Array Operations and Broadcasting</li>
-<li>Reshaping Arrays</li>
-<li>np.zeros() np.ones()</li>
-<li>np.linspace() Evenly Spaced Values</li>
-<li>Array Slicing and Indexing</li>
-<li>Element-wise Math Operations</li>
-<li>np.mean() np.std()</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../32-data-visualization-matplotlib/">Chapter 32: Data Visualization with matplotlib</a></li>
+<li>Create NumPy arrays with <code>np.array()</code>, <code>np.zeros()</code>, <code>np.ones()</code>, and <code>np.linspace()</code></li>
+<li>Perform <strong>element-wise math</strong> and understand <strong>broadcasting</strong></li>
+<li>Slice and index NumPy arrays, including 2-D arrays</li>
+<li>Compute <strong>mean</strong>, <strong>standard deviation</strong>, <strong>max</strong>, and <strong>argmax</strong> on arrays</li>
+<li>Combine NumPy with matplotlib to plot a sine wave</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Python lists are flexible, but slow for large numerical datasets. <strong>NumPy</strong> (Numerical Python) provides an array type that is 10–100× faster because it stores values compactly and performs operations in optimized C code.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 33!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+NumPy is the engine under almost every data science and machine learning library in Python.
+Learn it once and you'll use it in every science project for the rest of your coding career.
+Let's dive in! Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="importing-numpy">Importing NumPy<a class="headerlink" href="#importing-numpy" title="Permanent link">&para;</a></h2>
+<p>Import NumPy with the standard alias <code>np</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</code></pre></div>
+<h2 id="creating-arrays-with-nparray">Creating Arrays with <code>np.array()</code><a class="headerlink" href="#creating-arrays-with-nparray" title="Permanent link">&para;</a></h2>
+<p>A <strong>NumPy array</strong> (<code>ndarray</code>) is like a Python list, but:
+- All items must be the same type (usually <code>float64</code> or <code>int64</code>)
+- Math operations work element-by-element automatically
+- It can be multi-dimensional (2-D, 3-D, etc.)</p>
+<p>Convert a Python list to an array:</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>          <span class="c1"># [1 2 3 4 5]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>    <span class="c1"># int64</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>    <span class="c1"># (5,) — one dimension with 5 elements</span>
+</code></pre></div>
+<h2 id="element-wise-math-and-broadcasting">Element-Wise Math and Broadcasting<a class="headerlink" href="#element-wise-math-and-broadcasting" title="Permanent link">&para;</a></h2>
+<p>The big difference between lists and arrays: <strong>math operators work element-by-element</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span>      <span class="c1"># [11 12 13 14]  — adds 10 to every element</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>       <span class="c1"># [2  4  6  8]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>      <span class="c1"># [1  4  9 16]</span>
+</code></pre></div>
+<p>Adding a single number to every element is called <strong>broadcasting</strong> — NumPy "broadcasts" the scalar value across the whole array automatically, with no loop needed.</p>
+<p>Two arrays of the same shape can be combined element-by-element:</p>
+<div class="highlight"><pre><span></span><code><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># [11 22 33 44]</span>
+</code></pre></div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below applies element-wise math to an array.
+Before you run it, predict: what will <code>temps_f</code> look like after the formula?
+Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">import numpy as np
+
+temps_c = np.array([0, 20, 37, 100])
+temps_f = (temps_c * 9/5) + 32
+
+print("Celsius:   ", temps_c)
+print("Fahrenheit:", temps_f)
+
+# Also works: min, max, mean
+print("Min F:", temps_f.min())
+print("Max F:", temps_f.max())
+print("Mean F:", temps_f.mean())
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="creating-arrays-automatically">Creating Arrays Automatically<a class="headerlink" href="#creating-arrays-automatically" title="Permanent link">&para;</a></h2>
+<p>NumPy provides functions for common array creation patterns:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Creates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>np.zeros(n)</code></td>
+<td>Array of n zeros</td>
+</tr>
+<tr>
+<td><code>np.ones(n)</code></td>
+<td>Array of n ones</td>
+</tr>
+<tr>
+<td><code>np.arange(start, stop, step)</code></td>
+<td>Like <code>range()</code> but returns an array</td>
+</tr>
+<tr>
+<td><code>np.linspace(start, stop, num)</code></td>
+<td>Evenly spaced values between start and stop</td>
+</tr>
+<tr>
+<td><code>np.random.rand(n)</code></td>
+<td>n random values between 0 and 1</td>
+</tr>
+</tbody>
+</table>
+<p><code>np.linspace()</code> is especially useful for math and plotting — it generates exactly <code>num</code> evenly spaced points:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="c1"># [0.   0.25 0.5  0.75 1.  ]</span>
+</code></pre></div>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import numpy as np
+
+print("zeros:", np.zeros(5))
+print("ones:", np.ones(4))
+print("arange:", np.arange(0, 10, 2))
+print("linspace:", np.linspace(0, 1, 6))
+
+# Use linspace to simulate a sine wave (without plotting):
+import math
+x = np.linspace(0, 2 * math.pi, 8)
+y = np.array([math.sin(v) for v in x])
+print("\nSine wave sample (x, sin(x)):")
+for xi, yi in zip(x, y):
+    print(f"  x={xi:.2f}  sin(x)={yi:.3f}")
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="slicing-and-indexing">Slicing and Indexing<a class="headerlink" href="#slicing-and-indexing" title="Permanent link">&para;</a></h2>
+<p>NumPy arrays use the same <code>[start:stop:step]</code> slicing syntax as Python lists:</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>    <span class="c1"># [20 30 40]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>    <span class="c1"># [10 30 50]   — every other element</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>     <span class="c1"># 50            — last element</span>
+</code></pre></div>
+<h2 id="2-d-arrays-rows-and-columns">2-D Arrays — Rows and Columns<a class="headerlink" href="#2-d-arrays-rows-and-columns" title="Permanent link">&para;</a></h2>
+<p>A 2-D array is like a spreadsheet table — it has rows and columns.
+Create one by passing a list of lists:</p>
+<div class="highlight"><pre><span></span><code><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>     <span class="c1"># (3, 3) — 3 rows, 3 columns</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>     <span class="c1"># 6 — row 1, column 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:])</span>     <span class="c1"># [1 2 3] — entire first row</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>     <span class="c1"># [2 5 8] — entire second column</span>
+</code></pre></div>
+<p>The index <code>matrix[row, col]</code> selects a specific cell.
+<code>matrix[row, :]</code> selects a whole row; <code>matrix[:, col]</code> selects a whole column.</p>
+<h2 id="reshaping-arrays">Reshaping Arrays<a class="headerlink" href="#reshaping-arrays" title="Permanent link">&para;</a></h2>
+<p><code>array.reshape(rows, cols)</code> rearranges an array into a different shape without changing the data.
+The total number of elements must stay the same.</p>
+<div class="highlight"><pre><span></span><code><span class="n">flat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>           <span class="c1"># [0 1 2 3 4 5 6 7 8 9 10 11]</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">flat</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>      <span class="c1"># 3 rows, 4 columns</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="statistical-functions">Statistical Functions<a class="headerlink" href="#statistical-functions" title="Permanent link">&para;</a></h2>
+<p>NumPy has fast built-in statistics:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a.mean()</code></td>
+<td>Average</td>
+</tr>
+<tr>
+<td><code>a.std()</code></td>
+<td>Standard deviation</td>
+</tr>
+<tr>
+<td><code>a.min()</code> / <code>a.max()</code></td>
+<td>Minimum / maximum value</td>
+</tr>
+<tr>
+<td><code>a.sum()</code></td>
+<td>Sum of all elements</td>
+</tr>
+<tr>
+<td><code>a.argmax()</code></td>
+<td><strong>Index</strong> of the maximum value</td>
+</tr>
+<tr>
+<td><code>a.argmin()</code></td>
+<td><strong>Index</strong> of the minimum value</td>
+</tr>
+</tbody>
+</table>
+<p><code>argmax()</code> and <code>argmin()</code> are especially useful when you want to know <em>where</em> in an array the maximum or minimum occurs — not just what the value is.</p>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">import numpy as np
+
+scores = np.array([78, 95, 88, 62, 91, 74, 99, 83])
+
+print("Scores:", scores)
+print("Mean:", scores.mean())
+print("Std dev:", round(scores.std(), 2))
+print("Min:", scores.min(), "at index", scores.argmin())
+print("Max:", scores.max(), "at index", scores.argmax())
+
+names = ["Alice", "Bob", "Carol", "Dave", "Eve", "Frank", "Grace", "Hank"]
+winner = names[scores.argmax()]
+print(f"Top scorer: {winner} with {scores.max()}")
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="plotting-a-sine-wave-with-numpy-and-matplotlib">Plotting a Sine Wave with NumPy and matplotlib<a class="headerlink" href="#plotting-a-sine-wave-with-numpy-and-matplotlib" title="Permanent link">&para;</a></h2>
+<p>This is where NumPy and matplotlib combine: use <code>np.linspace()</code> to generate evenly spaced x values, apply <code>np.sin()</code> to get y values, then plot.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>   <span class="c1"># 200 points across 2 full cycles</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;steelblue&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Sine Wave&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x (radians)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;sin(x)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>   <span class="c1"># horizontal line at y=0</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><code>np.sin()</code>, <code>np.cos()</code>, <code>np.exp()</code>, and <code>np.sqrt()</code> all work on entire arrays — no loop needed.</p>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Find the Hottest Day</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below has temperature data for a week, but the line that finds the hottest day is missing!
+Add one line using <code>argmax()</code> to find and print which day of the week had the highest temperature.</p>
+</div>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">import numpy as np
+
+days  = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+temps = np.array([22, 25, 28, 31, 26, 24, 20])
+
+print("Week temperatures:", temps)
+print("Average:", temps.mean(), "°C")
+
+# Add one line here: use argmax() to find and print the hottest day
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Create a 4×4 identity matrix using <code>np.eye(4)</code> — a square matrix with 1s on the diagonal.
+   <strong>You'll know it worked when</strong> you see 1s along the diagonal and 0s everywhere else.</p>
+</li>
+<li>
+<p>Compute the dot product of two arrays using <code>np.dot([1,2,3], [4,5,6])</code>.
+   <strong>You'll know it worked when</strong> you get <code>32</code> (1×4 + 2×5 + 3×6 = 32).</p>
+</li>
+<li>
+<p>Generate 5 random integers between 1 and 100 using <code>np.random.randint(1, 101, 5)</code>. Find the mean.
+   <strong>You'll know it worked when</strong> you get a different set of numbers each run with a mean between 1 and 100.</p>
+</li>
+<li>
+<p>Use <code>np.where(temps &gt; 25, "Hot", "Cool")</code> on the temperature array to label each day.
+   <strong>You'll know it worked when</strong> you see a string array like <code>["Cool", "Cool", "Hot", ...]</code>.</p>
+</li>
+<li>
+<p>Create a 3×3 matrix and use <code>matrix.T</code> to transpose it (rows become columns).
+   <strong>You'll know it worked when</strong> the rows and columns are swapped.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Scientific Python Pioneer!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+NumPy is the foundation of the entire scientific Python ecosystem — pandas, scikit-learn, TensorFlow, and PyTorch all use NumPy arrays under the hood.
+Mastering it puts you at the starting line of data science and AI. Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

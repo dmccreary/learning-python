@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Open, display, resize, crop, convert, and save images with Python's Pillow (PIL) library — and understand pixel-level data">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>34. Image Processing with Pillow - Learning Python</title>
+        <title>Image Processing with Pillow - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              34. Image Processing with Pillow
+              Image Processing with Pillow
             
           </span>
         </div>
@@ -1080,27 +1080,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#what-is-pillow" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      What is Pillow?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#opening-and-inspecting-images" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Opening and Inspecting Images
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#understanding-pixel-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Understanding Pixel Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resizing-and-thumbnailing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resizing and Thumbnailing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cropping-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cropping Images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flipping-and-rotating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flipping and Rotating
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-mode-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Mode Conversion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applying-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying Filters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saving Images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3216,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#what-is-pillow" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      What is Pillow?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#opening-and-inspecting-images" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Opening and Inspecting Images
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#understanding-pixel-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Understanding Pixel Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resizing-and-thumbnailing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resizing and Thumbnailing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cropping-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cropping Images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flipping-and-rotating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flipping and Rotating
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-mode-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Mode Conversion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applying-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applying Filters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Saving Images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,37 +3333,395 @@
 
 
 <h1 id="image-processing-with-pillow">Image Processing with Pillow<a class="headerlink" href="#image-processing-with-pillow" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Pillow (PIL) lets Python open, modify, and save images. This chapter introduces
-the library, opens an image file, displays it, accesses its pixel data as an
-array, resizes and crops images, converts between color modes (RGB, grayscale),
-and saves the result. Together with NumPy and matplotlib, Pillow forms the
-foundation for the machine learning work in the next two chapters.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 7 concepts from the learning graph:</p>
-<ol>
-<li>PIL Pillow Library Overview</li>
-<li>Image.open() Open Image</li>
-<li>image.show() Display Image</li>
-<li>Pixel Data and Image Arrays</li>
-<li>Image Resize and Crop</li>
-<li>Image Color Conversion</li>
-<li>Saving Images</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../27-standard-library-json/">Chapter 27: Standard Library and JSON</a></li>
-<li><a href="../33-numpy-scientific-computing/">Chapter 33: NumPy and Scientific Computing</a></li>
+<li>Open and display images with <strong>Pillow</strong> (<code>PIL</code>)</li>
+<li>Inspect image size, mode, and pixel data</li>
+<li>Resize, crop, flip, and rotate images</li>
+<li>Convert between color modes (RGB, grayscale, RGBA)</li>
+<li>Apply basic filters and save to different formats</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>A photograph on your phone is just a grid of colored pixels. Python can read, analyze, and transform that grid — automating tasks like resizing profile pictures, converting formats, adding watermarks, or applying artistic filters.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 34!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Pillow is Python's go-to library for image work — and it's surprisingly simple.
+From a school photo to a satellite image, the same functions apply!
+Let's start editing! Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="what-is-pillow">What is Pillow?<a class="headerlink" href="#what-is-pillow" title="Permanent link">&para;</a></h2>
+<p><strong>Pillow</strong> is the maintained fork of the classic <strong>PIL</strong> (Python Imaging Library). You install it with:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pillow
+</code></pre></div>
+<p>But you import it using the original name:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+</code></pre></div>
+<p>Pillow supports over 30 image formats including JPEG, PNG, GIF, BMP, TIFF, and WebP.</p>
+<h2 id="opening-and-inspecting-images">Opening and Inspecting Images<a class="headerlink" href="#opening-and-inspecting-images" title="Permanent link">&para;</a></h2>
+<p><code>Image.open(filepath)</code> loads an image file into memory.
+The returned object has several useful attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>What it tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>image.size</code></td>
+<td><code>(width, height)</code> in pixels</td>
+</tr>
+<tr>
+<td><code>image.width</code></td>
+<td>Width in pixels</td>
+</tr>
+<tr>
+<td><code>image.height</code></td>
+<td>Height in pixels</td>
+</tr>
+<tr>
+<td><code>image.mode</code></td>
+<td>Color mode: <code>"RGB"</code>, <code>"RGBA"</code>, <code>"L"</code> (grayscale), <code>"P"</code> (palette)</td>
+</tr>
+<tr>
+<td><code>image.format</code></td>
+<td>File format: <code>"JPEG"</code>, <code>"PNG"</code>, etc. (None if created in code)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;photo.jpg&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>    <span class="c1"># (1920, 1080)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>    <span class="c1"># &quot;RGB&quot;</span>
+<span class="n">img</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>         <span class="c1"># opens in the system image viewer</span>
+</code></pre></div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below creates a tiny image from scratch using pixel data.
+What color do you think pixel (1,1) will be — red, green, or blue?
+Predict first, then run it!</p>
+</div>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">from PIL import Image
+
+# Create a 3x3 RGB image manually:
+# Each row is a list of (R, G, B) tuples
+pixels = [
+    [(255,   0,   0), (  0, 255,   0), (  0,   0, 255)],  # red, green, blue
+    [(255, 255,   0), (  0, 255, 255), (255,   0, 255)],  # yellow, cyan, magenta
+    [(255, 255, 255), (128, 128, 128), (  0,   0,   0)],  # white, gray, black
+]
+
+img = Image.new("RGB", (3, 3))
+for row_idx, row in enumerate(pixels):
+    for col_idx, color in enumerate(row):
+        img.putpixel((col_idx, row_idx), color)
+
+print("Image size:", img.size)
+print("Image mode:", img.mode)
+print("Pixel at (0,0):", img.getpixel((0, 0)))   # top-left
+print("Pixel at (1,0):", img.getpixel((1, 0)))   # top-middle
+print("Pixel at (1,1):", img.getpixel((1, 1)))   # center
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="understanding-pixel-data">Understanding Pixel Data<a class="headerlink" href="#understanding-pixel-data" title="Permanent link">&para;</a></h2>
+<p>A pixel in RGB mode is a tuple of three integers — <code>(red, green, blue)</code> — each ranging from 0 to 255.</p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>RGB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red</td>
+<td>(255, 0, 0)</td>
+</tr>
+<tr>
+<td>Green</td>
+<td>(0, 255, 0)</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>(0, 0, 255)</td>
+</tr>
+<tr>
+<td>White</td>
+<td>(255, 255, 255)</td>
+</tr>
+<tr>
+<td>Black</td>
+<td>(0, 0, 0)</td>
+</tr>
+<tr>
+<td>Yellow</td>
+<td>(255, 255, 0)</td>
+</tr>
+<tr>
+<td>Cyan</td>
+<td>(0, 255, 255)</td>
+</tr>
+<tr>
+<td>Gray</td>
+<td>(128, 128, 128)</td>
+</tr>
+</tbody>
+</table>
+<p><code>img.getpixel((x, y))</code> returns the color of one pixel. Note: x = column (left→right), y = row (top→bottom).</p>
+<h2 id="resizing-and-thumbnailing">Resizing and Thumbnailing<a class="headerlink" href="#resizing-and-thumbnailing" title="Permanent link">&para;</a></h2>
+<p><code>image.resize((width, height))</code> creates a new image at the requested size.
+The original is not modified — Pillow operations always return a new image.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;photo.jpg&quot;</span><span class="p">)</span>
+<span class="n">small</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">200</span><span class="p">,</span> <span class="mi">150</span><span class="p">))</span>
+<span class="n">small</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;photo_small.jpg&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><code>image.thumbnail((max_width, max_height))</code> is smarter — it shrinks the image to fit within the box <strong>while keeping the aspect ratio</strong>. It modifies the image in place:</p>
+<div class="highlight"><pre><span></span><code><span class="n">img</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>   <span class="c1"># fits in 400×400 box, keeps proportions</span>
+</code></pre></div>
+<h2 id="cropping-images">Cropping Images<a class="headerlink" href="#cropping-images" title="Permanent link">&para;</a></h2>
+<p><code>image.crop((left, upper, right, lower))</code> extracts a rectangular region.
+The four numbers are pixel coordinates measured from the top-left corner.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Crop a 100×100 region starting at pixel (50, 30):</span>
+<span class="n">region</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">crop</span><span class="p">((</span><span class="mi">50</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">130</span><span class="p">))</span>
+<span class="n">region</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;cropped.jpg&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">from PIL import Image
+
+# Create a 10x10 image with a color gradient:
+img = Image.new("RGB", (10, 10))
+for y in range(10):
+    for x in range(10):
+        r = int(x / 9 * 255)
+        g = int(y / 9 * 255)
+        b = 100
+        img.putpixel((x, y), (r, g, b))
+
+print("Original size:", img.size)
+
+# Crop the top-right quadrant:
+cropped = img.crop((5, 0, 10, 5))
+print("Cropped size:", cropped.size)
+print("Cropped pixel (0,0):", cropped.getpixel((0, 0)))
+print("Cropped pixel (4,4):", cropped.getpixel((4, 4)))
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="flipping-and-rotating">Flipping and Rotating<a class="headerlink" href="#flipping-and-rotating" title="Permanent link">&para;</a></h2>
+<p><code>image.transpose(method)</code> flips or rotates the image.
+The method constants live in <code>Image.Transpose</code> (or the older <code>Image</code> namespace):</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;photo.jpg&quot;</span><span class="p">)</span>
+<span class="n">flipped_h</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">Transpose</span><span class="o">.</span><span class="n">FLIP_LEFT_RIGHT</span><span class="p">)</span>   <span class="c1"># mirror horizontally</span>
+<span class="n">flipped_v</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">Transpose</span><span class="o">.</span><span class="n">FLIP_TOP_BOTTOM</span><span class="p">)</span>   <span class="c1"># mirror vertically</span>
+<span class="n">rotated</span>   <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>                                    <span class="c1"># rotate 90° counter-clockwise</span>
+</code></pre></div>
+<p><code>img.rotate(angle)</code> rotates by the given angle — positive angles rotate counter-clockwise.</p>
+<h2 id="color-mode-conversion">Color Mode Conversion<a class="headerlink" href="#color-mode-conversion" title="Permanent link">&para;</a></h2>
+<p><code>image.convert(mode)</code> changes the color mode of an image.</p>
+<p>The most common conversions are:</p>
+<table>
+<thead>
+<tr>
+<th>Conversion</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img.convert("L")</code></td>
+<td>Convert to grayscale (L = luminance)</td>
+</tr>
+<tr>
+<td><code>img.convert("RGB")</code></td>
+<td>Convert to 3-channel color</td>
+</tr>
+<tr>
+<td><code>img.convert("RGBA")</code></td>
+<td>Add transparency channel</td>
+</tr>
+<tr>
+<td><code>img.convert("1")</code></td>
+<td>Convert to 1-bit black and white</td>
+</tr>
+</tbody>
+</table>
+<p>Converting to grayscale is a simple way to apply a classic photo effect:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="n">img</span>  <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;photo.jpg&quot;</span><span class="p">)</span>
+<span class="n">gray</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;L&quot;</span><span class="p">)</span>
+<span class="n">gray</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;photo_grayscale.jpg&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">from PIL import Image
+
+# Create a small color image, then convert it to grayscale:
+img = Image.new("RGB", (4, 4))
+colors = [
+    (255, 0,   0),   (0,   255, 0),   (0,   0,   255), (255, 255, 0),
+    (255, 0, 255),   (0,   255, 255), (128, 0,   0),   (0,   128, 0),
+    (0,   0, 128),   (128, 128, 0),   (128, 0,   128), (0,   128, 128),
+    (255, 128, 0),   (128, 255, 0),   (0,   255, 128), (0,   128, 255),
+]
+for i, c in enumerate(colors):
+    img.putpixel((i % 4, i // 4), c)
+
+gray = img.convert("L")
+
+print("Original RGB pixels (row 0):")
+for x in range(4):
+    print(f"  ({x},0): {img.getpixel((x, 0))}")
+
+print("Grayscale pixels (row 0):")
+for x in range(4):
+    print(f"  ({x},0): {gray.getpixel((x, 0))}")
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="applying-filters">Applying Filters<a class="headerlink" href="#applying-filters" title="Permanent link">&para;</a></h2>
+<p>Pillow's <code>ImageFilter</code> module provides ready-made filters:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageFilter</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;photo.jpg&quot;</span><span class="p">)</span>
+
+<span class="n">blurred</span>   <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="o">.</span><span class="n">BLUR</span><span class="p">)</span>
+<span class="n">sharpened</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="o">.</span><span class="n">SHARPEN</span><span class="p">)</span>
+<span class="n">edges</span>     <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="o">.</span><span class="n">FIND_EDGES</span><span class="p">)</span>
+<span class="n">embossed</span>  <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="o">.</span><span class="n">EMBOSS</span><span class="p">)</span>
+
+<span class="n">edges</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;edges.png&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Filters work by examining each pixel's neighbors and computing a new value — a process called <strong>convolution</strong>.</p>
+<h2 id="saving-images">Saving Images<a class="headerlink" href="#saving-images" title="Permanent link">&para;</a></h2>
+<p><code>image.save(filepath)</code> saves to any supported format.
+Pillow detects the format from the file extension:</p>
+<div class="highlight"><pre><span></span><code><span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;output.png&quot;</span><span class="p">)</span>   <span class="c1"># saves as PNG</span>
+<span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;output.jpg&quot;</span><span class="p">,</span> <span class="n">quality</span><span class="o">=</span><span class="mi">85</span><span class="p">)</span>   <span class="c1"># JPEG with quality setting (1-95)</span>
+<span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;output.bmp&quot;</span><span class="p">)</span>   <span class="c1"># BMP format</span>
+</code></pre></div>
+<p>For JPEG: lower quality = smaller file but more visual artifacts. Quality 80–90 is usually a good balance.</p>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Write a Brightness Booster</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below has a function stub for <code>brighten(image, amount)</code>.
+Complete it: for every pixel, add <code>amount</code> to each R, G, B channel — but clamp the result between 0 and 255!</p>
+</div>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">from PIL import Image
+
+def brighten(img, amount):
+    result = Image.new("RGB", img.size)
+    for y in range(img.height):
+        for x in range(img.width):
+            r, g, b = img.getpixel((x, y))
+            # Add 'amount' to each channel, but clamp between 0 and 255:
+            nr = r   # TODO: add amount and clamp
+            ng = g   # TODO: add amount and clamp
+            nb = b   # TODO: add amount and clamp
+            result.putpixel((x, y), (nr, ng, nb))
+    return result
+
+# Test with a simple 3x3 image:
+img = Image.new("RGB", (3, 3), (100, 150, 200))
+print("Before brighten:", img.getpixel((0, 0)))
+bright = brighten(img, 80)
+print("After brighten:", bright.getpixel((0, 0)))
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Create a 100×100 image where each pixel's R value equals its x-coordinate and G value equals its y-coordinate. Save it as a PNG and open it.
+   <strong>You'll know it worked when</strong> you see a gradient that shifts from dark to bright in two directions.</p>
+</li>
+<li>
+<p>Open a JPEG photo and use <code>thumbnail((300, 300))</code> to shrink it, then save as PNG.
+   <strong>You'll know it worked when</strong> the output file is a smaller image in PNG format.</p>
+</li>
+<li>
+<p>Convert an RGB image to grayscale and then convert it back to RGB. Print a pixel — is it the same as the original?
+   <strong>You'll know it worked when</strong> you see the gray color has equal R, G, B values.</p>
+</li>
+<li>
+<p>Use <code>img.rotate(45)</code> on a photo. Note that the corners are black (background fill). Add <code>expand=True</code> to see the difference.
+   <strong>You'll know it worked when</strong> <code>expand=True</code> grows the canvas to show the full rotated image.</p>
+</li>
+<li>
+<p>Apply <code>ImageFilter.FIND_EDGES</code> to a photo. Save the result and compare it to the original.
+   <strong>You'll know it worked when</strong> you see bright lines where the original had color edges.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Image Wizard!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now open, inspect, transform, filter, and save images with Python!
+These same techniques power computer vision systems, photo-editing apps, and machine learning pipelines.
+The next chapter returns to turtle graphics for event-driven animation. Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

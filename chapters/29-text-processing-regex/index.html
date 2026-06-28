@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Learn regular expressions — search, findall, split, sub, character classes, quantifiers, groups, and compiled patterns">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>29. Text Processing and Regular Expressions - Learning Python</title>
+        <title>Text Processing and Regular Expressions - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              29. Text Processing and Regular Expressions
+              Text Processing and Regular Expressions
             
           </span>
         </div>
@@ -975,27 +975,144 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-re-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The re Module
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#raw-strings" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Raw Strings
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#basic-pattern-elements" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Basic Pattern Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantifiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-find-first-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.search() — Find First Match
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refindall-find-all-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.findall() — Find All Matches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resplit-split-by-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.split() — Split by Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resub-substitute-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.sub() — Substitute Matches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anchors-start-and-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anchors: Start and End
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternation-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternation with |
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groups-with-parentheses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Groups with Parentheses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escaping-special-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escaping Special Characters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiled-regex-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiled Regex Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3261,144 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-re-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The re Module
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#raw-strings" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Raw Strings
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#basic-pattern-elements" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Basic Pattern Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantifiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-find-first-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.search() — Find First Match
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refindall-find-all-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.findall() — Find All Matches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#character-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resplit-split-by-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.split() — Split by Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resub-substitute-matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.sub() — Substitute Matches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anchors-start-and-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anchors: Start and End
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternation-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternation with |
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groups-with-parentheses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Groups with Parentheses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escaping-special-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escaping Special Characters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compiled-regex-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiled Regex Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,45 +3423,440 @@
 
 
 <h1 id="text-processing-and-regular-expressions">Text Processing and Regular Expressions<a class="headerlink" href="#text-processing-and-regular-expressions" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Regular expressions (regex) are a mini-language for describing text patterns.
-They sound scary but they're incredibly useful for searching, validating,
-and transforming text. This chapter introduces the <code>re</code> module,
-<code>search()</code>/<code>findall()</code>/<code>split()</code>/<code>sub()</code>, digit/word/whitespace patterns,
-anchors, character classes, quantifiers, alternation, escaping special
-characters, raw strings for regex, capturing groups, and compiled patterns.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 14 concepts from the learning graph:</p>
-<ol>
-<li>re Module Import</li>
-<li>re.search() First Match</li>
-<li>re.findall() All Matches</li>
-<li>re.split() Split by Pattern</li>
-<li>re.sub() Substitute Matches</li>
-<li>Digit Word Whitespace Patterns</li>
-<li>Anchors Start and End</li>
-<li>Character Classes</li>
-<li>Quantifiers Plus Star Question</li>
-<li>Alternation with Pipe</li>
-<li>Escaping Special Characters</li>
-<li>Raw Strings for Regex</li>
-<li>Regex Groups with Parentheses</li>
-<li>Compiled Regex Patterns</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../08-working-with-strings/">Chapter 8: Working with Strings</a></li>
-<li><a href="../27-standard-library-json/">Chapter 27: Standard Library and JSON</a></li>
+<li>Write basic <strong>regular expressions</strong> to match patterns in text</li>
+<li>Use <code>re.search()</code>, <code>re.findall()</code>, <code>re.split()</code>, and <code>re.sub()</code> to search and transform text</li>
+<li>Build patterns using character classes, quantifiers, anchors, and groups</li>
+<li>Use <strong>raw strings</strong> (<code>r"..."</code>) to avoid backslash confusion</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Regular expressions (regex) are a mini-language for describing text patterns.
+With a single regex, you can find phone numbers, validate email addresses, or extract data from thousands of lines of text.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 29!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Regular expressions look scary at first — but once you learn the building blocks, they're incredibly powerful.
+One line of regex can do what would take 20 lines of string methods.
+Let's decode the mystery! Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="the-re-module">The <code>re</code> Module<a class="headerlink" href="#the-re-module" title="Permanent link">&para;</a></h2>
+<p>Import Python's regex module with <code>import re</code>.</p>
+<p>The core functions are:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Returns</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>re.search(pattern, text)</code></td>
+<td>Match object or <code>None</code></td>
+<td>Check if pattern appears anywhere</td>
+</tr>
+<tr>
+<td><code>re.findall(pattern, text)</code></td>
+<td>List of all matches</td>
+<td>Get every occurrence</td>
+</tr>
+<tr>
+<td><code>re.split(pattern, text)</code></td>
+<td>List of pieces</td>
+<td>Split text by a pattern</td>
+</tr>
+<tr>
+<td><code>re.sub(pattern, replacement, text)</code></td>
+<td>New string</td>
+<td>Replace matches</td>
+</tr>
+</tbody>
+</table>
+<h2 id="raw-strings">Raw Strings<a class="headerlink" href="#raw-strings" title="Permanent link">&para;</a></h2>
+<p>Regex patterns use backslashes a lot — <code>\d</code>, <code>\w</code>, <code>\s</code>.
+In regular Python strings, <code>\d</code> is treated as a special escape sequence.
+To avoid confusion, always write regex patterns as <strong>raw strings</strong> by putting <code>r</code> before the quote: <code>r"\d"</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Without raw string: Python interprets \n as newline</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>   <span class="c1"># newline character</span>
+
+<span class="c1"># With raw string: Python passes \n literally to the regex engine</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;\n&quot;</span>  <span class="c1"># the two characters backslash + n</span>
+</code></pre></div>
+<p><strong>Rule: always use <code>r"..."</code> for regex patterns.</strong></p>
+<h2 id="basic-pattern-elements">Basic Pattern Elements<a class="headerlink" href="#basic-pattern-elements" title="Permanent link">&para;</a></h2>
+<p>Before we write real patterns, here are the building blocks:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.</code></td>
+<td>Any single character (except newline)</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td>A digit (0–9)</td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td>A word character (letter, digit, underscore)</td>
+</tr>
+<tr>
+<td><code>\s</code></td>
+<td>A whitespace character (space, tab, newline)</td>
+</tr>
+<tr>
+<td><code>\D</code></td>
+<td>Not a digit</td>
+</tr>
+<tr>
+<td><code>\W</code></td>
+<td>Not a word character</td>
+</tr>
+<tr>
+<td><code>\S</code></td>
+<td>Not whitespace</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>Start of the string</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>End of the string</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quantifiers">Quantifiers<a class="headerlink" href="#quantifiers" title="Permanent link">&para;</a></h2>
+<p>Quantifiers control how many times a pattern element repeats:</p>
+<table>
+<thead>
+<tr>
+<th>Quantifier</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td>0 or more times</td>
+<td><code>\d*</code> — zero or more digits</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>1 or more times</td>
+<td><code>\d+</code> — one or more digits</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>0 or 1 times</td>
+<td><code>\d?</code> — optional digit</td>
+</tr>
+<tr>
+<td><code>{n}</code></td>
+<td>Exactly n times</td>
+<td><code>\d{3}</code> — exactly 3 digits</td>
+</tr>
+<tr>
+<td><code>{n,m}</code></td>
+<td>Between n and m times</td>
+<td><code>\d{2,4}</code> — 2 to 4 digits</td>
+</tr>
+</tbody>
+</table>
+<h2 id="research-find-first-match"><code>re.search()</code> — Find First Match<a class="headerlink" href="#research-find-first-match" title="Permanent link">&para;</a></h2>
+<p><code>re.search(pattern, text)</code> scans through <code>text</code> looking for the first location where the pattern matches.
+It returns a <strong>match object</strong> if found, or <code>None</code> if not.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below searches for a phone number pattern in different strings.
+Which strings do you think will match the pattern <code>\d{3}-\d{4}</code>?
+Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">import re
+
+texts = [
+    "Call me at 555-1234!",
+    "My number is 867-5309.",
+    "No number here.",
+    "Fax: 123-4567 or 987-6543"
+]
+
+for t in texts:
+    match = re.search(r"\d{3}-\d{4}", t)
+    if match:
+        print(f"Found in: {t!r}")
+        print(f"  Match: {match.group()}")
+    else:
+        print(f"No match in: {t!r}")
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p><code>match.group()</code> returns the text that was matched.</p>
+<h2 id="refindall-find-all-matches"><code>re.findall()</code> — Find All Matches<a class="headerlink" href="#refindall-find-all-matches" title="Permanent link">&para;</a></h2>
+<p><code>re.findall(pattern, text)</code> returns a <strong>list</strong> of every non-overlapping match.</p>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import re
+
+text = "Prices: $5.99, $12.00, $3.50, and $100.00"
+
+prices = re.findall(r"\$\d+\.\d{2}", text)
+print("Prices found:", prices)
+
+# Find all words (sequences of letters):
+words = re.findall(r"[A-Za-z]+", text)
+print("Words found:", words)
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="character-classes">Character Classes<a class="headerlink" href="#character-classes" title="Permanent link">&para;</a></h2>
+<p>A <strong>character class</strong> is a set of characters in square brackets. It matches any single character in the set.</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[aeiou]</code></td>
+<td>Any lowercase vowel</td>
+</tr>
+<tr>
+<td><code>[A-Z]</code></td>
+<td>Any uppercase letter</td>
+</tr>
+<tr>
+<td><code>[a-z]</code></td>
+<td>Any lowercase letter</td>
+</tr>
+<tr>
+<td><code>[0-9]</code></td>
+<td>Any digit (same as <code>\d</code>)</td>
+</tr>
+<tr>
+<td><code>[^aeiou]</code></td>
+<td>Any character that is NOT a vowel</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resplit-split-by-pattern"><code>re.split()</code> — Split by Pattern<a class="headerlink" href="#resplit-split-by-pattern" title="Permanent link">&para;</a></h2>
+<p><code>re.split(pattern, text)</code> splits text wherever the pattern matches — like <code>str.split()</code> but with regex power.</p>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">import re
+
+# Split on any punctuation (,  ;  :  or space):
+sentence = "apples, bananas; oranges: mangoes kiwis"
+fruits = re.split(r"[,;:\s]+", sentence)
+print("Fruits:", fruits)
+
+# Split on multiple whitespace:
+text = "hello    world\t\tpython"
+words = re.split(r"\s+", text)
+print("Words:", words)
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="resub-substitute-matches"><code>re.sub()</code> — Substitute Matches<a class="headerlink" href="#resub-substitute-matches" title="Permanent link">&para;</a></h2>
+<p><code>re.sub(pattern, replacement, text)</code> replaces every match with the replacement string.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># Remove all digits from a string:</span>
+<span class="n">cleaned</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Hello123World456&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cleaned</span><span class="p">)</span>   <span class="c1"># &quot;HelloWorld&quot;</span>
+
+<span class="c1"># Replace multiple spaces with one:</span>
+<span class="n">normalized</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s+&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;too   many    spaces&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">normalized</span><span class="p">)</span>   <span class="c1"># &quot;too many spaces&quot;</span>
+</code></pre></div>
+<h2 id="anchors-start-and-end">Anchors: Start and End<a class="headerlink" href="#anchors-start-and-end" title="Permanent link">&para;</a></h2>
+<p><code>^</code> matches the start of the string.
+<code>$</code> matches the end.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Matches only if string starts with &quot;Hello&quot;:</span>
+<span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^Hello&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Starts with Hello&quot;</span><span class="p">)</span>
+
+<span class="c1"># Matches only if string ends with a digit:</span>
+<span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d$&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ends with a digit&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="alternation-with">Alternation with <code>|</code><a class="headerlink" href="#alternation-with" title="Permanent link">&para;</a></h2>
+<p><code>|</code> means "or" — match either the left or the right pattern.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;cat|dog|rabbit&quot;</span>
+<span class="n">matches</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s2">&quot;I have a cat, a dog, and a rabbit.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matches</span><span class="p">)</span>   <span class="c1"># [&#39;cat&#39;, &#39;dog&#39;, &#39;rabbit&#39;]</span>
+</code></pre></div>
+<h2 id="groups-with-parentheses">Groups with Parentheses<a class="headerlink" href="#groups-with-parentheses" title="Permanent link">&para;</a></h2>
+<p>Parentheses <code>()</code> create a <strong>group</strong> — they let you capture specific parts of a match.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Born: 2010-06-15&quot;</span>
+<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(\d</span><span class="si">{4}</span><span class="s2">)-(\d</span><span class="si">{2}</span><span class="s2">)-(\d</span><span class="si">{2}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+    <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Year=</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">, Month=</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s2">, Day=</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">import re
+
+emails = [
+    "alice@example.com",
+    "bob.smith@school.edu",
+    "not-an-email",
+    "carol@work.org"
+]
+
+# Simple email pattern: word@word.word
+pattern = r"(\w[\w.]+)@(\w+\.\w+)"
+
+for email in emails:
+    match = re.search(pattern, email)
+    if match:
+        user, domain = match.group(1), match.group(2)
+        print(f"Valid: user={user}, domain={domain}")
+    else:
+        print(f"Invalid: {email!r}")
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="escaping-special-characters">Escaping Special Characters<a class="headerlink" href="#escaping-special-characters" title="Permanent link">&para;</a></h2>
+<p>Some characters have special meaning in regex: <code>.</code>, <code>*</code>, <code>+</code>, <code>?</code>, <code>(</code>, <code>)</code>, <code>[</code>, <code>]</code>, <code>{</code>, <code>}</code>, <code>^</code>, <code>$</code>, <code>|</code>, <code>\</code>.
+To match them literally, escape them with a backslash: <code>\.</code> matches a literal dot.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Match a literal dot (not &quot;any character&quot;):</span>
+<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+\.\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;3.14 and 2.71 and hello.world&quot;</span><span class="p">)</span>
+<span class="c1"># → [&#39;3.14&#39;, &#39;2.71&#39;]</span>
+</code></pre></div>
+<h2 id="compiled-regex-patterns">Compiled Regex Patterns<a class="headerlink" href="#compiled-regex-patterns" title="Permanent link">&para;</a></h2>
+<p>If you use the same pattern many times, <strong>compile</strong> it first for better performance:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">digit_pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">)</span>   <span class="c1"># compile once</span>
+
+<span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">many_strings</span><span class="p">:</span>
+    <span class="n">matches</span> <span class="o">=</span> <span class="n">digit_pattern</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>   <span class="c1"># use repeatedly</span>
+</code></pre></div>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Extract Phone Numbers</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below should extract all phone numbers from the text.
+The pattern only matches 3-digit numbers. Fix the pattern to match the full format <code>NNN-NNN-NNNN</code>!</p>
+</div>
+<div id="skulpt-lab-5" class="skulpt-text-only">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">import re
+
+text = "Contact us at 800-555-1234 or 415-867-5309. Fax: 888-123-4567."
+
+# Bug: pattern only matches 3 digits!
+phones = re.findall(r"\d{3}", text)
+print("Found:", phones)
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Use <code>re.findall(r"\b\w{5}\b", text)</code> to find all 5-letter words in a sentence. <code>\b</code> is a word boundary.
+   <strong>You'll know it worked when</strong> you see only 5-letter words.</p>
+</li>
+<li>
+<p>Use <code>re.sub(r"\b\d+\b", "NUM", "I have 3 cats and 12 birds")</code> to replace all numbers with "NUM".
+   <strong>You'll know it worked when</strong> you see <code>"I have NUM cats and NUM birds"</code>.</p>
+</li>
+<li>
+<p>Validate a password: at least 8 characters, at least one digit. Use <code>re.search(r"^.{8,}$", pw)</code> and <code>re.search(r"\d", pw)</code>.
+   <strong>You'll know it worked when</strong> <code>"abc12345"</code> passes and <code>"abc123"</code> fails (too short).</p>
+</li>
+<li>
+<p>Use <code>re.split(r"\s*,\s*", "Alice , Bob,  Carol, Dave")</code> to split a comma-separated list ignoring extra spaces.
+   <strong>You'll know it worked when</strong> you see four clean names.</p>
+</li>
+<li>
+<p>Compile the pattern <code>r"\d{4}"</code> and use it to find all 4-digit years in a sentence about history.
+   <strong>You'll know it worked when</strong> you see a list of years.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Regex Wizard!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+Regular expressions are a superpower — one pattern can search through millions of lines of text!
+They appear in web scraping, data validation, log analysis, and almost every text processing task.
+You've just added a serious tool to your programmer toolbox. Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

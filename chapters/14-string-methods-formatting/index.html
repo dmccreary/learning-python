@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Master string indexing, slicing, split/join/replace, f-strings, and multiline formatting for clean program output">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>14. String Methods and Formatting - Learning Python</title>
+        <title>String Methods and Formatting - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              14. String Methods and Formatting
+              String Methods and Formatting
             
           </span>
         </div>
@@ -660,27 +660,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#string-indexing" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      String Indexing
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#string-slicing" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      String Slicing
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#split-join-and-replace" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Split, Join, and Replace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#searching-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching Strings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f-strings-the-modern-way-to-format-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      f-Strings — The Modern Way to Format Text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Comparison
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiline-string-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiline String Formatting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3198,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#string-indexing" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      String Indexing
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#string-slicing" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      String Slicing
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#split-join-and-replace" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Split, Join, and Replace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#searching-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching Strings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f-strings-the-modern-way-to-format-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      f-Strings — The Modern Way to Format Text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Comparison
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiline-string-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiline String Formatting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,39 +3297,319 @@
 
 
 <h1 id="string-methods-and-formatting">String Methods and Formatting<a class="headerlink" href="#string-methods-and-formatting" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Strings have dozens of useful built-in methods. This chapter covers indexing
-individual characters, slicing substrings, <code>split()</code>/<code>join()</code>/<code>replace()</code>,
-<code>startswith()</code>/<code>endswith()</code>/<code>find()</code>, the powerful <code>format()</code> method,
-<strong>f-strings</strong> (the modern way to embed variables in text), string comparison,
-and multiline string formatting for tidy output.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 9 concepts from the learning graph:</p>
-<ol>
-<li>String Indexing</li>
-<li>String Slicing</li>
-<li>String split() join() replace()</li>
-<li>String startswith() endswith() find()</li>
-<li>String isdigit() isalpha() isalnum()</li>
-<li>String format() Method</li>
-<li>f-Strings</li>
-<li>String Comparison</li>
-<li>Multiline String Formatting</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../08-working-with-strings/">Chapter 8: Working with Strings</a></li>
-<li><a href="../09-decisions-if-else/">Chapter 9: Making Decisions with If/Else</a></li>
+<li>Access individual characters using <strong>string indexing</strong> and extract substrings using <strong>slicing</strong></li>
+<li>Use <code>split()</code>, <code>join()</code>, <code>replace()</code>, <code>find()</code>, <code>startswith()</code>, and <code>endswith()</code> to work with text</li>
+<li>Build clean output strings using <strong>f-strings</strong> — the modern Python way to embed variables in text</li>
+<li>Format multiline output to make your programs look professional</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Strings are everywhere in programming. Usernames, messages, file names, web addresses — all text.
+Python gives you a huge toolkit of string methods so you can chop, search, replace, and format text with just a few lines of code.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 14!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Strings are one of the most useful tools in your Python toolbox!
+Today you'll learn how to slice them, search them, replace parts, and format beautiful output.
+Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="string-indexing">String Indexing<a class="headerlink" href="#string-indexing" title="Permanent link">&para;</a></h2>
+<p>Every character in a string has a <strong>position number</strong> called an <strong>index</strong>.
+Python starts counting at zero — so the first character is at index <code>0</code>, the second at <code>1</code>, and so on.</p>
+<p>You access a character using square brackets: <code>word[index]</code>.</p>
+<div class="highlight"><pre><span></span><code>word = &quot;Python&quot;
+         P  y  t  h  o  n
+index:   0  1  2  3  4  5
+</code></pre></div>
+<p>You can also count backwards from the end using negative numbers:</p>
+<div class="highlight"><pre><span></span><code>         P   y   t   h   o   n
+index:   0   1   2   3   4   5
+         -6  -5  -4  -3  -2  -1
+</code></pre></div>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">word = "Python"
+print("First character:", word[0])
+print("Third character:", word[2])
+print("Last character:", word[-1])
+print("Second to last:", word[-2])
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="string-slicing">String Slicing<a class="headerlink" href="#string-slicing" title="Permanent link">&para;</a></h2>
+<p><strong>Slicing</strong> extracts a portion (a "slice") of a string.
+The syntax is <code>word[start:end]</code> — it gives you characters from <code>start</code> up to (but NOT including) <code>end</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>   <span class="c1"># &quot;Pyt&quot; — indexes 0, 1, 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>   <span class="c1"># &quot;tho&quot; — indexes 2, 3, 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>    <span class="c1"># &quot;Pyt&quot; — same as [0:3]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>    <span class="c1"># &quot;hon&quot; — from 3 to the end</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[:])</span>     <span class="c1"># &quot;Python&quot; — the whole string</span>
+</code></pre></div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Before running the code below, predict what <code>"programming"[3:8]</code> will print.
+Count the characters starting at index 0. Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">s = "programming"
+print(s[3:8])
+print(s[:4])
+print(s[-4:])
+print(s[::2])   # every other character (step of 2)
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>Were you right? <code>s[3:8]</code> gives you <code>"gramm"</code> — characters at positions 3, 4, 5, 6, and 7.</p>
+<p>The <code>::2</code> notation is a <strong>step</strong> — <code>s[::2]</code> takes every second character.</p>
+<h2 id="split-join-and-replace">Split, Join, and Replace<a class="headerlink" href="#split-join-and-replace" title="Permanent link">&para;</a></h2>
+<p>Three of the most-used string methods are <code>split()</code>, <code>join()</code>, and <code>replace()</code>.</p>
+<p>Before looking at examples, here's a quick preview:
+- <code>split()</code> breaks a string into a <strong>list</strong> of pieces
+- <code>join()</code> glues a list of strings back together
+- <code>replace()</code> swaps every occurrence of one substring for another</p>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">sentence = "the quick brown fox"
+
+# split() — break into words
+words = sentence.split()
+print("Words:", words)
+print("Number of words:", len(words))
+
+# join() — glue back together with dashes
+dashed = "-".join(words)
+print("Dashed:", dashed)
+
+# replace() — swap one word for another
+new_sentence = sentence.replace("fox", "python")
+print("Replaced:", new_sentence)
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>What it does</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s.split()</code></td>
+<td>Split on spaces</td>
+<td><code>"a b c".split()</code> → <code>["a","b","c"]</code></td>
+</tr>
+<tr>
+<td><code>s.split(",")</code></td>
+<td>Split on commas</td>
+<td><code>"a,b,c".split(",")</code> → <code>["a","b","c"]</code></td>
+</tr>
+<tr>
+<td><code>"-".join(lst)</code></td>
+<td>Join with dashes</td>
+<td><code>"-".join(["a","b"])</code> → <code>"a-b"</code></td>
+</tr>
+<tr>
+<td><code>s.replace("x","y")</code></td>
+<td>Replace x with y</td>
+<td><code>"fox".replace("x","t")</code> → <code>"fot"</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="searching-strings">Searching Strings<a class="headerlink" href="#searching-strings" title="Permanent link">&para;</a></h2>
+<p>Python gives you several methods to search inside a string:</p>
+<ul>
+<li><code>s.find("x")</code> — returns the index of the first occurrence of <code>"x"</code>, or <code>-1</code> if not found</li>
+<li><code>s.startswith("x")</code> — returns <code>True</code> if the string starts with <code>"x"</code></li>
+<li><code>s.endswith("x")</code> — returns <code>True</code> if the string ends with <code>"x"</code></li>
+<li><code>s.isdigit()</code> — returns <code>True</code> if all characters are digits (no letters, no spaces)</li>
+<li><code>s.isalpha()</code> — returns <code>True</code> if all characters are letters</li>
+<li><code>s.isalnum()</code> — returns <code>True</code> if all characters are letters or digits</li>
+</ul>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">filename = "report2024.pdf"
+
+print("Find '.pdf':", filename.find(".pdf"))
+print("Starts with 'report':", filename.startswith("report"))
+print("Ends with '.pdf':", filename.endswith(".pdf"))
+
+code = "ABC123"
+print("isalnum:", code.isalnum())
+print("isdigit:", code.isdigit())
+print("isalpha:", code.isalpha())
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="f-strings-the-modern-way-to-format-text">f-Strings — The Modern Way to Format Text<a class="headerlink" href="#f-strings-the-modern-way-to-format-text" title="Permanent link">&para;</a></h2>
+<p>An <strong>f-string</strong> (formatted string literal) lets you embed variables directly inside a string.
+Put an <code>f</code> before the opening quote and wrap each variable in curly braces <code>{}</code>.</p>
+<p>Before f-strings, you had to write things like:</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Monty&quot;</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">95</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;! Your score is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">score</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>With an f-string, that becomes much cleaner:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">! Your score is </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div id="skulpt-lab-5" class="skulpt-text-only">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">name = "Monty"
+score = 95
+max_score = 100
+percentage = score / max_score * 100
+
+print(f"Hello, {name}!")
+print(f"Your score: {score}/{max_score}")
+print(f"Percentage: {percentage:.1f}%")   # .1f = 1 decimal place
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<p>The <code>:.1f</code> format code inside the curly braces says "show 1 decimal place."
+Try changing it to <code>:.2f</code> for two decimal places.</p>
+<h2 id="string-comparison">String Comparison<a class="headerlink" href="#string-comparison" title="Permanent link">&para;</a></h2>
+<p>You can compare strings with <code>==</code>, <code>&lt;</code>, and <code>&gt;</code>.
+Python compares strings alphabetically, character by character.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span> <span class="o">==</span> <span class="s2">&quot;apple&quot;</span><span class="p">)</span>   <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span> <span class="o">==</span> <span class="s2">&quot;Apple&quot;</span><span class="p">)</span>   <span class="c1"># False — case-sensitive!</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;banana&quot;</span><span class="p">)</span>   <span class="c1"># True — a comes before b</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;zebra&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;ant&quot;</span><span class="p">)</span>      <span class="c1"># True — z comes after a</span>
+</code></pre></div>
+<p>Case matters! <code>"apple" != "Apple"</code>. Use <code>.lower()</code> on both sides if you want case-insensitive comparison.</p>
+<h2 id="multiline-string-formatting">Multiline String Formatting<a class="headerlink" href="#multiline-string-formatting" title="Permanent link">&para;</a></h2>
+<p>You can create a string that spans multiple lines using triple quotes <code>"""..."""</code>.
+This is perfect for longer messages or templates:</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Monty&quot;</span>
+<span class="n">chapter</span> <span class="o">=</span> <span class="mi">14</span>
+
+<span class="n">report</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">===== Progress Report =====</span>
+<span class="s2">Student:  </span><span class="si">{</span><span class="n">name</span><span class="si">}</span>
+<span class="s2">Chapter:  </span><span class="si">{</span><span class="n">chapter</span><span class="si">}</span>
+<span class="s2">Status:   Complete!</span>
+<span class="s2">===========================</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Fix the Greeting</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The program below should print a polished greeting using an f-string,
+but it still uses the old <code>+</code> concatenation style and forgets <code>str()</code> around the number.
+Rewrite the <code>print()</code> line as a single f-string to fix both problems!</p>
+</div>
+<div id="skulpt-lab-6" class="skulpt-text-only">
+  <div id="editor-container-6">
+    <textarea id="code-6" spellcheck="false">player = "Monty"
+level = 5
+
+# Rewrite this as one f-string:
+print("Player: " + player + ", Level: " + str(level))
+</textarea>
+    <div id="button-row-6">
+      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
+      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
+    </div>
+    <pre id="output-6"></pre>
+  </div>
+  <div id="canvas-container-6">
+    <div id="turtle-target-6"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Try <code>"Python"[::-1]</code> — that's a slice with step <code>-1</code>.
+   <strong>You'll know it worked when</strong> you see <code>nohtyP</code> (the string reversed!).</p>
+</li>
+<li>
+<p>Use <code>split(",")</code> to split the string <code>"red,green,blue,yellow"</code> and print each color on its own line.
+   <strong>You'll know it worked when</strong> you see four lines, one color each.</p>
+</li>
+<li>
+<p>Use <code>replace()</code> to censor the word <code>"bad"</code> in <code>"This is a bad example"</code>, replacing it with <code>"***"</code>.
+   <strong>You'll know it worked when</strong> the output reads <code>This is a *** example</code>.</p>
+</li>
+<li>
+<p>Write an f-string that displays a pizza order: ingredient (e.g. <code>"cheese"</code>) and price (e.g. <code>8.50</code>) with two decimal places.
+   <strong>You'll know it worked when</strong> you see something like <code>Pizza: cheese — $8.50</code>.</p>
+</li>
+<li>
+<p>Use <code>startswith()</code> to check if a filename ends with <code>".py"</code>. Print <code>"Python file!"</code> or <code>"Not a Python file"</code>.
+   <strong>You'll know it worked when</strong> <code>"hello.py"</code> gives one result and <code>"hello.txt"</code> gives the other.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">String Master!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've learned indexing, slicing, split, join, replace, f-strings, and more!
+These string skills appear in almost every real Python program — from web apps to data science.
+You're building a seriously impressive toolkit! Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

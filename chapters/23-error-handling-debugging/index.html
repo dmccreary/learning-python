@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Learn to read tracebacks, catch exceptions with try/except, raise your own errors, use assert, and debug with strategic print statements">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>23. Error Handling and Debugging - Learning Python</title>
+        <title>Error Handling and Debugging - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              23. Error Handling and Debugging
+              Error Handling and Debugging
             
           </span>
         </div>
@@ -849,27 +849,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#three-types-of-errors" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Three Types of Errors
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#common-exception-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Common Exception Types
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#reading-a-traceback" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Reading a Traceback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tryexcept-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      try/except Blocks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catching-specific-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catching Specific Exceptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#else-and-finally-clauses" class="md-nav__link">
+    <span class="md-ellipsis">
+      else and finally Clauses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-raise-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The raise Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-assert-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The assert Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-with-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging with print()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3216,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#three-types-of-errors" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Three Types of Errors
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#common-exception-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Common Exception Types
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#reading-a-traceback" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Reading a Traceback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tryexcept-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      try/except Blocks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#catching-specific-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catching Specific Exceptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#else-and-finally-clauses" class="md-nav__link">
+    <span class="md-ellipsis">
+      else and finally Clauses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-raise-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The raise Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-assert-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The assert Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-with-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging with print()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,41 +3333,320 @@
 
 
 <h1 id="error-handling-and-debugging">Error Handling and Debugging<a class="headerlink" href="#error-handling-and-debugging" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Every programmer makes mistakes — the skill is finding and fixing them quickly.
-This chapter categorizes errors (syntax, runtime, logic), teaches you to read
-Python tracebacks, and introduces <code>try/except</code> blocks so your programs can
-recover gracefully from problems. You'll also learn <code>raise</code>, <code>assert</code>,
-how to debug using strategic <code>print()</code> calls, and where to search for help online.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 11 concepts from the learning graph:</p>
-<ol>
-<li>Syntax vs Runtime vs Logic Errors</li>
-<li>Common Exception Types</li>
-<li>Reading a Traceback</li>
-<li>try...except Block</li>
-<li>Catching Specific Exceptions</li>
-<li>else Clause in try/except</li>
-<li>finally Clause</li>
-<li>raise Statement</li>
-<li>assert Statement</li>
-<li>Debugging with print()</li>
-<li>Using Search Engines to Debug</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../04-functions-and-objects/">Chapter 4: Functions and Objects</a></li>
-<li><a href="../09-decisions-if-else/">Chapter 9: Making Decisions with If/Else</a></li>
+<li>Identify the three types of Python errors: <strong>syntax</strong>, <strong>runtime</strong>, and <strong>logic</strong></li>
+<li>Read a Python <strong>traceback</strong> and find exactly where the problem is</li>
+<li>Use <code>try/except</code> to catch errors and keep your program running</li>
+<li>Use <code>raise</code>, <code>assert</code>, and strategic <code>print()</code> calls to find and report bugs</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Every programmer makes mistakes. The skill isn't avoiding errors — it's finding and fixing them quickly.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 23!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Errors aren't failures — they're clues! Python's error messages are actually very helpful once you know how to read them.
+Today we'll turn scary red text into useful information.
+Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="three-types-of-errors">Three Types of Errors<a class="headerlink" href="#three-types-of-errors" title="Permanent link">&para;</a></h2>
+<p>A <strong>syntax error</strong> is caught before the program runs. Python can't parse the code at all.
+A missing colon after <code>if</code>, bad indentation, or a mismatched parenthesis causes a syntax error.</p>
+<p>A <strong>runtime error</strong> (also called an <strong>exception</strong>) happens while the program is running.
+The program starts, then crashes when it hits the bad line.</p>
+<p>A <strong>logic error</strong> is the trickiest — the program runs without crashing, but produces the wrong result.
+Python can't detect logic errors; you have to find them yourself.</p>
+<table>
+<thead>
+<tr>
+<th>Error type</th>
+<th>When detected</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Syntax error</td>
+<td>Before running</td>
+<td>Missing <code>:</code> after <code>if</code></td>
+</tr>
+<tr>
+<td>Runtime error</td>
+<td>While running</td>
+<td><code>int("hello")</code></td>
+</tr>
+<tr>
+<td>Logic error</td>
+<td>After running</td>
+<td>Off-by-one in a loop</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-exception-types">Common Exception Types<a class="headerlink" href="#common-exception-types" title="Permanent link">&para;</a></h2>
+<p>When a runtime error occurs, Python raises an <strong>exception</strong> — a named error type.</p>
+<table>
+<thead>
+<tr>
+<th>Exception</th>
+<th>Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NameError</code></td>
+<td>Variable name doesn't exist</td>
+</tr>
+<tr>
+<td><code>TypeError</code></td>
+<td>Wrong type — e.g. adding string to integer</td>
+</tr>
+<tr>
+<td><code>ValueError</code></td>
+<td>Right type but bad value — e.g. <code>int("hello")</code></td>
+</tr>
+<tr>
+<td><code>IndexError</code></td>
+<td>List index out of range</td>
+</tr>
+<tr>
+<td><code>KeyError</code></td>
+<td>Dictionary key doesn't exist</td>
+</tr>
+<tr>
+<td><code>ZeroDivisionError</code></td>
+<td>Dividing by zero</td>
+</tr>
+<tr>
+<td><code>AttributeError</code></td>
+<td>Method doesn't exist on the object</td>
+</tr>
+<tr>
+<td><code>FileNotFoundError</code></td>
+<td>File can't be found</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reading-a-traceback">Reading a Traceback<a class="headerlink" href="#reading-a-traceback" title="Permanent link">&para;</a></h2>
+<p>When Python crashes, it prints a <strong>traceback</strong> — a trace of exactly where things went wrong.</p>
+<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
+  File &quot;my_program.py&quot;, line 5, in &lt;module&gt;
+    result = 10 / 0
+ZeroDivisionError: division by zero
+</code></pre></div>
+<p>Read from the <strong>bottom up</strong>:
+1. The last line gives the exception type and message: <code>ZeroDivisionError: division by zero</code>
+2. Above it, the exact code that crashed: <code>result = 10 / 0</code>
+3. File and line number so you know where to look: <code>line 5</code></p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below has a bug. Which line will crash, and what exception type will appear?
+Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">numbers = [10, 20, 30]
+print("First:", numbers[0])
+print("Last:", numbers[5])   # this will fail!
+print("This line never runs.")
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p>Were you right? <code>IndexError: list index out of range</code> — index 5 doesn't exist in a 3-item list.</p>
+<h2 id="tryexcept-blocks"><code>try/except</code> Blocks<a class="headerlink" href="#tryexcept-blocks" title="Permanent link">&para;</a></h2>
+<p>A <code>try/except</code> block lets your program catch an error and handle it gracefully instead of crashing.</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can&#39;t divide by zero!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Structure:
+1. <code>try:</code> — put the risky code here
+2. <code>except ErrorType:</code> — put the recovery code here; runs only if that error occurs</p>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">def safe_divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        print("Error: can't divide by zero!")
+        return None
+
+print(safe_divide(10, 2))
+print(safe_divide(10, 0))
+print(safe_divide(7, 3))
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="catching-specific-exceptions">Catching Specific Exceptions<a class="headerlink" href="#catching-specific-exceptions" title="Permanent link">&para;</a></h2>
+<p>Catch multiple exception types with multiple <code>except</code> clauses:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">))</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">number</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;100 / </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s not a valid number!&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can&#39;t divide by zero!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Catching specific exceptions is better than a bare <code>except:</code> — it prevents hiding bugs you didn't intend to catch.</p>
+<h2 id="else-and-finally-clauses"><code>else</code> and <code>finally</code> Clauses<a class="headerlink" href="#else-and-finally-clauses" title="Permanent link">&para;</a></h2>
+<p>Two optional extra clauses make <code>try/except</code> even more powerful:</p>
+<ul>
+<li><code>else:</code> runs only if the <code>try</code> block completed without any exception</li>
+<li><code>finally:</code> runs <strong>always</strong> — whether or not an exception occurred; perfect for cleanup</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Number: &quot;</span><span class="p">))</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="n">n</span>
+<span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">ZeroDivisionError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Result: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>   <span class="c1"># only if no exception occurred</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done.&quot;</span><span class="p">)</span>               <span class="c1"># always runs</span>
+</code></pre></div>
+<h2 id="the-raise-statement">The <code>raise</code> Statement<a class="headerlink" href="#the-raise-statement" title="Permanent link">&para;</a></h2>
+<p>Use <code>raise</code> to trigger an exception yourself when input violates a rule:</p>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">def set_speed(speed):
+    if speed < 0:
+        raise ValueError("Speed cannot be negative.")
+    if speed > 300:
+        raise ValueError("Speed exceeds maximum (300 km/h).")
+    return speed
+
+for s in [60, -10, 400]:
+    try:
+        result = set_speed(s)
+        print(f"Speed set to {result}")
+    except ValueError as e:
+        print(f"Invalid: {e}")
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="the-assert-statement">The <code>assert</code> Statement<a class="headerlink" href="#the-assert-statement" title="Permanent link">&para;</a></h2>
+<p><code>assert condition, "message"</code> checks that something you believe is true actually is true.
+If not, it raises <code>AssertionError</code>. Use it for internal checks during development.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span>
+    <span class="k">assert</span> <span class="n">result</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Square must be non-negative!&quot;</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+<h2 id="debugging-with-print">Debugging with <code>print()</code><a class="headerlink" href="#debugging-with-print" title="Permanent link">&para;</a></h2>
+<p>The simplest debugging tool is a strategic <code>print()</code> statement. Insert them to see what your program is doing at each step:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">total_price</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  DEBUG: adding </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>   <span class="c1"># temporary debug print</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">item</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  DEBUG: total = </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">total</span>
+</code></pre></div>
+<p>Remove debug prints once the problem is fixed.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Using Search Engines to Debug</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+When you see an error you don't recognize, copy the last line of the traceback and paste it into a search engine — add "Python" at the start.
+The Python community is enormous and someone has almost certainly had the same error before!
+Reading solutions on Stack Overflow is how professional programmers debug every day.</p>
+</div>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Wrap the Dangerous Code</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The program below crashes when the user enters something that isn't a number.
+Wrap the <code>int()</code> call in a <code>try/except ValueError</code> block so it prints a friendly message instead!</p>
+</div>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">raw = input("Enter a number: ")
+
+# Wrap this in try/except so it doesn't crash on bad input:
+n = int(raw)
+print(f"Double: {n * 2}")
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Write code that deliberately triggers a <code>NameError</code> by using an undefined variable, then catch it.
+   <strong>You'll know it worked when</strong> the error is caught and a friendly message appears instead of a crash.</p>
+</li>
+<li>
+<p>Write a function <code>safe_index(lst, i)</code> that returns <code>lst[i]</code> or <code>None</code> if <code>i</code> is out of range.
+   <strong>You'll know it worked when</strong> <code>safe_index([1,2,3], 10)</code> returns <code>None</code> without crashing.</p>
+</li>
+<li>
+<p>Add an <code>else</code> clause to a <code>try/except</code> that prints <code>"Success!"</code> only when no error occurs.
+   <strong>You'll know it worked when</strong> valid input shows "Success!" and invalid input doesn't.</p>
+</li>
+<li>
+<p>Add a <code>finally</code> clause that always prints <code>"Calculation complete."</code> no matter what.
+   <strong>You'll know it worked when</strong> the message appears for both valid and invalid input.</p>
+</li>
+<li>
+<p>Use <code>assert</code> to verify that a list has exactly 3 items. Test with lists of different lengths.
+   <strong>You'll know it worked when</strong> a 2-item list raises <code>AssertionError</code> and a 3-item list passes.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Debugging Champion!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You can now read tracebacks, catch exceptions, raise your own errors, and debug like a professional!
+These skills transform error messages from obstacles into tools.
+That's a huge step forward. Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Master the habits of expert programmers — decomposition, abstraction, DRY, meaningful names, refactoring, test-driven thinking, and pair programming">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>36. Computational Thinking and Best Practices - Learning Python</title>
+        <title>Computational Thinking and Best Practices - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              36. Computational Thinking and Best Practices
+              Computational Thinking and Best Practices
             
           </span>
         </div>
@@ -1122,27 +1122,126 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#computational-thinking-four-pillars" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Computational Thinking — Four Pillars
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#decomposition-in-practice" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Decomposition in Practice
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#dry-dont-repeat-yourself" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      DRY — Don't Repeat Yourself
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modularity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meaningful-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meaningful Names
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Comment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudocode-and-algorithm-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pseudocode and Algorithm Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-driven-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test-Driven Thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Strategies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refactoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control-with-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control with Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pair-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pair Programming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3243,126 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#computational-thinking-four-pillars" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Computational Thinking — Four Pillars
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#decomposition-in-practice" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Decomposition in Practice
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#dry-dont-repeat-yourself" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      DRY — Don't Repeat Yourself
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modularity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meaningful-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meaningful Names
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Comment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudocode-and-algorithm-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pseudocode and Algorithm Design
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-driven-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test-Driven Thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Strategies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refactoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-control-with-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control with Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pair-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pair Programming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,51 +3387,425 @@
 
 
 <h1 id="computational-thinking-and-best-practices">Computational Thinking and Best Practices<a class="headerlink" href="#computational-thinking-and-best-practices" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Great programmers don't just write code that works — they write code that's
-readable, reusable, and easy to change. This chapter covers the DRY principle,
-modularity, code reusability, meaningful names, when and why to write comments,
-literate programming in Jupyter, using <code>help()</code> and <code>dir()</code>, version control
-basics, searching documentation, refactoring, test-driven thinking, pair
-programming, and the four pillars of computational thinking: decomposition,
-pattern recognition, abstraction, and algorithm design.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 18 concepts from the learning graph:</p>
-<ol>
-<li>Modularity in Code</li>
-<li>Code Reusability</li>
-<li>DRY Principle</li>
-<li>Meaningful Names</li>
-<li>Code Comments When and Why</li>
-<li>Literate Programming in Jupyter</li>
-<li>Reading Docs with help() and dir()</li>
-<li>Version Control Basics</li>
-<li>Searching Documentation</li>
-<li>Code Refactoring</li>
-<li>Test-Driven Thinking</li>
-<li>Pair Programming Concept</li>
-<li>Decomposition</li>
-<li>Pattern Recognition</li>
-<li>Abstraction in Programming</li>
-<li>Algorithm Design</li>
-<li>Pseudocode Writing</li>
-<li>Debugging Strategies</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../04-functions-and-objects/">Chapter 4: Functions and Objects</a></li>
-<li><a href="../27-standard-library-json/">Chapter 27: Standard Library and JSON</a></li>
-<li><a href="../28-python-dev-tools/">Chapter 28: Python Development Tools</a></li>
+<li>Apply the four pillars of <strong>computational thinking</strong>: decomposition, pattern recognition, abstraction, algorithm design</li>
+<li>Follow <strong>DRY</strong> (Don't Repeat Yourself) and <strong>modularity</strong> principles</li>
+<li>Write <strong>meaningful names</strong> and useful comments</li>
+<li>Describe <strong>test-driven thinking</strong> and how to debug systematically</li>
+<li>Understand <strong>version control</strong> and <strong>pair programming</strong></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Writing code that works is only half the job. Expert programmers write code that works <em>and</em> is easy to read, change, and share with others. This chapter collects the habits that separate good programmers from great ones.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 36!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+You've learned Python's tools — now it's time to learn how to <em>think</em> like a programmer.
+The habits in this chapter will make every future project smoother and more enjoyable.
+Let's level up! Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="computational-thinking-four-pillars">Computational Thinking — Four Pillars<a class="headerlink" href="#computational-thinking-four-pillars" title="Permanent link">&para;</a></h2>
+<p><strong>Computational thinking</strong> is a problem-solving framework that lets you tackle any complex problem with a computer.
+It has four key skills:</p>
+<table>
+<thead>
+<tr>
+<th>Pillar</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Decomposition</strong></td>
+<td>Break a big problem into smaller ones</td>
+<td>"Build a quiz app" → "Store questions", "Ask user", "Check answer", "Track score"</td>
+</tr>
+<tr>
+<td><strong>Pattern Recognition</strong></td>
+<td>Spot similarities and repetition</td>
+<td>All quiz questions have: text, choices, correct answer</td>
+</tr>
+<tr>
+<td><strong>Abstraction</strong></td>
+<td>Focus on essential details; hide unnecessary ones</td>
+<td>A function <code>ask_question(q)</code> hides the input/output details</td>
+</tr>
+<tr>
+<td><strong>Algorithm Design</strong></td>
+<td>Write a clear, step-by-step solution</td>
+<td>"While questions remain: ask one, record answer, check result"</td>
+</tr>
+</tbody>
+</table>
+<p>These four skills aren't Python-specific — they apply to any programming language, any field, any problem.</p>
+<h2 id="decomposition-in-practice">Decomposition in Practice<a class="headerlink" href="#decomposition-in-practice" title="Permanent link">&para;</a></h2>
+<p>A common beginner mistake is trying to write an entire program at once.
+<strong>Decomposition</strong> means breaking the problem down first, then coding one piece at a time.</p>
+<div class="highlight"><pre><span></span><code>Problem: Build a word guessing game
+│
+├── Read a secret word
+├── Show blanks (one _ per letter)
+├── Accept one guess per turn
+│   ├── Validate: is it a single letter?
+│   └── Check: is the letter in the word?
+├── Reveal matched letters
+├── Track wrong guesses (max 6)
+└── Announce win or loss
+</code></pre></div>
+<p>Each leaf in this tree is small enough to code in a single function.</p>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">def make_display(secret, guessed):
+    return " ".join(ch if ch in guessed else "_" for ch in secret)
+
+def is_solved(secret, guessed):
+    return all(ch in guessed for ch in secret)
+
+# Simulate one round (no real input):
+secret  = "python"
+guessed = set("p_t")
+wrong   = ["x", "z"]
+
+print("Word:", make_display(secret, guessed))
+print("Wrong guesses:", wrong)
+print("Solved?", is_solved(secret, guessed))
+
+guessed = set("python")
+print("After all letters:", make_display(secret, guessed))
+print("Solved?", is_solved(secret, guessed))
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="dry-dont-repeat-yourself">DRY — Don't Repeat Yourself<a class="headerlink" href="#dry-dont-repeat-yourself" title="Permanent link">&para;</a></h2>
+<p>The <strong>DRY principle</strong> says: every piece of knowledge should have exactly one representation in your code.</p>
+<p>If the same logic appears in two places, a bug fix or change must be made twice — and it's easy to update one and forget the other.</p>
+<p><strong>Wet code (repeating yourself):</strong>
+<div class="highlight"><pre><span></span><code><span class="n">score1</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">score1</span><span class="p">))</span>
+<span class="n">score2</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">score2</span><span class="p">))</span>
+<span class="n">score3</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">score3</span><span class="p">))</span>
+</code></pre></div></p>
+<p><strong>Dry code (one function does the job):</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+
+<span class="n">score1</span> <span class="o">=</span> <span class="n">clamp</span><span class="p">(</span><span class="n">score1</span><span class="p">)</span>
+<span class="n">score2</span> <span class="o">=</span> <span class="n">clamp</span><span class="p">(</span><span class="n">score2</span><span class="p">)</span>
+<span class="n">score3</span> <span class="o">=</span> <span class="n">clamp</span><span class="p">(</span><span class="n">score3</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Even better — apply it to a list:
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="n">clamp</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">]</span>
+</code></pre></div></p>
+<h2 id="modularity">Modularity<a class="headerlink" href="#modularity" title="Permanent link">&para;</a></h2>
+<p><strong>Modularity</strong> means organizing code into independent, reusable units (functions, classes, modules).
+A well-structured program has many small functions, each doing one thing clearly.</p>
+<p><strong>Signs your function is NOT modular:</strong>
+- It's longer than 20-30 lines
+- Its name contains "and" (e.g., <code>validate_and_save</code>)
+- It does I/O and computation together</p>
+<p><strong>Refactor into smaller pieces:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Before: one long function</span>
+<span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">cleaned</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
+    <span class="n">unique</span>  <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">cleaned</span><span class="p">))</span>
+    <span class="n">sorted_</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">unique</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sorted_</span>
+
+<span class="c1"># After: three named steps</span>
+<span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
+
+<span class="k">def</span> <span class="nf">deduplicate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">deduplicate</span><span class="p">(</span><span class="n">clean</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+</code></pre></div>
+<h2 id="meaningful-names">Meaningful Names<a class="headerlink" href="#meaningful-names" title="Permanent link">&para;</a></h2>
+<p>Variable and function names are your most powerful documentation tool.
+A reader who can't run the code should still understand it from the names alone.</p>
+<table>
+<thead>
+<tr>
+<th>Bad</th>
+<th>Better</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x</code></td>
+<td><code>elapsed_seconds</code></td>
+<td>Describes the meaning</td>
+</tr>
+<tr>
+<td><code>lst</code></td>
+<td><code>student_names</code></td>
+<td>Describes the content</td>
+</tr>
+<tr>
+<td><code>do_thing()</code></td>
+<td><code>calculate_average()</code></td>
+<td>Describes what it returns</td>
+</tr>
+<tr>
+<td><code>check(x)</code></td>
+<td><code>is_valid_email(text)</code></td>
+<td>Describes what it checks</td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td><code>num_retries</code></td>
+<td>No mental translation needed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule for booleans:</strong> name them as a yes/no question — <code>is_logged_in</code>, <code>has_errors</code>, <code>can_retry</code>.</p>
+<h2 id="when-to-comment">When to Comment<a class="headerlink" href="#when-to-comment" title="Permanent link">&para;</a></h2>
+<p>Comments explain the <strong>why</strong>, not the <strong>what</strong>. Well-named code already tells you what — comments tell you why that was the right choice.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># BAD: repeats what the code says</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>   <span class="c1"># increment i by 1</span>
+
+<span class="c1"># GOOD: explains the non-obvious reason</span>
+<span class="c1"># Start from 1 because the first row is always a header</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="n">process</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</code></pre></div>
+<p>Write no comment if the code is self-explanatory.
+Write a comment when a future reader (including future-you) would wonder "why did they do it that way?"</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">The Rule of Three</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+If you write the same logic once — keep it. Twice — add a comment noting the pattern. Three times — pull it into a function.
+This is called the "rule of three" and it stops you from over-abstracting before you're sure the pattern is real.</p>
+</div>
+<div id="skulpt-lab-2" class="skulkt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">def clamp(value, lo=0, hi=100):
+    return max(lo, min(hi, value))
+
+def letter_grade(score):
+    clamped = clamp(score)
+    if clamped >= 90: return "A"
+    if clamped >= 80: return "B"
+    if clamped >= 70: return "C"
+    if clamped >= 60: return "D"
+    return "F"
+
+# Test with values that need clamping:
+test_scores = [110, 95, 82, 73, 65, -5, 45]
+for s in test_scores:
+    print(f"  {s:4d} → clamped={clamp(s):3d}, grade={letter_grade(s)}")
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="pseudocode-and-algorithm-design">Pseudocode and Algorithm Design<a class="headerlink" href="#pseudocode-and-algorithm-design" title="Permanent link">&para;</a></h2>
+<p><strong>Pseudocode</strong> is a step-by-step description of an algorithm written in plain English, not a real programming language.
+It lets you plan before you code — and catches problems before you've spent time writing syntax.</p>
+<div class="highlight"><pre><span></span><code>ALGORITHM: Find the most frequent word
+
+1. Split the text into a list of words
+2. Convert each word to lowercase
+3. Create an empty frequency dictionary
+4. For each word in the list:
+   a. If the word is already in the dictionary, add 1
+   b. Otherwise, set its count to 1
+5. Find the key with the highest value
+6. Return that key and its count
+</code></pre></div>
+<p>Only then do you translate to Python. The algorithm is clear — the coding is just transcription.</p>
+<h2 id="test-driven-thinking">Test-Driven Thinking<a class="headerlink" href="#test-driven-thinking" title="Permanent link">&para;</a></h2>
+<p>Professional developers write <strong>tests</strong> before (or alongside) code.
+Even if you're not writing formal test functions, think in terms of tests:</p>
+<ol>
+<li><strong>What should the function return for a normal input?</strong></li>
+<li><strong>What should it do with empty input?</strong></li>
+<li><strong>What should it do with invalid input?</strong></li>
+<li><strong>What's the edge case?</strong> (Empty list, zero, negative number, very long string)</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">word_frequency</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">freq</span>  <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="n">freq</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">freq</span>
+
+<span class="c1"># Mental test cases:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_frequency</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">))</span>               <span class="c1"># {} — empty input</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_frequency</span><span class="p">(</span><span class="s2">&quot;cat cat dog&quot;</span><span class="p">))</span>    <span class="c1"># {&#39;cat&#39;: 2, &#39;dog&#39;: 1}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_frequency</span><span class="p">(</span><span class="s2">&quot;A a A&quot;</span><span class="p">))</span>          <span class="c1"># {&#39;a&#39;: 3} — case insensitive</span>
+</code></pre></div>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">def word_frequency(text):
+    words = text.lower().split()
+    freq  = {}
+    for w in words:
+        freq[w] = freq.get(w, 0) + 1
+    return freq
+
+def most_common(freq):
+    if not freq:
+        return None, 0
+    word = max(freq, key=freq.get)
+    return word, freq[word]
+
+text = "the quick brown fox jumps over the lazy dog the fox"
+freq = word_frequency(text)
+print("Frequencies:", freq)
+word, count = most_common(freq)
+print(f"Most common: '{word}' ({count} times)")
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="debugging-strategies">Debugging Strategies<a class="headerlink" href="#debugging-strategies" title="Permanent link">&para;</a></h2>
+<p>When code doesn't work, resist the urge to change things randomly until it "magically" works.
+Use a systematic approach:</p>
+<ol>
+<li><strong>Read the traceback</strong> — the bottom line is the error; work up to find where it came from</li>
+<li><strong>Print the state</strong> — add <code>print()</code> statements just before the error to see what the variables actually contain</li>
+<li><strong>Simplify</strong> — replace complex expressions with simpler ones until the bug disappears</li>
+<li><strong>Rubber duck debugging</strong> — explain your code out loud, line by line, to an imaginary listener; the bug often reveals itself</li>
+<li><strong>Search the error message</strong> — copy the error text into a search engine; someone has seen it before</li>
+</ol>
+<h2 id="refactoring">Refactoring<a class="headerlink" href="#refactoring" title="Permanent link">&para;</a></h2>
+<p><strong>Refactoring</strong> means improving code structure without changing what it does.
+It's normal to write messy code first, then refactor once the program works.</p>
+<p>Common refactoring moves:
+- Extract a repeated block into a named function
+- Rename a variable to be more descriptive
+- Replace a long chain of <code>if/elif</code> with a dictionary lookup
+- Split a long function into two smaller ones</p>
+<h2 id="version-control-with-git">Version Control with Git<a class="headerlink" href="#version-control-with-git" title="Permanent link">&para;</a></h2>
+<p><strong>Git</strong> is the standard tool for tracking changes to code over time.
+Even working alone, git lets you:
+- Go back to any previous version of your project
+- See exactly what changed between versions
+- Work on risky experiments without fear of breaking working code</p>
+<p>The basic workflow:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>init<span class="w">              </span><span class="c1"># start tracking a project</span>
+git<span class="w"> </span>add<span class="w"> </span>myfile.py<span class="w">     </span><span class="c1"># stage a changed file</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add score tracker&quot;</span><span class="w">  </span><span class="c1"># save a snapshot</span>
+git<span class="w"> </span>log<span class="w">               </span><span class="c1"># see history of commits</span>
+</code></pre></div>
+<h2 id="pair-programming">Pair Programming<a class="headerlink" href="#pair-programming" title="Permanent link">&para;</a></h2>
+<p><strong>Pair programming</strong> means two people work on one computer — one person types (the "driver"), one person reviews and suggests (the "navigator").</p>
+<p>Research shows that pair programming:
+- Catches bugs before they're committed
+- Spreads knowledge between teammates
+- Produces cleaner code on the first try</p>
+<p>Even practicing pair programming with a classmate for 20 minutes builds better habits.</p>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Refactor This Code</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below works but violates DRY — the grade calculation logic is repeated three times.
+Refactor it into a single <code>letter_grade(score)</code> function and use it in all three places!</p>
+</div>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false"># Wet code — grade logic repeated three times:
+score1 = 87
+if score1 >= 90: grade1 = "A"
+elif score1 >= 80: grade1 = "B"
+elif score1 >= 70: grade1 = "C"
+else: grade1 = "F"
+
+score2 = 73
+if score2 >= 90: grade2 = "A"
+elif score2 >= 80: grade2 = "B"
+elif score2 >= 70: grade2 = "C"
+else: grade2 = "F"
+
+score3 = 95
+if score3 >= 90: grade3 = "A"
+elif score3 >= 80: grade3 = "B"
+elif score3 >= 70: grade3 = "C"
+else: grade3 = "F"
+
+print(f"Score 1: {score1} → {grade1}")
+print(f"Score 2: {score2} → {grade2}")
+print(f"Score 3: {score3} → {grade3}")
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Apply the four computational thinking pillars to "Write a program that sorts a list of names alphabetically." Write out the decomposition as comments before coding.
+   <strong>You'll know it worked when</strong> you have clear sub-steps before any Python code.</p>
+</li>
+<li>
+<p>Refactor the <code>word_frequency</code> + <code>most_common</code> functions into a single <code>analyze_text(text)</code> function that returns a dict with both <code>"frequencies"</code> and <code>"top_word"</code> keys.
+   <strong>You'll know it worked when</strong> <code>analyze_text("cat cat dog")["top_word"]</code> returns <code>"cat"</code>.</p>
+</li>
+<li>
+<p>Write a <code>safe_divide(a, b)</code> function that returns <code>a / b</code> normally, but returns <code>None</code> (not an error) when <code>b == 0</code>. Write at least 3 test cases.
+   <strong>You'll know it worked when</strong> all three test cases print the expected result.</p>
+</li>
+<li>
+<p>Take any function you wrote in an earlier chapter and rename all variables to be more descriptive. Does it feel more readable?
+   <strong>You'll know it worked when</strong> the function reads almost like English without comments.</p>
+</li>
+<li>
+<p>Find a partner and try pair programming: one person types the solution to experiment 3 while the other reads it aloud and suggests improvements.
+   <strong>You'll know it worked when</strong> you discover at least one improvement through the discussion.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Expert Programmer Mindset Unlocked!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You now think like a professional programmer — with decomposition, abstraction, DRY code, meaningful names, and systematic debugging in your toolkit.
+Two chapters remain: machine learning and neural networks. The frontier of computer science is right ahead! Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

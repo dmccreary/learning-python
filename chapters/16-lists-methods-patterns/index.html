@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Master list methods for adding, removing, sorting, and iterating — plus list comprehensions, stacks, and queues">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>16. Lists - Methods and Patterns - Learning Python</title>
+        <title>Lists — Methods and Patterns - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              16. Lists - Methods and Patterns
+              Lists — Methods and Patterns
             
           </span>
         </div>
@@ -702,27 +702,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#adding-items-to-a-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Adding Items to a List
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#removing-items-from-a-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Removing Items from a List
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#sorting-and-reversing" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Sorting and Reversing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-items-with-index-and-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Items with index() and count()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterating-over-a-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterating Over a List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-comprehensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Comprehensions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Lists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists-as-stacks-and-queues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lists as Stacks and Queues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3207,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#adding-items-to-a-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Adding Items to a List
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#removing-items-from-a-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Removing Items from a List
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#sorting-and-reversing" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Sorting and Reversing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-items-with-index-and-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding Items with index() and count()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterating-over-a-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterating Over a List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-comprehensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Comprehensions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Lists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists-as-stacks-and-queues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lists as Stacks and Queues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,41 +3315,302 @@
 
 
 <h1 id="lists-methods-and-patterns">Lists — Methods and Patterns<a class="headerlink" href="#lists-methods-and-patterns" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Lists come with powerful built-in methods for adding, removing, and reorganizing
-items. This chapter covers <code>append()</code>/<code>insert()</code>/<code>extend()</code>, <code>remove()</code>/<code>pop()</code>,
-<code>sort()</code>/<code>reverse()</code>, iterating over lists with <code>for</code>, nested lists, list
-comprehensions, the loop-with-list-building pattern, and using lists as
-stacks (LIFO) and queues (FIFO).</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 11 concepts from the learning graph:</p>
-<ol>
-<li>Loop with List Building</li>
-<li>List append() insert() extend()</li>
-<li>List remove() pop() clear()</li>
-<li>List sort() reverse() copy()</li>
-<li>List index() count()</li>
-<li>List Concatenation and Repetition</li>
-<li>Iterating over a List</li>
-<li>Nested Lists</li>
-<li>List Comprehensions</li>
-<li>List as Stack</li>
-<li>List as Queue</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../07-for-loops-and-shapes/">Chapter 7: For Loops and Drawing Shapes</a></li>
-<li><a href="../15-lists-basics/">Chapter 15: Lists — Basics</a></li>
+<li>Add items with <code>append()</code>, <code>insert()</code>, and <code>extend()</code>, and remove items with <code>remove()</code>, <code>pop()</code>, and <code>clear()</code></li>
+<li>Sort and reverse a list with <code>sort()</code> and <code>reverse()</code></li>
+<li>Build lists dynamically inside a <code>for</code> loop or using a <strong>list comprehension</strong></li>
+<li>Use a list as a <strong>stack</strong> (last in, first out) or a <strong>queue</strong> (first in, first out)</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Lists become really powerful once you can add, remove, and reorganize their items.
+In this chapter you'll see patterns that show up in real Python programs every day.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 16!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Ready to make your lists work harder? Today you'll learn to add items, remove items,
+sort your collection, and even build brand-new lists automatically!
+Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="adding-items-to-a-list">Adding Items to a List<a class="headerlink" href="#adding-items-to-a-list" title="Permanent link">&para;</a></h2>
+<p>There are three methods for adding items.</p>
+<p>Before we try them, let's define each one clearly:</p>
+<ul>
+<li><code>append(x)</code> — adds <code>x</code> to the <strong>end</strong> of the list</li>
+<li><code>insert(i, x)</code> — adds <code>x</code> <strong>before</strong> the item at index <code>i</code></li>
+<li><code>extend(other_list)</code> — adds every item from <code>other_list</code> to the end</li>
+</ul>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">fruits = ["apple", "banana"]
+print("Start:", fruits)
+
+fruits.append("mango")
+print("After append:", fruits)
+
+fruits.insert(1, "kiwi")   # insert "kiwi" at index 1
+print("After insert:", fruits)
+
+extras = ["grape", "lemon"]
+fruits.extend(extras)
+print("After extend:", fruits)
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+After <code>fruits.insert(1, "kiwi")</code>, what does the list look like?
+Which item gets pushed to index 2? Make your guess — then run it!</p>
+</div>
+<p>Were you right? <code>insert(1, "kiwi")</code> slots <code>"kiwi"</code> at position 1, pushing <code>"banana"</code> to position 2.</p>
+<h2 id="removing-items-from-a-list">Removing Items from a List<a class="headerlink" href="#removing-items-from-a-list" title="Permanent link">&para;</a></h2>
+<p>There are three methods for removing items:</p>
+<ul>
+<li><code>remove(x)</code> — removes the <strong>first</strong> occurrence of the value <code>x</code> (raises <code>ValueError</code> if not found)</li>
+<li><code>pop()</code> — removes and returns the <strong>last</strong> item (or <code>pop(i)</code> removes at index <code>i</code>)</li>
+<li><code>clear()</code> — removes <strong>all</strong> items, leaving an empty list</li>
+</ul>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">items = ["a", "b", "c", "d", "e"]
+print("Start:", items)
+
+items.remove("c")
+print("After remove('c'):", items)
+
+last = items.pop()
+print("Popped:", last)
+print("After pop:", items)
+
+second = items.pop(1)
+print("Popped index 1:", second)
+print("After pop(1):", items)
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="sorting-and-reversing">Sorting and Reversing<a class="headerlink" href="#sorting-and-reversing" title="Permanent link">&para;</a></h2>
+<p><code>sort()</code> rearranges the items in a list in ascending order (alphabetical for strings, smallest-first for numbers).
+<code>reverse()</code> flips the order — last becomes first.</p>
+<p>Both methods modify the list <strong>in place</strong> — the original list changes.</p>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">scores = [73, 100, 87, 55, 92]
+print("Before sort:", scores)
+
+scores.sort()
+print("After sort:", scores)
+
+scores.reverse()
+print("After reverse:", scores)
+
+words = ["banana", "apple", "cherry"]
+words.sort()
+print("Sorted words:", words)
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="finding-items-with-index-and-count">Finding Items with <code>index()</code> and <code>count()</code><a class="headerlink" href="#finding-items-with-index-and-count" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>list.index(x)</code> — returns the index of the first occurrence of <code>x</code></li>
+<li><code>list.count(x)</code> — counts how many times <code>x</code> appears</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">))</span>   <span class="c1"># 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">))</span>    <span class="c1"># 3</span>
+</code></pre></div>
+<h2 id="iterating-over-a-list">Iterating Over a List<a class="headerlink" href="#iterating-over-a-list" title="Permanent link">&para;</a></h2>
+<p>The most common way to work with every item in a list is a <code>for</code> loop:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+    <span class="c1"># do something with item</span>
+</code></pre></div>
+<p>You can also iterate and build a new list at the same time — called the <strong>loop-with-list-building</strong> pattern:</p>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">scores = [73, 100, 87, 55, 92]
+doubled = []
+
+for s in scores:
+    doubled.append(s * 2)
+
+print("Original:", scores)
+print("Doubled: ", doubled)
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="list-comprehensions">List Comprehensions<a class="headerlink" href="#list-comprehensions" title="Permanent link">&para;</a></h2>
+<p>A <strong>list comprehension</strong> is a shorter way to build a new list from an existing one.
+It packs the loop and the expression into a single line inside square brackets.</p>
+<p>Before the comprehension, make sure you understand the loop version:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># The long way:</span>
+<span class="n">doubled</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+    <span class="n">doubled</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># The short way (list comprehension):</span>
+<span class="n">doubled</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">]</span>
+</code></pre></div>
+<p>Both produce exactly the same result. The comprehension just reads like English: "s times 2, for each s in scores."</p>
+<p>You can even add an <code>if</code> filter:</p>
+<div class="highlight"><pre><span></span><code><span class="n">passing</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">scores</span> <span class="k">if</span> <span class="n">s</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">]</span>   <span class="c1"># only scores 70 and above</span>
+</code></pre></div>
+<div id="skulpt-lab-5" class="skulpt-text-only">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">scores = [73, 100, 87, 55, 92, 68]
+
+doubled  = [s * 2 for s in scores]
+passing  = [s for s in scores if s >= 70]
+graded   = ["pass" if s >= 70 else "fail" for s in scores]
+
+print("Doubled:", doubled)
+print("Passing:", passing)
+print("Graded: ", graded)
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<h2 id="nested-lists">Nested Lists<a class="headerlink" href="#nested-lists" title="Permanent link">&para;</a></h2>
+<p>A <strong>nested list</strong> is a list that contains other lists as items.
+Think of it like a grid — rows and columns.</p>
+<div class="highlight"><pre><span></span><code><span class="n">grid</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>      <span class="c1"># [1, 2, 3] — first row</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>   <span class="c1"># 6 — row 1, column 2</span>
+</code></pre></div>
+<h2 id="lists-as-stacks-and-queues">Lists as Stacks and Queues<a class="headerlink" href="#lists-as-stacks-and-queues" title="Permanent link">&para;</a></h2>
+<p>A <strong>stack</strong> is a "last in, first out" collection — like a stack of plates. You add and remove from the top.
+Use <code>append()</code> to push and <code>pop()</code> to pop:</p>
+<div class="highlight"><pre><span></span><code><span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>   <span class="c1"># push</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>  <span class="c1"># &quot;c&quot; — last in, first out</span>
+</code></pre></div>
+<p>A <strong>queue</strong> is "first in, first out" — like a line at a lunch counter.
+Use <code>append()</code> to add to the back and <code>pop(0)</code> to remove from the front:</p>
+<div class="highlight"><pre><span></span><code><span class="n">queue</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;first&quot;</span><span class="p">)</span>
+<span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;second&quot;</span><span class="p">)</span>
+<span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;third&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">queue</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>   <span class="c1"># &quot;first&quot; — first in, first out</span>
+</code></pre></div>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Build a Filtered List</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below tries to build a list of only the even numbers from <code>numbers</code>,
+but the list comprehension has a bug in its <code>if</code> condition.
+Fix it so <code>evens</code> contains only even numbers!</p>
+</div>
+<div id="skulpt-lab-6" class="skulpt-text-only">
+  <div id="editor-container-6">
+    <textarea id="code-6" spellcheck="false">numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Bug: this keeps odd numbers, not even ones!
+evens = [n for n in numbers if n % 2 == 1]
+
+print("Evens:", evens)
+</textarea>
+    <div id="button-row-6">
+      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
+      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
+    </div>
+    <pre id="output-6"></pre>
+  </div>
+  <div id="canvas-container-6">
+    <div id="turtle-target-6"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Start with an empty list. Use <code>append()</code> to add the numbers 1 through 5. Print the list.
+   <strong>You'll know it worked when</strong> you see <code>[1, 2, 3, 4, 5]</code>.</p>
+</li>
+<li>
+<p>Create a list of five names. Sort it alphabetically and print it.
+   <strong>You'll know it worked when</strong> the names appear in A–Z order.</p>
+</li>
+<li>
+<p>Write a list comprehension that turns <code>["hello", "world", "python"]</code> into all-caps.
+   <strong>You'll know it worked when</strong> you see <code>["HELLO", "WORLD", "PYTHON"]</code>.</p>
+</li>
+<li>
+<p>Simulate a stack of three pancakes. Push "bottom", "middle", "top". Pop one. Print the remaining stack.
+   <strong>You'll know it worked when</strong> "top" is removed and two pancakes remain.</p>
+</li>
+<li>
+<p>Create a nested list for a 3×3 grid. Print the center value (row 1, column 1).
+   <strong>You'll know it worked when</strong> you see the number at position <code>[1][1]</code>.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">List Champion!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've mastered append, insert, remove, sort, comprehensions, stacks, and queues!
+Lists are one of the workhorses of Python — you'll use these patterns in almost every program you build from here on. Let's keep coding together!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Discover Python lists — how to create them, access items by index, slice sublists, and understand the difference between mutable and immutable types">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>15. Lists - Basics - Learning Python</title>
+        <title>Lists — Basics - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              15. Lists - Basics
+              Lists — Basics
             
           </span>
         </div>
@@ -681,27 +681,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-list-type" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The List Type
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#list-indexing" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      List Indexing
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#negative-indexing" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Negative Indexing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Slicing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measuring-length-with-len" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring Length with len()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-membership-with-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Membership with in
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutable-vs-immutable-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutable vs Immutable Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3198,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-list-type" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The List Type
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#list-indexing" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      List Indexing
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#negative-indexing" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Negative Indexing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Slicing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measuring-length-with-len" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring Length with len()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-membership-with-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Membership with in
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutable-vs-immutable-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutable vs Immutable Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,38 +3297,273 @@
 
 
 <h1 id="lists-basics">Lists — Basics<a class="headerlink" href="#lists-basics" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>A list is an ordered collection of items — like a Scratch list block but much
-more powerful. This chapter introduces the list type, how to create lists,
-access items by index, use negative indexing to count from the end, slice
-sub-lists, measure length with <code>len()</code>, test membership with <code>in</code>,
-and understand the key difference between mutable and immutable types.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 8 concepts from the learning graph:</p>
-<ol>
-<li>List Type</li>
-<li>Creating a List</li>
-<li>List Indexing</li>
-<li>Negative Indexing</li>
-<li>List Slicing</li>
-<li>len() for Lists</li>
-<li>Membership with in Operator</li>
-<li>Mutable vs Immutable Types</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../08-working-with-strings/">Chapter 8: Working with Strings</a></li>
-<li><a href="../09-decisions-if-else/">Chapter 9: Making Decisions with If/Else</a></li>
+<li>Create a Python list and access items by index (including negative indexing)</li>
+<li>Slice a sublist using the <code>[start:end]</code> notation</li>
+<li>Measure a list's length with <code>len()</code> and test for membership with <code>in</code></li>
+<li>Explain the difference between <strong>mutable</strong> (changeable) and <strong>immutable</strong> (unchangeable) types</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Variables hold one value. But what if you need to store a whole collection of values — like the names of all your friends, or the scores from ten games?
+That's what <strong>lists</strong> are for.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 15!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Lists are one of the most powerful tools in Python!
+Once you learn lists, you'll wonder how you ever programmed without them.
+Let's build our first collection! Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="the-list-type">The List Type<a class="headerlink" href="#the-list-type" title="Permanent link">&para;</a></h2>
+<p>A <strong>list</strong> is an ordered, changeable collection of items.
+You create one using square brackets, with items separated by commas:</p>
+<div class="highlight"><pre><span></span><code><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">]</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">95</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">88</span><span class="p">]</span>
+<span class="n">mixed</span>  <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Monty&quot;</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">]</span>   <span class="c1"># lists can hold different types</span>
+<span class="n">empty</span>  <span class="o">=</span> <span class="p">[]</span>                           <span class="c1"># an empty list</span>
+</code></pre></div>
+<p>Lists can hold any type of value — strings, numbers, booleans, even other lists.</p>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">colors = ["red", "green", "blue", "yellow"]
+scores = [95, 87, 100, 73, 88]
+
+print("Colors:", colors)
+print("Scores:", scores)
+print("Type of colors:", type(colors))
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="list-indexing">List Indexing<a class="headerlink" href="#list-indexing" title="Permanent link">&para;</a></h2>
+<p>Just like strings, each item in a list has an <strong>index</strong> starting at <code>0</code>.
+Use square brackets to access an item: <code>my_list[index]</code>.</p>
+<div class="highlight"><pre><span></span><code>colors = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;yellow&quot;]
+           0       1        2        3
+</code></pre></div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Look at the list <code>colors</code> above. What does <code>colors[2]</code> print?
+And what about <code>colors[0]</code>?  Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">colors = ["red", "green", "blue", "yellow"]
+print("colors[0]:", colors[0])
+print("colors[2]:", colors[2])
+print("colors[3]:", colors[3])
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>Were you right? Index <code>0</code> is the first item, index <code>2</code> is the third.</p>
+<p>You can also change an item using its index:</p>
+<div class="highlight"><pre><span></span><code><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;purple&quot;</span>   <span class="c1"># replaces &quot;green&quot; with &quot;purple&quot;</span>
+</code></pre></div>
+<h2 id="negative-indexing">Negative Indexing<a class="headerlink" href="#negative-indexing" title="Permanent link">&para;</a></h2>
+<p><strong>Negative indexing</strong> lets you count backwards from the end.
+<code>-1</code> is the last item, <code>-2</code> is the second-to-last, and so on.</p>
+<div class="highlight"><pre><span></span><code>colors = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;yellow&quot;]
+            -4     -3       -2       -1
+</code></pre></div>
+<p>This is especially useful when you don't know how long the list is but you always want the last item.</p>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">colors = ["red", "green", "blue", "yellow"]
+print("Last item:", colors[-1])
+print("Second to last:", colors[-2])
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="list-slicing">List Slicing<a class="headerlink" href="#list-slicing" title="Permanent link">&para;</a></h2>
+<p><strong>Slicing</strong> extracts a portion of a list. The syntax is the same as string slicing: <code>my_list[start:end]</code>.
+It returns a new list containing items from <code>start</code> up to (but not including) <code>end</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">95</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">88</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>   <span class="c1"># [87, 100, 73]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>    <span class="c1"># [95, 87, 100]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>    <span class="c1"># [100, 73, 88]</span>
+</code></pre></div>
+<h2 id="measuring-length-with-len">Measuring Length with <code>len()</code><a class="headerlink" href="#measuring-length-with-len" title="Permanent link">&para;</a></h2>
+<p><code>len()</code> counts how many items are in a list. It works on strings too (counting characters).</p>
+<div class="highlight"><pre><span></span><code><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">))</span>   <span class="c1"># 4</span>
+</code></pre></div>
+<p>Use <code>len()</code> when you need the number of items — for example, to loop exactly as many times as there are items.</p>
+<h2 id="testing-membership-with-in">Testing Membership with <code>in</code><a class="headerlink" href="#testing-membership-with-in" title="Permanent link">&para;</a></h2>
+<p>The <strong><code>in</code> operator</strong> checks whether a value is in a list.
+It returns <code>True</code> if the value is found, <code>False</code> if not.</p>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">fruits = ["apple", "banana", "mango", "kiwi"]
+
+print("apple" in fruits)     # True
+print("grape" in fruits)     # False
+print("mango" not in fruits) # False
+
+if "banana" in fruits:
+    print("We have bananas!")
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<p><code>not in</code> is the opposite — it returns <code>True</code> when the item is <strong>not</strong> in the list.</p>
+<h2 id="mutable-vs-immutable-types">Mutable vs Immutable Types<a class="headerlink" href="#mutable-vs-immutable-types" title="Permanent link">&para;</a></h2>
+<p><strong>Mutable</strong> means you can change something after you create it.
+<strong>Immutable</strong> means once created, it cannot be changed — you have to make a new one instead.</p>
+<p>Lists are <strong>mutable</strong> — you can change any item, add items, or remove items.</p>
+<p>Strings are <strong>immutable</strong> — once you create <code>"hello"</code>, you cannot change character <code>[0]</code> to something else.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Mutable?</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>list</code></td>
+<td>Yes</td>
+<td><code>colors[0] = "purple"</code> works</td>
+</tr>
+<tr>
+<td><code>str</code></td>
+<td>No</td>
+<td><code>word[0] = "P"</code> raises <code>TypeError</code></td>
+</tr>
+<tr>
+<td><code>int</code>, <code>float</code></td>
+<td>No</td>
+<td><code>x = 5</code> then <code>x = 6</code> creates a new int, doesn't change the old one</td>
+</tr>
+</tbody>
+</table>
+<div id="skulpt-lab-5" class="skulpt-text-only">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">colors = ["red", "green", "blue"]
+print("Before:", colors)
+
+colors[1] = "purple"   # change the item at index 1
+print("After change:", colors)
+
+# Strings are immutable:
+word = "hello"
+# word[0] = "H"   # this would cause a TypeError!
+new_word = "H" + word[1:]   # must create a new string
+print("New word:", new_word)
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Find the Index Bug</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The program below is supposed to print the <em>last</em> item in the list using negative indexing.
+But it has an off-by-one bug. Fix the index so it prints <code>"kiwi"</code>.</p>
+</div>
+<div id="skulpt-lab-6" class="skulpt-text-only">
+  <div id="editor-container-6">
+    <textarea id="code-6" spellcheck="false">fruits = ["apple", "banana", "mango", "kiwi"]
+
+# Bug: this prints "mango", not "kiwi"
+print("Last fruit:", fruits[-2])
+</textarea>
+    <div id="button-row-6">
+      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
+      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
+    </div>
+    <pre id="output-6"></pre>
+  </div>
+  <div id="canvas-container-6">
+    <div id="turtle-target-6"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Create a list of five of your favorite movies. Print the first, the last (using <code>-1</code>), and the middle one.
+   <strong>You'll know it worked when</strong> all three print without errors.</p>
+</li>
+<li>
+<p>Slice your movies list to get just the first two items.
+   <strong>You'll know it worked when</strong> you see a list with exactly 2 movies.</p>
+</li>
+<li>
+<p>Use <code>len()</code> to print how many movies are in your list.
+   <strong>You'll know it worked when</strong> you see <code>5</code> (or whatever number you used).</p>
+</li>
+<li>
+<p>Use <code>in</code> to check if your favorite movie is in the list. Print <code>"Found it!"</code> or <code>"Not there!"</code>.
+   <strong>You'll know it worked when</strong> the correct message appears.</p>
+</li>
+<li>
+<p>Change the second item in your list to <code>"The Matrix"</code>. Print the whole list before and after.
+   <strong>You'll know it worked when</strong> you see the list change.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">List Master!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've created lists, used indexing and slicing, measured length, checked membership, and
+discovered the mutable/immutable difference! Next chapter we'll learn how to add, remove,
+and sort items — making lists even more powerful. Let's keep coding together!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

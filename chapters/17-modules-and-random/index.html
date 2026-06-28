@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Learn how to import modules, use aliases, and harness the random module to build games and generative art">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>17. Modules and Random Numbers - Learning Python</title>
+        <title>Modules and Random Numbers - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              17. Modules and Random Numbers
+              Modules and Random Numbers
             
           </span>
         </div>
@@ -723,27 +723,126 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-import-statement" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The import Statement
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#fromimport-grab-specific-names" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      from...import — Grab Specific Names
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#importas-give-a-module-a-nickname" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      import...as — Give a Module a Nickname
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fromimport-import-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      from...import * — Import Everything
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-random-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      The random Module
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomrandint-random-integers" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.randint() — Random Integers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomchoice-pick-from-a-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.choice() — Pick from a List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomshuffle-shuffle-a-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.shuffle() — Shuffle a List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomrandom-random-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.random() — Random Float
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomsample-pick-without-replacement" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.sample() — Pick Without Replacement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomseed-repeatable-randomness" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.seed() — Repeatable Randomness
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-art-with-turtle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Art with Turtle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3243,126 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-import-statement" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The import Statement
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#fromimport-grab-specific-names" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      from...import — Grab Specific Names
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#importas-give-a-module-a-nickname" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      import...as — Give a Module a Nickname
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fromimport-import-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      from...import * — Import Everything
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-random-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      The random Module
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomrandint-random-integers" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.randint() — Random Integers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomchoice-pick-from-a-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.choice() — Pick from a List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomshuffle-shuffle-a-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.shuffle() — Shuffle a List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomrandom-random-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.random() — Random Float
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomsample-pick-without-replacement" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.sample() — Pick Without Replacement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomseed-repeatable-randomness" class="md-nav__link">
+    <span class="md-ellipsis">
+      random.seed() — Repeatable Randomness
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-art-with-turtle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Art with Turtle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,40 +3387,326 @@
 
 
 <h1 id="modules-and-random-numbers">Modules and Random Numbers<a class="headerlink" href="#modules-and-random-numbers" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Python's <code>import</code> system gives you access to thousands of extra tools.
-This chapter covers <code>from...import</code> to grab specific names, aliases with <code>as</code>,
-and <code>import *</code>. Then you'll dive into the <code>random</code> module — essential for games,
-generative art, and simulations — covering <code>randint()</code>, <code>choice()</code>, <code>shuffle()</code>,
-<code>seed()</code>, <code>random()</code>, and <code>sample()</code>.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 10 concepts from the learning graph:</p>
-<ol>
-<li>from...import Specific Names</li>
-<li>import...as Alias</li>
-<li>from...import Star</li>
-<li>random Module Overview</li>
-<li>random.randint()</li>
-<li>random.choice()</li>
-<li>random.shuffle()</li>
-<li>random.seed()</li>
-<li>random.random() Float</li>
-<li>random.sample()</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../04-functions-and-objects/">Chapter 4: Functions and Objects</a></li>
-<li><a href="../15-lists-basics/">Chapter 15: Lists — Basics</a></li>
+<li>Import a module using <code>import</code>, <code>from...import</code>, and <code>import...as</code> syntax</li>
+<li>Generate random integers with <code>random.randint()</code> and random floats with <code>random.random()</code></li>
+<li>Pick random items with <code>random.choice()</code> and shuffle a list with <code>random.shuffle()</code></li>
+<li>Use <code>random.seed()</code> to make your random results repeatable</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Python comes with a huge library of extra tools called <strong>modules</strong>.
+Instead of writing everything from scratch, you <code>import</code> the tool you need.
+The <code>random</code> module is one of the most fun — it lets you add surprise and variety to your programs.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 17!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Modules are like power-ups for your programs! Import one and suddenly you can do
+things Python couldn't do on its own. Today we're unlocking the <code>random</code> module —
+perfect for games and generative art. Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="the-import-statement">The <code>import</code> Statement<a class="headerlink" href="#the-import-statement" title="Permanent link">&para;</a></h2>
+<p>Python's standard library contains dozens of modules ready to use.
+To load a module, write <code>import module_name</code> at the top of your program.
+After importing, access its functions with <code>module.function()</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>   <span class="c1"># random number between 1 and 10</span>
+</code></pre></div>
+<h2 id="fromimport-grab-specific-names"><code>from...import</code> — Grab Specific Names<a class="headerlink" href="#fromimport-grab-specific-names" title="Permanent link">&para;</a></h2>
+<p>If you only need one or two functions from a module, you can import just those names.
+After a <code>from...import</code>, you call the function directly without the module prefix.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">choice</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>       <span class="c1"># no &quot;random.&quot; needed</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">choice</span><span class="p">([</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">]))</span>
+</code></pre></div>
+<h2 id="importas-give-a-module-a-nickname"><code>import...as</code> — Give a Module a Nickname<a class="headerlink" href="#importas-give-a-module-a-nickname" title="Permanent link">&para;</a></h2>
+<p>Long module names can be shortened with <code>as</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span> <span class="k">as</span> <span class="nn">rnd</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rnd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="fromimport-import-everything"><code>from...import *</code> — Import Everything<a class="headerlink" href="#fromimport-import-everything" title="Permanent link">&para;</a></h2>
+<p><code>from random import *</code> imports every public name from the module.
+This is convenient but can cause confusion if two modules define a function with the same name.
+Use it only for quick experiments, not in serious programs.</p>
+<h2 id="the-random-module">The <code>random</code> Module<a class="headerlink" href="#the-random-module" title="Permanent link">&para;</a></h2>
+<p>The <code>random</code> module generates numbers that look unpredictable.</p>
+<p>Before we try each function, here's a summary of the key ones:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Returns</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>randint(a, b)</code></td>
+<td>Random integer from a to b (inclusive)</td>
+<td><code>randint(1, 6)</code> → 4</td>
+</tr>
+<tr>
+<td><code>random()</code></td>
+<td>Random float from 0.0 to 1.0</td>
+<td><code>random()</code> → 0.73...</td>
+</tr>
+<tr>
+<td><code>choice(seq)</code></td>
+<td>One random item from a list</td>
+<td><code>choice(["red","blue"])</code></td>
+</tr>
+<tr>
+<td><code>shuffle(lst)</code></td>
+<td>Shuffles a list in place (returns None)</td>
+<td><code>shuffle(cards)</code></td>
+</tr>
+<tr>
+<td><code>sample(seq, k)</code></td>
+<td>List of k unique random items</td>
+<td><code>sample(range(1,50), 6)</code></td>
+</tr>
+<tr>
+<td><code>seed(n)</code></td>
+<td>Sets the random starting point</td>
+<td><code>seed(42)</code> → same results every time</td>
+</tr>
+</tbody>
+</table>
+<h2 id="randomrandint-random-integers"><code>random.randint()</code> — Random Integers<a class="headerlink" href="#randomrandint-random-integers" title="Permanent link">&para;</a></h2>
+<p><code>randint(a, b)</code> returns a random integer where <code>a &lt;= result &lt;= b</code>.
+Both endpoints are included.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below simulates rolling a 6-sided die five times.
+Will you ever get the same number twice in a row? Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">import random
+
+print("Rolling a die 5 times:")
+for i in range(5):
+    roll = random.randint(1, 6)
+    print(f"  Roll {i+1}: {roll}")
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p>Run it a few times — the results change each time because the numbers are random.</p>
+<h2 id="randomchoice-pick-from-a-list"><code>random.choice()</code> — Pick from a List<a class="headerlink" href="#randomchoice-pick-from-a-list" title="Permanent link">&para;</a></h2>
+<p><code>choice(seq)</code> picks one random item from a sequence (list, string, or tuple).</p>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import random
+
+colors = ["red", "orange", "yellow", "green", "blue", "violet"]
+print("Random color:", random.choice(colors))
+
+directions = ["left", "right", "forward", "back"]
+print("Random direction:", random.choice(directions))
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="randomshuffle-shuffle-a-list"><code>random.shuffle()</code> — Shuffle a List<a class="headerlink" href="#randomshuffle-shuffle-a-list" title="Permanent link">&para;</a></h2>
+<p><code>shuffle(lst)</code> rearranges the items of a list in a random order.
+It modifies the list <strong>in place</strong> and returns <code>None</code> — so don't write <code>lst = shuffle(lst)</code>.</p>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">import random
+
+cards = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+print("Before shuffle:", cards[:5], "...")
+random.shuffle(cards)
+print("After shuffle: ", cards[:5], "...")
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="randomrandom-random-float"><code>random.random()</code> — Random Float<a class="headerlink" href="#randomrandom-random-float" title="Permanent link">&para;</a></h2>
+<p><code>random()</code> returns a float between 0.0 and 1.0. The result can be exactly 0.0 but is never exactly 1.0.</p>
+<p>This is useful when you want a <em>percentage</em> or <em>probability</em>. Multiply to scale it:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">prob</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>           <span class="c1"># between 0.0 and 1.0</span>
+<span class="n">scaled</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>  <span class="c1"># between 0.0 and 100.0</span>
+</code></pre></div>
+<h2 id="randomsample-pick-without-replacement"><code>random.sample()</code> — Pick Without Replacement<a class="headerlink" href="#randomsample-pick-without-replacement" title="Permanent link">&para;</a></h2>
+<p><code>sample(seq, k)</code> picks <code>k</code> unique items from the sequence (no repeats).
+This is like drawing lottery numbers — once a number is drawn, it can't be drawn again.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">lottery</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lottery numbers:&quot;</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">lottery</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="randomseed-repeatable-randomness"><code>random.seed()</code> — Repeatable Randomness<a class="headerlink" href="#randomseed-repeatable-randomness" title="Permanent link">&para;</a></h2>
+<p>Every time you run a random program, Python uses a different starting point (called a <strong>seed</strong>) so the results are different.</p>
+<p>If you call <code>random.seed(n)</code> with the same number every time, you get exactly the same "random" sequence.
+This is useful for testing — you want your program to behave the same way during testing.</p>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">import random
+
+random.seed(42)
+print("With seed 42:", [random.randint(1, 10) for _ in range(5)])
+
+random.seed(42)   # reset to the same seed
+print("Same again: ", [random.randint(1, 10) for _ in range(5)])
+
+# No seed — different every run:
+print("No seed:   ", [random.randint(1, 10) for _ in range(5)])
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="random-art-with-turtle">Random Art with Turtle<a class="headerlink" href="#random-art-with-turtle" title="Permanent link">&para;</a></h2>
+<p>Let's put <code>random</code> to work with turtle graphics — random colors, sizes, and positions to create generative art.</p>
+<div id="skulpt-lab-5">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">import turtle
+import random
+
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+turtle.bgcolor("black")
+
+colors = ["#FF6B6B", "#FFE66D", "#4ECDC4", "#95E1D3", "#F38181", "#A8E6CF"]
+
+for _ in range(40):
+    t.penup()
+    x = random.randint(-180, 180)
+    y = random.randint(-180, 180)
+    t.goto(x, y)
+    t.pendown()
+    t.pencolor(random.choice(colors))
+    t.pensize(random.randint(1, 4))
+    size = random.randint(10, 50)
+    sides = random.randint(3, 8)
+    t.fillcolor(random.choice(colors))
+    t.begin_fill()
+    for i in range(sides):
+        t.forward(size)
+        t.right(360 / sides)
+    t.end_fill()
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<p>Run it multiple times — because of randomness, you'll get a different artwork every single time!</p>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Fix the Shuffle</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below tries to shuffle a list and print it, but it has a bug —
+it assigns the return value of <code>shuffle()</code> to <code>cards</code>, losing the list!
+Fix it so the list is actually shuffled and printed.</p>
+</div>
+<div id="skulpt-lab-6" class="skulpt-text-only">
+  <div id="editor-container-6">
+    <textarea id="code-6" spellcheck="false">import random
+
+cards = ["A", "2", "3", "4", "5"]
+
+# Bug: shuffle returns None, not the shuffled list!
+cards = random.shuffle(cards)
+
+print("Shuffled:", cards)
+</textarea>
+    <div id="button-row-6">
+      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
+      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
+    </div>
+    <pre id="output-6"></pre>
+  </div>
+  <div id="canvas-container-6">
+    <div id="turtle-target-6"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Simulate flipping a coin 10 times. Use <code>random.choice(["heads", "tails"])</code> and count how many heads you get.
+   <strong>You'll know it worked when</strong> you see a count between 0 and 10.</p>
+</li>
+<li>
+<p>Pick 6 lottery numbers from 1–49 using <code>random.sample(range(1, 50), 6)</code>. Print them sorted.
+   <strong>You'll know it worked when</strong> you see 6 unique numbers in order.</p>
+</li>
+<li>
+<p>Change the random art loop count from <code>40</code> to <code>100</code>. Notice the effect.
+   <strong>You'll know it worked when</strong> the canvas is much more filled with shapes.</p>
+</li>
+<li>
+<p>Set <code>random.seed(7)</code> before the random art loop. Run it twice.
+   <strong>You'll know it worked when</strong> both runs produce identical artwork.</p>
+</li>
+<li>
+<p>Use <code>random.random()</code> to simulate a 30% chance event: print <code>"Lucky!"</code> if the result is below <code>0.3</code>.
+   Run it 10 times with a loop.
+   <strong>You'll know it worked when</strong> roughly 3 out of 10 iterations print "Lucky!".</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Random Wizard!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've unlocked modules and mastered the <code>random</code> module!
+Games, simulations, and generative art all rely on randomness — and now you can use it too.
+Next chapter we'll add math power to your turtle programs. Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

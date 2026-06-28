@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Explore stacks, queues, graphs, BFS, DFS, sorting algorithms, binary search, and Big-O complexity analysis">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>30. Algorithms and Data Structures - Learning Python</title>
+        <title>Algorithms and Data Structures - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              30. Algorithms and Data Structures
+              Algorithms and Data Structures
             
           </span>
         </div>
@@ -996,27 +996,132 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#abstract-data-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Abstract Data Types
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#stacks-lifo" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Stacks — LIFO
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#queues-fifo" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Queues — FIFO
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphs-nodes-and-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphs — Nodes and Edges
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breadth-first-search-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breadth-First Search (BFS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depth-first-search-dfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depth-First Search (DFS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorting Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sorting Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bubble-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bubble Sort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selection Sort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertion Sort
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-o-notation-time-and-space-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Big-O Notation — Time and Space Complexity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3249,132 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#abstract-data-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Abstract Data Types
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#stacks-lifo" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Stacks — LIFO
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#queues-fifo" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Queues — FIFO
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphs-nodes-and-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphs — Nodes and Edges
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breadth-first-search-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breadth-First Search (BFS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depth-first-search-dfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depth-First Search (DFS)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorting Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sorting Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bubble-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bubble Sort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selection Sort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertion Sort
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-o-notation-time-and-space-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Big-O Notation — Time and Space Complexity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,54 +3399,438 @@
 
 
 <h1 id="algorithms-and-data-structures">Algorithms and Data Structures<a class="headerlink" href="#algorithms-and-data-structures" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>This chapter introduces computer science fundamentals: abstract data types,
-stacks (last-in first-out), queues (first-in first-out), graphs (nodes and edges),
-adjacency list representation, and the two most important graph-search algorithms —
-Breadth-First Search (BFS) and Depth-First Search (DFS). You'll also cover
-sorting algorithms (bubble, selection, insertion), binary search, Big-O notation,
-space complexity, linked lists, and trees. The capstone project: a maze solver.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 22 concepts from the learning graph:</p>
-<ol>
-<li>Abstract Data Types Overview</li>
-<li>Stack LIFO Structure</li>
-<li>Queue FIFO Structure</li>
-<li>Queue enqueue() dequeue()</li>
-<li>Graph Nodes and Edges</li>
-<li>Adjacency List Representation</li>
-<li>Breadth-First Search BFS</li>
-<li>BFS Color Tracking</li>
-<li>BFS for Path Finding</li>
-<li>Depth-First Search DFS</li>
-<li>DFS with Recursion</li>
-<li>DFS and BFS for Maze Solving</li>
-<li>Sorting Algorithms Overview</li>
-<li>Bubble Sort</li>
-<li>Selection Sort</li>
-<li>Insertion Sort</li>
-<li>Binary Search Concept</li>
-<li>Time Complexity Big-O Overview</li>
-<li>Space Complexity Overview</li>
-<li>Linked List Concept</li>
-<li>Tree Data Structure Concept</li>
-<li>Binary Tree Basics</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../16-lists-methods-patterns/">Chapter 16: Lists — Methods and Patterns</a></li>
-<li><a href="../21-dictionaries/">Chapter 21: Dictionaries</a></li>
-<li><a href="../24-recursion-and-fractals/">Chapter 24: Recursion and Fractals</a></li>
+<li>Explain and implement a <strong>stack</strong> (LIFO) and a <strong>queue</strong> (FIFO)</li>
+<li>Represent a <strong>graph</strong> as an adjacency list and traverse it with <strong>BFS</strong> and <strong>DFS</strong></li>
+<li>Implement <strong>bubble sort</strong>, <strong>selection sort</strong>, and <strong>binary search</strong></li>
+<li>Describe Big-O notation and explain the time complexity of common operations</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>This chapter introduces the computer science fundamentals that power everything from search engines to game AI.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 30!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Data structures and algorithms are the heart of computer science.
+Every search, every recommendation, every route-planning app uses the ideas in this chapter.
+Let's unlock them! Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="abstract-data-types">Abstract Data Types<a class="headerlink" href="#abstract-data-types" title="Permanent link">&para;</a></h2>
+<p>An <strong>Abstract Data Type (ADT)</strong> describes <em>what</em> a data structure does, not <em>how</em> it does it internally.
+A stack, queue, and graph are ADTs — each defines operations like push, pop, enqueue, and dequeue.</p>
+<h2 id="stacks-lifo">Stacks — LIFO<a class="headerlink" href="#stacks-lifo" title="Permanent link">&para;</a></h2>
+<p>A <strong>stack</strong> is a Last In, First Out (LIFO) collection.
+Think of a stack of plates — you can only add or remove from the top.</p>
+<p>Two operations:
+- <strong>Push</strong> — add to the top
+- <strong>Pop</strong> — remove from the top</p>
+<p>Python lists work perfectly as stacks:</p>
+<div class="highlight"><pre><span></span><code><span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;first&quot;</span><span class="p">)</span>    <span class="c1"># push</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;second&quot;</span><span class="p">)</span>   <span class="c1"># push</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;third&quot;</span><span class="p">)</span>    <span class="c1"># push</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>       <span class="c1"># &quot;third&quot; — last in, first out</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>       <span class="c1"># &quot;second&quot;</span>
+</code></pre></div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below uses a stack to reverse a string.
+After pushing all characters and popping them, what order will they appear?
+Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">def reverse_string(s):
+    stack = []
+    for ch in s:
+        stack.append(ch)   # push each character
+    result = ""
+    while stack:
+        result += stack.pop()   # pop in reverse order
+    return result
+
+print(reverse_string("Hello"))
+print(reverse_string("Python"))
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="queues-fifo">Queues — FIFO<a class="headerlink" href="#queues-fifo" title="Permanent link">&para;</a></h2>
+<p>A <strong>queue</strong> is a First In, First Out (FIFO) collection.
+Think of a line at a lunch counter — the first person in line is the first to be served.</p>
+<p>Two operations:
+- <strong>Enqueue</strong> — add to the back
+- <strong>Dequeue</strong> — remove from the front</p>
+<p>Python's <code>collections.deque</code> is more efficient than a list for queues:</p>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">from collections import deque
+
+queue = deque()
+queue.append("Alice")    # enqueue
+queue.append("Bob")
+queue.append("Carol")
+
+print("Queue:", list(queue))
+print("Served:", queue.popleft())   # dequeue — FIFO
+print("Served:", queue.popleft())
+print("Remaining:", list(queue))
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="graphs-nodes-and-edges">Graphs — Nodes and Edges<a class="headerlink" href="#graphs-nodes-and-edges" title="Permanent link">&para;</a></h2>
+<p>A <strong>graph</strong> is a set of <strong>nodes</strong> (also called vertices) connected by <strong>edges</strong>.
+Graphs model social networks, road maps, the internet, and many more real-world systems.</p>
+<p>An <strong>adjacency list</strong> represents a graph as a dictionary where each key is a node and the value is a list of its neighbors.</p>
+<div class="highlight"><pre><span></span><code><span class="n">graph</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="breadth-first-search-bfs">Breadth-First Search (BFS)<a class="headerlink" href="#breadth-first-search-bfs" title="Permanent link">&para;</a></h2>
+<p><strong>BFS</strong> explores a graph level by level — all nodes at distance 1 first, then distance 2, and so on.
+It uses a <strong>queue</strong> to keep track of which node to visit next.</p>
+<p>BFS finds the <strong>shortest path</strong> in an unweighted graph.</p>
+<p>Before the code, the key steps are:
+1. Start at the source node; mark it as visited; enqueue it
+2. While the queue is not empty: dequeue a node, process it, enqueue all unvisited neighbors</p>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">from collections import deque
+
+graph = {
+    "A": ["B", "C"],
+    "B": ["A", "D", "E"],
+    "C": ["A", "F"],
+    "D": ["B"],
+    "E": ["B", "F"],
+    "F": ["C", "E"]
+}
+
+def bfs(graph, start):
+    visited = set()
+    queue   = deque([start])
+    visited.add(start)
+    order = []
+
+    while queue:
+        node = queue.popleft()
+        order.append(node)
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
+    return order
+
+print("BFS from A:", bfs(graph, "A"))
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="depth-first-search-dfs">Depth-First Search (DFS)<a class="headerlink" href="#depth-first-search-dfs" title="Permanent link">&para;</a></h2>
+<p><strong>DFS</strong> explores as far as possible along each branch before backtracking.
+It uses a <strong>stack</strong> (or recursion) to keep track of the path.</p>
+<p>DFS does not guarantee the shortest path, but uses less memory than BFS for deep graphs.</p>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">graph = {
+    "A": ["B", "C"],
+    "B": ["A", "D", "E"],
+    "C": ["A", "F"],
+    "D": ["B"],
+    "E": ["B", "F"],
+    "F": ["C", "E"]
+}
+
+def dfs(graph, start, visited=None):
+    if visited is None:
+        visited = set()
+    visited.add(start)
+    result = [start]
+    for neighbor in graph[start]:
+        if neighbor not in visited:
+            result += dfs(graph, neighbor, visited)
+    return result
+
+print("DFS from A:", dfs(graph, "A"))
+print("BFS is level-by-level; DFS goes deep before backtracking.")
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>BFS</th>
+<th>DFS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data structure</td>
+<td>Queue</td>
+<td>Stack / recursion</td>
+</tr>
+<tr>
+<td>Shortest path?</td>
+<td>Yes (unweighted)</td>
+<td>Not guaranteed</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>More (stores whole frontier)</td>
+<td>Less (stores one path)</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Shortest path, social networks</td>
+<td>Exploring all paths, cycles</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sorting-algorithms">Sorting Algorithms<a class="headerlink" href="#sorting-algorithms" title="Permanent link">&para;</a></h2>
+<h3 id="bubble-sort">Bubble Sort<a class="headerlink" href="#bubble-sort" title="Permanent link">&para;</a></h3>
+<p><strong>Bubble sort</strong> compares adjacent items and swaps them if they're in the wrong order.
+Each pass "bubbles" the largest unsorted item to its correct position.
+Time complexity: O(n²) — slow for large lists.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+                <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">lst</span>
+</code></pre></div>
+<h3 id="selection-sort">Selection Sort<a class="headerlink" href="#selection-sort" title="Permanent link">&para;</a></h3>
+<p><strong>Selection sort</strong> finds the smallest item and moves it to the front, then repeats for the remaining items.
+Also O(n²) but makes fewer swaps than bubble sort.</p>
+<h3 id="insertion-sort">Insertion Sort<a class="headerlink" href="#insertion-sort" title="Permanent link">&para;</a></h3>
+<p><strong>Insertion sort</strong> builds the sorted list one item at a time — like sorting playing cards in your hand.
+O(n²) worst case but O(n) for nearly-sorted lists, making it fast in practice for small or nearly-sorted inputs.</p>
+<div id="skulpt-lab-5" class="skulpt-text-only">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">def bubble_sort(lst):
+    lst = lst[:]   # work on a copy
+    n = len(lst)
+    for i in range(n):
+        for j in range(n - i - 1):
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+    return lst
+
+def insertion_sort(lst):
+    lst = lst[:]
+    for i in range(1, len(lst)):
+        key = lst[i]
+        j = i - 1
+        while j >= 0 and lst[j] > key:
+            lst[j + 1] = lst[j]
+            j -= 1
+        lst[j + 1] = key
+    return lst
+
+data = [64, 34, 25, 12, 22, 11, 90]
+print("Unsorted:", data)
+print("Bubble:  ", bubble_sort(data))
+print("Insertion:", insertion_sort(data))
+print("Built-in:", sorted(data))
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<h2 id="binary-search">Binary Search<a class="headerlink" href="#binary-search" title="Permanent link">&para;</a></h2>
+<p><strong>Binary search</strong> finds an item in a <em>sorted</em> list in O(log n) time — far faster than linear search.</p>
+<p>The idea: repeatedly cut the search range in half.
+1. Look at the middle item
+2. If it matches — done!
+3. If the target is smaller — search the left half
+4. If the target is larger — search the right half</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">sorted_list</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sorted_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">lo</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">:</span>
+        <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">lo</span> <span class="o">+</span> <span class="n">hi</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="n">sorted_list</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">mid</span>
+        <span class="k">elif</span> <span class="n">sorted_list</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">:</span>
+            <span class="n">lo</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">hi</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>   <span class="c1"># not found</span>
+</code></pre></div>
+<h2 id="big-o-notation-time-and-space-complexity">Big-O Notation — Time and Space Complexity<a class="headerlink" href="#big-o-notation-time-and-space-complexity" title="Permanent link">&para;</a></h2>
+<p><strong>Big-O notation</strong> describes how an algorithm's running time grows with input size.</p>
+<table>
+<thead>
+<tr>
+<th>Big-O</th>
+<th>Name</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O(1)</td>
+<td>Constant</td>
+<td>Dictionary lookup</td>
+</tr>
+<tr>
+<td>O(log n)</td>
+<td>Logarithmic</td>
+<td>Binary search</td>
+</tr>
+<tr>
+<td>O(n)</td>
+<td>Linear</td>
+<td>Linear search, single loop</td>
+</tr>
+<tr>
+<td>O(n log n)</td>
+<td>Log-linear</td>
+<td>Python's built-in <code>sorted()</code></td>
+</tr>
+<tr>
+<td>O(n²)</td>
+<td>Quadratic</td>
+<td>Bubble sort, nested loops</td>
+</tr>
+<tr>
+<td>O(2ⁿ)</td>
+<td>Exponential</td>
+<td>Brute-force subset enumeration</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Space complexity</strong> describes how much memory an algorithm uses.
+BFS uses O(n) memory because the queue can grow to hold all nodes.
+DFS uses O(depth) memory — just the current path.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Why Big-O Matters</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+With 1,000 items: O(n²) = 1,000,000 operations; O(n log n) = ~10,000.
+That's 100× faster! For 1,000,000 items, the gap becomes 1,000,000× faster.
+Choosing the right algorithm is often more important than buying faster hardware.</p>
+</div>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Implement Binary Search</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below calls <code>binary_search</code> but the function body is missing!
+Implement it using the algorithm described above — repeatedly halve the search range.</p>
+</div>
+<div id="skulpt-lab-6" class="skulpt-text-only">
+  <div id="editor-container-6">
+    <textarea id="code-6" spellcheck="false">def binary_search(sorted_list, target):
+    lo, hi = 0, len(sorted_list) - 1
+    # Implement: while lo <= hi, check middle, adjust lo or hi
+    # Return the index if found, -1 if not found
+    return -1   # placeholder — replace with your implementation
+
+data = sorted([34, 7, 23, 32, 5, 62, 12, 77])
+print("Sorted data:", data)
+print("Find 23:", binary_search(data, 23))
+print("Find 99:", binary_search(data, 99))
+</textarea>
+    <div id="button-row-6">
+      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
+      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
+    </div>
+    <pre id="output-6"></pre>
+  </div>
+  <div id="canvas-container-6">
+    <div id="turtle-target-6"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Modify the BFS function to also return the <strong>distance</strong> (number of hops) from the start to each node.
+   <strong>You'll know it worked when</strong> each node is paired with its distance from "A".</p>
+</li>
+<li>
+<p>Add a new node "G" to the graph connected to "D". Run BFS again and check that G appears.
+   <strong>You'll know it worked when</strong> "G" is included in the BFS output.</p>
+</li>
+<li>
+<p>Compare BFS and DFS starting from "C" instead of "A". Notice how the visit orders differ.
+   <strong>You'll know it worked when</strong> both start at "C" and explore in clearly different patterns.</p>
+</li>
+<li>
+<p>Implement selection sort: find the minimum in the unsorted portion and swap it to the front.
+   <strong>You'll know it worked when</strong> <code>selection_sort([5, 3, 8, 1])</code> returns <code>[1, 3, 5, 8]</code>.</p>
+</li>
+<li>
+<p>Test binary search on a list of 1,000,000 items. How many comparisons does it need?
+   Add a counter inside the loop and print it.
+   <strong>You'll know it worked when</strong> you see it takes at most 20 comparisons — O(log 1,000,000) ≈ 20!</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Computer Scientist!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've learned data structures and algorithms — the foundation of all efficient software!
+Stacks, queues, graphs, BFS, DFS, sorting, and Big-O are the tools professional developers think about every day.
+You're now thinking like a computer scientist. Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

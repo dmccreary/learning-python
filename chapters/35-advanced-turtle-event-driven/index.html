@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Build interactive programs with turtle's onscreenclick, onkey, and timer events — and understand the event-driven programming model">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>35. Advanced Turtle and Event-Driven Programming - Learning Python</title>
+        <title>Advanced Turtle and Event-Driven Programming - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              35. Advanced Turtle and Event-Driven Programming
+              Advanced Turtle and Event-Driven Programming
             
           </span>
         </div>
@@ -1101,27 +1101,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-event-driven-model" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The Event-Driven Model
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#three-key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Three Key Concepts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#mouse-click-events-with-onscreenclick" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Mouse Click Events with onscreenclick()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard-events-with-onkey-and-listen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Events with onkey() and listen()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timer-events-with-ontimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timer Events with ontimer()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-events-interactive-art" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Events — Interactive Art
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-event-driven-vs-sequential-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Event-Driven vs Sequential Comparison
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3198,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-event-driven-model" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The Event-Driven Model
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#three-key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Three Key Concepts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#mouse-click-events-with-onscreenclick" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Mouse Click Events with onscreenclick()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard-events-with-onkey-and-listen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Events with onkey() and listen()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timer-events-with-ontimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timer Events with ontimer()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-events-interactive-art" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining Events — Interactive Art
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-event-driven-vs-sequential-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Event-Driven vs Sequential Comparison
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,47 +3297,368 @@
 
 
 <h1 id="advanced-turtle-and-event-driven-programming">Advanced Turtle and Event-Driven Programming<a class="headerlink" href="#advanced-turtle-and-event-driven-programming" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Programs that respond to mouse clicks and key presses use <em>event-driven</em>
-programming. This chapter covers the event-driven model, mouse-click and
-keyboard event handlers, callback functions, animation loops, the event queue,
-timer-based events, and three advanced turtle projects: an interactive color
-picker (<code>onscreenclick()</code>), a maze visualization, and a color-bars demo.
-Jupyter Canvas users get <code>ipycanvas</code> and <code>mobilechelonian</code> too.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 14 concepts from the learning graph:</p>
-<ol>
-<li>onscreenclick() Event Handler</li>
-<li>Color Picker with Turtle</li>
-<li>Maze Visualization with Turtle</li>
-<li>ipycanvas Canvas in Jupyter</li>
-<li>mobilechelonian Turtle in Jupyter</li>
-<li>Drawing Shapes on Canvas</li>
-<li>Color Bars in Jupyter</li>
-<li>Event-Driven Programming Model</li>
-<li>Mouse Click Event Handlers</li>
-<li>Keyboard Event Handlers</li>
-<li>Callback Functions</li>
-<li>Animation Loops</li>
-<li>Event Queue Concept</li>
-<li>Timer-Based Events</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../05-drawing-with-turtle/">Chapter 5: Drawing with Turtle Graphics</a></li>
-<li><a href="../24-recursion-and-fractals/">Chapter 24: Recursion and Fractals</a></li>
-<li><a href="../28-python-dev-tools/">Chapter 28: Python Development Tools</a></li>
-<li><a href="../30-algorithms-data-structures/">Chapter 30: Algorithms and Data Structures</a></li>
+<li>Explain the <strong>event-driven programming model</strong> and how it differs from sequential programs</li>
+<li>Use <code>turtle.onscreenclick()</code> to respond to mouse clicks</li>
+<li>Use <code>turtle.onkey()</code> and <code>turtle.listen()</code> to respond to keyboard presses</li>
+<li>Use <code>turtle.ontimer()</code> to create repeating animation loops</li>
+<li>Build a small interactive drawing program using events</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Every game, app, and website uses <strong>event-driven programming</strong> — code that waits for something to happen (a click, a keypress, a timer) and then responds. This chapter teaches you how to build programs that react in real time.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 35!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+This is where your programs start feeling alive — responding to your mouse and keyboard in real time!
+Event-driven programming is the foundation of every game and interactive app.
+Let's make things move! Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="the-event-driven-model">The Event-Driven Model<a class="headerlink" href="#the-event-driven-model" title="Permanent link">&para;</a></h2>
+<p>In <strong>sequential programs</strong>, code runs top to bottom — each line executes after the previous one finishes.</p>
+<p>In <strong>event-driven programs</strong>, the program starts an <strong>event loop</strong> that waits and watches.
+When an <strong>event</strong> occurs (mouse click, key press, timer tick), the loop calls a <strong>callback function</strong> you registered for that event.</p>
+<div class="highlight"><pre><span></span><code>[Register callbacks]  →  [Start event loop]  →  [Wait]
+                                                  ↓
+                                           [Event occurs]
+                                                  ↓
+                                       [Call the callback]
+                                                  ↓
+                                               [Wait]
+</code></pre></div>
+<p>You don't control <em>when</em> events fire — you just write the functions that handle them.</p>
+<h2 id="three-key-concepts">Three Key Concepts<a class="headerlink" href="#three-key-concepts" title="Permanent link">&para;</a></h2>
+<p>Before we write interactive turtle code, here are three terms you'll see throughout this chapter:</p>
+<ul>
+<li><strong>Event</strong> — something that happens: a mouse click, key press, or timer expiring</li>
+<li><strong>Callback</strong> — the function you write to handle the event; you pass it as an argument</li>
+<li><strong>Event loop</strong> — the ongoing loop inside <code>turtle.mainloop()</code> that watches for events and calls callbacks</li>
+</ul>
+<h2 id="mouse-click-events-with-onscreenclick">Mouse Click Events with <code>onscreenclick()</code><a class="headerlink" href="#mouse-click-events-with-onscreenclick" title="Permanent link">&para;</a></h2>
+<p><code>turtle.onscreenclick(callback)</code> registers a function to be called every time the user clicks on the turtle canvas.</p>
+<p>The callback receives the x and y coordinates of the click as arguments.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below draws a dot wherever the user clicks. But before you run it — how does the program know where the click happened?
+Think about how the callback receives the coordinates, then run it to see!</p>
+</div>
+<div id="skulpt-lab">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">import turtle
+
+screen = turtle.Screen()
+screen.setup(400, 400)
+screen.title("Click to Draw Dots")
+
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+
+def on_click(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.dot(20, "steelblue")
+
+screen.onscreenclick(on_click)
+screen.mainloop()
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p><code>t.dot(size, color)</code> draws a filled circle of the given diameter at the turtle's current position.
+Click anywhere on the canvas — a dot appears at each click location!</p>
+<h2 id="keyboard-events-with-onkey-and-listen">Keyboard Events with <code>onkey()</code> and <code>listen()</code><a class="headerlink" href="#keyboard-events-with-onkey-and-listen" title="Permanent link">&para;</a></h2>
+<p><code>screen.onkey(callback, key)</code> registers a callback for a specific key.
+<code>screen.listen()</code> tells the screen to start paying attention to keyboard events — you must call this before keyboard events will work.</p>
+<p>Key name strings include <code>"Up"</code>, <code>"Down"</code>, <code>"Left"</code>, <code>"Right"</code>, <code>"space"</code>, <code>"Return"</code>, and single letters like <code>"a"</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="n">screen</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">go_forward</span><span class="p">():</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">turn_left</span><span class="p">():</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">turn_right</span><span class="p">():</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="n">screen</span><span class="o">.</span><span class="n">onkey</span><span class="p">(</span><span class="n">go_forward</span><span class="p">,</span> <span class="s2">&quot;Up&quot;</span><span class="p">)</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">onkey</span><span class="p">(</span><span class="n">turn_left</span><span class="p">,</span>  <span class="s2">&quot;Left&quot;</span><span class="p">)</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">onkey</span><span class="p">(</span><span class="n">turn_right</span><span class="p">,</span> <span class="s2">&quot;Right&quot;</span><span class="p">)</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>   <span class="c1"># must call listen() to activate keyboard events</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div>
+<div id="skulpt-lab-2">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import turtle
+
+screen = turtle.Screen()
+screen.setup(400, 400)
+screen.title("Arrow Keys to Steer")
+
+t = turtle.Turtle()
+t.shape("arrow")
+t.color("steelblue")
+t.speed(0)
+t.pensize(2)
+
+def go_forward():
+    t.forward(20)
+
+def go_backward():
+    t.backward(20)
+
+def turn_left():
+    t.left(30)
+
+def turn_right():
+    t.right(30)
+
+screen.onkey(go_forward,  "Up")
+screen.onkey(go_backward, "Down")
+screen.onkey(turn_left,   "Left")
+screen.onkey(turn_right,  "Right")
+screen.listen()
+screen.mainloop()
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>Use the arrow keys to steer the turtle around the canvas!</p>
+<h2 id="timer-events-with-ontimer">Timer Events with <code>ontimer()</code><a class="headerlink" href="#timer-events-with-ontimer" title="Permanent link">&para;</a></h2>
+<p><code>screen.ontimer(callback, delay_ms)</code> calls <code>callback</code> once after <code>delay_ms</code> milliseconds.</p>
+<p>The key technique for animation loops is <strong>re-registering the timer inside the callback</strong> — so it fires again and again:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">animate</span><span class="p">():</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">ontimer</span><span class="p">(</span><span class="n">animate</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>   <span class="c1"># schedule ourselves again in 50ms</span>
+
+<span class="n">animate</span><span class="p">()</span>   <span class="c1"># start the loop</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div>
+<p>This creates a smooth animation running at about 20 frames per second (1000 ÷ 50ms = 20 fps).</p>
+<div id="skulpt-lab-3">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">import turtle
+
+screen = turtle.Screen()
+screen.setup(400, 400)
+screen.title("Spinning Spiral")
+screen.bgcolor("black")
+
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+
+colors = ["red", "orange", "yellow", "green", "cyan", "blue", "violet"]
+step = 0
+
+def draw_step():
+    global step
+    color = colors[step % len(colors)]
+    t.pencolor(color)
+    t.forward(step * 0.5)
+    t.left(31)
+    step += 1
+    if step < 200:
+        screen.ontimer(draw_step, 20)
+
+draw_step()
+screen.mainloop()
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="combining-events-interactive-art">Combining Events — Interactive Art<a class="headerlink" href="#combining-events-interactive-art" title="Permanent link">&para;</a></h2>
+<p>The real power of event-driven programming emerges when you combine multiple event types.
+The example below lets you draw with the mouse and clear with the spacebar:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span>
+
+<span class="n">screen</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pencolor</span><span class="p">(</span><span class="s2">&quot;steelblue&quot;</span><span class="p">)</span>
+
+<span class="n">drawing</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">start_draw</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">drawing</span>
+    <span class="n">drawing</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">drawing</span><span class="p">:</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">stop_draw</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">drawing</span>
+    <span class="n">drawing</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">clear_screen</span><span class="p">():</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+<span class="n">screen</span><span class="o">.</span><span class="n">onscreenclick</span><span class="p">(</span><span class="n">start_draw</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>   <span class="c1"># left mouse button down</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">onscreenclick</span><span class="p">(</span><span class="n">stop_draw</span><span class="p">,</span>  <span class="mi">3</span><span class="p">)</span>   <span class="c1"># right mouse button up</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">onkey</span><span class="p">(</span><span class="n">clear_screen</span><span class="p">,</span> <span class="s2">&quot;space&quot;</span><span class="p">)</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>
+<span class="n">screen</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="the-event-driven-vs-sequential-comparison">The Event-Driven vs Sequential Comparison<a class="headerlink" href="#the-event-driven-vs-sequential-comparison" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Sequential</th>
+<th>Event-Driven</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Execution flow</td>
+<td>Top to bottom, predictable</td>
+<td>Waits for events, unpredictable order</td>
+</tr>
+<tr>
+<td>User interaction</td>
+<td>Limited (input() only)</td>
+<td>Real-time (mouse, keyboard, timer)</td>
+</tr>
+<tr>
+<td>Typical use</td>
+<td>Scripts, calculations</td>
+<td>Games, GUIs, apps</td>
+</tr>
+<tr>
+<td>Complexity</td>
+<td>Low</td>
+<td>Medium — requires callback thinking</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Callbacks Are Just Functions</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+The hardest part of event-driven programming is trusting the callback pattern.
+You write the function. You register it. The system calls it when the event fires.
+You don't call it yourself — that's the event loop's job. Think of it like setting a phone alarm: you set it once, then it rings when the time comes.</p>
+</div>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Add a Color Changer</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below draws dots on click, but all dots are the same color.
+Add a key event so pressing <code>"c"</code> cycles through a list of colors with each press!</p>
+</div>
+<div id="skulpt-lab-4">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">import turtle
+
+screen = turtle.Screen()
+screen.setup(400, 400)
+t = turtle.Turtle()
+t.hideturtle()
+t.speed(0)
+
+colors = ["red", "orange", "green", "blue", "purple"]
+color_index = 0
+
+def on_click(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.dot(24, colors[color_index])
+
+# Add a "change_color" function and register it with "c" key:
+# def change_color():
+#   ...
+
+screen.onscreenclick(on_click)
+screen.listen()
+screen.mainloop()
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Change the timer delay in the spiral lab from <code>20</code> to <code>5</code>. Does the animation get faster or slower?
+   <strong>You'll know it worked when</strong> you see the spiral build at a noticeably different speed.</p>
+</li>
+<li>
+<p>Add an <code>"r"</code> key binding that calls <code>t.color("red")</code> — pressing R changes the turtle's draw color to red.
+   <strong>You'll know it worked when</strong> pressing R switches the draw color.</p>
+</li>
+<li>
+<p>Register a click callback that uses <code>t.write()</code> to stamp the click coordinates at each click location.
+   <strong>You'll know it worked when</strong> <code>"(x, y)"</code> labels appear at every click spot.</p>
+</li>
+<li>
+<p>Modify the spiral to stop after 300 steps (instead of 200) and add a reset function on <code>"s"</code> that clears and restarts from step 0.
+   <strong>You'll know it worked when</strong> pressing <code>s</code> clears and restarts the spiral.</p>
+</li>
+<li>
+<p>Create a "bouncing ball" — a circle that moves diagonally using a timer and reverses direction when it hits the canvas edges.
+   <strong>You'll know it worked when</strong> the ball bounces around the canvas indefinitely.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Event-Driven Programmer!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've built programs that respond to the real world — clicks, key presses, and timed animations!
+Event-driven programming is the foundation of every game, app, and website UI.
+Two chapters to go — and they take you into the exciting world of AI and machine learning! Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

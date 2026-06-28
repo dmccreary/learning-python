@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Create your own classes with __init__, self, methods, inheritance, __str__, and class vs instance variables">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>25. Object-Oriented Programming - Learning Python</title>
+        <title>Object-Oriented Programming - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              25. Object-Oriented Programming
+              Object-Oriented Programming
             
           </span>
         </div>
@@ -891,27 +891,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#attributes-and-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Attributes and Methods
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#the-class-keyword" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      The class Keyword
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#__init__-the-constructor" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      __init__() — The Constructor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-instances-and-dot-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Instances and Dot Notation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#__str__-string-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      __str__() — String Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-variables-vs-instance-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Variables vs Instance Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings-and-lists-as-oop-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strings and Lists as OOP Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inheritance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-overriding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method Overriding
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3216,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#attributes-and-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Attributes and Methods
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#the-class-keyword" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      The class Keyword
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#__init__-the-constructor" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      __init__() — The Constructor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-instances-and-dot-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Instances and Dot Notation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#__str__-string-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      __str__() — String Representation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-variables-vs-instance-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class Variables vs Instance Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings-and-lists-as-oop-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strings and Lists as OOP Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inheritance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-overriding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Method Overriding
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,46 +3333,295 @@
 
 
 <h1 id="object-oriented-programming">Object-Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Object-Oriented Programming (OOP) is how Python organizes complex programs.
-You've already used objects (the turtle!); now you'll create your own.
-This chapter covers attributes, methods, the <code>class</code> keyword, <code>__init__()</code>,
-<code>self</code>, creating instances, dot notation, OOP in strings and lists,
-inheritance, <code>__str__()</code>/<code>__repr__()</code>, subclasses, <code>super()</code>,
-and class vs instance variables.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 15 concepts from the learning graph:</p>
-<ol>
-<li>Attributes of an Object</li>
-<li>Methods of an Object</li>
-<li>class Keyword</li>
-<li><strong>init</strong>() Constructor</li>
-<li>self Parameter</li>
-<li>Creating Class Instances</li>
-<li>Accessing Attributes and Methods</li>
-<li>String Methods as OOP Examples</li>
-<li>List Methods as OOP Examples</li>
-<li>Inheritance Basics</li>
-<li><strong>str</strong>() String Representation</li>
-<li><strong>repr</strong>() Developer Representation</li>
-<li>Subclasses and Method Overriding</li>
-<li>super() Function</li>
-<li>Class Variables vs Instance Variables</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../04-functions-and-objects/">Chapter 4: Functions and Objects</a></li>
-<li><a href="../16-lists-methods-patterns/">Chapter 16: Lists — Methods and Patterns</a></li>
+<li>Define a <strong>class</strong> with <code>__init__()</code>, <code>self</code>, attributes, and methods</li>
+<li>Create class <strong>instances</strong> and access their attributes with dot notation</li>
+<li>Define a <code>__str__()</code> method so <code>print()</code> shows a useful description</li>
+<li>Use <strong>inheritance</strong> and <code>super()</code> to build subclasses that extend parent classes</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>You've been using objects all along — turtle, strings, lists, and dictionaries are all objects.
+Now it's time to create your own.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 25!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+You've used objects like Lego bricks — now you get to design your own bricks!
+Object-oriented programming is how most large Python programs are organized.
+Let's build something! Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="attributes-and-methods">Attributes and Methods<a class="headerlink" href="#attributes-and-methods" title="Permanent link">&para;</a></h2>
+<p>You already know that objects have <strong>attributes</strong> (data stored inside them) and <strong>methods</strong> (functions you call on them).</p>
+<div class="highlight"><pre><span></span><code><span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>          <span class="c1"># method call</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pencolor</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>   <span class="c1"># method call — sets an attribute</span>
+</code></pre></div>
+<p>Now you'll define your own objects.</p>
+<h2 id="the-class-keyword">The <code>class</code> Keyword<a class="headerlink" href="#the-class-keyword" title="Permanent link">&para;</a></h2>
+<p>A <strong>class</strong> is a blueprint for creating objects.
+Use <code>class ClassName:</code> followed by indented code that defines the class.
+By convention, class names use <strong>CamelCase</strong> (each word capitalized, no underscores).</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+    <span class="k">pass</span>   <span class="c1"># empty class — just a placeholder for now</span>
+</code></pre></div>
+<h2 id="__init__-the-constructor"><code>__init__()</code> — The Constructor<a class="headerlink" href="#__init__-the-constructor" title="Permanent link">&para;</a></h2>
+<p><code>__init__()</code> is the <strong>constructor</strong> — a special method Python calls automatically when you create a new instance.
+It sets up the object's initial attributes.</p>
+<p><code>self</code> refers to the specific instance being created. Every method in a class takes <code>self</code> as its first parameter.</p>
+<p>Before we define attributes, note that <code>self.attribute_name = value</code> stores a value inside the object:</p>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">class Dog:
+    def __init__(self, name, breed, age):
+        self.name  = name    # instance attribute
+        self.breed = breed
+        self.age   = age
+
+    def bark(self):
+        print(f"{self.name} says: Woof!")
+
+    def describe(self):
+        print(f"{self.name} is a {self.age}-year-old {self.breed}.")
+
+fido  = Dog("Fido", "Labrador", 3)
+bella = Dog("Bella", "Poodle", 5)
+
+fido.describe()
+bella.bark()
+print(fido.name, fido.age)
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="creating-instances-and-dot-notation">Creating Instances and Dot Notation<a class="headerlink" href="#creating-instances-and-dot-notation" title="Permanent link">&para;</a></h2>
+<p>Each time you call the class like a function, Python creates a new <strong>instance</strong> (a separate object from the same blueprint).</p>
+<div class="highlight"><pre><span></span><code><span class="n">fido</span>  <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;Fido&quot;</span><span class="p">,</span> <span class="s2">&quot;Labrador&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>   <span class="c1"># instance 1</span>
+<span class="n">bella</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;Bella&quot;</span><span class="p">,</span> <span class="s2">&quot;Poodle&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>    <span class="c1"># instance 2</span>
+</code></pre></div>
+<p>Access attributes and methods with <strong>dot notation</strong>: <code>fido.name</code>, <code>fido.bark()</code>.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below creates two <code>Student</code> instances. Which student has the higher score?
+What will the loop print for each one? Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">class Student:
+    def __init__(self, name, score):
+        self.name  = name
+        self.score = score
+
+    def grade(self):
+        if self.score >= 90:
+            return "A"
+        elif self.score >= 80:
+            return "B"
+        elif self.score >= 70:
+            return "C"
+        else:
+            return "F"
+
+students = [Student("Alice", 92), Student("Bob", 75), Student("Carol", 88)]
+
+for s in students:
+    print(f"{s.name}: {s.score} → {s.grade()}")
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="__str__-string-representation"><code>__str__()</code> — String Representation<a class="headerlink" href="#__str__-string-representation" title="Permanent link">&para;</a></h2>
+<p><code>__str__()</code> defines what <code>print(obj)</code> and <code>str(obj)</code> show.
+Without it, <code>print(fido)</code> shows something like <code>&lt;__main__.Dog object at 0x...&gt;</code> — not very helpful.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">breed</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span>  <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breed</span> <span class="o">=</span> <span class="n">breed</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Dog(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">breed</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+<span class="n">fido</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;Fido&quot;</span><span class="p">,</span> <span class="s2">&quot;Labrador&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fido</span><span class="p">)</span>   <span class="c1"># Dog(Fido, Labrador)</span>
+</code></pre></div>
+<p><code>__repr__()</code> is similar but meant for developers — it should ideally show code you could paste to recreate the object.</p>
+<h2 id="class-variables-vs-instance-variables">Class Variables vs Instance Variables<a class="headerlink" href="#class-variables-vs-instance-variables" title="Permanent link">&para;</a></h2>
+<p>An <strong>instance variable</strong> (defined with <code>self.</code>) belongs to one specific object.
+A <strong>class variable</strong> (defined directly in the class body, not inside any method) is shared by all instances.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Counter</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c1"># class variable — shared by all instances</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Counter</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>   <span class="c1"># increment the shared counter</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Counter</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>   <span class="c1"># 3 — three instances created</span>
+</code></pre></div>
+<h2 id="strings-and-lists-as-oop-examples">Strings and Lists as OOP Examples<a class="headerlink" href="#strings-and-lists-as-oop-examples" title="Permanent link">&para;</a></h2>
+<p>You've been using OOP all along — string and list methods are just methods on objects:</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;monty&quot;</span>
+<span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>       <span class="c1"># calls the upper() method on the string object</span>
+
+<span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">items</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>       <span class="c1"># calls the sort() method on the list object</span>
+</code></pre></div>
+<h2 id="inheritance">Inheritance<a class="headerlink" href="#inheritance" title="Permanent link">&para;</a></h2>
+<p><strong>Inheritance</strong> lets you create a new class (<strong>subclass</strong>) that inherits all the attributes and methods of an existing class (<strong>parent class</strong>).</p>
+<p>Use <code>class SubClass(ParentClass):</code> to declare inheritance.
+The <code>super()</code> function calls the parent class's <code>__init__()</code> so you don't have to repeat all its setup code.</p>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">class Animal:
+    def __init__(self, name, sound):
+        self.name  = name
+        self.sound = sound
+
+    def speak(self):
+        print(f"{self.name} says {self.sound}!")
+
+    def __str__(self):
+        return f"Animal({self.name})"
+
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__(name, "Woof")   # call parent __init__
+
+    def fetch(self):
+        print(f"{self.name} fetches the ball!")
+
+class Cat(Animal):
+    def __init__(self, name):
+        super().__init__(name, "Meow")
+
+    def purr(self):
+        print(f"{self.name} purrs contentedly.")
+
+dog = Dog("Rex")
+cat = Cat("Whiskers")
+
+dog.speak()     # inherited from Animal
+dog.fetch()     # defined in Dog
+
+cat.speak()     # inherited from Animal
+cat.purr()      # defined in Cat
+
+print(dog)      # uses Animal's __str__
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="method-overriding">Method Overriding<a class="headerlink" href="#method-overriding" title="Permanent link">&para;</a></h2>
+<p>A subclass can <strong>override</strong> a parent method by defining a method with the same name.
+The subclass version runs instead of the parent's.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> barks loudly!&quot;</span><span class="p">)</span>   <span class="c1"># overrides Animal.speak</span>
+</code></pre></div>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Add a Method</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The <code>Rectangle</code> class below has <code>width</code> and <code>height</code> attributes but is missing two methods.
+Add <code>area()</code> (returns width × height) and <code>perimeter()</code> (returns 2 × (width + height)).</p>
+</div>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">class Rectangle:
+    def __init__(self, width, height):
+        self.width  = width
+        self.height = height
+
+    def __str__(self):
+        return f"Rectangle({self.width}x{self.height})"
+
+    # Add area() here:
+
+    # Add perimeter() here:
+
+r = Rectangle(4, 7)
+print(r)
+print("Area:", r.area())
+print("Perimeter:", r.perimeter())
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Add a <code>birthday()</code> method to the <code>Dog</code> class that increments <code>self.age</code> by 1. Call it twice and print the age.
+   <strong>You'll know it worked when</strong> <code>fido.age</code> increases by 2 after two birthday calls.</p>
+</li>
+<li>
+<p>Create a <code>Square(Rectangle)</code> subclass where <code>__init__</code> only takes <code>side</code> and calls <code>super().__init__(side, side)</code>.
+   <strong>You'll know it worked when</strong> <code>Square(5).area()</code> returns <code>25</code>.</p>
+</li>
+<li>
+<p>Add a <code>__repr__()</code> to <code>Dog</code> that returns <code>f"Dog(name={self.name!r}, age={self.age})"</code>.
+   <strong>You'll know it worked when</strong> using <code>repr(fido)</code> shows a reconstructable string.</p>
+</li>
+<li>
+<p>Create a class <code>BankAccount</code> with <code>balance = 0</code>, a <code>deposit(n)</code> method, and a <code>withdraw(n)</code> method that refuses if the balance would go negative.
+   <strong>You'll know it worked when</strong> withdrawing more than the balance prints an error and balance stays unchanged.</p>
+</li>
+<li>
+<p>Create a list of three <code>Student</code> objects and sort them by score using <code>sorted(students, key=lambda s: s.score)</code>.
+   <strong>You'll know it worked when</strong> the students appear in ascending score order.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">OOP Expert!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've learned to design your own objects with classes, inheritance, and special methods!
+OOP is the foundation of almost all professional Python code — from web frameworks to game engines.
+You're building real software skills. Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

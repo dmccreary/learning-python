@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Discover recursion — functions that call themselves — with base cases, call stacks, lambdas, and a beautiful recursive fractal tree">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>24. Recursion and Fractals - Learning Python</title>
+        <title>Recursion and Fractals - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              24. Recursion and Fractals
+              Recursion and Fractals
             
           </span>
         </div>
@@ -870,27 +870,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-recursion-concept" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The Recursion Concept
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#the-base-case" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      The Base Case
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#recursion-depth-and-the-call-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Recursion Depth and the Call Stack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambda-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lambda Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-as-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions as Arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fractals-with-recursion-and-turtle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fractals with Recursion and Turtle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3198,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-recursion-concept" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The Recursion Concept
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#the-base-case" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      The Base Case
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#recursion-depth-and-the-call-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Recursion Depth and the Call Stack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambda-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lambda Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-as-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions as Arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fractals-with-recursion-and-turtle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fractals with Recursion and Turtle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,39 +3297,274 @@
 
 
 <h1 id="recursion-and-fractals">Recursion and Fractals<a class="headerlink" href="#recursion-and-fractals" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Recursion is when a function calls <em>itself</em> — a mind-bending but powerful idea.
-This chapter introduces the <code>nonlocal</code> keyword, the recursion concept, base cases
-(to stop infinite loops), call-stack depth limits, lambda (one-line) functions,
-functions as arguments, and nested functions. The payoff: a beautiful
-recursive <strong>fractal tree</strong> drawn with turtle graphics.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 8 concepts from the learning graph:</p>
-<ol>
-<li>nonlocal Keyword</li>
-<li>Recursion Concept</li>
-<li>Recursion Base Case</li>
-<li>Recursion Depth and Stack</li>
-<li>Lambda Functions</li>
-<li>Function as Argument</li>
-<li>Nested Functions</li>
-<li>Fractals with Recursion and Turtle</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../04-functions-and-objects/">Chapter 4: Functions and Objects</a></li>
-<li><a href="../11-functions-parameters-scope/">Chapter 11: Functions with Parameters and Scope</a></li>
-<li><a href="../05-drawing-with-turtle/">Chapter 5: Drawing with Turtle Graphics</a></li>
+<li>Explain what <strong>recursion</strong> is and why every recursive function needs a <strong>base case</strong></li>
+<li>Trace through a simple recursive function step by step</li>
+<li>Write a <strong>lambda</strong> (one-line anonymous function) and pass functions as arguments</li>
+<li>Build a recursive <strong>fractal tree</strong> using turtle graphics</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Recursion is one of the most mind-bending ideas in programming — a function that calls itself.
+Once you understand it, you'll see fractals in a completely new way.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 24!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Recursion sounds scary, but it's really just a function that knows how to break a big problem into a smaller version of the same problem.
+Let's start simple, then build something beautiful. Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="the-recursion-concept">The Recursion Concept<a class="headerlink" href="#the-recursion-concept" title="Permanent link">&para;</a></h2>
+<p><strong>Recursion</strong> happens when a function calls itself.
+Think about Russian nesting dolls — each doll contains a smaller version of itself, all the way down to the tiny solid one at the center.</p>
+<p>The solid doll at the center is the <strong>base case</strong> — the point where the function stops calling itself.
+Without a base case, the function would call itself forever (or until Python runs out of stack space and raises a <code>RecursionError</code>).</p>
+<p>The simplest recursive example is counting down:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">countdown</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>          <span class="c1"># BASE CASE — stop here</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Go!&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">countdown</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>    <span class="c1"># RECURSIVE CALL — call itself with a smaller problem</span>
+</code></pre></div>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">def countdown(n):
+    if n <= 0:
+        print("Go!")
+        return
+    print(n)
+    countdown(n - 1)
+
+countdown(5)
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="the-base-case">The Base Case<a class="headerlink" href="#the-base-case" title="Permanent link">&para;</a></h2>
+<p>Every recursive function <strong>must</strong> have a base case.
+The base case is the condition that stops the recursion and returns a value without calling the function again.</p>
+<p>If you forget the base case, Python eventually raises <code>RecursionError: maximum recursion depth exceeded</code> after about 1000 nested calls.</p>
+<p>A well-designed recursive function:
+1. Checks for the base case first
+2. Makes the recursive call with a <em>smaller</em> or <em>simpler</em> version of the input</p>
+<h2 id="recursion-depth-and-the-call-stack">Recursion Depth and the Call Stack<a class="headerlink" href="#recursion-depth-and-the-call-stack" title="Permanent link">&para;</a></h2>
+<p>Each time a function calls itself, Python saves the current state in memory (the <strong>call stack</strong>).
+This means recursion uses memory — and Python limits the stack to about 1,000 levels deep by default.</p>
+<p>For most student programs this is plenty. But for very deep recursion (like large fractals), you may need to reduce the depth.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The recursive <code>factorial</code> function below computes <code>n!</code> (n factorial).
+What do you think <code>factorial(5)</code> returns? Remember: <code>5! = 5 × 4 × 3 × 2 × 1</code>.
+Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">def factorial(n):
+    if n <= 1:          # base case
+        return 1
+    return n * factorial(n - 1)   # recursive call
+
+print("5! =", factorial(5))
+print("7! =", factorial(7))
+print("10! =", factorial(10))
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>Were you right? <code>5! = 120</code>. Tracing it: <code>5 * factorial(4)</code> → <code>5 * 4 * factorial(3)</code> → ... → <code>5 * 4 * 3 * 2 * 1</code>.</p>
+<h2 id="lambda-functions">Lambda Functions<a class="headerlink" href="#lambda-functions" title="Permanent link">&para;</a></h2>
+<p>A <strong>lambda</strong> is a tiny anonymous function written on one line.
+The syntax is: <code>lambda parameters: expression</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">square</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>   <span class="c1"># 25</span>
+
+<span class="n">add</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>   <span class="c1"># 7</span>
+</code></pre></div>
+<p>Lambdas are most useful when you need a short function as an argument to another function, like <code>sorted(key=...)</code> or <code>map()</code>.</p>
+<h2 id="functions-as-arguments">Functions as Arguments<a class="headerlink" href="#functions-as-arguments" title="Permanent link">&para;</a></h2>
+<p>In Python, functions are <strong>first-class objects</strong> — you can pass them as arguments to other functions.</p>
+<p>Before we try this, note what it means: when a function takes another function as a parameter, the outer function can call it on any input without knowing what it does in advance.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">apply</span><span class="p">(</span><span class="nb">abs</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">))</span>         <span class="c1"># 7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">apply</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">upper</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">))</span> <span class="c1"># &quot;HI&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>  <span class="c1"># 25</span>
+</code></pre></div>
+<h2 id="nested-functions">Nested Functions<a class="headerlink" href="#nested-functions" title="Permanent link">&para;</a></h2>
+<p>You can define a function inside another function. The inner function can access variables from the outer function.</p>
+<p>The <strong><code>nonlocal</code> keyword</strong> lets an inner function modify a variable from its enclosing (outer) function — similar to how <code>global</code> lets a function modify a global variable.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">make_counter</span><span class="p">():</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">increment</span><span class="p">():</span>
+        <span class="k">nonlocal</span> <span class="n">count</span>   <span class="c1"># tells Python: use the outer count, not a new local one</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">count</span>
+
+    <span class="k">return</span> <span class="n">increment</span>
+
+<span class="n">counter</span> <span class="o">=</span> <span class="n">make_counter</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">())</span>   <span class="c1"># 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">())</span>   <span class="c1"># 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">())</span>   <span class="c1"># 3</span>
+</code></pre></div>
+<h2 id="fractals-with-recursion-and-turtle">Fractals with Recursion and Turtle<a class="headerlink" href="#fractals-with-recursion-and-turtle" title="Permanent link">&para;</a></h2>
+<p>A <strong>fractal</strong> is a pattern that repeats itself at smaller and smaller scales.
+Recursive functions are perfect for drawing fractals because each branch is a smaller version of the whole.</p>
+<p>The <strong>fractal tree</strong> works like this: draw a trunk, then at the top of the trunk, draw two branches at angles — and each branch is a smaller tree.</p>
+<p>Before the code, the key parameters are:
+- <code>length</code> — length of the current branch
+- <code>angle</code> — how far each branch spreads left and right
+- When <code>length &lt; 5</code>, stop drawing (base case)</p>
+<div id="skulpt-lab-3">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">import turtle
+t = turtle.Turtle()
+t.speed(0)
+t.left(90)   # point upward
+t.penup()
+t.goto(0, -180)
+t.pendown()
+
+def draw_tree(length, angle):
+    if length < 5:   # base case: stop for tiny branches
+        return
+    t.pensize(max(1, length // 10))
+    t.forward(length)
+    t.left(angle)
+    draw_tree(length * 0.7, angle)   # left branch (smaller)
+    t.right(angle * 2)
+    draw_tree(length * 0.7, angle)   # right branch (smaller)
+    t.left(angle)
+    t.backward(length)
+
+draw_tree(80, 25)
+t.hideturtle()
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<p>Try changing the angle from <code>25</code> to <code>35</code> or <code>15</code> to see how it changes the tree's shape!</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">The Magic of Backtracking</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Notice <code>t.backward(length)</code> at the end of <code>draw_tree</code>. This is the turtle going back to where it started <em>before</em> it drew the current branch.
+Without this, the turtle would wander off. Backtracking is what makes recursive drawing work — always return the turtle to where you found it.</p>
+</div>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Add Color to the Fractal Tree</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The fractal tree draws in the default color. Modify the <code>draw_tree</code> function so that:
+- Branches with <code>length &gt;= 40</code> are drawn in <code>"brown"</code> (trunk/main branches)
+- Shorter branches (length &lt; 40) are drawn in <code>"green"</code> (leaves)
+Add a <code>t.pencolor()</code> call at the start of the function to set the color based on length.</p>
+</div>
+<div id="skulpt-lab-4">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">import turtle
+t = turtle.Turtle()
+t.speed(0)
+t.left(90)
+t.penup(); t.goto(0, -180); t.pendown()
+
+def draw_tree(length, angle):
+    if length < 5:
+        return
+    # Add: set color to "brown" if length >= 40, else "green"
+    t.pensize(max(1, length // 10))
+    t.forward(length)
+    t.left(angle)
+    draw_tree(length * 0.7, angle)
+    t.right(angle * 2)
+    draw_tree(length * 0.7, angle)
+    t.left(angle)
+    t.backward(length)
+
+draw_tree(80, 25)
+t.hideturtle()
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Change the <code>0.7</code> multiplier in <code>draw_tree</code> to <code>0.6</code>. The tree will branch faster.
+   <strong>You'll know it worked when</strong> the tree is shorter and bushier.</p>
+</li>
+<li>
+<p>Change the angle from <code>25</code> to <code>40</code>.
+   <strong>You'll know it worked when</strong> the branches spread out much wider.</p>
+</li>
+<li>
+<p>Write a recursive function <code>sum_list(lst)</code> that adds up all items in a list without using Python's <code>sum()</code>.
+   <strong>You'll know it worked when</strong> <code>sum_list([1, 2, 3, 4, 5])</code> returns <code>15</code>.</p>
+</li>
+<li>
+<p>Write a recursive function <code>reverse_string(s)</code> that reverses a string.
+   Base case: if <code>len(s) &lt;= 1</code>, return <code>s</code>. Otherwise return <code>reverse_string(s[1:]) + s[0]</code>.
+   <strong>You'll know it worked when</strong> <code>reverse_string("hello")</code> returns <code>"olleh"</code>.</p>
+</li>
+<li>
+<p>Use a lambda with <code>sorted()</code> to sort <code>["banana", "apple", "fig", "kiwi"]</code> by string length.
+   <strong>You'll know it worked when</strong> shorter words appear first.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Recursion Master!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've grasped one of the most powerful and beautiful ideas in all of programming!
+Recursion, fractals, lambdas, and functions-as-arguments — these concepts appear in professional code every day.
+Next up: object-oriented programming! Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

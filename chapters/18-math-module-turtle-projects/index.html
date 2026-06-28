@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Use abs(), round(), math.sqrt(), sin(), cos(), and pi to build a rippling sine wave and a random turtle race">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>18. Math Module and Turtle Projects - Learning Python</title>
+        <title>Math Module and Turtle Projects - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              18. Math Module and Turtle Projects
+              Math Module and Turtle Projects
             
           </span>
         </div>
@@ -744,27 +744,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#built-in-number-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Built-in Number Functions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#the-math-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      The math Module
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#sine-and-cosine-radians-vs-degrees" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Sine and Cosine — Radians vs Degrees
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-1-sine-wave-with-turtle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 1 — Sine Wave with Turtle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-2-turtle-race-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 2 — Turtle Race Simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3180,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#built-in-number-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Built-in Number Functions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#the-math-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      The math Module
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#sine-and-cosine-radians-vs-degrees" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Sine and Cosine — Radians vs Degrees
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-1-sine-wave-with-turtle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 1 — Sine Wave with Turtle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-2-turtle-race-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 2 — Turtle Race Simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,40 +3261,367 @@
 
 
 <h1 id="math-module-and-turtle-projects">Math Module and Turtle Projects<a class="headerlink" href="#math-module-and-turtle-projects" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>The <code>math</code> module unlocks trigonometry, logarithms, and constants like <code>pi</code>.
-This chapter covers <code>abs()</code>, <code>round()</code>, <code>sqrt()</code>/<code>floor()</code>/<code>ceil()</code>,
-<code>sin()</code>/<code>cos()</code>/<code>pi</code>, radians/degrees conversion, and more.
-You'll build two satisfying turtle projects: a <strong>sine wave</strong> that ripples across
-the screen, and a <strong>turtle race</strong> where randomness decides the winner.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 10 concepts from the learning graph:</p>
-<ol>
-<li>abs() Absolute Value</li>
-<li>round() Function</li>
-<li>math Module Overview</li>
-<li>math.sqrt() floor() ceil()</li>
-<li>math.sin() cos() pi</li>
-<li>math.radians() degrees()</li>
-<li>math.log() exp()</li>
-<li>math.factorial()</li>
-<li>Sine Wave with Turtle and Math</li>
-<li>Turtle Race Simulation</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../07-for-loops-and-shapes/">Chapter 7: For Loops and Drawing Shapes</a></li>
-<li><a href="../17-modules-and-random/">Chapter 17: Modules and Random Numbers</a></li>
+<li>Use built-in functions <code>abs()</code> and <code>round()</code> for common number operations</li>
+<li>Import and use <code>math.sqrt()</code>, <code>math.floor()</code>, <code>math.ceil()</code>, <code>math.sin()</code>, <code>math.cos()</code>, and <code>math.pi</code></li>
+<li>Convert between radians and degrees using <code>math.radians()</code> and <code>math.degrees()</code></li>
+<li>Build two complete turtle projects: a <strong>sine wave</strong> drawing and a <strong>turtle race simulation</strong></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>The <code>math</code> module gives Python superpowers for working with numbers — square roots, sine waves, logarithms, and more.
+In this chapter you'll use those superpowers to create two beautiful, interactive turtle projects.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 18!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Did you know that the smooth curves you see in games and animations are drawn with sine and cosine?
+Today we'll learn the math tools that make that possible — and then draw our own wave!
+Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="built-in-number-functions">Built-in Number Functions<a class="headerlink" href="#built-in-number-functions" title="Permanent link">&para;</a></h2>
+<p>Python has two useful number functions built in — no import needed.</p>
+<p><code>abs(x)</code> returns the <strong>absolute value</strong> of a number: the distance from zero, always positive.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">))</span>    <span class="c1"># 7</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>     <span class="c1"># 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">3.14</span><span class="p">))</span> <span class="c1"># 3.14</span>
+</code></pre></div>
+<p><code>round(x)</code> rounds a number to the nearest integer (or to a given number of decimal places).</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="mf">3.7</span><span class="p">))</span>      <span class="c1"># 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="mf">3.2</span><span class="p">))</span>      <span class="c1"># 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="c1"># 3.14</span>
+</code></pre></div>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">print("abs(-42):", abs(-42))
+print("abs(7):", abs(7))
+
+print("round(2.7):", round(2.7))
+print("round(2.3):", round(2.3))
+print("round(3.14159, 3):", round(3.14159, 3))
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="the-math-module">The <code>math</code> Module<a class="headerlink" href="#the-math-module" title="Permanent link">&para;</a></h2>
+<p>Import the module with <code>import math</code>. Then access functions using <code>math.function_name()</code>.</p>
+<p>Before we try them, here's a quick guide to the key functions:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>What it does</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>math.sqrt(x)</code></td>
+<td>Square root of x</td>
+<td><code>math.sqrt(25)</code> → 5.0</td>
+</tr>
+<tr>
+<td><code>math.floor(x)</code></td>
+<td>Round down to nearest integer</td>
+<td><code>math.floor(3.9)</code> → 3</td>
+</tr>
+<tr>
+<td><code>math.ceil(x)</code></td>
+<td>Round up to nearest integer</td>
+<td><code>math.ceil(3.1)</code> → 4</td>
+</tr>
+<tr>
+<td><code>math.pi</code></td>
+<td>The constant π (3.14159...)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>math.sin(x)</code></td>
+<td>Sine of x (x in <strong>radians</strong>)</td>
+<td><code>math.sin(math.pi/2)</code> → 1.0</td>
+</tr>
+<tr>
+<td><code>math.cos(x)</code></td>
+<td>Cosine of x (x in <strong>radians</strong>)</td>
+<td><code>math.cos(0)</code> → 1.0</td>
+</tr>
+<tr>
+<td><code>math.radians(d)</code></td>
+<td>Convert degrees to radians</td>
+<td><code>math.radians(180)</code> → π</td>
+</tr>
+<tr>
+<td><code>math.degrees(r)</code></td>
+<td>Convert radians to degrees</td>
+<td><code>math.degrees(math.pi)</code> → 180.0</td>
+</tr>
+<tr>
+<td><code>math.log(x)</code></td>
+<td>Natural logarithm of x</td>
+<td><code>math.log(1)</code> → 0.0</td>
+</tr>
+<tr>
+<td><code>math.factorial(n)</code></td>
+<td>n! (n factorial)</td>
+<td><code>math.factorial(5)</code> → 120</td>
+</tr>
+</tbody>
+</table>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import math
+
+print("sqrt(144):", math.sqrt(144))
+print("floor(4.9):", math.floor(4.9))
+print("ceil(4.1):", math.ceil(4.1))
+print("pi:", math.pi)
+print("factorial(6):", math.factorial(6))
+print("degrees(pi):", math.degrees(math.pi))
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="sine-and-cosine-radians-vs-degrees">Sine and Cosine — Radians vs Degrees<a class="headerlink" href="#sine-and-cosine-radians-vs-degrees" title="Permanent link">&para;</a></h2>
+<p>Python's <code>math.sin()</code> and <code>math.cos()</code> expect their input in <strong>radians</strong>, not degrees.</p>
+<p>A <strong>radian</strong> is a different way of measuring angles.
+One full circle = 360° = 2π radians.
+A half circle = 180° = π radians.</p>
+<p>To convert: use <code>math.radians(degrees)</code> to go from degrees → radians.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+<code>math.sin(math.radians(90))</code> asks for the sine of 90 degrees.
+In trigonometry, <code>sin(90°) = 1.0</code>. Do you think Python will get the right answer?
+Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">import math
+
+print("sin(0°):", math.sin(math.radians(0)))
+print("sin(90°):", math.sin(math.radians(90)))
+print("sin(180°):", round(math.sin(math.radians(180)), 10))
+print("cos(0°):", math.cos(math.radians(0)))
+print("cos(90°):", round(math.cos(math.radians(90)), 10))
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="project-1-sine-wave-with-turtle">Project 1 — Sine Wave with Turtle<a class="headerlink" href="#project-1-sine-wave-with-turtle" title="Permanent link">&para;</a></h2>
+<p>A <strong>sine wave</strong> is the smooth, repeating S-shaped wave you see in physics and music.</p>
+<p>The idea: step across the screen from left to right. For each x position, calculate <code>y = amplitude * sin(x * frequency)</code>. Move the turtle to <code>(x, y)</code>. The result is a smooth wave.</p>
+<p>Before running the code, note that:
+- <code>amplitude</code> controls how tall the wave is (the peak height in pixels)
+- <code>frequency</code> (really a scaling factor) controls how many cycles appear in the window
+- <code>math.sin()</code> always returns a value between <code>-1.0</code> and <code>1.0</code>, so we multiply by <code>amplitude</code> to scale it up</p>
+<div id="skulpt-lab-4">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">import turtle
+import math
+
+t = turtle.Turtle()
+t.speed(0)
+t.pensize(2)
+t.pencolor("royalblue")
+
+amplitude = 80    # height of the wave
+frequency = 0.05  # how quickly it oscillates
+
+t.penup()
+t.goto(-190, 0)
+t.pendown()
+
+for x in range(-190, 191):
+    y = amplitude * math.sin(x * frequency)
+    t.goto(x, y)
+
+t.hideturtle()
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<p>Try changing <code>amplitude</code> to <code>150</code> for a taller wave or <code>frequency</code> to <code>0.1</code> for a faster wave.</p>
+<h2 id="project-2-turtle-race-simulation">Project 2 — Turtle Race Simulation<a class="headerlink" href="#project-2-turtle-race-simulation" title="Permanent link">&para;</a></h2>
+<p>Now let's combine <code>random</code> and a <code>for</code> loop to simulate a turtle race!</p>
+<p>Three turtles start at the left and move right in random-length hops. The first to cross x = 150 wins.</p>
+<p>Before the code: <code>random.randint(1, 10)</code> gives each turtle a random step size on each turn.
+We check after every move whether any turtle has crossed the finish line.</p>
+<div id="skulpt-lab-5">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">import turtle
+import random
+
+t1 = turtle.Turtle()
+t1.shape("turtle")
+t1.color("red")
+t1.penup()
+t1.goto(-160, 40)
+
+t2 = turtle.Turtle()
+t2.shape("turtle")
+t2.color("blue")
+t2.penup()
+t2.goto(-160, 0)
+
+t3 = turtle.Turtle()
+t3.shape("turtle")
+t3.color("green")
+t3.penup()
+t3.goto(-160, -40)
+
+racers = [t1, t2, t3]
+names = ["Red", "Blue", "Green"]
+finish = 150
+
+while True:
+    for i, racer in enumerate(racers):
+        racer.forward(random.randint(1, 10))
+        if racer.xcor() >= finish:
+            print(f"{names[i]} wins!")
+            racer.write("Winner!", font=("Arial", 12, "bold"))
+            turtle.done()
+            break
+    else:
+        continue
+    break
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<p>Run it several times — the winner changes each time because the steps are random!</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">How the Loop Breaks</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+The <code>for/else</code> pattern here is a Python trick: the <code>else</code> clause on a <code>for</code> loop runs only if the loop completed <em>without</em> hitting a <code>break</code>. So if no turtle crossed the finish line in this round, we <code>continue</code> the <code>while True</code> loop. The moment a turtle wins, we <code>break</code> out of both loops.</p>
+</div>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Add a Fourth Racer</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The turtle race has three racers. Add a fourth turtle named <code>t4</code> with color <code>"orange"</code>,
+starting at y = <code>-80</code>. Add <code>"Orange"</code> to the <code>names</code> list and <code>t4</code> to the <code>racers</code> list.
+The race should now have four competitors!</p>
+</div>
+<div id="skulpt-lab-6">
+  <div id="editor-container-6">
+    <textarea id="code-6" spellcheck="false">import turtle
+import random
+
+t1 = turtle.Turtle()
+t1.shape("turtle"); t1.color("red"); t1.penup(); t1.goto(-160, 60)
+t2 = turtle.Turtle()
+t2.shape("turtle"); t2.color("blue"); t2.penup(); t2.goto(-160, 20)
+t3 = turtle.Turtle()
+t3.shape("turtle"); t3.color("green"); t3.penup(); t3.goto(-160, -20)
+
+# Add t4 here (orange, starting at y=-60)
+
+racers = [t1, t2, t3]          # add t4 here too
+names = ["Red", "Blue", "Green"]  # add "Orange" here
+finish = 150
+
+while True:
+    for i, racer in enumerate(racers):
+        racer.forward(random.randint(1, 10))
+        if racer.xcor() >= finish:
+            print(f"{names[i]} wins!")
+            break
+    else:
+        continue
+    break
+</textarea>
+    <div id="button-row-6">
+      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
+      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
+    </div>
+    <pre id="output-6"></pre>
+  </div>
+  <div id="canvas-container-6">
+    <div id="turtle-target-6"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Change <code>amplitude</code> in the sine wave to <code>40</code> and <code>frequency</code> to <code>0.1</code>.
+   <strong>You'll know it worked when</strong> the wave is shorter and faster.</p>
+</li>
+<li>
+<p>Draw a <strong>cosine wave</strong> by replacing <code>math.sin</code> with <code>math.cos</code>.
+   <strong>You'll know it worked when</strong> the wave starts at its peak instead of zero.</p>
+</li>
+<li>
+<p>Draw two waves on the same canvas — one in blue, one in red, with different amplitudes.
+   <strong>You'll know it worked when</strong> two overlapping waves appear.</p>
+</li>
+<li>
+<p>Make the turtle race step range wider: <code>randint(1, 20)</code> instead of <code>randint(1, 10)</code>.
+   <strong>You'll know it worked when</strong> the race finishes faster but results are more unpredictable.</p>
+</li>
+<li>
+<p>Print <code>math.factorial(10)</code> and <code>math.log(math.e)</code>.
+   <strong>You'll know it worked when</strong> you see <code>3628800</code> and approximately <code>1.0</code>.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Math Wizard!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've built a sine wave and a turtle race using real math — that's seriously impressive!
+From here we move into more advanced Python: booleans, collections, and error handling.
+You're ready for the next level! Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

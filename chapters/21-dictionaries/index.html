@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Master Python dictionaries — key-value pairs, safe access with get(), iteration, nesting, and dictionary comprehensions">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>21. Dictionaries - Learning Python</title>
+        <title>Dictionaries - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              21. Dictionaries
+              Dictionaries
             
           </span>
         </div>
@@ -807,27 +807,117 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#creating-a-dictionary" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Creating a Dictionary
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#accessing-values-by-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Accessing Values by Key
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#safe-access-with-get" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Safe Access with get()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-and-updating-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding and Updating Entries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Entries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keys-values-and-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keys, Values, and Items
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterating-over-a-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterating over a Dictionary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-membership-with-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Membership with in
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Dictionaries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionary-comprehensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dictionary Comprehensions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-default-dictionary-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Default Dictionary Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3234,117 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#creating-a-dictionary" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Creating a Dictionary
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#accessing-values-by-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Accessing Values by Key
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#safe-access-with-get" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Safe Access with get()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-and-updating-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding and Updating Entries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing Entries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keys-values-and-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keys, Values, and Items
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterating-over-a-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterating over a Dictionary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-membership-with-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Membership with in
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Dictionaries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionary-comprehensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dictionary Comprehensions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-default-dictionary-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Default Dictionary Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,42 +3369,297 @@
 
 
 <h1 id="dictionaries">Dictionaries<a class="headerlink" href="#dictionaries" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>A dictionary maps <em>keys</em> to <em>values</em> — like a real dictionary maps words to
-definitions. Dictionaries are one of Python's most useful data structures.
-This chapter covers creating dicts, accessing values by key, <code>get()</code> for safe
-access, adding/updating/removing entries, iterating over keys/values/items,
-membership testing, nested dictionaries, and dictionary comprehensions.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 12 concepts from the learning graph:</p>
-<ol>
-<li>Dictionary Type</li>
-<li>Creating a Dictionary</li>
-<li>Accessing Values by Key</li>
-<li>dict get() Method</li>
-<li>Adding and Updating Key-Value Pairs</li>
-<li>Removing Entries pop() del</li>
-<li>Dictionary keys() values() items()</li>
-<li>Iterating over a Dictionary</li>
-<li>Key Membership with in</li>
-<li>Nested Dictionaries</li>
-<li>Dictionary Comprehensions</li>
-<li>Default Dictionary Pattern</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../15-lists-basics/">Chapter 15: Lists — Basics</a></li>
-<li><a href="../16-lists-methods-patterns/">Chapter 16: Lists — Methods and Patterns</a></li>
+<li>Create a dictionary and access values by key</li>
+<li>Safely retrieve values with <code>get()</code> to avoid <code>KeyError</code></li>
+<li>Add, update, and remove entries, and iterate over keys, values, and items</li>
+<li>Use nested dictionaries and dictionary comprehensions</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>A dictionary maps <strong>keys</strong> to <strong>values</strong> — exactly like a real-world dictionary maps words to definitions.
+Dictionaries are one of the most widely-used data structures in Python.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 21!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Imagine a phone book that you can look up in any order, add new contacts to, and search in an instant.
+That's a Python dictionary! Let's build one. Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="creating-a-dictionary">Creating a Dictionary<a class="headerlink" href="#creating-a-dictionary" title="Permanent link">&para;</a></h2>
+<p>A dictionary is created with curly braces <code>{}</code>. Each entry is a <code>key: value</code> pair, separated by commas.</p>
+<div class="highlight"><pre><span></span><code><span class="n">phone_book</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Alice&quot;</span><span class="p">:</span> <span class="s2">&quot;555-1234&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Bob&quot;</span><span class="p">:</span>   <span class="s2">&quot;555-5678&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Carol&quot;</span><span class="p">:</span> <span class="s2">&quot;555-9012&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Keys must be unique within a dictionary.
+Keys are usually strings or numbers. Values can be anything — strings, numbers, lists, even other dictionaries.</p>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">student = {
+    "name": "Monty",
+    "grade": 7,
+    "score": 92.5,
+    "clubs": ["coding", "chess"]
+}
+
+print("Student:", student)
+print("Type:", type(student))
+print("Keys:", list(student.keys()))
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="accessing-values-by-key">Accessing Values by Key<a class="headerlink" href="#accessing-values-by-key" title="Permanent link">&para;</a></h2>
+<p>Use square brackets with the key to retrieve a value:</p>
+<div class="highlight"><pre><span></span><code><span class="n">phone_book</span><span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">]</span>   <span class="c1"># &quot;555-1234&quot;</span>
+</code></pre></div>
+<p>If the key doesn't exist, Python raises a <code>KeyError</code> — so be careful.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below tries to access both a key that exists and one that doesn't.
+What do you think happens when a key is missing? Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">grades = {"Alice": 95, "Bob": 87, "Carol": 91}
+
+print("Alice's grade:", grades["Alice"])
+print("Bob's grade:", grades["Bob"])
+
+# Uncomment the next line to see a KeyError:
+# print("Dave's grade:", grades["Dave"])
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="safe-access-with-get">Safe Access with <code>get()</code><a class="headerlink" href="#safe-access-with-get" title="Permanent link">&para;</a></h2>
+<p><code>dict.get(key)</code> returns the value if the key exists, or <code>None</code> if it doesn't — no crash.
+You can also provide a default value: <code>dict.get(key, default)</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">grades</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Alice&quot;</span><span class="p">:</span> <span class="mi">95</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">:</span> <span class="mi">87</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">))</span>          <span class="c1"># 95</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Dave&quot;</span><span class="p">))</span>           <span class="c1"># None</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Dave&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>        <span class="c1"># 0 — custom default</span>
+</code></pre></div>
+<p>Use <code>get()</code> whenever you're not sure whether a key exists.</p>
+<h2 id="adding-and-updating-entries">Adding and Updating Entries<a class="headerlink" href="#adding-and-updating-entries" title="Permanent link">&para;</a></h2>
+<p>Add a new key or update an existing one using the same assignment syntax:</p>
+<div class="highlight"><pre><span></span><code><span class="n">grades</span><span class="p">[</span><span class="s2">&quot;Dave&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">78</span>     <span class="c1"># new key</span>
+<span class="n">grades</span><span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">96</span>    <span class="c1"># update existing key</span>
+</code></pre></div>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">inventory = {"apples": 10, "bananas": 5}
+print("Start:", inventory)
+
+inventory["oranges"] = 8    # add new item
+inventory["apples"] = 12    # update existing
+print("After update:", inventory)
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="removing-entries">Removing Entries<a class="headerlink" href="#removing-entries" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>d.pop(key)</code> — removes the key and returns its value (raises <code>KeyError</code> if missing unless you pass a default)</li>
+<li><code>del d[key]</code> — removes the key (raises <code>KeyError</code> if missing)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">grades</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">)</span>      <span class="c1"># removes Bob, returns 87</span>
+<span class="k">del</span> <span class="n">grades</span><span class="p">[</span><span class="s2">&quot;Carol&quot;</span><span class="p">]</span>    <span class="c1"># removes Carol</span>
+</code></pre></div>
+<h2 id="keys-values-and-items">Keys, Values, and Items<a class="headerlink" href="#keys-values-and-items" title="Permanent link">&para;</a></h2>
+<p>Three dictionary methods give you different views of the data:</p>
+<ul>
+<li><code>d.keys()</code> — all keys</li>
+<li><code>d.values()</code> — all values</li>
+<li><code>d.items()</code> — all <code>(key, value)</code> pairs as tuples</li>
+</ul>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">scores = {"Alice": 95, "Bob": 87, "Carol": 91}
+
+print("Keys:", list(scores.keys()))
+print("Values:", list(scores.values()))
+print("Items:", list(scores.items()))
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="iterating-over-a-dictionary">Iterating over a Dictionary<a class="headerlink" href="#iterating-over-a-dictionary" title="Permanent link">&para;</a></h2>
+<p>You can loop over keys, values, or key-value pairs:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Loop over keys:</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># Loop over key-value pairs (most common):</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="key-membership-with-in">Key Membership with <code>in</code><a class="headerlink" href="#key-membership-with-in" title="Permanent link">&para;</a></h2>
+<p>Use <code>in</code> to check whether a key exists without causing a <code>KeyError</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="s2">&quot;Alice&quot;</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Alice&#39;s score:&quot;</span><span class="p">,</span> <span class="n">scores</span><span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">])</span>
+</code></pre></div>
+<h2 id="nested-dictionaries">Nested Dictionaries<a class="headerlink" href="#nested-dictionaries" title="Permanent link">&para;</a></h2>
+<p>A dictionary can contain other dictionaries as values.
+This is perfect for representing structured data — like a contacts list where each contact has several fields.</p>
+<div class="highlight"><pre><span></span><code><span class="n">contacts</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Alice&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;555-1234&quot;</span><span class="p">,</span> <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;alice@example.com&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;Bob&quot;</span><span class="p">:</span>   <span class="p">{</span><span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;555-5678&quot;</span><span class="p">,</span> <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;bob@example.com&quot;</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># Access Alice&#39;s phone:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">contacts</span><span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">][</span><span class="s2">&quot;phone&quot;</span><span class="p">])</span>
+</code></pre></div>
+<h2 id="dictionary-comprehensions">Dictionary Comprehensions<a class="headerlink" href="#dictionary-comprehensions" title="Permanent link">&para;</a></h2>
+<p>A <strong>dictionary comprehension</strong> builds a new dictionary from an existing sequence, similar to a list comprehension.</p>
+<p>Syntax: <code>{key_expr: value_expr for item in iterable}</code></p>
+<p>Before the comprehension, here's the long-form equivalent to make the pattern clear:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Long way:</span>
+<span class="n">squares</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="n">squares</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span>
+
+<span class="c1"># Comprehension — same result:</span>
+<span class="n">squares</span> <span class="o">=</span> <span class="p">{</span><span class="n">n</span><span class="p">:</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)}</span>
+</code></pre></div>
+<h2 id="the-default-dictionary-pattern">The Default Dictionary Pattern<a class="headerlink" href="#the-default-dictionary-pattern" title="Permanent link">&para;</a></h2>
+<p>A common pattern is building a dictionary where missing keys should start with a default value.
+The manual approach uses <code>get()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">word_count</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="n">word_count</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">word_count</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+<div id="skulpt-lab-5" class="skulpt-text-only">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">text = "the cat sat on the mat the cat"
+words = text.split()
+
+word_count = {}
+for word in words:
+    word_count[word] = word_count.get(word, 0) + 1
+
+for word, count in sorted(word_count.items()):
+    print(f"  {word}: {count}")
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Build a Grade Book</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below creates an empty grade book.
+Add three students — <code>"Alice"</code> with 95, <code>"Bob"</code> with 87, and <code>"Carol"</code> with 91 —
+then print each student's name and grade using a <code>for</code> loop over <code>.items()</code>.</p>
+</div>
+<div id="skulpt-lab-6" class="skulpt-text-only">
+  <div id="editor-container-6">
+    <textarea id="code-6" spellcheck="false">grade_book = {}
+
+# Add Alice (95), Bob (87), and Carol (91):
+
+
+# Print each name and grade:
+for name, grade in grade_book.items():
+    print(f"{name}: {grade}")
+</textarea>
+    <div id="button-row-6">
+      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
+      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
+    </div>
+    <pre id="output-6"></pre>
+  </div>
+  <div id="canvas-container-6">
+    <div id="turtle-target-6"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Create a dictionary of capital cities: <code>{"France": "Paris", "Japan": "Tokyo", "Brazil": "Brasília"}</code>.
+   Print the capital of Japan.
+   <strong>You'll know it worked when</strong> you see <code>Tokyo</code>.</p>
+</li>
+<li>
+<p>Add a new country to your capitals dictionary and print all keys.
+   <strong>You'll know it worked when</strong> the new country appears in the key list.</p>
+</li>
+<li>
+<p>Use a dictionary comprehension to create <code>{1: 1, 2: 8, 3: 27, 4: 64, 5: 125}</code> (cubes of 1–5).
+   <strong>You'll know it worked when</strong> you see those five key-value pairs.</p>
+</li>
+<li>
+<p>Try <code>capitals.get("Germany", "Unknown")</code> when "Germany" isn't in the dictionary.
+   <strong>You'll know it worked when</strong> you see "Unknown" instead of a <code>KeyError</code>.</p>
+</li>
+<li>
+<p>Count the frequency of each letter in <code>"mississippi"</code> using the default dictionary pattern.
+   <strong>You'll know it worked when</strong> you see <code>{"m": 1, "i": 4, "s": 4, "p": 2}</code>.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Dictionary Wizard!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've mastered one of Python's most powerful data structures!
+Dictionaries are everywhere — in APIs, configuration files, databases, and machine learning models.
+Next chapter we'll combine all four collection types with Python's powerful built-in functions!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

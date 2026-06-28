@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Master enumerate(), zip(), *args, **kwargs, max/min/sum/sorted, map/filter, and powerful collection construction patterns">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>22. Advanced Collections and Built-in Functions - Learning Python</title>
+        <title>Advanced Collections and Built-in Functions - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              22. Advanced Collections and Built-in Functions
+              Advanced Collections and Built-in Functions
             
           </span>
         </div>
@@ -828,27 +828,108 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#enumerate-loop-with-an-index" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      enumerate() — Loop with an Index
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#zip-combine-iterables-in-parallel" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      zip() — Combine Iterables in Parallel
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#dictionary-from-two-lists-with-zip" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Dictionary from Two Lists with zip()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#args-variable-number-of-positional-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      *args — Variable Number of Positional Arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kwargs-variable-number-of-keyword-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      **kwargs — Variable Number of Keyword Arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregating-functions-max-min-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregating Functions: max(), min(), sum()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorted-and-reversed" class="md-nav__link">
+    <span class="md-ellipsis">
+      sorted() and reversed()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isinstance-type-checking" class="md-nav__link">
+    <span class="md-ellipsis">
+      isinstance() — Type Checking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-and-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      map() and filter()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collection-constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection Constructors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3225,108 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#enumerate-loop-with-an-index" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      enumerate() — Loop with an Index
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#zip-combine-iterables-in-parallel" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      zip() — Combine Iterables in Parallel
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#dictionary-from-two-lists-with-zip" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Dictionary from Two Lists with zip()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#args-variable-number-of-positional-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      *args — Variable Number of Positional Arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kwargs-variable-number-of-keyword-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      **kwargs — Variable Number of Keyword Arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregating-functions-max-min-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregating Functions: max(), min(), sum()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorted-and-reversed" class="md-nav__link">
+    <span class="md-ellipsis">
+      sorted() and reversed()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isinstance-type-checking" class="md-nav__link">
+    <span class="md-ellipsis">
+      isinstance() — Type Checking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-and-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      map() and filter()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collection-constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection Constructors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,51 +3351,329 @@
 
 
 <h1 id="advanced-collections-and-built-in-functions">Advanced Collections and Built-in Functions<a class="headerlink" href="#advanced-collections-and-built-in-functions" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Python's built-in function library is huge. This chapter collects the most
-useful ones: <code>isinstance()</code>, <code>enumerate()</code> for indexed loops, <code>zip()</code> to combine
-iterables, <code>*args</code>/<code>**kwargs</code> for flexible functions, returning multiple values,
-named tuples, building dicts from two lists, <code>len()</code> for sequences, <code>range()</code>,
-and the core aggregating functions: <code>max()</code>/<code>min()</code>/<code>sum()</code>,
-<code>sorted()</code>/<code>reversed()</code>, <code>map()</code>/<code>filter()</code>.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 19 concepts from the learning graph:</p>
-<ol>
-<li>isinstance() Function</li>
-<li>enumerate() Function</li>
-<li>zip() Function</li>
-<li>Variable Number of Arguments *args</li>
-<li>Keyword Variable Arguments **kwargs</li>
-<li>Returning Multiple Values</li>
-<li>Named Tuple Concept</li>
-<li>Dictionary from Two Lists with zip()</li>
-<li>len() Sequence Length</li>
-<li>range() Number Sequence</li>
-<li>type() Get Object Type</li>
-<li>int() float() str() bool() Conversions</li>
-<li>list() tuple() set() dict() Constructors</li>
-<li>max() min() Functions</li>
-<li>sum() Function</li>
-<li>sorted() Function</li>
-<li>reversed() Function</li>
-<li>enumerate() with Index</li>
-<li>zip() Combine Iterables</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../16-lists-methods-patterns/">Chapter 16: Lists — Methods and Patterns</a></li>
-<li><a href="../20-tuples-and-sets/">Chapter 20: Tuples and Sets</a></li>
-<li><a href="../21-dictionaries/">Chapter 21: Dictionaries</a></li>
+<li>Use <code>enumerate()</code> for indexed loops and <code>zip()</code> to combine iterables</li>
+<li>Write flexible functions with <code>*args</code> and <code>**kwargs</code></li>
+<li>Build dictionaries from two lists using <code>zip()</code></li>
+<li>Use <code>max()</code>, <code>min()</code>, <code>sum()</code>, <code>sorted()</code>, <code>reversed()</code>, <code>map()</code>, and <code>filter()</code> with confidence</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Python's built-in functions are a powerful toolkit. This chapter gathers the most useful ones so you can write shorter, cleaner code that does more.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 22!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Python's built-in toolkit is like a Swiss Army knife — there's a tool for almost everything!
+Today we're learning the ones you'll reach for most often.
+Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="enumerate-loop-with-an-index"><code>enumerate()</code> — Loop with an Index<a class="headerlink" href="#enumerate-loop-with-an-index" title="Permanent link">&para;</a></h2>
+<p><code>enumerate(iterable)</code> wraps a list (or any sequence) and gives you both the index <em>and</em> the item on each loop iteration.
+Without <code>enumerate()</code>, you'd need a separate counter variable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Without enumerate — manual counter:</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fruits</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">fruits</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="c1"># With enumerate — cleaner:</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fruits</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">fruit</span><span class="p">)</span>
+</code></pre></div>
+<p>Both produce the same output. <code>enumerate()</code> starts at 0 by default; use <code>enumerate(fruits, 1)</code> to start at 1.</p>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">menu = ["Burger", "Pizza", "Salad", "Pasta"]
+
+print("Menu:")
+for num, item in enumerate(menu, 1):
+    print(f"  {num}. {item}")
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="zip-combine-iterables-in-parallel"><code>zip()</code> — Combine Iterables in Parallel<a class="headerlink" href="#zip-combine-iterables-in-parallel" title="Permanent link">&para;</a></h2>
+<p><code>zip(a, b)</code> pairs up items from two (or more) iterables step by step.
+It stops when the shortest iterable runs out.</p>
+<div class="highlight"><pre><span></span><code><span class="n">names</span>  <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Carol&quot;</span><span class="p">]</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">95</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">91</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">scores</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below zips two lists of different lengths.
+How many pairs do you think <code>zip()</code> will produce?
+Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">letters = ["A", "B", "C", "D", "E"]
+numbers = [1, 2, 3]
+
+pairs = list(zip(letters, numbers))
+print("Pairs:", pairs)
+print("Count:", len(pairs))
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>Were you right? <code>zip()</code> stops at 3 pairs because <code>numbers</code> runs out first.</p>
+<h2 id="dictionary-from-two-lists-with-zip">Dictionary from Two Lists with <code>zip()</code><a class="headerlink" href="#dictionary-from-two-lists-with-zip" title="Permanent link">&para;</a></h2>
+<p>Combine <code>zip()</code> with <code>dict()</code> to build a dictionary from two parallel lists — one of keys, one of values:</p>
+<div class="highlight"><pre><span></span><code><span class="n">keys</span>   <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;Paris&quot;</span><span class="p">]</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>   <span class="c1"># {&quot;name&quot;: &quot;Alice&quot;, &quot;age&quot;: 14, &quot;city&quot;: &quot;Paris&quot;}</span>
+</code></pre></div>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">countries = ["France", "Japan", "Brazil"]
+capitals  = ["Paris", "Tokyo", "Brasília"]
+
+capital_map = dict(zip(countries, capitals))
+print(capital_map)
+print("Japan's capital:", capital_map["Japan"])
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="args-variable-number-of-positional-arguments"><code>*args</code> — Variable Number of Positional Arguments<a class="headerlink" href="#args-variable-number-of-positional-arguments" title="Permanent link">&para;</a></h2>
+<p>Sometimes you want a function that can accept any number of arguments.
+<code>*args</code> collects all extra positional arguments into a tuple.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">total</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>       <span class="c1"># 6</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>        <span class="c1"># 30</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>    <span class="c1"># 20</span>
+</code></pre></div>
+<h2 id="kwargs-variable-number-of-keyword-arguments"><code>**kwargs</code> — Variable Number of Keyword Arguments<a class="headerlink" href="#kwargs-variable-number-of-keyword-arguments" title="Permanent link">&para;</a></h2>
+<p><code>**kwargs</code> collects extra keyword arguments into a dictionary.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">describe</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Monty&quot;</span><span class="p">,</span> <span class="n">species</span><span class="o">=</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">def total(*args):
+    return sum(args)
+
+def describe(**kwargs):
+    for key, value in kwargs.items():
+        print(f"  {key}: {value}")
+
+print("Total:", total(10, 20, 30, 40))
+
+print("Monty's profile:")
+describe(name="Monty", level=7, language="Python")
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="aggregating-functions-max-min-sum">Aggregating Functions: <code>max()</code>, <code>min()</code>, <code>sum()</code><a class="headerlink" href="#aggregating-functions-max-min-sum" title="Permanent link">&para;</a></h2>
+<p>These three built-ins work on any iterable of numbers (or comparables for max/min):</p>
+<div class="highlight"><pre><span></span><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">73</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">92</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max:&quot;</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>    <span class="c1"># 100</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Min:&quot;</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>    <span class="c1"># 55</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum:&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>    <span class="c1"># 407</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Avg:&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>  <span class="c1"># 81.4</span>
+</code></pre></div>
+<h2 id="sorted-and-reversed"><code>sorted()</code> and <code>reversed()</code><a class="headerlink" href="#sorted-and-reversed" title="Permanent link">&para;</a></h2>
+<p><code>sorted(iterable)</code> returns a new sorted list without modifying the original.
+<code>reversed(iterable)</code> returns an iterator that goes through items in reverse order.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Modifies original?</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>list.sort()</code></td>
+<td>Yes</td>
+<td>None</td>
+</tr>
+<tr>
+<td><code>sorted(list)</code></td>
+<td>No</td>
+<td>New sorted list</td>
+</tr>
+<tr>
+<td><code>list.reverse()</code></td>
+<td>Yes</td>
+<td>None</td>
+</tr>
+<tr>
+<td><code>reversed(list)</code></td>
+<td>No</td>
+<td>Iterator</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">sorted_nums</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>               <span class="c1"># ascending</span>
+<span class="n">desc_nums</span>   <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># descending</span>
+</code></pre></div>
+<h2 id="isinstance-type-checking"><code>isinstance()</code> — Type Checking<a class="headerlink" href="#isinstance-type-checking" title="Permanent link">&para;</a></h2>
+<p><code>isinstance(value, type)</code> returns <code>True</code> if the value is the given type (or a subtype).
+It's safer than using <code>type(x) == int</code> because it handles inheritance.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span>         <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span>     <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="s2">&quot;hi&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">))</span>       <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="nb">list</span><span class="p">))</span>     <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)))</span><span class="c1"># True — multiple types allowed</span>
+</code></pre></div>
+<h2 id="map-and-filter"><code>map()</code> and <code>filter()</code><a class="headerlink" href="#map-and-filter" title="Permanent link">&para;</a></h2>
+<p><code>map(func, iterable)</code> applies a function to every item and returns the results.
+<code>filter(func, iterable)</code> keeps only items where the function returns <code>True</code>.</p>
+<p>Both return iterators — wrap them in <code>list()</code> to see the results:</p>
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="n">doubled</span>  <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">numbers</span><span class="p">))</span>
+<span class="n">evens</span>    <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">numbers</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Doubled:&quot;</span><span class="p">,</span> <span class="n">doubled</span><span class="p">)</span>   <span class="c1"># [2, 4, 6, 8, 10, 12]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Evens:&quot;</span><span class="p">,</span> <span class="n">evens</span><span class="p">)</span>       <span class="c1"># [2, 4, 6]</span>
+</code></pre></div>
+<p>A <strong>lambda</strong> is a tiny anonymous function written on one line: <code>lambda x: x * 2</code> means "take x, return x times 2."</p>
+<div id="skulpt-lab-5" class="skulpt-text-only">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">scores = [45, 78, 92, 61, 88, 73, 55]
+
+passing  = list(filter(lambda s: s >= 70, scores))
+bonus    = list(map(lambda s: s + 5, scores))
+
+print("Passing scores:", passing)
+print("All scores + 5:", bonus)
+print("Max:", max(scores), "Min:", min(scores), "Avg:", round(sum(scores)/len(scores), 1))
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<h2 id="collection-constructors">Collection Constructors<a class="headerlink" href="#collection-constructors" title="Permanent link">&para;</a></h2>
+<p>You can convert between collection types using <code>list()</code>, <code>tuple()</code>, <code>set()</code>, and <code>dict()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">my_list</span>  <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>         <span class="c1"># [0, 1, 2, 3, 4]</span>
+<span class="n">my_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>       <span class="c1"># (1, 2, 3)</span>
+<span class="n">my_set</span>   <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>   <span class="c1"># {1, 3, 4, 5}</span>
+</code></pre></div>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Use enumerate and zip Together</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below prints player names and their scores, but the output looks messy.
+Fix it to use <code>zip()</code> to pair names with scores and <code>enumerate()</code> starting at 1 to number the entries.
+Each line should look like: <code>1. Alice: 95</code></p>
+</div>
+<div id="skulpt-lab-6" class="skulpt-text-only">
+  <div id="editor-container-6">
+    <textarea id="code-6" spellcheck="false">names  = ["Alice", "Bob", "Carol"]
+scores = [95, 87, 91]
+
+# Fix: use enumerate(zip(...), 1) to print "1. Alice: 95" etc.
+for name in names:
+    print(name)
+</textarea>
+    <div id="button-row-6">
+      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
+      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
+    </div>
+    <pre id="output-6"></pre>
+  </div>
+  <div id="canvas-container-6">
+    <div id="turtle-target-6"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Use <code>enumerate(["Mon","Tue","Wed","Thu","Fri"], 1)</code> to print a numbered weekday list.
+   <strong>You'll know it worked when</strong> you see <code>1. Mon</code>, <code>2. Tue</code>, etc.</p>
+</li>
+<li>
+<p>Write a function <code>my_max(*args)</code> that returns the largest argument without using the built-in <code>max()</code>.
+   <strong>You'll know it worked when</strong> <code>my_max(3, 9, 1, 7)</code> returns <code>9</code>.</p>
+</li>
+<li>
+<p>Use <code>filter()</code> to keep only strings longer than 4 characters from <code>["cat","elephant","dog","hippo"]</code>.
+   <strong>You'll know it worked when</strong> you see <code>["elephant","hippo"]</code>.</p>
+</li>
+<li>
+<p>Use <code>sorted(words, key=len)</code> to sort a list of words by their length (shortest first).
+   <strong>You'll know it worked when</strong> short words appear before long ones.</p>
+</li>
+<li>
+<p>Use <code>dict(zip(range(1, 6), ["one","two","three","four","five"]))</code> to build a number-to-word dictionary.
+   <strong>You'll know it worked when</strong> <code>d[3]</code> prints <code>"three"</code>.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Built-in Function Master!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've leveled up with enumerate, zip, args, kwargs, map, filter, and more!
+These tools make Python code shorter, more readable, and more powerful.
+Professional programmers use every single one of them regularly. Great work!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

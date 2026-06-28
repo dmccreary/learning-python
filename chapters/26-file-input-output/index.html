@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Read and write files using open(), the with statement, file modes, line iteration, and CSV handling">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>26. File Input and Output - Learning Python</title>
+        <title>File Input and Output - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              26. File Input and Output
+              File Input and Output
             
           </span>
         </div>
@@ -912,27 +912,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-command-line-and-file-system-navigation" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The Command Line and File System Navigation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#open-and-file-modes" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      open() and File Modes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#the-with-statement-safe-file-handling" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      The with Statement — Safe File Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-to-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing to a File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-from-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading from a File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterating-over-file-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterating over File Lines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-processing-with-strip-and-lower" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Processing with strip() and lower()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appending-to-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appending to a File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3216,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#the-command-line-and-file-system-navigation" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      The Command Line and File System Navigation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#open-and-file-modes" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      open() and File Modes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#the-with-statement-safe-file-handling" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      The with Statement — Safe File Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-to-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing to a File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-from-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading from a File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterating-over-file-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterating over File Lines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-processing-with-strip-and-lower" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Processing with strip() and lower()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appending-to-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appending to a File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,44 +3333,305 @@
 
 
 <h1 id="file-input-and-output">File Input and Output<a class="headerlink" href="#file-input-and-output" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Programs become much more useful when they can read and write files — saving
-scores, loading data, processing text. This chapter introduces the command line,
-navigating the file system, <code>open()</code>, file modes (<code>r</code>, <code>w</code>, <code>a</code>), all the read
-and write methods, the <code>with</code> statement for safe file handling, iterating over
-lines, text processing with <code>strip()</code>/<code>lower()</code>, and reading and writing CSV files.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 14 concepts from the learning graph:</p>
-<ol>
-<li>Command Line Basics</li>
-<li>File System Navigation</li>
-<li>open() Function</li>
-<li>File Modes r w a b</li>
-<li>file.read()</li>
-<li>file.readlines()</li>
-<li>file.readline()</li>
-<li>file.write()</li>
-<li>file.close()</li>
-<li>with Statement Context Manager</li>
-<li>Iterating over File Lines</li>
-<li>Text Processing strip() lower()</li>
-<li>CSV File Reading</li>
-<li>CSV File Writing</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../08-working-with-strings/">Chapter 8: Working with Strings</a></li>
-<li><a href="../16-lists-methods-patterns/">Chapter 16: Lists — Methods and Patterns</a></li>
+<li>Open a file for reading or writing using <code>open()</code> and the <code>with</code> statement</li>
+<li>Read file contents with <code>read()</code>, <code>readlines()</code>, and line iteration</li>
+<li>Write and append text to a file with <code>write()</code></li>
+<li>Read and write simple CSV files using Python's <code>csv</code> module</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>Programs become much more useful when they can save data between runs.
+With file I/O, your programs can remember high scores, process text files, and share data with other programs.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 26!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Today your programs stop forgetting everything when they close!
+Files let your programs save and load data — a superpower that opens up a whole new world of projects.
+Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="the-command-line-and-file-system-navigation">The Command Line and File System Navigation<a class="headerlink" href="#the-command-line-and-file-system-navigation" title="Permanent link">&para;</a></h2>
+<p>Files live in a <strong>file system</strong> organized as folders inside folders.
+When you run a Python script from the <strong>command line</strong> (the terminal), Python looks for files relative to the <strong>current working directory</strong> — the folder you're running the script from.</p>
+<p>You can navigate in the terminal using:</p>
+<div class="highlight"><pre><span></span><code>cd foldername    # move into a folder
+cd ..            # move up one level
+ls               # list files (Mac/Linux)
+dir              # list files (Windows)
+pwd              # print current folder (Mac/Linux)
+</code></pre></div>
+<p>For Skulpt labs in this chapter, file content is simulated in memory. In your own Python environment, these same commands work with real files on disk.</p>
+<h2 id="open-and-file-modes"><code>open()</code> and File Modes<a class="headerlink" href="#open-and-file-modes" title="Permanent link">&para;</a></h2>
+<p><code>open(filename, mode)</code> opens a file and returns a <strong>file object</strong>.</p>
+<p>The mode tells Python what you want to do with the file:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"r"</code></td>
+<td>Read (default) — file must exist</td>
+</tr>
+<tr>
+<td><code>"w"</code></td>
+<td>Write — creates file or overwrites existing content</td>
+</tr>
+<tr>
+<td><code>"a"</code></td>
+<td>Append — adds to the end without deleting existing content</td>
+</tr>
+<tr>
+<td><code>"b"</code></td>
+<td>Binary — used with <code>"rb"</code> or <code>"wb"</code> for images and other binary files</td>
+</tr>
+</tbody>
+</table>
+<p>Always close the file when you're done: <code>file.close()</code>.
+But the better way is to use a <code>with</code> statement (explained below).</p>
+<h2 id="the-with-statement-safe-file-handling">The <code>with</code> Statement — Safe File Handling<a class="headerlink" href="#the-with-statement-safe-file-handling" title="Permanent link">&para;</a></h2>
+<p>The <strong><code>with</code> statement</strong> (also called a <strong>context manager</strong>) opens a file, runs the indented block, then automatically closes the file when the block ends — even if an error occurs.</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;greeting.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello from Python!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># file is automatically closed here</span>
+</code></pre></div>
+<p>Always use <code>with open(...)</code> instead of bare <code>open()</code>. It prevents the most common file bug: forgetting to close the file.</p>
+<h2 id="writing-to-a-file">Writing to a File<a class="headerlink" href="#writing-to-a-file" title="Permanent link">&para;</a></h2>
+<p><code>file.write(text)</code> writes text to the file. It does <strong>not</strong> add a newline automatically — add <code>"\n"</code> yourself:</p>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">import io
+
+# Simulate writing to a file:
+buffer = io.StringIO()
+buffer.write("Line 1: Hello, Python!\n")
+buffer.write("Line 2: I am writing to a file.\n")
+buffer.write("Line 3: This is fun!\n")
+
+# Read back what we wrote:
+buffer.seek(0)
+print(buffer.read())
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p>In a real Python environment, this writes to a file on disk:</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;notes.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Line 1: Hello, Python!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Line 2: I am writing to a file.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="reading-from-a-file">Reading from a File<a class="headerlink" href="#reading-from-a-file" title="Permanent link">&para;</a></h2>
+<p>Three methods read file content:</p>
+<ul>
+<li><code>f.read()</code> — reads the entire file as one big string</li>
+<li><code>f.readlines()</code> — reads all lines into a list (each line includes <code>\n</code>)</li>
+<li><code>f.readline()</code> — reads one line at a time</li>
+</ul>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import io
+
+content = "apple\nbanana\nmango\nkiwi\n"
+f = io.StringIO(content)
+
+lines = f.readlines()
+print("Number of lines:", len(lines))
+for i, line in enumerate(lines, 1):
+    print(f"  Line {i}: {line.strip()}")
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>Note the <code>.strip()</code> call — it removes the <code>\n</code> from the end of each line.</p>
+<h2 id="iterating-over-file-lines">Iterating over File Lines<a class="headerlink" href="#iterating-over-file-lines" title="Permanent link">&para;</a></h2>
+<p>The cleanest way to process a file line by line is a simple <code>for</code> loop:</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">line</span><span class="p">:</span>   <span class="c1"># skip empty lines</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="text-processing-with-strip-and-lower">Text Processing with <code>strip()</code> and <code>lower()</code><a class="headerlink" href="#text-processing-with-strip-and-lower" title="Permanent link">&para;</a></h2>
+<p>When processing file content, always clean the text first:</p>
+<ul>
+<li><code>.strip()</code> — removes leading and trailing whitespace (spaces, tabs, newlines)</li>
+<li><code>.lower()</code> — converts to lowercase for case-insensitive comparisons</li>
+<li><code>.split()</code> — splits a line into words</li>
+</ul>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">import io
+
+# Simulate a file with a word list:
+words_text = "  Apple  \nbanana\n  MANGO\nkiwi  \n"
+f = io.StringIO(words_text)
+
+clean_words = []
+for line in f:
+    word = line.strip().lower()
+    if word:
+        clean_words.append(word)
+
+print("Cleaned words:", clean_words)
+print("Sorted:", sorted(clean_words))
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="appending-to-a-file">Appending to a File<a class="headerlink" href="#appending-to-a-file" title="Permanent link">&para;</a></h2>
+<p>Mode <code>"a"</code> adds to the end of a file without erasing existing content:</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;log.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;New entry added.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Run this multiple times and the log grows — each run adds a new line.</p>
+<h2 id="csv-files">CSV Files<a class="headerlink" href="#csv-files" title="Permanent link">&para;</a></h2>
+<p><strong>CSV</strong> (Comma-Separated Values) is one of the most common file formats for tabular data.
+Each row is one line; columns are separated by commas.</p>
+<div class="highlight"><pre><span></span><code>name,age,score
+Alice,14,95
+Bob,13,87
+Carol,15,91
+</code></pre></div>
+<p>Python's <code>csv</code> module reads and writes CSV files cleanly:</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below reads a CSV string and prints each row as a dictionary.
+How do you think Python knows which column is "name" vs "score"?
+Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">import csv
+import io
+
+csv_text = """name,age,score
+Alice,14,95
+Bob,13,87
+Carol,15,91
+"""
+
+reader = csv.DictReader(io.StringIO(csv_text))
+for row in reader:
+    print(f"{row['name']}: age {row['age']}, score {row['score']}")
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<p><code>csv.DictReader</code> uses the first row (the header) as column names and gives you each row as a dictionary. </p>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Process the CSV</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below reads student scores from a CSV string.
+Add code to calculate and print the <strong>average</strong> score after the loop.
+You'll need to convert the score strings to integers first!</p>
+</div>
+<div id="skulpt-lab-5" class="skulpt-text-only">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">import csv, io
+
+csv_text = "name,score\nAlice,95\nBob,87\nCarol,91\nDave,73\n"
+reader = csv.DictReader(io.StringIO(csv_text))
+
+total = 0
+count = 0
+for row in reader:
+    score = int(row["score"])
+    total += score
+    count += 1
+    print(f"{row['name']}: {score}")
+
+# Add: calculate and print the average score
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Change the CSV to add a fourth column <code>"grade"</code> with values A/B/C. Print only rows where grade == "A".
+   <strong>You'll know it worked when</strong> only Alice's row appears.</p>
+</li>
+<li>
+<p>Use <code>io.StringIO</code> to simulate writing a to-do list, then read it back line by line.
+   <strong>You'll know it worked when</strong> each to-do item prints on its own line.</p>
+</li>
+<li>
+<p>Count how many words appear in a text string using <code>split()</code> and print the total word count.
+   <strong>You'll know it worked when</strong> you see the correct number of words.</p>
+</li>
+<li>
+<p>Read lines from a string and filter out any line that contains the word <code>"skip"</code>.
+   <strong>You'll know it worked when</strong> lines with "skip" don't appear in the output.</p>
+</li>
+<li>
+<p>Write a CSV string with three columns. Use <code>csv.reader</code> (instead of <code>DictReader</code>) to read rows as plain lists.
+   <strong>You'll know it worked when</strong> each row prints as a Python list like <code>['Alice', '14', '95']</code>.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">File I/O Expert!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+Your programs can now save and load data from files — including CSV spreadsheets!
+This opens the door to real data processing, log files, configuration storage, and so much more.
+You're doing advanced Python work now. Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

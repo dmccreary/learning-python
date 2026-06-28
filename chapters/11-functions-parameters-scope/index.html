@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Learn how to use default parameter values, keyword arguments, and understand variable scope in Python functions">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>11. Functions with Parameters and Scope - Learning Python</title>
+        <title>Functions with Parameters and Scope - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              11. Functions with Parameters and Scope
+              Functions with Parameters and Scope
             
           </span>
         </div>
@@ -597,27 +597,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#default-parameter-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Default Parameter Values
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#keyword-arguments" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Keyword Arguments
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#local-scope-and-global-scope" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Local Scope and Global Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-global-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      The global Keyword
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-conflicts-to-avoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming Conflicts to Avoid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants-by-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constants by Convention
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swapping-two-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swapping Two Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pure-functions-vs-functions-with-side-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pure Functions vs Functions with Side Effects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3207,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#default-parameter-values" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Default Parameter Values
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#keyword-arguments" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Keyword Arguments
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#local-scope-and-global-scope" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Local Scope and Global Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-global-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      The global Keyword
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-conflicts-to-avoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming Conflicts to Avoid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants-by-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constants by Convention
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swapping-two-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swapping Two Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pure-functions-vs-functions-with-side-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pure Functions vs Functions with Side Effects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,39 +3315,390 @@
 
 
 <h1 id="functions-with-parameters-and-scope">Functions with Parameters and Scope<a class="headerlink" href="#functions-with-parameters-and-scope" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Functions become much more powerful when you give them <em>parameters</em> (inputs).
-This chapter covers default parameter values, keyword arguments, what happens
-to variables <em>inside</em> vs <em>outside</em> functions (scope), the <code>global</code> keyword,
-and how to use <code>nonlocal</code> in nested functions.
-You'll also practice writing pure functions that return useful values.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 9 concepts from the learning graph:</p>
-<ol>
-<li>Constants by Convention</li>
-<li>Swap Two Variables</li>
-<li>Naming Conflicts to Avoid</li>
-<li>Default Parameter Values</li>
-<li>Keyword Arguments</li>
-<li>Local Scope</li>
-<li>Global Scope</li>
-<li>global Keyword</li>
-<li>Pure Functions vs Side Effects</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../04-functions-and-objects/">Chapter 4: Functions and Objects</a></li>
-<li><a href="../06-math-and-arithmetic/">Chapter 6: Math and Arithmetic</a></li>
+<li>Write functions with <strong>default parameter values</strong> so they work even when a caller skips an argument</li>
+<li>Use <strong>keyword arguments</strong> to make function calls easier to read</li>
+<li>Explain the difference between <strong>local</strong> and <strong>global</strong> scope</li>
+<li>Identify whether a function is <strong>pure</strong> or has <strong>side effects</strong></li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>You already know how to define a function and call it.
+Now let's make functions even more powerful by giving them smarter inputs and understanding where variables live.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 11!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Functions with parameters are like ordering from a menu — you say what you want and the kitchen does the work.
+Today we're going to make our functions even smarter by giving them <em>default</em> choices!
+Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="default-parameter-values">Default Parameter Values<a class="headerlink" href="#default-parameter-values" title="Permanent link">&para;</a></h2>
+<p>A <strong>default parameter value</strong> is a value the function uses automatically if the caller doesn't provide one.</p>
+<p>Write the default value right after the <code>=</code> sign in the function definition.
+If a caller passes a number, that number is used. If not, the function falls back to the default.</p>
+<p>Here's an example. The function <code>draw_square</code> has a <code>size</code> parameter that defaults to <code>100</code>.
+Calling <code>draw_square()</code> with no argument draws a square 100 steps wide.
+Calling <code>draw_square(50)</code> draws a smaller square.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">draw_square</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+
+<span class="n">draw_square</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>    <span class="c1"># small square</span>
+<span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">goto</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+<span class="n">draw_square</span><span class="p">()</span>      <span class="c1"># uses the default: size = 100</span>
+</code></pre></div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+There are two calls to <code>draw_square()</code> — one with an argument and one without.
+Which square do you think will be bigger? Make your guess, then click Run!</p>
+</div>
+<div id="skulpt-lab">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">import turtle
+t = turtle.Turtle()
+t.speed(6)
+
+def draw_square(size=100):
+    for i in range(4):
+        t.forward(size)
+        t.right(90)
+
+draw_square(50)    # small square
+t.penup()
+t.goto(120, 0)
+t.pendown()
+draw_square()      # uses the default: size = 100
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p>Were you right? The first square (size 50) is smaller. The second uses the default size of 100.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>def draw_square(size=100):</code></td>
+<td>Defines <code>draw_square</code> — if you skip the argument, <code>size</code> is 100</td>
+</tr>
+<tr>
+<td><code>draw_square(50)</code></td>
+<td>Calls with size = 50</td>
+</tr>
+<tr>
+<td><code>draw_square()</code></td>
+<td>Calls with no argument — uses the default size = 100</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule:</strong> parameters <em>with</em> defaults must come <strong>after</strong> any parameters <em>without</em> defaults.</p>
+<h2 id="keyword-arguments">Keyword Arguments<a class="headerlink" href="#keyword-arguments" title="Permanent link">&para;</a></h2>
+<p>When you call a function, Python normally matches arguments by position.
+But you can also use the parameter's <em>name</em> when you call it.
+This is called a <strong>keyword argument</strong> — you write <code>name=value</code> in the call.</p>
+<p>The big advantage: you can put keyword arguments in any order.</p>
+<p>The function below draws a colored polygon. It has three parameters: <code>sides</code>, <code>size</code>, and <code>color</code>.
+Watch how keyword arguments make the call read like plain English:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">draw_polygon</span><span class="p">(</span><span class="n">sides</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">pencolor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">sides</span><span class="p">):</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">360</span> <span class="o">/</span> <span class="n">sides</span><span class="p">)</span>
+
+<span class="n">draw_polygon</span><span class="p">(</span><span class="n">sides</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+</code></pre></div>
+<div id="skulpt-lab-2">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import turtle
+t = turtle.Turtle()
+t.speed(6)
+
+def draw_polygon(sides=4, size=80, color="blue"):
+    t.pencolor(color)
+    for i in range(sides):
+        t.forward(size)
+        t.right(360 / sides)
+
+draw_polygon(sides=6, color="red", size=60)
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>The call uses <code>color</code> before <code>size</code>, but that's fine — keyword arguments can go in any order.
+Try changing <code>sides=6</code> to <code>sides=3</code> to draw a triangle, or change <code>color="red"</code> to any color you like.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Scratch Bridge</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+In Scratch, custom blocks have labeled input fields — you fill in "size" or "color" by name.
+Python keyword arguments work the same way!
+<code>draw_polygon(color="red")</code> is like filling in the "color" field in a Scratch block.</p>
+</div>
+<h2 id="local-scope-and-global-scope">Local Scope and Global Scope<a class="headerlink" href="#local-scope-and-global-scope" title="Permanent link">&para;</a></h2>
+<p><strong>Scope</strong> describes where Python can see a variable.</p>
+<p>A variable created <em>inside</em> a function has <strong>local scope</strong>.
+It only exists while the function runs. When the function finishes, that variable is gone.</p>
+<p>A variable created <em>outside</em> any function has <strong>global scope</strong>.
+It exists for the whole program.</p>
+<p>The example below shows both. A function can <em>read</em> a global variable, but the local variable inside the function is invisible from outside.</p>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">name = "Monty"   # global variable
+
+def greet():
+    greeting = "Hello"  # local variable
+    print(greeting + ", " + name + "!")
+
+greet()
+# Uncomment the next line to see a NameError:
+# print(greeting)
+print("name is:", name)
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Where defined</th>
+<th>Visible inside <code>greet()</code>?</th>
+<th>Visible outside <code>greet()</code>?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>Outside (global)</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>greeting</code></td>
+<td>Inside <code>greet()</code> (local)</td>
+<td>Yes</td>
+<td>No — NameError!</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-global-keyword">The <code>global</code> Keyword<a class="headerlink" href="#the-global-keyword" title="Permanent link">&para;</a></h2>
+<p>By default, a function can <em>read</em> a global variable but cannot <em>change</em> it.</p>
+<p>If you want a function to update a global variable, use the <strong><code>global</code> keyword</strong> to tell Python your intention.</p>
+<p>The key word <code>global score</code> inside the function tells Python: "I mean the <code>score</code> that lives outside, not a new local one."</p>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">score = 0   # global score
+
+def add_points(n):
+    global score   # use the GLOBAL score, not a new local one
+    score = score + n
+
+add_points(10)
+add_points(5)
+print("Final score:", score)
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<p>Without the <code>global score</code> line, Python would create a <em>new</em> local variable named <code>score</code> and leave the global one untouched — which is usually not what you want.</p>
+<h2 id="naming-conflicts-to-avoid">Naming Conflicts to Avoid<a class="headerlink" href="#naming-conflicts-to-avoid" title="Permanent link">&para;</a></h2>
+<p>If you create a local variable with the <em>same name</em> as a global variable, the local one <strong>shadows</strong> the global one inside that function. This can cause tricky bugs.</p>
+<div class="highlight"><pre><span></span><code><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>   <span class="c1"># global</span>
+
+<span class="k">def</span> <span class="nf">reset</span><span class="p">():</span>
+    <span class="n">speed</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c1"># creates a NEW local variable — does NOT change the global!</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inside:&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">)</span>
+
+<span class="n">reset</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Outside:&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">)</span>   <span class="c1"># still 10!</span>
+</code></pre></div>
+<p>To stay safe, choose different names for global and local variables — or use <code>global</code> if you truly want to change the global value.</p>
+<h2 id="constants-by-convention">Constants by Convention<a class="headerlink" href="#constants-by-convention" title="Permanent link">&para;</a></h2>
+<p>A <strong>constant</strong> is a value that should never change after you set it.
+Python doesn't enforce this, but programmers follow a convention: write constant names in <strong>ALL_CAPS</strong> with underscores.</p>
+<div class="highlight"><pre><span></span><code><span class="n">MAX_SPEED</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">CANVAS_WIDTH</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">PEN_COLOR</span> <span class="o">=</span> <span class="s2">&quot;navy&quot;</span>
+</code></pre></div>
+<p>ALL_CAPS is a signal to every reader: "Don't change this — treat it like a fixed rule."</p>
+<h2 id="swapping-two-variables">Swapping Two Variables<a class="headerlink" href="#swapping-two-variables" title="Permanent link">&para;</a></h2>
+<p>Here's a classic puzzle: how do you swap the values of two variables?</p>
+<p>The <em>wrong</em> approach loses data:</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span>    <span class="c1"># a is now 10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>    <span class="c1"># b gets 10 too — oops! 5 is gone</span>
+</code></pre></div>
+<p>The <em>right</em> approach uses a temporary variable:</p>
+<div class="highlight"><pre><span></span><code><span class="n">temp</span> <span class="o">=</span> <span class="n">a</span>   <span class="c1"># save a&#39;s original value</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span>      <span class="c1"># a gets b&#39;s value</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">temp</span>   <span class="c1"># b gets a&#39;s original value</span>
+</code></pre></div>
+<p>Python has a built-in shortcut that swaps in one line:</p>
+<div id="skulpt-lab-5" class="skulpt-text-only">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">a = 5
+b = 10
+print("Before:", a, b)
+
+a, b = b, a   # Python swap shortcut
+
+print("After: ", a, b)
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<h2 id="pure-functions-vs-functions-with-side-effects">Pure Functions vs Functions with Side Effects<a class="headerlink" href="#pure-functions-vs-functions-with-side-effects" title="Permanent link">&para;</a></h2>
+<p>A <strong>pure function</strong> always gives the same output for the same input and doesn't change anything outside itself.
+Put in the same number, always get the same result — like a calculator.</p>
+<p>A function with <strong>side effects</strong> changes something outside itself, such as printing to the screen, modifying a global variable, or making the turtle draw.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pure function — no side effects, always returns the same result</span>
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span>
+
+<span class="c1"># Function with side effects — changes global, prints output</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">add_to_total</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">total</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">n</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total is now:&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+</code></pre></div>
+<p>Pure functions are easier to test because they're predictable.
+Side effects aren't bad — drawing with the turtle <em>is</em> a side effect — but knowing which type of function you're writing helps you write better code.</p>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Add the Missing Argument</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The function below should draw a pentagon (5 sides), but the <code>sides</code> keyword argument is missing from the call.
+Add <code>sides=5</code> to make it draw a pentagon!</p>
+</div>
+<div id="skulpt-lab-6">
+  <div id="editor-container-6">
+    <textarea id="code-6" spellcheck="false">import turtle
+t = turtle.Turtle()
+t.speed(6)
+
+def draw_polygon(sides=4, size=80, color="blue"):
+    t.pencolor(color)
+    for i in range(sides):
+        t.forward(size)
+        t.right(360 / sides)
+
+# Add the sides keyword argument to draw a pentagon:
+draw_polygon(color="green", size=70)
+</textarea>
+    <div id="button-row-6">
+      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
+      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
+    </div>
+    <pre id="output-6"></pre>
+  </div>
+  <div id="canvas-container-6">
+    <div id="turtle-target-6"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Change the default size in <code>draw_square</code> from <code>100</code> to <code>150</code>. Call <code>draw_square()</code> with no arguments.
+   <strong>You'll know it worked when</strong> the turtle draws a bigger square without you passing any number.</p>
+</li>
+<li>
+<p>Add a fourth parameter <code>line_width=1</code> to <code>draw_polygon</code> and call <code>t.pensize(line_width)</code> at the start.
+   Call it with <code>draw_polygon(sides=3, line_width=5)</code>.
+   <strong>You'll know it worked when</strong> the triangle has noticeably thick lines.</p>
+</li>
+<li>
+<p>Create a global variable <code>COUNT = 0</code> and a function <code>increment()</code> that uses <code>global COUNT</code> to add 1.
+   Call <code>increment()</code> three times and <code>print(COUNT)</code>.
+   <strong>You'll know it worked when</strong> you see <code>3</code>.</p>
+</li>
+<li>
+<p>Try the <em>wrong</em> swap (write <code>a = b</code> then <code>b = a</code>) and print both variables.
+   <strong>You'll know it worked when</strong> both variables show the same value — proving the bug!</p>
+</li>
+<li>
+<p>Write a pure function <code>cube(n)</code> that returns <code>n * n * n</code>.
+   Call it inside <code>print(cube(4))</code>.
+   <strong>You'll know it worked when</strong> you see <code>64</code>.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Fantastic Work!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've learned how to write smarter functions with default values, keyword arguments, and proper scope!
+These skills will make every function you write from now on more flexible and easier for others to read.
+Let's keep coding together!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

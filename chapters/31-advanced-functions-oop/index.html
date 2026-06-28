@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Round out your functional-programming and OOP skills with map, filter, dir, help, custom exceptions, @property, dunder methods, and object composition">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>31. Advanced Functions and OOP - Learning Python</title>
+        <title>Advanced Functions and OOP - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              31. Advanced Functions and OOP
+              Advanced Functions and OOP
             
           </span>
         </div>
@@ -1017,27 +1017,108 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#map-and-filter-with-named-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      map() and filter() with Named Functions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#any-and-all" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      any() and all()
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#chr-and-ord-characters-and-ascii-codes" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      chr() and ord() — Characters and ASCII Codes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dir-and-help-exploring-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      dir() and help() — Exploring Objects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id-and-hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      id() and hash()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-exception-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Exception Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties-with-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties with @property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dunder-methods-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dunder Methods Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object Composition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3225,108 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#map-and-filter-with-named-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      map() and filter() with Named Functions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#any-and-all" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      any() and all()
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#chr-and-ord-characters-and-ascii-codes" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      chr() and ord() — Characters and ASCII Codes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dir-and-help-exploring-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      dir() and help() — Exploring Objects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id-and-hash" class="md-nav__link">
+    <span class="md-ellipsis">
+      id() and hash()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-exception-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Exception Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties-with-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties with @property
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dunder-methods-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dunder Methods Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Object Composition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,47 +3351,372 @@
 
 
 <h1 id="advanced-functions-and-oop">Advanced Functions and OOP<a class="headerlink" href="#advanced-functions-and-oop" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>This chapter rounds out your functional-programming and OOP knowledge.
-You'll learn <code>map()</code> and <code>filter()</code> for transforming collections, <code>dir()</code> and
-<code>help()</code> for exploring any object, <code>id()</code> and <code>hash()</code> for object identity,
-<code>any()</code>/<code>all()</code> for aggregate testing, and <code>chr()</code>/<code>ord()</code> for character math.
-On the OOP side: exception hierarchy, custom exception classes, exception
-chaining, static methods, <code>@property</code>, dunder methods, and object composition.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 15 concepts from the learning graph:</p>
-<ol>
-<li>map() Apply Function</li>
-<li>filter() Filter Items</li>
-<li>dir() List Attributes</li>
-<li>help() Documentation</li>
-<li>id() Object Identity</li>
-<li>hash() Function</li>
-<li>any() and all() Functions</li>
-<li>chr() and ord() Functions</li>
-<li>Exception Hierarchy</li>
-<li>Custom Exception Classes</li>
-<li>Exception Chaining</li>
-<li>Static Methods</li>
-<li>Properties with @property</li>
-<li>Dunder Methods Overview</li>
-<li>Object Composition</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../22-advanced-collections/">Chapter 22: Advanced Collections and Built-in Functions</a></li>
-<li><a href="../23-error-handling-debugging/">Chapter 23: Error Handling and Debugging</a></li>
-<li><a href="../25-object-oriented-programming/">Chapter 25: Object-Oriented Programming</a></li>
+<li>Use <code>map()</code>, <code>filter()</code>, <code>any()</code>, <code>all()</code>, <code>chr()</code>, <code>ord()</code>, <code>dir()</code>, and <code>help()</code> effectively</li>
+<li>Create <strong>custom exception classes</strong> and use exception chaining</li>
+<li>Define <strong>properties</strong> with <code>@property</code> and use <strong>dunder methods</strong> to customize object behavior</li>
+<li>Apply <strong>object composition</strong> to build complex objects from simpler ones</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>This chapter fills in the remaining advanced tools from Python's functional and OOP toolkit.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 31!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+This is where your Python skills reach professional level!
+Custom exceptions, properties, dunder methods — these are the tools that separate beginner code from expert code.
+Let's level up! Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="map-and-filter-with-named-functions"><code>map()</code> and <code>filter()</code> with Named Functions<a class="headerlink" href="#map-and-filter-with-named-functions" title="Permanent link">&para;</a></h2>
+<p>You saw <code>map()</code> and <code>filter()</code> with lambdas in Chapter 22. They work just as well with named functions:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">evens</span>   <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="n">numbers</span><span class="p">))</span>   <span class="c1"># [2, 4, 6]</span>
+<span class="n">squares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">numbers</span><span class="p">))</span>       <span class="c1"># [1, 4, 9, 16, 25, 36]</span>
+</code></pre></div>
+<p>This style is more readable than lambdas for complex logic.</p>
+<h2 id="any-and-all"><code>any()</code> and <code>all()</code><a class="headerlink" href="#any-and-all" title="Permanent link">&para;</a></h2>
+<p><code>any(iterable)</code> returns <code>True</code> if at least one item is truthy.
+<code>all(iterable)</code> returns <code>True</code> if every item is truthy.</p>
+<p>Both short-circuit — they stop as soon as the answer is known.</p>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">scores = [75, 92, 88, 60, 95]
+
+print("Any failing (<70)?", any(s < 70 for s in scores))
+print("All passing (>=60)?", all(s >= 60 for s in scores))
+print("All excellent (>=90)?", all(s >= 90 for s in scores))
+
+words = ["hello", "world", "Python"]
+print("Any starts with 'P'?", any(w.startswith("P") for w in words))
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<h2 id="chr-and-ord-characters-and-ascii-codes"><code>chr()</code> and <code>ord()</code> — Characters and ASCII Codes<a class="headerlink" href="#chr-and-ord-characters-and-ascii-codes" title="Permanent link">&para;</a></h2>
+<p><code>ord(character)</code> converts a character to its ASCII (Unicode) integer code.
+<code>chr(integer)</code> does the reverse — converts an integer to its character.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">))</span>   <span class="c1"># 65</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">))</span>   <span class="c1"># 97</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mi">65</span><span class="p">))</span>    <span class="c1"># &quot;A&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mi">9829</span><span class="p">))</span>  <span class="c1"># &quot;♥&quot; — Unicode heart</span>
+</code></pre></div>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false"># Print A-Z using chr() and ord():
+for code in range(ord("A"), ord("Z") + 1):
+    print(chr(code), end=" ")
+print()
+
+# Simple Caesar cipher (shift each letter by 3):
+def encrypt(text, shift=3):
+    result = ""
+    for ch in text:
+        if ch.isalpha():
+            base = ord("A") if ch.isupper() else ord("a")
+            result += chr((ord(ch) - base + shift) % 26 + base)
+        else:
+            result += ch
+    return result
+
+print(encrypt("Hello, World!"))
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="dir-and-help-exploring-objects"><code>dir()</code> and <code>help()</code> — Exploring Objects<a class="headerlink" href="#dir-and-help-exploring-objects" title="Permanent link">&para;</a></h2>
+<p><code>dir(obj)</code> returns a list of all attributes and methods available on <code>obj</code>.
+<code>help(obj)</code> prints detailed documentation.</p>
+<p>These are your best friends when exploring an unfamiliar module or object:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">))</span>         <span class="c1"># see all math functions</span>
+<span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">)</span>          <span class="c1"># full docs for sqrt</span>
+</code></pre></div>
+<h2 id="id-and-hash"><code>id()</code> and <code>hash()</code><a class="headerlink" href="#id-and-hash" title="Permanent link">&para;</a></h2>
+<p><code>id(obj)</code> returns the unique memory address of an object.
+Two variables with the same <code>id</code> are the same object — not just equal, but literally the same in memory.</p>
+<p><code>hash(obj)</code> returns a hash value (an integer fingerprint). Dictionaries use hashes for fast lookups.
+Only immutable objects (strings, numbers, tuples) can be hashed.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below compares <code>is</code> vs <code>==</code> for strings. Will the small strings share the same id?
+Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">a = "hello"
+b = "hello"
+c = "hel" + "lo"   # built from parts at runtime
+
+print("a == b:", a == b)
+print("a is b:", a is b)
+print("a == c:", a == c)
+print("id(a):", id(a))
+print("id(b):", id(b))
+print("id(c):", id(c))
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="custom-exception-classes">Custom Exception Classes<a class="headerlink" href="#custom-exception-classes" title="Permanent link">&para;</a></h2>
+<p>You can create your own exception types by subclassing <code>Exception</code>.
+Custom exceptions make your error messages much clearer to users of your code.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">InvalidAgeError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">NegativeBalanceError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cannot withdraw $</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2"> — balance would go negative.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">amount</span> <span class="o">=</span> <span class="n">amount</span>
+</code></pre></div>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">class InvalidScoreError(ValueError):
+    def __init__(self, score):
+        super().__init__(f"Score {score} is out of range (0-100).")
+        self.score = score
+
+def record_score(score):
+    if not (0 <= score <= 100):
+        raise InvalidScoreError(score)
+    return score
+
+for s in [85, 110, -5, 0, 100]:
+    try:
+        print(f"Recorded: {record_score(s)}")
+    except InvalidScoreError as e:
+        print(f"Error: {e}")
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="static-methods">Static Methods<a class="headerlink" href="#static-methods" title="Permanent link">&para;</a></h2>
+<p>A <strong>static method</strong> belongs to the class but doesn't need access to <code>self</code> (the instance).
+Decorate it with <code>@staticmethod</code>. Use it for utility functions that logically belong to the class.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Temperature</span><span class="p">:</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">celsius_to_fahrenheit</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">c</span> <span class="o">*</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">f</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span><span class="o">/</span><span class="mi">9</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Temperature</span><span class="o">.</span><span class="n">celsius_to_fahrenheit</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>   <span class="c1"># 212.0</span>
+</code></pre></div>
+<h2 id="properties-with-property">Properties with <code>@property</code><a class="headerlink" href="#properties-with-property" title="Permanent link">&para;</a></h2>
+<p>A <strong>property</strong> lets you define a method that behaves like an attribute.
+This lets you add validation or computation to attribute access without changing the interface.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Circle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_radius</span> <span class="o">=</span> <span class="n">radius</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">radius</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_radius</span>
+
+    <span class="nd">@radius</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">radius</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Radius cannot be negative.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_radius</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">3.14159</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_radius</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">radius</span><span class="p">)</span>   <span class="c1"># calls the getter</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">area</span><span class="p">)</span>     <span class="c1"># computed property</span>
+<span class="n">c</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="mi">10</span>     <span class="c1"># calls the setter (validates!)</span>
+</code></pre></div>
+<h2 id="dunder-methods-overview">Dunder Methods Overview<a class="headerlink" href="#dunder-methods-overview" title="Permanent link">&para;</a></h2>
+<p><strong>Dunder methods</strong> (also called "magic methods") are special methods with double underscores on both sides.
+You've already seen <code>__init__</code> and <code>__str__</code>. There are many more:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Called when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>__len__(self)</code></td>
+<td><code>len(obj)</code></td>
+</tr>
+<tr>
+<td><code>__add__(self, other)</code></td>
+<td><code>obj + other</code></td>
+</tr>
+<tr>
+<td><code>__eq__(self, other)</code></td>
+<td><code>obj == other</code></td>
+</tr>
+<tr>
+<td><code>__lt__(self, other)</code></td>
+<td><code>obj &lt; other</code></td>
+</tr>
+<tr>
+<td><code>__contains__(self, item)</code></td>
+<td><code>item in obj</code></td>
+</tr>
+<tr>
+<td><code>__iter__(self)</code></td>
+<td><code>for x in obj</code></td>
+</tr>
+<tr>
+<td><code>__getitem__(self, key)</code></td>
+<td><code>obj[key]</code></td>
+</tr>
+</tbody>
+</table>
+<p>By implementing dunders, your custom classes work naturally with Python operators and built-in functions.</p>
+<h2 id="object-composition">Object Composition<a class="headerlink" href="#object-composition" title="Permanent link">&para;</a></h2>
+<p><strong>Object composition</strong> means building a complex object from simpler objects — storing instances of one class inside another.</p>
+<p>This is often better than deep inheritance hierarchies:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Engine</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">horsepower</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hp</span> <span class="o">=</span> <span class="n">horsepower</span>
+
+    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Engine (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">hp</span><span class="si">}</span><span class="s2"> hp) running.&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">horsepower</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span>  <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">engine</span> <span class="o">=</span> <span class="n">Engine</span><span class="p">(</span><span class="n">horsepower</span><span class="p">)</span>   <span class="c1"># composition!</span>
+
+    <span class="k">def</span> <span class="nf">drive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="si">}</span><span class="s2"> is moving.&quot;</span><span class="p">)</span>
+
+<span class="n">car</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&quot;Python GT&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">car</span><span class="o">.</span><span class="n">drive</span><span class="p">()</span>
+</code></pre></div>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Composition over Inheritance</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+Professional Python developers prefer composition over deep inheritance.
+Instead of <code>ElectricCar(Car(Vehicle))</code>, build <code>ElectricCar</code> with an <code>engine</code> attribute.
+It's easier to change individual parts without breaking unrelated code.</p>
+</div>
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Add a Dunder Method</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The <code>Bag</code> class below stores items, but <code>len(bag)</code> doesn't work yet.
+Add the <code>__len__</code> dunder method so <code>len(bag)</code> returns the number of items!</p>
+</div>
+<div id="skulpt-lab-5" class="skulpt-text-only">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">class Bag:
+    def __init__(self):
+        self.items = []
+
+    def add(self, item):
+        self.items.append(item)
+
+    # Add __len__ here so len(bag) works:
+
+bag = Bag()
+bag.add("apple")
+bag.add("banana")
+bag.add("mango")
+
+print("Items:", bag.items)
+print("Count:", len(bag))   # this will fail until you add __len__
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Use <code>any()</code> to check if any string in a list has more than 10 characters.
+   <strong>You'll know it worked when</strong> the result is <code>True</code> or <code>False</code> based on the actual lengths.</p>
+</li>
+<li>
+<p>Write a Caesar cipher decryption function (shift by -3 instead of +3). Encrypt then decrypt "Hello".
+   <strong>You'll know it worked when</strong> you get back the original "Hello".</p>
+</li>
+<li>
+<p>Add <code>__add__</code> to the <code>Bag</code> class so <code>bag1 + bag2</code> returns a new Bag with all items from both.
+   <strong>You'll know it worked when</strong> <code>len(bag1 + bag2)</code> equals <code>len(bag1) + len(bag2)</code>.</p>
+</li>
+<li>
+<p>Add <code>@property area</code> to a <code>Rectangle</code> class. Ensure it recomputes every time width or height changes.
+   <strong>You'll know it worked when</strong> changing <code>r.width = 10</code> updates <code>r.area</code> automatically.</p>
+</li>
+<li>
+<p>Create a <code>Stack</code> class using composition (it has a <code>list</code> attribute) with <code>push</code>, <code>pop</code>, <code>peek</code>, and <code>__len__</code>.
+   <strong>You'll know it worked when</strong> all four operations work as expected.</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Python Expert!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've reached the advanced Python tier! Custom exceptions, properties, dunders, and composition are tools used by professional Python developers every day.
+The last chapters take you into data science and machine learning territory. Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

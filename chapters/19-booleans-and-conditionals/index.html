@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.">
+        <meta name="description" content="Deepen your understanding of truthiness, short-circuit evaluation, ternary expressions, match/case, and compound conditions">
       
       
         <meta name="author" content="Dan McCreary">
@@ -26,7 +26,7 @@
     
     
       
-        <title>19. More Booleans and Conditionals - Learning Python</title>
+        <title>More Booleans and Conditionals - Learning Python</title>
       
     
     
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              19. More Booleans and Conditionals
+              More Booleans and Conditionals
             
           </span>
         </div>
@@ -765,27 +765,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#truthiness-and-falsiness" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Truthiness and Falsiness
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#short-circuit-evaluation" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Short-Circuit Evaluation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#functions-returning-none" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Functions Returning None
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-for-none-with-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking for None with is
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implicit-vs-explicit-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implicit vs Explicit Conversion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-multiple-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Multiple Inputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-conditional-ternary-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Conditional Ternary Expression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compound-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compound Conditions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matchcase-pythons-pattern-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      match/case — Python's Pattern Matching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -2214,7 +2286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pi/01-intro/" class="md-nav__link">
+      <a href="../../pi/01-intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3144,27 +3216,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#truthiness-and-falsiness" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      Truthiness and Falsiness
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#short-circuit-evaluation" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      Short-Circuit Evaluation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#functions-returning-none" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Functions Returning None
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-for-none-with-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking for None with is
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implicit-vs-explicit-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implicit vs Explicit Conversion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-multiple-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Multiple Inputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-conditional-ternary-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Conditional Ternary Expression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compound-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compound Conditions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matchcase-pythons-pattern-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      match/case — Python's Pattern Matching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3189,41 +3333,334 @@
 
 
 <h1 id="more-booleans-and-conditionals">More Booleans and Conditionals<a class="headerlink" href="#more-booleans-and-conditionals" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>This chapter deepens your understanding of truth in Python: truthiness and
-falsiness (any value can be tested), short-circuit evaluation, converting
-values to bool, checking types with <code>type()</code> and <code>isinstance()</code>,
-and advanced conditional syntax including ternary expressions,
-<code>match/case</code> statements, and compound conditions with <code>and</code>/<code>or</code>.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 11 concepts from the learning graph:</p>
-<ol>
-<li>Truthiness and Falsiness</li>
-<li>Short-Circuit Evaluation</li>
-<li>Functions Returning None</li>
-<li>Checking for None with is</li>
-<li>Implicit vs Explicit Conversion</li>
-<li>Reading Multiple Inputs</li>
-<li>Strip Whitespace from Input</li>
-<li>Conditional Ternary Expression</li>
-<li>match/case Statement</li>
-<li>Truthiness in Conditions</li>
-<li>Compound Conditions</li>
-</ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li><a href="../09-decisions-if-else/">Chapter 9: Making Decisions with If/Else</a></li>
-<li><a href="../13-user-input-type-conversion/">Chapter 13: User Input and Type Conversion</a></li>
+<li>Explain <strong>truthiness</strong> and <strong>falsiness</strong> — how any Python value can act as True or False</li>
+<li>Use <strong>short-circuit evaluation</strong> to write safer, faster conditions</li>
+<li>Write compact <strong>ternary expressions</strong> and use Python's <code>match/case</code> statement</li>
+<li>Combine conditions with <code>and</code>, <code>or</code>, and <code>not</code> to build powerful boolean logic</li>
 </ul>
-<hr />
-<p>TODO: Generate Chapter Content</p>
+<p>You've used <code>if</code> statements since Chapter 9. Now it's time to understand how Python's truth system really works — and unlock some powerful shortcuts.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 19!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Did you know Python treats lots of things as True or False — not just <code>True</code> and <code>False</code>?
+Today we'll peek behind the curtain and discover some clever boolean tricks!
+Let's code it together!</p>
+</div>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<h2 id="truthiness-and-falsiness">Truthiness and Falsiness<a class="headerlink" href="#truthiness-and-falsiness" title="Permanent link">&para;</a></h2>
+<p>In Python, <strong>every value</strong> can be tested in an <code>if</code> statement, not just <code>True</code> and <code>False</code>.</p>
+<p>A value is <strong>falsy</strong> if Python treats it like <code>False</code> in a boolean context:</p>
+<table>
+<thead>
+<tr>
+<th>Falsy values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>0</code> (zero integer)</td>
+</tr>
+<tr>
+<td><code>0.0</code> (zero float)</td>
+</tr>
+<tr>
+<td><code>""</code> (empty string)</td>
+</tr>
+<tr>
+<td><code>[]</code> (empty list)</td>
+</tr>
+<tr>
+<td><code>{}</code> (empty dict)</td>
+</tr>
+<tr>
+<td><code>None</code></td>
+</tr>
+</tbody>
+</table>
+<p>Everything else is <strong>truthy</strong> — including non-zero numbers, non-empty strings, and non-empty lists.</p>
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">values = [0, 1, "", "hello", [], [0], None, False, True]
+for v in values:
+    label = "TRUTHY" if v else "FALSY"
+    print(repr(v), "->", label)
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p>Truthiness lets you write concise checks. Instead of <code>if len(name) &gt; 0:</code>, just write <code>if name:</code>.</p>
+<h2 id="short-circuit-evaluation">Short-Circuit Evaluation<a class="headerlink" href="#short-circuit-evaluation" title="Permanent link">&para;</a></h2>
+<p>When Python evaluates an <code>and</code> or <code>or</code> expression, it stops as soon as it knows the answer.
+This is called <strong>short-circuit evaluation</strong>.</p>
+<p>With <code>and</code>: if the left side is falsy, Python returns it immediately without checking the right side.
+With <code>or</code>: if the left side is truthy, Python returns it immediately.</p>
+<p>This matters because it can prevent errors — and provides a useful default-value pattern:</p>
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">name = ""
+greeting = name or "stranger"   # if name is falsy, use "stranger"
+print(f"Hello, {greeting}!")
+
+name = "Monty"
+greeting = name or "stranger"   # name is truthy, so it's used
+print(f"Hello, {greeting}!")
+
+# and short-circuits: if data is None, .upper() never runs
+data = None
+result = data and data.upper()
+print("Result:", result)   # None — no crash!
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<h2 id="functions-returning-none">Functions Returning None<a class="headerlink" href="#functions-returning-none" title="Permanent link">&para;</a></h2>
+<p>Every Python function that doesn't have a <code>return</code> statement automatically returns <code>None</code>.
+This catches many beginners off-guard:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="c1"># forgot to write: return result</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="c1"># None — oops!</span>
+</code></pre></div>
+<p>Always use <code>return</code> when you want a function to send a value back.</p>
+<h2 id="checking-for-none-with-is">Checking for <code>None</code> with <code>is</code><a class="headerlink" href="#checking-for-none-with-is" title="Permanent link">&para;</a></h2>
+<p>To check whether a value is <code>None</code>, use <code>is None</code> rather than <code>== None</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nothing came back&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Got:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<p><code>is</code> checks identity (the exact same object in memory), while <code>==</code> checks equality in value.
+For <code>None</code>, <code>True</code>, and <code>False</code>, always use <code>is</code>.</p>
+<h2 id="implicit-vs-explicit-conversion">Implicit vs Explicit Conversion<a class="headerlink" href="#implicit-vs-explicit-conversion" title="Permanent link">&para;</a></h2>
+<p>Python sometimes converts values automatically — this is <strong>implicit conversion</strong>.
+When you convert deliberately using <code>int()</code>, <code>str()</code>, etc., that's <strong>explicit conversion</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Implicit: Python automatically converts int to float in mixed math</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mf">2.5</span>   <span class="c1"># 5.5 — int 3 became float 3.0 automatically</span>
+
+<span class="c1"># Explicit: you control the conversion</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;42&quot;</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<p>Understanding the difference helps you spot where Python is "helping" you — and when that help might cause surprises.</p>
+<h2 id="reading-multiple-inputs">Reading Multiple Inputs<a class="headerlink" href="#reading-multiple-inputs" title="Permanent link">&para;</a></h2>
+<p>You can ask for several values on one line using <code>split()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter x and y: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sum: </span><span class="si">{</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>The user types something like <code>3 7</code>, <code>split()</code> returns <code>["3", "7"]</code>, and Python unpacks that into <code>x</code> and <code>y</code>.</p>
+<h2 id="the-conditional-ternary-expression">The Conditional Ternary Expression<a class="headerlink" href="#the-conditional-ternary-expression" title="Permanent link">&para;</a></h2>
+<p>A <strong>ternary expression</strong> condenses a simple if/else into one line.
+The format is: <code>value_if_true if condition else value_if_false</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Normal if/else:</span>
+<span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;pass&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;fail&quot;</span>
+
+<span class="c1"># Ternary — same result, one line:</span>
+<span class="n">grade</span> <span class="o">=</span> <span class="s2">&quot;pass&quot;</span> <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span> <span class="k">else</span> <span class="s2">&quot;fail&quot;</span>
+</code></pre></div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below uses a nested ternary expression.
+What will it print for <code>score = 85</code>? For <code>score = 55</code>?
+Make your guess — then run it!</p>
+</div>
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">for score in [95, 85, 55]:
+    label = "excellent" if score >= 90 else ("good" if score >= 70 else "needs work")
+    print(f"Score {score}: {label}")
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+<h2 id="compound-conditions">Compound Conditions<a class="headerlink" href="#compound-conditions" title="Permanent link">&para;</a></h2>
+<p>Use <code>and</code>, <code>or</code>, and <code>not</code> to combine multiple conditions:</p>
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">has_ticket</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">13</span> <span class="ow">and</span> <span class="n">has_ticket</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You may enter.&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="ow">or</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">65</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Discounted admission!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">has_ticket</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You need a ticket!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>True when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>Both must be true</td>
+<td><code>True and True</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>At least one must be true</td>
+<td><code>True or False</code></td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>Flip true/false</td>
+<td><code>not False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="matchcase-pythons-pattern-matching"><code>match/case</code> — Python's Pattern Matching<a class="headerlink" href="#matchcase-pythons-pattern-matching" title="Permanent link">&para;</a></h2>
+<p>Python 3.10 introduced <strong><code>match/case</code></strong>, which compares a value against several patterns — similar to a long chain of <code>if/elif</code> but much cleaner.</p>
+<div class="highlight"><pre><span></span><code><span class="n">command</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Command (start/stop/pause): &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="k">match</span> <span class="n">command</span><span class="p">:</span>
+    <span class="k">case</span> <span class="s2">&quot;start&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Starting!&quot;</span><span class="p">)</span>
+    <span class="k">case</span> <span class="s2">&quot;stop&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stopping!&quot;</span><span class="p">)</span>
+    <span class="k">case</span> <span class="s2">&quot;pause&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pausing!&quot;</span><span class="p">)</span>
+    <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown command.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>The <code>_</code> case is the <strong>wildcard</strong> — it matches anything not already handled.
+Use <code>|</code> inside a case to match multiple values:</p>
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">day = input("Enter a day (Mon/Tue/Wed/Thu/Fri/Sat/Sun): ").strip().title()
+
+match day:
+    case "Sat" | "Sun":
+        print(f"{day}: Weekend!")
+    case "Mon" | "Tue" | "Wed" | "Thu" | "Fri":
+        print(f"{day}: Weekday.")
+    case _:
+        print(f"I don't recognize '{day}'.")
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Fix the Default</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The program below is supposed to greet a user by name — or say "Hello, stranger!" if nothing is entered.
+But the <code>or</code> operands are reversed, so it always says "stranger".
+Swap them to fix it!</p>
+</div>
+<div id="skulpt-lab-5" class="skulpt-text-only">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">name = input("Enter your name (or press Enter to skip): ").strip()
+
+# Bug: "stranger" is truthy so it always wins!
+greeting = "stranger" or name
+
+print(f"Hello, {greeting}!")
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes. Predict what will happen first, then run it to check!</p>
+<ol>
+<li>
+<p>Print <code>bool([])</code>, <code>bool([0])</code>, <code>bool("")</code>, and <code>bool(" ")</code> (a space).
+   <strong>You'll know it worked when</strong> you see <code>False</code>, <code>True</code>, <code>False</code>, <code>True</code>.</p>
+</li>
+<li>
+<p>Write a ternary expression that returns <code>"even"</code> if a number is divisible by 2, else <code>"odd"</code>.
+   <strong>You'll know it worked when</strong> <code>7</code> gives <code>"odd"</code> and <code>8</code> gives <code>"even"</code>.</p>
+</li>
+<li>
+<p>Use <code>match/case</code> to classify a score: 90+ → "A", 80–89 → "B", 70–79 → "C", below 70 → "F".
+   <strong>You'll know it worked when</strong> entering <code>85</code> gives "B".</p>
+</li>
+<li>
+<p>Use a short-circuit <code>or</code> to assign a <code>timeout = user_value or 30</code> default.
+   <strong>You'll know it worked when</strong> an empty input gives <code>30</code> and <code>"60"</code> gives <code>"60"</code>.</p>
+</li>
+<li>
+<p>Write a compound condition that validates a username: truthy AND length &gt;= 3 AND no spaces.
+   <strong>You'll know it worked when</strong> <code>"ab"</code> fails (too short) and <code>"hello world"</code> fails (has space).</p>
+</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Boolean Master!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've unlocked truthiness, short-circuits, ternary expressions, and match/case!
+These tools let you write smarter, cleaner conditional logic in far fewer lines.
+The more you practice, the more natural they feel. Let's keep coding!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 
