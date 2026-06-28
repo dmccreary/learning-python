@@ -1,3 +1,10 @@
-site/
 .DS_Store
+.vscode/*
+site
+.cache
+secrets.py
+__pycache__
 ~$*
+.venv
+venv
+src/kits/farm-animal-tracker/DesignSparkPCB_V11_0_1.exe
