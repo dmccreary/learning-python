@@ -1,53 +1,110 @@
-# Beginning Python Resources
-This GitHub repository is for sharing teaching resources to teach Python. This includes hints on getting your Python environments setup up and extensive lesson plans for several environments.
+---
+title: "Learning Python"
+description: "An interactive intelligent textbook for learning Python using inline coding guided by a friendly mascot"
+image: img/cover.png
+---
+# Learning Python
 
+!!! mascot-welcome "Welcome from Monty!"
+    ![Monty welcoming you](./img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Hi! I'm Monty, your friendly python-snake guide. I'll be with you every step of the way
+    as you learn to write real Python — right here in your browser, no installation needed.
+    Let's go!
 
-Our mentors have used several different environments for teaching Python.  They each have pros and cons.  What our mentors like is getting new students started using a graphical programming environment such as turtle graphics libraries.  Here are some of our favorite tools:
+**Beginning Python — From Blocks to Code with Monty** is an interactive intelligent textbook
+for students ages 10–13 who are ready to move from block-based programming (like Scratch)
+into real, text-based Python. Every lesson includes live coding windows powered by
+**Skulpt** — a Python engine that runs directly in your browser so you can read, run,
+and modify code instantly on every page.
 
-- [**Trinket.io**](http://trinket.io) is an easy-to use, kid friendly web-based turtle graphics for beginners.
-- [**Jupyter Notebooks**](https://jupyter.org/) also have some support for turtle graphics.  Jupyter Notebooks can be tricky to setup for the first time, but they are the perfect on-ramp for teaching data literacy.
-- [**Raspberry Pi**](https://www.raspberrypi.org/documentation/usage/python/) - The Raspberry Pi foundation has selected Python as its primary tool for teaching programming.  If you have a Raspberry Pi there are many resources for you.  Trinket and Jupyter Notebooks will also run on many Raspberry Pi devices.
-- **Robots** Our students love robots.  Python is also the preferred language in many robotics courses.  Today we teach beginning robotics with Scratch and Arduino, but we continue to investigate systems like Raspberry Pi robots that can be programmed with Python.  Let us know if you have any low-cost kid friendly ideas.  We have tested the JetBot and other robots and we continue to look for solutions.
+## Learning Python with Skulpt
 
-Now let's briefly go into the pros and cons of these systems.
+The primary coding environment throughout this textbook is **Skulpt** — a JavaScript
+implementation of Python that runs entirely in your browser. No account, no download,
+no setup. Every chapter includes one or more inline Skulpt labs where you can:
 
-## Learning Python with Trinket
+1. **Read** a short, working Python program
+2. **Run** it instantly by clicking the Run button
+3. **Modify** it — change a number, a color, a direction — and run it again
 
-We use the [trinket.io](http://trinket.io) web site to teach our introduction to python.  Trinket has a nice turtle graphics library which is ideal for fast visual feedback.  Because it is a free and a pure web-based environment it meets the criteria for our courses.  There is no complex setup and each student can continue to do development when they are at home.  The downside of Trinket is it has limited functionality, only supports Python 2.X in the free version and you must have an internet connection to use Trinket.  If you need Python 3.X web
-version you can use the free [repl.id](https://repl.it/) web site.
+Skulpt supports **turtle graphics** out of the box, giving students immediate visual
+feedback as they draw shapes, spirals, flowers, and fractals. The drawing canvas
+appears right below the code editor, so learners see their program's output the
+moment they click Run.
+
+```python
+import turtle
+t = turtle.Turtle()
+for i in range(6):
+    t.forward(100)
+    t.right(60)
+```
+
+That six-line program draws a hexagon — and changing `6` to `5` or `100` to `150`
+takes one second and teaches more than a paragraph of explanation ever could.
 
 ## Learning Python with Jupyter Notebooks
-You can also use Jupyter Notebooks to draw turtle graphics.  The notebook will open a new window to draw your turtle graphics.  Getting Jupyter Notebooks is a bit tricky to setup on many PCs.  However, once it is setup it offers tens of thousands of sample programs to learn python coding.  Jupyter Notebooks are also the preferred tool by many data science professionals.
-An example of a Jupyter Notebook that uses turtle graphs is [here](jupyter/draw-figure.ipynb)
+
+[Jupyter Notebooks](https://jupyter.org/) are the preferred tool for data science
+professionals and a great next step after this textbook. They support turtle graphics
+(opening a separate drawing window) and give students access to tens of thousands of
+community-written example notebooks. Jupyter is ideal for students moving into data
+visualization, NumPy, and machine learning.
 
 ## Learning Python with Raspberry Pi
-If you have a Raspberry Pi there are many great ways to learn Python.  One of first things is to try out one of the Python development environments for the Raspberry Pi.
 
-## Learning Python with Robots
-Right now, we are continuing to try to find the right combination of easy-of-use and low-cost robots to teach python.  If you hear of any good tools, please let us know.
+The [Raspberry Pi Foundation](https://www.raspberrypi.org/documentation/usage/python/)
+chose Python as the primary language for physical computing on the Pi. If you have a
+Raspberry Pi, Python runs natively on it and all the standard libraries — turtle,
+matplotlib, and even Keras — work out of the box. The Pi is a great platform for
+robotics, sensors, and maker projects once students are comfortable with the core
+language taught in this textbook.
+
+## Course Structure
+
+This textbook covers **38 chapters** and approximately **450 concepts**, progressing
+from a student's very first Python line all the way through neural networks and the
+MNIST handwritten-digit dataset:
+
+| Stage | Chapters | Topics |
+|---|---|---|
+| **Beginning** | 1–18 | Turtle graphics, variables, loops, functions, strings, lists, modules |
+| **Intermediate** | 19–29 | Booleans, dictionaries, OOP, file I/O, recursion, regular expressions |
+| **Advanced** | 30–38 | Algorithms, data structures, matplotlib, NumPy, image processing, ML |
+
+## Key Concepts
+
+Here are some of the programming ideas you will learn along the way:
+
+- **Importing libraries** — telling Python which tools your program needs
+- **Turtle graphics** — drawing shapes, spirals, flowers, and fractals with visual feedback
+- **Variables** — giving names to values so programs are easier to read and change
+- **Loops** — repeating actions with `for` and `while` without copying code
+- **Conditionals** — making decisions with `if`, `elif`, and `else`
+- **Functions** — breaking programs into named, reusable chunks
+- **Parameters and return values** — making functions flexible and composable
+- **Random numbers** — adding chance and variety to drawings and games
+- **Lists and dictionaries** — storing and organizing collections of data
+- **Recursion** — functions that call themselves to build fractals and solve mazes
+- **Object-oriented programming** — modeling the world with classes and objects
+- **Data visualization** — plotting data with matplotlib
+- **Machine learning** — training a neural network to recognize handwritten digits
 
 ## Target Audience
-Learning Python is ideal for students that have good keyboarding skills.  If students have difficulty with doing functions like copy and pasting text we suggest they start with a block-programming language like Scratch.
 
-## List of Concepts
-Here are some of the concepts we will be learning in this course.  If you are already familiar with these concepts you can skip over some of the labs.
+This textbook is ideal for students with good keyboarding skills who have completed
+at least one semester of block-based programming (Scratch, Snap!, or similar).
+No prior text-based programming experience is required.
 
-- **importing libraries** We need to tell Python what functions we want to use.  We will use the import function to tell Python which functions we need to use in our programs.
-- **drawing** Turtle graphs has a set of drawing functions.  We will learn to use these to draw patterns on the screen.
-- **square walk** - teach your turtle to walk in a square and draw figures.
-- **variables** Variables make our programs easier to read and easier to understand.
-- **loops** Loops help use when we have many tasks that we repeat over and over.
-- **conditionals** Conditionals allow us to change our behavior based on rules we create.
-- **functions**  Functions allow us to break large programs into chunks that we can give names and can call over and over.
-- **function parameters**  Functions can also take parameters to change the behavior of a function.
-- **random numbers**  Random number functions allow our programs to have the computer select new random number between a range of numbers.
-- **lists** Lists allow us to create collections of names.
-- **inputs**  Inputs allow us to prompt the user for values.
-- **recursion**  Recursion allows us to have programs call themselves to create repeating patterns.
-- **modules**  Once you have a group of related functions you can put them all together into a module.  This makes it easier for others to reuse your programs.
+If a student is not yet comfortable with a keyboard, we recommend starting with
+[Scratch](https://scratch.mit.edu/) first and returning here when they are ready.
 
+## Contributing
 
-## Contributing to Our Library
-- Do you have a specific example you would like to share with other students and teachers?  Please see the Contributing menu for details on how to share your code.
+Have an example you'd like to share with other students and teachers?
+See the [Contributing](contribute.md) page for details on how to submit code.
 
-
+!!! mascot-celebration "You're in the right place!"
+    ![Monty celebrating](./img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Hundreds of students have used this textbook to write their first Python program.
+    Pick a chapter from the sidebar and start coding — I'll be right there with you!

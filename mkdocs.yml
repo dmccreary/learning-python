@@ -4,6 +4,7 @@ site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 repo_url: 'https://github.com/dmccreary/learning-python'
 site_url: 'https://dmccreary.github.io/learning-python/'
+edit_uri: 'blob/master/docs'
 
 nav:
   - Course Description: course-description.md
@@ -142,10 +143,11 @@ nav:
 
 
 # Site configuration
-edit_uri: 'blob/master/docs'
+
 theme:
   name: material
-  logo: img/python-logo.jpeg
+  logo: img/mascot/welcome.png
+  favicon: img/favicon.ico
   palette:
     primary: '#642580'
     accent: '#41BAC1'
@@ -166,9 +168,11 @@ markdown_extensions:
 plugins:
     - search
 extra_css:
+  - css/extra.css
   - css/skulpt.css
   - css/mascot.css
 extra_javascript:
+  - js/extra.js
   - js/skulpt.js
 # Google Analytics Site ID: G-EP38Z3PVD5
 extra:
