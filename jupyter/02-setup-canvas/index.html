@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://dmccreary.github.io/learning-python/jupyter/02-setup-canvas/">
       
       
+        <link rel="prev" href="../02-draw-figure/">
+      
+      
+        <link rel="next" href="../20-canvas-color-bars/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>02 setup canvas - Learning Python</title>
+        <title>Setup Canvas on Jupyter Lab - Learning Python</title>
       
     
     
@@ -121,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              02 setup canvas
+              Setup Canvas on Jupyter Lab
             
           </span>
         </div>
@@ -1782,27 +1786,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/05-json.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    JSON
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../intermediate/06-object-classes/" class="md-nav__link">
         
   
@@ -1996,17 +1979,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -2020,7 +2005,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Jupyter Notebooks
@@ -2055,27 +2040,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-draw-box.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Drawing Box Labs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../02-draw-figure/" class="md-nav__link">
         
   
@@ -2094,10 +2058,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../02-canvas-setup.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Setup Canvas on Jupyter Lab
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2106,6 +2088,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter Lab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-with-conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup With Conda
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2790,7 +2826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../trinket/examples.m" class="md-nav__link">
+      <a href="../../trinket/examples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2874,7 +2910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../order-of-cocepts.,d" class="md-nav__link">
+      <a href="../../strategy/order-of-concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3162,7 +3198,7 @@
   
 
 
-  <h1>02 setup canvas</h1>
+  <h1>Setup Canvas on Jupyter Lab</h1>
 
 <p>We will be using python canvas drawing library.  Unlike turtle graphics the canvas library has many powerful drawing tools.</p>
 <p><a href="https://ipycanvas.readthedocs.io/en/latest/index.html">Python IPYCanvas Library</a></p>
@@ -3209,6 +3245,41 @@ After you run the last command it will open a web browser.</p>
       
         
   <footer class="md-footer">
+    
+      <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="../02-draw-figure/" title="Drawing Figure" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Drawing Figure
+                </span>
+              </div>
+            </a>
+          
+          
+            <a href="../20-canvas-color-bars/" title="Canvas Color Bars" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Canvas Color Bars
+                </span>
+              </div>
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+              </div>
+            </a>
+          
+        </nav>
+      </div>
     
     <div class="md-footer-meta md-typeset">
       <div class="md-footer-meta__inner md-grid">
