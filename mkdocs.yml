@@ -1,12 +1,13 @@
-site_name: 'Beginning Python'
-site_description: 'Resources for teaching Python to beginning programmers.'
+site_name: 'Learning Python'
+site_description: 'Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.'
 site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
-repo_url: 'https://github.com/dmccreary/python'
-site_url: 'https://dmccreary.github.io/python/'
+repo_url: 'https://github.com/dmccreary/learning-python'
+site_url: 'https://dmccreary.github.io/learning-python/'
 
 nav:
   - Course Description: course-description.md
+  - About Learning Python: about.md
   - Chapters:
     - List of Chapters: chapters/index.md
     - 1. Welcome to Python and Skulpt: chapters/01-welcome-to-python/index.md
@@ -47,7 +48,61 @@ nav:
     - 36. Computational Thinking and Best Practices: chapters/36-computational-thinking-best-practices/index.md
     - 37. Machine Learning Foundations: chapters/37-machine-learning-foundations/index.md
     - 38. Neural Networks and MNIST: chapters/38-neural-networks-and-mnist/index.md
-  - Beginning Python - Trinket:
+ 
+  - Skulpt Labs:
+    - Draw a Square: skulpt/02-simple-square.md
+    - Draw a Stop Sign: skulpt/04a-stop-sign.md
+    - Reading Errors: skulpt/10-debugging.md
+    - Text-Only Example: skulpt/text-only-example.md
+  
+
+  - Learning Graph:
+    - Introduction: learning-graph/index.md
+    - Course Description Assessment: learning-graph/course-description-assessment.md
+    - Concept List v1: learning-graph/concept-list-v1.md
+    - Concept List: learning-graph/concept-list.md
+    - Graph Quality Analysis: learning-graph/quality-metrics.md
+    - Concept Taxonomy: learning-graph/concept-taxonomy.md
+    - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
+    - Mascot Style Guide: learning-graph/mascot-test.md
+
+  - Repl.it Examples:
+    - Square: repl/02-square.md
+    - Flower: repl/07-flower.md
+    - Shape Function: repl/08-shape-function.md
+    - Recursion: repl/12-recursion.md
+  
+  - Intermediate Python:
+    - Introduction: intermediate/01-intro.md
+    - Variables and Scope: intermediate/01-variables-scope.md
+    - Data Types: intermediate/02-data-types.md
+    - Data Types & Function Parameters: intermediate/03-data-type-validation.md
+    - Maps: intermediate/04-maps.md
+    - Files (local file system): intermediate/05-files.md
+    - Images (local file system): intermediate/06-images.md
+    - Object Classes: intermediate/06-object-classes.md
+    - Modules: intermediate/07-modules.md
+    - Dir: intermediate/08-dir.md
+    - Regular Expressions: intermediate/09-regex.md
+    - Debugging: intermediate/10-debugging.md
+    - Plotting sine: intermediate/12-plot-sin.md
+    - Maze Solving with BFS: intermediate/bfsMaze.md
+    - Maze Solving with DFS: intermediate/dfsMaze.md
+    - Installing Python: intermediate/20-installing-local-python.md
+  
+  - Jupyter Notebooks:
+    - Setup Turtle on Jupyter: jupyter/01-setup.md
+    - Drawing Figure: jupyter/02-draw-figure.md
+    - Setup Canvas on Jupyter Lab: jupyter/02-setup-canvas.md
+    - Canvas Color Bars: jupyter/20-canvas-color-bars.md
+  
+  - Pi:
+    - Python on Raspberry Pi: pi/01-intro.md
+  - Advanced Python:
+    - Stock Ticker Analysis: advanced/stocks.md
+    - MNIST Digit Prediction: advanced/mnist.md
+  
+  - Trinket (deprecated):
     - Introduction: trinket/00-introduction.md
     - Setting Up Trinket: trinket/01a-trinket-account.md
     - Turtle Graphics: trinket/01b-turtle-graphics.md
@@ -70,64 +125,17 @@ nav:
     - Sine Wave: trinket/15-sine-wave.md
     - Changing background: trinket/16-changing-background.md
     - Controlling mouseclicks: trinket/17-controlling-mouseclicks.md
-    - Other examples: trinket/examples.m 
-  - Beginning Python - Skulpt (self-hosted):
-    - Draw a Square: skulpt/02-simple-square.md
-    - Stop Sign: skulpt/04a-stop-sign.md
-    - Reading Errors: skulpt/10-debugging.md
-    - Text-Only Example: skulpt/text-only-example.md
-  - Reference:
-    - Mascot Style Guide: learning-graph/mascot-test.md
-  - Learning Graph:
-    - Introduction: learning-graph/index.md
-    - Course Description Assessment: learning-graph/course-description-assessment.md
-    - Concept List v1: learning-graph/concept-list-v1.md
-    - Concept List: learning-graph/concept-list.md
-    - Graph Quality Analysis: learning-graph/quality-metrics.md
-    - Concept Taxonomy: learning-graph/concept-taxonomy.md
-    - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
-  - Beginning Python - Repl.it:
-    - Square: repl/02-square.md
-    - Flower: repl/07-flower.md
-    - Shape Function: repl/08-shape-function.md
-    - Recursion: repl/12-recursion.md
-  - Intermediate Python:
-    - Introduction: intermediate/01-intro.md
-    - Variables and Scope: intermediate/01-variables-scope.md
-    - Data Types: intermediate/02-data-types.md
-    - Data Types & Function Parameters: intermediate/03-data-type-validation.md
-    - Maps: intermediate/04-maps.md
-    - Files (local file system): intermediate/05-files.md
-    - Images (local file system): intermediate/06-images.md    
-    - JSON: intermediate/05-json.md
-    - Object Classes: intermediate/06-object-classes.md
-    - Modules: intermediate/07-modules.md
-    - Dir: intermediate/08-dir.md
-    - Regular Expressions: intermediate/09-regex.md
-    - Debugging: intermediate/10-debugging.md
-    - Plotting sine: intermediate/12-plot-sin.md
-    - Maze Solving with BFS: intermediate/bfsMaze.md
-    - Maze Solving with DFS: intermediate/dfsMaze.md
-    - Installing Python: intermediate/20-installing-local-python.md
-  - Jupyter:
-    - Setup Turtle on Jupyter: jupyter/01-setup.md
-    - Drawing Box Labs: jupyter/02-draw-box.md
-    - Drawing Figure: jupyter/02-draw-figure.md
-    - Setup Canvas on Jupyter Lab: jupyter/02-canvas-setup.md
-    - Canvas Color Bars: jupyter/20-canvas-color-bars.md
-  - Pi:
-    - Python on Raspberry Pi: pi/01-intro.md
-  - Advanced Python:
-    - Stock Ticker Analysis: advanced/stocks.md
-    - MNIST Digit Prediction: advanced/mnist.md
+    - Other examples: trinket/examples.md
+ 
+  
   - Strategy:
     - Introduction: strategy/index.md
-    - Order of Concepts: order-of-cocepts.,d
+    - Order of Concepts: strategy/order-of-concepts.md
   - MicroSims:
     - Learning Graph Viewer: sims/graph-viewer/index.md
   - Contributing:
     - How to Contribute Examples: contribute.md
-  - About: about.md
+
   - Contact:
     - Contact: contact.md
 

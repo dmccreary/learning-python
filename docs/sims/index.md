@@ -10,8 +10,3 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
 
 <div class="grid cards" markdown>
 
--   **[Additive vs. Subtractive Color Mixing](./additive-subtractive-mixing/index.md)**
-
-    ![Additive vs. Subtractive Color Mixing](./additive-subtractive-mixing/additive-subtractive-mixing.png)
-
-    Explore why mixing light (RGB) and mixing paint produce different results, comparing additive and subtractive color models side by side.

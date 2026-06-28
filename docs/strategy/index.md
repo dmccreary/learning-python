@@ -2,4 +2,4 @@
 
 ## Order of Concepts
 
-[Order of Concepts](oder-of-concepts.md)
+[Order of Concepts](order-of-concepts.md)
