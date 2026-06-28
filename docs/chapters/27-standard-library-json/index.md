@@ -202,10 +202,12 @@ print(new_json)
 `json.load(file)` reads JSON directly from an open file.
 `json.dump(data, file)` writes JSON directly to an open file.
 
+These require a real Python environment (Thonny, VS Code) because they need actual disk access.
+
 ```python
 import json
 
-# Write JSON to a file:
+# Write JSON to a file (run in Thonny or VS Code):
 data = {"players": ["Alice", "Bob"], "high_score": 1500}
 with open("game.json", "w") as f:
     json.dump(data, f, indent=2)
@@ -217,22 +219,25 @@ with open("game.json") as f:
 print(loaded["high_score"])   # 1500
 ```
 
+In the Skulpt lab below we use `json.dumps()` → `json.loads()` to demonstrate the same round-trip without needing a file on disk.
+
 <div id="skulpt-lab-3" class="skulpt-text-only">
   <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import json, io
+    <textarea id="code-3" spellcheck="false">import json
 
-# Simulate writing to a file:
 data = {
     "game": "Python Quest",
     "players": ["Alice", "Bob", "Carol"],
     "high_score": 2400
 }
-f = io.StringIO()
-json.dump(data, f, indent=2)
 
-# Read back:
-f.seek(0)
-loaded = json.load(f)
+# Convert to a JSON string (like writing to a file):
+json_string = json.dumps(data, indent=2)
+print("JSON string:")
+print(json_string)
+
+# Parse back (like reading from a file):
+loaded = json.loads(json_string)
 print("Game:", loaded["game"])
 print("Players:", loaded["players"])
 print("High score:", loaded["high_score"])

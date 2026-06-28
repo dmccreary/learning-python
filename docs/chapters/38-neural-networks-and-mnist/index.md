@@ -26,7 +26,7 @@ Convolutional networks keep the 2-D structure of images and look for **local pat
     Let's finish strong! Let's code it together!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
-<script src="https://skulpt.org/js/skulkt-stdlib.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
 
 ## Why Convolutions?
 
