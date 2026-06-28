@@ -3588,9 +3588,10 @@ print(new_json)
 <h2 id="reading-and-writing-json-from-files">Reading and Writing JSON from Files<a class="headerlink" href="#reading-and-writing-json-from-files" title="Permanent link">&para;</a></h2>
 <p><code>json.load(file)</code> reads JSON directly from an open file.
 <code>json.dump(data, file)</code> writes JSON directly to an open file.</p>
+<p>These require a real Python environment (Thonny, VS Code) because they need actual disk access.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
 
-<span class="c1"># Write JSON to a file:</span>
+<span class="c1"># Write JSON to a file (run in Thonny or VS Code):</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;players&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">],</span> <span class="s2">&quot;high_score&quot;</span><span class="p">:</span> <span class="mi">1500</span><span class="p">}</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;game.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -3601,22 +3602,24 @@ print(new_json)
 
 <span class="nb">print</span><span class="p">(</span><span class="n">loaded</span><span class="p">[</span><span class="s2">&quot;high_score&quot;</span><span class="p">])</span>   <span class="c1"># 1500</span>
 </code></pre></div>
+<p>In the Skulpt lab below we use <code>json.dumps()</code> → <code>json.loads()</code> to demonstrate the same round-trip without needing a file on disk.</p>
 <div id="skulpt-lab-3" class="skulpt-text-only">
   <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import json, io
+    <textarea id="code-3" spellcheck="false">import json
 
-# Simulate writing to a file:
 data = {
     "game": "Python Quest",
     "players": ["Alice", "Bob", "Carol"],
     "high_score": 2400
 }
-f = io.StringIO()
-json.dump(data, f, indent=2)
 
-# Read back:
-f.seek(0)
-loaded = json.load(f)
+# Convert to a JSON string (like writing to a file):
+json_string = json.dumps(data, indent=2)
+print("JSON string:")
+print(json_string)
+
+# Parse back (like reading from a file):
+loaded = json.loads(json_string)
 print("Game:", loaded["game"])
 print("Players:", loaded["players"])
 print("High score:", loaded["high_score"])

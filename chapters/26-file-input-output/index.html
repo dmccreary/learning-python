@@ -3352,17 +3352,21 @@ Let's code it together!</p>
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
 
+<div class="admonition mascot-warning">
+<p class="admonition-title">File I/O Needs a Real Python Environment</p>
+<p><img alt="Monty with a warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+Actual file operations — <code>open()</code>, <code>write()</code>, <code>read()</code> — access your computer's disk.
+The Skulpt browser environment cannot do this, so the interactive labs below <strong>simulate</strong> file behavior using Python strings and lists.
+To run the real <code>open()</code>/<code>with</code> code shown in the code blocks, use <strong>Thonny</strong>, <strong>VS Code</strong>, or any local Python installation.</p>
+</div>
 <h2 id="the-command-line-and-file-system-navigation">The Command Line and File System Navigation<a class="headerlink" href="#the-command-line-and-file-system-navigation" title="Permanent link">&para;</a></h2>
 <p>Files live in a <strong>file system</strong> organized as folders inside folders.
-When you run a Python script from the <strong>command line</strong> (the terminal), Python looks for files relative to the <strong>current working directory</strong> — the folder you're running the script from.</p>
-<p>You can navigate in the terminal using:</p>
+When you run a Python script from the terminal, Python looks for files relative to the <strong>current working directory</strong> — the folder the script lives in.</p>
 <div class="highlight"><pre><span></span><code>cd foldername    # move into a folder
 cd ..            # move up one level
 ls               # list files (Mac/Linux)
 dir              # list files (Windows)
-pwd              # print current folder (Mac/Linux)
 </code></pre></div>
-<p>For Skulpt labs in this chapter, file content is simulated in memory. In your own Python environment, these same commands work with real files on disk.</p>
 <h2 id="open-and-file-modes"><code>open()</code> and File Modes<a class="headerlink" href="#open-and-file-modes" title="Permanent link">&para;</a></h2>
 <p><code>open(filename, mode)</code> opens a file and returns a <strong>file object</strong>.</p>
 <p>The mode tells Python what you want to do with the file:</p>
@@ -3392,30 +3396,48 @@ pwd              # print current folder (Mac/Linux)
 </tr>
 </tbody>
 </table>
-<p>Always close the file when you're done: <code>file.close()</code>.
-But the better way is to use a <code>with</code> statement (explained below).</p>
 <h2 id="the-with-statement-safe-file-handling">The <code>with</code> Statement — Safe File Handling<a class="headerlink" href="#the-with-statement-safe-file-handling" title="Permanent link">&para;</a></h2>
-<p>The <strong><code>with</code> statement</strong> (also called a <strong>context manager</strong>) opens a file, runs the indented block, then automatically closes the file when the block ends — even if an error occurs.</p>
+<p>The <strong><code>with</code> statement</strong> opens a file, runs the indented block, then automatically closes the file — even if an error occurs.</p>
 <div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;greeting.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello from Python!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="c1"># file is automatically closed here</span>
 </code></pre></div>
-<p>Always use <code>with open(...)</code> instead of bare <code>open()</code>. It prevents the most common file bug: forgetting to close the file.</p>
+<p>Always use <code>with open(...)</code>. It prevents the most common file bug: forgetting to close the file.</p>
 <h2 id="writing-to-a-file">Writing to a File<a class="headerlink" href="#writing-to-a-file" title="Permanent link">&para;</a></h2>
-<p><code>file.write(text)</code> writes text to the file. It does <strong>not</strong> add a newline automatically — add <code>"\n"</code> yourself:</p>
+<p><code>file.write(text)</code> writes text to the file. It does <strong>not</strong> add a newline automatically — you must add <code>"\n"</code> yourself.</p>
+<p><strong>Real Python (Thonny / VS Code):</strong>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;notes.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Line 1: Hello, Python!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Line 2: I am writing to a file.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Line 3: This is fun!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Skulpt simulation</strong> — using a list as a virtual "file":</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The code below uses a list to simulate writing to a file and then reading it back.
+In what order will the lines appear when we read them?
+Make your guess — then run it!</p>
+</div>
 <div id="skulpt-lab" class="skulpt-text-only">
   <div id="editor-container">
-    <textarea id="code" spellcheck="false">import io
+    <textarea id="code" spellcheck="false"># Virtual file — a list that stores "written" lines
+virtual_file = []
 
-# Simulate writing to a file:
-buffer = io.StringIO()
-buffer.write("Line 1: Hello, Python!\n")
-buffer.write("Line 2: I am writing to a file.\n")
-buffer.write("Line 3: This is fun!\n")
+def write_line(text):
+    virtual_file.append(text)
 
-# Read back what we wrote:
-buffer.seek(0)
-print(buffer.read())
+# "Write" three lines:
+write_line("Line 1: Hello, Python!")
+write_line("Line 2: I am writing to a file.")
+write_line("Line 3: This is fun!")
+
+# "Read" back what we wrote:
+print("File contents:")
+for line in virtual_file:
+    print(line)
+
+print(f"\nTotal lines: {len(virtual_file)}")
 </textarea>
     <div id="button-row">
       <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
@@ -3428,11 +3450,6 @@ print(buffer.read())
   </div>
 </div>
 
-<p>In a real Python environment, this writes to a file on disk:</p>
-<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;notes.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Line 1: Hello, Python!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Line 2: I am writing to a file.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
 <h2 id="reading-from-a-file">Reading from a File<a class="headerlink" href="#reading-from-a-file" title="Permanent link">&para;</a></h2>
 <p>Three methods read file content:</p>
 <ul>
@@ -3440,15 +3457,21 @@ print(buffer.read())
 <li><code>f.readlines()</code> — reads all lines into a list (each line includes <code>\n</code>)</li>
 <li><code>f.readline()</code> — reads one line at a time</li>
 </ul>
+<p><strong>Real Python:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;notes.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Skulpt simulation</strong> — splitting a multi-line string:</p>
 <div id="skulpt-lab-2" class="skulpt-text-only">
   <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import io
+    <textarea id="code-2" spellcheck="false"># Simulate a text file as a multi-line string:
+file_content = "apple\nbanana\nmango\nkiwi"
 
-content = "apple\nbanana\nmango\nkiwi\n"
-f = io.StringIO(content)
-
-lines = f.readlines()
+# Simulate readlines() using split("\n"):
+lines = file_content.split("\n")
 print("Number of lines:", len(lines))
+print()
 for i, line in enumerate(lines, 1):
     print(f"  Line {i}: {line.strip()}")
 </textarea>
@@ -3463,7 +3486,7 @@ for i, line in enumerate(lines, 1):
   </div>
 </div>
 
-<p>Note the <code>.strip()</code> call — it removes the <code>\n</code> from the end of each line.</p>
+<p>Note the <code>.strip()</code> call — it removes whitespace and <code>\n</code> from the ends of lines.</p>
 <h2 id="iterating-over-file-lines">Iterating over File Lines<a class="headerlink" href="#iterating-over-file-lines" title="Permanent link">&para;</a></h2>
 <p>The cleanest way to process a file line by line is a simple <code>for</code> loop:</p>
 <div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -3475,26 +3498,24 @@ for i, line in enumerate(lines, 1):
 <h2 id="text-processing-with-strip-and-lower">Text Processing with <code>strip()</code> and <code>lower()</code><a class="headerlink" href="#text-processing-with-strip-and-lower" title="Permanent link">&para;</a></h2>
 <p>When processing file content, always clean the text first:</p>
 <ul>
-<li><code>.strip()</code> — removes leading and trailing whitespace (spaces, tabs, newlines)</li>
+<li><code>.strip()</code> — removes leading and trailing whitespace</li>
 <li><code>.lower()</code> — converts to lowercase for case-insensitive comparisons</li>
 <li><code>.split()</code> — splits a line into words</li>
 </ul>
 <div id="skulpt-lab-3" class="skulpt-text-only">
   <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import io
-
-# Simulate a file with a word list:
+    <textarea id="code-3" spellcheck="false"># Simulate a messy word list file:
 words_text = "  Apple  \nbanana\n  MANGO\nkiwi  \n"
-f = io.StringIO(words_text)
 
 clean_words = []
-for line in f:
+for line in words_text.split("\n"):
     word = line.strip().lower()
-    if word:
+    if word:                        # skip empty lines
         clean_words.append(word)
 
 print("Cleaned words:", clean_words)
-print("Sorted:", sorted(clean_words))
+print("Sorted:       ", sorted(clean_words))
+print("Longest word: ", max(clean_words, key=len))
 </textarea>
     <div id="button-row-3">
       <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
@@ -3521,26 +3542,20 @@ Alice,14,95
 Bob,13,87
 Carol,15,91
 </code></pre></div>
-<p>Python's <code>csv</code> module reads and writes CSV files cleanly:</p>
-<div class="admonition mascot-thinking">
-<p class="admonition-title">What Do You Think Will Happen?</p>
-<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
-The code below reads a CSV string and prints each row as a dictionary.
-How do you think Python knows which column is "name" vs "score"?
-Make your guess — then run it!</p>
-</div>
+<p>Python's <code>csv</code> module reads and writes CSV files cleanly.
+<code>csv.DictReader</code> takes any iterable of strings — so we can pass <code>csv_text.splitlines()</code> directly, no file object needed.</p>
+<p><code>splitlines()</code> splits a multi-line string into a list of lines — exactly what <code>csv.DictReader</code> needs.</p>
 <div id="skulpt-lab-4" class="skulpt-text-only">
   <div id="editor-container-4">
     <textarea id="code-4" spellcheck="false">import csv
-import io
 
 csv_text = """name,age,score
 Alice,14,95
 Bob,13,87
-Carol,15,91
-"""
+Carol,15,91"""
 
-reader = csv.DictReader(io.StringIO(csv_text))
+# splitlines() works in Skulpt — no io module needed
+reader = csv.DictReader(csv_text.splitlines())
 for row in reader:
     print(f"{row['name']}: age {row['age']}, score {row['score']}")
 </textarea>
@@ -3555,7 +3570,7 @@ for row in reader:
   </div>
 </div>
 
-<p><code>csv.DictReader</code> uses the first row (the header) as column names and gives you each row as a dictionary. </p>
+<p><code>csv.DictReader</code> uses the first row (the header) as column names and gives you each row as a dictionary.</p>
 <h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
 <div class="admonition mascot-thinking">
 <p class="admonition-title">Your Turn — Process the CSV</p>
@@ -3566,10 +3581,10 @@ You'll need to convert the score strings to integers first!</p>
 </div>
 <div id="skulpt-lab-5" class="skulpt-text-only">
   <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">import csv, io
+    <textarea id="code-5" spellcheck="false">import csv
 
-csv_text = "name,score\nAlice,95\nBob,87\nCarol,91\nDave,73\n"
-reader = csv.DictReader(io.StringIO(csv_text))
+csv_text = "name,score\nAlice,95\nBob,87\nCarol,91\nDave,73"
+reader = csv.DictReader(csv_text.splitlines())
 
 total = 0
 count = 0
@@ -3596,24 +3611,24 @@ for row in reader:
 <p>Try these changes. Predict what will happen first, then run it to check!</p>
 <ol>
 <li>
-<p>Change the CSV to add a fourth column <code>"grade"</code> with values A/B/C. Print only rows where grade == "A".
+<p>Change the CSV to add a fourth column <code>"grade"</code> with values A/B/C. Print only rows where grade == <code>"A"</code>.
    <strong>You'll know it worked when</strong> only Alice's row appears.</p>
 </li>
 <li>
-<p>Use <code>io.StringIO</code> to simulate writing a to-do list, then read it back line by line.
-   <strong>You'll know it worked when</strong> each to-do item prints on its own line.</p>
+<p>Use <code>virtual_file</code> (a list) to simulate a to-do list: "write" three tasks, then print each one numbered 1, 2, 3.
+   <strong>You'll know it worked when</strong> each task prints on its own numbered line.</p>
 </li>
 <li>
-<p>Count how many words appear in a text string using <code>split()</code> and print the total word count.
+<p>Count how many words appear in a multi-line text string using <code>split()</code> and print the total.
    <strong>You'll know it worked when</strong> you see the correct number of words.</p>
 </li>
 <li>
 <p>Read lines from a string and filter out any line that contains the word <code>"skip"</code>.
-   <strong>You'll know it worked when</strong> lines with "skip" don't appear in the output.</p>
+   <strong>You'll know it worked when</strong> lines containing "skip" don't appear in the output.</p>
 </li>
 <li>
-<p>Write a CSV string with three columns. Use <code>csv.reader</code> (instead of <code>DictReader</code>) to read rows as plain lists.
-   <strong>You'll know it worked when</strong> each row prints as a Python list like <code>['Alice', '14', '95']</code>.</p>
+<p>In Thonny or VS Code, create a file called <code>fruits.txt</code>, write five fruit names (one per line), then open it again and print each line with its line number.
+   <strong>You'll know it worked when</strong> all five fruits print in a real Python terminal with their numbers.</p>
 </li>
 </ol>
 <div class="admonition mascot-celebration">
@@ -3621,7 +3636,7 @@ for row in reader:
 <p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
 Your programs can now save and load data from files — including CSV spreadsheets!
 This opens the door to real data processing, log files, configuration storage, and so much more.
-You're doing advanced Python work now. Let's keep coding!</p>
+For the real thing, open Thonny and practice <code>open()</code> on your own computer. Let's keep coding!</p>
 </div>
 
 

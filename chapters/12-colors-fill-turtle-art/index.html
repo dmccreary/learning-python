@@ -3488,11 +3488,15 @@ It's the same model your screen uses — every pixel on your monitor has a tiny 
 </tr>
 </tbody>
 </table>
-<p>You can use RGB values directly in turtle with <code>t.pencolor(r, g, b)</code>, but you need to switch turtle to RGB mode first with <code>turtle.colormode(255)</code>.</p>
+<p>You can use RGB values directly in turtle by converting them to a hex color string first. The helper function below does that math so you can keep thinking in 0–255 values.</p>
 <div id="skulpt-lab-2">
   <div id="editor-container-2">
     <textarea id="code-2" spellcheck="false">import turtle
-turtle.colormode(255)   # allow 0-255 RGB values
+
+def to_hex(r, g, b):
+    # Convert 0-255 RGB values to a hex color string like "#ff0000"
+    return "#%02x%02x%02x" % (r, g, b)
+
 t = turtle.Turtle()
 t.speed(6)
 t.pensize(4)
@@ -3505,7 +3509,7 @@ for rgb, pos in zip(rgb_colors, positions):
     t.penup()
     t.goto(pos)
     t.pendown()
-    t.pencolor(rgb)
+    t.pencolor(to_hex(*rgb))
     t.circle(40)
 </textarea>
     <div id="button-row-2">
@@ -3671,7 +3675,7 @@ for i in range(4):
    <strong>You'll know it worked when</strong> the first square turns orange.</p>
 </li>
 <li>
-<p>In the <code>turtle.colormode(255)</code> demo, change the first RGB tuple to <code>(255, 165, 0)</code>.
+<p>In the RGB circles demo, change the first tuple to <code>(255, 165, 0)</code>.
    <strong>You'll know it worked when</strong> the first circle turns orange.</p>
 </li>
 <li>
