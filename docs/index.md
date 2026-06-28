@@ -4,6 +4,7 @@ description: "An interactive intelligent textbook for learning Python using inli
 image: img/cover.png
 ---
 # Learning Python
+![](./img/cover.png)
 
 !!! mascot-welcome "Welcome from Monty!"
     ![Monty welcoming you](./img/mascot/welcome.png){ class="mascot-admonition-img" }
@@ -32,15 +33,34 @@ feedback as they draw shapes, spirals, flowers, and fractals. The drawing canvas
 appears right below the code editor, so learners see their program's output the
 moment they click Run.
 
-```python
-import turtle
+Try it yourself right now — click **Run** to see the turtle draw a colorful hexagon,
+then change the colors, the number of sides, or the distance and run it again:
+
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<div id="skulpt-lab">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">import turtle
 t = turtle.Turtle()
+colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 for i in range(6):
+    t.pencolor(colors[i])
     t.forward(100)
     t.right(60)
-```
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
 
-That six-line program draws a hexagon — and changing `6` to `5` or `100` to `150`
+That seven-line program draws a colorful hexagon — and changing `6` to `5` or `100` to `150`
 takes one second and teaches more than a paragraph of explanation ever could.
 
 ## Learning Python with Jupyter Notebooks
