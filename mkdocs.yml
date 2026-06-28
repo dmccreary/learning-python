@@ -6,6 +6,13 @@ repo_url: 'https://github.com/dmccreary/learning-python'
 site_url: 'https://dmccreary.github.io/learning-python/'
 edit_uri: 'blob/master/docs'
 
+# Hooks — runs local Python before/after page processing.
+# `plugins/social_override.py` injects og:image and twitter:image on pages
+# that declare `image:` in their frontmatter (e.g. docs/index.md).
+# This is the Cairo-free path to social-media previews.
+hooks:
+  - plugins/social_override.py
+
 nav:
   - Course Description: course-description.md
   - About Learning Python: about.md
@@ -57,6 +64,8 @@ nav:
     - Text-Only Example: skulpt/text-only-example.md
   
 
+  - FAQ: faq.md
+
   - Learning Graph:
     - Introduction: learning-graph/index.md
     - Course Description Assessment: learning-graph/course-description-assessment.md
@@ -66,6 +75,7 @@ nav:
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
     - Mascot Style Guide: learning-graph/mascot-test.md
+    - FAQ Quality Report: learning-graph/faq-quality-report.md
 
   - Repl.it Examples:
     - Square: repl/02-square.md
@@ -137,6 +147,8 @@ nav:
   - Contributing:
     - How to Contribute Examples: contribute.md
 
+  - Glossary: glossary.md
+
   - Contact:
     - Contact: contact.md
 
@@ -167,6 +179,7 @@ markdown_extensions:
       permalink: true
 plugins:
     - search
+    - social
 extra_css:
   - css/extra.css
   - css/skulpt.css

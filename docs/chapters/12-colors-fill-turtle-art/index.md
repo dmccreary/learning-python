@@ -127,12 +127,16 @@ It's the same model your screen uses — every pixel on your monitor has a tiny 
 | White | 255 | 255 | 255 |
 | Black | 0 | 0 | 0 |
 
-You can use RGB values directly in turtle with `t.pencolor(r, g, b)`, but you need to switch turtle to RGB mode first with `turtle.colormode(255)`.
+You can use RGB values directly in turtle by converting them to a hex color string first. The helper function below does that math so you can keep thinking in 0–255 values.
 
 <div id="skulpt-lab-2">
   <div id="editor-container-2">
     <textarea id="code-2" spellcheck="false">import turtle
-turtle.colormode(255)   # allow 0-255 RGB values
+
+def to_hex(r, g, b):
+    # Convert 0-255 RGB values to a hex color string like "#ff0000"
+    return "#%02x%02x%02x" % (r, g, b)
+
 t = turtle.Turtle()
 t.speed(6)
 t.pensize(4)
@@ -145,7 +149,7 @@ for rgb, pos in zip(rgb_colors, positions):
     t.penup()
     t.goto(pos)
     t.pendown()
-    t.pencolor(rgb)
+    t.pencolor(to_hex(*rgb))
     t.circle(40)
 </textarea>
     <div id="button-row-2">
@@ -330,7 +334,7 @@ Try these changes. Predict what will happen first, then run it to check!
 1. In the hex color demo, change `#FF0000` to `#FF8800`.
    **You'll know it worked when** the first square turns orange.
 
-2. In the `turtle.colormode(255)` demo, change the first RGB tuple to `(255, 165, 0)`.
+2. In the RGB circles demo, change the first tuple to `(255, 165, 0)`.
    **You'll know it worked when** the first circle turns orange.
 
 3. In the filled hexagon demo, add `turtle.bgcolor("navy")` before the loop.
