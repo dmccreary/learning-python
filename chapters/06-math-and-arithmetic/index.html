@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to beginning programmers.">
+        <meta name="description" content="Master Python's arithmetic operators, operator precedence, integer division, modulo, and exponentiation — then connect math to turtle graphics.">
       
       
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/python/chapters/06-math-and-arithmetic/">
+        <link rel="canonical" href="https://dmccreary.github.io/learning-python/chapters/06-math-and-arithmetic/">
       
       
         <link rel="prev" href="../05-drawing-with-turtle/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>6. Math and Arithmetic - Beginning Python</title>
+        <title>Math and Arithmetic - Beginning Python</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6. Math and Arithmetic
+              Math and Arithmetic
             
           </span>
         </div>
@@ -176,7 +176,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/python" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -221,7 +221,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/python" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -491,6 +491,96 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arithmetic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arithmetic Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-of-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order of Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#negative-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Negative Numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scientific-notation-floats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scientific Notation Floats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Assignment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#augmented-assignment-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Augmented Assignment Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math-and-turtle-drawing-any-regular-polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Math and Turtle: Drawing Any Regular Polygon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3252,6 +3342,96 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#arithmetic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arithmetic Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-of-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order of Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#negative-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Negative Numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scientific-notation-floats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scientific Notation Floats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Assignment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#augmented-assignment-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Augmented Assignment Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math-and-turtle-drawing-any-regular-polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Math and Turtle: Drawing Any Regular Polygon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3296,13 +3476,313 @@ variables at once and use augmented operators like <code>+=</code> to make your 
 <li><a href="../03-variables-and-numbers/">Chapter 3: Variables and Numbers</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<p>By the end of this lesson you'll be able to:</p>
+<ul>
+<li>Calculate results using Python's seven arithmetic operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>, <code>**</code>)</li>
+<li>Explain the difference between regular division (<code>/</code>) and integer division (<code>//</code>)</li>
+<li>Use augmented assignment operators like <code>+=</code> to update a variable in one step</li>
+<li>Draw any regular polygon by applying the formula <code>360 / sides</code> to your turtle</li>
+</ul>
+<p>Python already knows all of mathematics. When you type an expression like <code>10 * 3</code> or <code>2 ** 8</code>, Python evaluates it instantly — no calculator needed.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 6!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+This chapter is where Python becomes your personal math helper! We'll explore every arithmetic operator Python knows — including a few that don't exist in Scratch — and finish by using math to draw any regular polygon you can imagine. Let's code it together!</p>
+</div>
+<h2 id="arithmetic-operators">Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permanent link">&para;</a></h2>
+<p>An <strong>arithmetic operator</strong> is a symbol that tells Python to perform a math calculation.
+You already know four of them from math class: <code>+</code>, <code>-</code>, <code>*</code>, and <code>/</code>.
+Python adds three more that are especially useful in programming.</p>
+<p>Here is the complete set:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Addition</td>
+<td><code>10 + 3</code></td>
+<td><code>13</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Subtraction</td>
+<td><code>10 - 3</code></td>
+<td><code>7</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Multiplication</td>
+<td><code>10 * 3</code></td>
+<td><code>30</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Division</td>
+<td><code>10 / 3</code></td>
+<td><code>3.3333...</code></td>
+</tr>
+<tr>
+<td><code>//</code></td>
+<td>Integer Division</td>
+<td><code>10 // 3</code></td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Modulo (remainder)</td>
+<td><code>10 % 3</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>Exponentiation</td>
+<td><code>10 ** 3</code></td>
+<td><code>1000</code></td>
+</tr>
+</tbody>
+</table>
+<p>The last three — <code>//</code>, <code>%</code>, and <code>**</code> — may be new to you, but you will use all three constantly.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Scratch Bridge</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+In Scratch, the green <strong>Operators</strong> palette has blocks for <code>+</code>, <code>-</code>, <code>×</code>, and <code>÷</code>. Python uses the same ideas but you type the symbols directly instead of dragging blocks. Python's three bonus operators — <code>**</code>, <code>//</code>, and <code>%</code> — don't have Scratch equivalents, but they unlock a whole new world of math tricks!</p>
+</div>
+<p>The program below runs all seven operators at once so you can see their output side by side.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Before you click Run, look at two lines: <code>print(10 / 3)</code> and <code>print(10 // 3)</code>.
+Do you think they will print the same number or different numbers?
+And what about <code>print(10 % 3)</code> — what does the "remainder after dividing" equal?
+Make your guesses, then click Run to find out!</p>
+</div>
+<h2 id="try-it-now">Try It Now<a class="headerlink" href="#try-it-now" title="Permanent link">&para;</a></h2>
+<p>Edit the code below and click <strong>Run</strong> to see the result.</p>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">print("Addition:        ", 10 + 3)
+print("Subtraction:     ", 10 - 3)
+print("Multiplication:  ", 10 * 3)
+print("Division:        ", 10 / 3)
+print("Integer division:", 10 // 3)
+print("Modulo:          ", 10 % 3)
+print("Exponentiation:  ", 10 ** 3)
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p>Were you right? <code>10 / 3</code> and <code>10 // 3</code> give <em>different</em> answers — one keeps the decimal, the other throws it away. And <code>10 % 3</code> equals <code>1</code>, because 10 ÷ 3 = 3 with <strong>1</strong> left over.</p>
+<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<p>Let's look more closely at the three operators that may be new to you.</p>
+<p><strong><code>/</code> — Division always returns a float.</strong> A <strong>float</strong> (short for "floating-point number") is any number with a decimal point — like <code>3.3333</code>, <code>5.0</code>, or <code>-0.75</code>. In Python, the <code>/</code> operator <em>always</em> gives you a float, even when the numbers divide evenly: <code>10 / 2</code> gives <code>5.0</code>, not <code>5</code>.</p>
+<p><strong><code>//</code> — Integer division keeps only the whole number.</strong> The <code>//</code> operator divides and throws away everything after the decimal point. <code>10 // 3</code> = <code>3</code>. Think of it as asking: "How many times does 3 fit <em>completely</em> inside 10?" Three times — with something left over.</p>
+<p><strong><code>%</code> — Modulo gives you the leftover.</strong> After fitting three 3's into 10 (that's 9), you have <code>10 − 9 = 1</code> left over, so <code>10 % 3</code> = <code>1</code>. Modulo is useful for checking whether a number is even (<code>n % 2 == 0</code> is <code>True</code> when n is even) and for creating repeating patterns.</p>
+<p><strong><code>**</code> — Exponentiation.</strong> Two stars together means "to the power of." <code>2 ** 8</code> = 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 = 256. <code>10 ** 3</code> = 10 × 10 × 10 = 1000.</p>
+<h2 id="order-of-operations">Order of Operations<a class="headerlink" href="#order-of-operations" title="Permanent link">&para;</a></h2>
+<p>Python follows the same order of operations you use in math class — <strong>PEMDAS</strong>:</p>
+<ol>
+<li><strong>P</strong>arentheses are calculated first</li>
+<li><strong>E</strong>xponents (<code>**</code>) next</li>
+<li><strong>M</strong>ultiplication, <strong>D</strong>ivision, <code>//</code>, and <code>%</code> — left to right</li>
+<li><strong>A</strong>ddition and <strong>S</strong>ubtraction — left to right</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>How Python reads it</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>2 + 3 * 4</code></td>
+<td><code>2 + (3 * 4)</code> = <code>2 + 12</code></td>
+<td><code>14</code></td>
+</tr>
+<tr>
+<td><code>(2 + 3) * 4</code></td>
+<td><code>5 * 4</code></td>
+<td><code>20</code></td>
+</tr>
+<tr>
+<td><code>10 - 2 ** 3</code></td>
+<td><code>10 - (2 ** 3)</code> = <code>10 - 8</code></td>
+<td><code>2</code></td>
+</tr>
+<tr>
+<td><code>15 // 4 % 2</code></td>
+<td><code>(15 // 4) % 2</code> = <code>3 % 2</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+<p>When in doubt, add parentheses. <code>(2 + 3) * 4</code> is clearer than <code>2 + 3 * 4</code>, and extra parentheses never cause errors.</p>
+<h2 id="negative-numbers">Negative Numbers<a class="headerlink" href="#negative-numbers" title="Permanent link">&para;</a></h2>
+<p>Negative numbers work exactly the way you'd expect — just put a minus sign in front:</p>
+<div class="highlight"><pre><span></span><code><span class="n">temperature</span> <span class="o">=</span> <span class="o">-</span><span class="mi">15</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">temperature</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>    <span class="c1"># -10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">temperature</span> <span class="o">*</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>   <span class="c1"># 30   (negative × negative = positive)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">temperature</span><span class="p">))</span>   <span class="c1"># 15   (abs() gives the absolute value)</span>
+</code></pre></div>
+<p>Python follows standard sign rules: negative × positive = negative, negative × negative = positive.</p>
+<h2 id="scientific-notation-floats">Scientific Notation Floats<a class="headerlink" href="#scientific-notation-floats" title="Permanent link">&para;</a></h2>
+<p>Very large or very small numbers can be written in <strong>scientific notation</strong> using the letter <code>e</code>.
+The number after <code>e</code> is the power of ten to multiply by:</p>
+<div class="highlight"><pre><span></span><code><span class="n">speed_of_light</span> <span class="o">=</span> <span class="mf">3e8</span>        <span class="c1"># 3 × 10^8 = 300,000,000</span>
+<span class="n">electron_mass</span>  <span class="o">=</span> <span class="mf">9.11e-31</span>   <span class="c1"># 9.11 × 10^−31 (incredibly tiny)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">speed_of_light</span><span class="p">)</span>       <span class="c1"># 300000000.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">2.5e3</span><span class="p">)</span>                <span class="c1"># 2500.0</span>
+</code></pre></div>
+<p>You will see scientific notation most often in science simulations and when working with very small probabilities.</p>
+<h2 id="multiple-assignment">Multiple Assignment<a class="headerlink" href="#multiple-assignment" title="Permanent link">&para;</a></h2>
+<p>Python lets you assign values to two or more variables on the same line.
+This is called <strong>multiple assignment</strong>, and it works by listing variable names on the left and values on the right, separated by commas:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>    <span class="c1"># 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>    <span class="c1"># 20</span>
+</code></pre></div>
+<p>Multiple assignment is especially powerful for <strong>swapping two variables</strong> in a single line — something that normally takes three lines:</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>      <span class="c1"># swap in one line!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>      <span class="c1"># 100  5</span>
+</code></pre></div>
+<h2 id="augmented-assignment-operators">Augmented Assignment Operators<a class="headerlink" href="#augmented-assignment-operators" title="Permanent link">&para;</a></h2>
+<p>Programmers frequently need to update a variable by adding to it, subtracting from it, or doubling it.
+Python provides shorthand called <strong>augmented assignment operators</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Shorthand</th>
+<th>Same as</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x += 5</code></td>
+<td><code>x = x + 5</code></td>
+<td>Adds 5 to x</td>
+</tr>
+<tr>
+<td><code>x -= 5</code></td>
+<td><code>x = x - 5</code></td>
+<td>Subtracts 5 from x</td>
+</tr>
+<tr>
+<td><code>x *= 2</code></td>
+<td><code>x = x * 2</code></td>
+<td>Doubles x</td>
+</tr>
+<tr>
+<td><code>x /= 2</code></td>
+<td><code>x = x / 2</code></td>
+<td>Halves x (returns float)</td>
+</tr>
+<tr>
+<td><code>x //= 2</code></td>
+<td><code>x = x // 2</code></td>
+<td>Integer-halves x</td>
+</tr>
+<tr>
+<td><code>x %= 3</code></td>
+<td><code>x = x % 3</code></td>
+<td>Keeps remainder after ÷ 3</td>
+</tr>
+<tr>
+<td><code>x **= 2</code></td>
+<td><code>x = x ** 2</code></td>
+<td>Squares x</td>
+</tr>
+</tbody>
+</table>
+<p>You will use <code>+=</code> constantly once you start writing loops.
+For example, <code>count += 1</code> adds 1 to a counter every time the loop repeats.</p>
+<h2 id="math-and-turtle-drawing-any-regular-polygon">Math and Turtle: Drawing Any Regular Polygon<a class="headerlink" href="#math-and-turtle-drawing-any-regular-polygon" title="Permanent link">&para;</a></h2>
+<p>Here is where arithmetic meets art.
+Every <strong>regular polygon</strong> — a shape where all sides are equal and all angles are equal — has one key property:
+the turtle must turn the <strong>same angle</strong> at every corner, and that angle is always:</p>
+<div class="highlight"><pre><span></span><code>turn_angle = 360 / number_of_sides
+</code></pre></div>
+<ul>
+<li>Triangle (3 sides): <code>360 / 3</code> = <strong>120°</strong> per turn</li>
+<li>Square (4 sides): <code>360 / 4</code> = <strong>90°</strong> per turn</li>
+<li>Pentagon (5 sides): <code>360 / 5</code> = <strong>72°</strong> per turn</li>
+<li>Hexagon (6 sides): <code>360 / 6</code> = <strong>60°</strong> per turn</li>
+</ul>
+<p>The program below draws a polygon — but it is missing the one line that calculates the turn angle.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Add the Missing Line</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The turtle wants to draw a triangle but doesn't know how far to turn at each corner.
+Add <strong>one line</strong> below the comment to calculate <code>turn_angle</code> using <code>360</code> and <code>sides</code>.
+Use <code>/</code> (not <code>//</code>) so the formula gives a precise decimal angle for any polygon!</p>
+</div>
+<div id="skulpt-lab-2">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import turtle
+t = turtle.Turtle()
+sides = 3
+# Add one line here: calculate turn_angle using 360 and sides
+
+for i in range(sides):
+    t.forward(100)
+    t.right(turn_angle)
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>Once the triangle appears, try changing <code>sides</code> to <code>5</code> or <code>6</code> — the formula adapts automatically!</p>
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes to the polygon program above. For each one, predict what will happen first, then run it to check!</p>
+<ol>
+<li>Change <code>sides = 3</code> to <code>sides = 5</code>. <strong>You'll know it worked when</strong> you see a five-sided pentagon.</li>
+<li>Change <code>sides = 6</code>. <strong>You'll know it worked when</strong> you see a hexagon that looks like a honeycomb cell.</li>
+<li>Try <code>sides = 360</code>. <strong>You'll know it worked when</strong> the turtle traces something that looks almost like a perfect circle.</li>
+<li>Add <code>t.pencolor("blue")</code> before the <code>for</code> loop. <strong>You'll know it worked when</strong> all the lines turn blue.</li>
+<li>Change <code>t.forward(100)</code> to <code>t.forward(300 // sides)</code>. <strong>You'll know it worked when</strong> larger polygons draw longer lines and smaller polygons draw shorter ones.</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Great Work!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've unlocked Python's full arithmetic toolkit — seven operators, order of operations, and two powerful assignment shortcuts. Best of all, you connected math to art with one formula. That's exactly how programmers think! Let's keep coding it together!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

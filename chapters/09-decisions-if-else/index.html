@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to beginning programmers.">
+        <meta name="description" content="Teach Python to make choices using Boolean values, comparison operators, logical operators, if/elif/else branching, and nested conditionals.">
       
       
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/python/chapters/09-decisions-if-else/">
+        <link rel="canonical" href="https://dmccreary.github.io/learning-python/chapters/09-decisions-if-else/">
       
       
         <link rel="prev" href="../08-working-with-strings/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>9. Making Decisions with If/Else - Beginning Python</title>
+        <title>Making Decisions with If/Else - Beginning Python</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9. Making Decisions with If/Else
+              Making Decisions with If/Else
             
           </span>
         </div>
@@ -176,7 +176,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/python" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -221,7 +221,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/python" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -554,6 +554,105 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-boolean-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Boolean Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-if-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The if Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ifelse-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      The if…else Block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elif-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      elif Chains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chained-comparisons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chained Comparisons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-if-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested if Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifelifelse-with-turtle-draw-different-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      if/elif/else with Turtle: Draw Different Shapes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3252,6 +3351,105 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-boolean-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Boolean Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-if-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The if Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ifelse-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      The if…else Block
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elif-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      elif Chains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logical Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chained-comparisons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chained Comparisons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-if-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested if Statements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifelifelse-with-turtle-draw-different-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      if/elif/else with Turtle: Draw Different Shapes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3297,13 +3495,305 @@ chained comparisons, and nested conditionals for multi-way decisions.</p>
 <li><a href="../06-math-and-arithmetic/">Chapter 6: Math and Arithmetic</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<p>By the end of this lesson you'll be able to:</p>
+<ul>
+<li>Create and compare Boolean values using <code>True</code>, <code>False</code>, and comparison operators</li>
+<li>Write <code>if</code>, <code>if/else</code>, and <code>if/elif/else</code> blocks to make your program branch</li>
+<li>Combine conditions with <code>and</code>, <code>or</code>, and <code>not</code></li>
+<li>Use an <code>if/elif/else</code> chain to draw different shapes based on a variable's value</li>
+</ul>
+<p>Every useful program makes decisions.
+A game needs to know if a player has won.
+A calculator needs to know if the denominator is zero before dividing.
+Python's <strong><code>if</code> statement</strong> is how programs choose what to do based on what is true or false.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 9!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+This is the chapter where your programs stop being one-way streets! Once you know <code>if</code>, <code>elif</code>, and <code>else</code>, your code can respond differently to different situations — just like a real decision-maker. Let's code it together!</p>
+</div>
+<h2 id="the-boolean-type">The Boolean Type<a class="headerlink" href="#the-boolean-type" title="Permanent link">&para;</a></h2>
+<p>A <strong>Boolean</strong> (named after mathematician George Boole) is a value that is either <code>True</code> or <code>False</code> — and nothing else.
+In Python, <code>True</code> and <code>False</code> are written with a capital first letter.</p>
+<div class="highlight"><pre><span></span><code><span class="n">is_raining</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">has_umbrella</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_raining</span><span class="p">)</span>       <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>       <span class="c1"># &lt;class &#39;bool&#39;&gt;</span>
+</code></pre></div>
+<p>Booleans are produced automatically whenever Python <strong>compares</strong> two values.</p>
+<h2 id="comparison-operators">Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permanent link">&para;</a></h2>
+<p>A <strong>comparison operator</strong> compares two values and returns a Boolean.
+Python has six comparison operators:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>equal to</td>
+<td><code>5 == 5</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>not equal to</td>
+<td><code>5 != 3</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>less than</td>
+<td><code>3 &lt; 5</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>greater than</td>
+<td><code>5 &gt; 3</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>less than or equal</td>
+<td><code>5 &lt;= 5</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>greater than or equal</td>
+<td><code>4 &gt;= 5</code></td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-warning">
+<p class="admonition-title">The Most Common Beginner Mistake</p>
+<p><img alt="Monty warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+<strong><code>=</code> is NOT the same as <code>==</code>.</strong> A single <code>=</code> <em>assigns</em> a value to a variable: <code>x = 5</code>. A double <code>==</code> <em>compares</em> two values: <code>x == 5</code>. Writing <code>if x = 5:</code> will give you a <code>SyntaxError</code>. This mistake happens to every beginner — now you know to look for it!</p>
+</div>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Scratch Bridge</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+In Scratch, the green <strong>Operators</strong> blocks include <code>=</code>, <code>&lt;</code>, and <code>&gt;</code> for comparisons, and the <strong>Control</strong> category has the "if/then" and "if/then/else" blocks. Python's <code>if</code> statement and comparison operators do exactly the same jobs — you just type them instead of dragging!</p>
+</div>
+<p>The program below uses comparisons to describe a score.
+Before clicking Run, think about which <code>print()</code> calls will actually run.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The variable <code>score</code> is <code>75</code>. Look at each <code>if</code> statement carefully.
+Which conditions are <code>True</code> for a score of 75?
+How many lines do you think will actually print?
+Make your guess — then click Run!</p>
+</div>
+<h2 id="try-it-now">Try It Now<a class="headerlink" href="#try-it-now" title="Permanent link">&para;</a></h2>
+<p>Edit the code below and click <strong>Run</strong> to see the result.</p>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">score = 75
+
+print("Score:", score)
+print("Is 75 == 75?", score == 75)
+print("Is 75 > 50? ", score > 50)
+print("Is 75 < 100?", score < 100)
+print("Is 75 == 100?", score == 100)
+
+if score >= 60:
+    print("Passing grade!")
+
+if score == 100:
+    print("Perfect score!")
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p>Were you right? The line <code>"Perfect score!"</code> did NOT print because <code>75 == 100</code> is <code>False</code>. The <code>if</code> body only runs when its condition is <code>True</code>.</p>
+<h2 id="the-if-statement">The if Statement<a class="headerlink" href="#the-if-statement" title="Permanent link">&para;</a></h2>
+<p>An <strong><code>if</code> statement</strong> runs a block of code only when a condition is <code>True</code>.
+The structure is:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="c1"># this block runs only when condition is True</span>
+    <span class="n">do_something</span><span class="p">()</span>
+</code></pre></div>
+<p>The colon <code>:</code> at the end of the <code>if</code> line is required.
+The indented lines below it form the <strong>if body</strong> — they only run when the condition is <code>True</code>.</p>
+<h2 id="the-ifelse-block">The if…else Block<a class="headerlink" href="#the-ifelse-block" title="Permanent link">&para;</a></h2>
+<p>An <strong><code>if/else</code> block</strong> adds a second branch: code that runs when the condition is <code>False</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">temperature</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s warm — wear a t-shirt!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s cool — bring a jacket!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Every <code>if/else</code> runs <em>exactly one</em> branch — never both, never neither.
+When <code>temperature</code> is <code>15</code>, the condition <code>15 &gt; 20</code> is <code>False</code>, so the <code>else</code> branch runs.</p>
+<h2 id="elif-chains">elif Chains<a class="headerlink" href="#elif-chains" title="Permanent link">&para;</a></h2>
+<p>When you need more than two choices, use <strong><code>elif</code></strong> (short for "else if"):</p>
+<div class="highlight"><pre><span></span><code><span class="n">score</span> <span class="o">=</span> <span class="mi">83</span>
+
+<span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Python checks conditions from top to bottom and runs the <strong>first</strong> branch whose condition is <code>True</code>, then skips all the rest.
+For <code>score = 83</code>, the first <code>True</code> condition is <code>score &gt;= 80</code>, so Python prints <code>"B"</code> and ignores the remaining branches.</p>
+<h2 id="logical-operators">Logical Operators<a class="headerlink" href="#logical-operators" title="Permanent link">&para;</a></h2>
+<p><strong>Logical operators</strong> combine two Boolean values into one:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>Both must be True</td>
+<td><code>5 &gt; 3 and 2 &lt; 4</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>At least one must be True</td>
+<td><code>5 &gt; 3 or 2 &gt; 4</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>Flips True↔False</td>
+<td><code>not True</code></td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="n">has_ticket</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">has_ticket</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to the show!&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="ow">or</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">65</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Free admission!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="chained-comparisons">Chained Comparisons<a class="headerlink" href="#chained-comparisons" title="Permanent link">&para;</a></h2>
+<p>Python lets you write range checks in a natural, math-like way:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="c1"># The Python way (chained):</span>
+<span class="k">if</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is between 10 and 20&quot;</span><span class="p">)</span>
+
+<span class="c1"># The long way (same thing):</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is between 10 and 20&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Both forms are correct, but chained comparisons read more naturally and look more like how you'd write it in math class.</p>
+<h2 id="nested-if-statements">Nested if Statements<a class="headerlink" href="#nested-if-statements" title="Permanent link">&para;</a></h2>
+<p>A <strong>nested <code>if</code></strong> is an <code>if</code> statement placed inside another <code>if</code> body.
+Use nesting when you need to check a second condition only after a first one is already <code>True</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">is_member</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">14</span>
+
+<span class="k">if</span> <span class="n">is_member</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">13</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Full member access!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Junior member access!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please sign up first.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Keep nesting to two levels maximum — deeply nested code becomes hard to read quickly.</p>
+<h2 id="ifelifelse-with-turtle-draw-different-shapes">if/elif/else with Turtle: Draw Different Shapes<a class="headerlink" href="#ifelifelse-with-turtle-draw-different-shapes" title="Permanent link">&para;</a></h2>
+<p>Now let's use branching to make the turtle draw different shapes based on a variable.
+The program below should draw a different shape depending on the value of <code>shape_choice</code> — but the <code>elif</code> chain is incomplete.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Complete the elif Chain</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The program checks <code>shape_choice</code> and draws a square when it equals <code>"square"</code>.
+Add <strong>two more elif blocks</strong> so that <code>"triangle"</code> draws a triangle (3 sides, 120° turns)
+and <code>"hexagon"</code> draws a hexagon (6 sides, 60° turns).</p>
+</div>
+<div id="skulpt-lab-2">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import turtle
+t = turtle.Turtle()
+t.speed(3)
+
+shape_choice = "triangle"   # try "square", "triangle", "hexagon"
+
+if shape_choice == "square":
+    for i in range(4):
+        t.forward(100)
+        t.right(90)
+# Add elif for "triangle" (3 sides, turn 120 degrees each)
+
+# Add elif for "hexagon" (6 sides, turn 60 degrees each)
+
+else:
+    t.write("Unknown shape: " + shape_choice, font=("Arial", 14, "normal"))
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>Once all three shapes work, try setting <code>shape_choice = "circle"</code> to see the else branch draw the "Unknown shape" message!</p>
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes to the programs above. For each one, predict what will happen first, then run it to check!</p>
+<ol>
+<li>In the first lab, change <code>score = 75</code> to <code>score = 92</code>. <strong>You'll know it worked when</strong> the <code>if score &gt;= 60</code> block still runs but now <code>score &gt;= 90</code> would also be <code>True</code>.</li>
+<li>Add an <code>elif score == 75: print("Exactly 75!")</code> block. <strong>You'll know it worked when</strong> changing <code>score</code> back to <code>75</code> prints that message.</li>
+<li>In the turtle lab, add an <code>elif shape_choice == "pentagon":</code> block that draws 5 sides with 72° turns. <strong>You'll know it worked when</strong> <code>shape_choice = "pentagon"</code> draws a pentagon.</li>
+<li>Add <code>t.pencolor("purple")</code> inside the triangle branch only. <strong>You'll know it worked when</strong> the triangle draws in purple but the square stays black.</li>
+<li>Try <code>shape_choice = "hexagon"</code>. <strong>You'll know it worked when</strong> a six-sided hexagon appears on the canvas.</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Great Work!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+Your programs can now make decisions! You know Boolean values, six comparison operators, three logical operators, and four types of branching: <code>if</code>, <code>if/else</code>, <code>elif</code> chains, and nested <code>if</code>. These are the building blocks of every interactive program ever written. Let's keep coding it together!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

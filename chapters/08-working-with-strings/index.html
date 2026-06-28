@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to beginning programmers.">
+        <meta name="description" content="Explore Python's string type — quotes, concatenation, repetition, escape characters, len(), immutability, raw strings, and turtle.write() for canvas labels.">
       
       
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/python/chapters/08-working-with-strings/">
+        <link rel="canonical" href="https://dmccreary.github.io/learning-python/chapters/08-working-with-strings/">
       
       
         <link rel="prev" href="../07-for-loops-and-shapes/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>8. Working with Strings - Beginning Python</title>
+        <title>Working with Strings - Beginning Python</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8. Working with Strings
+              Working with Strings
             
           </span>
         </div>
@@ -176,7 +176,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/python" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -221,7 +221,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/python" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -533,6 +533,105 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-string-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      The String Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-vs-double-quotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single vs Double Quotes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-concatenation" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Concatenation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-repetition" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Repetition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escape-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escape Characters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-length-with-len" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Length with len()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-immutability" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Immutability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raw-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raw Strings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-text-with-turtlewrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing Text with turtle.write()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3252,6 +3351,105 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-string-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      The String Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-vs-double-quotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single vs Double Quotes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-concatenation" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Concatenation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-repetition" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Repetition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escape-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escape Characters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-length-with-len" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Length with len()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-immutability" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Immutability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raw-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raw Strings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-text-with-turtlewrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing Text with turtle.write()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3297,13 +3495,254 @@ draw labels and text directly onto your turtle canvas.</p>
 <li><a href="../07-for-loops-and-shapes/">Chapter 7: For Loops and Drawing Shapes</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<p>By the end of this lesson you'll be able to:</p>
+<ul>
+<li>Create strings using either single or double quotes</li>
+<li>Join strings with <code>+</code> (concatenation) and repeat them with <code>*</code></li>
+<li>Use escape characters like <code>\n</code> and <code>\t</code> to control text layout</li>
+<li>Draw labeled text directly onto the turtle canvas with <code>turtle.write()</code></li>
+</ul>
+<p>Numbers are not the only data Python works with.
+<strong>Text</strong> — names, sentences, emoji, file paths, URLs — is just as important.
+Python calls text a <strong>string</strong>, and this chapter gives you the tools to create, combine, and display strings in your programs.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 8!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Strings open up a whole new side of Python! Once you know how to work with text, your turtle programs can draw labels, scores, and messages right onto the canvas. Let's code it together!</p>
+</div>
+<h2 id="the-string-type">The String Type<a class="headerlink" href="#the-string-type" title="Permanent link">&para;</a></h2>
+<p>A <strong>string</strong> is any sequence of characters — letters, digits, spaces, punctuation, emoji — wrapped in quotation marks.
+Python stores strings with the type name <code>str</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello, Coder!&quot;</span>
+<span class="n">species</span>  <span class="o">=</span> <span class="s1">&#39;Python snake&#39;</span>
+<span class="n">number</span>   <span class="o">=</span> <span class="s2">&quot;42&quot;</span>             <span class="c1"># still a string, not an integer!</span>
+</code></pre></div>
+<p>Notice that <code>"42"</code> (with quotes) is a <em>string</em>, not the number 42.
+If you tried to add <code>"42" + 1</code> Python would give you an error — strings and numbers are different types.</p>
+<h2 id="single-vs-double-quotes">Single vs Double Quotes<a class="headerlink" href="#single-vs-double-quotes" title="Permanent link">&para;</a></h2>
+<p>Python accepts both single quotes <code>'...'</code> and double quotes <code>"..."</code> for strings.
+They work identically — choose whichever you prefer, just be consistent.</p>
+<p>The main reason to know both is <strong>when your string contains an apostrophe or quotation marks</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">msg1</span> <span class="o">=</span> <span class="s2">&quot;It&#39;s a great day!&quot;</span>     <span class="c1"># apostrophe inside — use double quotes</span>
+<span class="n">msg2</span> <span class="o">=</span> <span class="s1">&#39;She said &quot;wow!&quot;&#39;</span>       <span class="c1"># quote marks inside — use single quotes</span>
+</code></pre></div>
+<p>If you accidentally use the same quote type inside and outside the string, Python gets confused and gives you a <code>SyntaxError</code>.</p>
+<h2 id="string-concatenation">String Concatenation<a class="headerlink" href="#string-concatenation" title="Permanent link">&para;</a></h2>
+<p><strong>Concatenation</strong> means joining two or more strings end-to-end.
+Python uses the <code>+</code> operator for concatenation:</p>
+<div class="highlight"><pre><span></span><code><span class="n">first</span> <span class="o">=</span> <span class="s2">&quot;Monty&quot;</span>
+<span class="n">last</span>  <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="n">full</span>  <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">full</span><span class="p">)</span>    <span class="c1"># Monty Python</span>
+</code></pre></div>
+<p>You can concatenate as many strings as you like in a single expression.
+Notice that Python does <strong>not</strong> add a space automatically — you have to include <code>" "</code> yourself if you want one.</p>
+<p>The program below builds a greeting message from two variables.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+Look at the last <code>print()</code> call before you click Run.
+<code>name</code> is <code>"Alex"</code> and <code>greeting</code> is <code>"Hello, "</code>.
+What exactly will the program print on that last line?
+Make your guess — then find out!</p>
+</div>
+<h2 id="try-it-now">Try It Now<a class="headerlink" href="#try-it-now" title="Permanent link">&para;</a></h2>
+<p>Edit the code below and click <strong>Run</strong> to see the result.</p>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">name = "Alex"
+greeting = "Hello, "
+farewell = "See you later, "
+
+# Concatenation: joining strings with +
+print(greeting + name + "!")
+print(farewell + name + "!")
+
+# Repetition: repeat a string with *
+print("-" * 20)
+print("Ha" * 4)
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p>Were you right? The first <code>print()</code> outputs <code>Hello, Alex!</code>. Notice how <code>"-" * 20</code> creates a divider line of exactly twenty dashes — much faster than typing them one by one!</p>
+<h2 id="string-repetition">String Repetition<a class="headerlink" href="#string-repetition" title="Permanent link">&para;</a></h2>
+<p>Just as <code>+</code> joins strings, <code>*</code> <strong>repeats</strong> a string a given number of times:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Echo! &quot;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>    <span class="c1"># Echo! Echo! Echo!</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">30</span><span class="p">)</span>        <span class="c1"># ============================== (30 equals signs)</span>
+</code></pre></div>
+<p>String repetition is handy for creating visual separators, borders, and patterns.
+The number on the right must be an integer — <code>"ha" * 2.5</code> gives an error.</p>
+<h2 id="escape-characters">Escape Characters<a class="headerlink" href="#escape-characters" title="Permanent link">&para;</a></h2>
+<p>Some characters can't be typed directly inside a string.
+Python provides <strong>escape characters</strong> — special two-character sequences that start with a backslash <code>\</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Escape</th>
+<th>Meaning</th>
+<th>Example output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\n</code></td>
+<td>New line</td>
+<td>Moves to the next line</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>Tab</td>
+<td>Adds a tab-sized space</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>Literal backslash</td>
+<td>Prints <code>\</code></td>
+</tr>
+<tr>
+<td><code>\'</code></td>
+<td>Literal single quote</td>
+<td>Prints <code>'</code> inside a single-quoted string</td>
+</tr>
+<tr>
+<td><code>\"</code></td>
+<td>Literal double quote</td>
+<td>Prints <code>"</code> inside a double-quoted string</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Line one</span><span class="se">\n</span><span class="s2">Line two</span><span class="se">\n</span><span class="s2">Line three&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name:</span><span class="se">\t</span><span class="s2">Monty</span><span class="se">\n</span><span class="s2">Age:</span><span class="se">\t</span><span class="s2">12&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;She said </span><span class="se">\&quot;</span><span class="s2">Wow!</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>The <code>\n</code> (newline) is one of the most-used escape characters — it lets one <code>print()</code> call produce multiple lines of output.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Scratch Bridge</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+In Scratch, the <strong>Say</strong> block displays one message at a time in a speech bubble. Python's <code>print()</code> is similar, but much more flexible — you can print multiple lines, add tabs, join variables and text, and display numbers all in one call!</p>
+</div>
+<h2 id="string-length-with-len">String Length with len()<a class="headerlink" href="#string-length-with-len" title="Permanent link">&para;</a></h2>
+<p>The <code>len()</code> function counts how many characters are in a string — including spaces and punctuation:</p>
+<div class="highlight"><pre><span></span><code><span class="n">word</span>  <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>          <span class="c1"># 6</span>
+<span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;Hello, world!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>      <span class="c1"># 13</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">))</span>            <span class="c1"># 0  (empty string has length zero)</span>
+</code></pre></div>
+<p><code>len()</code> is one of Python's <strong>built-in functions</strong> — you don't need to import anything, it just works.
+You'll use <code>len()</code> constantly: checking if a password is long enough, measuring user input, or controlling how many characters to display.</p>
+<h2 id="string-immutability">String Immutability<a class="headerlink" href="#string-immutability" title="Permanent link">&para;</a></h2>
+<p>Once a string is created, you <strong>cannot change individual characters inside it</strong>.
+This property is called <strong>immutability</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Monty&quot;</span>
+<span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;B&quot;</span>    <span class="c1"># ← ERROR! You can&#39;t change a single character</span>
+</code></pre></div>
+<p>This surprises beginners who expect strings to work like a list.
+To "change" a string, you create a <em>new</em> string from the old one:</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Monty&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;B&quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>    <span class="c1"># creates a brand-new string &quot;Bonty&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>              <span class="c1"># Bonty</span>
+</code></pre></div>
+<p>Immutability is not a bug — it makes strings faster and safer to use.
+You will learn string slicing (the <code>[1:]</code> part above) in a later chapter.</p>
+<h2 id="raw-strings">Raw Strings<a class="headerlink" href="#raw-strings" title="Permanent link">&para;</a></h2>
+<p>Sometimes you want Python to ignore escape characters entirely.
+For example, if you are writing a Windows file path like <code>C:\new_folder\text.txt</code>, the <code>\n</code> and <code>\t</code> would be interpreted as a newline and a tab!</p>
+<p>A <strong>raw string</strong> is created by putting <code>r</code> before the opening quote.
+Inside a raw string, backslashes are treated as literal characters:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Without r: \n becomes a newline, \t becomes a tab</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C:</span><span class="se">\n</span><span class="s2">ew_folder</span><span class="se">\t</span><span class="s2">ext.txt&quot;</span><span class="p">)</span>    <span class="c1"># messy output!</span>
+
+<span class="c1"># With r: backslashes are literal</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\new_folder\text.txt&quot;</span><span class="p">)</span>   <span class="c1"># C:\new_folder\text.txt</span>
+</code></pre></div>
+<p>Raw strings are most commonly used for file paths and patterns (which you'll learn about in Chapter 29).</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Watch Out!</p>
+<p><img alt="Monty warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+A raw string cannot end with an <strong>odd</strong> number of backslashes. <code>r"path\"</code> gives a <code>SyntaxError</code> because the last <code>\"</code> looks like an escaped quote mark. If you need to end a string with a backslash, just use a regular string and write <code>"\\"</code> (two backslashes = one literal backslash).</p>
+</div>
+<h2 id="writing-text-with-turtlewrite">Writing Text with turtle.write()<a class="headerlink" href="#writing-text-with-turtlewrite" title="Permanent link">&para;</a></h2>
+<p>The <code>turtle.write()</code> function draws a text label directly onto the canvas at the turtle's current position.
+This lets your drawings include titles, captions, scores, or any other text.</p>
+<p>The basic form is:</p>
+<div class="highlight"><pre><span></span><code><span class="n">t</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, turtle world!&quot;</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;normal&quot;</span><span class="p">))</span>
+</code></pre></div>
+<p>The <code>font</code> argument is a tuple of three values: the font name, the size in points, and the style (<code>"normal"</code>, <code>"bold"</code>, or <code>"italic"</code>).</p>
+<p>The program below draws a polygon and then labels it.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Add the Label</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The program below draws a pentagon but doesn't label it yet.
+Add <strong>one line</strong> after the loop to call <code>t.write()</code> and display the text <code>"Pentagon"</code> on the canvas.
+<strong>Hint:</strong> move <code>t.penup()</code> and position the turtle first with <code>t.goto(-40, -120)</code>, then call <code>t.write()</code>.</p>
+</div>
+<div id="skulpt-lab-2">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import turtle
+t = turtle.Turtle()
+t.speed(3)
+
+# Draw a pentagon
+sides = 5
+turn_angle = 360 / sides
+for i in range(sides):
+    t.forward(80)
+    t.right(turn_angle)
+
+# Move to a label position and write the name
+t.penup()
+t.goto(-40, -120)
+# Add one line here to call t.write() and display "Pentagon"
+# Use font=("Arial", 16, "bold") for a nice look
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>Once the label appears, try changing the font size, style, or the text itself!</p>
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes to the programs above. For each one, predict what will happen first, then run it to check!</p>
+<ol>
+<li>In the first lab, change <code>name = "Alex"</code> to your own name. <strong>You'll know it worked when</strong> the greeting prints your name.</li>
+<li>Change <code>"Ha" * 4</code> to <code>"Ha" * 10</code>. <strong>You'll know it worked when</strong> you see ten "Ha"s in a row.</li>
+<li>In the turtle lab, add a <code>print(len("Pentagon"))</code> line. <strong>You'll know it worked when</strong> you see <code>8</code> printed below the canvas.</li>
+<li>Change the label text to <code>"My " + str(sides) + "-sided shape"</code>. <strong>You'll know it worked when</strong> the label reads "My 5-sided shape".</li>
+<li>Try changing <code>sides = 5</code> to <code>sides = 8</code> and the label to <code>"Octagon"</code>. <strong>You'll know it worked when</strong> you see an eight-sided shape with the correct label.</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Great Work!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've mastered Python's string type! You can join strings with <code>+</code>, repeat them with <code>*</code>, add newlines and tabs with escape characters, measure their length with <code>len()</code>, and even draw text labels right onto the turtle canvas. Strings are everywhere in programming — and now you know how to use them. Let's keep coding it together!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

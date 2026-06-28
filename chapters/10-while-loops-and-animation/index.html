@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to beginning programmers.">
+        <meta name="description" content="Use while loops, break, continue, and the time module to build countdown programs and animated turtle drawings that move by themselves.">
       
       
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/python/chapters/10-while-loops-and-animation/">
+        <link rel="canonical" href="https://dmccreary.github.io/learning-python/chapters/10-while-loops-and-animation/">
       
       
         <link rel="prev" href="../09-decisions-if-else/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>10. While Loops and Animation - Beginning Python</title>
+        <title>While Loops and Animation - Beginning Python</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10. While Loops and Animation
+              While Loops and Animation
             
           </span>
         </div>
@@ -176,7 +176,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/python" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -221,7 +221,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/python" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -575,6 +575,96 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-while-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      The while Loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infinite-loops-to-avoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infinite Loops to Avoid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-break-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The break Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-continue-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The continue Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-else-clause-on-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      The else Clause on Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-time-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      The time Module
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-with-turtle-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation with Turtle Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3252,6 +3342,96 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-while-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      The while Loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infinite-loops-to-avoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infinite Loops to Avoid
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-break-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The break Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-continue-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      The continue Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-else-clause-on-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      The else Clause on Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-time-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      The time Module
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-with-turtle-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation with Turtle Loops
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3299,13 +3479,268 @@ real animated turtle drawing that moves by itself.</p>
 <li><a href="../09-decisions-if-else/">Chapter 9: Making Decisions with If/Else</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<p>By the end of this lesson you'll be able to:</p>
+<ul>
+<li>Write a <code>while</code> loop that runs as long as a condition is <code>True</code></li>
+<li>Use <code>break</code> to exit a loop early and <code>continue</code> to skip an iteration</li>
+<li>Explain why infinite loops happen and how to avoid them</li>
+<li>Build an animated turtle spiral that grows step by step using a <code>while</code> loop</li>
+</ul>
+<p>The <code>for</code> loop you learned in Chapter 7 is perfect when you know exactly how many times to repeat — <code>for i in range(10)</code> repeats exactly ten times.
+But what if you don't know in advance when to stop?
+What if you want to keep counting down until a rocket launches, or keep drawing until the turtle reaches the edge of the screen?
+That is when you need a <strong><code>while</code> loop</strong>.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 10!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+The <code>while</code> loop is where programs come alive — it's the engine behind games, animations, and anything that runs until something changes. By the end of this chapter, Monty the turtle will be drawing all by himself! Let's code it together!</p>
+</div>
+<h2 id="the-while-loop">The while Loop<a class="headerlink" href="#the-while-loop" title="Permanent link">&para;</a></h2>
+<p>A <strong><code>while</code> loop</strong> repeats its body as long as a condition is <code>True</code>.
+The structure looks like an <code>if</code> statement, but instead of running once, it keeps running:</p>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">-=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Liftoff!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Here is what happens step by step:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th><code>count</code> value</th>
+<th>Condition <code>count &gt; 0</code></th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>5</td>
+<td>True</td>
+<td>print 5, count becomes 4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>True</td>
+<td>print 4, count becomes 3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>True</td>
+<td>print 3, count becomes 2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td>True</td>
+<td>print 2, count becomes 1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>True</td>
+<td>print 1, count becomes 0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0</td>
+<td><strong>False</strong></td>
+<td>loop ends, print "Liftoff!"</td>
+</tr>
+</tbody>
+</table>
+<p>The loop runs exactly as long as the condition stays <code>True</code>.
+The moment it becomes <code>False</code>, Python exits the loop and continues with the next line.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Scratch Bridge</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+In Scratch, the <strong>Repeat Until</strong> block keeps running its contents until a condition becomes true. Python's <code>while</code> loop is the same idea — except the condition is checked <strong>at the start</strong> of each trip: the loop continues while the condition is <code>True</code> and stops the moment it becomes <code>False</code>.</p>
+</div>
+<p>Before you run the countdown program, think about what it will print.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The variable <code>count</code> starts at <code>5</code>. The loop prints <code>count</code> and then subtracts 1 each trip.
+How many lines do you think the program will print before "Liftoff!" appears?
+Will it print the number <code>0</code>? Make your guess — then click Run!</p>
+</div>
+<h2 id="try-it-now">Try It Now<a class="headerlink" href="#try-it-now" title="Permanent link">&para;</a></h2>
+<p>Edit the code below and click <strong>Run</strong> to see the result.</p>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">count = 5
+while count > 0:
+    print(count)
+    count -= 1
+print("Liftoff!")
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p>Were you right? The loop prints <code>5</code>, <code>4</code>, <code>3</code>, <code>2</code>, <code>1</code> — five lines — and then <code>"Liftoff!"</code>.
+The number <code>0</code> is <strong>not</strong> printed because the condition <code>count &gt; 0</code> is checked <em>before</em> each trip.
+When <code>count</code> is <code>0</code>, the condition is <code>False</code>, so the loop ends immediately.</p>
+<h2 id="infinite-loops-to-avoid">Infinite Loops to Avoid<a class="headerlink" href="#infinite-loops-to-avoid" title="Permanent link">&para;</a></h2>
+<p>An <strong>infinite loop</strong> is a <code>while</code> loop whose condition never becomes <code>False</code>.
+The program runs forever (until you force-quit it):</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># WARNING: this runs forever — don&#39;t run it!</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Help, I can&#39;t stop!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Infinite loops happen when you forget to change the variable that the condition depends on.
+The most common cause: forgetting <code>count -= 1</code> inside the loop.</p>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+    <span class="c1"># MISSING: count -= 1  ← without this, count stays 5 forever!</span>
+</code></pre></div>
+<p><strong>How to fix it:</strong> Every <code>while</code> loop needs at least one line inside it that eventually makes the condition <code>False</code>.
+Always double-check: "What changes inside this loop to eventually stop it?"</p>
+<h2 id="the-break-statement">The break Statement<a class="headerlink" href="#the-break-statement" title="Permanent link">&para;</a></h2>
+<p><code>break</code> exits a loop immediately, even if the condition is still <code>True</code>.
+It's useful when you want to stop based on something that happens <em>inside</em> the loop:</p>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stopping early at 7!&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="n">count</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div>
+<p>This countdown stops at <code>7</code> and never reaches <code>6</code> or below — the <code>break</code> jumps out of the loop entirely.</p>
+<h2 id="the-continue-statement">The continue Statement<a class="headerlink" href="#the-continue-statement" title="Permanent link">&para;</a></h2>
+<p><code>continue</code> skips the rest of the current trip through the loop and jumps straight to the next check of the condition.
+Use it to skip certain values without stopping the whole loop:</p>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>   <span class="c1"># skip even numbers</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>         <span class="c1"># only prints odd numbers: 9, 7, 5, 3, 1</span>
+</code></pre></div>
+<p>Think of <code>break</code> as "exit the loop entirely" and <code>continue</code> as "skip this trip and try again."</p>
+<h2 id="the-else-clause-on-loops">The else Clause on Loops<a class="headerlink" href="#the-else-clause-on-loops" title="Permanent link">&para;</a></h2>
+<p>Python has an unusual feature: you can add an <code>else</code> clause to a <code>while</code> loop.
+The <code>else</code> block runs only if the loop ended <em>naturally</em> (condition became <code>False</code>) — not if it ended via <code>break</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">-=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Countdown finished normally!&quot;</span><span class="p">)</span>   <span class="c1"># runs because no break was used</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">count</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">-=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This won&#39;t print — loop was broken!&quot;</span><span class="p">)</span>  <span class="c1"># skipped because break was used</span>
+</code></pre></div>
+<p>The <code>else</code> on a loop is rare in practice, but it's a clean way to handle the "search succeeded / search failed" pattern.</p>
+<h2 id="nested-loops">Nested Loops<a class="headerlink" href="#nested-loops" title="Permanent link">&para;</a></h2>
+<p>A <strong>nested loop</strong> is a loop inside another loop.
+The inner loop runs completely for every single trip of the outer loop:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>    <span class="c1"># move to the next line after each row</span>
+</code></pre></div>
+<p>This prints a 3-row by 4-column grid of stars.
+The inner <code>for col in range(4)</code> completes four trips for every single trip of <code>for row in range(3)</code>.</p>
+<p>Nested loops are powerful for drawing grids, tables, and 2D patterns — and you will use them more in later chapters.</p>
+<h2 id="the-time-module">The time Module<a class="headerlink" href="#the-time-module" title="Permanent link">&para;</a></h2>
+<p>Python's built-in <strong><code>time</code> module</strong> lets your program interact with the clock.
+Before using it, you import it like any other module:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+</code></pre></div>
+<p>The most useful function for animation is <strong><code>time.sleep(seconds)</code></strong> — it pauses the program for the given number of seconds (decimals are allowed):</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Starting...&quot;</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>          <span class="c1"># pause for 2 seconds</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done waiting!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><code>time.sleep()</code> is how you control the speed of animations: pause for 0.05 seconds between each frame to get roughly 20 frames per second.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">time.sleep() in the Browser</p>
+<p><img alt="Monty warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+In a real Python program on your computer, <code>time.sleep()</code> pauses the program smoothly. In the Skulpt browser labs, very long sleep times may cause the page to pause for a moment. Keep <code>time.sleep()</code> values small (0.05–0.2 seconds) in the labs, and use larger values only when running Python on your own machine.</p>
+</div>
+<h2 id="animation-with-turtle-loops">Animation with Turtle Loops<a class="headerlink" href="#animation-with-turtle-loops" title="Permanent link">&para;</a></h2>
+<p>Combine a <code>while</code> loop with the turtle and <code>time.sleep()</code> to create a simple animation.
+The key idea: draw one small step, pause briefly, draw the next step, pause again — and repeat.</p>
+<p>The program below draws a growing spiral.
+Each time through the loop, the step length increases, so the spiral gets bigger on every trip.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Fix the Growing Spiral</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The program below has a bug: the spiral never grows because <code>step</code> never changes inside the loop.
+Add <strong>one line</strong> inside the loop body to increase <code>step</code> by <code>5</code> on every trip.
+<strong>Hint:</strong> use <code>step += 5</code>. Watch the spiral grow as you run it!</p>
+</div>
+<div id="skulpt-lab-2">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import turtle
+t = turtle.Turtle()
+t.speed(0)
+
+step = 5
+while step < 150:
+    t.forward(step)
+    t.right(45)
+    # Add one line here to increase step by 5 each trip
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>Once the spiral appears, notice how the <code>while step &lt; 150</code> condition automatically stops the loop when the spiral is big enough — no manual counting needed!</p>
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes to the programs above. For each one, predict what will happen first, then run it to check!</p>
+<ol>
+<li>In the countdown lab, change <code>count = 5</code> to <code>count = 10</code>. <strong>You'll know it worked when</strong> the countdown prints 10 numbers before "Liftoff!".</li>
+<li>Change <code>while count &gt; 0</code> to <code>while count &gt; 3</code>. <strong>You'll know it worked when</strong> the countdown stops at 4, not 1.</li>
+<li>In the spiral lab, change <code>t.right(45)</code> to <code>t.right(90)</code>. <strong>You'll know it worked when</strong> you see a square spiral instead of a diagonal one.</li>
+<li>Change <code>t.right(45)</code> to <code>t.right(91)</code>. <strong>You'll know it worked when</strong> you see a slowly rotating spiral with gaps between the lines.</li>
+<li>Add <code>t.pencolor("blue")</code> before the <code>while</code> loop, then inside the loop add <code>if step &gt; 80: t.pencolor("red")</code>. <strong>You'll know it worked when</strong> the inner part of the spiral draws blue and the outer part draws red.</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Great Work!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've mastered the <code>while</code> loop — Python's engine for open-ended repetition! You know how to stop loops with <code>break</code>, skip steps with <code>continue</code>, use the <code>time</code> module, and build animations that grow step by step. Games, simulations, and interactive programs all run on exactly this kind of loop. Let's keep coding it together!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 

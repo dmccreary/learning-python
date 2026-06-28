@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Resources for teaching Python to beginning programmers.">
+        <meta name="description" content="Use Python's for loop and range() to draw squares, polygons, and star patterns with turtle graphics — then explore absolute positioning and screen control.">
       
       
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/python/chapters/07-for-loops-and-shapes/">
+        <link rel="canonical" href="https://dmccreary.github.io/learning-python/chapters/07-for-loops-and-shapes/">
       
       
         <link rel="prev" href="../06-math-and-arithmetic/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>7. For Loops and Drawing Shapes - Beginning Python</title>
+        <title>For Loops and Drawing Shapes - Beginning Python</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7. For Loops and Drawing Shapes
+              For Loops and Drawing Shapes
             
           </span>
         </div>
@@ -176,7 +176,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/dmccreary/python" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -221,7 +221,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/dmccreary/python" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -512,6 +512,96 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-for-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      The for Loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-loop-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the Loop Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding range()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-loop-counter-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Loop Counter Variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-loop-accumulator-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Loop Accumulator Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-any-regular-polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drawing Any Regular Polygon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-turtle-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Turtle Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-star-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drawing Star Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
     </span>
   </a>
   
@@ -3252,6 +3342,96 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-for-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      The for Loop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try It Now
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-loop-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the Loop Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding range()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-loop-counter-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Loop Counter Variable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-loop-accumulator-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Loop Accumulator Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-any-regular-polygon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drawing Any Regular Polygon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-turtle-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      More Turtle Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-star-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drawing Star Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiments
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3299,13 +3479,282 @@ position queries, and a classic star pattern project.</p>
 <li><a href="../06-math-and-arithmetic/">Chapter 6: Math and Arithmetic</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<p>By the end of this lesson you'll be able to:</p>
+<ul>
+<li>Use a <code>for</code> loop with <code>range()</code> to repeat turtle commands any number of times</li>
+<li>Draw any regular polygon by combining a loop with the <code>360 / sides</code> formula</li>
+<li>Use <code>goto()</code>, <code>setheading()</code>, and <code>circle()</code> to control the turtle's position precisely</li>
+<li>Draw a classic five-pointed star using the loop counter</li>
+</ul>
+<p>In Chapter 5 you drew a partial square by writing four <code>forward()</code> and <code>right()</code> commands in a row.
+In this chapter you will write the same drawing with just <strong>two lines</strong> inside a loop — and then use that same idea to draw shapes with 100 sides.</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome to Chapter 7!</p>
+<p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
+Loops are one of the biggest ideas in programming. Once you understand them, you'll never copy-and-paste code again — you'll just tell Python how many times to repeat something and let it do the work. Let's code it together!</p>
+</div>
+<h2 id="the-for-loop">The for Loop<a class="headerlink" href="#the-for-loop" title="Permanent link">&para;</a></h2>
+<p>A <strong>for loop</strong> repeats a block of code a set number of times.
+In Python, the most common form uses <strong><code>range()</code></strong> to count:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+<p>This prints <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code> — four numbers, starting at zero.
+The indented line (<code>print(i)</code>) is the <strong>loop body</strong> — everything Python repeats.
+The variable <code>i</code> is the <strong>loop counter</strong> — it changes value on every trip through the loop.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Scratch Bridge</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+In Scratch, the <strong>Repeat</strong> block runs its contents a fixed number of times. Python's <code>for i in range(n):</code> does exactly the same thing! The big difference: Python also gives you the counter <code>i</code> as a variable you can use inside the loop — great for creating patterns that change on every step.</p>
+</div>
+<p>Now let's put a <code>for</code> loop to work with the turtle.
+Before you run the program below, think about what <code>forward(100)</code> and <code>right(90)</code> repeated four times will draw.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The loop runs <strong>4 times</strong>. Each time, the turtle moves forward 100 pixels and turns right 90°.
+A 90° right turn is a perfect corner. What shape do you think will appear?
+Make your guess — then click Run!</p>
+</div>
+<h2 id="try-it-now">Try It Now<a class="headerlink" href="#try-it-now" title="Permanent link">&para;</a></h2>
+<p>Edit the code below and click <strong>Run</strong> to see the result.</p>
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+<div id="skulpt-lab">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">import turtle
+t = turtle.Turtle()
+for i in range(4):
+    t.forward(100)
+    t.right(90)
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+<p>Were you right? Two lines inside a loop draw a complete square — the same shape that took eight lines in Chapter 5!</p>
+<h2 id="how-the-loop-works">How the Loop Works<a class="headerlink" href="#how-the-loop-works" title="Permanent link">&para;</a></h2>
+<p>Here is what Python does on each trip through the loop:</p>
+<table>
+<thead>
+<tr>
+<th>Trip</th>
+<th><code>i</code> value</th>
+<th>What the turtle does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1st</td>
+<td><code>0</code></td>
+<td>forward 100, turn right 90°</td>
+</tr>
+<tr>
+<td>2nd</td>
+<td><code>1</code></td>
+<td>forward 100, turn right 90°</td>
+</tr>
+<tr>
+<td>3rd</td>
+<td><code>2</code></td>
+<td>forward 100, turn right 90°</td>
+</tr>
+<tr>
+<td>4th</td>
+<td><code>3</code></td>
+<td>forward 100, turn right 90°</td>
+</tr>
+</tbody>
+</table>
+<p>After four 90° turns the turtle has rotated a full 360° and is facing its original direction — which is why the shape closes perfectly into a square.</p>
+<p><strong>Indentation matters.</strong> The two lines inside the loop (<code>t.forward(100)</code> and <code>t.right(90)</code>) must both be indented by exactly four spaces (or one Tab). Python uses indentation to know which lines belong to the loop body and which ones come <em>after</em> the loop.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>    <span class="c1"># ← part of the loop (indented)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>       <span class="c1"># ← part of the loop (indented)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>             <span class="c1"># ← NOT part of the loop (no indent)</span>
+</code></pre></div>
+<h2 id="understanding-range">Understanding range()<a class="headerlink" href="#understanding-range" title="Permanent link">&para;</a></h2>
+<p><code>range()</code> can take one, two, or three arguments:</p>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>What it produces</th>
+<th>Example output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>range(n)</code></td>
+<td>0, 1, 2, …, n-1</td>
+<td><code>range(4)</code> → 0 1 2 3</td>
+</tr>
+<tr>
+<td><code>range(start, stop)</code></td>
+<td>start, start+1, …, stop-1</td>
+<td><code>range(2, 6)</code> → 2 3 4 5</td>
+</tr>
+<tr>
+<td><code>range(start, stop, step)</code></td>
+<td>start, start+step, …, &lt; stop</td>
+<td><code>range(0, 10, 2)</code> → 0 2 4 6 8</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>step</strong> argument lets you skip values or count backwards:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">45</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>    <span class="c1"># 0, 45, 90, 135, 180, 225, 270, 315</span>
+</code></pre></div>
+<p>This is useful for drawing shapes at regular angular intervals — for example, drawing eight lines radiating from the center like spokes on a wheel, each 45° apart.</p>
+<h2 id="the-loop-counter-variable">The Loop Counter Variable<a class="headerlink" href="#the-loop-counter-variable" title="Permanent link">&para;</a></h2>
+<p>The counter <code>i</code> is a real variable — you can use it <em>inside</em> the loop body.
+This lets you make each step slightly different:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">20</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>   <span class="c1"># 20, 40, 60, 80, 100</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+</code></pre></div>
+<p>Each forward step gets 20 pixels longer because <code>i</code> grows by 1 on every trip.
+The result is a staircase shape instead of a square.</p>
+<h2 id="the-loop-accumulator-pattern">The Loop Accumulator Pattern<a class="headerlink" href="#the-loop-accumulator-pattern" title="Permanent link">&para;</a></h2>
+<p>An <strong>accumulator</strong> is a variable you set up <em>before</em> the loop and update <em>inside</em> the loop on every step.
+The most common accumulator just adds values together:</p>
+<div class="highlight"><pre><span></span><code><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>               <span class="c1"># start the accumulator at zero</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>   <span class="c1"># i takes values 1, 2, 3, 4, 5</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span>          <span class="c1"># add i to total on each trip</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>            <span class="c1"># 15  (1+2+3+4+5)</span>
+</code></pre></div>
+<p>You will use the accumulator pattern constantly — for counting things, summing scores, and building strings character by character.</p>
+<h2 id="drawing-any-regular-polygon">Drawing Any Regular Polygon<a class="headerlink" href="#drawing-any-regular-polygon" title="Permanent link">&para;</a></h2>
+<p>Combine the <code>for</code> loop with the <code>360 / sides</code> formula from Chapter 6 and you can draw any regular polygon:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">sides</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">turn_angle</span> <span class="o">=</span> <span class="mi">360</span> <span class="o">/</span> <span class="n">sides</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">sides</span><span class="p">):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="n">turn_angle</span><span class="p">)</span>
+</code></pre></div>
+<p>Change <code>sides</code> to any number and the loop adapts automatically.</p>
+<h2 id="more-turtle-commands">More Turtle Commands<a class="headerlink" href="#more-turtle-commands" title="Permanent link">&para;</a></h2>
+<p>With the loop mastered, it's time to add precision turtle commands to your toolkit.
+Before looking at each one, here is a quick reference:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>t.goto(x, y)</code></td>
+<td>Jump to position (x, y) — canvas center is (0, 0)</td>
+</tr>
+<tr>
+<td><code>t.setheading(angle)</code></td>
+<td>Point the turtle in an exact compass direction</td>
+</tr>
+<tr>
+<td><code>t.circle(radius)</code></td>
+<td>Draw a circle with the given radius</td>
+</tr>
+<tr>
+<td><code>t.xcor()</code></td>
+<td>Return the turtle's current x position</td>
+</tr>
+<tr>
+<td><code>t.ycor()</code></td>
+<td>Return the turtle's current y position</td>
+</tr>
+<tr>
+<td><code>t.clear()</code></td>
+<td>Erase everything the turtle drew, but keep the turtle</td>
+</tr>
+<tr>
+<td><code>t.reset()</code></td>
+<td>Erase drawings AND return the turtle to the start</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Absolute positioning with <code>goto(x, y)</code>.</strong> The canvas has a coordinate system where <code>(0, 0)</code> is the center. Positive x is right, positive y is up, negative x is left, negative y is down. <code>t.goto(100, 0)</code> moves the turtle to a point 100 pixels to the right of center — drawing a line there unless you call <code>t.penup()</code> first.</p>
+<p><strong>Pointing with <code>setheading(angle)</code>.</strong> The heading is measured in degrees from the positive x-axis (East), counter-clockwise:
+- <code>0</code> = East (right)
+- <code>90</code> = North (up)
+- <code>180</code> = West (left)
+- <code>270</code> = South (down)</p>
+<p><strong>Drawing <code>circle(radius)</code>.</strong> <code>t.circle(50)</code> draws a circle with a 50-pixel radius, starting where the turtle currently stands.</p>
+<p><strong>Querying position.</strong> <code>t.xcor()</code> and <code>t.ycor()</code> return the turtle's current x and y coordinates as floats.
+This is useful for printing progress or for placing text at the turtle's location.</p>
+<h2 id="drawing-star-patterns">Drawing Star Patterns<a class="headerlink" href="#drawing-star-patterns" title="Permanent link">&para;</a></h2>
+<p>A <strong>five-pointed star</strong> is one of the most satisfying shapes to draw with a loop.
+The trick is the turn angle: <code>144°</code> per point.</p>
+<p>Here is how the math works:
+- A five-pointed star has 5 points
+- At each point, the turtle turns <code>360° × 2 / 5</code> = <code>144°</code>
+  (it travels <em>two</em> full rotations around the star instead of one)</p>
+<p>The program below draws four of the five points — it is missing the correct turn angle.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Your Turn — Complete the Star</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The turtle below draws lines but never closes the star because the turn angle is wrong.
+Replace the <code>???</code> with the correct number of degrees so the turtle traces all five points
+and returns to exactly where it started.
+<strong>Hint:</strong> the turn angle for a 5-pointed star is <code>144</code>.</p>
+</div>
+<div id="skulpt-lab-2">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import turtle
+t = turtle.Turtle()
+t.speed(3)
+for i in range(5):
+    t.forward(150)
+    t.right(???)    # replace ??? with the correct turn angle
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+<p>When the star closes perfectly back at the starting point, you know the turn angle is correct!</p>
+<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
+<p>Try these changes to the star program above. For each one, predict what will happen first, then run it to check!</p>
+<ol>
+<li>Change <code>range(5)</code> to <code>range(7)</code> and the turn angle to <code>154</code> (approximately <code>360 * 2 / 7</code>). <strong>You'll know it worked when</strong> you see a seven-pointed star.</li>
+<li>Change <code>t.forward(150)</code> to <code>t.forward(i * 30 + 30)</code>. <strong>You'll know it worked when</strong> each arm of the star gets longer than the last.</li>
+<li>Add <code>t.pencolor("red")</code> before the loop. <strong>You'll know it worked when</strong> the star draws in red.</li>
+<li>After the star loop, add <code>t.penup()</code>, <code>t.goto(0, 0)</code>, <code>t.pendown()</code>, and <code>t.circle(80)</code>. <strong>You'll know it worked when</strong> a circle appears in the center of the star.</li>
+<li>Change <code>t.speed(3)</code> to <code>t.speed(1)</code> and watch Monty draw slowly, or <code>t.speed(10)</code> for maximum speed.</li>
+</ol>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Great Work!</p>
+<p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
+You've mastered one of the most important ideas in all of programming — the loop. With just two lines inside a <code>for</code> block you drew a square, then a polygon, then a star. You also learned <code>goto()</code>, <code>circle()</code>, and <code>setheading()</code> for precise turtle control. These tools will be your drawing toolkit for the rest of the course. Let's keep coding it together!</p>
+</div>
 
 
 
 
 
 
+
+  
+  
 
 
 
