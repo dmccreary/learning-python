@@ -1,35 +1,320 @@
-# Modules and Random Numbers
-
-## Summary
-
-Python's `import` system gives you access to thousands of extra tools.
-This chapter covers `from...import` to grab specific names, aliases with `as`,
-and `import *`. Then you'll dive into the `random` module — essential for games,
-generative art, and simulations — covering `randint()`, `choice()`, `shuffle()`,
-`seed()`, `random()`, and `sample()`.
-
-## Concepts Covered
-
-This chapter covers the following 10 concepts from the learning graph:
-
-1. from...import Specific Names
-2. import...as Alias
-3. from...import Star
-4. random Module Overview
-5. random.randint()
-6. random.choice()
-7. random.shuffle()
-8. random.seed()
-9. random.random() Float
-10. random.sample()
-
-## Prerequisites
-
-This chapter builds on concepts from:
-
-- [Chapter 4: Functions and Objects](../04-functions-and-objects/index.md)
-- [Chapter 15: Lists — Basics](../15-lists-basics/index.md)
-
+---
+title: Modules and Random Numbers
+description: Learn how to import modules, use aliases, and harness the random module to build games and generative art
+generated_by: claude skill chapter-content-generator
+date: 2026-06-28 12:50:00
+version: 0.09
 ---
 
-TODO: Generate Chapter Content
+# Modules and Random Numbers
+
+By the end of this lesson you'll be able to:
+
+- Import a module using `import`, `from...import`, and `import...as` syntax
+- Generate random integers with `random.randint()` and random floats with `random.random()`
+- Pick random items with `random.choice()` and shuffle a list with `random.shuffle()`
+- Use `random.seed()` to make your random results repeatable
+
+Python comes with a huge library of extra tools called **modules**.
+Instead of writing everything from scratch, you `import` the tool you need.
+The `random` module is one of the most fun — it lets you add surprise and variety to your programs.
+
+!!! mascot-welcome "Welcome to Chapter 17!"
+    ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Modules are like power-ups for your programs! Import one and suddenly you can do
+    things Python couldn't do on its own. Today we're unlocking the `random` module —
+    perfect for games and generative art. Let's code it together!
+
+<script src="https://skulpt.org/js/skulpt.min.js"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+
+## The `import` Statement
+
+Python's standard library contains dozens of modules ready to use.
+To load a module, write `import module_name` at the top of your program.
+After importing, access its functions with `module.function()`.
+
+```python
+import random
+print(random.randint(1, 10))   # random number between 1 and 10
+```
+
+## `from...import` — Grab Specific Names
+
+If you only need one or two functions from a module, you can import just those names.
+After a `from...import`, you call the function directly without the module prefix.
+
+```python
+from random import randint, choice
+
+print(randint(1, 6))       # no "random." needed
+print(choice(["a","b","c"]))
+```
+
+## `import...as` — Give a Module a Nickname
+
+Long module names can be shortened with `as`:
+
+```python
+import random as rnd
+print(rnd.randint(1, 100))
+```
+
+## `from...import *` — Import Everything
+
+`from random import *` imports every public name from the module.
+This is convenient but can cause confusion if two modules define a function with the same name.
+Use it only for quick experiments, not in serious programs.
+
+## The `random` Module
+
+The `random` module generates numbers that look unpredictable.
+
+Before we try each function, here's a summary of the key ones:
+
+| Function | Returns | Example |
+|----------|---------|---------|
+| `randint(a, b)` | Random integer from a to b (inclusive) | `randint(1, 6)` → 4 |
+| `random()` | Random float from 0.0 to 1.0 | `random()` → 0.73... |
+| `choice(seq)` | One random item from a list | `choice(["red","blue"])` |
+| `shuffle(lst)` | Shuffles a list in place (returns None) | `shuffle(cards)` |
+| `sample(seq, k)` | List of k unique random items | `sample(range(1,50), 6)` |
+| `seed(n)` | Sets the random starting point | `seed(42)` → same results every time |
+
+## `random.randint()` — Random Integers
+
+`randint(a, b)` returns a random integer where `a <= result <= b`.
+Both endpoints are included.
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    The code below simulates rolling a 6-sided die five times.
+    Will you ever get the same number twice in a row? Make your guess — then run it!
+
+<div id="skulpt-lab" class="skulpt-text-only">
+  <div id="editor-container">
+    <textarea id="code" spellcheck="false">import random
+
+print("Rolling a die 5 times:")
+for i in range(5):
+    roll = random.randint(1, 6)
+    print(f"  Roll {i+1}: {roll}")
+</textarea>
+    <div id="button-row">
+      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
+      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+    </div>
+    <pre id="output"></pre>
+  </div>
+  <div id="canvas-container">
+    <div id="turtle-target"></div>
+  </div>
+</div>
+
+Run it a few times — the results change each time because the numbers are random.
+
+## `random.choice()` — Pick from a List
+
+`choice(seq)` picks one random item from a sequence (list, string, or tuple).
+
+<div id="skulpt-lab-2" class="skulpt-text-only">
+  <div id="editor-container-2">
+    <textarea id="code-2" spellcheck="false">import random
+
+colors = ["red", "orange", "yellow", "green", "blue", "violet"]
+print("Random color:", random.choice(colors))
+
+directions = ["left", "right", "forward", "back"]
+print("Random direction:", random.choice(directions))
+</textarea>
+    <div id="button-row-2">
+      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
+      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+    </div>
+    <pre id="output-2"></pre>
+  </div>
+  <div id="canvas-container-2">
+    <div id="turtle-target-2"></div>
+  </div>
+</div>
+
+## `random.shuffle()` — Shuffle a List
+
+`shuffle(lst)` rearranges the items of a list in a random order.
+It modifies the list **in place** and returns `None` — so don't write `lst = shuffle(lst)`.
+
+<div id="skulpt-lab-3" class="skulpt-text-only">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">import random
+
+cards = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+print("Before shuffle:", cards[:5], "...")
+random.shuffle(cards)
+print("After shuffle: ", cards[:5], "...")
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+## `random.random()` — Random Float
+
+`random()` returns a float between 0.0 and 1.0. The result can be exactly 0.0 but is never exactly 1.0.
+
+This is useful when you want a *percentage* or *probability*. Multiply to scale it:
+
+```python
+import random
+prob = random.random()           # between 0.0 and 1.0
+scaled = random.random() * 100  # between 0.0 and 100.0
+```
+
+## `random.sample()` — Pick Without Replacement
+
+`sample(seq, k)` picks `k` unique items from the sequence (no repeats).
+This is like drawing lottery numbers — once a number is drawn, it can't be drawn again.
+
+```python
+import random
+lottery = random.sample(range(1, 50), 6)
+print("Lottery numbers:", sorted(lottery))
+```
+
+## `random.seed()` — Repeatable Randomness
+
+Every time you run a random program, Python uses a different starting point (called a **seed**) so the results are different.
+
+If you call `random.seed(n)` with the same number every time, you get exactly the same "random" sequence.
+This is useful for testing — you want your program to behave the same way during testing.
+
+<div id="skulpt-lab-4" class="skulpt-text-only">
+  <div id="editor-container-4">
+    <textarea id="code-4" spellcheck="false">import random
+
+random.seed(42)
+print("With seed 42:", [random.randint(1, 10) for _ in range(5)])
+
+random.seed(42)   # reset to the same seed
+print("Same again: ", [random.randint(1, 10) for _ in range(5)])
+
+# No seed — different every run:
+print("No seed:   ", [random.randint(1, 10) for _ in range(5)])
+</textarea>
+    <div id="button-row-4">
+      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
+      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
+    </div>
+    <pre id="output-4"></pre>
+  </div>
+  <div id="canvas-container-4">
+    <div id="turtle-target-4"></div>
+  </div>
+</div>
+
+## Random Art with Turtle
+
+Let's put `random` to work with turtle graphics — random colors, sizes, and positions to create generative art.
+
+<div id="skulpt-lab-5">
+  <div id="editor-container-5">
+    <textarea id="code-5" spellcheck="false">import turtle
+import random
+
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+turtle.bgcolor("black")
+
+colors = ["#FF6B6B", "#FFE66D", "#4ECDC4", "#95E1D3", "#F38181", "#A8E6CF"]
+
+for _ in range(40):
+    t.penup()
+    x = random.randint(-180, 180)
+    y = random.randint(-180, 180)
+    t.goto(x, y)
+    t.pendown()
+    t.pencolor(random.choice(colors))
+    t.pensize(random.randint(1, 4))
+    size = random.randint(10, 50)
+    sides = random.randint(3, 8)
+    t.fillcolor(random.choice(colors))
+    t.begin_fill()
+    for i in range(sides):
+        t.forward(size)
+        t.right(360 / sides)
+    t.end_fill()
+</textarea>
+    <div id="button-row-5">
+      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
+      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
+    </div>
+    <pre id="output-5"></pre>
+  </div>
+  <div id="canvas-container-5">
+    <div id="turtle-target-5"></div>
+  </div>
+</div>
+
+Run it multiple times — because of randomness, you'll get a different artwork every single time!
+
+## Learning Check
+
+!!! mascot-thinking "Your Turn — Fix the Shuffle"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    The code below tries to shuffle a list and print it, but it has a bug —
+    it assigns the return value of `shuffle()` to `cards`, losing the list!
+    Fix it so the list is actually shuffled and printed.
+
+<div id="skulpt-lab-6" class="skulpt-text-only">
+  <div id="editor-container-6">
+    <textarea id="code-6" spellcheck="false">import random
+
+cards = ["A", "2", "3", "4", "5"]
+
+# Bug: shuffle returns None, not the shuffled list!
+cards = random.shuffle(cards)
+
+print("Shuffled:", cards)
+</textarea>
+    <div id="button-row-6">
+      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
+      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
+    </div>
+    <pre id="output-6"></pre>
+  </div>
+  <div id="canvas-container-6">
+    <div id="turtle-target-6"></div>
+  </div>
+</div>
+
+## Experiments
+
+Try these changes. Predict what will happen first, then run it to check!
+
+1. Simulate flipping a coin 10 times. Use `random.choice(["heads", "tails"])` and count how many heads you get.
+   **You'll know it worked when** you see a count between 0 and 10.
+
+2. Pick 6 lottery numbers from 1–49 using `random.sample(range(1, 50), 6)`. Print them sorted.
+   **You'll know it worked when** you see 6 unique numbers in order.
+
+3. Change the random art loop count from `40` to `100`. Notice the effect.
+   **You'll know it worked when** the canvas is much more filled with shapes.
+
+4. Set `random.seed(7)` before the random art loop. Run it twice.
+   **You'll know it worked when** both runs produce identical artwork.
+
+5. Use `random.random()` to simulate a 30% chance event: print `"Lucky!"` if the result is below `0.3`.
+   Run it 10 times with a loop.
+   **You'll know it worked when** roughly 3 out of 10 iterations print "Lucky!".
+
+!!! mascot-celebration "Random Wizard!"
+    ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    You've unlocked modules and mastered the `random` module!
+    Games, simulations, and generative art all rely on randomness — and now you can use it too.
+    Next chapter we'll add math power to your turtle programs. Let's keep coding!
