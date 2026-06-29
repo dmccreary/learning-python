@@ -193,6 +193,7 @@ nav:
     - Color-Banded Pentagon Spiral: turtle-graphics-gallery/pentagon-spiral/index.md
     - Koch Snowflake: turtle-graphics-gallery/koch-snowflake/index.md
     - Sierpinski Triangle: turtle-graphics-gallery/sierpinski-triangle/index.md
+    - Fractal Tree: turtle-graphics-gallery/fractal-tree/index.md
 
   - Intermediate Python:
     - Introduction: intermediate/01-intro.md

@@ -250,6 +250,17 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Fractal Tree**
+
+    ---
+
+    ![Fractal Tree](./fractal-tree/screen-image.png)
+
+    A binary recursive tree with a thick brown trunk fading to green leaf tips.
+    Teaches: binary recursion, `backward()` to return to fork points, depth-driven styling.
+
+    [:octicons-arrow-right-24: Open Lab](./fractal-tree/index.md)
+
 -   **Sierpiński Triangle**
 
     ---
