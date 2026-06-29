@@ -250,6 +250,17 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Spiral of Spirals**
+
+    ---
+
+    ![Spiral of Spirals](./spiral-of-spirals/screen-image.png)
+
+    Twelve small square spirals arranged in a ring, each facing outward from the center.
+    Teaches: reusable functions, `cos`/`sin` placement, and pattern-of-patterns composition.
+
+    [:octicons-arrow-right-24: Open Lab](./spiral-of-spirals/index.md)
+
 -   **Fibonacci Spiral**
 
     ---
