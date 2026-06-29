@@ -186,6 +186,7 @@ nav:
     - Hexagonal Spiral: turtle-graphics-gallery/hexagonal-spiral/index.md
     - Triangular Spiral: turtle-graphics-gallery/triangular-spiral/index.md
     - Inward Collapsing Spiral: turtle-graphics-gallery/inward-spiral/index.md
+    - Colored Logarithmic Spiral: turtle-graphics-gallery/logarithmic-spiral/index.md
 
   - Intermediate Python:
     - Introduction: intermediate/01-intro.md

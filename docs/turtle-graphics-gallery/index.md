@@ -250,6 +250,17 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Colored Logarithmic Spiral**
+
+    ---
+
+    ![Colored Logarithmic Spiral](./logarithmic-spiral/screen-image.png)
+
+    A smooth, continuously curved spiral colored by angle — built with `cos()` and `sin()`.
+    Teaches: polar-to-Cartesian conversion, `math.exp()`, and `goto()` for smooth curves.
+
+    [:octicons-arrow-right-24: Open Lab](./logarithmic-spiral/index.md)
+
 -   **Inward Collapsing Spiral**
 
     ---
