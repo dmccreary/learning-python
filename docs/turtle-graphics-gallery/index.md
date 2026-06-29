@@ -250,6 +250,61 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Lissajous Figure**
+
+    ---
+
+    ![Lissajous Figure](./lissajous-figure/screen-image.png)
+
+    `x=A*sin(a*t+δ), y=B*sin(b*t)` — frequency ratio controls loop count.
+    Teaches: parametric equations, `math.sin`, oscilloscope math.
+
+    [:octicons-arrow-right-24: Open Lab](./lissajous-figure/index.md)
+
+-   **Rose Curve**
+
+    ---
+
+    ![Rose Curve](./rose-curve/screen-image.png)
+
+    `r = cos(k*theta)` in polar coordinates — odd k gives k petals, even k gives 2k.
+    Teaches: polar equations, polar-to-Cartesian conversion, petal counting rules.
+
+    [:octicons-arrow-right-24: Open Lab](./rose-curve/index.md)
+
+-   **Spirograph**
+
+    ---
+
+    ![Spirograph](./spirograph/screen-image.png)
+
+    Hypotrochoid: a point on a small circle rolling inside a larger one.
+    Teaches: parametric equations, `R`, `r`, `d` parameters, closed curve conditions.
+
+    [:octicons-arrow-right-24: Open Lab](./spirograph/index.md)
+
+-   **Butterfly Curve**
+
+    ---
+
+    ![Butterfly Curve](./butterfly-curve/screen-image.png)
+
+    `r = exp(cos t) - 2cos(4t) + sin⁵(t/12)` — complex shapes from one equation.
+    Teaches: `math.exp`, combining trig terms, 12π periodic curves.
+
+    [:octicons-arrow-right-24: Open Lab](./butterfly-curve/index.md)
+
+-   **Epicycloid Star**
+
+    ---
+
+    ![Epicycloid Star](./epicycloid-star/screen-image.png)
+
+    Small circle rolling outside a large one — `R/r` integer gives that many cusps.
+    Teaches: epicycloid parametric equations, cusp geometry, star construction.
+
+    [:octicons-arrow-right-24: Open Lab](./epicycloid-star/index.md)
+
 -   **Sunflower Seed Spiral**
 
     ---
