@@ -250,6 +250,17 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Koch Snowflake**
+
+    ---
+
+    ![Koch Snowflake](./koch-snowflake/screen-image.png)
+
+    A classic fractal snowflake built by recursively bumping every line segment outward.
+    Teaches: recursion, base cases, and how one rule repeated creates infinite complexity.
+
+    [:octicons-arrow-right-24: Open Lab](./koch-snowflake/index.md)
+
 -   **Color-Banded Pentagon Spiral**
 
     ---

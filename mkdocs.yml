@@ -191,6 +191,7 @@ nav:
     - Fibonacci Spiral: turtle-graphics-gallery/fibonacci-spiral/index.md
     - Spiral of Spirals: turtle-graphics-gallery/spiral-of-spirals/index.md
     - Color-Banded Pentagon Spiral: turtle-graphics-gallery/pentagon-spiral/index.md
+    - Koch Snowflake: turtle-graphics-gallery/koch-snowflake/index.md
 
   - Intermediate Python:
     - Introduction: intermediate/01-intro.md
