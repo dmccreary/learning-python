@@ -194,6 +194,9 @@ nav:
     - Koch Snowflake: turtle-graphics-gallery/koch-snowflake/index.md
     - Sierpinski Triangle: turtle-graphics-gallery/sierpinski-triangle/index.md
     - Fractal Tree: turtle-graphics-gallery/fractal-tree/index.md
+    - Bouncing Ball: turtle-graphics-gallery/bouncing-ball/index.md
+    - Clock Face: turtle-graphics-gallery/clock-face/index.md
+    - Spirograph Drawer: turtle-graphics-gallery/spirograph-drawer/index.md
     - Spiral Text: turtle-graphics-gallery/spiral-text/index.md
     - Seven-Segment Display: turtle-graphics-gallery/seven-segment/index.md
     - Circular Name Badge: turtle-graphics-gallery/circular-badge/index.md

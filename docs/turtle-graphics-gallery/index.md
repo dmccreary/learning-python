@@ -250,6 +250,39 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Bouncing Ball**
+
+    ---
+
+    ![Bouncing Ball](./bouncing-ball/screen-image.png)
+
+    Animated ball bouncing inside a box — velocity, position, wall collision detection.
+    Teaches: animation loop, `tracer(0)`, `update()`, velocity reversal on collision.
+
+    [:octicons-arrow-right-24: Open Lab](./bouncing-ball/index.md)
+
+-   **Clock Face**
+
+    ---
+
+    ![Clock Face](./clock-face/screen-image.png)
+
+    Analog clock with tick marks and three hands computed from hours/minutes/seconds.
+    Teaches: angle math for clock hands, tick mark placement, `setheading`.
+
+    [:octicons-arrow-right-24: Open Lab](./clock-face/index.md)
+
+-   **Spirograph Drawer**
+
+    ---
+
+    ![Spirograph Drawer](./spirograph-drawer/screen-image.png)
+
+    Six overlapping hypotrochoid curves drawn sequentially in different colors.
+    Teaches: parameter lists, animation with `tracer(0)`, layered generative art.
+
+    [:octicons-arrow-right-24: Open Lab](./spirograph-drawer/index.md)
+
 -   **Spiral Text**
 
     ---
