@@ -250,6 +250,61 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Mandelbrot Pixel Art**
+
+    ---
+
+    ![Mandelbrot Pixel Art](./mandelbrot-pixel-art/screen-image.png)
+
+    Pixel-art Mandelbrot set colored by escape time using `dot()` on a grid.
+    Teaches: complex number iteration, escape-time coloring, raster graphics.
+
+    [:octicons-arrow-right-24: Open Lab](./mandelbrot-pixel-art/index.md)
+
+-   **Julia Set Pixel Art**
+
+    ---
+
+    ![Julia Set Pixel Art](./julia-set/screen-image.png)
+
+    The Mandelbrot's cousin — same iteration, fixed `c`, different starting `z` per pixel.
+    Teaches: IFS concepts, how swapping z and c gives infinite fractal variety.
+
+    [:octicons-arrow-right-24: Open Lab](./julia-set/index.md)
+
+-   **Sierpiński Carpet**
+
+    ---
+
+    ![Sierpiński Carpet](./sierpinski-carpet/screen-image.png)
+
+    9-subdivision of a square with the center removed, recursed 4 levels deep.
+    Teaches: 8-way recursion, `(8/9)^n` area shrinkage, center-hole removal.
+
+    [:octicons-arrow-right-24: Open Lab](./sierpinski-carpet/index.md)
+
+-   **Barnsley Fern**
+
+    ---
+
+    ![Barnsley Fern](./barnsley-fern/screen-image.png)
+
+    A photorealistic fern leaf from 5000 random-transformation dot placements.
+    Teaches: Iterated Function Systems, probability-weighted choice, scatter plots.
+
+    [:octicons-arrow-right-24: Open Lab](./barnsley-fern/index.md)
+
+-   **Anti-Koch Snowflake**
+
+    ---
+
+    ![Anti-Koch Snowflake](./anti-koch/screen-image.png)
+
+    Koch snowflake variant where bumps alternate inward and outward at each depth level.
+    Teaches: rule alternation, sign changes in recursive turn angles.
+
+    [:octicons-arrow-right-24: Open Lab](./anti-koch/index.md)
+
 -   **Pythagorean Tree**
 
     ---

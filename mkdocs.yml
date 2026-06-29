@@ -194,6 +194,11 @@ nav:
     - Koch Snowflake: turtle-graphics-gallery/koch-snowflake/index.md
     - Sierpinski Triangle: turtle-graphics-gallery/sierpinski-triangle/index.md
     - Fractal Tree: turtle-graphics-gallery/fractal-tree/index.md
+    - Mandelbrot Pixel Art: turtle-graphics-gallery/mandelbrot-pixel-art/index.md
+    - Julia Set Pixel Art: turtle-graphics-gallery/julia-set/index.md
+    - Sierpinski Carpet: turtle-graphics-gallery/sierpinski-carpet/index.md
+    - Barnsley Fern: turtle-graphics-gallery/barnsley-fern/index.md
+    - Anti-Koch Snowflake: turtle-graphics-gallery/anti-koch/index.md
     - Pythagorean Tree: turtle-graphics-gallery/pythagorean-tree/index.md
     - T-Square Fractal: turtle-graphics-gallery/t-square-fractal/index.md
     - Levy C Curve: turtle-graphics-gallery/levy-c-curve/index.md
