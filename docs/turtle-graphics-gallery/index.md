@@ -250,6 +250,61 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Four-Fold Symmetric Doodle**
+
+    ---
+
+    ![Four-Fold Symmetric Doodle](./four-fold-doodle/screen-image.png)
+
+    Record turtle moves as data, replay them rotated 90°, 180°, 270° — instant symmetry.
+    Teaches: commands as data, replay with transformation, four-fold rotation.
+
+    [:octicons-arrow-right-24: Open Lab](./four-fold-doodle/index.md)
+
+-   **Six-Fold Mandala**
+
+    ---
+
+    ![Six-Fold Mandala](./six-fold-mandala/screen-image.png)
+
+    One mandala section drawn and rotated 60° six times to create a full mandala.
+    Teaches: `360/6 = 60°`, petal arcs with `circle()`, radial composition.
+
+    [:octicons-arrow-right-24: Open Lab](./six-fold-mandala/index.md)
+
+-   **Mirror Butterfly**
+
+    ---
+
+    ![Mirror Butterfly](./mirror-butterfly/screen-image.png)
+
+    Right wing drawn from waypoints, left wing mirrored by negating x-coordinates.
+    Teaches: `(-x, y)` reflection, list comprehension for coordinate transforms.
+
+    [:octicons-arrow-right-24: Open Lab](./mirror-butterfly/index.md)
+
+-   **Truchet Tiles**
+
+    ---
+
+    ![Truchet Tiles](./truchet-tiles/screen-image.png)
+
+    Random arc tiles that form continuous winding paths through local random choices.
+    Teaches: emergence, `random.choice`, and how local rules create global structure.
+
+    [:octicons-arrow-right-24: Open Lab](./truchet-tiles/index.md)
+
+-   **Islamic Geometric Star**
+
+    ---
+
+    ![Islamic Geometric Star](./islamic-star/screen-image.png)
+
+    8-pointed stars tiled in a grid — two overlapping squares rotated 45° from each other.
+    Teaches: exact geometric construction, grid tiling, checkerboard color alternation.
+
+    [:octicons-arrow-right-24: Open Lab](./islamic-star/index.md)
+
 -   **Mandelbrot Pixel Art**
 
     ---
