@@ -194,6 +194,11 @@ nav:
     - Koch Snowflake: turtle-graphics-gallery/koch-snowflake/index.md
     - Sierpinski Triangle: turtle-graphics-gallery/sierpinski-triangle/index.md
     - Fractal Tree: turtle-graphics-gallery/fractal-tree/index.md
+    - L-System Plant: turtle-graphics-gallery/l-system-plant/index.md
+    - Turtle Maze Generator: turtle-graphics-gallery/turtle-maze/index.md
+    - Parametric Surface Projection: turtle-graphics-gallery/parametric-surface/index.md
+    - Lindenmayer Snowflake Collection: turtle-graphics-gallery/linden-snowflakes/index.md
+    - Generative Art Loop: turtle-graphics-gallery/generative-art/index.md
     - Bouncing Ball: turtle-graphics-gallery/bouncing-ball/index.md
     - Clock Face: turtle-graphics-gallery/clock-face/index.md
     - Spirograph Drawer: turtle-graphics-gallery/spirograph-drawer/index.md

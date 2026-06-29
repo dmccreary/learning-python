@@ -250,6 +250,61 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **L-System Plant**
+
+    ---
+
+    ![L-System Plant](./l-system-plant/screen-image.png)
+
+    Lindenmayer rules expand a single character into a branching plant over 5 generations.
+    Teaches: L-systems, string rewriting, bracket stack for branching, depth-first growth.
+
+    [:octicons-arrow-right-24: Open Lab](./l-system-plant/index.md)
+
+-   **Turtle Maze Generator**
+
+    ---
+
+    ![Turtle Maze Generator](./turtle-maze/screen-image.png)
+
+    Recursive backtracker DFS generates a perfect maze by carving walls in a grid.
+    Teaches: 2D grids, depth-first search, recursion, wall carving with sets.
+
+    [:octicons-arrow-right-24: Open Lab](./turtle-maze/index.md)
+
+-   **Parametric Surface Projection**
+
+    ---
+
+    ![Parametric Surface Projection](./parametric-surface/screen-image.png)
+
+    3D saddle surface projected onto 2D with isometric coordinates and wireframe mesh.
+    Teaches: parametric surfaces, isometric projection, `x(u,v)` `y(u,v)` `z(u,v)`.
+
+    [:octicons-arrow-right-24: Open Lab](./parametric-surface/index.md)
+
+-   **Lindenmayer Snowflake Collection**
+
+    ---
+
+    ![Lindenmayer Snowflake Collection](./linden-snowflakes/screen-image.png)
+
+    Six L-system rule sets — Koch, Sierpiński, hex, dragon, quadratic, plant — in a grid.
+    Teaches: universal L-system interpreter, data-driven rendering, comparative fractals.
+
+    [:octicons-arrow-right-24: Open Lab](./linden-snowflakes/index.md)
+
+-   **Generative Art Loop**
+
+    ---
+
+    ![Generative Art Loop](./generative-art/screen-image.png)
+
+    Golden spiral dots + rose curve + mini-spirals = layered generative composition.
+    Teaches: combining techniques, seed-based generation, layered composition design.
+
+    [:octicons-arrow-right-24: Open Lab](./generative-art/index.md)
+
 -   **Bouncing Ball**
 
     ---
