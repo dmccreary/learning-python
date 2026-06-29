@@ -1,3 +1,0 @@
-import turtle
-
-help(turtle)
