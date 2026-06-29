@@ -173,6 +173,16 @@ nav:
     - Overlapping Squares: turtle-graphics-gallery/overlapping-squares/index.md
     - Flower with Petal Function: turtle-graphics-gallery/flower-petal-function/index.md
     - Honeycomb Grid: turtle-graphics-gallery/honeycomb-grid/index.md
+    - City Skyline: turtle-graphics-gallery/city-skyline/index.md
+    - Snowflake Arms: turtle-graphics-gallery/snowflake-arms/index.md
+    - Polka Dot Canvas: turtle-graphics-gallery/polka-dot-canvas/index.md
+    - Brick Wall: turtle-graphics-gallery/brick-wall/index.md
+    - Stars of Different Sizes: turtle-graphics-gallery/stars-different-sizes/index.md
+    - Traffic Light Stack: turtle-graphics-gallery/traffic-light/index.md
+    - Fish School: turtle-graphics-gallery/fish-school/index.md
+    - Mountain Range: turtle-graphics-gallery/mountain-range/index.md
+    - Archimedean Square Spiral: turtle-graphics-gallery/archimedean-spiral/index.md
+    - Rainbow Line Spiral: turtle-graphics-gallery/rainbow-line-spiral/index.md
 
   - Intermediate Python:
     - Introduction: intermediate/01-intro.md

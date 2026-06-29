@@ -139,4 +139,114 @@ Each pattern is runnable in your browser — click the link to open the interact
 
     [:octicons-arrow-right-24: Open Lab](./honeycomb-grid/index.md)
 
+-   **City Skyline**
+
+    ---
+
+    ![City Skyline](./city-skyline/screen-image.png)
+
+    Ten skyscrapers of varied heights fill a night skyline with glowing windows.
+    Teaches: multi-parameter functions, composing a scene from repeated calls, nested loops.
+
+    [:octicons-arrow-right-24: Open Lab](./city-skyline/index.md)
+
+-   **Snowflake Arms**
+
+    ---
+
+    ![Snowflake Arms](./snowflake-arms/screen-image.png)
+
+    Six identical arms with side twigs form a crystalline snowflake.
+    Teaches: `arm()` function, returning turtle to its start state, six-fold symmetry.
+
+    [:octicons-arrow-right-24: Open Lab](./snowflake-arms/index.md)
+
+-   **Polka Dot Canvas**
+
+    ---
+
+    ![Polka Dot Canvas](./polka-dot-canvas/screen-image.png)
+
+    Eighty colorful dots scattered at random sizes and positions across the canvas.
+    Teaches: `random.randint()`, `random.choice()`, `random.seed()` for reproducibility.
+
+    [:octicons-arrow-right-24: Open Lab](./polka-dot-canvas/index.md)
+
+-   **Brick Wall**
+
+    ---
+
+    ![Brick Wall](./brick-wall/screen-image.png)
+
+    Eight rows of staggered red-brown bricks with dark mortar lines.
+    Teaches: `fillcolor`/`pencolor` separation, the offset-row tiling pattern, ternary expressions.
+
+    [:octicons-arrow-right-24: Open Lab](./brick-wall/index.md)
+
+-   **Stars of Different Sizes**
+
+    ---
+
+    ![Stars of Different Sizes](./stars-different-sizes/screen-image.png)
+
+    Fifteen gold and red stars scattered across a dark background at random sizes.
+    Teaches: the 144° star angle, four-parameter functions, and random scatter.
+
+    [:octicons-arrow-right-24: Open Lab](./stars-different-sizes/index.md)
+
+-   **Traffic Light Stack**
+
+    ---
+
+    ![Traffic Light Stack](./traffic-light/screen-image.png)
+
+    A three-signal traffic light assembled from one rectangle and three dot calls.
+    Teaches: decomposing real objects into primitives, layered draw order, positional parameters.
+
+    [:octicons-arrow-right-24: Open Lab](./traffic-light/index.md)
+
+-   **Fish School**
+
+    ---
+
+    ![Fish School](./fish-school/screen-image.png)
+
+    Fifteen blue fish of varied sizes swim through a deep blue ocean.
+    Teaches: building creature shapes from arc + triangle, parameter-driven variation.
+
+    [:octicons-arrow-right-24: Open Lab](./fish-school/index.md)
+
+-   **Mountain Range**
+
+    ---
+
+    ![Mountain Range](./mountain-range/screen-image.png)
+
+    Three layers of mountains recede into a pale sky using color value for depth.
+    Teaches: back-to-front layering, `goto()` waypoints, atmospheric perspective with color.
+
+    [:octicons-arrow-right-24: Open Lab](./mountain-range/index.md)
+
+-   **Archimedean Square Spiral**
+
+    ---
+
+    ![Archimedean Square Spiral](./archimedean-spiral/screen-image.png)
+
+    A square spiral that grows outward using nothing but a fixed turn and a growing step.
+    Teaches: how `step += n` creates a spiral, the effect of changing the turn angle.
+
+    [:octicons-arrow-right-24: Open Lab](./archimedean-spiral/index.md)
+
+-   **Rainbow Line Spiral**
+
+    ---
+
+    ![Rainbow Line Spiral](./rainbow-line-spiral/screen-image.png)
+
+    The Archimedean spiral revisited — each segment colored by cycling six rainbow hues.
+    Teaches: `i % len(colors)` for color cycling, how period mismatch creates diagonal banding.
+
+    [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
+
 </div>
