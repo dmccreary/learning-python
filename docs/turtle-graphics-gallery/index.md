@@ -250,6 +250,17 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Inward Collapsing Spiral**
+
+    ---
+
+    ![Inward Collapsing Spiral](./inward-spiral/screen-image.png)
+
+    A spiral that starts large and converges to a point, fading from deep blue to white.
+    Teaches: decreasing sequences, `while` loops, and visual convergence.
+
+    [:octicons-arrow-right-24: Open Lab](./inward-spiral/index.md)
+
 -   **Triangular Spiral**
 
     ---

@@ -185,6 +185,7 @@ nav:
     - Rainbow Line Spiral: turtle-graphics-gallery/rainbow-line-spiral/index.md
     - Hexagonal Spiral: turtle-graphics-gallery/hexagonal-spiral/index.md
     - Triangular Spiral: turtle-graphics-gallery/triangular-spiral/index.md
+    - Inward Collapsing Spiral: turtle-graphics-gallery/inward-spiral/index.md
 
   - Intermediate Python:
     - Introduction: intermediate/01-intro.md
