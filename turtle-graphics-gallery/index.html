@@ -5035,6 +5035,111 @@
   
   
     <li class="md-nav__item">
+      <a href="lissajous-figure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lissajous Figure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rose-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rose Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="spirograph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spirograph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="butterfly-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Butterfly Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="epicycloid-star/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Epicycloid Star
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="sunflower-spiral/" class="md-nav__link">
         
   
@@ -7098,6 +7203,46 @@ Teaches: how <code>step += n</code> creates a spiral, the effect of changing the
 <p>The Archimedean spiral revisited — each segment colored by cycling six rainbow hues.
 Teaches: <code>i % len(colors)</code> for color cycling, how period mismatch creates diagonal banding.</p>
 <p><a href="rainbow-line-spiral/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Open Lab</a></p>
+</li>
+<li>
+<p><strong>Lissajous Figure</strong></p>
+<hr />
+<p><img alt="Lissajous Figure" src="lissajous-figure/screen-image.png" /></p>
+<p><code>x=A*sin(a*t+δ), y=B*sin(b*t)</code> — frequency ratio controls loop count.
+Teaches: parametric equations, <code>math.sin</code>, oscilloscope math.</p>
+<p><a href="lissajous-figure/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Open Lab</a></p>
+</li>
+<li>
+<p><strong>Rose Curve</strong></p>
+<hr />
+<p><img alt="Rose Curve" src="rose-curve/screen-image.png" /></p>
+<p><code>r = cos(k*theta)</code> in polar coordinates — odd k gives k petals, even k gives 2k.
+Teaches: polar equations, polar-to-Cartesian conversion, petal counting rules.</p>
+<p><a href="rose-curve/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Open Lab</a></p>
+</li>
+<li>
+<p><strong>Spirograph</strong></p>
+<hr />
+<p><img alt="Spirograph" src="spirograph/screen-image.png" /></p>
+<p>Hypotrochoid: a point on a small circle rolling inside a larger one.
+Teaches: parametric equations, <code>R</code>, <code>r</code>, <code>d</code> parameters, closed curve conditions.</p>
+<p><a href="spirograph/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Open Lab</a></p>
+</li>
+<li>
+<p><strong>Butterfly Curve</strong></p>
+<hr />
+<p><img alt="Butterfly Curve" src="butterfly-curve/screen-image.png" /></p>
+<p><code>r = exp(cos t) - 2cos(4t) + sin⁵(t/12)</code> — complex shapes from one equation.
+Teaches: <code>math.exp</code>, combining trig terms, 12π periodic curves.</p>
+<p><a href="butterfly-curve/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Open Lab</a></p>
+</li>
+<li>
+<p><strong>Epicycloid Star</strong></p>
+<hr />
+<p><img alt="Epicycloid Star" src="epicycloid-star/screen-image.png" /></p>
+<p>Small circle rolling outside a large one — <code>R/r</code> integer gives that many cusps.
+Teaches: epicycloid parametric equations, cusp geometry, star construction.</p>
+<p><a href="epicycloid-star/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Open Lab</a></p>
 </li>
 <li>
 <p><strong>Sunflower Seed Spiral</strong></p>
