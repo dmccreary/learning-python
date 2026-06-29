@@ -965,6 +965,10 @@
          <lastmod>2026-06-29</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/learning-python/turtle-graphics-gallery/generative-art/</loc>
+         <lastmod>2026-06-29</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/learning-python/turtle-graphics-gallery/gosper-curve/</loc>
          <lastmod>2026-06-29</lastmod>
     </url>
@@ -997,11 +1001,19 @@
          <lastmod>2026-06-29</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/learning-python/turtle-graphics-gallery/l-system-plant/</loc>
+         <lastmod>2026-06-29</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/learning-python/turtle-graphics-gallery/levy-c-curve/</loc>
          <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/learning-python/turtle-graphics-gallery/lightning-bolt/</loc>
+         <lastmod>2026-06-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/learning-python/turtle-graphics-gallery/linden-snowflakes/</loc>
          <lastmod>2026-06-29</lastmod>
     </url>
     <url>
@@ -1034,6 +1046,10 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/learning-python/turtle-graphics-gallery/overlapping-squares/</loc>
+         <lastmod>2026-06-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/learning-python/turtle-graphics-gallery/parametric-surface/</loc>
          <lastmod>2026-06-29</lastmod>
     </url>
     <url>
@@ -1146,6 +1162,10 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/learning-python/turtle-graphics-gallery/truchet-tiles/</loc>
+         <lastmod>2026-06-29</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/learning-python/turtle-graphics-gallery/turtle-maze/</loc>
          <lastmod>2026-06-29</lastmod>
     </url>
 </urlset>
