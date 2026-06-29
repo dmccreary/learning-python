@@ -12,13 +12,13 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/learning-python/skulpt/10-debugging/">
+        <link rel="canonical" href="https://dmccreary.github.io/learning-python/python-labs/03-variables/">
       
       
-        <link rel="prev" href="../04a-stop-sign/">
+        <link rel="prev" href="../02-simple-square/">
       
       
-        <link rel="next" href="../text-only-example/">
+        <link rel="next" href="../04-loops/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Reading Errors - Learning Python</title>
+        <title>03. Variables - Learning Python</title>
       
     
     
@@ -77,11 +77,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Reading Errors - Learning Python" >
+        <meta  property="og:title"  content="03. Variables - Learning Python" >
       
         <meta  property="og:description"  content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers." >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/skulpt/10-debugging.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/python-labs/03-variables.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -89,15 +89,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/learning-python/skulpt/10-debugging/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/learning-python/python-labs/03-variables/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Reading Errors - Learning Python" >
+        <meta  name="twitter:title"  content="03. Variables - Learning Python" >
       
         <meta  name="twitter:description"  content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers." >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/skulpt/10-debugging.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/python-labs/03-variables.png" >
       
     
     
@@ -118,7 +118,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-output-and-error-messages" class="md-skip">
+        <a href="#variables-for-your-drawing" class="md-skip">
           Skip to content
         </a>
       
@@ -153,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Errors
+              03. Variables
             
           </span>
         </div>
@@ -3618,7 +3618,7 @@
             
   
   <span class="md-ellipsis">
-    Skulpt Labs
+    Python Labs
   </span>
   
 
@@ -3628,7 +3628,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Skulpt Labs
+            Python Labs
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3639,11 +3639,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-simple-square/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Draw a Square
+    List of Labs
   </span>
   
 
@@ -3660,11 +3660,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../04a-stop-sign/" class="md-nav__link">
+      <a href="../01-turtle-commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Draw a Stop Sign
+    01. Turtle Commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-simple-square/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02. Drawing a Square
   </span>
   
 
@@ -3694,7 +3715,7 @@
           
   
   <span class="md-ellipsis">
-    Reading Errors
+    03. Variables
   </span>
   
 
@@ -3705,7 +3726,7 @@
         
   
   <span class="md-ellipsis">
-    Reading Errors
+    03. Variables
   </span>
   
 
@@ -3727,36 +3748,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#normal-output-everything-goes-right" class="md-nav__link">
+  <a href="#what-is-a-variable" class="md-nav__link">
     <span class="md-ellipsis">
-      Normal Output: Everything Goes Right
+      What Is a Variable?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#error-output-something-went-wrong" class="md-nav__link">
+  <a href="#sample-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Error Output: Something Went Wrong
+      Sample Code
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-read-a-nameerror" class="md-nav__link">
+  <a href="#try-it-now" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Read a NameError
+      Try It Now
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-print-checkpoints-to-find-bugs" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Using Print Checkpoints to Find Bugs
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explanation-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
     </span>
   </a>
   
@@ -3787,11 +3826,284 @@
   
   
     <li class="md-nav__item">
-      <a href="../text-only-example/" class="md-nav__link">
+      <a href="../04-loops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Text-Only Example
+    04. Loops and Polygons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04a-stop-sign/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04a. Stop Sign
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-conditionals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05. If-Else and Colors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-functions-and-flowers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06. Functions and Flowers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-function-parameters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07. Function Parameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-random-circles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08. Random Circles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-color-lists/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08. Color Lists
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08b-random-stars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08b. Random Stars
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Reading Errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-user-input/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. User Input
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-fractal-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Fractal Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-hex-colors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Hex Colors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-sine-wave/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Sine Wave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-mouse-clicks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Mouse Clicks
   </span>
   
 
@@ -3814,26 +4126,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../faq/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FAQ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
     
@@ -3842,10 +4134,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3856,8 +4148,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Learning Graph
           </label>
@@ -4073,10 +4365,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4087,8 +4379,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Repl.it Examples
           </label>
@@ -4199,10 +4491,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4213,8 +4505,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Intermediate Python
           </label>
@@ -4577,10 +4869,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4591,8 +4883,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Jupyter Notebooks
           </label>
@@ -4703,73 +4995,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Pi
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
-            Pi
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pi/01-intro.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Python on Raspberry Pi
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
-        
-          
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4780,8 +5009,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Advanced Python
           </label>
@@ -4850,10 +5079,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4864,8 +5093,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Trinket (deprecated)
           </label>
@@ -5375,10 +5604,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5389,8 +5618,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Strategy
           </label>
@@ -5459,10 +5688,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5473,8 +5702,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_14">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             MicroSims
           </label>
@@ -5522,10 +5751,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
-          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5536,8 +5765,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_15">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Contributing
           </label>
@@ -5597,37 +5826,22 @@
   
   
   
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
-        
-          
-          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
-    Contact
+    FAQ
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17">
-            <span class="md-nav__icon md-icon"></span>
-            Contact
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
+      </a>
+    </li>
+  
+
+    
+      
+      
   
   
   
@@ -5642,14 +5856,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -5681,36 +5887,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#normal-output-everything-goes-right" class="md-nav__link">
+  <a href="#what-is-a-variable" class="md-nav__link">
     <span class="md-ellipsis">
-      Normal Output: Everything Goes Right
+      What Is a Variable?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#error-output-something-went-wrong" class="md-nav__link">
+  <a href="#sample-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Error Output: Something Went Wrong
+      Sample Code
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-read-a-nameerror" class="md-nav__link">
+  <a href="#try-it-now" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Read a NameError
+      Try It Now
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-print-checkpoints-to-find-bugs" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Using Print Checkpoints to Find Bugs
+      How It Works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explanation-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Check
     </span>
   </a>
   
@@ -5743,42 +5967,85 @@
   
 
 
-<h1 id="reading-output-and-error-messages">Reading Output and Error Messages<a class="headerlink" href="#reading-output-and-error-messages" title="Permanent link">&para;</a></h1>
+<h1 id="variables-for-your-drawing">Variables for Your Drawing<a class="headerlink" href="#variables-for-your-drawing" title="Permanent link">&para;</a></h1>
 <p>By the end of this lesson you'll be able to:</p>
 <ul>
-<li>Tell the difference between normal output and an error message just by its color</li>
-<li>Read what an error message says to figure out where your program went wrong</li>
-<li>Use <code>print()</code> checkpoints to narrow down exactly which line caused a crash</li>
+<li>Store a number in a variable and use it in your code</li>
+<li>Change the size of a square by editing just one line</li>
+<li>Explain why variables make programs easier to modify</li>
 </ul>
-<p>When your Python program runs, two kinds of text can appear in the output box.
-<strong>Normal output</strong> — anything printed with <code>print()</code> — appears in black.
-<strong>Error messages</strong> — produced when Python finds a problem — appear in red.
-The color makes it easy to see at a glance whether your program finished successfully or crashed.</p>
+<p>In the simple square lesson, the numbers <code>100</code> and <code>90</code> appeared eight times each. If you wanted a bigger square you had to change eight lines. <strong>Variables</strong> let you write the number once and use it everywhere — change the variable and the whole drawing changes.</p>
 <div class="admonition mascot-welcome">
 <p class="admonition-title">Welcome to This Lesson!</p>
 <p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
-Every programmer sees error messages — even professional ones!
-Learning to read them calmly is one of the most useful skills you'll build.
-Let's code it together!</p>
+Ready to make your code smarter? Today I'll show you how variables work —
+and why every programmer uses them. Let's code it together!</p>
 </div>
-<h2 id="normal-output-everything-goes-right">Normal Output: Everything Goes Right<a class="headerlink" href="#normal-output-everything-goes-right" title="Permanent link">&para;</a></h2>
-<p>When a program runs without any problems, every <code>print()</code> call produces a line of black text in the output box.
-Run the program below and look at the output — all black, no red.</p>
+<h2 id="what-is-a-variable">What Is a Variable?<a class="headerlink" href="#what-is-a-variable" title="Permanent link">&para;</a></h2>
+<p>A <strong>variable</strong> is a named box that holds a value. You create one by writing a name, an equals sign, and the value:</p>
+<div class="highlight"><pre><span></span><code><span class="n">distance</span> <span class="o">=</span> <span class="mi">100</span>
+</code></pre></div>
+<p>After this line, Python remembers that <code>distance</code> equals <code>100</code>. Whenever you write <code>distance</code> later in your code, Python uses <code>100</code> in its place.</p>
+<p>Give variables descriptive names — <code>distance</code> is much clearer than <code>d</code> or <code>x</code>.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Scratch Bridge</p>
+<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
+In Scratch you used the <strong>"Set [distance] to 100"</strong> block in the Variables drawer.
+In Python, <code>distance = 100</code> does exactly the same thing: it creates a variable called
+<code>distance</code> and stores the value <code>100</code> in it.</p>
+</div>
+<h2 id="sample-code">Sample Code<a class="headerlink" href="#sample-code" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span>
+<span class="n">monty</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">monty</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="s1">&#39;turtle&#39;</span><span class="p">)</span>
+
+<span class="n">distance</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="mi">90</span>
+
+<span class="n">monty</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+<span class="n">monty</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+
+<span class="n">monty</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+<span class="n">monty</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+
+<span class="n">monty</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+<span class="n">monty</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+
+<span class="n">monty</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+<span class="n">monty</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What Do You Think Will Happen?</p>
+<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
+The turtle uses <code>distance</code> for every <code>forward()</code> call and <code>angle</code> for every <code>right()</code> call.
+What shape will it draw? Make your guess — then click Run to find out!</p>
+</div>
+<h2 id="try-it-now">Try It Now<a class="headerlink" href="#try-it-now" title="Permanent link">&para;</a></h2>
+<p>Edit the code below and click <strong>Run</strong> to see Monty draw right on this page.
+No account needed — everything runs in your browser.</p>
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
 
-<div id="skulpt-lab" class="skulpt-text-only">
+<div id="skulpt-lab">
   <div id="editor-container">
-    <textarea id="code" spellcheck="false">name = "Alex"
-score = 42
-bonus = 8
-total = score + bonus
+    <textarea id="code" spellcheck="false">import turtle
+monty = turtle.Turtle()
+monty.shape('turtle')
 
-print("Player:", name)
-print("Score:", score)
-print("Bonus:", bonus)
-print("Total:", total)
-print("Program finished successfully!")
+distance = 100
+angle = 90
+
+monty.forward(distance)
+monty.right(angle)
+
+monty.forward(distance)
+monty.right(angle)
+
+monty.forward(distance)
+monty.right(angle)
+
+monty.forward(distance)
+monty.right(angle)
 </textarea>
     <div id="button-row">
       <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
@@ -5791,30 +6058,71 @@ print("Program finished successfully!")
   </div>
 </div>
 
-<p>All five lines print in black — the program ran from top to bottom without any problems.</p>
-<h2 id="error-output-something-went-wrong">Error Output: Something Went Wrong<a class="headerlink" href="#error-output-something-went-wrong" title="Permanent link">&para;</a></h2>
-<p>Now look at what happens when Python hits a problem partway through a program.
-The program below prints two lines successfully, then tries to use a variable called <code>high_score</code> that was never created.
-Python cannot continue, so it stops and reports the error.</p>
-<div class="admonition mascot-thinking">
-<p class="admonition-title">What Will the Output Look Like?</p>
-<p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
-Before you click Run, count the <code>print()</code> calls in the program below.
-How many lines of output do you think will appear — and what color will each one be?
-Make your prediction, then click Run!</p>
+<p>Were you right? With <code>angle = 90</code>, each turn is a quarter-circle, so the turtle draws a perfect square.</p>
+<p><strong>If you see a red error message:</strong> Check that your variable name is spelled exactly the same everywhere — <code>distance</code> and <code>Distance</code> are two different names in Python.</p>
+<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<p>Python reads the file from top to bottom. When it reaches <code>distance = 100</code>, it stores the value <code>100</code> in memory under the name <code>distance</code>. Every time it later sees <code>forward(distance)</code>, it looks up that stored value and uses it — just like reading a note you left yourself.</p>
+<h2 id="explanation-table">Explanation Table<a class="headerlink" href="#explanation-table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>distance = 100</code></td>
+<td>Creates a variable named <code>distance</code> and stores <code>100</code> in it</td>
+</tr>
+<tr>
+<td><code>angle = 90</code></td>
+<td>Creates a variable named <code>angle</code> and stores <code>90</code> in it</td>
+</tr>
+<tr>
+<td><code>monty.forward(distance)</code></td>
+<td>Moves forward 100 steps (reads the variable's value)</td>
+</tr>
+<tr>
+<td><code>monty.right(angle)</code></td>
+<td>Turns 90 degrees right (reads the variable's value)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Common Mistake: Typo in Variable Name</p>
+<p><img alt="Monty warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+If you write <code>distanse</code> on one line and <code>distance</code> on another, Python treats them as two
+different variables — and the second one has no value yet. You'll see a <code>NameError</code>.
+Python is case-sensitive too: <code>Distance</code> ≠ <code>distance</code>.</p>
 </div>
-<div id="skulpt-lab-2" class="skulpt-text-only">
+<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Spot the Bug!</p>
+<p><img alt="Monty warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
+The program below should draw a square, but it crashes with a <code>NameError</code>.
+There's a typo in one variable name. Can you find it and fix it?</p>
+</div>
+<div id="skulpt-lab-2">
   <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">name = "Alex"
-score = 42
+    <textarea id="code-2" spellcheck="false">import turtle
+monty = turtle.Turtle()
+monty.shape('turtle')
 
-print("Player:", name)
-print("Score:", score)
+distnace = 80
+angle = 90
 
-# Oops — high_score was never created!
-print("High score:", high_score)
+monty.forward(distance)
+monty.right(angle)
 
-print("This line never runs.")
+monty.forward(distance)
+monty.right(angle)
+
+monty.forward(distance)
+monty.right(angle)
+
+monty.forward(distance)
+monty.right(angle)
 </textarea>
     <div id="button-row-2">
       <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
@@ -5827,115 +6135,36 @@ print("This line never runs.")
   </div>
 </div>
 
-<p>Were you right?
-Two black lines appeared for the two successful <code>print()</code> calls.
-Then a red error message appeared — Python stopped when it hit the broken line.
-The last <code>print()</code> never ran at all because the program crashed before it got there.</p>
-<h2 id="how-to-read-a-nameerror">How to Read a NameError<a class="headerlink" href="#how-to-read-a-nameerror" title="Permanent link">&para;</a></h2>
-<p>The red message says something like:</p>
-<div class="highlight"><pre><span></span><code>NameError: name &#39;high_score&#39; is not defined on line 8
-</code></pre></div>
-<p>Here is what each part means:</p>
-<table>
-<thead>
-<tr>
-<th>Part</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>NameError</code></td>
-<td>The type of error — Python found a name it doesn't recognise</td>
-</tr>
-<tr>
-<td><code>'high_score'</code></td>
-<td>The exact variable name Python couldn't find</td>
-</tr>
-<tr>
-<td><code>on line 8</code></td>
-<td>The line number where the crash happened</td>
-</tr>
-</tbody>
-</table>
-<p>To fix this error you have two choices:</p>
-<ol>
-<li><strong>Create the variable before you use it</strong> — add <code>high_score = 100</code> somewhere above line 8.</li>
-<li><strong>Remove or fix the broken line</strong> — if <code>high_score</code> shouldn't be there, delete it.</li>
-</ol>
-<div class="admonition mascot-tip">
-<p class="admonition-title">The Black Lines Are Your Clues</p>
-<p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
-When a program crashes, look at the last black line in the output — that tells you the most recent thing that worked. The error happened somewhere between that line and the next <code>print()</code> you expected. Use this as your starting point when hunting for the bug!</p>
-</div>
-<h2 id="using-print-checkpoints-to-find-bugs">Using Print Checkpoints to Find Bugs<a class="headerlink" href="#using-print-checkpoints-to-find-bugs" title="Permanent link">&para;</a></h2>
-<p>Professional programmers often add temporary <code>print()</code> calls to trace exactly where a program stops.
-Each one says "I made it this far."
-When you see the last black checkpoint and then a red error, you know the crash happened between those two points.</p>
-<p>Here is the same broken program with checkpoints added.
-Notice how the checkpoints help you pinpoint the problem line more precisely:</p>
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">print("Checkpoint 1: program started")
-
-name = "Alex"
-score = 42
-print("Checkpoint 2: variables created")
-
-total = score + 10
-print("Checkpoint 3: total calculated:", total)
-
-# Remove the # below to introduce an error and watch where the checkpoints stop:
-# print("High score:", high_score)
-
-print("Checkpoint 4: all done!")
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
-
-<p>All four checkpoints print in black — the program is healthy.
-Now remove the <code>#</code> from in front of <code>print("High score:", high_score)</code> and run it again.
-Checkpoint 3 will be the last black line, and the red error will appear right after it —
-telling you the crash happened between Checkpoint 3 and Checkpoint 4.</p>
-<div class="admonition mascot-warning">
-<p class="admonition-title">Red Doesn't Mean Failure — It Means Information</p>
-<p><img alt="Monty warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
-A red error message is not a sign that you are bad at coding. It is Python telling you exactly what went wrong and where. Read it carefully — it almost always contains the line number and the name of whatever Python couldn't find. The message is your friend!</p>
-</div>
 <h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
-<p>Try these changes. For each one, predict the output color pattern before you run!</p>
+<p>Try these changes to the code above. Predict what will happen first, then run it to check!</p>
 <ol>
 <li>
-<p>In Lab 2, add <code>high_score = 500</code> on a new line above <code>print("High score:", high_score)</code>.
-   <strong>You'll know it worked when</strong> all output is black and "High score: 500" appears.</p>
+<p>Change <code>distance = 100</code> to <code>distance = 150</code>.
+   <strong>You'll know it worked when</strong> the square is noticeably larger than before.</p>
 </li>
 <li>
-<p>In Lab 2, change <code>score = 42</code> to <code>score = "forty-two"</code> (a word instead of a number).
-   Then change <code>print("Score:", score)</code> to <code>print("Score + 1:", score + 1)</code>.
-   <strong>You'll know it worked when</strong> you see a red <code>TypeError</code> — Python can't add a word and a number.</p>
+<p>Change <code>distance = 100</code> to <code>distance = 40</code>.
+   <strong>You'll know it worked when</strong> the square is about half as big.</p>
 </li>
 <li>
-<p>In Lab 3, remove the <code>#</code> from the broken line and run it.
-   Count the black checkpoint lines in the output.
-   <strong>You'll know it worked when</strong> you can identify which checkpoint was last and explain why Checkpoint 4 never appeared.</p>
+<p>Change <code>angle = 90</code> to <code>angle = 120</code> and reduce the four pairs to three pairs of <code>forward</code>/<code>right</code>.
+   <strong>You'll know it worked when</strong> you see a triangle instead of a square.</p>
 </li>
 <li>
-<p>In Lab 1, rename <code>total</code> to <code>final_total</code> in the calculation but leave <code>print("Total:", total)</code> unchanged.
-   <strong>You'll know it worked when</strong> a red <code>NameError</code> for <code>total</code> appears after the first three black lines.</p>
+<p>Add <code>monty.color('purple')</code> just before the first <code>forward</code> line.
+   <strong>You'll know it worked when</strong> all four sides of the square are purple.</p>
+</li>
+<li>
+<p>Add a third variable: <code>monty.pensize(thickness)</code> and set <code>thickness = 5</code> at the top.
+   <strong>You'll know it worked when</strong> the lines are noticeably thicker, and you can change <code>thickness</code> in one place to affect all four sides.</p>
 </li>
 </ol>
 <div class="admonition mascot-celebration">
-<p class="admonition-title">You Can Read Error Messages!</p>
+<p class="admonition-title">Great Work!</p>
 <p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
-Black means success, red means "look here." You now know how to read both — and how to use print checkpoints to hunt down a bug. That's real debugging skill! Let's code it together!</p>
+You've unlocked variables — one of the most powerful ideas in all of programming!
+In the next lab you'll combine variables with a <code>for</code> loop so you don't have to
+repeat those four lines at all. Let's code it together!</p>
 </div>
 
 
@@ -5970,7 +6199,7 @@ Black means success, red means "look here." You now know how to read both — an
       <div class="md-footer-nav">
         <nav class="md-footer-nav__inner md-grid">
           
-            <a href="../04a-stop-sign/" title="Draw a Stop Sign" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <a href="../02-simple-square/" title="02. Drawing a Square" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
                 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
               </div>
@@ -5979,19 +6208,19 @@ Black means success, red means "look here." You now know how to read both — an
                   <span class="md-footer-nav__direction">
                     Previous
                   </span>
-                  Draw a Stop Sign
+                  02. Drawing a Square
                 </span>
               </div>
             </a>
           
           
-            <a href="../text-only-example/" title="Text-Only Example" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../04-loops/" title="04. Loops and Polygons" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span class="md-footer-nav__direction">
                     Next
                   </span>
-                  Text-Only Example
+                  04. Loops and Polygons
                 </span>
               </div>
               <div class="md-flex__cell md-flex__cell--shrink">
