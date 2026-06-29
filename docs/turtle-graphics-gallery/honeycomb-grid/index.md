@@ -185,6 +185,59 @@ for row in range(7):
 
 Change `col_w` to `size` in the offset line — the shift should be one radius, not one full width.
 
+
+```python
+import math
+import turtle
+
+
+def draw_hexagon(size):
+    """Draws a single regular hexagon."""
+    for _ in range(6):
+        turtle.forward(size)
+        turtle.left(60)
+
+
+def draw_honeycomb(rows, cols, size):
+    """Draws a grid of hexagons offset to form a honeycomb pattern."""
+    # Calculate geometric spacing based on hexagon properties
+    w = size * math.sqrt(3)  # Width of the hexagon
+    h = size * 1.5  # Vertical distance to the next row
+
+    for r in range(rows):
+        for c in range(cols):
+            # Calculate the starting X position
+            x = c * w
+            # Offset every odd row to the right by half a hexagon width
+            if r % 2 == 1:
+                x += w / 2
+
+            # Calculate the starting Y position
+            y = r * h
+
+            # Move turtle to the cell position without drawing
+            turtle.penup()
+            turtle.goto(x, y)
+            turtle.pendown()
+
+            # Render the hexagon
+            draw_hexagon(size)
+
+
+# Main setup
+if __name__ == "__main__":
+    # Optimize drawing speed
+    turtle.speed(0)
+    turtle.delay(0)
+
+    # Configuration: Rows, Columns, Edge Size
+    draw_honeycomb(rows=6, cols=8, size=30)
+
+    # Keep window open
+    turtle.hideturtle()
+    turtle.done()
+```
+
 ## Experiments
 
 1. **Change the colors.** Use `['royalblue', 'navy']` for a blue honeycomb. You'll know it worked when the colors change but the tiling stays perfect.
