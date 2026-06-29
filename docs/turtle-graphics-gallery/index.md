@@ -250,6 +250,61 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Sunflower Seed Spiral**
+
+    ---
+
+    ![Sunflower Seed Spiral](./sunflower-spiral/screen-image.png)
+
+    Golden angle (137.5°) places dots like seeds in a real sunflower head.
+    Teaches: polar coordinates, `math.sqrt`, `math.exp`, and Fibonacci packing.
+
+    [:octicons-arrow-right-24: Open Lab](./sunflower-spiral/index.md)
+
+-   **Spider Web**
+
+    ---
+
+    ![Spider Web](./spider-web/screen-image.png)
+
+    12 radial spokes and 6 concentric rings drawn with polar coordinates and `goto()`.
+    Teaches: radial + ring geometry, polar-to-Cartesian conversion, nested loops.
+
+    [:octicons-arrow-right-24: Open Lab](./spider-web/index.md)
+
+-   **Lightning Bolt**
+
+    ---
+
+    ![Lightning Bolt](./lightning-bolt/screen-image.png)
+
+    Recursive midpoint displacement turns a straight line into a jagged bolt.
+    Teaches: recursion, perpendicular vectors, Gaussian randomness.
+
+    [:octicons-arrow-right-24: Open Lab](./lightning-bolt/index.md)
+
+-   **Galaxy Spiral Arms**
+
+    ---
+
+    ![Galaxy Spiral Arms](./galaxy-spiral/screen-image.png)
+
+    Two logarithmic spiral arms with Gaussian scatter simulate the Milky Way.
+    Teaches: `math.exp`, Gaussian scatter with `random.gauss`, dot placement.
+
+    [:octicons-arrow-right-24: Open Lab](./galaxy-spiral/index.md)
+
+-   **Ripple Waves**
+
+    ---
+
+    ![Ripple Waves](./ripple-waves/screen-image.png)
+
+    Three sets of concentric rings from different centers create water-ripple interference.
+    Teaches: functions with parameters, `circle()`, pensize for wave strength.
+
+    [:octicons-arrow-right-24: Open Lab](./ripple-waves/index.md)
+
 -   **Four-Fold Symmetric Doodle**
 
     ---
