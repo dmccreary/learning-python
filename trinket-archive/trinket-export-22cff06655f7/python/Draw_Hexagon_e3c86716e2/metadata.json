@@ -1,0 +1,13 @@
+{
+  "shortCode": "e3c86716e2",
+  "name": "Draw Hexagon",
+  "lang": "python",
+  "created": "2020-05-09T16:12:06.177Z",
+  "lastUpdated": "2020-05-09T16:28:36.996Z",
+  "settings": {
+    "autofocusEnabled": true,
+    "testsEnabled": false,
+    "astro_pi_mission_submission": false
+  },
+  "url": "https://trinket.io/python/e3c86716e2"
+}

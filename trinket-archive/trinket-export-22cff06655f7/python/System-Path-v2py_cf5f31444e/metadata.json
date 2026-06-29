@@ -1,0 +1,13 @@
+{
+  "shortCode": "cf5f31444e",
+  "name": "System-Path-v2.py",
+  "lang": "python",
+  "created": "2021-04-24T16:33:19.629Z",
+  "lastUpdated": "2021-04-24T16:34:29.600Z",
+  "settings": {
+    "autofocusEnabled": true,
+    "testsEnabled": false,
+    "astro_pi_mission_submission": false
+  },
+  "url": "https://trinket.io/python/cf5f31444e"
+}

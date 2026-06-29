@@ -1,0 +1,375 @@
+{
+  "exportedAt": "2026-06-29T12:41:07.441Z",
+  "trinkets": [
+    {
+      "shortCode": "65d861de91",
+      "name": "Teaching with Turtle",
+      "lang": "python"
+    },
+    {
+      "shortCode": "c27da4f2fd",
+      "name": "Loops and Counting",
+      "lang": "python"
+    },
+    {
+      "shortCode": "67cc212029",
+      "name": "Create Your Own",
+      "lang": "python"
+    },
+    {
+      "shortCode": "d6b8a4d4c1",
+      "name": "Georgia's Spirals",
+      "lang": "python"
+    },
+    {
+      "shortCode": "1fff1df367",
+      "name": "Graphing Data with Best Fit Function",
+      "lang": "python"
+    },
+    {
+      "shortCode": "84e8468deb",
+      "name": "Graphing Data",
+      "lang": "python"
+    },
+    {
+      "shortCode": "fc630099eb",
+      "name": "Geek Gurl Diaries Snowflakes",
+      "lang": "python"
+    },
+    {
+      "shortCode": "518d56a5d5",
+      "name": "Bird Box Remix",
+      "lang": "python"
+    },
+    {
+      "shortCode": "e4f79898ab",
+      "name": "A Turtle in Space",
+      "lang": "python"
+    },
+    {
+      "shortCode": "4a9a433d38",
+      "name": "",
+      "lang": "python"
+    },
+    {
+      "shortCode": "e51dba22b8",
+      "name": "01 Turtle  Square",
+      "lang": "python"
+    },
+    {
+      "shortCode": "849fd09b12",
+      "name": "Circle",
+      "lang": "python"
+    },
+    {
+      "shortCode": "a0820bb721",
+      "name": "Color Turtle",
+      "lang": "python"
+    },
+    {
+      "shortCode": "efce987374",
+      "name": "Turtle  Square Colors",
+      "lang": "python"
+    },
+    {
+      "shortCode": "85205a417e",
+      "name": "Square Color If Else",
+      "lang": "python"
+    },
+    {
+      "shortCode": "e3c86716e2",
+      "name": "Draw Hexagon",
+      "lang": "python"
+    },
+    {
+      "shortCode": "c6af70dacd",
+      "name": "Draw_Circle_Function",
+      "lang": "python"
+    },
+    {
+      "shortCode": "626adffbe5",
+      "name": "Draw Hexagon Color List",
+      "lang": "python"
+    },
+    {
+      "shortCode": "9d315a42f2",
+      "lang": "python"
+    },
+    {
+      "shortCode": "4385949acd",
+      "name": "Draw Petal Function",
+      "lang": "python"
+    },
+    {
+      "shortCode": "2adc20af51",
+      "name": "Draw Petal Function V2",
+      "lang": "python"
+    },
+    {
+      "shortCode": "58f210317c",
+      "name": "Draw Six Petal Flower",
+      "lang": "python"
+    },
+    {
+      "shortCode": "0406ae2ac0",
+      "name": "Draw Recursive Tree",
+      "lang": "python"
+    },
+    {
+      "shortCode": "17900ff0fe",
+      "name": "Draw Recursive Tree - Width",
+      "lang": "python"
+    },
+    {
+      "shortCode": "7fe0b41b04",
+      "name": "Recursive Tree - V2",
+      "lang": "python"
+    },
+    {
+      "shortCode": "8b68bc7050",
+      "name": "Copy of Draw Petal Function V2",
+      "lang": "python"
+    },
+    {
+      "shortCode": "92bea94484",
+      "name": "Loops and Counting",
+      "lang": "python"
+    },
+    {
+      "shortCode": "564899ffe9",
+      "name": "01-simple-square",
+      "lang": "python"
+    },
+    {
+      "shortCode": "91be3b90a6",
+      "name": "02-variables",
+      "lang": "python"
+    },
+    {
+      "shortCode": "6cadd3c046",
+      "name": "03-loops",
+      "lang": "python"
+    },
+    {
+      "shortCode": "00e2353a96",
+      "name": "07-random",
+      "lang": "python"
+    },
+    {
+      "shortCode": "33137942bc",
+      "name": "05-conditional-pensize",
+      "lang": "python"
+    },
+    {
+      "shortCode": "e3a8279a76",
+      "name": "06-functions",
+      "lang": "python"
+    },
+    {
+      "shortCode": "0de967d3e2",
+      "name": "06-flower",
+      "lang": "python"
+    },
+    {
+      "shortCode": "fc8bdb3464",
+      "name": "07-random",
+      "lang": "python"
+    },
+    {
+      "shortCode": "53c2770ce3",
+      "name": "module-import-test",
+      "lang": "python"
+    },
+    {
+      "shortCode": "890e7026e5",
+      "name": "12-import-shape-module",
+      "lang": "python"
+    },
+    {
+      "shortCode": "37e0c4b92f",
+      "name": "Drag and drop order Remix",
+      "lang": "blocks"
+    },
+    {
+      "shortCode": "83e78b10f5",
+      "name": "08-function-parameters-borders",
+      "lang": "python"
+    },
+    {
+      "shortCode": "6b93c1711f",
+      "name": "07-list",
+      "lang": "python"
+    },
+    {
+      "shortCode": "a4a951eeab",
+      "name": "09-input",
+      "lang": "python"
+    },
+    {
+      "shortCode": "5b18dc55c6",
+      "name": "04-conditional-square",
+      "lang": "python"
+    },
+    {
+      "shortCode": "327d41d40c",
+      "name": "07-random-solution",
+      "lang": "python"
+    },
+    {
+      "shortCode": "1d62654002",
+      "name": "",
+      "lang": "python"
+    },
+    {
+      "shortCode": "7f202fc506",
+      "name": "02_regex",
+      "lang": "python"
+    },
+    {
+      "shortCode": "3435c7968e",
+      "name": "regex-01",
+      "lang": "python"
+    },
+    {
+      "shortCode": "ef0666e0d3",
+      "name": "regex-02",
+      "lang": "python"
+    },
+    {
+      "shortCode": "7761337936",
+      "name": "random-stars",
+      "lang": "python"
+    },
+    {
+      "shortCode": "5e1dd5b05b",
+      "name": "fill-shape",
+      "lang": "python"
+    },
+    {
+      "shortCode": "9a69371eac",
+      "name": "Directory Functions",
+      "lang": "python"
+    },
+    {
+      "shortCode": "bccda3b5bc",
+      "name": "Star.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "ceffb7d432",
+      "name": "Scope.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "84326ed3e7",
+      "name": "print-test-python2.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "0253edae51",
+      "name": "hex-with-cross.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "7f9eee8b80",
+      "name": "Stop-Sign.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "acc7c54a50",
+      "name": "04-simple-conditional.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "db5978a312",
+      "name": "04-conditional-simple-square",
+      "lang": "python"
+    },
+    {
+      "shortCode": "3377b0fbd8",
+      "name": "07-squares-with-borders",
+      "lang": "python"
+    },
+    {
+      "shortCode": "d2cdd67786",
+      "name": "System-Path.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "cf5f31444e",
+      "name": "System-Path-v2.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "4c8a636bc0",
+      "name": "Plot of Sin(x) with matplotlib",
+      "lang": "python"
+    },
+    {
+      "shortCode": "b6a5eaf8d1",
+      "name": "Turtle Draw Sine Wave",
+      "lang": "python"
+    },
+    {
+      "shortCode": "ea61ab7bb3",
+      "lang": "python"
+    },
+    {
+      "shortCode": "365d9d47ae",
+      "name": "color-list.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "9b215f2a24",
+      "name": "Copy of color-list.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "a8d83baa81",
+      "name": "draw-square.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "e603561ab4",
+      "name": "growing-stars.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "93292c94ce",
+      "name": "concentric-circles.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "3863f82e1c",
+      "name": "random-squares.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "4c45c68256",
+      "name": "draw-random-squares.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "62bafe5b6b",
+      "name": "random-squares-black.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "ea571870b9",
+      "name": "square.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "847bde9236",
+      "name": "Rainbow-boxes.py",
+      "lang": "python"
+    },
+    {
+      "shortCode": "5e063437e9",
+      "name": "random-stars",
+      "lang": "python"
+    }
+  ],
+  "totalTrinkets": 74,
+  "failedTrinkets": 0
+}

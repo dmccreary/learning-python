@@ -1,0 +1,13 @@
+{
+  "shortCode": "e4f79898ab",
+  "name": "A Turtle in Space",
+  "lang": "python",
+  "created": "2019-04-27T18:36:12.335Z",
+  "lastUpdated": "2019-04-27T18:36:12.351Z",
+  "settings": {
+    "autofocusEnabled": true,
+    "testsEnabled": false,
+    "astro_pi_mission_submission": false
+  },
+  "url": "https://trinket.io/python/e4f79898ab"
+}

@@ -1,0 +1,13 @@
+{
+  "shortCode": "58f210317c",
+  "name": "Draw Six Petal Flower",
+  "lang": "python",
+  "created": "2020-05-09T18:05:23.050Z",
+  "lastUpdated": "2020-05-09T20:54:13.051Z",
+  "settings": {
+    "autofocusEnabled": true,
+    "testsEnabled": false,
+    "astro_pi_mission_submission": false
+  },
+  "url": "https://trinket.io/python/58f210317c"
+}

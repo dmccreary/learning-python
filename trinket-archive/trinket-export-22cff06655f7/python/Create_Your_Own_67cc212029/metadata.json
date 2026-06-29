@@ -1,0 +1,13 @@
+{
+  "shortCode": "67cc212029",
+  "name": "Create Your Own",
+  "lang": "python",
+  "created": "2019-04-27T18:36:12.332Z",
+  "lastUpdated": "2019-04-27T18:36:12.341Z",
+  "settings": {
+    "autofocusEnabled": true,
+    "testsEnabled": false,
+    "astro_pi_mission_submission": false
+  },
+  "url": "https://trinket.io/python/67cc212029"
+}

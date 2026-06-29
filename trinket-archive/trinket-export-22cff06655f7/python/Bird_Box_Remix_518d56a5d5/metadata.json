@@ -1,0 +1,13 @@
+{
+  "shortCode": "518d56a5d5",
+  "name": "Bird Box Remix",
+  "lang": "python",
+  "created": "2019-04-27T18:36:12.336Z",
+  "lastUpdated": "2019-04-27T18:36:12.349Z",
+  "settings": {
+    "autofocusEnabled": true,
+    "testsEnabled": false,
+    "astro_pi_mission_submission": false
+  },
+  "url": "https://trinket.io/python/518d56a5d5"
+}

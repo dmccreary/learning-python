@@ -158,12 +158,22 @@ nav:
     - Mascot Style Guide: learning-graph/mascot-test.md
     - FAQ Quality Report: learning-graph/faq-quality-report.md
 
-  - Repl.it Examples:
-    - Square: repl/02-square.md
-    - Flower: repl/07-flower.md
-    - Shape Function: repl/08-shape-function.md
-    - Recursion: repl/12-recursion.md
-  
+  - Turtle Graphics Gallery:
+    - Gallery: turtle-graphics-gallery/index.md
+    - Pattern Ideas: turtle-graphics-gallery/pattern-ideas.md
+    - Rainbow Square Spiral: turtle-graphics-gallery/rainbow-square-spiral/index.md
+    - Pinwheel of Triangles: turtle-graphics-gallery/pinwheel-of-triangles/index.md
+    - Nested Circles: turtle-graphics-gallery/nested-circles/index.md
+    - Starburst: turtle-graphics-gallery/starburst/index.md
+    - Checkerboard Grid: turtle-graphics-gallery/checkerboard-grid/index.md
+    - Diagonal Stripe Field: turtle-graphics-gallery/diagonal-stripe-field/index.md
+    - Dotted Grid: turtle-graphics-gallery/dotted-grid/index.md
+    - Color Wheel Wedges: turtle-graphics-gallery/color-wheel-wedges/index.md
+    - Pentagon Chain: turtle-graphics-gallery/pentagon-chain/index.md
+    - Overlapping Squares: turtle-graphics-gallery/overlapping-squares/index.md
+    - Flower with Petal Function: turtle-graphics-gallery/flower-petal-function/index.md
+    - Honeycomb Grid: turtle-graphics-gallery/honeycomb-grid/index.md
+
   - Intermediate Python:
     - Introduction: intermediate/01-intro.md
     - Variables and Scope: intermediate/01-variables-scope.md
@@ -257,6 +267,9 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.superfences
   - toc:

@@ -1,0 +1,13 @@
+{
+  "shortCode": "5e1dd5b05b",
+  "name": "fill-shape",
+  "lang": "python",
+  "created": "2020-10-31T19:44:08.202Z",
+  "lastUpdated": "2020-10-31T19:44:46.456Z",
+  "settings": {
+    "autofocusEnabled": true,
+    "testsEnabled": false,
+    "astro_pi_mission_submission": false
+  },
+  "url": "https://trinket.io/python/5e1dd5b05b"
+}

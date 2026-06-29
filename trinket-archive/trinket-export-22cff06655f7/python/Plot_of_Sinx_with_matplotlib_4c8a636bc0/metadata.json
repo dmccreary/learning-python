@@ -1,0 +1,13 @@
+{
+  "shortCode": "4c8a636bc0",
+  "name": "Plot of Sin(x) with matplotlib",
+  "lang": "python",
+  "created": "2021-04-24T16:46:25.020Z",
+  "lastUpdated": "2021-04-28T12:06:34.820Z",
+  "settings": {
+    "autofocusEnabled": true,
+    "testsEnabled": false,
+    "astro_pi_mission_submission": false
+  },
+  "url": "https://trinket.io/python/4c8a636bc0"
+}

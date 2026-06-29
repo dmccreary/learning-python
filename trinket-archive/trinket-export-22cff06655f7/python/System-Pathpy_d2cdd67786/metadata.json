@@ -1,0 +1,13 @@
+{
+  "shortCode": "d2cdd67786",
+  "name": "System-Path.py",
+  "lang": "python",
+  "created": "2021-04-24T16:24:32.079Z",
+  "lastUpdated": "2021-04-24T16:24:32.080Z",
+  "settings": {
+    "autofocusEnabled": true,
+    "testsEnabled": false,
+    "astro_pi_mission_submission": false
+  },
+  "url": "https://trinket.io/python/d2cdd67786"
+}

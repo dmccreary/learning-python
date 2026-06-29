@@ -1,0 +1,13 @@
+{
+  "shortCode": "7f9eee8b80",
+  "name": "Stop-Sign.py",
+  "lang": "python",
+  "created": "2021-01-30T20:44:19.469Z",
+  "lastUpdated": "2021-03-03T22:22:59.558Z",
+  "settings": {
+    "autofocusEnabled": true,
+    "testsEnabled": false,
+    "astro_pi_mission_submission": false
+  },
+  "url": "https://trinket.io/python/7f9eee8b80"
+}

@@ -1,0 +1,13 @@
+{
+  "shortCode": "7761337936",
+  "name": "random-stars",
+  "lang": "python",
+  "created": "2020-07-18T20:20:33.760Z",
+  "lastUpdated": "2020-07-18T21:58:11.633Z",
+  "settings": {
+    "autofocusEnabled": true,
+    "testsEnabled": false,
+    "astro_pi_mission_submission": false
+  },
+  "url": "https://trinket.io/python/7761337936"
+}
