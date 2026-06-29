@@ -127,11 +127,25 @@ nav:
       - Content: chapters/38-neural-networks-and-mnist/index.md
       - Annotated References: chapters/38-neural-networks-and-mnist/references.md
  
-  - Sample Turtle Graphics Labs:
-    - Draw a Square: skulpt/02-simple-square.md
-    - Draw a Stop Sign: skulpt/04a-stop-sign.md
-    - Reading Errors: skulpt/10-debugging.md
-    - Text-Only Example: skulpt/text-only-example.md
+  - Python Labs:
+    - List of Labs: python-labs/index.md
+    - 01. Turtle Commands: python-labs/01-turtle-commands.md
+    - 02. Drawing a Square: python-labs/02-simple-square.md
+    - 03. Variables: python-labs/03-variables.md
+    - 04. Loops and Polygons: python-labs/04-loops.md
+    - 04a. Stop Sign: python-labs/04a-stop-sign.md
+    - 05. If-Else and Colors: python-labs/05-conditionals.md
+    - 06. Functions and Flowers: python-labs/06-functions-and-flowers.md
+    - 07. Function Parameters: python-labs/07-function-parameters.md
+    - 08. Random Circles: python-labs/08-random-circles.md
+    - 08. Color Lists: python-labs/08-color-lists.md
+    - 08b. Random Stars: python-labs/08b-random-stars.md
+    - 10. Reading Errors: python-labs/10-debugging.md
+    - 11. User Input: python-labs/11-user-input.md
+    - 12. Fractal Tree: python-labs/12-fractal-tree.md
+    - 14. Hex Colors: python-labs/14-hex-colors.md
+    - 15. Sine Wave: python-labs/15-sine-wave.md
+    - 17. Mouse Clicks: python-labs/17-mouse-clicks.md
 
   - Learning Graph:
     - Introduction: learning-graph/index.md
