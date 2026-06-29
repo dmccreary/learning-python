@@ -250,6 +250,17 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Color-Banded Pentagon Spiral**
+
+    ---
+
+    ![Color-Banded Pentagon Spiral](./pentagon-spiral/screen-image.png)
+
+    A five-sided spiral colored in bands that align — or cut diagonally — across the arms.
+    Teaches: `right(72)`, `i // n` banding, and how period mismatch creates diagonal stripes.
+
+    [:octicons-arrow-right-24: Open Lab](./pentagon-spiral/index.md)
+
 -   **Spiral of Spirals**
 
     ---

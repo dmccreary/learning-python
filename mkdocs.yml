@@ -190,6 +190,7 @@ nav:
     - Double Helix Spiral: turtle-graphics-gallery/double-helix-spiral/index.md
     - Fibonacci Spiral: turtle-graphics-gallery/fibonacci-spiral/index.md
     - Spiral of Spirals: turtle-graphics-gallery/spiral-of-spirals/index.md
+    - Color-Banded Pentagon Spiral: turtle-graphics-gallery/pentagon-spiral/index.md
 
   - Intermediate Python:
     - Introduction: intermediate/01-intro.md
