@@ -249,4 +249,16 @@ Each pattern is runnable in your browser — click the link to open the interact
 
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
+
+-   **Hexagonal Spiral**
+
+    ---
+
+    ![Hexagonal Spiral](./hexagonal-spiral/screen-image.png)
+
+    A blue-to-green spiral with hexagonal corners — one number change from the square spiral.
+    Teaches: how the turn angle alone determines a spiral's polygon shape.
+
+    [:octicons-arrow-right-24: Open Lab](./hexagonal-spiral/index.md)
+
 </div>
