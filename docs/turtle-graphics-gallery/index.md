@@ -250,6 +250,17 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Double Helix Spiral**
+
+    ---
+
+    ![Double Helix Spiral](./double-helix-spiral/screen-image.png)
+
+    Two interleaved spirals — red and blue — winding outward together from one loop.
+    Teaches: `i % 2` alternation, phase offset, and how one loop draws two patterns.
+
+    [:octicons-arrow-right-24: Open Lab](./double-helix-spiral/index.md)
+
 -   **Colored Logarithmic Spiral**
 
     ---
