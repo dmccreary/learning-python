@@ -250,6 +250,17 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Sierpiński Triangle**
+
+    ---
+
+    ![Sierpiński Triangle](./sierpinski-triangle/screen-image.png)
+
+    A triangle made of triangles made of triangles — the iconic self-similar fractal.
+    Teaches: ternary recursion, base cases, and how depth controls fractal detail.
+
+    [:octicons-arrow-right-24: Open Lab](./sierpinski-triangle/index.md)
+
 -   **Koch Snowflake**
 
     ---
