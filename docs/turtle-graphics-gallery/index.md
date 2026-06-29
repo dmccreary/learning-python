@@ -250,6 +250,17 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Fibonacci Spiral**
+
+    ---
+
+    ![Fibonacci Spiral](./fibonacci-spiral/screen-image.png)
+
+    Ten colored quarter-circle arcs — radii 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 — tile perfectly.
+    Teaches: the Fibonacci sequence, `a, b = b, a + b`, and the golden ratio.
+
+    [:octicons-arrow-right-24: Open Lab](./fibonacci-spiral/index.md)
+
 -   **Double Helix Spiral**
 
     ---

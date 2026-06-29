@@ -188,6 +188,7 @@ nav:
     - Inward Collapsing Spiral: turtle-graphics-gallery/inward-spiral/index.md
     - Colored Logarithmic Spiral: turtle-graphics-gallery/logarithmic-spiral/index.md
     - Double Helix Spiral: turtle-graphics-gallery/double-helix-spiral/index.md
+    - Fibonacci Spiral: turtle-graphics-gallery/fibonacci-spiral/index.md
 
   - Intermediate Python:
     - Introduction: intermediate/01-intro.md
