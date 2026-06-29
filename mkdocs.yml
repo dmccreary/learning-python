@@ -6,12 +6,6 @@ repo_url: 'https://github.com/dmccreary/learning-python'
 site_url: 'https://dmccreary.github.io/learning-python/'
 edit_uri: 'blob/master/docs'
 
-# Hooks — runs local Python before/after page processing.
-# `plugins/social_override.py` injects og:image and twitter:image on pages
-# that declare `image:` in their frontmatter (e.g. docs/index.md).
-# This is the Cairo-free path to social-media previews.
-hooks:
-  - plugins/social_override.py
 
 nav:
   - Course Description: course-description.md
@@ -133,14 +127,11 @@ nav:
       - Content: chapters/38-neural-networks-and-mnist/index.md
       - Annotated References: chapters/38-neural-networks-and-mnist/references.md
  
-  - Skulpt Labs:
+  - Sample Turtle Graphics Labs:
     - Draw a Square: skulpt/02-simple-square.md
     - Draw a Stop Sign: skulpt/04a-stop-sign.md
     - Reading Errors: skulpt/10-debugging.md
     - Text-Only Example: skulpt/text-only-example.md
-  
-
-  - FAQ: faq.md
 
   - Learning Graph:
     - Introduction: learning-graph/index.md
@@ -183,8 +174,6 @@ nav:
     - Setup Canvas on Jupyter Lab: jupyter/02-setup-canvas.md
     - Canvas Color Bars: jupyter/20-canvas-color-bars.md
   
-  - Pi:
-    - Python on Raspberry Pi: pi/01-intro.md
   - Advanced Python:
     - Stock Ticker Analysis: advanced/stocks.md
     - MNIST Digit Prediction: advanced/mnist.md
@@ -224,11 +213,16 @@ nav:
     - How to Contribute Examples: contribute.md
 
   - Glossary: glossary.md
+  - FAQ: faq.md
+  - Contact: contact.md
 
-  - Contact:
-    - Contact: contact.md
 
-
+# Hooks — runs local Python before/after page processing.
+# `plugins/social_override.py` injects og:image and twitter:image on pages
+# that declare `image:` in their frontmatter (e.g. docs/index.md).
+# This is the Cairo-free path to social-media previews.
+hooks:
+  - plugins/social_override.py
 
 # Site configuration
 
