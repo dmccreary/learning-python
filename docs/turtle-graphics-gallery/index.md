@@ -250,6 +250,61 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Rotating Squares Illusion**
+
+    ---
+
+    ![Rotating Squares Illusion](./rotating-squares/screen-image.png)
+
+    Concentric squares each rotated 5° more — static geometry that appears to spin.
+    Teaches: nested loops, angle offset, Op Art illusions, `sqrt(2)` geometry.
+
+    [:octicons-arrow-right-24: Open Lab](./rotating-squares/index.md)
+
+-   **Café Wall Illusion**
+
+    ---
+
+    ![Café Wall Illusion](./cafe-wall/screen-image.png)
+
+    Offset rows of black/white tiles make perfectly horizontal gray lines look slanted.
+    Teaches: tile grids, row offset, filled rectangles, perception vs reality.
+
+    [:octicons-arrow-right-24: Open Lab](./cafe-wall/index.md)
+
+-   **Moiré Pattern**
+
+    ---
+
+    ![Moiré Pattern](./moire-pattern/screen-image.png)
+
+    Two sets of parallel lines at slightly different angles create beating interference.
+    Teaches: line grids, angle rotation, Moiré period formula, parametric lines.
+
+    [:octicons-arrow-right-24: Open Lab](./moire-pattern/index.md)
+
+-   **Bridget Riley Waves**
+
+    ---
+
+    ![Bridget Riley Waves](./riley-waves/screen-image.png)
+
+    Parallel sine curves with parabolic amplitude — static lines that appear to ripple.
+    Teaches: sine waves, amplitude gradients, Op Art, `math.sin`.
+
+    [:octicons-arrow-right-24: Open Lab](./riley-waves/index.md)
+
+-   **Expanding Hexagons**
+
+    ---
+
+    ![Expanding Hexagons](./expanding-hexagons/screen-image.png)
+
+    Concentric hexagons alternating 0° and 30° with color gradient — hexagonal tunnel illusion.
+    Teaches: hexagon geometry, rotation alternation, color gradients, depth illusions.
+
+    [:octicons-arrow-right-24: Open Lab](./expanding-hexagons/index.md)
+
 -   **Lissajous Figure**
 
     ---
