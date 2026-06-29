@@ -250,6 +250,17 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Triangular Spiral**
+
+    ---
+
+    ![Triangular Spiral](./triangular-spiral/screen-image.png)
+
+    A warm red-orange-gold spiral with sharp 120° triangular corners.
+    Teaches: `i // n` for color bands vs `i % n` for segment cycling.
+
+    [:octicons-arrow-right-24: Open Lab](./triangular-spiral/index.md)
+
 -   **Hexagonal Spiral**
 
     ---
