@@ -250,6 +250,50 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Spiral Text**
+
+    ---
+
+    ![Spiral Text](./spiral-text/screen-image.png)
+
+    Characters placed along a spiral using polar coordinates and `turtle.write()`.
+    Teaches: `enumerate`, polar coordinates, `setheading`, text placement.
+
+    [:octicons-arrow-right-24: Open Lab](./spiral-text/index.md)
+
+-   **Seven-Segment Display**
+
+    ---
+
+    ![Seven-Segment Display](./seven-segment/screen-image.png)
+
+    Digits rendered from a dictionary of 7 on/off segment flags — like a digital clock.
+    Teaches: dictionaries, bitmasks, conditional drawing, data-driven rendering.
+
+    [:octicons-arrow-right-24: Open Lab](./seven-segment/index.md)
+
+-   **Circular Name Badge**
+
+    ---
+
+    ![Circular Name Badge](./circular-badge/screen-image.png)
+
+    Text arranged around a circle like a coin or official seal.
+    Teaches: angular text placement, `setheading`, circular geometry, `write()`.
+
+    [:octicons-arrow-right-24: Open Lab](./circular-badge/index.md)
+
+-   **Name in Block Letters**
+
+    ---
+
+    ![Name in Block Letters](./block-letters/screen-image.png)
+
+    Letters defined as stroke waypoints and rendered with `goto()` — a vector font.
+    Teaches: dictionaries of coordinates, `goto()` rendering, font data structures.
+
+    [:octicons-arrow-right-24: Open Lab](./block-letters/index.md)
+
 -   **Rotating Squares Illusion**
 
     ---

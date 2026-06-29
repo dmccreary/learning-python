@@ -194,6 +194,10 @@ nav:
     - Koch Snowflake: turtle-graphics-gallery/koch-snowflake/index.md
     - Sierpinski Triangle: turtle-graphics-gallery/sierpinski-triangle/index.md
     - Fractal Tree: turtle-graphics-gallery/fractal-tree/index.md
+    - Spiral Text: turtle-graphics-gallery/spiral-text/index.md
+    - Seven-Segment Display: turtle-graphics-gallery/seven-segment/index.md
+    - Circular Name Badge: turtle-graphics-gallery/circular-badge/index.md
+    - Name in Block Letters: turtle-graphics-gallery/block-letters/index.md
     - Rotating Squares Illusion: turtle-graphics-gallery/rotating-squares/index.md
     - Café Wall Illusion: turtle-graphics-gallery/cafe-wall/index.md
     - Moiré Pattern: turtle-graphics-gallery/moire-pattern/index.md
