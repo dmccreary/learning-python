@@ -194,6 +194,10 @@ nav:
     - Koch Snowflake: turtle-graphics-gallery/koch-snowflake/index.md
     - Sierpinski Triangle: turtle-graphics-gallery/sierpinski-triangle/index.md
     - Fractal Tree: turtle-graphics-gallery/fractal-tree/index.md
+    - Pythagorean Tree: turtle-graphics-gallery/pythagorean-tree/index.md
+    - T-Square Fractal: turtle-graphics-gallery/t-square-fractal/index.md
+    - Levy C Curve: turtle-graphics-gallery/levy-c-curve/index.md
+    - Gosper Curve: turtle-graphics-gallery/gosper-curve/index.md
     - Dragon Curve: turtle-graphics-gallery/dragon-curve/index.md
     - Hilbert Curve: turtle-graphics-gallery/hilbert-curve/index.md
     - Cantor Dust: turtle-graphics-gallery/cantor-dust/index.md

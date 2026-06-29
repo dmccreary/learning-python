@@ -250,6 +250,50 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Pythagorean Tree**
+
+    ---
+
+    ![Pythagorean Tree](./pythagorean-tree/screen-image.png)
+
+    Squares growing from squares — the Pythagorean theorem made visible as a fractal.
+    Teaches: geometric recursion, depth-driven color, `a² + b² = c²` visually.
+
+    [:octicons-arrow-right-24: Open Lab](./pythagorean-tree/index.md)
+
+-   **T-Square Fractal**
+
+    ---
+
+    ![T-Square Fractal](./t-square-fractal/screen-image.png)
+
+    A central square sprouts four half-sized squares at each corner, five levels deep.
+    Teaches: quaternary recursion, 4-ary recursion, layered draw order.
+
+    [:octicons-arrow-right-24: Open Lab](./t-square-fractal/index.md)
+
+-   **Lévy C Curve**
+
+    ---
+
+    ![Lévy C Curve](./levy-c-curve/screen-image.png)
+
+    A Koch-style fractal with 45° bumps that packs into a wing-like shape.
+    Teaches: comparing fractal rules, `n / √2` segment sizing, plane-tiling curves.
+
+    [:octicons-arrow-right-24: Open Lab](./levy-c-curve/index.md)
+
+-   **Gosper Curve**
+
+    ---
+
+    ![Gosper Curve](./gosper-curve/screen-image.png)
+
+    The "flowsnake" — an L-system fractal that tiles hexagonal space.
+    Teaches: string rewriting, L-systems, translating characters to turtle commands.
+
+    [:octicons-arrow-right-24: Open Lab](./gosper-curve/index.md)
+
 -   **Dragon Curve**
 
     ---
