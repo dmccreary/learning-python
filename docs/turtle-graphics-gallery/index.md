@@ -250,6 +250,39 @@ Each pattern is runnable in your browser — click the link to open the interact
     [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
 
 
+-   **Dragon Curve**
+
+    ---
+
+    ![Dragon Curve](./dragon-curve/screen-image.png)
+
+    The Heighway Dragon — a self-avoiding fractal built by simulating paper folding with a list.
+    Teaches: list manipulation for fractals, L/R turn encoding, never-crossing paths.
+
+    [:octicons-arrow-right-24: Open Lab](./dragon-curve/index.md)
+
+-   **Hilbert Curve**
+
+    ---
+
+    ![Hilbert Curve](./hilbert-curve/screen-image.png)
+
+    A space-filling curve that visits every cell in a grid without crossing itself.
+    Teaches: mutual recursion, `4^n` cells at depth `n`, and space-filling geometry.
+
+    [:octicons-arrow-right-24: Open Lab](./hilbert-curve/index.md)
+
+-   **Cantor Dust**
+
+    ---
+
+    ![Cantor Dust](./cantor-dust/screen-image.png)
+
+    Six rows of lines, each removing the middle third — infinite points, zero total length.
+    Teaches: binary recursion, the `(2/3)^n` shrinking ratio, Cantor's paradox.
+
+    [:octicons-arrow-right-24: Open Lab](./cantor-dust/index.md)
+
 -   **Fractal Tree**
 
     ---

@@ -194,6 +194,9 @@ nav:
     - Koch Snowflake: turtle-graphics-gallery/koch-snowflake/index.md
     - Sierpinski Triangle: turtle-graphics-gallery/sierpinski-triangle/index.md
     - Fractal Tree: turtle-graphics-gallery/fractal-tree/index.md
+    - Dragon Curve: turtle-graphics-gallery/dragon-curve/index.md
+    - Hilbert Curve: turtle-graphics-gallery/hilbert-curve/index.md
+    - Cantor Dust: turtle-graphics-gallery/cantor-dust/index.md
 
   - Intermediate Python:
     - Introduction: intermediate/01-intro.md
