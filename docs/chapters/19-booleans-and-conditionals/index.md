@@ -321,3 +321,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You've unlocked truthiness, short-circuits, ternary expressions, and match/case!
     These tools let you write smarter, cleaner conditional logic in far fewer lines.
     The more you practice, the more natural they feel. Let's keep coding!
+
+[See Annotated References](./references.md)

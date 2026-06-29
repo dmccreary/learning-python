@@ -407,3 +407,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You've learned data structures and algorithms — the foundation of all efficient software!
     Stacks, queues, graphs, BFS, DFS, sorting, and Big-O are the tools professional developers think about every day.
     You're now thinking like a computer scientist. Let's keep coding!
+
+[See Annotated References](./references.md)

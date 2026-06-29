@@ -321,3 +321,5 @@ Try these changes. Predict what will happen first, then run it to check!
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You've mastered append, insert, remove, sort, comprehensions, stacks, and queues!
     Lists are one of the workhorses of Python — you'll use these patterns in almost every program you build from here on. Let's keep coding together!
+
+[See Annotated References](./references.md)

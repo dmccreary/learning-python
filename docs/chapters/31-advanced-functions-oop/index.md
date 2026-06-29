@@ -368,3 +368,5 @@ Try these changes. Predict what will happen first, then run it to check!
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You've reached the advanced Python tier! Custom exceptions, properties, dunders, and composition are tools used by professional Python developers every day.
     The last chapters take you into data science and machine learning territory. Let's keep coding!
+
+[See Annotated References](./references.md)

@@ -304,3 +304,5 @@ Try these changes to the programs above. For each one, predict what will happen 
 !!! mascot-celebration "Great Work!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     Your programs can now make decisions! You know Boolean values, six comparison operators, three logical operators, and four types of branching: `if`, `if/else`, `elif` chains, and nested `if`. These are the building blocks of every interactive program ever written. Let's keep coding it together!
+
+[See Annotated References](./references.md)

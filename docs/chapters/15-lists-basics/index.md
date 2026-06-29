@@ -272,3 +272,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You've created lists, used indexing and slicing, measured length, checked membership, and
     discovered the mutable/immutable difference! Next chapter we'll learn how to add, remove,
     and sort items — making lists even more powerful. Let's keep coding together!
+
+[See Annotated References](./references.md)

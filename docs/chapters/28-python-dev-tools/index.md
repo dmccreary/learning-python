@@ -338,3 +338,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You now have a map of the entire Python ecosystem — from beginner tools to professional environments!
     Choosing the right tool for the job is a real developer skill.
     When you're ready, pick one environment and start building something real. Let's keep coding!
+
+[See Annotated References](./references.md)

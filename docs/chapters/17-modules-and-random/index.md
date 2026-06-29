@@ -318,3 +318,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You've unlocked modules and mastered the `random` module!
     Games, simulations, and generative art all rely on randomness — and now you can use it too.
     Next chapter we'll add math power to your turtle programs. Let's keep coding!
+
+[See Annotated References](./references.md)

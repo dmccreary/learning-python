@@ -326,3 +326,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You've mastered one of Python's most powerful data structures!
     Dictionaries are everywhere — in APIs, configuration files, databases, and machine learning models.
     Next chapter we'll combine all four collection types with Python's powerful built-in functions!
+
+[See Annotated References](./references.md)

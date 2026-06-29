@@ -318,3 +318,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You've learned to design your own objects with classes, inheritance, and special methods!
     OOP is the foundation of almost all professional Python code — from web frameworks to game engines.
     You're building real software skills. Let's keep coding!
+
+[See Annotated References](./references.md)

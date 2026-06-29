@@ -308,3 +308,5 @@ Try these changes. Predict what will happen first, then run it to check!
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     NumPy is the foundation of the entire scientific Python ecosystem — pandas, scikit-learn, TensorFlow, and PyTorch all use NumPy arrays under the hood.
     Mastering it puts you at the starting line of data science and AI. Let's keep coding!
+
+[See Annotated References](./references.md)

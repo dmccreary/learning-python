@@ -269,3 +269,5 @@ Try these changes to the polygon program above. For each one, predict what will 
 !!! mascot-celebration "Great Work!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You've unlocked Python's full arithmetic toolkit — seven operators, order of operations, and two powerful assignment shortcuts. Best of all, you connected math to art with one formula. That's exactly how programmers think! Let's keep coding it together!
+
+[See Annotated References](./references.md)

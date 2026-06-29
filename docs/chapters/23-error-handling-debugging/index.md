@@ -289,3 +289,7 @@ Try these changes. Predict what will happen first, then run it to check!
     You can now read tracebacks, catch exceptions, raise your own errors, and debug like a professional!
     These skills transform error messages from obstacles into tools.
     That's a huge step forward. Let's keep coding!
+
+[See Annotated References](./references.md)
+
+[See Annotated References](./references.md)

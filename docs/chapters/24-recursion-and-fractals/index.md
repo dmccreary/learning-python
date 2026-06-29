@@ -292,3 +292,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You've grasped one of the most powerful and beautiful ideas in all of programming!
     Recursion, fractals, lambdas, and functions-as-arguments — these concepts appear in professional code every day.
     Next up: object-oriented programming! Let's keep coding!
+
+[See Annotated References](./references.md)

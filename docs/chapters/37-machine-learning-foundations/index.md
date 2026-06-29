@@ -352,3 +352,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You now understand the vocabulary, math, and structure of machine learning!
     Supervised vs unsupervised, train/val/test splits, overfitting, layers, activations, loss functions — you've got the full picture.
     One more chapter: Convolutional Neural Networks — the architecture that revolutionized computer vision. Let's keep coding!
+
+[See Annotated References](./references.md)

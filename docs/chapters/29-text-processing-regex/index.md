@@ -362,3 +362,5 @@ Try these changes. Predict what will happen first, then run it to check!
     Regular expressions are a superpower — one pattern can search through millions of lines of text!
     They appear in web scraping, data validation, log analysis, and almost every text processing task.
     You've just added a serious tool to your programmer toolbox. Let's keep coding!
+
+[See Annotated References](./references.md)

@@ -388,4 +388,6 @@ Try these changes. Predict what will happen first, then run it to check!
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You've learned how to write smarter functions with default values, keyword arguments, and proper scope!
     These skills will make every function you write from now on more flexible and easier for others to read.
+
+[See Annotated References](./references.md)
     Let's keep coding together!

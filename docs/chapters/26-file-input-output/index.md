@@ -324,3 +324,5 @@ Try these changes. Predict what will happen first, then run it to check!
     Your programs can now save and load data from files — including CSV spreadsheets!
     This opens the door to real data processing, log files, configuration storage, and so much more.
     For the real thing, open Thonny and practice `open()` on your own computer. Let's keep coding!
+
+[See Annotated References](./references.md)

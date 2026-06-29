@@ -18,44 +18,120 @@ nav:
   - About Learning Python: about.md
   - Chapters:
     - List of Chapters: chapters/index.md
-    - 1. Welcome to Python and Skulpt: chapters/01-welcome-to-python/index.md
-    - 2. Python Code Structure: chapters/02-python-code-structure/index.md
-    - 3. Variables and Numbers: chapters/03-variables-and-numbers/index.md
-    - 4. Functions and Objects: chapters/04-functions-and-objects/index.md
-    - 5. Drawing with Turtle Graphics: chapters/05-drawing-with-turtle/index.md
-    - 6. Math and Arithmetic: chapters/06-math-and-arithmetic/index.md
-    - 7. For Loops and Drawing Shapes: chapters/07-for-loops-and-shapes/index.md
-    - 8. Working with Strings: chapters/08-working-with-strings/index.md
-    - 9. Making Decisions with If/Else: chapters/09-decisions-if-else/index.md
-    - 10. While Loops and Animation: chapters/10-while-loops-and-animation/index.md
-    - 11. Functions with Parameters and Scope: chapters/11-functions-parameters-scope/index.md
-    - 12. Colors, Fill, and Turtle Art: chapters/12-colors-fill-turtle-art/index.md
-    - 13. User Input and Type Conversion: chapters/13-user-input-type-conversion/index.md
-    - 14. String Methods and Formatting: chapters/14-string-methods-formatting/index.md
-    - 15. Lists - Basics: chapters/15-lists-basics/index.md
-    - 16. Lists - Methods and Patterns: chapters/16-lists-methods-patterns/index.md
-    - 17. Modules and Random Numbers: chapters/17-modules-and-random/index.md
-    - 18. Math Module and Turtle Projects: chapters/18-math-module-turtle-projects/index.md
-    - 19. More Booleans and Conditionals: chapters/19-booleans-and-conditionals/index.md
-    - 20. Tuples and Sets: chapters/20-tuples-and-sets/index.md
-    - 21. Dictionaries: chapters/21-dictionaries/index.md
-    - 22. Advanced Collections and Built-in Functions: chapters/22-advanced-collections/index.md
-    - 23. Error Handling and Debugging: chapters/23-error-handling-debugging/index.md
-    - 24. Recursion and Fractals: chapters/24-recursion-and-fractals/index.md
-    - 25. Object-Oriented Programming: chapters/25-object-oriented-programming/index.md
-    - 26. File Input and Output: chapters/26-file-input-output/index.md
-    - 27. Standard Library and JSON: chapters/27-standard-library-json/index.md
-    - 28. Python Development Tools: chapters/28-python-dev-tools/index.md
-    - 29. Text Processing and Regular Expressions: chapters/29-text-processing-regex/index.md
-    - 30. Algorithms and Data Structures: chapters/30-algorithms-data-structures/index.md
-    - 31. Advanced Functions and OOP: chapters/31-advanced-functions-oop/index.md
-    - 32. Data Visualization with matplotlib: chapters/32-data-visualization-matplotlib/index.md
-    - 33. NumPy and Scientific Computing: chapters/33-numpy-scientific-computing/index.md
-    - 34. Image Processing with Pillow: chapters/34-image-processing-pillow/index.md
-    - 35. Advanced Turtle and Event-Driven Programming: chapters/35-advanced-turtle-event-driven/index.md
-    - 36. Computational Thinking and Best Practices: chapters/36-computational-thinking-best-practices/index.md
-    - 37. Machine Learning Foundations: chapters/37-machine-learning-foundations/index.md
-    - 38. Neural Networks and MNIST: chapters/38-neural-networks-and-mnist/index.md
+    - 1. Welcome to Python and Skulpt:
+      - Content: chapters/01-welcome-to-python/index.md
+      - Annotated References: chapters/01-welcome-to-python/references.md
+    - 2. Python Code Structure:
+      - Content: chapters/02-python-code-structure/index.md
+      - Annotated References: chapters/02-python-code-structure/references.md
+    - 3. Variables and Numbers:
+      - Content: chapters/03-variables-and-numbers/index.md
+      - Annotated References: chapters/03-variables-and-numbers/references.md
+    - 4. Functions and Objects:
+      - Content: chapters/04-functions-and-objects/index.md
+      - Annotated References: chapters/04-functions-and-objects/references.md
+    - 5. Drawing with Turtle Graphics:
+      - Content: chapters/05-drawing-with-turtle/index.md
+      - Annotated References: chapters/05-drawing-with-turtle/references.md
+    - 6. Math and Arithmetic:
+      - Content: chapters/06-math-and-arithmetic/index.md
+      - Annotated References: chapters/06-math-and-arithmetic/references.md
+    - 7. For Loops and Drawing Shapes:
+      - Content: chapters/07-for-loops-and-shapes/index.md
+      - Annotated References: chapters/07-for-loops-and-shapes/references.md
+    - 8. Working with Strings:
+      - Content: chapters/08-working-with-strings/index.md
+      - Annotated References: chapters/08-working-with-strings/references.md
+    - 9. Making Decisions with If/Else:
+      - Content: chapters/09-decisions-if-else/index.md
+      - Annotated References: chapters/09-decisions-if-else/references.md
+    - 10. While Loops and Animation:
+      - Content: chapters/10-while-loops-and-animation/index.md
+      - Annotated References: chapters/10-while-loops-and-animation/references.md
+    - 11. Functions with Parameters and Scope:
+      - Content: chapters/11-functions-parameters-scope/index.md
+      - Annotated References: chapters/11-functions-parameters-scope/references.md
+    - 12. Colors, Fill, and Turtle Art:
+      - Content: chapters/12-colors-fill-turtle-art/index.md
+      - Annotated References: chapters/12-colors-fill-turtle-art/references.md
+    - 13. User Input and Type Conversion:
+      - Content: chapters/13-user-input-type-conversion/index.md
+      - Annotated References: chapters/13-user-input-type-conversion/references.md
+    - 14. String Methods and Formatting:
+      - Content: chapters/14-string-methods-formatting/index.md
+      - Annotated References: chapters/14-string-methods-formatting/references.md
+    - 15. Lists - Basics:
+      - Content: chapters/15-lists-basics/index.md
+      - Annotated References: chapters/15-lists-basics/references.md
+    - 16. Lists - Methods and Patterns:
+      - Content: chapters/16-lists-methods-patterns/index.md
+      - Annotated References: chapters/16-lists-methods-patterns/references.md
+    - 17. Modules and Random Numbers:
+      - Content: chapters/17-modules-and-random/index.md
+      - Annotated References: chapters/17-modules-and-random/references.md
+    - 18. Math Module and Turtle Projects:
+      - Content: chapters/18-math-module-turtle-projects/index.md
+      - Annotated References: chapters/18-math-module-turtle-projects/references.md
+    - 19. More Booleans and Conditionals:
+      - Content: chapters/19-booleans-and-conditionals/index.md
+      - Annotated References: chapters/19-booleans-and-conditionals/references.md
+    - 20. Tuples and Sets:
+      - Content: chapters/20-tuples-and-sets/index.md
+      - Annotated References: chapters/20-tuples-and-sets/references.md
+    - 21. Dictionaries:
+      - Content: chapters/21-dictionaries/index.md
+      - Annotated References: chapters/21-dictionaries/references.md
+    - 22. Advanced Collections and Built-in Functions:
+      - Content: chapters/22-advanced-collections/index.md
+      - Annotated References: chapters/22-advanced-collections/references.md
+    - 23. Error Handling and Debugging:
+      - Content: chapters/23-error-handling-debugging/index.md
+      - Annotated References: chapters/23-error-handling-debugging/references.md
+    - 24. Recursion and Fractals:
+      - Content: chapters/24-recursion-and-fractals/index.md
+      - Annotated References: chapters/24-recursion-and-fractals/references.md
+    - 25. Object-Oriented Programming:
+      - Content: chapters/25-object-oriented-programming/index.md
+      - Annotated References: chapters/25-object-oriented-programming/references.md
+    - 26. File Input and Output:
+      - Content: chapters/26-file-input-output/index.md
+      - Annotated References: chapters/26-file-input-output/references.md
+    - 27. Standard Library and JSON:
+      - Content: chapters/27-standard-library-json/index.md
+      - Annotated References: chapters/27-standard-library-json/references.md
+    - 28. Python Development Tools:
+      - Content: chapters/28-python-dev-tools/index.md
+      - Annotated References: chapters/28-python-dev-tools/references.md
+    - 29. Text Processing and Regular Expressions:
+      - Content: chapters/29-text-processing-regex/index.md
+      - Annotated References: chapters/29-text-processing-regex/references.md
+    - 30. Algorithms and Data Structures:
+      - Content: chapters/30-algorithms-data-structures/index.md
+      - Annotated References: chapters/30-algorithms-data-structures/references.md
+    - 31. Advanced Functions and OOP:
+      - Content: chapters/31-advanced-functions-oop/index.md
+      - Annotated References: chapters/31-advanced-functions-oop/references.md
+    - 32. Data Visualization with matplotlib:
+      - Content: chapters/32-data-visualization-matplotlib/index.md
+      - Annotated References: chapters/32-data-visualization-matplotlib/references.md
+    - 33. NumPy and Scientific Computing:
+      - Content: chapters/33-numpy-scientific-computing/index.md
+      - Annotated References: chapters/33-numpy-scientific-computing/references.md
+    - 34. Image Processing with Pillow:
+      - Content: chapters/34-image-processing-pillow/index.md
+      - Annotated References: chapters/34-image-processing-pillow/references.md
+    - 35. Advanced Turtle and Event-Driven Programming:
+      - Content: chapters/35-advanced-turtle-event-driven/index.md
+      - Annotated References: chapters/35-advanced-turtle-event-driven/references.md
+    - 36. Computational Thinking and Best Practices:
+      - Content: chapters/36-computational-thinking-best-practices/index.md
+      - Annotated References: chapters/36-computational-thinking-best-practices/references.md
+    - 37. Machine Learning Foundations:
+      - Content: chapters/37-machine-learning-foundations/index.md
+      - Annotated References: chapters/37-machine-learning-foundations/references.md
+    - 38. Neural Networks and MNIST:
+      - Content: chapters/38-neural-networks-and-mnist/index.md
+      - Annotated References: chapters/38-neural-networks-and-mnist/references.md
  
   - Skulpt Labs:
     - Draw a Square: skulpt/02-simple-square.md

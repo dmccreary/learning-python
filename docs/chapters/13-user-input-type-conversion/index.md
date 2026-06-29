@@ -292,3 +292,5 @@ Try these changes. Predict what will happen first, then run it to check!
     Your programs can now have real conversations with users!
     You've learned `input()`, type conversion, validation, and string cleaning.
     These skills appear in nearly every real Python program. Let's keep coding together!
+
+[See Annotated References](./references.md)

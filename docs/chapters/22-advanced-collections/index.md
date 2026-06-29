@@ -334,3 +334,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You've leveled up with enumerate, zip, args, kwargs, map, filter, and more!
     These tools make Python code shorter, more readable, and more powerful.
     Professional programmers use every single one of them regularly. Great work!
+
+[See Annotated References](./references.md)

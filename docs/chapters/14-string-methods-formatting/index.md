@@ -316,3 +316,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You've learned indexing, slicing, split, join, replace, f-strings, and more!
     These string skills appear in almost every real Python program — from web apps to data science.
     You're building a seriously impressive toolkit! Let's keep coding!
+
+[See Annotated References](./references.md)

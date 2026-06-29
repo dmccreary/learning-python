@@ -359,3 +359,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You've explored Python's vast standard library and mastered JSON — the language of the web!
     These tools will appear in virtually every real-world Python project you work on.
     You're thinking like a professional developer now. Let's keep coding!
+
+[See Annotated References](./references.md)

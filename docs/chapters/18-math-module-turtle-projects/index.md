@@ -328,3 +328,5 @@ Try these changes. Predict what will happen first, then run it to check!
     You've built a sine wave and a turtle race using real math — that's seriously impressive!
     From here we move into more advanced Python: booleans, collections, and error handling.
     You're ready for the next level! Let's keep coding!
+
+[See Annotated References](./references.md)

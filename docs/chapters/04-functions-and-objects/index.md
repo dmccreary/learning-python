@@ -406,3 +406,5 @@ For each one, predict what will happen first — then run the code to check!
 !!! mascot-celebration "Functions Unlocked!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You just learned one of the most important skills in all of programming! `def`, parameters, `return`, `None`, docstrings, the Standard Library, and a first look at objects — that is a full chapter's worth of big ideas. In Chapter 5 you put functions to work immediately, using the `turtle` module to draw on screen. See you there! Let's code it together!
+
+[See Annotated References](./references.md)

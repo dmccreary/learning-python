@@ -331,3 +331,5 @@ Try these changes to the programs above. For each one, **predict what will happe
 !!! mascot-celebration "Fantastic Work!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You just wrote your very first Python programs — and they actually ran! You used `print()` to display messages, `#` to write comments, `import` to load a library, and `import turtle` to draw a shape on screen. That is nine brand-new concepts in one chapter, and you handled every single one. You have got this — let's keep coding together!
+
+[See Annotated References](./references.md)
