@@ -51,7 +51,7 @@ for hue in hues:
     monty.forward(radius)
     monty.left(180 - wedge)
     monty.end_fill()
-    # rotate counterclockwise 30 degrees
+    # rotate counterclockwise 30 degrees to the next wedge
     monty.left(30)
 ```
 
@@ -89,6 +89,8 @@ for hue in hues:
     monty.forward(radius)
     monty.left(180 - wedge)
     monty.end_fill()
+    # rotate counterclockwise 30 degrees to the next wedge
+    monty.left(30)
 </textarea>
     <div id="button-row">
       <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
@@ -105,9 +107,9 @@ Exactly **12 wedges** — one per hue, each 30°, summing to 360°. Were you rig
 
 ## How It Works
 
-Each wedge is drawn as a filled triangle-like shape: go out along one edge, cross the arc, come back along the other edge, then turn to face the next wedge's direction.
+Each wedge is drawn as a filled, triangle-like slice: go out along one edge, trace the small arc that rounds the rim, then come back along the other edge to the center.
 
-`monty.left(180 - wedge)` at the end repositions Monty's heading so the next wedge starts correctly. This is the key geometry: after walking back to center along one edge and turning 180°, we subtract the wedge angle to face the next slice.
+Two turns at the end do the important work. `monty.left(180 - wedge)` undoes the turning Monty built up while drawing the slice, pointing him back along the direction he started this wedge in. Then `monty.left(30)` — the line that makes the wheel actually spread out — rotates him one wedge angle so the next slice is drawn 30° further around. Twelve slices × 30° = 360°, one full circle.
 
 ## Explanation Table
 
@@ -116,17 +118,75 @@ Each wedge is drawn as a filled triangle-like shape: go out along one edge, cros
 | `hues = [...]` | List of 12 standard color wheel hues |
 | `wedge = 360 / 12` | Each slice spans 30° |
 | `monty.forward(radius)` | Draw the first edge of the wedge outward |
-| `for _ in range(6)` | Approximate the arc with 6 short forward+turn steps |
+| `for _ in range(6)` | Approximate the rim arc with 6 short forward+turn steps |
 | `monty.forward(radius)` | Draw the second edge back to center |
-| `monty.left(180 - wedge)` | Reorient to face the next wedge's first edge |
+| `monty.left(180 - wedge)` | Undo the slice's turning, back to its starting direction |
+| `monty.left(30)` | Rotate one wedge (30°) to the next slice |
+
+## A Shorter Way: Using `circle()`
+
+Drawing the rim with six tiny `forward`/`left` steps showed us *how* an arc is
+built. But Python turtles also have a built-in `circle()` command that draws an
+arc for us: `monty.circle(radius, wedge)` curves through `wedge` degrees along a
+circle of the given radius. That single line replaces the whole inner loop —
+**everything else stays exactly the same**, including the two turns that rotate
+Monty to the next slice.
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    This program is shorter, but it does the same job. Will it draw the **same**
+    12-color wheel, a smaller one, or a completely different shape?
+    Predict, then click Run.
+
+<div id="skulpt-lab-3">
+  <div id="editor-container-3">
+    <textarea id="code-3" spellcheck="false">import turtle
+monty = turtle.Turtle()
+monty.speed(0)
+monty.hideturtle()
+
+hues = ['red','orange','yellow','chartreuse','green','springgreen',
+        'cyan','deepskyblue','blue','purple','magenta','deeppink']
+radius = 180
+wedge = 360 / 12
+
+for hue in hues:
+    monty.color(hue)
+    monty.begin_fill()
+    monty.forward(radius)
+    monty.left(90)
+    monty.circle(radius, wedge)
+    monty.left(90)
+    monty.forward(radius)
+    monty.left(180 - wedge)
+    monty.end_fill()
+    # rotate counterclockwise 30 degrees to the next wedge
+    monty.left(30)
+</textarea>
+    <div id="button-row-3">
+      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
+      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+    </div>
+    <pre id="output-3"></pre>
+  </div>
+  <div id="canvas-container-3">
+    <div id="turtle-target-3"></div>
+  </div>
+</div>
+
+Same wheel, fewer lines! Because `circle()` lands Monty exactly on the rim, this
+version even returns precisely to the center on every slice. Use whichever method
+you like — the hand-drawn loop when you want to *see* the arc being built, and
+`circle()` when you just want a clean curve in one line.
 
 ## Learning Check
 
-!!! mascot-thinking "Your Turn — Change to 6 Wedges"
+!!! mascot-thinking "Your Turn — One Variable Controls the Wheel"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Can you change the code to draw only **6** wedges instead of 12?
-    You need to change the `hues` list (keep 6 colors) and update the `wedge` angle formula.
-    Add your changes and run to see the result!
+    This version stores the slice count in a variable, `wedges`, and computes
+    `angle = 360 / wedges` from it — so one number sets the wedge width, the rim,
+    and the rotation together. Predict what the wheel will look like with
+    `wedges = 5`, then run it to find out!
 
 <div id="skulpt-lab-2">
   <div id="editor-container-2">
@@ -135,22 +195,25 @@ monty = turtle.Turtle()
 monty.speed(0)
 monty.hideturtle()
 
-hues = ['red','yellow','green','cyan','blue','magenta']
+hues = ['red','orange','yellow','chartreuse','green','springgreen',
+        'cyan','deepskyblue','blue','purple','magenta','deeppink']
+
 radius = 180
-wedge = 360 / 6
+wedges = 5
+angle = 360 / wedges
 
 for hue in hues:
     monty.color(hue)
     monty.begin_fill()
     monty.forward(radius)
     monty.left(90)
-    for _ in range(6):
-        monty.forward(radius * 0.1)
-        monty.left(10)
+    monty.circle(radius, angle)
     monty.left(90)
     monty.forward(radius)
-    monty.left(180 - wedge)
+    monty.left(180 - angle)
     monty.end_fill()
+    # rotate counterclockwise 60 degrees to the next wedge
+    monty.left(angle)
 </textarea>
     <div id="button-row-2">
       <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
@@ -163,15 +226,15 @@ for hue in hues:
   </div>
 </div>
 
-With 6 wedges, each spans 60° and the inner arc step becomes `left(10)` (6 steps × 10° = 60°).
+Run it: `wedges = 5` makes each slice 72°, and five slices already fill the circle — so the sixth color (magenta) laps the wheel and paints over the first (red), leaving five visible slices. Pulling the count into a variable makes re-scaling easy: `angle = 360 / wedges` drives the wedge width, the `circle(radius, angle)` rim, and the `monty.left(angle)` turn all at once. Keep `wedges` equal to the number of colors in `hues` and every hue gets its own clean slice.
 
 ## Experiments
 
-1. **Try 8 wedges.** Use 8 colors, change `360 / 12` to `360 / 8`, and adjust the inner arc to 4 steps × 11.25°. You'll know it worked when 8 equal slices fill the circle.
+1. **Try 8 wedges.** Use 8 colors, change `360 / 12` to `360 / 8`, adjust the inner arc to 4 steps × 11.25°, and change the closing rotation to `monty.left(45)`. You'll know it worked when 8 equal slices fill the circle.
 
-2. **Make the wedges pointed.** Remove the arc loop and just draw `forward(radius)` straight back. You'll know it worked when each wedge becomes a sharp triangle with a tiny gap between tips.
+2. **Tilt the whole wheel.** Add a single `monty.left(15)` line just before the `for` loop. You'll know it worked when the entire wheel is rotated 15° but still closes into a full circle.
 
-3. **Shrink alternate wedges.** Add `if i % 2 == 0: r = radius else: r = radius // 2` using `enumerate(hues)`. You'll know it worked when the wedges alternate between long and short.
+3. **Shrink alternate wedges.** Use `for i, hue in enumerate(hues):`, then set `r = radius` for even `i` and `r = radius // 2` for odd `i`. Use `r` in both `forward(...)` lines and in the arc step `forward(r * 0.1)`. You'll know it worked when long and short wedges alternate around the wheel.
 
 !!! mascot-celebration "Spectacular!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }

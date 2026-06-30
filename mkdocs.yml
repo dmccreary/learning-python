@@ -15,117 +15,155 @@ nav:
     - 1. Welcome to Python and Skulpt:
       - Content: chapters/01-welcome-to-python/index.md
       - Annotated References: chapters/01-welcome-to-python/references.md
+      - Quiz: chapters/01-welcome-to-python/quiz.md
     - 2. Python Code Structure:
       - Content: chapters/02-python-code-structure/index.md
       - Annotated References: chapters/02-python-code-structure/references.md
+      - Quiz: chapters/02-python-code-structure/quiz.md
     - 3. Variables and Numbers:
       - Content: chapters/03-variables-and-numbers/index.md
       - Annotated References: chapters/03-variables-and-numbers/references.md
+      - Quiz: chapters/03-variables-and-numbers/quiz.md
     - 4. Functions and Objects:
       - Content: chapters/04-functions-and-objects/index.md
       - Annotated References: chapters/04-functions-and-objects/references.md
+      - Quiz: chapters/04-functions-and-objects/quiz.md
     - 5. Drawing with Turtle Graphics:
       - Content: chapters/05-drawing-with-turtle/index.md
       - Annotated References: chapters/05-drawing-with-turtle/references.md
+      - Quiz: chapters/05-drawing-with-turtle/quiz.md
     - 6. Math and Arithmetic:
       - Content: chapters/06-math-and-arithmetic/index.md
       - Annotated References: chapters/06-math-and-arithmetic/references.md
+      - Quiz: chapters/06-math-and-arithmetic/quiz.md
     - 7. For Loops and Drawing Shapes:
       - Content: chapters/07-for-loops-and-shapes/index.md
       - Annotated References: chapters/07-for-loops-and-shapes/references.md
+      - Quiz: chapters/07-for-loops-and-shapes/quiz.md
     - 8. Working with Strings:
       - Content: chapters/08-working-with-strings/index.md
       - Annotated References: chapters/08-working-with-strings/references.md
+      - Quiz: chapters/08-working-with-strings/quiz.md
     - 9. Making Decisions with If/Else:
       - Content: chapters/09-decisions-if-else/index.md
       - Annotated References: chapters/09-decisions-if-else/references.md
+      - Quiz: chapters/09-decisions-if-else/quiz.md
     - 10. While Loops and Animation:
       - Content: chapters/10-while-loops-and-animation/index.md
       - Annotated References: chapters/10-while-loops-and-animation/references.md
+      - Quiz: chapters/10-while-loops-and-animation/quiz.md
     - 11. Functions with Parameters and Scope:
       - Content: chapters/11-functions-parameters-scope/index.md
       - Annotated References: chapters/11-functions-parameters-scope/references.md
+      - Quiz: chapters/11-functions-parameters-scope/quiz.md
     - 12. Colors, Fill, and Turtle Art:
       - Content: chapters/12-colors-fill-turtle-art/index.md
       - Annotated References: chapters/12-colors-fill-turtle-art/references.md
+      - Quiz: chapters/12-colors-fill-turtle-art/quiz.md
     - 13. User Input and Type Conversion:
       - Content: chapters/13-user-input-type-conversion/index.md
       - Annotated References: chapters/13-user-input-type-conversion/references.md
+      - Quiz: chapters/13-user-input-type-conversion/quiz.md
     - 14. String Methods and Formatting:
       - Content: chapters/14-string-methods-formatting/index.md
       - Annotated References: chapters/14-string-methods-formatting/references.md
+      - Quiz: chapters/14-string-methods-formatting/quiz.md
     - 15. Lists - Basics:
       - Content: chapters/15-lists-basics/index.md
       - Annotated References: chapters/15-lists-basics/references.md
+      - Quiz: chapters/15-lists-basics/quiz.md
     - 16. Lists - Methods and Patterns:
       - Content: chapters/16-lists-methods-patterns/index.md
       - Annotated References: chapters/16-lists-methods-patterns/references.md
+      - Quiz: chapters/16-lists-methods-patterns/quiz.md
     - 17. Modules and Random Numbers:
       - Content: chapters/17-modules-and-random/index.md
       - Annotated References: chapters/17-modules-and-random/references.md
+      - Quiz: chapters/17-modules-and-random/quiz.md
     - 18. Math Module and Turtle Projects:
       - Content: chapters/18-math-module-turtle-projects/index.md
       - Annotated References: chapters/18-math-module-turtle-projects/references.md
+      - Quiz: chapters/18-math-module-turtle-projects/quiz.md
     - 19. More Booleans and Conditionals:
       - Content: chapters/19-booleans-and-conditionals/index.md
       - Annotated References: chapters/19-booleans-and-conditionals/references.md
+      - Quiz: chapters/19-booleans-and-conditionals/quiz.md
     - 20. Tuples and Sets:
       - Content: chapters/20-tuples-and-sets/index.md
       - Annotated References: chapters/20-tuples-and-sets/references.md
+      - Quiz: chapters/20-tuples-and-sets/quiz.md
     - 21. Dictionaries:
       - Content: chapters/21-dictionaries/index.md
       - Annotated References: chapters/21-dictionaries/references.md
+      - Quiz: chapters/21-dictionaries/quiz.md
     - 22. Advanced Collections and Built-in Functions:
       - Content: chapters/22-advanced-collections/index.md
       - Annotated References: chapters/22-advanced-collections/references.md
+      - Quiz: chapters/22-advanced-collections/quiz.md
     - 23. Error Handling and Debugging:
       - Content: chapters/23-error-handling-debugging/index.md
       - Annotated References: chapters/23-error-handling-debugging/references.md
+      - Quiz: chapters/23-error-handling-debugging/quiz.md
     - 24. Recursion and Fractals:
       - Content: chapters/24-recursion-and-fractals/index.md
       - Annotated References: chapters/24-recursion-and-fractals/references.md
+      - Quiz: chapters/24-recursion-and-fractals/quiz.md
     - 25. Object-Oriented Programming:
       - Content: chapters/25-object-oriented-programming/index.md
       - Annotated References: chapters/25-object-oriented-programming/references.md
+      - Quiz: chapters/25-object-oriented-programming/quiz.md
     - 26. File Input and Output:
       - Content: chapters/26-file-input-output/index.md
       - Annotated References: chapters/26-file-input-output/references.md
+      - Quiz: chapters/26-file-input-output/quiz.md
     - 27. Standard Library and JSON:
       - Content: chapters/27-standard-library-json/index.md
       - Annotated References: chapters/27-standard-library-json/references.md
+      - Quiz: chapters/27-standard-library-json/quiz.md
     - 28. Python Development Tools:
       - Content: chapters/28-python-dev-tools/index.md
       - Annotated References: chapters/28-python-dev-tools/references.md
+      - Quiz: chapters/28-python-dev-tools/quiz.md
     - 29. Text Processing and Regular Expressions:
       - Content: chapters/29-text-processing-regex/index.md
       - Annotated References: chapters/29-text-processing-regex/references.md
+      - Quiz: chapters/29-text-processing-regex/quiz.md
     - 30. Algorithms and Data Structures:
       - Content: chapters/30-algorithms-data-structures/index.md
       - Annotated References: chapters/30-algorithms-data-structures/references.md
+      - Quiz: chapters/30-algorithms-data-structures/quiz.md
     - 31. Advanced Functions and OOP:
       - Content: chapters/31-advanced-functions-oop/index.md
       - Annotated References: chapters/31-advanced-functions-oop/references.md
+      - Quiz: chapters/31-advanced-functions-oop/quiz.md
     - 32. Data Visualization with matplotlib:
       - Content: chapters/32-data-visualization-matplotlib/index.md
       - Annotated References: chapters/32-data-visualization-matplotlib/references.md
+      - Quiz: chapters/32-data-visualization-matplotlib/quiz.md
     - 33. NumPy and Scientific Computing:
       - Content: chapters/33-numpy-scientific-computing/index.md
       - Annotated References: chapters/33-numpy-scientific-computing/references.md
+      - Quiz: chapters/33-numpy-scientific-computing/quiz.md
     - 34. Image Processing with Pillow:
       - Content: chapters/34-image-processing-pillow/index.md
       - Annotated References: chapters/34-image-processing-pillow/references.md
+      - Quiz: chapters/34-image-processing-pillow/quiz.md
     - 35. Advanced Turtle and Event-Driven Programming:
       - Content: chapters/35-advanced-turtle-event-driven/index.md
       - Annotated References: chapters/35-advanced-turtle-event-driven/references.md
+      - Quiz: chapters/35-advanced-turtle-event-driven/quiz.md
     - 36. Computational Thinking and Best Practices:
       - Content: chapters/36-computational-thinking-best-practices/index.md
       - Annotated References: chapters/36-computational-thinking-best-practices/references.md
+      - Quiz: chapters/36-computational-thinking-best-practices/quiz.md
     - 37. Machine Learning Foundations:
       - Content: chapters/37-machine-learning-foundations/index.md
       - Annotated References: chapters/37-machine-learning-foundations/references.md
+      - Quiz: chapters/37-machine-learning-foundations/quiz.md
     - 38. Neural Networks and MNIST:
       - Content: chapters/38-neural-networks-and-mnist/index.md
       - Annotated References: chapters/38-neural-networks-and-mnist/references.md
+      - Quiz: chapters/38-neural-networks-and-mnist/quiz.md
  
   - Python Labs:
     - List of Labs: python-labs/index.md
