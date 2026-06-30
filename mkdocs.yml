@@ -185,17 +185,6 @@ nav:
     - 15. Sine Wave: python-labs/15-sine-wave.md
     - 17. Mouse Clicks: python-labs/17-mouse-clicks.md
 
-  - Learning Graph:
-    - Introduction: learning-graph/index.md
-    - Course Description Assessment: learning-graph/course-description-assessment.md
-    - Concept List v1: learning-graph/concept-list-v1.md
-    - Concept List: learning-graph/concept-list.md
-    - Graph Quality Analysis: learning-graph/quality-metrics.md
-    - Concept Taxonomy: learning-graph/concept-taxonomy.md
-    - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
-    - Mascot Style Guide: learning-graph/mascot-test.md
-    - FAQ Quality Report: learning-graph/faq-quality-report.md
-
   - Turtle Graphics Gallery:
     - Gallery: turtle-graphics-gallery/index.md
     - Pattern Ideas: turtle-graphics-gallery/pattern-ideas.md
@@ -294,6 +283,7 @@ nav:
     - Maze Solving with BFS: intermediate/bfsMaze.md
     - Maze Solving with DFS: intermediate/dfsMaze.md
     - Installing Python: intermediate/20-installing-local-python.md
+    - Running Python in Docker: intermediate/21-docker-python.md
   
   - Jupyter Notebooks:
     - Setup Turtle on Jupyter: jupyter/01-setup.md
@@ -305,7 +295,7 @@ nav:
     - Stock Ticker Analysis: advanced/stocks.md
     - MNIST Digit Prediction: advanced/mnist.md
   
-  - Trinket (deprecated):
+  - Trinket Labs (deprecated):
     - Introduction: trinket/00-introduction.md
     - Setting Up Trinket: trinket/01a-trinket-account.md
     - Turtle Graphics: trinket/01b-turtle-graphics.md
@@ -330,7 +320,18 @@ nav:
     - Controlling mouseclicks: trinket/17-controlling-mouseclicks.md
     - Other examples: trinket/examples.md
  
-  
+  - Learning Graph:
+    - Introduction: learning-graph/index.md
+    - Course Description Assessment: learning-graph/course-description-assessment.md
+    - Concept List v1: learning-graph/concept-list-v1.md
+    - Concept List: learning-graph/concept-list.md
+    - Graph Quality Analysis: learning-graph/quality-metrics.md
+    - Concept Taxonomy: learning-graph/concept-taxonomy.md
+    - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
+    - Mascot Style Guide: learning-graph/mascot-test.md
+    - FAQ Quality Report: learning-graph/faq-quality-report.md
+
+
   - Strategy:
     - Introduction: strategy/index.md
     - Order of Concepts: strategy/order-of-concepts.md

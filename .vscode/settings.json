@@ -19,6 +19,7 @@
         "matplotlib",
         "MNIST",
         "Mojhave",
+        "mouseclicks",
         "nonlocal",
         "onscreenclick",
         "pendown",

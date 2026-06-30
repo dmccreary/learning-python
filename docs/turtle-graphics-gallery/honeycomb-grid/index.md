@@ -24,7 +24,7 @@ Each hexagon is drawn by a function. The key to tiling is offset rows:
 - Odd rows shift right by half a hexagon width
 - The vertical spacing between rows is the hexagon's height × 0.75
 
-The hexagon width is `size * 2` and height is `size * sqrt(3)` (approximately `size * 1.732`).
+The hexagon height is `size * 2` (vertex-to-vertex) and width is `size * sqrt(3)` (flat-to-flat, approximately `size * 1.732`).
 
 ## Sample Code
 
@@ -38,7 +38,7 @@ monty.hideturtle()
 def hexagon(x, y, size, color):
     monty.penup()
     monty.goto(x, y)
-    monty.setheading(0)
+    monty.setheading(30)
     monty.pendown()
     monty.color(color)
     monty.begin_fill()
@@ -49,14 +49,14 @@ def hexagon(x, y, size, color):
 
 size = 30
 colors = ['gold', 'orange']
-h = size * math.sqrt(3)
-col_w = size * 2
+h = size * 2                     # height of a pointy-top hexagon
+col_w = size * math.sqrt(3)      # width of a pointy-top hexagon
 
 for row in range(7):
     for col in range(8):
-        offset = size if row % 2 == 1 else 0
-        x = -280 + col * col_w + offset
-        y = 180 - row * h * 0.75
+        offset = col_w / 2 if row % 2 == 1 else 0
+        x = -200 + col * col_w + offset
+        y = 150 - row * h * 0.75
         hexagon(x, y, size, colors[(row + col) % 2])
 ```
 
@@ -82,7 +82,7 @@ monty.hideturtle()
 def hexagon(x, y, size, color):
     monty.penup()
     monty.goto(x, y)
-    monty.setheading(0)
+    monty.setheading(30)
     monty.pendown()
     monty.color(color)
     monty.begin_fill()
@@ -93,14 +93,14 @@ def hexagon(x, y, size, color):
 
 size = 30
 colors = ['gold', 'orange']
-h = size * math.sqrt(3)
-col_w = size * 2
+h = size * 2                     # height of a pointy-top hexagon
+col_w = size * math.sqrt(3)      # width of a pointy-top hexagon
 
 for row in range(7):
     for col in range(8):
-        offset = size if row % 2 == 1 else 0
-        x = -280 + col * col_w + offset
-        y = 180 - row * h * 0.75
+        offset = col_w / 2 if row % 2 == 1 else 0
+        x = -200 + col * col_w + offset
+        y = 150 - row * h * 0.75
         hexagon(x, y, size, colors[(row + col) % 2])
 </textarea>
     <div id="button-row">
@@ -118,20 +118,21 @@ for row in range(7):
 
 ## How It Works
 
-The `hexagon()` function uses `setheading(0)` to ensure each hexagon starts facing East, regardless of where the previous one ended. This is essential in a function — you never know what state Monty is in when the function is called.
+The `hexagon()` function uses `setheading(30)` so each hexagon starts at a 30° angle, producing a **pointy-top** hexagon. Resetting the heading at the start of every call is essential — you never know what angle Monty is at when the function is called.
 
-The offset formula `size if row % 2 == 1 else 0` shifts odd rows by one hexagon radius, staggering them so each hexagon nestles into the gap between two hexagons in the row above.
+The offset formula `col_w / 2 if row % 2 == 1 else 0` shifts odd rows right by half the hex width, staggering them so each hexagon nestles into the gap between two hexagons in the row above.
 
 ## Explanation Table
 
 | Line | What it does |
 |------|-------------|
 | `def hexagon(x, y, size, color)` | Reusable function: draws one hexagon at position (x,y) |
-| `monty.setheading(0)` | Always start facing East — critical for consistency |
+| `monty.setheading(30)` | Start at 30° to draw a pointy-top hexagon — critical for correct tiling |
 | `monty.left(60)` | Exterior angle of a hexagon (360/6) |
-| `h = size * math.sqrt(3)` | Height of a regular hexagon |
-| `offset = size if row % 2 == 1 else 0` | Odd rows shift right by one radius |
-| `y = 180 - row * h * 0.75` | Rows overlap by 25% height to close the gaps |
+| `h = size * 2` | Height of a pointy-top hexagon (vertex to vertex) |
+| `col_w = size * math.sqrt(3)` | Width of a pointy-top hexagon (flat edge to flat edge) |
+| `offset = col_w / 2 if row % 2 == 1 else 0` | Odd rows shift right by half the hex width |
+| `y = 150 - row * h * 0.75` | Rows overlap by 25% of height so hexagons interlock |
 
 ## Learning Check
 
@@ -151,7 +152,7 @@ monty.hideturtle()
 def hexagon(x, y, size, color):
     monty.penup()
     monty.goto(x, y)
-    monty.setheading(0)
+    monty.setheading(30)
     monty.pendown()
     monty.color(color)
     monty.begin_fill()
@@ -162,14 +163,14 @@ def hexagon(x, y, size, color):
 
 size = 30
 colors = ['gold', 'orange']
-h = size * math.sqrt(3)
-col_w = size * 2
+h = size * 2
+col_w = size * math.sqrt(3)
 
 for row in range(7):
     for col in range(8):
         offset = col_w if row % 2 == 1 else 0
-        x = -280 + col * col_w + offset
-        y = 180 - row * h * 0.75
+        x = -200 + col * col_w + offset
+        y = 150 - row * h * 0.75
         hexagon(x, y, size, colors[(row + col) % 2])
 </textarea>
     <div id="button-row-2">
@@ -183,7 +184,7 @@ for row in range(7):
   </div>
 </div>
 
-Change `col_w` to `size` in the offset line — the shift should be one radius, not one full width.
+Change `col_w` to `col_w / 2` in the offset line — the shift should be half the hex width, not the full width.
 
 
 ```python
