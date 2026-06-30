@@ -268,6 +268,7 @@ nav:
 
   - Intermediate Python:
     - Introduction: intermediate/01-intro.md
+    - Running Python in Docker: intermediate/01-docker-python.md
     - Variables and Scope: intermediate/01-variables-scope.md
     - Data Types: intermediate/02-data-types.md
     - Data Types & Function Parameters: intermediate/03-data-type-validation.md
@@ -283,7 +284,6 @@ nav:
     - Maze Solving with BFS: intermediate/bfsMaze.md
     - Maze Solving with DFS: intermediate/dfsMaze.md
     - Installing Python: intermediate/20-installing-local-python.md
-    - Running Python in Docker: intermediate/21-docker-python.md
   
   - Jupyter Notebooks:
     - Setup Turtle on Jupyter: jupyter/01-setup.md
@@ -340,6 +340,11 @@ nav:
   - Contributing:
     - How to Contribute Examples: contribute.md
 
+  - Teacher's Guide:
+    - Overview: teachers-guide/index.md
+    - Adding Custom Python Labs: teachers-guide/adding-custom-python-labs.md
+    - CodeMirror Editor Example: teachers-guide/code-mirror-example.md
+
   - Glossary: glossary.md
   - FAQ: faq.md
   - Contact: contact.md
@@ -374,7 +379,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      linenums: true
   - pymdownx.superfences
   - toc:
       permalink: true
@@ -385,13 +391,14 @@ extra_css:
   - css/extra.css
   - css/skulpt.css
   - css/mascot.css
+  - css/docker-lab.css
 extra_javascript:
   - js/extra.js
   - js/skulpt.js
+  - js/docker-lab.js
 # Google Analytics Site ID: G-EP38Z3PVD5
 extra:
   analytics:
     provider: google
-    # https://analytics.google.com/analytics/web/#/p368752593/reports/intelligenthome
     property: G-EP38Z3PVD5
 

@@ -8,6 +8,7 @@
         "endswith",
         "Falsiness",
         "findall",
+        "frontmatter",
         "Frozensets",
         "hideturtle",
         "isalnum",
@@ -34,6 +35,7 @@
         "Thonny",
         "Trinkit",
         "xcor",
+        "XKCD",
         "ycor"
     ]
 }

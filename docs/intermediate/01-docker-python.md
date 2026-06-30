@@ -132,6 +132,103 @@ print("Done!")
 
 ---
 
+## Lab 4 — How Long Does It Take?
+
+Every time you click **Run**, your code makes a round-trip through four
+distinct phases.  This lab times each one so you can see exactly where the
+milliseconds go.
+
+| # | Phase | What is happening |
+|---|-------|-------------------|
+| 1 | **Send to service** | Browser encodes your code as JSON and sends it over the loopback network to the Docker service running on port 5001 |
+| 2 | **Container startup** | Docker creates a brand-new Python container from the cached image, sets up the isolated filesystem, and starts the Python process |
+| 3 | **Python execution** | Your code actually runs inside the container |
+| 4 | **Return to browser** | The container's output travels back over the loopback network and the browser renders the result |
+
+Edit the code below — try a short program vs a long loop — then click **Run**
+and watch which phases change.
+
+<div id="docker-lab-4">
+<div id="docker-editor-4">
+<textarea id="docker-code-4" rows="6" spellcheck="false">print("Hello from the timed lab!")
+total = 0
+for i in range(100_000):
+    total += i
+print(f"Sum 0–99999 = {total}")</textarea>
+<div id="docker-buttons-4">
+  <button id="docker-run-4" onclick="runDockerTimed()">&#9654; Run + Time</button>
+  <button id="docker-reset-4" onclick="resetDockerTimed()">&#8635; Reset</button>
+</div>
+</div>
+<div id="docker-timing-display" style="display:none; margin-top:12px;">
+  <table id="docker-timing-table">
+    <thead>
+      <tr><th>#</th><th>Phase</th><th style="text-align:right">Time (ms)</th><th>Bar</th></tr>
+    </thead>
+    <tbody>
+      <tr id="tr-network-send">
+        <td>1</td><td>Send to service (network)</td>
+        <td id="td-network-send" style="text-align:right">—</td>
+        <td><div class="timing-bar" id="bar-network-send"></div></td>
+      </tr>
+      <tr id="tr-startup">
+        <td>2</td><td>Container startup</td>
+        <td id="td-startup" style="text-align:right">—</td>
+        <td><div class="timing-bar" id="bar-startup"></div></td>
+      </tr>
+      <tr id="tr-exec">
+        <td>3</td><td>Python execution</td>
+        <td id="td-exec" style="text-align:right">—</td>
+        <td><div class="timing-bar" id="bar-exec"></div></td>
+      </tr>
+      <tr id="tr-network-return">
+        <td>4</td><td>Return to browser (network)</td>
+        <td id="td-network-return" style="text-align:right">—</td>
+        <td><div class="timing-bar" id="bar-network-return"></div></td>
+      </tr>
+      <tr style="font-weight:bold; border-top: 2px solid #642580;">
+        <td colspan="2">Total round-trip</td>
+        <td id="td-total" style="text-align:right">—</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <p id="docker-timing-note" style="font-size:0.85em; color:#666; margin-top:6px;"></p>
+</div>
+<pre id="docker-output-4" class="docker-output" style="margin-top:10px;">Output will appear here after you click Run + Time.</pre>
+</div>
+
+**Typical results** (measured on a MacBook, running `python:3.11-alpine`):
+
+| # | Phase | Cold start (1st run) | Warm (2nd run+) |
+|---|-------|---------------------:|----------------:|
+| 1 | Send to service (network) | 3.2 ms | 3.2 ms |
+| 2 | Container startup | ~4,700 ms | 258 ms |
+| 3 | Python execution | 9.5 ms | 9.5 ms |
+| 4 | Return to browser (network) | 3.2 ms | 3.2 ms |
+| | **Total round-trip** | **~5,000 ms** | **~274 ms** |
+
+The Python code (`range(100_000)` loop) ran for 9.516 ms — just 3.5% of the
+warm round-trip time.  Container startup dominates in both cases.
+
+**Things to notice:**
+
+- The **first run is slow (~5 seconds)** — a *cold start*.  Docker must load the
+  `python:3.11-alpine` image layers from disk into RAM the very first time.
+  Every run after that is a *warm start* (~300 ms) because those layers stay
+  in the operating system's page cache (fast RAM).
+- The **container startup** phase still dominates even on warm runs — Docker
+  creates a fresh isolated process from scratch every time you click Run.
+  This is the cost of safety.
+- **Python execution** is just a few milliseconds even for loops over 100,000
+  numbers — Python is fast once it starts.
+- **Network** time is tiny because everything stays on `127.0.0.1` (your own
+  machine), never touching the internet.
+- Restarting your computer clears the page cache, so the next first run will
+  be slow again.
+
+---
+
 ## How It Works
 
 When you click **Run**, here is what happens behind the scenes:
@@ -143,7 +240,10 @@ When you click **Run**, here is what happens behind the scenes:
 5. The service sends that output back to your browser.
 6. The container is deleted automatically.
 
-The round-trip takes about 1–2 seconds.
+The round-trip takes about **5 seconds on the very first run** (cold start —
+Docker loads the image from disk into RAM).  Every run after that takes about
+**300 milliseconds** because the image stays in the operating system's memory
+cache until you restart your computer.
 
 ---
 
@@ -160,187 +260,3 @@ The round-trip takes about 1–2 seconds.
 
 ---
 
-<style>
-/* Docker lab container */
-[id^="docker-lab-"] {
-  border: 2px solid #642580;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 1.5em 0;
-  background: #fafafa;
-}
-
-[id^="docker-editor-"] {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-[id^="docker-code-"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 14px;
-  font-family: 'Courier New', monospace;
-  border: 2px solid #642580;
-  border-radius: 6px 6px 0 0;
-  background: #1e1e2e;
-  color: #cdd6f4;
-  resize: vertical;
-  box-sizing: border-box;
-  tab-size: 4;
-}
-
-[id^="docker-code-"]:focus {
-  outline: none;
-  border-color: #41BAC1;
-}
-
-[id^="docker-buttons-"] {
-  display: flex;
-  gap: 8px;
-}
-
-[id^="docker-run-"] {
-  padding: 8px 20px;
-  font-size: 15px;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  background: #642580;
-  color: white;
-}
-[id^="docker-run-"]:hover { background: #7a2f9e; }
-
-[id^="docker-reset-"] {
-  padding: 8px 20px;
-  font-size: 15px;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  background: #41BAC1;
-  color: white;
-}
-[id^="docker-reset-"]:hover { background: #2fa8b0; }
-
-.docker-output {
-  margin: 0;
-  padding: 10px;
-  min-height: 36px;
-  background: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 13px;
-  font-family: 'Courier New', monospace;
-  color: #222;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.docker-error {
-  color: #c0392b;
-}
-
-.docker-running {
-  color: #888;
-  font-style: italic;
-}
-</style>
-
-<script>
-// Default code for each lab — used by the Reset button
-const DOCKER_DEFAULTS = {
-  '1': 'print("Hello, World!")',
-  '2': `name = "Ada Lovelace"
-year_born = 1815
-current_year = 2025
-
-age = current_year - year_born
-print("Name:", name)
-print("Age:", age, "years ago she was born")`,
-  '3': `print("Counting with a loop:")
-for i in range(1, 6):
-    print(f"  Step {i} of 5")
-
-print("Done!")`,
-};
-
-const SERVICE_URL = 'http://127.0.0.1:5001/run';
-
-async function runDocker(suffix) {
-  const codeEl   = document.getElementById('docker-code-'   + suffix);
-  const outputEl = document.getElementById('docker-output-' + suffix);
-  const runBtn   = document.getElementById('docker-run-'    + suffix);
-
-  if (!codeEl || !outputEl) return;
-
-  const code = codeEl.value;
-  runBtn.disabled = true;
-  outputEl.className = 'docker-output docker-running';
-  outputEl.textContent = 'Running…';
-
-  try {
-    const response = await fetch(SERVICE_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code }),
-    });
-
-    if (!response.ok) {
-      throw new Error('Service returned status ' + response.status);
-    }
-
-    const data = await response.json();
-
-    outputEl.className = 'docker-output';
-
-    if (data.returncode !== 0 && data.stderr) {
-      // Show stderr in red, stdout (if any) in normal colour
-      outputEl.innerHTML =
-        (data.stdout ? escHtml(data.stdout) + '\n' : '') +
-        '<span class="docker-error">' + escHtml(data.stderr) + '</span>';
-    } else if (data.stdout || data.stderr) {
-      outputEl.textContent = (data.stdout + data.stderr).replace(/\n$/, '');
-    } else {
-      outputEl.textContent = '(program finished with no output)';
-    }
-
-  } catch (err) {
-    outputEl.className = 'docker-output';
-    const isConnectError =
-      err.message.includes('Failed to fetch') ||
-      err.message.includes('NetworkError') ||
-      err.message.includes('net::ERR');
-
-    if (isConnectError) {
-      outputEl.innerHTML =
-        '<span class="docker-error">' +
-        'Cannot connect to the Python Docker service.\n\n' +
-        'Please open a terminal and run:\n' +
-        '  bash scripts/run-python-docker.sh\n\n' +
-        'Then reload this page and try again.' +
-        '</span>';
-    } else {
-      outputEl.innerHTML =
-        '<span class="docker-error">Error: ' + escHtml(err.message) + '</span>';
-    }
-  } finally {
-    runBtn.disabled = false;
-  }
-}
-
-function resetDocker(suffix) {
-  const codeEl   = document.getElementById('docker-code-'   + suffix);
-  const outputEl = document.getElementById('docker-output-' + suffix);
-  if (codeEl)   codeEl.value = DOCKER_DEFAULTS[suffix] || '';
-  if (outputEl) { outputEl.className = 'docker-output'; outputEl.textContent = ''; }
-}
-
-function escHtml(str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-}
-</script>

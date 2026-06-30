@@ -189,19 +189,21 @@ import http.server
 import json
 import os
 import subprocess
+import time
 
 PORT  = int(os.environ["_DOCKER_PORT"])
 IMAGE = os.environ["_DOCKER_IMAGE"]
+
+# Marker written to container stderr so we can extract Python-side timing
+_EXEC_MARKER = "__EXEC_MS__:"
 
 
 class DockerRunHandler(http.server.BaseHTTPRequestHandler):
 
     def log_message(self, fmt, *args):
-        # Suppress per-request noise; errors still reach stderr.
         pass
 
     def do_OPTIONS(self):
-        """Respond to CORS pre-flight requests from the browser."""
         self.send_response(204)
         self._set_cors_headers()
         self.end_headers()
@@ -211,53 +213,120 @@ class DockerRunHandler(http.server.BaseHTTPRequestHandler):
             self.send_error(404, "Only POST /run is supported")
             return
 
+        # ── Phase 1 begins: request arrives at server ──────────────────────
+        t_received = time.perf_counter()
+
         content_length = int(self.headers.get("Content-Length", 0))
         body = self.rfile.read(content_length)
 
         try:
             data = json.loads(body)
             code = data.get("code", "")
+            show_timing = bool(data.get("show_timing", False))
         except (json.JSONDecodeError, KeyError):
             self.send_error(400, "Request body must be JSON with a 'code' field")
             return
 
-        result = self._run_in_docker(code)
-        self._json_response(200, result)
+        # ── Phase 2 begins: hand off to Docker ─────────────────────────────
+        t_docker_start = time.perf_counter()
+        result = self._run_in_docker(code, instrument=show_timing)
+        t_docker_done = time.perf_counter()
 
-    def _run_in_docker(self, code):
-        """Run Python code in a fresh, isolated Docker container."""
+        server_overhead_ms  = round((t_docker_start - t_received)  * 1000, 1)
+        docker_total_ms     = round((t_docker_done  - t_docker_start) * 1000, 1)
+        python_exec_ms      = result.pop("python_exec_ms", None)
+
+        # container_startup_ms = docker_total_ms minus the time Python actually
+        # ran user code (measured from inside the container).
+        container_startup_ms = (
+            round(docker_total_ms - python_exec_ms, 1)
+            if python_exec_ms is not None else None
+        )
+
+        payload = {
+            "stdout":    result["stdout"],
+            "stderr":    result["stderr"],
+            "returncode": result["returncode"],
+            "timing": {
+                "server_overhead_ms":   server_overhead_ms,
+                "docker_total_ms":      docker_total_ms,
+                "container_startup_ms": container_startup_ms,
+                "python_exec_ms":       python_exec_ms,
+            },
+        }
+        self._json_response(200, payload)
+
+    def _run_in_docker(self, code, instrument=False):
+        """Run code in a fresh container; optionally wrap it with a timer."""
+        if instrument:
+            # Prepend/append timing lines so we can measure pure Python
+            # execution time from inside the container.
+            run_code = (
+                "import time as _t, sys as _sys\n"
+                "_t0 = _t.perf_counter()\n"
+                + code + "\n"
+                "_exec_ms = (_t.perf_counter() - _t0) * 1000\n"
+                "print(f'" + _EXEC_MARKER + "{_exec_ms:.3f}', file=_sys.stderr)\n"
+            )
+        else:
+            run_code = code
+
         try:
             proc = subprocess.run(
                 [
                     "docker", "run", "--rm",
-                    "--network=none",          # no internet access
-                    "--memory=64m",            # RAM cap
-                    "--memory-swap=64m",       # no swap
-                    "--cpus=0.5",              # half a core
-                    "--pids-limit=32",         # no fork bombs
+                    "--network=none",
+                    "--memory=64m",
+                    "--memory-swap=64m",
+                    "--cpus=0.5",
+                    "--pids-limit=32",
                     IMAGE,
-                    "python", "-c", code,
+                    "python", "-c", run_code,
                 ],
                 capture_output=True,
                 text=True,
                 timeout=10,
             )
+
+            stderr = proc.stderr
+            python_exec_ms = None
+
+            if instrument:
+                # Strip the timing marker from stderr so it doesn't appear
+                # in the student's output, and extract the value.
+                clean_lines = []
+                for line in stderr.splitlines():
+                    if line.startswith(_EXEC_MARKER):
+                        try:
+                            python_exec_ms = round(float(line[len(_EXEC_MARKER):]), 3)
+                        except ValueError:
+                            pass
+                    else:
+                        clean_lines.append(line)
+                stderr = "\n".join(clean_lines)
+                if stderr and not stderr.endswith("\n"):
+                    stderr += "\n"
+
             return {
-                "stdout": proc.stdout,
-                "stderr": proc.stderr,
-                "returncode": proc.returncode,
+                "stdout":         proc.stdout,
+                "stderr":         stderr,
+                "returncode":     proc.returncode,
+                "python_exec_ms": python_exec_ms,
             }
+
         except subprocess.TimeoutExpired:
             return {
                 "stdout": "",
                 "stderr": "Your program was stopped after 10 seconds (timeout).",
                 "returncode": 1,
+                "python_exec_ms": None,
             }
         except Exception as exc:
             return {
                 "stdout": "",
                 "stderr": f"Docker error: {exc}",
                 "returncode": 1,
+                "python_exec_ms": None,
             }
 
     def _json_response(self, status, payload):
@@ -270,12 +339,11 @@ class DockerRunHandler(http.server.BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def _set_cors_headers(self):
-        # Allow the MkDocs dev server and common alternatives.
         origin = self.headers.get("Origin", "")
         allowed_origins = {
             "http://localhost:8000",
             "http://127.0.0.1:8000",
-            "http://localhost:5500",   # VS Code Live Server
+            "http://localhost:5500",
             "http://127.0.0.1:5500",
         }
         cors_origin = origin if origin in allowed_origins else "http://localhost:8000"
