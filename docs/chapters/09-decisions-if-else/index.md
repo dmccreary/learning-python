@@ -107,10 +107,25 @@ Edit the code below and click **Run** to see the result.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">score = 75
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `score = 75
 
 print("Score:", score)
 print("Is 75 == 75?", score == 75)
@@ -122,18 +137,8 @@ if score >= 60:
     print("Passing grade!")
 
 if score == 100:
-    print("Perfect score!")
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+    print("Perfect score!")`);
+</script>
 
 Were you right? The line `"Perfect score!"` did NOT print because `75 == 100` is `False`. The `if` body only runs when its condition is `True`.
 
@@ -259,9 +264,21 @@ The program below should draw a different shape depending on the value of `shape
     Add **two more elif blocks** so that `"triangle"` draws a triangle (3 sides, 120° turns)
     and `"hexagon"` draws a hexagon (6 sides, 60° turns).
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 t = turtle.Turtle()
 t.speed(3)
 
@@ -276,18 +293,8 @@ if shape_choice == "square":
 # Add elif for "hexagon" (6 sides, turn 60 degrees each)
 
 else:
-    t.write("Unknown shape: " + shape_choice, font=("Arial", 14, "normal"))
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+    t.write("Unknown shape: " + shape_choice, font=("Arial", 14, "normal"))`);
+</script>
 
 Once all three shapes work, try setting `shape_choice = "circle"` to see the else branch draw the "Unknown shape" message!
 

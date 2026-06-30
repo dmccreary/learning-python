@@ -69,10 +69,25 @@ for d in data:
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import turtle
 monty = turtle.Turtle()
 monty.speed(0)
 monty.hideturtle()
@@ -99,18 +114,8 @@ data = [(-280,45,110,'dimgray'),(-225,50,160,'darkslategray'),(-165,40,90,'gray'
         (260,40,100,'dimgray')]
 
 for d in data:
-    building(*d)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+    building(*d)`);
+</script>
 
 The tallest building has `h=200` — that's the 4th entry at `x=-115`. Were you right?
 
@@ -137,9 +142,21 @@ The tallest building has `h=200` — that's the 4th entry at `x=-115`. Were you 
     The `building()` function below draws walls and windows but has no rooftop detail.
     Add **two lines** after `end_fill()` to draw a thin red rectangle (`height = 10`) across the roof.
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 monty = turtle.Turtle()
 monty.speed(0)
 monty.hideturtle()
@@ -163,18 +180,8 @@ def building(x, w, h, color):
 
 building(-100, 80, 150, 'slategray')
 building(30, 60, 120, 'dimgray')
-building(110, 70, 180, 'darkslategray')
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+building(110, 70, 180, 'darkslategray')`);
+</script>
 
 After `end_fill()` add: `monty.penup(); monty.goto(x, -180+h)` then draw a red filled `w × 10` rectangle.
 

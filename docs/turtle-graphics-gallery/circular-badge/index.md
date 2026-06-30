@@ -73,10 +73,25 @@ monty.write('PYTHON', font=('Arial', 9, 'bold'))
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import turtle
 import math
 monty = turtle.Turtle()
 monty.speed(0)
@@ -111,18 +126,8 @@ monty.goto(0, 0)
 monty.dot(60, 'navy')
 monty.pencolor('white')
 monty.goto(-30, -8)
-monty.write('PYTHON', font=('Arial', 9, 'bold'))
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+monty.write('PYTHON', font=('Arial', 9, 'bold'))`);
+</script>
 
 Letters at the top are readable, but the bottom letters are **upside-down** — because the turtle faces outward, letters at the bottom face inward. Were you right?
 
@@ -146,9 +151,21 @@ The turtle always faces "outward" from the center. For letters at the top (12 o'
     Change `name = "PYTHON PROGRAMMER"` to your own name repeated to fill the circle.
     Try padding it with spaces or asterisks to fill the ring evenly.
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 import math
 monty = turtle.Turtle()
 monty.speed(0)
@@ -183,18 +200,8 @@ monty.goto(0, 0)
 monty.dot(70, 'darkred')
 monty.pencolor('white')
 monty.goto(-22, -8)
-monty.write('CODE', font=('Arial', 10, 'bold'))
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+monty.write('CODE', font=('Arial', 10, 'bold'))`);
+</script>
 
 The asterisks act as separators between repeated text, just like on real coins!
 

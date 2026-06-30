@@ -108,10 +108,25 @@ No account needed — everything runs in your browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import turtle
 wn = turtle.Screen()
 wn.bgcolor("lightyellow")
 t = turtle.Turtle()
@@ -119,18 +134,8 @@ t.forward(100)
 t.right(90)
 t.forward(100)
 t.right(90)
-t.forward(100)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+t.forward(100)`);
+</script>
 
 Were you right? The turtle drew exactly three sides of a square — one 90° right turn for each corner!
 
@@ -183,26 +188,28 @@ t.forward(80)      # draw another line
 
 Try this in the lab below — pay close attention to the blank space in the middle of the drawing.
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 t = turtle.Turtle()
 t.forward(80)
 t.penup()
 t.forward(40)
 t.pendown()
-t.forward(80)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+t.forward(80)`);
+</script>
 
 The gap is where the turtle traveled with its pen in the air.
 Try changing the `40` in the middle `t.forward(40)` to `80` — the gap doubles in width.
@@ -262,9 +269,21 @@ Use `speed(1)` when you are learning or debugging and want to see the turtle mov
 
 Now try a lab that combines color, appearance, and speed — all in one program:
 
-<div id="skulpt-lab-3">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `import turtle
 t = turtle.Turtle()
 t.shape("turtle")
 t.speed(5)
@@ -274,18 +293,8 @@ t.forward(100)
 t.right(90)
 t.pencolor("red")
 t.forward(100)
-t.hideturtle()
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+t.hideturtle()`);
+</script>
 
 Notice that the first line is blue and the second is red — changing `pencolor()` in the middle of a drawing affects only the lines that come after that call.
 When the program finishes, the turtle cursor itself disappears because of `hideturtle()`.
@@ -303,9 +312,21 @@ The program below draws two sides of a square and then stops.
     Add **one line** to make it draw that third side — 100 pixels long.
     Hint: which command moves the turtle forward?
 
-<div id="skulpt-lab-4">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `import turtle
 t = turtle.Turtle()
 t.shape("turtle")
 t.speed(5)
@@ -315,18 +336,8 @@ t.forward(100)
 t.right(90)
 t.forward(100)
 t.right(90)
-# Add ONE line below to draw the third side of the square
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+# Add ONE line below to draw the third side of the square`);
+</script>
 
 If you got it right, you will see three sides of a square drawn in green.
 The missing line is `t.forward(100)` — the turtle was already facing the right direction after two right turns, so it just needed one more push forward!

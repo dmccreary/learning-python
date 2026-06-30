@@ -90,27 +90,32 @@ Edit the code below and click **Run** to see the result.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">print("Addition:        ", 10 + 3)
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `print("Addition:        ", 10 + 3)
 print("Subtraction:     ", 10 - 3)
 print("Multiplication:  ", 10 * 3)
 print("Division:        ", 10 / 3)
 print("Integer division:", 10 // 3)
 print("Modulo:          ", 10 % 3)
-print("Exponentiation:  ", 10 ** 3)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("Exponentiation:  ", 10 ** 3)`);
+</script>
 
 Were you right? `10 / 3` and `10 // 3` give *different* answers — one keeps the decimal, the other throws it away. And `10 % 3` equals `1`, because 10 ÷ 3 = 3 with **1** left over.
 
@@ -232,27 +237,29 @@ The program below draws a polygon — but it is missing the one line that calcul
     Add **one line** below the comment to calculate `turn_angle` using `360` and `sides`.
     Use `/` (not `//`) so the formula gives a precise decimal angle for any polygon!
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 t = turtle.Turtle()
 sides = 3
 # Add one line here: calculate turn_angle using 360 and sides
 
 for i in range(sides):
     t.forward(100)
-    t.right(turn_angle)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+    t.right(turn_angle)`);
+</script>
 
 Once the triangle appears, try changing `sides` to `5` or `6` — the formula adapts automatically!
 

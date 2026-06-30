@@ -25,6 +25,9 @@ Every programmer makes mistakes. The skill isn't avoiding errors — it's findin
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Three Types of Errors
 
@@ -79,23 +82,25 @@ Read from the **bottom up**:
     The code below has a bug. Which line will crash, and what exception type will appear?
     Make your guess — then run it!
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">numbers = [10, 20, 30]
-print("First:", numbers[0])
-print("Last:", numbers[5])   # this will fail!
-print("This line never runs.")
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
     </div>
-    <pre id="output"></pre>
+    <pre class="cm-output" id="cm-output"></pre>
   </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
   </div>
 </div>
+<script>
+initCmLab('', `numbers = [10, 20, 30]
+print("First:", numbers[0])
+print("Last:", numbers[5])   # this will fail!
+print("This line never runs.")`);
+</script>
 
 Were you right? `IndexError: list index out of range` — index 5 doesn't exist in a 3-item list.
 
@@ -114,9 +119,21 @@ Structure:
 1. `try:` — put the risky code here
 2. `except ErrorType:` — put the recovery code here; runs only if that error occurs
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">def safe_divide(a, b):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `def safe_divide(a, b):
     try:
         return a / b
     except ZeroDivisionError:
@@ -125,18 +142,8 @@ Structure:
 
 print(safe_divide(10, 2))
 print(safe_divide(10, 0))
-print(safe_divide(7, 3))
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print(safe_divide(7, 3))`);
+</script>
 
 ## Catching Specific Exceptions
 
@@ -178,9 +185,21 @@ finally:
 
 Use `raise` to trigger an exception yourself when input violates a rule:
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">def set_speed(speed):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `def set_speed(speed):
     if speed < 0:
         raise ValueError("Speed cannot be negative.")
     if speed > 300:
@@ -192,18 +211,8 @@ for s in [60, -10, 400]:
         result = set_speed(s)
         print(f"Speed set to {result}")
     except ValueError as e:
-        print(f"Invalid: {e}")
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+        print(f"Invalid: {e}")`);
+</script>
 
 ## The `assert` Statement
 
@@ -246,24 +255,26 @@ Remove debug prints once the problem is fixed.
     The program below crashes when the user enters something that isn't a number.
     Wrap the `int()` call in a `try/except ValueError` block so it prints a friendly message instead!
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">raw = input("Enter a number: ")
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `raw = input("Enter a number: ")
 
 # Wrap this in try/except so it doesn't crash on bad input:
 n = int(raw)
-print(f"Double: {n * 2}")
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+print(f"Double: {n * 2}")`);
+</script>
 
 ## Experiments
 

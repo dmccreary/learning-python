@@ -25,6 +25,9 @@ This chapter fills in the remaining advanced tools from Python's functional and 
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## `map()` and `filter()` with Named Functions
 
@@ -51,27 +54,29 @@ This style is more readable than lambdas for complex logic.
 
 Both short-circuit — they stop as soon as the answer is known.
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">scores = [75, 92, 88, 60, 95]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `scores = [75, 92, 88, 60, 95]
 
 print("Any failing (<70)?", any(s < 70 for s in scores))
 print("All passing (>=60)?", all(s >= 60 for s in scores))
 print("All excellent (>=90)?", all(s >= 90 for s in scores))
 
 words = ["hello", "world", "Python"]
-print("Any starts with 'P'?", any(w.startswith("P") for w in words))
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("Any starts with 'P'?", any(w.startswith("P") for w in words))`);
+</script>
 
 ## `chr()` and `ord()` — Characters and ASCII Codes
 
@@ -85,9 +90,21 @@ print(chr(65))    # "A"
 print(chr(9829))  # "♥" — Unicode heart
 ```
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false"># Print A-Z using chr() and ord():
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `# Print A-Z using chr() and ord():
 for code in range(ord("A"), ord("Z") + 1):
     print(chr(code), end=" ")
 print()
@@ -103,18 +120,8 @@ def encrypt(text, shift=3):
             result += ch
     return result
 
-print(encrypt("Hello, World!"))
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print(encrypt("Hello, World!"))`);
+</script>
 
 ## `dir()` and `help()` — Exploring Objects
 
@@ -142,9 +149,21 @@ Only immutable objects (strings, numbers, tuples) can be hashed.
     The code below compares `is` vs `==` for strings. Will the small strings share the same id?
     Make your guess — then run it!
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">a = "hello"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `a = "hello"
 b = "hello"
 c = "hel" + "lo"   # built from parts at runtime
 
@@ -153,18 +172,8 @@ print("a is b:", a is b)
 print("a == c:", a == c)
 print("id(a):", id(a))
 print("id(b):", id(b))
-print("id(c):", id(c))
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print("id(c):", id(c))`);
+</script>
 
 ## Custom Exception Classes
 
@@ -181,9 +190,21 @@ class NegativeBalanceError(Exception):
         self.amount = amount
 ```
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">class InvalidScoreError(ValueError):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `class InvalidScoreError(ValueError):
     def __init__(self, score):
         super().__init__(f"Score {score} is out of range (0-100).")
         self.score = score
@@ -197,18 +218,8 @@ for s in [85, 110, -5, 0, 100]:
     try:
         print(f"Recorded: {record_score(s)}")
     except InvalidScoreError as e:
-        print(f"Error: {e}")
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+        print(f"Error: {e}")`);
+</script>
 
 ## Static Methods
 
@@ -315,9 +326,21 @@ car.drive()
     The `Bag` class below stores items, but `len(bag)` doesn't work yet.
     Add the `__len__` dunder method so `len(bag)` returns the number of items!
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">class Bag:
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `class Bag:
     def __init__(self):
         self.items = []
 
@@ -332,18 +355,8 @@ bag.add("banana")
 bag.add("mango")
 
 print("Items:", bag.items)
-print("Count:", len(bag))   # this will fail until you add __len__
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+print("Count:", len(bag))   # this will fail until you add __len__`);
+</script>
 
 ## Experiments
 

@@ -52,10 +52,25 @@ for i in range(250):
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import turtle
 monty = turtle.Turtle()
 monty.speed(0)
 monty.hideturtle()
@@ -67,18 +82,8 @@ for i in range(250):
     monty.color(colors[(i // 5) % 5])
     monty.forward(step)
     monty.right(72)
-    step += 1.2
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+    step += 1.2`);
+</script>
 
 The bands **align** with the arms — each arm is a single color because the band period (5) matches the polygon period (5). Were you right?
 
@@ -102,9 +107,21 @@ When the color band interval evenly divides the polygon period, colors align wit
     Change `i // 5` to `i // 7`. Now the color period (7) doesn't divide evenly into the
     pentagon period (5). Predict how the bands will change — then run it to check!
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 monty = turtle.Turtle()
 monty.speed(0)
 monty.hideturtle()
@@ -116,18 +133,8 @@ for i in range(250):
     monty.color(colors[(i // 7) % 5])
     monty.forward(step)
     monty.right(72)
-    step += 1.2
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+    step += 1.2`);
+</script>
 
 With `i // 7`, the color boundaries no longer align with the pentagon corners — they cut across the arms at a diagonal, producing a striped weave effect across the spiral.
 

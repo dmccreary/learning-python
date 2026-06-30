@@ -25,6 +25,9 @@ Dictionaries are one of the most widely-used data structures in Python.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Creating a Dictionary
 
@@ -41,9 +44,21 @@ phone_book = {
 Keys must be unique within a dictionary.
 Keys are usually strings or numbers. Values can be anything — strings, numbers, lists, even other dictionaries.
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">student = {
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `student = {
     "name": "Monty",
     "grade": 7,
     "score": 92.5,
@@ -52,18 +67,8 @@ Keys are usually strings or numbers. Values can be anything — strings, numbers
 
 print("Student:", student)
 print("Type:", type(student))
-print("Keys:", list(student.keys()))
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("Keys:", list(student.keys()))`);
+</script>
 
 ## Accessing Values by Key
 
@@ -80,26 +85,28 @@ If the key doesn't exist, Python raises a `KeyError` — so be careful.
     The code below tries to access both a key that exists and one that doesn't.
     What do you think happens when a key is missing? Make your guess — then run it!
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">grades = {"Alice": 95, "Bob": 87, "Carol": 91}
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `grades = {"Alice": 95, "Bob": 87, "Carol": 91}
 
 print("Alice's grade:", grades["Alice"])
 print("Bob's grade:", grades["Bob"])
 
 # Uncomment the next line to see a KeyError:
-# print("Dave's grade:", grades["Dave"])
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+# print("Dave's grade:", grades["Dave"])`);
+</script>
 
 ## Safe Access with `get()`
 
@@ -124,25 +131,27 @@ grades["Dave"] = 78     # new key
 grades["Alice"] = 96    # update existing key
 ```
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">inventory = {"apples": 10, "bananas": 5}
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `inventory = {"apples": 10, "bananas": 5}
 print("Start:", inventory)
 
 inventory["oranges"] = 8    # add new item
 inventory["apples"] = 12    # update existing
-print("After update:", inventory)
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print("After update:", inventory)`);
+</script>
 
 ## Removing Entries
 
@@ -162,24 +171,26 @@ Three dictionary methods give you different views of the data:
 - `d.values()` — all values
 - `d.items()` — all `(key, value)` pairs as tuples
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">scores = {"Alice": 95, "Bob": 87, "Carol": 91}
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `scores = {"Alice": 95, "Bob": 87, "Carol": 91}
 
 print("Keys:", list(scores.keys()))
 print("Values:", list(scores.values()))
-print("Items:", list(scores.items()))
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+print("Items:", list(scores.items()))`);
+</script>
 
 ## Iterating over a Dictionary
 
@@ -248,9 +259,21 @@ for word in words:
     word_count[word] = word_count.get(word, 0) + 1
 ```
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">text = "the cat sat on the mat the cat"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `text = "the cat sat on the mat the cat"
 words = text.split()
 
 word_count = {}
@@ -258,18 +281,8 @@ for word in words:
     word_count[word] = word_count.get(word, 0) + 1
 
 for word, count in sorted(word_count.items()):
-    print(f"  {word}: {count}")
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+    print(f"  {word}: {count}")`);
+</script>
 
 ## Learning Check
 
@@ -279,27 +292,29 @@ for word, count in sorted(word_count.items()):
     Add three students — `"Alice"` with 95, `"Bob"` with 87, and `"Carol"` with 91 —
     then print each student's name and grade using a `for` loop over `.items()`.
 
-<div id="skulpt-lab-6" class="skulpt-text-only">
-  <div id="editor-container-6">
-    <textarea id="code-6" spellcheck="false">grade_book = {}
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-6"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-6')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-6')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-6"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-6"></div>
+  </div>
+</div>
+<script>
+initCmLab('-6', `grade_book = {}
 
 # Add Alice (95), Bob (87), and Carol (91):
 
 
 # Print each name and grade:
 for name, grade in grade_book.items():
-    print(f"{name}: {grade}")
-</textarea>
-    <div id="button-row-6">
-      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
-      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
-    </div>
-    <pre id="output-6"></pre>
-  </div>
-  <div id="canvas-container-6">
-    <div id="turtle-target-6"></div>
-  </div>
-</div>
+    print(f"{name}: {grade}")`);
+</script>
 
 ## Experiments
 

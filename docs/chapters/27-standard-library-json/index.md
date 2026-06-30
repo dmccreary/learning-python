@@ -26,6 +26,9 @@ This chapter explores the most useful ones and teaches you how to organize your 
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Creating Custom Modules
 
@@ -84,24 +87,26 @@ The `sys` module gives you information about the Python interpreter itself.
 | `sys.exit()` | Exits the program immediately |
 | `sys.stdin`, `sys.stdout` | Standard input/output streams |
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import sys
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import sys
 
 print("Python version:", sys.version[:6])
 print("Platform:", sys.platform)
-print("Module search paths (first 2):", sys.path[:2])
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("Module search paths (first 2):", sys.path[:2])`);
+</script>
 
 ## The `os` Module and File Path Handling
 
@@ -166,9 +171,21 @@ Two functions convert between JSON text and Python objects:
     Will the two JSON strings look identical? Are there any formatting differences?
     Make your guess — then run it!
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import json
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import json
 
 # JSON string → Python object
 json_text = '{"name": "Alice", "score": 95, "active": true}'
@@ -181,19 +198,9 @@ print("Score:", data["score"])
 # Python object → JSON string
 data["score"] = 98   # update the score
 new_json = json.dumps(data, indent=2)
-print("\nUpdated JSON:")
-print(new_json)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print("\\nUpdated JSON:")
+print(new_json)`);
+</script>
 
 `indent=2` makes the JSON human-readable with 2-space indentation.
 
@@ -221,9 +228,21 @@ print(loaded["high_score"])   # 1500
 
 In the Skulpt lab below we use `json.dumps()` → `json.loads()` to demonstrate the same round-trip without needing a file on disk.
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import json
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `import json
 
 data = {
     "game": "Python Quest",
@@ -240,18 +259,8 @@ print(json_string)
 loaded = json.loads(json_string)
 print("Game:", loaded["game"])
 print("Players:", loaded["players"])
-print("High score:", loaded["high_score"])
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print("High score:", loaded["high_score"])`);
+</script>
 
 ## The `collections` Module
 
@@ -311,9 +320,21 @@ print(pairs)   # [('A','B'), ('A','C'), ('A','D'), ('B','C'), ('B','D'), ('C','D
     The code below counts words in a sentence, but uses the manual `dict.get()` pattern from Chapter 21.
     Replace it with `Counter` from the `collections` module to count the same words in fewer lines!
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">text = "the quick brown fox jumps over the lazy dog the fox"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `text = "the quick brown fox jumps over the lazy dog the fox"
 words = text.split()
 
 # Replace this manual counting with collections.Counter:
@@ -322,18 +343,8 @@ for word in words:
     word_count[word] = word_count.get(word, 0) + 1
 
 print(word_count)
-print("Most common:", max(word_count, key=word_count.get))
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+print("Most common:", max(word_count, key=word_count.get))`);
+</script>
 
 ## Experiments
 

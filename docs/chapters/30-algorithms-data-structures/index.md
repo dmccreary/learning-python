@@ -25,6 +25,9 @@ This chapter introduces the computer science fundamentals that power everything 
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Abstract Data Types
 
@@ -57,9 +60,21 @@ print(stack.pop())       # "second"
     After pushing all characters and popping them, what order will they appear?
     Make your guess — then run it!
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">def reverse_string(s):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `def reverse_string(s):
     stack = []
     for ch in s:
         stack.append(ch)   # push each character
@@ -69,18 +84,8 @@ print(stack.pop())       # "second"
     return result
 
 print(reverse_string("Hello"))
-print(reverse_string("Python"))
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print(reverse_string("Python"))`);
+</script>
 
 ## Queues — FIFO
 
@@ -93,9 +98,21 @@ Two operations:
 
 Python's `collections.deque` is more efficient than a list for queues:
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">from collections import deque
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `from collections import deque
 
 queue = deque()
 queue.append("Alice")    # enqueue
@@ -105,18 +122,8 @@ queue.append("Carol")
 print("Queue:", list(queue))
 print("Served:", queue.popleft())   # dequeue — FIFO
 print("Served:", queue.popleft())
-print("Remaining:", list(queue))
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print("Remaining:", list(queue))`);
+</script>
 
 ## Graphs — Nodes and Edges
 
@@ -147,9 +154,21 @@ Before the code, the key steps are:
 1. Start at the source node; mark it as visited; enqueue it
 2. While the queue is not empty: dequeue a node, process it, enqueue all unvisited neighbors
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">from collections import deque
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `from collections import deque
 
 graph = {
     "A": ["B", "C"],
@@ -175,18 +194,8 @@ def bfs(graph, start):
                 queue.append(neighbor)
     return order
 
-print("BFS from A:", bfs(graph, "A"))
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print("BFS from A:", bfs(graph, "A"))`);
+</script>
 
 ## Depth-First Search (DFS)
 
@@ -195,9 +204,21 @@ It uses a **stack** (or recursion) to keep track of the path.
 
 DFS does not guarantee the shortest path, but uses less memory than BFS for deep graphs.
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">graph = {
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `graph = {
     "A": ["B", "C"],
     "B": ["A", "D", "E"],
     "C": ["A", "F"],
@@ -217,18 +238,8 @@ def dfs(graph, start, visited=None):
     return result
 
 print("DFS from A:", dfs(graph, "A"))
-print("BFS is level-by-level; DFS goes deep before backtracking.")
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+print("BFS is level-by-level; DFS goes deep before backtracking.")`);
+</script>
 
 | | BFS | DFS |
 |--|-----|-----|
@@ -265,9 +276,21 @@ Also O(n²) but makes fewer swaps than bubble sort.
 **Insertion sort** builds the sorted list one item at a time — like sorting playing cards in your hand.
 O(n²) worst case but O(n) for nearly-sorted lists, making it fast in practice for small or nearly-sorted inputs.
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">def bubble_sort(lst):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `def bubble_sort(lst):
     lst = lst[:]   # work on a copy
     n = len(lst)
     for i in range(n):
@@ -291,18 +314,8 @@ data = [64, 34, 25, 12, 22, 11, 90]
 print("Unsorted:", data)
 print("Bubble:  ", bubble_sort(data))
 print("Insertion:", insertion_sort(data))
-print("Built-in:", sorted(data))
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+print("Built-in:", sorted(data))`);
+</script>
 
 ## Binary Search
 
@@ -358,9 +371,21 @@ DFS uses O(depth) memory — just the current path.
     The code below calls `binary_search` but the function body is missing!
     Implement it using the algorithm described above — repeatedly halve the search range.
 
-<div id="skulpt-lab-6" class="skulpt-text-only">
-  <div id="editor-container-6">
-    <textarea id="code-6" spellcheck="false">def binary_search(sorted_list, target):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-6"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-6')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-6')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-6"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-6"></div>
+  </div>
+</div>
+<script>
+initCmLab('-6', `def binary_search(sorted_list, target):
     lo, hi = 0, len(sorted_list) - 1
     # Implement: while lo <= hi, check middle, adjust lo or hi
     # Return the index if found, -1 if not found
@@ -369,18 +394,8 @@ DFS uses O(depth) memory — just the current path.
 data = sorted([34, 7, 23, 32, 5, 62, 12, 77])
 print("Sorted data:", data)
 print("Find 23:", binary_search(data, 23))
-print("Find 99:", binary_search(data, 99))
-</textarea>
-    <div id="button-row-6">
-      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
-      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
-    </div>
-    <pre id="output-6"></pre>
-  </div>
-  <div id="canvas-container-6">
-    <div id="turtle-target-6"></div>
-  </div>
-</div>
+print("Find 99:", binary_search(data, 99))`);
+</script>
 
 ## Experiments
 

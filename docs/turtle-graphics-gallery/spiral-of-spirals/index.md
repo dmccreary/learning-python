@@ -64,10 +64,25 @@ for i in range(12):
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import turtle
 import math
 monty = turtle.Turtle()
 monty.speed(0)
@@ -93,18 +108,8 @@ for i in range(12):
     angle = i * 30
     x = radius * math.cos(math.radians(angle))
     y = radius * math.sin(math.radians(angle))
-    mini_spiral(x, y, angle, colors[i])
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+    mini_spiral(x, y, angle, colors[i])`);
+</script>
 
 The spirals mostly **stay separate** — each one starts 30 segments long and grows inward toward the center gap. Were you right?
 
@@ -131,9 +136,21 @@ The outer loop generates coordinates with `x = r·cos(angle)`, `y = r·sin(angle
     What happens if you change `radius = 150` to `radius = 80`?
     Predict whether the spirals will overlap — then run it to check!
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 import math
 monty = turtle.Turtle()
 monty.speed(0)
@@ -159,18 +176,8 @@ for i in range(12):
     angle = i * 30
     x = radius * math.cos(math.radians(angle))
     y = radius * math.sin(math.radians(angle))
-    mini_spiral(x, y, angle, colors[i])
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+    mini_spiral(x, y, angle, colors[i])`);
+</script>
 
 With `radius = 80` the spirals overlap significantly in the center — the smaller ring packs them tighter than the spirals' own size, creating a dense, tangled core.
 

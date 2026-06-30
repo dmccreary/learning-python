@@ -27,6 +27,9 @@ Convolutional networks keep the 2-D structure of images and look for **local pat
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Why Convolutions?
 
@@ -62,9 +65,21 @@ A **filter** (or feature map) is the output of one kernel applied to the full im
     If the pool size is 2×2, how many output values do you expect?
     Make your guess — then run it!
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">def max_pool_2d(grid, pool_size=2):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `def max_pool_2d(grid, pool_size=2):
     rows = len(grid)
     cols = len(grid[0])
     out_rows = rows // pool_size
@@ -95,21 +110,11 @@ for row in feature_map:
     print(" ", row)
 
 pooled = max_pool_2d(feature_map, pool_size=2)
-print("\nAfter MaxPooling 2x2:")
+print("\\nAfter MaxPooling 2x2:")
 for row in pooled:
     print(" ", row)
-print(f"Output size: {len(pooled)}x{len(pooled[0])}")
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print(f"Output size: {len(pooled)}x{len(pooled[0])}")`);
+</script>
 
 ## Dropout — Fighting Overfitting
 
@@ -221,9 +226,21 @@ print("True labels:", y_test[:10])
 `predictions` is an array of shape `(10, 10)` — 10 images, each with 10 class probabilities.
 `.argmax(axis=1)` picks the index of the highest probability for each image.
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import math
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import math
 
 def softmax(vec):
     exps = [math.exp(v) for v in vec]
@@ -248,18 +265,8 @@ for i, (logits, true) in enumerate(zip(raw_outputs, true_labels)):
     pred  = argmax(probs)
     conf  = max(probs)
     status = "✓" if pred == true else "✗"
-    print(f"  {status} True={true}, Pred={pred}, Confidence={conf:.1%}")
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+    print(f"  {status} True={true}, Pred={pred}, Confidence={conf:.1%}")`);
+</script>
 
 ## Feature Extraction
 
@@ -330,9 +337,21 @@ Total parameters: **225,034** — much more efficient than a dense-only model of
     A `Dense(64)` layer following a `Flatten()` layer with 1,600 inputs has 1,600 × 64 weights plus 64 bias values.
     Write a function that computes the parameter count for a Dense layer from its input size and neuron count!
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">def dense_params(input_size, neurons):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `def dense_params(input_size, neurons):
     weights = input_size * neurons
     biases  = neurons
     return weights + biases
@@ -356,18 +375,8 @@ for name, params in layers:
     print(f"{name:<22} {params:>12,}")
     total += params
 print("-" * 36)
-print(f"{'Total':<22} {total:>12,}")
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print(f"{'Total':<22} {total:>12,}")`);
+</script>
 
 ## Experiments
 

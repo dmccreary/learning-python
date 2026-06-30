@@ -64,10 +64,25 @@ for hue in hues:
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import turtle
 monty = turtle.Turtle()
 monty.speed(0)
 monty.hideturtle()
@@ -90,18 +105,8 @@ for hue in hues:
     monty.left(180 - wedge)
     monty.end_fill()
     # rotate counterclockwise 30 degrees to the next wedge
-    monty.left(30)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+    monty.left(30)`);
+</script>
 
 Exactly **12 wedges** — one per hue, each 30°, summing to 360°. Were you right?
 
@@ -138,9 +143,21 @@ Monty to the next slice.
     12-color wheel, a smaller one, or a completely different shape?
     Predict, then click Run.
 
-<div id="skulpt-lab-3">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `import turtle
 monty = turtle.Turtle()
 monty.speed(0)
 monty.hideturtle()
@@ -161,18 +178,8 @@ for hue in hues:
     monty.left(180 - wedge)
     monty.end_fill()
     # rotate counterclockwise 30 degrees to the next wedge
-    monty.left(30)
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+    monty.left(30)`);
+</script>
 
 Same wheel, fewer lines! Because `circle()` lands Monty exactly on the rim, this
 version even returns precisely to the center on every slice. Use whichever method
@@ -188,9 +195,21 @@ you like — the hand-drawn loop when you want to *see* the arc being built, and
     and the rotation together. Predict what the wheel will look like with
     `wedges = 5`, then run it to find out!
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 monty = turtle.Turtle()
 monty.speed(0)
 monty.hideturtle()
@@ -213,18 +232,8 @@ for hue in hues:
     monty.left(180 - angle)
     monty.end_fill()
     # rotate counterclockwise 60 degrees to the next wedge
-    monty.left(angle)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+    monty.left(angle)`);
+</script>
 
 Run it: `wedges = 5` makes each slice 72°, and five slices already fill the circle — so the sixth color (magenta) laps the wheel and paints over the first (red), leaving five visible slices. Pulling the count into a variable makes re-scaling easy: `angle = 360 / wedges` drives the wedge width, the `circle(radius, angle)` rim, and the `monty.left(angle)` turn all at once. Keep `wedges` equal to the number of colors in `hues` and every hue gets its own clean slice.
 

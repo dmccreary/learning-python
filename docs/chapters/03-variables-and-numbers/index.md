@@ -82,24 +82,29 @@ No account needed — everything runs in your browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">score = 10
-lives = 3
-print(score)
-print(lives)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
     </div>
-    <pre id="output"></pre>
+    <pre class="cm-output" id="cm-output"></pre>
   </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
   </div>
 </div>
+<script>
+initCmLab('', `score = 10
+lives = 3
+print(score)
+print(lives)`);
+</script>
 
 Were you right?
 Python printed `10` on the first line and `3` on the second — one value per `print()` call, in the order they appeared.
@@ -247,24 +252,26 @@ print(score)
 
 ## Try It Now — Reassignment
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">score = 10
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `score = 10
 print(score)
 
 score = 25
-print(score)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print(score)`);
+</script>
 
 Python printed `10` first and `25` second.
 The name `score` stayed the same; only the value changed.
@@ -341,23 +348,25 @@ You will learn much more about classes later in the course.
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
     The program below creates two variables — `player_score` and `bonus_points`. It prints `player_score` just fine, but something is missing: `bonus_points` never gets printed. Add **one line** so the output shows both numbers, one on each line.
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">player_score = 42
-bonus_points = 10
-print(player_score)
-# Add one line below to also print bonus_points
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
     </div>
-    <pre id="output-3"></pre>
+    <pre class="cm-output" id="cm-output-3"></pre>
   </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
   </div>
 </div>
+<script>
+initCmLab('-3', `player_score = 42
+bonus_points = 10
+print(player_score)
+# Add one line below to also print bonus_points`);
+</script>
 
 If your output shows `42` on the first line and `10` on the second, you got it!
 The missing line was `print(bonus_points)`.

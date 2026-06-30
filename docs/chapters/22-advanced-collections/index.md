@@ -25,6 +25,9 @@ Python's built-in functions are a powerful toolkit. This chapter gathers the mos
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## `enumerate()` — Loop with an Index
 
@@ -44,24 +47,26 @@ for i, fruit in enumerate(fruits):
 
 Both produce the same output. `enumerate()` starts at 0 by default; use `enumerate(fruits, 1)` to start at 1.
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">menu = ["Burger", "Pizza", "Salad", "Pasta"]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `menu = ["Burger", "Pizza", "Salad", "Pasta"]
 
 print("Menu:")
 for num, item in enumerate(menu, 1):
-    print(f"  {num}. {item}")
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+    print(f"  {num}. {item}")`);
+</script>
 
 ## `zip()` — Combine Iterables in Parallel
 
@@ -82,25 +87,27 @@ for name, score in zip(names, scores):
     How many pairs do you think `zip()` will produce?
     Make your guess — then run it!
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">letters = ["A", "B", "C", "D", "E"]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `letters = ["A", "B", "C", "D", "E"]
 numbers = [1, 2, 3]
 
 pairs = list(zip(letters, numbers))
 print("Pairs:", pairs)
-print("Count:", len(pairs))
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print("Count:", len(pairs))`);
+</script>
 
 Were you right? `zip()` stops at 3 pairs because `numbers` runs out first.
 
@@ -116,25 +123,27 @@ d = dict(zip(keys, values))
 print(d)   # {"name": "Alice", "age": 14, "city": "Paris"}
 ```
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">countries = ["France", "Japan", "Brazil"]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `countries = ["France", "Japan", "Brazil"]
 capitals  = ["Paris", "Tokyo", "Brasília"]
 
 capital_map = dict(zip(countries, capitals))
 print(capital_map)
-print("Japan's capital:", capital_map["Japan"])
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print("Japan's capital:", capital_map["Japan"])`);
+</script>
 
 ## `*args` — Variable Number of Positional Arguments
 
@@ -162,9 +171,21 @@ def describe(**kwargs):
 describe(name="Monty", species="python", color="green")
 ```
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">def total(*args):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `def total(*args):
     return sum(args)
 
 def describe(**kwargs):
@@ -174,18 +195,8 @@ def describe(**kwargs):
 print("Total:", total(10, 20, 30, 40))
 
 print("Monty's profile:")
-describe(name="Monty", level=7, language="Python")
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+describe(name="Monty", level=7, language="Python")`);
+</script>
 
 ## Aggregating Functions: `max()`, `min()`, `sum()`
 
@@ -250,27 +261,29 @@ print("Evens:", evens)       # [2, 4, 6]
 
 A **lambda** is a tiny anonymous function written on one line: `lambda x: x * 2` means "take x, return x times 2."
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">scores = [45, 78, 92, 61, 88, 73, 55]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `scores = [45, 78, 92, 61, 88, 73, 55]
 
 passing  = list(filter(lambda s: s >= 70, scores))
 bonus    = list(map(lambda s: s + 5, scores))
 
 print("Passing scores:", passing)
 print("All scores + 5:", bonus)
-print("Max:", max(scores), "Min:", min(scores), "Avg:", round(sum(scores)/len(scores), 1))
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+print("Max:", max(scores), "Min:", min(scores), "Avg:", round(sum(scores)/len(scores), 1))`);
+</script>
 
 ## Collection Constructors
 
@@ -290,25 +303,27 @@ my_set   = set([3, 1, 4, 1, 5])   # {1, 3, 4, 5}
     Fix it to use `zip()` to pair names with scores and `enumerate()` starting at 1 to number the entries.
     Each line should look like: `1. Alice: 95`
 
-<div id="skulpt-lab-6" class="skulpt-text-only">
-  <div id="editor-container-6">
-    <textarea id="code-6" spellcheck="false">names  = ["Alice", "Bob", "Carol"]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-6"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-6')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-6')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-6"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-6"></div>
+  </div>
+</div>
+<script>
+initCmLab('-6', `names  = ["Alice", "Bob", "Carol"]
 scores = [95, 87, 91]
 
 # Fix: use enumerate(zip(...), 1) to print "1. Alice: 95" etc.
 for name in names:
-    print(name)
-</textarea>
-    <div id="button-row-6">
-      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
-      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
-    </div>
-    <pre id="output-6"></pre>
-  </div>
-  <div id="canvas-container-6">
-    <div id="turtle-target-6"></div>
-  </div>
-</div>
+    print(name)`);
+</script>
 
 ## Experiments
 

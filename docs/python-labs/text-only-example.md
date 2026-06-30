@@ -19,71 +19,80 @@ so `runSkulpt()` can still initialise without errors.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">name = "Python"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `name = "Python"
 version = 3
 print("Hello from", name, version)
 print("No turtle needed!")
 for i in range(1, 6):
-    print(i, "squared =", i * i)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+    print(i, "squared =", i * i)`);
+</script>
 
 ## Example 2 — User-Defined Function
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">def greet(first_name, last_name):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `def greet(first_name, last_name):
     full_name = first_name + " " + last_name
     print("Hello,", full_name + "!")
 
 greet("Ada", "Lovelace")
 greet("Grace", "Hopper")
-greet("Alan", "Turing")
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+greet("Alan", "Turing")`);
+</script>
 
 ## HTML Template
 
 Copy this block and replace the code inside the `<textarea>` for any text-only lab:
 
 ```html
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">
-# your Python code here
-print("Hello!")
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
     </div>
-    <pre id="output"></pre>
+    <pre class="cm-output" id="cm-output"></pre>
   </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
   </div>
 </div>
+<script>
+initCmLab('', `
+# your Python code here
+print("Hello!")`);
+</script>
 ```
 
 For a second lab on the same page, use the `-2` suffix on all IDs and `runSkulpt('-2')` / `resetSkulpt('-2')` on the buttons (same convention as the drawing labs).
@@ -93,21 +102,23 @@ For a second lab on the same page, use the `-2` suffix on all IDs and `runSkulpt
 For programs that use turtle graphics, omit the `skulpt-text-only` class and the canvas appears as normal:
 
 ```html
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">
-import turtle
-t = turtle.Turtle()
-t.forward(100)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
     </div>
-    <pre id="output"></pre>
+    <pre class="cm-output" id="cm-output"></pre>
   </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
   </div>
 </div>
+<script>
+initCmLab('', `
+import turtle
+t = turtle.Turtle()
+t.forward(100)`);
+</script>
 ```

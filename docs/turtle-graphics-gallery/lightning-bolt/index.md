@@ -67,10 +67,25 @@ lightning(-50, 150, 50, -150, 5)
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import turtle
 import math
 import random
 monty = turtle.Turtle()
@@ -99,18 +114,8 @@ def lightning(x1, y1, x2, y2, depth):
     lightning(x1, y1, mx, my, depth - 1)
     lightning(mx, my, x2, y2, depth - 1)
 
-lightning(-50, 150, 50, -150, 5)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+lightning(-50, 150, 50, -150, 5)`);
+</script>
 
 A jagged **lightning bolt** — the recursive displacement creates the irregular, branching shape. Were you right?
 
@@ -135,9 +140,21 @@ The perpendicular vector `(-dy, dx)` is perpendicular to `(dx, dy)` — rotating
     Change `depth=5` to `depth=3`. The bolt will have fewer bends.
     Then try `depth=7`. Predict what changes at each depth!
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 import math
 import random
 monty = turtle.Turtle()
@@ -166,18 +183,8 @@ def lightning(x1, y1, x2, y2, depth):
     lightning(x1, y1, mx, my, depth - 1)
     lightning(mx, my, x2, y2, depth - 1)
 
-lightning(-50, 150, 50, -150, 7)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+lightning(-50, 150, 50, -150, 7)`);
+</script>
 
 Depth 7 produces a much more detailed, realistic bolt with tiny jags everywhere.
 

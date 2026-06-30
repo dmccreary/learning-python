@@ -26,6 +26,9 @@ Writing code that works is only half the job. Expert programmers write code that
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Computational Thinking — Four Pillars
 
@@ -61,9 +64,21 @@ Problem: Build a word guessing game
 
 Each leaf in this tree is small enough to code in a single function.
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">def make_display(secret, guessed):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `def make_display(secret, guessed):
     return " ".join(ch if ch in guessed else "_" for ch in secret)
 
 def is_solved(secret, guessed):
@@ -80,18 +95,8 @@ print("Solved?", is_solved(secret, guessed))
 
 guessed = set("python")
 print("After all letters:", make_display(secret, guessed))
-print("Solved?", is_solved(secret, guessed))
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("Solved?", is_solved(secret, guessed))`);
+</script>
 
 ## DRY — Don't Repeat Yourself
 
@@ -189,9 +194,21 @@ Write a comment when a future reader (including future-you) would wonder "why di
     If you write the same logic once — keep it. Twice — add a comment noting the pattern. Three times — pull it into a function.
     This is called the "rule of three" and it stops you from over-abstracting before you're sure the pattern is real.
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">def clamp(value, lo=0, hi=100):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `def clamp(value, lo=0, hi=100):
     return max(lo, min(hi, value))
 
 def letter_grade(score):
@@ -205,18 +222,8 @@ def letter_grade(score):
 # Test with values that need clamping:
 test_scores = [110, 95, 82, 73, 65, -5, 45]
 for s in test_scores:
-    print(f"  {s:4d} → clamped={clamp(s):3d}, grade={letter_grade(s)}")
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+    print(f"  {s:4d} → clamped={clamp(s):3d}, grade={letter_grade(s)}")`);
+</script>
 
 ## Pseudocode and Algorithm Design
 
@@ -262,9 +269,21 @@ print(word_frequency("cat cat dog"))    # {'cat': 2, 'dog': 1}
 print(word_frequency("A a A"))          # {'a': 3} — case insensitive
 ```
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">def word_frequency(text):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `def word_frequency(text):
     words = text.lower().split()
     freq  = {}
     for w in words:
@@ -281,18 +300,8 @@ text = "the quick brown fox jumps over the lazy dog the fox"
 freq = word_frequency(text)
 print("Frequencies:", freq)
 word, count = most_common(freq)
-print(f"Most common: '{word}' ({count} times)")
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print(f"Most common: '{word}' ({count} times)")`);
+</script>
 
 ## Debugging Strategies
 
@@ -351,9 +360,21 @@ Even practicing pair programming with a classmate for 20 minutes builds better h
     The code below works but violates DRY — the grade calculation logic is repeated three times.
     Refactor it into a single `letter_grade(score)` function and use it in all three places!
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false"># Wet code — grade logic repeated three times:
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `# Wet code — grade logic repeated three times:
 score1 = 87
 if score1 >= 90: grade1 = "A"
 elif score1 >= 80: grade1 = "B"
@@ -374,18 +395,8 @@ else: grade3 = "F"
 
 print(f"Score 1: {score1} → {grade1}")
 print(f"Score 2: {score2} → {grade2}")
-print(f"Score 3: {score3} → {grade3}")
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+print(f"Score 3: {score3} → {grade3}")`);
+</script>
 
 ## Experiments
 

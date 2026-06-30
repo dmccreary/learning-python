@@ -25,6 +25,9 @@ Python gives you four main collection types. You've mastered lists. Now let's me
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## The Tuple Type
 
@@ -53,9 +56,21 @@ Use a tuple when the data is *fixed* and shouldn't change:
 
 Use a list when you need to add, remove, or change items over time.
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">point = (3, 5)
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `point = (3, 5)
 print("Point:", point)
 print("x:", point[0], "y:", point[1])
 print("Type:", type(point))
@@ -64,18 +79,8 @@ print("Type:", type(point))
 colors = ("red", "green", "blue", "yellow")
 print("First:", colors[0])
 print("Last:", colors[-1])
-print("Slice:", colors[1:3])
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("Slice:", colors[1:3])`);
+</script>
 
 ## Single-Element Tuple Syntax
 
@@ -106,9 +111,21 @@ print(y)              # 20
     What values do you think `a`, `b`, and `c` will have?
     Make your guess — then run it!
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">rgb = (255, 128, 0)
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `rgb = (255, 128, 0)
 r, g, b = rgb
 print(f"Red={r}, Green={g}, Blue={b}")
 
@@ -116,18 +133,8 @@ print(f"Red={r}, Green={g}, Blue={b}")
 x = 10
 y = 20
 x, y = y, x
-print(f"After swap: x={x}, y={y}")
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print(f"After swap: x={x}, y={y}")`);
+</script>
 
 ## Tuples as Return Values
 
@@ -142,26 +149,28 @@ lo, hi = min_max([3, 1, 7, 2, 9])
 print(f"Min: {lo}, Max: {hi}")
 ```
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">def divide(a, b):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `def divide(a, b):
     quotient  = a // b   # integer division
     remainder = a % b    # remainder
     return quotient, remainder   # returns a tuple
 
 q, r = divide(17, 5)
-print(f"17 / 5 = {q} remainder {r}")
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print(f"17 / 5 = {q} remainder {r}")`);
+</script>
 
 ## The Set Type
 
@@ -181,9 +190,21 @@ Sets are most useful for:
 - Fast membership testing (faster than lists for large collections)
 - Mathematical set operations
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">numbers = [1, 2, 2, 3, 3, 3, 4]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `numbers = [1, 2, 2, 3, 3, 3, 4]
 unique = set(numbers)   # remove duplicates
 print("Original list:", numbers)
 print("Unique set:", unique)
@@ -191,18 +212,8 @@ print("Number of unique items:", len(unique))
 
 # Membership testing:
 print("3 in unique:", 3 in unique)
-print("7 in unique:", 7 in unique)
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+print("7 in unique:", 7 in unique)`);
+</script>
 
 ## Set Methods: `add()`, `remove()`, `discard()`
 
@@ -230,9 +241,21 @@ A - B  → {1, 2}               in A but not B
 B - A  → {5, 6}               in B but not A
 ```
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">python_students = {"Alice", "Bob", "Carol", "Dave"}
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `python_students = {"Alice", "Bob", "Carol", "Dave"}
 math_students   = {"Carol", "Dave", "Eve", "Frank"}
 
 both   = python_students & math_students   # intersection
@@ -241,18 +264,8 @@ only_python = python_students - math_students  # difference
 
 print("Both Python and Math:", both)
 print("In either class:", either)
-print("Only in Python:", only_python)
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+print("Only in Python:", only_python)`);
+</script>
 
 ## Frozensets
 
@@ -272,26 +285,28 @@ print(fs)        # frozenset({1, 2, 3})
     Two friends listed their favorite animals. Write code to find which animals they *both* like.
     Use the set intersection operator `&` to find the shared items!
 
-<div id="skulpt-lab-6" class="skulpt-text-only">
-  <div id="editor-container-6">
-    <textarea id="code-6" spellcheck="false">alice_favorites = {"cat", "dog", "rabbit", "parrot"}
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-6"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-6')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-6')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-6"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-6"></div>
+  </div>
+</div>
+<script>
+initCmLab('-6', `alice_favorites = {"cat", "dog", "rabbit", "parrot"}
 bob_favorites   = {"dog", "hamster", "parrot", "fish"}
 
 # Find which animals BOTH Alice and Bob like:
 shared = alice_favorites  # replace this line with the correct operation
 
-print("Both like:", shared)
-</textarea>
-    <div id="button-row-6">
-      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
-      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
-    </div>
-    <pre id="output-6"></pre>
-  </div>
-  <div id="canvas-container-6">
-    <div id="turtle-target-6"></div>
-  </div>
-</div>
+print("Both like:", shared)`);
+</script>
 
 ## Experiments
 

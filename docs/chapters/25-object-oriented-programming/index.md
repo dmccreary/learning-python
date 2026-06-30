@@ -26,6 +26,9 @@ Now it's time to create your own.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Attributes and Methods
 
@@ -59,9 +62,21 @@ It sets up the object's initial attributes.
 
 Before we define attributes, note that `self.attribute_name = value` stores a value inside the object:
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">class Dog:
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `class Dog:
     def __init__(self, name, breed, age):
         self.name  = name    # instance attribute
         self.breed = breed
@@ -78,18 +93,8 @@ bella = Dog("Bella", "Poodle", 5)
 
 fido.describe()
 bella.bark()
-print(fido.name, fido.age)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print(fido.name, fido.age)`);
+</script>
 
 ## Creating Instances and Dot Notation
 
@@ -107,9 +112,21 @@ Access attributes and methods with **dot notation**: `fido.name`, `fido.bark()`.
     The code below creates two `Student` instances. Which student has the higher score?
     What will the loop print for each one? Make your guess — then run it!
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">class Student:
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `class Student:
     def __init__(self, name, score):
         self.name  = name
         self.score = score
@@ -127,18 +144,8 @@ Access attributes and methods with **dot notation**: `fido.name`, `fido.bark()`.
 students = [Student("Alice", 92), Student("Bob", 75), Student("Carol", 88)]
 
 for s in students:
-    print(f"{s.name}: {s.score} → {s.grade()}")
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+    print(f"{s.name}: {s.score} → {s.grade()}")`);
+</script>
 
 ## `__str__()` — String Representation
 
@@ -197,9 +204,21 @@ items.sort()       # calls the sort() method on the list object
 Use `class SubClass(ParentClass):` to declare inheritance.
 The `super()` function calls the parent class's `__init__()` so you don't have to repeat all its setup code.
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">class Animal:
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `class Animal:
     def __init__(self, name, sound):
         self.name  = name
         self.sound = sound
@@ -233,18 +252,8 @@ dog.fetch()     # defined in Dog
 cat.speak()     # inherited from Animal
 cat.purr()      # defined in Cat
 
-print(dog)      # uses Animal's __str__
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print(dog)      # uses Animal's __str__`);
+</script>
 
 ## Method Overriding
 
@@ -264,9 +273,21 @@ class Dog(Animal):
     The `Rectangle` class below has `width` and `height` attributes but is missing two methods.
     Add `area()` (returns width × height) and `perimeter()` (returns 2 × (width + height)).
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">class Rectangle:
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `class Rectangle:
     def __init__(self, width, height):
         self.width  = width
         self.height = height
@@ -281,18 +302,8 @@ class Dog(Animal):
 r = Rectangle(4, 7)
 print(r)
 print("Area:", r.area())
-print("Perimeter:", r.perimeter())
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+print("Perimeter:", r.perimeter())`);
+</script>
 
 ## Experiments
 

@@ -26,6 +26,9 @@ With `input()`, your program can have a conversation with the user — asking qu
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## The `input()` Function
 
@@ -39,21 +42,23 @@ name = input("What is your name? ")
 print("Hello,", name)
 ```
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">name = input("What is your name? ")
-print("Hello,", name + "! Welcome to Python!")
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
     </div>
-    <pre id="output"></pre>
+    <pre class="cm-output" id="cm-output"></pre>
   </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
   </div>
 </div>
+<script>
+initCmLab('', `name = input("What is your name? ")
+print("Hello,", name + "! Welcome to Python!")`);
+</script>
 
 !!! mascot-tip "Scratch Bridge"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
@@ -80,22 +85,24 @@ age = int(age_text)          # convert string to integer
 print("Next year you'll be", age + 1)
 ```
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">age_text = input("How old are you? ")
-age = int(age_text)
-print("Next year you'll be", age + 1)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
     </div>
-    <pre id="output-2"></pre>
+    <pre class="cm-output" id="cm-output-2"></pre>
   </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
   </div>
 </div>
+<script>
+initCmLab('-2', `age_text = input("How old are you? ")
+age = int(age_text)
+print("Next year you'll be", age + 1)`);
+</script>
 
 ### `float()` — Convert to Decimal Number
 
@@ -142,26 +149,28 @@ print(bool(42))      # True
 `type()` tells you what data type a value is.
 It's incredibly useful for debugging — when you're not sure whether you're working with a string or a number, just ask Python.
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">x = input("Type something: ")
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `x = input("Type something: ")
 print("You entered:", x)
 print("Type of x:", type(x))
 
 y = int(x)
 print("After int():", y)
-print("Type of y:", type(y))
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print("Type of y:", type(y))`);
+</script>
 
 If you type a number like `42`, you'll see `<class 'str'>` first, then `<class 'int'>` after the conversion.
 
@@ -203,27 +212,29 @@ else:
     print("That doesn't look like a number!")
 ```
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">raw = input("Enter a whole number: ")
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `raw = input("Enter a whole number: ")
 raw = raw.strip()
 
 if raw.isdigit():
     n = int(raw)
     print("Double is:", n * 2)
 else:
-    print("That doesn't look like a whole number!")
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+    print("That doesn't look like a whole number!")`);
+</script>
 
 Try it twice: once with a number like `7`, and once with letters like `hello`.
 
@@ -246,24 +257,26 @@ Try it twice: once with a number like `7`, and once with letters like `hello`.
     But it has a bug — it concatenates strings instead of adding numbers!
     Fix it so the math actually works.
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">a = input("Enter first number: ")
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `a = input("Enter first number: ")
 b = input("Enter second number: ")
 
 # Bug: this joins strings, not adds numbers!
-print("Sum:", a + b)
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+print("Sum:", a + b)`);
+</script>
 
 If you enter `3` and `4`, the buggy version prints `34` instead of `7`.
 Fix it by converting `a` and `b` to `int()` before adding them.

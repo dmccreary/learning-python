@@ -26,6 +26,9 @@ A photograph on your phone is just a grid of colored pixels. Python can read, an
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## What is Pillow?
 
@@ -71,9 +74,21 @@ img.show()         # opens in the system image viewer
     What color do you think pixel (1,1) will be — red, green, or blue?
     Predict first, then run it!
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">from PIL import Image
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `from PIL import Image
 
 # Create a 3x3 RGB image manually:
 # Each row is a list of (R, G, B) tuples
@@ -92,18 +107,8 @@ print("Image size:", img.size)
 print("Image mode:", img.mode)
 print("Pixel at (0,0):", img.getpixel((0, 0)))   # top-left
 print("Pixel at (1,0):", img.getpixel((1, 0)))   # top-middle
-print("Pixel at (1,1):", img.getpixel((1, 1)))   # center
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("Pixel at (1,1):", img.getpixel((1, 1)))   # center`);
+</script>
 
 ## Understanding Pixel Data
 
@@ -152,9 +157,21 @@ region = img.crop((50, 30, 150, 130))
 region.save("cropped.jpg")
 ```
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">from PIL import Image
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `from PIL import Image
 
 # Create a 10x10 image with a color gradient:
 img = Image.new("RGB", (10, 10))
@@ -171,18 +188,8 @@ print("Original size:", img.size)
 cropped = img.crop((5, 0, 10, 5))
 print("Cropped size:", cropped.size)
 print("Cropped pixel (0,0):", cropped.getpixel((0, 0)))
-print("Cropped pixel (4,4):", cropped.getpixel((4, 4)))
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print("Cropped pixel (4,4):", cropped.getpixel((4, 4)))`);
+</script>
 
 ## Flipping and Rotating
 
@@ -223,9 +230,21 @@ gray = img.convert("L")
 gray.save("photo_grayscale.jpg")
 ```
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">from PIL import Image
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `from PIL import Image
 
 # Create a small color image, then convert it to grayscale:
 img = Image.new("RGB", (4, 4))
@@ -246,18 +265,8 @@ for x in range(4):
 
 print("Grayscale pixels (row 0):")
 for x in range(4):
-    print(f"  ({x},0): {gray.getpixel((x, 0))}")
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+    print(f"  ({x},0): {gray.getpixel((x, 0))}")`);
+</script>
 
 ## Applying Filters
 
@@ -298,9 +307,21 @@ For JPEG: lower quality = smaller file but more visual artifacts. Quality 80–9
     The code below has a function stub for `brighten(image, amount)`.
     Complete it: for every pixel, add `amount` to each R, G, B channel — but clamp the result between 0 and 255!
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">from PIL import Image
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `from PIL import Image
 
 def brighten(img, amount):
     result = Image.new("RGB", img.size)
@@ -318,18 +339,8 @@ def brighten(img, amount):
 img = Image.new("RGB", (3, 3), (100, 150, 200))
 print("Before brighten:", img.getpixel((0, 0)))
 bright = brighten(img, 80)
-print("After brighten:", bright.getpixel((0, 0)))
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+print("After brighten:", bright.getpixel((0, 0)))`);
+</script>
 
 ## Experiments
 

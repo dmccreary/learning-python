@@ -26,6 +26,9 @@ Now let's make functions even more powerful by giving them smarter inputs and un
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Default Parameter Values
 
@@ -60,9 +63,21 @@ draw_square()      # uses the default: size = 100
     There are two calls to `draw_square()` — one with an argument and one without.
     Which square do you think will be bigger? Make your guess, then click Run!
 
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import turtle
 t = turtle.Turtle()
 t.speed(6)
 
@@ -75,18 +90,8 @@ draw_square(50)    # small square
 t.penup()
 t.goto(120, 0)
 t.pendown()
-draw_square()      # uses the default: size = 100
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+draw_square()      # uses the default: size = 100`);
+</script>
 
 Were you right? The first square (size 50) is smaller. The second uses the default size of 100.
 
@@ -123,9 +128,21 @@ def draw_polygon(sides=4, size=80, color="blue"):
 draw_polygon(sides=6, color="red", size=60)
 ```
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 t = turtle.Turtle()
 t.speed(6)
 
@@ -135,18 +152,8 @@ def draw_polygon(sides=4, size=80, color="blue"):
         t.forward(size)
         t.right(360 / sides)
 
-draw_polygon(sides=6, color="red", size=60)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+draw_polygon(sides=6, color="red", size=60)`);
+</script>
 
 The call uses `color` before `size`, but that's fine — keyword arguments can go in any order.
 Try changing `sides=6` to `sides=3` to draw a triangle, or change `color="red"` to any color you like.
@@ -169,9 +176,21 @@ It exists for the whole program.
 
 The example below shows both. A function can *read* a global variable, but the local variable inside the function is invisible from outside.
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">name = "Monty"   # global variable
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `name = "Monty"   # global variable
 
 def greet():
     greeting = "Hello"  # local variable
@@ -180,18 +199,8 @@ def greet():
 greet()
 # Uncomment the next line to see a NameError:
 # print(greeting)
-print("name is:", name)
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print("name is:", name)`);
+</script>
 
 | Variable | Where defined | Visible inside `greet()`? | Visible outside `greet()`? |
 |----------|--------------|--------------------------|---------------------------|
@@ -206,9 +215,21 @@ If you want a function to update a global variable, use the **`global` keyword**
 
 The key word `global score` inside the function tells Python: "I mean the `score` that lives outside, not a new local one."
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">score = 0   # global score
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `score = 0   # global score
 
 def add_points(n):
     global score   # use the GLOBAL score, not a new local one
@@ -216,18 +237,8 @@ def add_points(n):
 
 add_points(10)
 add_points(5)
-print("Final score:", score)
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+print("Final score:", score)`);
+</script>
 
 Without the `global score` line, Python would create a *new* local variable named `score` and leave the global one untouched — which is usually not what you want.
 
@@ -284,26 +295,28 @@ b = temp   # b gets a's original value
 
 Python has a built-in shortcut that swaps in one line:
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">a = 5
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `a = 5
 b = 10
 print("Before:", a, b)
 
 a, b = b, a   # Python swap shortcut
 
-print("After: ", a, b)
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+print("After: ", a, b)`);
+</script>
 
 ## Pure Functions vs Functions with Side Effects
 
@@ -336,9 +349,21 @@ Side effects aren't bad — drawing with the turtle *is* a side effect — but k
     The function below should draw a pentagon (5 sides), but the `sides` keyword argument is missing from the call.
     Add `sides=5` to make it draw a pentagon!
 
-<div id="skulpt-lab-6">
-  <div id="editor-container-6">
-    <textarea id="code-6" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-6"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-6')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-6')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-6"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-6"></div>
+  </div>
+</div>
+<script>
+initCmLab('-6', `import turtle
 t = turtle.Turtle()
 t.speed(6)
 
@@ -349,18 +374,8 @@ def draw_polygon(sides=4, size=80, color="blue"):
         t.right(360 / sides)
 
 # Add the sides keyword argument to draw a pentagon:
-draw_polygon(color="green", size=70)
-</textarea>
-    <div id="button-row-6">
-      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
-      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
-    </div>
-    <pre id="output-6"></pre>
-  </div>
-  <div id="canvas-container-6">
-    <div id="turtle-target-6"></div>
-  </div>
-</div>
+draw_polygon(color="green", size=70)`);
+</script>
 
 ## Experiments
 

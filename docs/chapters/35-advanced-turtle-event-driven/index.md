@@ -26,6 +26,9 @@ Every game, app, and website uses **event-driven programming** — code that wai
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## The Event-Driven Model
 
@@ -65,9 +68,21 @@ The callback receives the x and y coordinates of the click as arguments.
     The code below draws a dot wherever the user clicks. But before you run it — how does the program know where the click happened?
     Think about how the callback receives the coordinates, then run it to see!
 
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import turtle
 
 screen = turtle.Screen()
 screen.setup(400, 400)
@@ -83,18 +98,8 @@ def on_click(x, y):
     t.dot(20, "steelblue")
 
 screen.onscreenclick(on_click)
-screen.mainloop()
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+screen.mainloop()`);
+</script>
 
 `t.dot(size, color)` draws a filled circle of the given diameter at the turtle's current position.
 Click anywhere on the canvas — a dot appears at each click location!
@@ -128,9 +133,21 @@ screen.listen()   # must call listen() to activate keyboard events
 screen.mainloop()
 ```
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 
 screen = turtle.Screen()
 screen.setup(400, 400)
@@ -159,18 +176,8 @@ screen.onkey(go_backward, "Down")
 screen.onkey(turn_left,   "Left")
 screen.onkey(turn_right,  "Right")
 screen.listen()
-screen.mainloop()
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+screen.mainloop()`);
+</script>
 
 Use the arrow keys to steer the turtle around the canvas!
 
@@ -192,9 +199,21 @@ screen.mainloop()
 
 This creates a smooth animation running at about 20 frames per second (1000 ÷ 50ms = 20 fps).
 
-<div id="skulpt-lab-3">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `import turtle
 
 screen = turtle.Screen()
 screen.setup(400, 400)
@@ -219,18 +238,8 @@ def draw_step():
         screen.ontimer(draw_step, 20)
 
 draw_step()
-screen.mainloop()
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+screen.mainloop()`);
+</script>
 
 ## Combining Events — Interactive Art
 
@@ -295,9 +304,21 @@ screen.mainloop()
     The code below draws dots on click, but all dots are the same color.
     Add a key event so pressing `"c"` cycles through a list of colors with each press!
 
-<div id="skulpt-lab-4">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `import turtle
 
 screen = turtle.Screen()
 screen.setup(400, 400)
@@ -319,18 +340,8 @@ def on_click(x, y):
 
 screen.onscreenclick(on_click)
 screen.listen()
-screen.mainloop()
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+screen.mainloop()`);
+</script>
 
 ## Experiments
 

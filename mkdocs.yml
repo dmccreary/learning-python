@@ -392,6 +392,9 @@ extra_css:
   - css/skulpt.css
   - css/mascot.css
   - css/docker-lab.css
+  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css
+  - css/codemirror-lab.css
 extra_javascript:
   - js/extra.js
   - js/skulpt.js

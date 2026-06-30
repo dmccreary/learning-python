@@ -25,6 +25,9 @@ Once you understand it, you'll see fractals in a completely new way.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## The Recursion Concept
 
@@ -45,27 +48,29 @@ def countdown(n):
     countdown(n - 1)    # RECURSIVE CALL — call itself with a smaller problem
 ```
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">def countdown(n):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `def countdown(n):
     if n <= 0:
         print("Go!")
         return
     print(n)
     countdown(n - 1)
 
-countdown(5)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+countdown(5)`);
+</script>
 
 ## The Base Case
 
@@ -91,27 +96,29 @@ For most student programs this is plenty. But for very deep recursion (like larg
     What do you think `factorial(5)` returns? Remember: `5! = 5 × 4 × 3 × 2 × 1`.
     Make your guess — then run it!
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">def factorial(n):
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `def factorial(n):
     if n <= 1:          # base case
         return 1
     return n * factorial(n - 1)   # recursive call
 
 print("5! =", factorial(5))
 print("7! =", factorial(7))
-print("10! =", factorial(10))
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print("10! =", factorial(10))`);
+</script>
 
 Were you right? `5! = 120`. Tracing it: `5 * factorial(4)` → `5 * 4 * factorial(3)` → ... → `5 * 4 * 3 * 2 * 1`.
 
@@ -180,9 +187,21 @@ Before the code, the key parameters are:
 - `angle` — how far each branch spreads left and right
 - When `length < 5`, stop drawing (base case)
 
-<div id="skulpt-lab-3">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `import turtle
 t = turtle.Turtle()
 t.speed(0)
 t.left(90)   # point upward
@@ -203,18 +222,8 @@ def draw_tree(length, angle):
     t.backward(length)
 
 draw_tree(80, 25)
-t.hideturtle()
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+t.hideturtle()`);
+</script>
 
 Try changing the angle from `25` to `35` or `15` to see how it changes the tree's shape!
 
@@ -232,9 +241,21 @@ Try changing the angle from `25` to `35` or `15` to see how it changes the tree'
     - Shorter branches (length < 40) are drawn in `"green"` (leaves)
     Add a `t.pencolor()` call at the start of the function to set the color based on length.
 
-<div id="skulpt-lab-4">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `import turtle
 t = turtle.Turtle()
 t.speed(0)
 t.left(90)
@@ -254,18 +275,8 @@ def draw_tree(length, angle):
     t.backward(length)
 
 draw_tree(80, 25)
-t.hideturtle()
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+t.hideturtle()`);
+</script>
 
 ## Experiments
 

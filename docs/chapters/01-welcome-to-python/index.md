@@ -115,23 +115,28 @@ Edit the code below and click **Run** to see the result right on this page. No a
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">print("Hello, world!")
-print("My name is Monty.")
-print("Let's learn Python!")
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
     </div>
-    <pre id="output"></pre>
+    <pre class="cm-output" id="cm-output"></pre>
   </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
   </div>
 </div>
+<script>
+initCmLab('', `print("Hello, world!")
+print("My name is Monty.")
+print("Let's learn Python!")`);
+</script>
 
 Were you right? You should see three lines of text appear, one for each `print()` call — Python runs them in order from top to bottom.
 
@@ -245,9 +250,21 @@ t.forward(100)
 
 ## Try It: Turtle Graphics
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 
 t = turtle.Turtle()
 t.forward(100)
@@ -256,18 +273,8 @@ t.forward(100)
 t.right(90)
 t.forward(100)
 t.right(90)
-t.forward(100)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+t.forward(100)`);
+</script>
 
 Were you right? The turtle draws a **square** — four sides of equal length with a 90-degree right turn between each side. Four turns of 90 degrees adds up to 360 degrees, which is one full rotation, so the turtle ends up facing the same direction it started.
 
@@ -290,27 +297,29 @@ The number inside `forward()` controls how far the turtle walks — bigger numbe
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
     The program below draws **two sides** of a triangle and then stops. A triangle has three equal sides, with a 120-degree right turn at each corner. Add **one line** — `t.forward(100)` — to draw the missing third side and close the triangle!
 
-<div id="skulpt-lab-3">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `import turtle
 
 t = turtle.Turtle()
 t.forward(100)
 t.right(120)
 t.forward(100)
 t.right(120)
-# Add one line here to complete the triangle!
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+# Add one line here to complete the triangle!`);
+</script>
 
 When you add the missing line and click Run, the turtle should draw a closed triangle. If the shape does not close, double-check that your added line spells `forward` in all lowercase and uses parentheses with the number 100 inside.
 

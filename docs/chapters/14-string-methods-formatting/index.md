@@ -26,6 +26,9 @@ Python gives you a huge toolkit of string methods so you can chop, search, repla
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## String Indexing
 
@@ -48,24 +51,26 @@ index:   0   1   2   3   4   5
          -6  -5  -4  -3  -2  -1
 ```
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">word = "Python"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `word = "Python"
 print("First character:", word[0])
 print("Third character:", word[2])
 print("Last character:", word[-1])
-print("Second to last:", word[-2])
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("Second to last:", word[-2])`);
+</script>
 
 ## String Slicing
 
@@ -86,24 +91,26 @@ print(word[:])     # "Python" — the whole string
     Before running the code below, predict what `"programming"[3:8]` will print.
     Count the characters starting at index 0. Make your guess — then run it!
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">s = "programming"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `s = "programming"
 print(s[3:8])
 print(s[:4])
 print(s[-4:])
-print(s[::2])   # every other character (step of 2)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print(s[::2])   # every other character (step of 2)`);
+</script>
 
 Were you right? `s[3:8]` gives you `"gramm"` — characters at positions 3, 4, 5, 6, and 7.
 
@@ -118,9 +125,21 @@ Before looking at examples, here's a quick preview:
 - `join()` glues a list of strings back together
 - `replace()` swaps every occurrence of one substring for another
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">sentence = "the quick brown fox"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `sentence = "the quick brown fox"
 
 # split() — break into words
 words = sentence.split()
@@ -133,18 +152,8 @@ print("Dashed:", dashed)
 
 # replace() — swap one word for another
 new_sentence = sentence.replace("fox", "python")
-print("Replaced:", new_sentence)
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print("Replaced:", new_sentence)`);
+</script>
 
 | Method | What it does | Example |
 |--------|-------------|---------|
@@ -164,9 +173,21 @@ Python gives you several methods to search inside a string:
 - `s.isalpha()` — returns `True` if all characters are letters
 - `s.isalnum()` — returns `True` if all characters are letters or digits
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">filename = "report2024.pdf"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `filename = "report2024.pdf"
 
 print("Find '.pdf':", filename.find(".pdf"))
 print("Starts with 'report':", filename.startswith("report"))
@@ -175,18 +196,8 @@ print("Ends with '.pdf':", filename.endswith(".pdf"))
 code = "ABC123"
 print("isalnum:", code.isalnum())
 print("isdigit:", code.isdigit())
-print("isalpha:", code.isalpha())
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+print("isalpha:", code.isalpha())`);
+</script>
 
 ## f-Strings — The Modern Way to Format Text
 
@@ -207,27 +218,29 @@ With an f-string, that becomes much cleaner:
 print(f"Hello, {name}! Your score is {score}.")
 ```
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">name = "Monty"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `name = "Monty"
 score = 95
 max_score = 100
 percentage = score / max_score * 100
 
 print(f"Hello, {name}!")
 print(f"Your score: {score}/{max_score}")
-print(f"Percentage: {percentage:.1f}%")   # .1f = 1 decimal place
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+print(f"Percentage: {percentage:.1f}%")   # .1f = 1 decimal place`);
+</script>
 
 The `:.1f` format code inside the curly braces says "show 1 decimal place."
 Try changing it to `:.2f` for two decimal places.
@@ -273,24 +286,26 @@ print(report)
     but it still uses the old `+` concatenation style and forgets `str()` around the number.
     Rewrite the `print()` line as a single f-string to fix both problems!
 
-<div id="skulpt-lab-6" class="skulpt-text-only">
-  <div id="editor-container-6">
-    <textarea id="code-6" spellcheck="false">player = "Monty"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-6"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-6')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-6')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-6"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-6"></div>
+  </div>
+</div>
+<script>
+initCmLab('-6', `player = "Monty"
 level = 5
 
 # Rewrite this as one f-string:
-print("Player: " + player + ", Level: " + str(level))
-</textarea>
-    <div id="button-row-6">
-      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
-      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
-    </div>
-    <pre id="output-6"></pre>
-  </div>
-  <div id="canvas-container-6">
-    <div id="turtle-target-6"></div>
-  </div>
-</div>
+print("Player: " + player + ", Level: " + str(level))`);
+</script>
 
 ## Experiments
 

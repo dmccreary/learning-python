@@ -25,6 +25,9 @@ You've used `if` statements since Chapter 9. Now it's time to understand how Pyt
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Truthiness and Falsiness
 
@@ -44,23 +47,25 @@ A value is **falsy** if Python treats it like `False` in a boolean context:
 
 Everything else is **truthy** — including non-zero numbers, non-empty strings, and non-empty lists.
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">values = [0, 1, "", "hello", [], [0], None, False, True]
-for v in values:
-    label = "TRUTHY" if v else "FALSY"
-    print(repr(v), "->", label)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
     </div>
-    <pre id="output"></pre>
+    <pre class="cm-output" id="cm-output"></pre>
   </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
   </div>
 </div>
+<script>
+initCmLab('', `values = [0, 1, "", "hello", [], [0], None, False, True]
+for v in values:
+    label = "TRUTHY" if v else "FALSY"
+    print(repr(v), "->", label)`);
+</script>
 
 Truthiness lets you write concise checks. Instead of `if len(name) > 0:`, just write `if name:`.
 
@@ -74,9 +79,21 @@ With `or`: if the left side is truthy, Python returns it immediately.
 
 This matters because it can prevent errors — and provides a useful default-value pattern:
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">name = ""
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `name = ""
 greeting = name or "stranger"   # if name is falsy, use "stranger"
 print(f"Hello, {greeting}!")
 
@@ -87,18 +104,8 @@ print(f"Hello, {greeting}!")
 # and short-circuits: if data is None, .upper() never runs
 data = None
 result = data and data.upper()
-print("Result:", result)   # None — no crash!
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print("Result:", result)   # None — no crash!`);
+</script>
 
 ## Functions Returning None
 
@@ -184,22 +191,24 @@ grade = "pass" if score >= 70 else "fail"
     What will it print for `score = 85`? For `score = 55`?
     Make your guess — then run it!
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">for score in [95, 85, 55]:
-    label = "excellent" if score >= 90 else ("good" if score >= 70 else "needs work")
-    print(f"Score {score}: {label}")
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
     </div>
-    <pre id="output-3"></pre>
+    <pre class="cm-output" id="cm-output-3"></pre>
   </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
   </div>
 </div>
+<script>
+initCmLab('-3', `for score in [95, 85, 55]:
+    label = "excellent" if score >= 90 else ("good" if score >= 70 else "needs work")
+    print(f"Score {score}: {label}")`);
+</script>
 
 ## Compound Conditions
 
@@ -246,9 +255,21 @@ match command:
 The `_` case is the **wildcard** — it matches anything not already handled.
 Use `|` inside a case to match multiple values:
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">day = input("Enter a day (Mon/Tue/Wed/Thu/Fri/Sat/Sun): ").strip().title()
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `day = input("Enter a day (Mon/Tue/Wed/Thu/Fri/Sat/Sun): ").strip().title()
 
 match day:
     case "Sat" | "Sun":
@@ -256,18 +277,8 @@ match day:
     case "Mon" | "Tue" | "Wed" | "Thu" | "Fri":
         print(f"{day}: Weekday.")
     case _:
-        print(f"I don't recognize '{day}'.")
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+        print(f"I don't recognize '{day}'.")`);
+</script>
 
 ## Learning Check
 
@@ -277,25 +288,27 @@ match day:
     But the `or` operands are reversed, so it always says "stranger".
     Swap them to fix it!
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">name = input("Enter your name (or press Enter to skip): ").strip()
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `name = input("Enter your name (or press Enter to skip): ").strip()
 
 # Bug: "stranger" is truthy so it always wins!
 greeting = "stranger" or name
 
-print(f"Hello, {greeting}!")
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+print(f"Hello, {greeting}!")`);
+</script>
 
 ## Experiments
 

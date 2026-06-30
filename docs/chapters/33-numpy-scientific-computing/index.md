@@ -26,6 +26,9 @@ Python lists are flexible, but slow for large numerical datasets. **NumPy** (Num
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Importing NumPy
 
@@ -77,9 +80,21 @@ print(a + b)   # [11 22 33 44]
     Before you run it, predict: what will `temps_f` look like after the formula?
     Make your guess — then run it!
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import numpy as np
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import numpy as np
 
 temps_c = np.array([0, 20, 37, 100])
 temps_f = (temps_c * 9/5) + 32
@@ -90,18 +105,8 @@ print("Fahrenheit:", temps_f)
 # Also works: min, max, mean
 print("Min F:", temps_f.min())
 print("Max F:", temps_f.max())
-print("Mean F:", temps_f.mean())
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("Mean F:", temps_f.mean())`);
+</script>
 
 ## Creating Arrays Automatically
 
@@ -122,9 +127,21 @@ x = np.linspace(0, 1, 5)
 print(x)   # [0.   0.25 0.5  0.75 1.  ]
 ```
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import numpy as np
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import numpy as np
 
 print("zeros:", np.zeros(5))
 print("ones:", np.ones(4))
@@ -135,20 +152,10 @@ print("linspace:", np.linspace(0, 1, 6))
 import math
 x = np.linspace(0, 2 * math.pi, 8)
 y = np.array([math.sin(v) for v in x])
-print("\nSine wave sample (x, sin(x)):")
+print("\\nSine wave sample (x, sin(x)):")
 for xi, yi in zip(x, y):
-    print(f"  x={xi:.2f}  sin(x)={yi:.3f}")
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+    print(f"  x={xi:.2f}  sin(x)={yi:.3f}")`);
+</script>
 
 ## Slicing and Indexing
 
@@ -206,9 +213,21 @@ NumPy has fast built-in statistics:
 
 `argmax()` and `argmin()` are especially useful when you want to know *where* in an array the maximum or minimum occurs — not just what the value is.
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import numpy as np
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `import numpy as np
 
 scores = np.array([78, 95, 88, 62, 91, 74, 99, 83])
 
@@ -220,18 +239,8 @@ print("Max:", scores.max(), "at index", scores.argmax())
 
 names = ["Alice", "Bob", "Carol", "Dave", "Eve", "Frank", "Grace", "Hank"]
 winner = names[scores.argmax()]
-print(f"Top scorer: {winner} with {scores.max()}")
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print(f"Top scorer: {winner} with {scores.max()}")`);
+</script>
 
 ## Plotting a Sine Wave with NumPy and matplotlib
 
@@ -262,9 +271,21 @@ plt.show()
     The code below has temperature data for a week, but the line that finds the hottest day is missing!
     Add one line using `argmax()` to find and print which day of the week had the highest temperature.
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">import numpy as np
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `import numpy as np
 
 days  = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 temps = np.array([22, 25, 28, 31, 26, 24, 20])
@@ -272,18 +293,8 @@ temps = np.array([22, 25, 28, 31, 26, 24, 20])
 print("Week temperatures:", temps)
 print("Average:", temps.mean(), "°C")
 
-# Add one line here: use argmax() to find and print the hottest day
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+# Add one line here: use argmax() to find and print the hottest day`);
+</script>
 
 ## Experiments
 

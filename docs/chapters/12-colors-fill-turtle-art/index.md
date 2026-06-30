@@ -25,6 +25,9 @@ Today we unlock the full color palette and learn to paint filled shapes.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Color in Turtle Graphics
 
@@ -79,9 +82,21 @@ for col, pos in zip(colors, positions):
         t.right(90)
 ```
 
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import turtle
 t = turtle.Turtle()
 t.speed(6)
 t.pensize(3)
@@ -96,18 +111,8 @@ for col, pos in zip(colors, positions):
     t.pencolor(col)
     for i in range(4):
         t.forward(80)
-        t.right(90)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+        t.right(90)`);
+</script>
 
 Were you right? `#FF00FF` is magenta (red + blue, no green) and `#FFFF00` is yellow (red + green, no blue).
 
@@ -129,9 +134,21 @@ It's the same model your screen uses — every pixel on your monitor has a tiny 
 
 You can use RGB values directly in turtle by converting them to a hex color string first. The helper function below does that math so you can keep thinking in 0–255 values.
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 
 def to_hex(r, g, b):
     # Convert 0-255 RGB values to a hex color string like "#ff0000"
@@ -150,18 +167,8 @@ for rgb, pos in zip(rgb_colors, positions):
     t.goto(pos)
     t.pendown()
     t.pencolor(to_hex(*rgb))
-    t.circle(40)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+    t.circle(40)`);
+</script>
 
 Try changing the numbers in the `rgb_colors` list. Each number goes from 0 (none) to 255 (full brightness).
 
@@ -204,9 +211,21 @@ for i in range(6):
 t.end_fill()
 ```
 
-<div id="skulpt-lab-3">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `import turtle
 t = turtle.Turtle()
 t.speed(6)
 
@@ -215,18 +234,8 @@ t.begin_fill()
 for i in range(6):
     t.forward(100)
     t.right(60)
-t.end_fill()
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+t.end_fill()`);
+</script>
 
 Try changing `"gold"` to any color name or hex code. Try changing `6` to `3` for a triangle or `5` for a pentagon.
 
@@ -262,9 +271,21 @@ Let's combine everything: fill color, hex codes, and loops to create a colorful 
 
 Before the code, note that `t.circle(r, extent)` draws an arc of a circle. If `extent=360` it's a full circle; `extent=120` draws one-third of a circle, which we'll use as a "petal."
 
-<div id="skulpt-lab-4">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `import turtle
 t = turtle.Turtle()
 t.speed(0)
 
@@ -280,18 +301,8 @@ for i in range(6):
     t.end_fill()
     t.left(60)          # rotate to next petal
 
-t.hideturtle()
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+t.hideturtle()`);
+</script>
 
 ## Learning Check
 
@@ -301,9 +312,21 @@ t.hideturtle()
     Add the three missing lines — set the fill color, open the fill, and close the fill —
     to make the square solid blue with a red border!
 
-<div id="skulpt-lab-5">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `import turtle
 t = turtle.Turtle()
 t.speed(6)
 t.pencolor("red")
@@ -314,18 +337,8 @@ t.pensize(3)
 for i in range(4):
     t.forward(100)
     t.right(90)
-# Add: end_fill()
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+# Add: end_fill()`);
+</script>
 
 ## Experiments
 

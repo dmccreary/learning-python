@@ -26,6 +26,9 @@ With file I/O, your programs can remember high scores, process text files, and s
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 !!! mascot-warning "File I/O Needs a Real Python Environment"
     ![Monty with a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
@@ -90,9 +93,21 @@ with open("notes.txt", "w") as f:
     In what order will the lines appear when we read them?
     Make your guess — then run it!
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false"># Virtual file — a list that stores "written" lines
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `# Virtual file — a list that stores "written" lines
 virtual_file = []
 
 def write_line(text):
@@ -108,18 +123,8 @@ print("File contents:")
 for line in virtual_file:
     print(line)
 
-print(f"\nTotal lines: {len(virtual_file)}")
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print(f"\\nTotal lines: {len(virtual_file)}")`);
+</script>
 
 ## Reading from a File
 
@@ -138,28 +143,30 @@ with open("notes.txt") as f:
 
 **Skulpt simulation** — splitting a multi-line string:
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false"># Simulate a text file as a multi-line string:
-file_content = "apple\nbanana\nmango\nkiwi"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `# Simulate a text file as a multi-line string:
+file_content = "apple\\nbanana\\nmango\\nkiwi"
 
-# Simulate readlines() using split("\n"):
-lines = file_content.split("\n")
+# Simulate readlines() using split("\\n"):
+lines = file_content.split("\\n")
 print("Number of lines:", len(lines))
 print()
 for i, line in enumerate(lines, 1):
-    print(f"  Line {i}: {line.strip()}")
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+    print(f"  Line {i}: {line.strip()}")`);
+</script>
 
 Note the `.strip()` call — it removes whitespace and `\n` from the ends of lines.
 
@@ -183,31 +190,33 @@ When processing file content, always clean the text first:
 - `.lower()` — converts to lowercase for case-insensitive comparisons
 - `.split()` — splits a line into words
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false"># Simulate a messy word list file:
-words_text = "  Apple  \nbanana\n  MANGO\nkiwi  \n"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `# Simulate a messy word list file:
+words_text = "  Apple  \\nbanana\\n  MANGO\\nkiwi  \\n"
 
 clean_words = []
-for line in words_text.split("\n"):
+for line in words_text.split("\\n"):
     word = line.strip().lower()
     if word:                        # skip empty lines
         clean_words.append(word)
 
 print("Cleaned words:", clean_words)
 print("Sorted:       ", sorted(clean_words))
-print("Longest word: ", max(clean_words, key=len))
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print("Longest word: ", max(clean_words, key=len))`);
+</script>
 
 ## Appending to a File
 
@@ -237,9 +246,21 @@ Python's `csv` module reads and writes CSV files cleanly.
 
 `splitlines()` splits a multi-line string into a list of lines — exactly what `csv.DictReader` needs.
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">import csv
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `import csv
 
 csv_text = """name,age,score
 Alice,14,95
@@ -249,18 +270,8 @@ Carol,15,91"""
 # splitlines() works in Skulpt — no io module needed
 reader = csv.DictReader(csv_text.splitlines())
 for row in reader:
-    print(f"{row['name']}: age {row['age']}, score {row['score']}")
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+    print(f"{row['name']}: age {row['age']}, score {row['score']}")`);
+</script>
 
 `csv.DictReader` uses the first row (the header) as column names and gives you each row as a dictionary.
 
@@ -272,11 +283,23 @@ for row in reader:
     Add code to calculate and print the **average** score after the loop.
     You'll need to convert the score strings to integers first!
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">import csv
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `import csv
 
-csv_text = "name,score\nAlice,95\nBob,87\nCarol,91\nDave,73"
+csv_text = "name,score\\nAlice,95\\nBob,87\\nCarol,91\\nDave,73"
 reader = csv.DictReader(csv_text.splitlines())
 
 total = 0
@@ -287,18 +310,8 @@ for row in reader:
     count += 1
     print(f"{row['name']}: {score}")
 
-# Add: calculate and print the average score
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+# Add: calculate and print the average score`);
+</script>
 
 ## Experiments
 

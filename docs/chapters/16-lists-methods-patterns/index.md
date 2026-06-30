@@ -26,6 +26,9 @@ In this chapter you'll see patterns that show up in real Python programs every d
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Adding Items to a List
 
@@ -37,9 +40,21 @@ Before we try them, let's define each one clearly:
 - `insert(i, x)` — adds `x` **before** the item at index `i`
 - `extend(other_list)` — adds every item from `other_list` to the end
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">fruits = ["apple", "banana"]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `fruits = ["apple", "banana"]
 print("Start:", fruits)
 
 fruits.append("mango")
@@ -50,18 +65,8 @@ print("After insert:", fruits)
 
 extras = ["grape", "lemon"]
 fruits.extend(extras)
-print("After extend:", fruits)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("After extend:", fruits)`);
+</script>
 
 !!! mascot-thinking "What Do You Think Will Happen?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
@@ -78,9 +83,21 @@ There are three methods for removing items:
 - `pop()` — removes and returns the **last** item (or `pop(i)` removes at index `i`)
 - `clear()` — removes **all** items, leaving an empty list
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">items = ["a", "b", "c", "d", "e"]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `items = ["a", "b", "c", "d", "e"]
 print("Start:", items)
 
 items.remove("c")
@@ -92,18 +109,8 @@ print("After pop:", items)
 
 second = items.pop(1)
 print("Popped index 1:", second)
-print("After pop(1):", items)
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print("After pop(1):", items)`);
+</script>
 
 ## Sorting and Reversing
 
@@ -112,9 +119,21 @@ print("After pop(1):", items)
 
 Both methods modify the list **in place** — the original list changes.
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">scores = [73, 100, 87, 55, 92]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `scores = [73, 100, 87, 55, 92]
 print("Before sort:", scores)
 
 scores.sort()
@@ -125,18 +144,8 @@ print("After reverse:", scores)
 
 words = ["banana", "apple", "cherry"]
 words.sort()
-print("Sorted words:", words)
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print("Sorted words:", words)`);
+</script>
 
 ## Finding Items with `index()` and `count()`
 
@@ -160,27 +169,29 @@ for item in my_list:
 
 You can also iterate and build a new list at the same time — called the **loop-with-list-building** pattern:
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">scores = [73, 100, 87, 55, 92]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `scores = [73, 100, 87, 55, 92]
 doubled = []
 
 for s in scores:
     doubled.append(s * 2)
 
 print("Original:", scores)
-print("Doubled: ", doubled)
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+print("Doubled: ", doubled)`);
+</script>
 
 ## List Comprehensions
 
@@ -207,9 +218,21 @@ You can even add an `if` filter:
 passing = [s for s in scores if s >= 70]   # only scores 70 and above
 ```
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">scores = [73, 100, 87, 55, 92, 68]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `scores = [73, 100, 87, 55, 92, 68]
 
 doubled  = [s * 2 for s in scores]
 passing  = [s for s in scores if s >= 70]
@@ -217,18 +240,8 @@ graded   = ["pass" if s >= 70 else "fail" for s in scores]
 
 print("Doubled:", doubled)
 print("Passing:", passing)
-print("Graded: ", graded)
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+print("Graded: ", graded)`);
+</script>
 
 ## Nested Lists
 
@@ -278,25 +291,27 @@ print(queue.pop(0))   # "first" — first in, first out
     but the list comprehension has a bug in its `if` condition.
     Fix it so `evens` contains only even numbers!
 
-<div id="skulpt-lab-6" class="skulpt-text-only">
-  <div id="editor-container-6">
-    <textarea id="code-6" spellcheck="false">numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-6"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-6')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-6')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-6"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-6"></div>
+  </div>
+</div>
+<script>
+initCmLab('-6', `numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # Bug: this keeps odd numbers, not even ones!
 evens = [n for n in numbers if n % 2 == 1]
 
-print("Evens:", evens)
-</textarea>
-    <div id="button-row-6">
-      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
-      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
-    </div>
-    <pre id="output-6"></pre>
-  </div>
-  <div id="canvas-container-6">
-    <div id="turtle-target-6"></div>
-  </div>
-</div>
+print("Evens:", evens)`);
+</script>
 
 ## Experiments
 

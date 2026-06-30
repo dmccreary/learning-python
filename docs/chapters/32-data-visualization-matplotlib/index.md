@@ -26,6 +26,9 @@ A chart can communicate in one second what a table of numbers takes minutes to u
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Importing matplotlib
 
@@ -63,9 +66,21 @@ plt.ylabel("Square")
 plt.show()
 ```
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">import matplotlib
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `import matplotlib
 import matplotlib.pyplot as plt
 
 x = [0, 1, 2, 3, 4, 5]
@@ -79,18 +94,8 @@ plt.show()
 
 print("Chart data:")
 for i, j in zip(x, y):
-    print(f"  x={i}, y={j}")
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+    print(f"  x={i}, y={j}")`);
+</script>
 
 ## Adding Labels, Titles, and a Grid
 
@@ -119,9 +124,21 @@ Use the `label=` parameter and then call `plt.legend()` so readers know which li
     Which one do you think will grow fastest: x, x squared, or x cubed (scaled down)?
     Make your guess — then run it!
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import matplotlib.pyplot as plt
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import matplotlib.pyplot as plt
 
 x = [0, 1, 2, 3, 4, 5]
 
@@ -143,18 +160,8 @@ plt.show()
 print("Values at x=5:")
 print(f"  linear : {y_linear[-1]}")
 print(f"  quadratic: {y_square[-1]}")
-print(f"  cubic/10 : {y_cube[-1]:.1f}")
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print(f"  cubic/10 : {y_cube[-1]:.1f}")`);
+</script>
 
 ## Scatter Plots
 
@@ -185,9 +192,21 @@ The `color=` parameter accepts color names (`"red"`, `"blue"`, `"green"`) or hex
 `plt.bar(x_labels, heights)` creates a **vertical bar chart**.
 Bar charts are best for comparing discrete categories — scores by student, revenue by month, etc.
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import matplotlib.pyplot as plt
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `import matplotlib.pyplot as plt
 
 subjects = ["Math", "Science", "English", "History", "Art"]
 scores   = [88, 92, 76, 85, 95]
@@ -204,18 +223,8 @@ plt.show()
 print("Scores:")
 for subj, score in zip(subjects, scores):
     print(f"  {subj}: {score}")
-print(f"Average: {sum(scores)/len(scores):.1f}")
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print(f"Average: {sum(scores)/len(scores):.1f}")`);
+</script>
 
 `plt.grid(axis="y")` adds grid lines only on the y-axis — a common style for bar charts.
 
@@ -282,9 +291,21 @@ Notice: when using subplots, use `ax.set_title()` (not `plt.title()`) and `ax.se
     The code below tries to make a bar chart but is missing the axis labels and title.
     Add `plt.title()`, `plt.xlabel()`, and `plt.ylabel()` to complete it!
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">import matplotlib.pyplot as plt
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `import matplotlib.pyplot as plt
 
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
 sales  = [120, 145, 130, 165, 182, 200]
@@ -296,18 +317,8 @@ plt.show()
 
 print("Sales data:")
 for month, amount in zip(months, sales):
-    print(f"  {month}: {amount} units")
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+    print(f"  {month}: {amount} units")`);
+</script>
 
 ## Experiments
 

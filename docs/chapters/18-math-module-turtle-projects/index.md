@@ -26,6 +26,9 @@ In this chapter you'll use those superpowers to create two beautiful, interactiv
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## Built-in Number Functions
 
@@ -47,25 +50,27 @@ print(round(3.2))      # 3
 print(round(3.14159, 2)) # 3.14
 ```
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">print("abs(-42):", abs(-42))
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `print("abs(-42):", abs(-42))
 print("abs(7):", abs(7))
 
 print("round(2.7):", round(2.7))
 print("round(2.3):", round(2.3))
-print("round(3.14159, 3):", round(3.14159, 3))
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("round(3.14159, 3):", round(3.14159, 3))`);
+</script>
 
 ## The `math` Module
 
@@ -86,27 +91,29 @@ Before we try them, here's a quick guide to the key functions:
 | `math.log(x)` | Natural logarithm of x | `math.log(1)` → 0.0 |
 | `math.factorial(n)` | n! (n factorial) | `math.factorial(5)` → 120 |
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import math
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import math
 
 print("sqrt(144):", math.sqrt(144))
 print("floor(4.9):", math.floor(4.9))
 print("ceil(4.1):", math.ceil(4.1))
 print("pi:", math.pi)
 print("factorial(6):", math.factorial(6))
-print("degrees(pi):", math.degrees(math.pi))
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+print("degrees(pi):", math.degrees(math.pi))`);
+</script>
 
 ## Sine and Cosine — Radians vs Degrees
 
@@ -124,26 +131,28 @@ To convert: use `math.radians(degrees)` to go from degrees → radians.
     In trigonometry, `sin(90°) = 1.0`. Do you think Python will get the right answer?
     Make your guess — then run it!
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">import math
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-3"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
+  </div>
+</div>
+<script>
+initCmLab('-3', `import math
 
 print("sin(0°):", math.sin(math.radians(0)))
 print("sin(90°):", math.sin(math.radians(90)))
 print("sin(180°):", round(math.sin(math.radians(180)), 10))
 print("cos(0°):", math.cos(math.radians(0)))
-print("cos(90°):", round(math.cos(math.radians(90)), 10))
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
-    </div>
-    <pre id="output-3"></pre>
-  </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
-  </div>
-</div>
+print("cos(90°):", round(math.cos(math.radians(90)), 10))`);
+</script>
 
 ## Project 1 — Sine Wave with Turtle
 
@@ -156,9 +165,21 @@ Before running the code, note that:
 - `frequency` (really a scaling factor) controls how many cycles appear in the window
 - `math.sin()` always returns a value between `-1.0` and `1.0`, so we multiply by `amplitude` to scale it up
 
-<div id="skulpt-lab-4">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `import turtle
 import math
 
 t = turtle.Turtle()
@@ -177,18 +198,8 @@ for x in range(-190, 191):
     y = amplitude * math.sin(x * frequency)
     t.goto(x, y)
 
-t.hideturtle()
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+t.hideturtle()`);
+</script>
 
 Try changing `amplitude` to `150` for a taller wave or `frequency` to `0.1` for a faster wave.
 
@@ -201,9 +212,21 @@ Three turtles start at the left and move right in random-length hops. The first 
 Before the code: `random.randint(1, 10)` gives each turtle a random step size on each turn.
 We check after every move whether any turtle has crossed the finish line.
 
-<div id="skulpt-lab-5">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `import turtle
 import random
 
 t1 = turtle.Turtle()
@@ -238,18 +261,8 @@ while True:
             break
     else:
         continue
-    break
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+    break`);
+</script>
 
 Run it several times — the winner changes each time because the steps are random!
 
@@ -265,9 +278,21 @@ Run it several times — the winner changes each time because the steps are rand
     starting at y = `-80`. Add `"Orange"` to the `names` list and `t4` to the `racers` list.
     The race should now have four competitors!
 
-<div id="skulpt-lab-6">
-  <div id="editor-container-6">
-    <textarea id="code-6" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-6"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-6')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-6')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-6"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-6"></div>
+  </div>
+</div>
+<script>
+initCmLab('-6', `import turtle
 import random
 
 t1 = turtle.Turtle()
@@ -291,18 +316,8 @@ while True:
             break
     else:
         continue
-    break
-</textarea>
-    <div id="button-row-6">
-      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
-      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
-    </div>
-    <pre id="output-6"></pre>
-  </div>
-  <div id="canvas-container-6">
-    <div id="turtle-target-6"></div>
-  </div>
-</div>
+    break`);
+</script>
 
 ## Experiments
 

@@ -26,6 +26,9 @@ That's what **lists** are for.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 ## The List Type
 
@@ -41,25 +44,27 @@ empty  = []                           # an empty list
 
 Lists can hold any type of value — strings, numbers, booleans, even other lists.
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">colors = ["red", "green", "blue", "yellow"]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `colors = ["red", "green", "blue", "yellow"]
 scores = [95, 87, 100, 73, 88]
 
 print("Colors:", colors)
 print("Scores:", scores)
-print("Type of colors:", type(colors))
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("Type of colors:", type(colors))`);
+</script>
 
 ## List Indexing
 
@@ -76,23 +81,25 @@ colors = ["red", "green", "blue", "yellow"]
     Look at the list `colors` above. What does `colors[2]` print?
     And what about `colors[0]`?  Make your guess — then run it!
 
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">colors = ["red", "green", "blue", "yellow"]
-print("colors[0]:", colors[0])
-print("colors[2]:", colors[2])
-print("colors[3]:", colors[3])
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
     </div>
-    <pre id="output-2"></pre>
+    <pre class="cm-output" id="cm-output-2"></pre>
   </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
   </div>
 </div>
+<script>
+initCmLab('-2', `colors = ["red", "green", "blue", "yellow"]
+print("colors[0]:", colors[0])
+print("colors[2]:", colors[2])
+print("colors[3]:", colors[3])`);
+</script>
 
 Were you right? Index `0` is the first item, index `2` is the third.
 
@@ -114,22 +121,24 @@ colors = ["red", "green", "blue", "yellow"]
 
 This is especially useful when you don't know how long the list is but you always want the last item.
 
-<div id="skulpt-lab-3" class="skulpt-text-only">
-  <div id="editor-container-3">
-    <textarea id="code-3" spellcheck="false">colors = ["red", "green", "blue", "yellow"]
-print("Last item:", colors[-1])
-print("Second to last:", colors[-2])
-</textarea>
-    <div id="button-row-3">
-      <button id="run-btn-3" onclick="runSkulpt('-3')">&#9654; Run</button>
-      <button id="reset-btn-3" onclick="resetSkulpt('-3')">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-3"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
     </div>
-    <pre id="output-3"></pre>
+    <pre class="cm-output" id="cm-output-3"></pre>
   </div>
-  <div id="canvas-container-3">
-    <div id="turtle-target-3"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-3"></div>
   </div>
 </div>
+<script>
+initCmLab('-3', `colors = ["red", "green", "blue", "yellow"]
+print("Last item:", colors[-1])
+print("Second to last:", colors[-2])`);
+</script>
 
 ## List Slicing
 
@@ -159,27 +168,29 @@ Use `len()` when you need the number of items — for example, to loop exactly a
 The **`in` operator** checks whether a value is in a list.
 It returns `True` if the value is found, `False` if not.
 
-<div id="skulpt-lab-4" class="skulpt-text-only">
-  <div id="editor-container-4">
-    <textarea id="code-4" spellcheck="false">fruits = ["apple", "banana", "mango", "kiwi"]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-4"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-4')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-4')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-4"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-4"></div>
+  </div>
+</div>
+<script>
+initCmLab('-4', `fruits = ["apple", "banana", "mango", "kiwi"]
 
 print("apple" in fruits)     # True
 print("grape" in fruits)     # False
 print("mango" not in fruits) # False
 
 if "banana" in fruits:
-    print("We have bananas!")
-</textarea>
-    <div id="button-row-4">
-      <button id="run-btn-4" onclick="runSkulpt('-4')">&#9654; Run</button>
-      <button id="reset-btn-4" onclick="resetSkulpt('-4')">&#8635; Reset</button>
-    </div>
-    <pre id="output-4"></pre>
-  </div>
-  <div id="canvas-container-4">
-    <div id="turtle-target-4"></div>
-  </div>
-</div>
+    print("We have bananas!")`);
+</script>
 
 `not in` is the opposite — it returns `True` when the item is **not** in the list.
 
@@ -198,9 +209,21 @@ Strings are **immutable** — once you create `"hello"`, you cannot change chara
 | `str` | No | `word[0] = "P"` raises `TypeError` |
 | `int`, `float` | No | `x = 5` then `x = 6` creates a new int, doesn't change the old one |
 
-<div id="skulpt-lab-5" class="skulpt-text-only">
-  <div id="editor-container-5">
-    <textarea id="code-5" spellcheck="false">colors = ["red", "green", "blue"]
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-5"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-5')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-5')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-5"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-5"></div>
+  </div>
+</div>
+<script>
+initCmLab('-5', `colors = ["red", "green", "blue"]
 print("Before:", colors)
 
 colors[1] = "purple"   # change the item at index 1
@@ -210,18 +233,8 @@ print("After change:", colors)
 word = "hello"
 # word[0] = "H"   # this would cause a TypeError!
 new_word = "H" + word[1:]   # must create a new string
-print("New word:", new_word)
-</textarea>
-    <div id="button-row-5">
-      <button id="run-btn-5" onclick="runSkulpt('-5')">&#9654; Run</button>
-      <button id="reset-btn-5" onclick="resetSkulpt('-5')">&#8635; Reset</button>
-    </div>
-    <pre id="output-5"></pre>
-  </div>
-  <div id="canvas-container-5">
-    <div id="turtle-target-5"></div>
-  </div>
-</div>
+print("New word:", new_word)`);
+</script>
 
 ## Learning Check
 
@@ -230,23 +243,25 @@ print("New word:", new_word)
     The program below is supposed to print the *last* item in the list using negative indexing.
     But it has an off-by-one bug. Fix the index so it prints `"kiwi"`.
 
-<div id="skulpt-lab-6" class="skulpt-text-only">
-  <div id="editor-container-6">
-    <textarea id="code-6" spellcheck="false">fruits = ["apple", "banana", "mango", "kiwi"]
-
-# Bug: this prints "mango", not "kiwi"
-print("Last fruit:", fruits[-2])
-</textarea>
-    <div id="button-row-6">
-      <button id="run-btn-6" onclick="runSkulpt('-6')">&#9654; Run</button>
-      <button id="reset-btn-6" onclick="resetSkulpt('-6')">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-6"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-6')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-6')">&#8635; Reset</button>
     </div>
-    <pre id="output-6"></pre>
+    <pre class="cm-output" id="cm-output-6"></pre>
   </div>
-  <div id="canvas-container-6">
-    <div id="turtle-target-6"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-6"></div>
   </div>
 </div>
+<script>
+initCmLab('-6', `fruits = ["apple", "banana", "mango", "kiwi"]
+
+# Bug: this prints "mango", not "kiwi"
+print("Last fruit:", fruits[-2])`);
+</script>
 
 ## Experiments
 

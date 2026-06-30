@@ -112,10 +112,25 @@ Edit the code below and click **Run** to see the result.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">name = "Alex"
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+<script>
+initCmLab('', `name = "Alex"
 greeting = "Hello, "
 farewell = "See you later, "
 
@@ -125,18 +140,8 @@ print(farewell + name + "!")
 
 # Repetition: repeat a string with *
 print("-" * 20)
-print("Ha" * 4)
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
-    </div>
-    <pre id="output"></pre>
-  </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
-  </div>
-</div>
+print("Ha" * 4)`);
+</script>
 
 Were you right? The first `print()` outputs `Hello, Alex!`. Notice how `"-" * 20` creates a divider line of exactly twenty dashes — much faster than typing them one by one!
 
@@ -257,9 +262,21 @@ The program below draws a polygon and then labels it.
     Add **one line** after the loop to call `t.write()` and display the text `"Pentagon"` on the canvas.
     **Hint:** move `t.penup()` and position the turtle first with `t.goto(-40, -120)`, then call `t.write()`.
 
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">import turtle
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-2"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
+  </div>
+</div>
+<script>
+initCmLab('-2', `import turtle
 t = turtle.Turtle()
 t.speed(3)
 
@@ -274,18 +291,8 @@ for i in range(sides):
 t.penup()
 t.goto(-40, -120)
 # Add one line here to call t.write() and display "Pentagon"
-# Use font=("Arial", 16, "bold") for a nice look
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+# Use font=("Arial", 16, "bold") for a nice look`);
+</script>
 
 Once the label appears, try changing the font size, style, or the text itself!
 
