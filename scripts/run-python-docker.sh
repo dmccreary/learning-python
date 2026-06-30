@@ -102,22 +102,56 @@ fi
 # 2. Verify Docker daemon is running
 # ──────────────────────────────────────────────────────────────────────────────
 if ! docker info &>/dev/null 2>&1; then
-    cat <<'DAEMON_HELP'
+    echo ""
+    echo "ERROR: Docker is installed but the Docker daemon is not running."
+    echo ""
+    echo "The Docker daemon is the background service that manages containers."
+    echo "It must be started before you can run Python code in Docker."
+    echo ""
 
-ERROR: Docker is installed but the Docker daemon is not running.
+    OS="$(uname -s)"
+    case "${OS}" in
+        Darwin)
+            echo "  You are on macOS.  Try one of these:"
+            echo ""
+            echo "  Option 1 — open Docker Desktop from the GUI:"
+            echo "    Open Launchpad (or Spotlight) and launch 'Docker'."
+            echo "    Wait for the whale icon in your menu bar to stop animating."
+            echo ""
+            echo "  Option 2 — launch Docker Desktop from the terminal:"
+            echo "    open -a Docker"
+            echo "    Then wait about 30 seconds and re-run this script."
+            echo ""
+            echo "  If you don't have Docker Desktop installed, download it from:"
+            echo "    https://www.docker.com/products/docker-desktop/"
+            ;;
+        Linux)
+            echo "  You are on Linux.  Try:"
+            echo ""
+            if command -v systemctl &>/dev/null; then
+                echo "    sudo systemctl start docker"
+            else
+                echo "    sudo service docker start"
+            fi
+            echo ""
+            echo "  If Docker is not in your PATH or the service doesn't exist,"
+            echo "  you may need to install Docker first:"
+            echo "    sudo apt-get install -y docker.io   # Ubuntu/Debian"
+            echo "    curl -fsSL https://get.docker.com | sh   # Raspberry Pi / others"
+            ;;
+        MINGW*|MSYS*|CYGWIN*)
+            echo "  You are on Windows.  Open Docker Desktop from the Start menu"
+            echo "  and wait for the whale icon in your system tray to stop animating."
+            ;;
+        *)
+            echo "  Start Docker Desktop for your operating system, then try again."
+            ;;
+    esac
 
-The Docker daemon is the background service that actually manages containers.
-It needs to be started before you can use Docker.
-
-  macOS / Windows:
-    Open Docker Desktop from your Applications folder (Mac) or Start menu
-    (Windows) and wait for the whale icon to stop animating.  Then try again.
-
-  Linux:
-    Run:  sudo systemctl start docker
-    Then try again.
-
-DAEMON_HELP
+    echo ""
+    echo "Once Docker is running, re-run:"
+    echo "  bash scripts/run-python-docker.sh"
+    echo ""
     exit 1
 fi
 
