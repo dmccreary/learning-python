@@ -74,3 +74,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Crank a for loop by hand: watch `i` change, the arrow jump back to the
     top, and a turtle draw one square side per trip. (Chapter 7)
 
+-   **[Range Explorer](./range-explorer/index.md)**
+
+    ---
+
+    ![Range Explorer](./range-explorer/range-explorer.png)
+
+    Slide start, stop, and step and watch the number line light up — the
+    stop value is a hollow ring because it is never included. (Chapter 7)
+

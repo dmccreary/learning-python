@@ -326,8 +326,11 @@ nav:
     - Function Call Flow: sims/function-call-flow/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
     - Modulo Clock: sims/modulo-clock/index.md
+    - Range Explorer: sims/range-explorer/index.md
     - Turtle State Inspector: sims/turtle-state-inspector/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
+
+
 
 
 

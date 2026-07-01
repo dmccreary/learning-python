@@ -171,6 +171,16 @@ for i in range(0, 360, 45):
 
 This is useful for drawing shapes at regular angular intervals — for example, drawing eight lines radiating from the center like spokes on a wheel, each 45° apart.
 
+### See It: The Range Explorer
+
+The trickiest thing about `range()` is that the **stop value is never included**. In the explorer below, the stop value is drawn as a hollow orange ring — the counting always stops just before it. Before you move anything, predict: **which numbers does `range(2, 12, 3)` produce?** Then check the number line.
+
+<iframe src="../../sims/range-explorer/main.html" height="482" width="100%" scrolling="no"></iframe>
+
+[Explore the Range Explorer MicroSim](../../sims/range-explorer/index.md){ .md-button }
+
+When you feel confident, click **New Challenge** — the sim shows green target rings, and your job is to find slider settings that light them up exactly.
+
 ## The Loop Counter Variable
 
 The counter `i` is a real variable — you can use it *inside* the loop body.
