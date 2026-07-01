@@ -321,8 +321,11 @@ nav:
   - MicroSims:
     - List of MicroSims: sims/index.md
     - Code Stepper: sims/code-stepper/index.md
+    - Function Call Flow: sims/function-call-flow/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
+
+
 
 
 

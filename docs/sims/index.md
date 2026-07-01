@@ -29,3 +29,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Watch labeled memory boxes get created, read, and replaced as a script
     runs — the sticky-note metaphor made real. (Chapter 3)
 
+-   **[Function Call Flow](./function-call-flow/index.md)**
+
+    ---
+
+    ![Function Call Flow](./function-call-flow/function-call-flow.png)
+
+    Trace a function call in slow motion: the argument flies into the
+    parameter slot and the return value flies back. (Chapter 4)
+
