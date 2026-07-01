@@ -83,3 +83,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Slide start, stop, and step and watch the number line light up — the
     stop value is a hollow ring because it is never included. (Chapter 7)
 
+-   **[Control Flow Explorer](./control-flow-explorer/index.md)**
+
+    ---
+
+    ![Control Flow Explorer](./control-flow-explorer/control-flow-explorer.png)
+
+    Move a score slider and watch exactly one path through an if/elif/else
+    flowchart glow green — later checks are never even looked at. (Chapter 9)
+

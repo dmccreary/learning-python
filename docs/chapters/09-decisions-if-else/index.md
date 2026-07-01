@@ -194,6 +194,16 @@ else:
 Python checks conditions from top to bottom and runs the **first** branch whose condition is `True`, then skips all the rest.
 For `score = 83`, the first `True` condition is `score >= 80`, so Python prints `"B"` and ignores the remaining branches.
 
+### See It: One Path Lights Up
+
+The explorer below turns an elif chain into a flowchart. Exactly **one** path glows green, and — this is the important part — conditions after the first `True` are marked **"never checked"** because Python does not even look at them. Before you move the slider, predict: **with a score of 85, which conditions get checked, and which branch runs?**
+
+<iframe src="../../sims/control-flow-explorer/main.html" height="562" width="100%" scrolling="no"></iframe>
+
+[Explore the Control Flow Explorer MicroSim](../../sims/control-flow-explorer/index.md){ .md-button }
+
+Slide the score slowly from 100 down to 0 and watch the green path move down the chain one branch at a time. Then try the **Simple if** program — what happens to the flowchart when the condition is False and there is no else?
+
 ## Logical Operators
 
 **Logical operators** combine two Boolean values into one:
