@@ -159,6 +159,16 @@ Here is what each line of the program does:
 Notice the pattern: every command uses the object (`wn` or `t`), then a dot, then the method name with a number inside the parentheses.
 This is exactly the object-method pattern from Chapter 4.
 
+## See It: What the Turtle Knows
+
+The turtle secretly keeps track of four things at all times: its **x position**, its **y position**, its **heading** (the direction it faces), and whether its **pen** is up or down. The inspector below shows all of them while you step through a program one command at a time. Before you click, **predict where the turtle will be and which way it will face after the first two commands**.
+
+<iframe src="../../sims/turtle-state-inspector/main.html" height="512" width="100%" scrolling="no"></iframe>
+
+[Explore the Turtle State Inspector MicroSim](../../sims/turtle-state-inspector/index.md){ .md-button }
+
+Watch the heading value as you step through the Square program: `t.right(90)` subtracts 90 from the heading each time. Then try the **Pen Demo** program to see the gap that `penup()` leaves behind.
+
 ## Pen Control: penup() and pendown()
 
 Right now the turtle draws a line everywhere it moves.

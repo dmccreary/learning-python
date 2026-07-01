@@ -38,3 +38,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Trace a function call in slow motion: the argument flies into the
     parameter slot and the return value flies back. (Chapter 4)
 
+-   **[Turtle State Inspector](./turtle-state-inspector/index.md)**
+
+    ---
+
+    ![Turtle State Inspector](./turtle-state-inspector/turtle-state-inspector.png)
+
+    Step through turtle commands while a dashboard reveals the turtle's
+    hidden state: position, heading compass, and pen. (Chapter 5)
+
