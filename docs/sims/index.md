@@ -92,3 +92,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Move a score slider and watch exactly one path through an if/elif/else
     flowchart glow green — later checks are never even looked at. (Chapter 9)
 
+-   **[Boolean Logic Lab](./boolean-logic-lab/index.md)**
+
+    ---
+
+    ![Boolean Logic Lab](./boolean-logic-lab/boolean-logic-lab.png)
+
+    Wire True/False inputs into and, or, and not — and catch Python
+    skipping the second input when the first one decides. (Chapters 9, 19)
+

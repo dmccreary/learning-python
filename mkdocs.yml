@@ -320,6 +320,7 @@ nav:
 
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - Boolean Logic Lab: sims/boolean-logic-lab/index.md
     - Code Stepper: sims/code-stepper/index.md
     - Control Flow Explorer: sims/control-flow-explorer/index.md
     - Expression Evaluator: sims/expression-evaluator/index.md
@@ -330,6 +331,8 @@ nav:
     - Range Explorer: sims/range-explorer/index.md
     - Turtle State Inspector: sims/turtle-state-inspector/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
+
+
 
 
 

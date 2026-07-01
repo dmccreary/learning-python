@@ -225,6 +225,16 @@ if age < 5 or age > 65:
     print("Free admission!")
 ```
 
+### See It: The Boolean Logic Lab
+
+Instead of memorizing truth tables, build them yourself. Set inputs A and B in the lab below and watch the result lamp. Before you start, predict: **if A is False, does `A and B` ever light the lamp — no matter what B is?**
+
+<iframe src="../../sims/boolean-logic-lab/main.html" height="512" width="100%" scrolling="no"></iframe>
+
+[Explore the Boolean Logic Lab MicroSim](../../sims/boolean-logic-lab/index.md){ .md-button }
+
+Notice something sneaky: when A alone decides the answer, the B block grays out and says "Python never looked here." That trick is called **short-circuit evaluation**, and you will meet it again in Chapter 19. The bonus panel at the bottom previews another Chapter 19 idea — every value, even `0` and `""`, can act as a Boolean.
+
 ## Chained Comparisons
 
 Python lets you write range checks in a natural, math-like way:
