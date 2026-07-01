@@ -26,7 +26,7 @@ Run the program below and look at the output — all black, no red.
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
-<script src="../js/codemirror-lab.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
