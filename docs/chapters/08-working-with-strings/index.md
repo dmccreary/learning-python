@@ -310,4 +310,6 @@ Try these changes to the programs above. For each one, predict what will happen 
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You've mastered Python's string type! You can join strings with `+`, repeat them with `*`, add newlines and tabs with escape characters, measure their length with `len()`, and even draw text labels right onto the turtle canvas. Strings are everywhere in programming — and now you know how to use them. Let's keep coding it together!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

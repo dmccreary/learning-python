@@ -248,6 +248,67 @@ print("BFS is level-by-level; DFS goes deep before backtracking.")`);
 | Memory | More (stores whole frontier) | Less (stores one path) |
 | Best for | Shortest path, social networks | Exploring all paths, cycles |
 
+## Applying BFS: Finding a Path Through a Maze
+
+A maze is just a graph — junctions and rooms are nodes, corridors are edges. BFS's queue already explores level by level, which means it can find the **shortest path**, not just answer "can I get there?" The trick is remembering **where you came from** at each step, so you can retrace your route once you reach the goal.
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    The maze below has two possible routes from "Start" to "Goal".
+    Which rooms do you think the path will pass through — "A"/"C" or "B"/"D"? Make your guess — then run it!
+
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-7"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-7')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-7')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-7"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-7"></div>
+  </div>
+</div>
+<script>
+initCmLab('-7', `from collections import deque
+
+maze = {
+    "Start": ["A", "B"],
+    "A": ["Start", "C"],
+    "B": ["Start", "D"],
+    "C": ["A", "Goal"],
+    "D": ["B", "Goal"],
+    "Goal": ["C", "D"]
+}
+
+def find_path(maze, start, goal):
+    came_from = {start: None}   # remembers which room led to each room
+    queue = deque([start])
+
+    while queue:
+        current = queue.popleft()
+        if current == goal:
+            break
+        for neighbor in maze[current]:
+            if neighbor not in came_from:
+                came_from[neighbor] = current
+                queue.append(neighbor)
+
+    # Walk backwards from the goal to the start using came_from
+    path = [goal]
+    while path[-1] != start:
+        path.append(came_from[path[-1]])
+    path.reverse()
+    return path
+
+print("Path found:", find_path(maze, "Start", "Goal"))`);
+</script>
+
+Were you right? BFS discovers "A" and "B" at the same time, but "A" is listed first in `maze["Start"]`, so it's discovered first — the path goes through "A" and "C".
+
+DFS could solve the same maze by following one corridor all the way before backtracking, but as the table above shows, it wouldn't guarantee the shortest route.
+
 ## Sorting Algorithms
 
 ### Bubble Sort
@@ -422,5 +483,7 @@ Try these changes. Predict what will happen first, then run it to check!
     You've learned data structures and algorithms — the foundation of all efficient software!
     Stacks, queues, graphs, BFS, DFS, sorting, and Big-O are the tools professional developers think about every day.
     You're now thinking like a computer scientist. Let's keep coding!
+
+[Take the Chapter Review Quiz](./quiz.md)
 
 [See Annotated References](./references.md)

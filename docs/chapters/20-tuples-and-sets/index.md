@@ -334,4 +334,6 @@ Try these changes. Predict what will happen first, then run it to check!
     Now you have four collection tools: list, tuple, set, and (coming next) dictionary.
     Each has its place — knowing when to use which one is a real programming skill!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

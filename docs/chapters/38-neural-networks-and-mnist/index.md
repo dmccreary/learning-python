@@ -403,4 +403,6 @@ Try these changes. Predict what will happen first, then run it to check!
     You started with a turtle drawing a square and finished by building an AI that reads handwritten digits with 99% accuracy.
     You are no longer a beginner — you are a Python programmer. Go build something amazing!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

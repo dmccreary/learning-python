@@ -368,4 +368,6 @@ Try these changes to the programs above. For each one, predict what will happen 
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You just learned how Python organizes code — multi-line strings, indentation, keywords, code blocks, statements, expressions, and whitespace rules — and you made your turtle drawings colorful in the process. Seven concepts in one chapter, and you handled them all beautifully. Keep going — you are building real programming skills! Let's code it together!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

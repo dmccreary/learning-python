@@ -166,7 +166,7 @@ The quote marks around the text are important. They tell Python that `"Hello, wo
 | `print("My name is Monty.")` | Displays the text: My name is Monty. |
 | `print("Let's learn Python!")` | Displays the text: Let's learn Python! |
 
-## Writing Comments with #
+## Writing Comments with \#
 
 As your programs grow longer, it becomes helpful to leave notes for yourself and for anyone else who reads your code. In Python, a **comment** is a note that the interpreter completely ignores when running the program — it exists only for human readers.
 
@@ -348,5 +348,7 @@ Try these changes to the programs above. For each one, **predict what will happe
 !!! mascot-celebration "Fantastic Work!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You just wrote your very first Python programs — and they actually ran! You used `print()` to display messages, `#` to write comments, `import` to load a library, and `import turtle` to draw a shape on screen. That is nine brand-new concepts in one chapter, and you handled every single one. You have got this — let's keep coding together!
+
+[Take the Chapter Review Quiz](./quiz.md)
 
 [See Annotated References](./references.md)

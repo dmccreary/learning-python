@@ -6,8 +6,13 @@ repo_url: 'https://github.com/dmccreary/learning-python'
 site_url: 'https://dmccreary.github.io/learning-python/'
 edit_uri: 'blob/master/docs'
 
+# Files under docs/ to exclude from the built site.
+# Patterns are gitignore-style and relative to docs_dir.
+exclude_docs: |
+  img/cover-image-prompt.md
 
 nav:
+  - Home: index.md
   - Course Description: course-description.md
   - About Learning Python: about.md
   - Chapters:
@@ -266,32 +271,14 @@ nav:
     - Hilbert Curve: turtle-graphics-gallery/hilbert-curve/index.md
     - Cantor Dust: turtle-graphics-gallery/cantor-dust/index.md
 
-  - Intermediate Python:
-    - Introduction: intermediate/01-intro.md
-    - Running Python in Docker: intermediate/01-docker-python.md
-    - Variables and Scope: intermediate/01-variables-scope.md
-    - Data Types: intermediate/02-data-types.md
-    - Data Types & Function Parameters: intermediate/03-data-type-validation.md
-    - Maps: intermediate/04-maps.md
-    - Files (local file system): intermediate/05-files.md
-    - Images (local file system): intermediate/06-images.md
-    - Object Classes: intermediate/06-object-classes.md
-    - Modules: intermediate/07-modules.md
-    - Dir: intermediate/08-dir.md
-    - Regular Expressions: intermediate/09-regex.md
-    - Debugging: intermediate/10-debugging.md
-    - Plotting sine: intermediate/12-plot-sin.md
-    - Maze Solving with BFS: intermediate/bfsMaze.md
-    - Maze Solving with DFS: intermediate/dfsMaze.md
-    - Installing Python: intermediate/20-installing-local-python.md
-  
   - Jupyter Notebooks:
+    - List of Notebooks: jupyter/index.md
     - Setup Turtle on Jupyter: jupyter/01-setup.md
     - Drawing Figure: jupyter/02-draw-figure.md
     - Setup Canvas on Jupyter Lab: jupyter/02-setup-canvas.md
     - Canvas Color Bars: jupyter/20-canvas-color-bars.md
   
-  - Advanced Python:
+  - Advanced Python Examples:
     - Stock Ticker Analysis: advanced/stocks.md
     - MNIST Digit Prediction: advanced/mnist.md
   
@@ -331,21 +318,27 @@ nav:
     - Mascot Style Guide: learning-graph/mascot-test.md
     - FAQ Quality Report: learning-graph/faq-quality-report.md
 
-
-
   - MicroSims:
-    - Learning Graph Viewer: sims/graph-viewer/index.md
-  - Contributing:
-    - How to Contribute Examples: contribute.md
+    - Learning Graph Viewer: sims/graph-viewer/index.md   
 
   - Teacher's Guide:
     - Overview: teachers-guide/index.md
+    - How to Contribute Examples: teachers-guide/contribute.md
     - Adding Custom Python Labs: teachers-guide/adding-custom-python-labs.md
     - CodeMirror Editor Example: teachers-guide/code-mirror-example.md
     - Order of Concepts: teachers-guide/order-of-concepts.md
+    - Sample Prompts:
+      - List of Prompts: teachers-guide/prompts/index.md
+      - List Old Concepts: teachers-guide/prompts/01-list-old-concepts.md
+      - Course Description: teachers-guide/prompts/02-course-description.md
+      - Learning Graph: teachers-guide/prompts/03-learning-graph.md
+      - Book Chapter Generator: teachers-guide/prompts/04-book-chapter-generator.md
+      - Content Generation Strategy: teachers-guide/prompts/05-content-generation-strategy.md
 
   - Glossary: glossary.md
   - FAQ: faq.md
+  - References: references.md
+  - License: license.md
   - Contact: contact.md
 
 

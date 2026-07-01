@@ -330,4 +330,6 @@ Try these changes. Predict what will happen first, then run it to check!
     OOP is the foundation of almost all professional Python code — from web frameworks to game engines.
     You're building real software skills. Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

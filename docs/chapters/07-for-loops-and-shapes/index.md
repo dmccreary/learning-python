@@ -287,4 +287,6 @@ Try these changes to the star program above. For each one, predict what will hap
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You've mastered one of the most important ideas in all of programming — the loop. With just two lines inside a `for` block you drew a square, then a polygon, then a star. You also learned `goto()`, `circle()`, and `setheading()` for precise turtle control. These tools will be your drawing toolkit for the rest of the course. Let's keep coding it together!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

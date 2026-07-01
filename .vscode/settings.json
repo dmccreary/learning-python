@@ -18,6 +18,7 @@
         "isinstance",
         "itertools",
         "jupyter",
+        "Jypyter",
         "matplotlib",
         "MNIST",
         "Mojhave",

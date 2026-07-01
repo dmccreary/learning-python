@@ -357,4 +357,6 @@ For each one, predict what will happen first — then run it to check!
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You have just learned ten Python turtle commands and used them to draw real shapes on the screen — that is a big deal! In the chapters ahead you will combine these commands with loops and functions to draw patterns no human could make by hand. You have earned this one. Let's keep coding it together!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

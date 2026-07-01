@@ -386,4 +386,6 @@ For each one, predict what will happen first — then run the code to check!
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     Variables, integers, floats, snake_case naming, reassignment, None — you now have the building blocks every Python program is built on. Every chapter from here uses what you just learned. Brilliant work, coder! Let's code it together!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

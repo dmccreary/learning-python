@@ -226,6 +226,31 @@ def square(n):
     return result
 ```
 
+## Validating Input Before Casting
+
+`input()` always returns a **string** — even when you ask for a number. Casting it straight to `int()` crashes if the text isn't a valid number:
+
+```python
+def cast_to_int():
+    user_input = input("Enter an integer: ")
+    return int(user_input)   # crashes with ValueError on bad input
+
+print(cast_to_int())
+```
+
+Typing a word instead of a number raises `ValueError: invalid literal for int() with base 10`. You can catch bad input *before* it crashes by checking it first with the string method `.isdigit()`, then using `assert` to stop with a clear message if the check fails:
+
+```python
+def cast_to_int():
+    user_input = input("Enter an integer: ")
+    assert user_input.isdigit(), "You did not enter an integer!"
+    return int(user_input)
+
+print(cast_to_int())
+```
+
+`.isdigit()` returns `True` only if every character in the string is a digit, so it catches bad input before `int()` ever runs.
+
 ## Debugging with `print()`
 
 The simplest debugging tool is a strategic `print()` statement. Insert them to see what your program is doing at each step:
@@ -301,6 +326,6 @@ Try these changes. Predict what will happen first, then run it to check!
     These skills transform error messages from obstacles into tools.
     That's a huge step forward. Let's keep coding!
 
-[See Annotated References](./references.md)
+[Take the Chapter Review Quiz](./quiz.md)
 
 [See Annotated References](./references.md)

@@ -365,4 +365,6 @@ Try these changes. Predict what will happen first, then run it to check!
     Your turtle art is now full-color and full of life.
     Keep experimenting — every great digital artist started exactly where you are now!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

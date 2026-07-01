@@ -332,4 +332,6 @@ Try these changes. Predict what will happen first, then run it to check!
     These string skills appear in almost every real Python program — from web apps to data science.
     You're building a seriously impressive toolkit! Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

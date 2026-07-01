@@ -422,4 +422,6 @@ Try these changes. Predict what will happen first, then run it to check!
     You now think like a professional programmer — with decomposition, abstraction, DRY code, meaningful names, and systematic debugging in your toolkit.
     Two chapters remain: machine learning and neural networks. The frontier of computer science is right ahead! Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

@@ -371,4 +371,6 @@ Try these changes. Predict what will happen first, then run it to check!
     These tools will appear in virtually every real-world Python project you work on.
     You're thinking like a professional developer now. Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

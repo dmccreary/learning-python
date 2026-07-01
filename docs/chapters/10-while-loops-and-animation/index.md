@@ -311,4 +311,6 @@ Try these changes to the programs above. For each one, predict what will happen 
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You've mastered the `while` loop — Python's engine for open-ended repetition! You know how to stop loops with `break`, skip steps with `continue`, use the `time` module, and build animations that grow step by step. Games, simulations, and interactive programs all run on exactly this kind of loop. Let's keep coding it together!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

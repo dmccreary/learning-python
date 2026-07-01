@@ -320,4 +320,6 @@ Try these changes. Predict what will happen first, then run it to check!
     NumPy is the foundation of the entire scientific Python ecosystem — pandas, scikit-learn, TensorFlow, and PyTorch all use NumPy arrays under the hood.
     Mastering it puts you at the starting line of data science and AI. Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

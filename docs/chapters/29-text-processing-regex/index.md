@@ -376,4 +376,6 @@ Try these changes. Predict what will happen first, then run it to check!
     They appear in web scraping, data validation, log analysis, and almost every text processing task.
     You've just added a serious tool to your programmer toolbox. Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

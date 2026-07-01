@@ -276,6 +276,54 @@ for _ in range(40):
 
 Run it multiple times — because of randomness, you'll get a different artwork every single time!
 
+## Creating Your Own Module
+
+So far you've only *used* modules that already exist. You can also **author** your own — package a set of functions into a `.py` file so other programs (or your future self) can `import` them, exactly like `random`.
+
+!!! mascot-warning "This Needs a Real Python Environment"
+    ![Monty with a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Creating a separate file and importing it only works with a real Python installation — Thonny, VS Code, or the terminal. Skulpt runs a single file, so this walkthrough uses regular code blocks instead of an interactive lab.
+
+Save the functions below in a file named `fibo.py`:
+
+```python
+# fibo.py
+def fib(n):    # print the Fibonacci series up to n
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a + b
+    print()
+
+def fib2(n):   # return the Fibonacci series up to n as a list
+    result = []
+    a, b = 0, 1
+    while a < n:
+        result.append(a)
+        a, b = b, a + b
+    return result
+```
+
+Then, in a **different** file saved in the same folder, `import` it by its filename (without the `.py`):
+
+```python
+import fibo
+
+fibo.fib(100)            # 0 1 1 2 3 5 8 13 21 34 55 89
+numbers = fibo.fib2(100)
+print(numbers)            # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+```
+
+You can also grab one function directly, just like you did with `random`:
+
+```python
+from fibo import fib
+
+fib(20)
+```
+
+Python treats every `.py` file the same way — whether it ships with the standard library or you wrote it five minutes ago.
+
 ## Learning Check
 
 !!! mascot-thinking "Your Turn — Fix the Shuffle"
@@ -333,5 +381,7 @@ Try these changes. Predict what will happen first, then run it to check!
     You've unlocked modules and mastered the `random` module!
     Games, simulations, and generative art all rely on randomness — and now you can use it too.
     Next chapter we'll add math power to your turtle programs. Let's keep coding!
+
+[Take the Chapter Review Quiz](./quiz.md)
 
 [See Annotated References](./references.md)

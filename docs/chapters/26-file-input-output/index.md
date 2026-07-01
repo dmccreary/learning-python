@@ -275,6 +275,56 @@ for row in reader:
 
 `csv.DictReader` uses the first row (the header) as column names and gives you each row as a dictionary.
 
+## Counting Word Frequencies — A Mini Case Study
+
+Reading text becomes powerful once you start asking questions about it. A classic exercise is counting how many times each word appears in a piece of text — the same basic idea search engines and spam filters use.
+
+Real code would read the text from a file with `open()`; here we simulate a short excerpt with a string so it runs right in the browser. Punctuation gets stripped one character at a time before splitting the text into words:
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    The code below counts word frequencies in a short excerpt.
+    Which word do you think will appear the most times? Make your guess — then run it!
+
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-6"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-6')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-6')">&#8635; Reset</button>
+    </div>
+    <pre class="cm-output" id="cm-output-6"></pre>
+  </div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-6"></div>
+  </div>
+</div>
+<script>
+initCmLab('-6', `excerpt = "call me ishmael. some years ago, never mind how long precisely, having little or no money in my purse, i thought i would sail about a little and see the watery part of the world"
+
+punctuation = ".,!?;:'-()"
+
+clean = excerpt.lower()
+for mark in punctuation:
+    clean = clean.replace(mark, "")
+
+words = clean.split()
+
+counts = {}
+for word in words:
+    if word not in counts:
+        counts[word] = 1
+    else:
+        counts[word] += 1
+
+for word, count in sorted(counts.items()):
+    print(f"{word}: {count}")`);
+</script>
+
+Were you right? Short, common words like "the" and "i" repeat the most in this excerpt — with a whole book of text, that pattern becomes even more dramatic.
+
+Chapter 29 shows a faster way to strip punctuation and split text using regular expressions.
+
 ## Learning Check
 
 !!! mascot-thinking "Your Turn — Process the CSV"
@@ -337,5 +387,7 @@ Try these changes. Predict what will happen first, then run it to check!
     Your programs can now save and load data from files — including CSV spreadsheets!
     This opens the door to real data processing, log files, configuration storage, and so much more.
     For the real thing, open Thonny and practice `open()` on your own computer. Let's keep coding!
+
+[Take the Chapter Review Quiz](./quiz.md)
 
 [See Annotated References](./references.md)

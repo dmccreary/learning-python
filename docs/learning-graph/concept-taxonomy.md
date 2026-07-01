@@ -1,4 +1,4 @@
-# Beginning Python — Concept Taxonomy
+# Learning Python — Concept Taxonomy
 
 This taxonomy organizes the 450 concepts into 14 categories that reflect the natural
 structure of a beginning-to-advanced Python course. Categories are designed to be

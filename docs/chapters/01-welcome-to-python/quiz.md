@@ -23,8 +23,8 @@ Test your understanding of Python basics, the Skulpt environment, and your first
 #### 2. Which tool is built directly into this textbook so you can run Python without opening a new tab?
 
 <div class="upper-alpha" markdown>
-1. Repl.it
-2. IDLE
+1. Thonny
+2. Jupyter Labs
 3. Skulpt
 4. Visual Studio Code
 </div>

@@ -240,6 +240,37 @@ print("Platform:", sys.platform)
 print("Default encoding:", sys.getdefaultencoding())`);
 </script>
 
+## Python's Module Search Path
+
+When you `import` a module, Python has to know where to look for it. It checks a list of folders called the **module search path**, stored in `sys.path`.
+
+```python
+import sys
+
+for i, folder in enumerate(sys.path, 1):
+    print(i, folder)
+```
+
+Python checks these folders **in order** and uses the first matching module it finds. That's why two different modules with the same name, sitting in two different folders, can cause confusing bugs — Python only ever sees the first one.
+
+## Dealing with Python Environments
+
+If you've wrestled with installs, conflicting package versions, or "it works on my machine" bugs, you're in good company — even professional developers find Python's environment setup confusing. The webcomic XKCD captured the feeling perfectly:
+
+![Python environments, as seen by XKCD](../../img/python_environment.png)
+
+The Python community is huge and moves fast. Everyone updates their own libraries on their own schedule, and older projects can depend on versions that clash with newer ones. A few habits keep the chaos manageable:
+
+1. Always know which Python version you're running (`python3 --version`).
+2. Use a separate virtual environment (or `conda` environment) for each project.
+3. Know how to check `sys.path` when an import doesn't behave the way you expect.
+4. Be cautious with your computer's default/global Python environment — it's often out of date.
+
+!!! mascot-tip "You Don't Need to Master This Today"
+    ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Environment headaches happen to everyone — even senior developers joke about it.
+    Stick to the habits above and you'll avoid most of the pain.
+
 ## The Conda Package Manager
 
 **Conda** (from Anaconda) is an alternative package manager popular in data science.
@@ -347,5 +378,7 @@ Try these changes. Predict what will happen first, then run it to check!
     You now have a map of the entire Python ecosystem — from beginner tools to professional environments!
     Choosing the right tool for the job is a real developer skill.
     When you're ready, pick one environment and start building something real. Let's keep coding!
+
+[Take the Chapter Review Quiz](./quiz.md)
 
 [See Annotated References](./references.md)

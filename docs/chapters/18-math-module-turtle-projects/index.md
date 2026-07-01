@@ -344,4 +344,6 @@ Try these changes. Predict what will happen first, then run it to check!
     From here we move into more advanced Python: booleans, collections, and error handling.
     You're ready for the next level! Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

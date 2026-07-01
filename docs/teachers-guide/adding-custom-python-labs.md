@@ -119,8 +119,8 @@ math/string/list operations work perfectly.
 run from a terminal with `python3 script.py`.
 
 **Use when:** Students have personal laptops and are ready to move beyond
-Skulpt.  See `docs/intermediate/20-installing-local-python.md` for the
-step-by-step installation guide already in this textbook.
+Skulpt.  See `docs/chapters/28-python-dev-tools/index.md` for the
+installation and environment guide already in this textbook.
 
 **How to add a lab:** Write a static code block (```` ```python ````) in the
 Markdown page.  Students copy the code into a local file and run it in their

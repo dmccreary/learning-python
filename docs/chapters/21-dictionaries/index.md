@@ -342,4 +342,6 @@ Try these changes. Predict what will happen first, then run it to check!
     Dictionaries are everywhere — in APIs, configuration files, databases, and machine learning models.
     Next chapter we'll combine all four collection types with Python's powerful built-in functions!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

@@ -8,13 +8,15 @@ quality_score: 96
 
 **Title:** Beginning Python — From Blocks to Code with Monty
 
-**Target Audience:** Elementary and middle school students, approximately ages 10–13,
+**Target Audience:** Elementary and middle school students, approximately ages 10–14,
 who have completed at least one semester of block-based programming (e.g., Scratch, Snap!,
 or MIT App Inventor) and are ready to transition to text-based programming.
 
 **Prerequisites:** Familiarity with block-based programming concepts such as sequences,
 loops, conditionals, and variables (e.g., Scratch or equivalent). No prior text-based
 programming experience is required. Basic reading and arithmetic skills at a 4th-grade level.
+Keyboarding skills are helpful.  Students should be able to use the copy/paste functions
+or have the help of an adult or mentor.
 
 ---
 
@@ -40,8 +42,8 @@ Beyond the beginning level, the course extends into **intermediate Python** (dat
 dictionaries, file I/O, regular expressions, object-oriented basics, debugging, and
 graph algorithms) and **advanced Python** (data visualization with matplotlib, numerical
 computing with NumPy, image processing, and an introduction to machine learning with
-the MNIST handwritten-digit dataset). A comprehensive **glossary**, an **FAQ** section,
-**per-lesson quizzes**, and a **detailed teacher's guide** make the course equally
+the MNIST handwritten-digit dataset). A comprehensive **[glossary](./glossary.md)**, an **[FAQ](./faq.md** section,
+**per-lesson quizzes**, and a **detailed [teacher's guide](./teachers-guide/index.md)** make the course equally
 valuable for self-directed students and classroom instructors.
 
 This course matters because Python is consistently ranked the most popular first

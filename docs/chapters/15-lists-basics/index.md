@@ -288,4 +288,6 @@ Try these changes. Predict what will happen first, then run it to check!
     discovered the mutable/immutable difference! Next chapter we'll learn how to add, remove,
     and sort items — making lists even more powerful. Let's keep coding together!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

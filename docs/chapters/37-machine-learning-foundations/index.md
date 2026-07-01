@@ -362,4 +362,6 @@ Try these changes. Predict what will happen first, then run it to check!
     Supervised vs unsupervised, train/val/test splits, overfitting, layers, activations, loss functions — you've got the full picture.
     One more chapter: Convolutional Neural Networks — the architecture that revolutionized computer vision. Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

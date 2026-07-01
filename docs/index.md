@@ -127,7 +127,7 @@ If a student is not yet comfortable with a keyboard, we recommend starting with
 ## Contributing
 
 Have an example you'd like to share with other students and teachers?
-See the [Contributing](contribute.md) page for details on how to submit code.
+See the [Contributing](teachers-guide/contribute.md) page for details on how to submit code.
 
 !!! mascot-celebration "You're in the right place!"
     ![Monty celebrating](./img/mascot/celebration.png){ class="mascot-admonition-img" }

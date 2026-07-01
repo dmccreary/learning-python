@@ -345,4 +345,6 @@ Try these changes. Predict what will happen first, then run it to check!
     Line plots, scatter plots, bar charts, histograms, and subplots — these are the bread and butter of every data scientist.
     The next chapter takes you into NumPy, where you'll learn to crunch large amounts of numerical data at lightning speed. Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

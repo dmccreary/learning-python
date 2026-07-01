@@ -304,4 +304,6 @@ Try these changes. Predict what will happen first, then run it to check!
     Recursion, fractals, lambdas, and functions-as-arguments — these concepts appear in professional code every day.
     Next up: object-oriented programming! Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

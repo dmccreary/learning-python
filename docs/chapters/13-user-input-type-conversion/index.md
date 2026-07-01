@@ -306,4 +306,6 @@ Try these changes. Predict what will happen first, then run it to check!
     You've learned `input()`, type conversion, validation, and string cleaning.
     These skills appear in nearly every real Python program. Let's keep coding together!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

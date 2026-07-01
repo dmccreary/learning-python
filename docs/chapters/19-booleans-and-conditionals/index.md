@@ -335,4 +335,6 @@ Try these changes. Predict what will happen first, then run it to check!
     These tools let you write smarter, cleaner conditional logic in far fewer lines.
     The more you practice, the more natural they feel. Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

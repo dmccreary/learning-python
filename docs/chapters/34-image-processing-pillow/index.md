@@ -367,4 +367,6 @@ Try these changes. Predict what will happen first, then run it to check!
     These same techniques power computer vision systems, photo-editing apps, and machine learning pipelines.
     The next chapter returns to turtle graphics for event-driven animation. Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

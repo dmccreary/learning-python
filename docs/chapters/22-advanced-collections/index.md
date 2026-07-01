@@ -350,4 +350,6 @@ Try these changes. Predict what will happen first, then run it to check!
     These tools make Python code shorter, more readable, and more powerful.
     Professional programmers use every single one of them regularly. Great work!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

@@ -368,4 +368,6 @@ Try these changes. Predict what will happen first, then run it to check!
     Event-driven programming is the foundation of every game, app, and website UI.
     Two chapters to go — and they take you into the exciting world of AI and machine learning! Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)

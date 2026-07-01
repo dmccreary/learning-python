@@ -382,4 +382,6 @@ Try these changes. Predict what will happen first, then run it to check!
     You've reached the advanced Python tier! Custom exceptions, properties, dunders, and composition are tools used by professional Python developers every day.
     The last chapters take you into data science and machine learning territory. Let's keep coding!
 
+[Take the Chapter Review Quiz](./quiz.md)
+
 [See Annotated References](./references.md)
