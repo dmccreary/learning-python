@@ -56,3 +56,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Watch `2 + 3 * 4` collapse one operation at a time in the exact order
     Python evaluates it — PEMDAS made visible. (Chapter 6)
 
+-   **[Modulo Clock](./modulo-clock/index.md)**
+
+    ---
+
+    ![Modulo Clock](./modulo-clock/modulo-clock.png)
+
+    See the remainder as wrap-around counting on a dial and as leftover
+    dots — the `%` operator made concrete. (Chapter 6)
+

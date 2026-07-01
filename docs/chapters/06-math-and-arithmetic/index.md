@@ -131,6 +131,16 @@ Let's look more closely at the three operators that may be new to you.
 
 **`**` — Exponentiation.** Two stars together means "to the power of." `2 ** 8` = 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 = 256. `10 ** 3` = 10 × 10 × 10 = 1000.
 
+### See It: The Modulo Clock
+
+The remainder is easiest to understand as **wrap-around counting**. The Modulo Clock below shows `%` two ways at once: counting around a dial that wraps at the divisor, and splitting dots into equal rows with the leftovers highlighted in orange. Before you touch the sliders, predict: **what is `17 % 5`?** Then drag the sliders and check.
+
+<iframe src="../../sims/modulo-clock/main.html" height="502" width="100%" scrolling="no"></iframe>
+
+[Explore the Modulo Clock MicroSim](../../sims/modulo-clock/index.md){ .md-button }
+
+Slide the divisor down to **2** and move the dividend — the sim tells you whether each number is even or odd. That is exactly the `n % 2` trick you will use in later chapters.
+
 ## Order of Operations
 
 Python follows the same order of operations you use in math class — **PEMDAS**:
