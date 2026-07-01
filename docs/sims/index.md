@@ -20,3 +20,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     output appear — see top-to-bottom execution with your own eyes.
     (Chapters 1-2)
 
+-   **[Variable Memory Model](./variable-memory-model/index.md)**
+
+    ---
+
+    ![Variable Memory Model](./variable-memory-model/variable-memory-model.png)
+
+    Watch labeled memory boxes get created, read, and replaced as a script
+    runs — the sticky-note metaphor made real. (Chapter 3)
+

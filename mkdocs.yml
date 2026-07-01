@@ -322,6 +322,9 @@ nav:
     - List of MicroSims: sims/index.md
     - Code Stepper: sims/code-stepper/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Variable Memory Model: sims/variable-memory-model/index.md
+
+
 
 
 
