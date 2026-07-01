@@ -12,24 +12,28 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/learning-python/prompts/05-content-generation-strategy/">
+        <link rel="canonical" href="https://dmccreary.github.io/learning-python/teachers-guide/prompts/05-content-generation-strategy/">
       
       
+        <link rel="prev" href="../04-book-chapter-generator/">
       
       
-      <link rel="icon" href="../../img/favicon.ico">
+        <link rel="next" href="../../../glossary/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
-        <title>05 content generation strategy - Learning Python</title>
+        <title>Content Generation Strategy - Learning Python</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,19 +52,19 @@
       
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../css/mascot.css">
+      <link rel="stylesheet" href="../../../css/mascot.css">
     
-      <link rel="stylesheet" href="../../css/docker-lab.css">
+      <link rel="stylesheet" href="../../../css/docker-lab.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
     
-      <link rel="stylesheet" href="../../css/codemirror-lab.css">
+      <link rel="stylesheet" href="../../../css/codemirror-lab.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -79,11 +83,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="05 content generation strategy - Learning Python" >
+        <meta  property="og:title"  content="Content Generation Strategy - Learning Python" >
       
         <meta  property="og:description"  content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers." >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/prompts/05-content-generation-strategy.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/teachers-guide/prompts/05-content-generation-strategy.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -91,15 +95,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/learning-python/prompts/05-content-generation-strategy/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/learning-python/teachers-guide/prompts/05-content-generation-strategy/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="05 content generation strategy - Learning Python" >
+        <meta  name="twitter:title"  content="Content Generation Strategy - Learning Python" >
       
         <meta  name="twitter:description"  content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers." >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/prompts/05-content-generation-strategy.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/teachers-guide/prompts/05-content-generation-strategy.png" >
       
     
     
@@ -131,9 +135,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Learning Python" class="md-header__button md-logo" aria-label="Learning Python" data-md-component="logo">
+    <a href="../../.." title="Learning Python" class="md-header__button md-logo" aria-label="Learning Python" data-md-component="logo">
       
-  <img src="../../img/mascot/welcome.png" alt="logo">
+  <img src="../../../img/mascot/welcome.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -150,7 +154,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              05 content generation strategy
+              Content Generation Strategy
             
           </span>
         </div>
@@ -237,9 +241,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Learning Python" class="md-nav__button md-logo" aria-label="Learning Python" data-md-component="logo">
+    <a href="../../.." title="Learning Python" class="md-nav__button md-logo" aria-label="Learning Python" data-md-component="logo">
       
-  <img src="../../img/mascot/welcome.png" alt="logo">
+  <img src="../../../img/mascot/welcome.png" alt="logo">
 
     </a>
     Learning Python
@@ -266,7 +270,27 @@
   
   
     <li class="md-nav__item">
-      <a href="../../course-description/" class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -286,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -313,10 +337,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -327,8 +351,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Chapters
           </label>
@@ -341,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/" class="md-nav__link">
+      <a href="../../../chapters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -369,10 +393,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -383,8 +407,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             1. Welcome to Python and Skulpt
           </label>
@@ -397,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/01-welcome-to-python/" class="md-nav__link">
+      <a href="../../../chapters/01-welcome-to-python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/01-welcome-to-python/references/" class="md-nav__link">
+      <a href="../../../chapters/01-welcome-to-python/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/01-welcome-to-python/quiz/" class="md-nav__link">
+      <a href="../../../chapters/01-welcome-to-python/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -475,10 +499,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -489,8 +513,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             2. Python Code Structure
           </label>
@@ -503,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/02-python-code-structure/" class="md-nav__link">
+      <a href="../../../chapters/02-python-code-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -524,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/02-python-code-structure/references/" class="md-nav__link">
+      <a href="../../../chapters/02-python-code-structure/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/02-python-code-structure/quiz/" class="md-nav__link">
+      <a href="../../../chapters/02-python-code-structure/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -581,10 +605,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -595,8 +619,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             3. Variables and Numbers
           </label>
@@ -609,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/03-variables-and-numbers/" class="md-nav__link">
+      <a href="../../../chapters/03-variables-and-numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/03-variables-and-numbers/references/" class="md-nav__link">
+      <a href="../../../chapters/03-variables-and-numbers/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/03-variables-and-numbers/quiz/" class="md-nav__link">
+      <a href="../../../chapters/03-variables-and-numbers/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -687,10 +711,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -701,8 +725,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             4. Functions and Objects
           </label>
@@ -715,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/04-functions-and-objects/" class="md-nav__link">
+      <a href="../../../chapters/04-functions-and-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -736,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/04-functions-and-objects/references/" class="md-nav__link">
+      <a href="../../../chapters/04-functions-and-objects/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/04-functions-and-objects/quiz/" class="md-nav__link">
+      <a href="../../../chapters/04-functions-and-objects/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,10 +817,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
         
           
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -807,8 +831,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             5. Drawing with Turtle Graphics
           </label>
@@ -821,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/05-drawing-with-turtle/" class="md-nav__link">
+      <a href="../../../chapters/05-drawing-with-turtle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -842,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/05-drawing-with-turtle/references/" class="md-nav__link">
+      <a href="../../../chapters/05-drawing-with-turtle/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -863,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/05-drawing-with-turtle/quiz/" class="md-nav__link">
+      <a href="../../../chapters/05-drawing-with-turtle/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,10 +923,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
-          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -913,8 +937,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
             6. Math and Arithmetic
           </label>
@@ -927,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/06-math-and-arithmetic/" class="md-nav__link">
+      <a href="../../../chapters/06-math-and-arithmetic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -948,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/06-math-and-arithmetic/references/" class="md-nav__link">
+      <a href="../../../chapters/06-math-and-arithmetic/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -969,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/06-math-and-arithmetic/quiz/" class="md-nav__link">
+      <a href="../../../chapters/06-math-and-arithmetic/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1005,10 +1029,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
         
           
-          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1019,8 +1043,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
             <span class="md-nav__icon md-icon"></span>
             7. For Loops and Drawing Shapes
           </label>
@@ -1033,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/07-for-loops-and-shapes/" class="md-nav__link">
+      <a href="../../../chapters/07-for-loops-and-shapes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1054,7 +1078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/07-for-loops-and-shapes/references/" class="md-nav__link">
+      <a href="../../../chapters/07-for-loops-and-shapes/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1075,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/07-for-loops-and-shapes/quiz/" class="md-nav__link">
+      <a href="../../../chapters/07-for-loops-and-shapes/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,10 +1135,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
         
           
-          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1125,8 +1149,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
             <span class="md-nav__icon md-icon"></span>
             8. Working with Strings
           </label>
@@ -1139,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/08-working-with-strings/" class="md-nav__link">
+      <a href="../../../chapters/08-working-with-strings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1160,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/08-working-with-strings/references/" class="md-nav__link">
+      <a href="../../../chapters/08-working-with-strings/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/08-working-with-strings/quiz/" class="md-nav__link">
+      <a href="../../../chapters/08-working-with-strings/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1217,10 +1241,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
         
           
-          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1231,8 +1255,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
             <span class="md-nav__icon md-icon"></span>
             9. Making Decisions with If/Else
           </label>
@@ -1245,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/09-decisions-if-else/" class="md-nav__link">
+      <a href="../../../chapters/09-decisions-if-else/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1266,7 +1290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/09-decisions-if-else/references/" class="md-nav__link">
+      <a href="../../../chapters/09-decisions-if-else/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1287,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/09-decisions-if-else/quiz/" class="md-nav__link">
+      <a href="../../../chapters/09-decisions-if-else/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1323,10 +1347,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
         
           
-          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1337,8 +1361,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_11">
             <span class="md-nav__icon md-icon"></span>
             10. While Loops and Animation
           </label>
@@ -1351,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/10-while-loops-and-animation/" class="md-nav__link">
+      <a href="../../../chapters/10-while-loops-and-animation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1372,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/10-while-loops-and-animation/references/" class="md-nav__link">
+      <a href="../../../chapters/10-while-loops-and-animation/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1393,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/10-while-loops-and-animation/quiz/" class="md-nav__link">
+      <a href="../../../chapters/10-while-loops-and-animation/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1429,10 +1453,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12" >
         
           
-          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1443,8 +1467,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_12">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_12">
             <span class="md-nav__icon md-icon"></span>
             11. Functions with Parameters and Scope
           </label>
@@ -1457,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/11-functions-parameters-scope/" class="md-nav__link">
+      <a href="../../../chapters/11-functions-parameters-scope/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1478,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/11-functions-parameters-scope/references/" class="md-nav__link">
+      <a href="../../../chapters/11-functions-parameters-scope/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1499,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/11-functions-parameters-scope/quiz/" class="md-nav__link">
+      <a href="../../../chapters/11-functions-parameters-scope/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1535,10 +1559,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13" >
         
           
-          <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_13" id="__nav_4_13_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1549,8 +1573,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_13">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_13">
             <span class="md-nav__icon md-icon"></span>
             12. Colors, Fill, and Turtle Art
           </label>
@@ -1563,7 +1587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/12-colors-fill-turtle-art/" class="md-nav__link">
+      <a href="../../../chapters/12-colors-fill-turtle-art/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1584,7 +1608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/12-colors-fill-turtle-art/references/" class="md-nav__link">
+      <a href="../../../chapters/12-colors-fill-turtle-art/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1605,7 +1629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/12-colors-fill-turtle-art/quiz/" class="md-nav__link">
+      <a href="../../../chapters/12-colors-fill-turtle-art/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1641,10 +1665,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_14" >
         
           
-          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_14" id="__nav_4_14_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1655,8 +1679,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_14">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_14">
             <span class="md-nav__icon md-icon"></span>
             13. User Input and Type Conversion
           </label>
@@ -1669,7 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/13-user-input-type-conversion/" class="md-nav__link">
+      <a href="../../../chapters/13-user-input-type-conversion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1690,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/13-user-input-type-conversion/references/" class="md-nav__link">
+      <a href="../../../chapters/13-user-input-type-conversion/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1711,7 +1735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/13-user-input-type-conversion/quiz/" class="md-nav__link">
+      <a href="../../../chapters/13-user-input-type-conversion/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1747,10 +1771,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_15" >
         
           
-          <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_15" id="__nav_4_15_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1761,8 +1785,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_15">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_15">
             <span class="md-nav__icon md-icon"></span>
             14. String Methods and Formatting
           </label>
@@ -1775,7 +1799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/14-string-methods-formatting/" class="md-nav__link">
+      <a href="../../../chapters/14-string-methods-formatting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1796,7 +1820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/14-string-methods-formatting/references/" class="md-nav__link">
+      <a href="../../../chapters/14-string-methods-formatting/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1817,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/14-string-methods-formatting/quiz/" class="md-nav__link">
+      <a href="../../../chapters/14-string-methods-formatting/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1853,10 +1877,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_16" >
         
           
-          <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_16" id="__nav_4_16_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1867,8 +1891,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_16">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_16">
             <span class="md-nav__icon md-icon"></span>
             15. Lists - Basics
           </label>
@@ -1881,7 +1905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/15-lists-basics/" class="md-nav__link">
+      <a href="../../../chapters/15-lists-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1902,7 +1926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/15-lists-basics/references/" class="md-nav__link">
+      <a href="../../../chapters/15-lists-basics/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1923,7 +1947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/15-lists-basics/quiz/" class="md-nav__link">
+      <a href="../../../chapters/15-lists-basics/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1959,10 +1983,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_17" >
         
           
-          <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_17" id="__nav_4_17_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1973,8 +1997,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_17">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_17">
             <span class="md-nav__icon md-icon"></span>
             16. Lists - Methods and Patterns
           </label>
@@ -1987,7 +2011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/16-lists-methods-patterns/" class="md-nav__link">
+      <a href="../../../chapters/16-lists-methods-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2008,7 +2032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/16-lists-methods-patterns/references/" class="md-nav__link">
+      <a href="../../../chapters/16-lists-methods-patterns/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2029,7 +2053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/16-lists-methods-patterns/quiz/" class="md-nav__link">
+      <a href="../../../chapters/16-lists-methods-patterns/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2065,10 +2089,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_18" >
         
           
-          <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_18" id="__nav_4_18_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2079,8 +2103,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_18">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_18">
             <span class="md-nav__icon md-icon"></span>
             17. Modules and Random Numbers
           </label>
@@ -2093,7 +2117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/17-modules-and-random/" class="md-nav__link">
+      <a href="../../../chapters/17-modules-and-random/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2114,7 +2138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/17-modules-and-random/references/" class="md-nav__link">
+      <a href="../../../chapters/17-modules-and-random/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2135,7 +2159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/17-modules-and-random/quiz/" class="md-nav__link">
+      <a href="../../../chapters/17-modules-and-random/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2171,10 +2195,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_19" >
         
           
-          <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_19" id="__nav_4_19_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2185,8 +2209,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_19">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_19">
             <span class="md-nav__icon md-icon"></span>
             18. Math Module and Turtle Projects
           </label>
@@ -2199,7 +2223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/18-math-module-turtle-projects/" class="md-nav__link">
+      <a href="../../../chapters/18-math-module-turtle-projects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2220,7 +2244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/18-math-module-turtle-projects/references/" class="md-nav__link">
+      <a href="../../../chapters/18-math-module-turtle-projects/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2241,7 +2265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/18-math-module-turtle-projects/quiz/" class="md-nav__link">
+      <a href="../../../chapters/18-math-module-turtle-projects/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2277,10 +2301,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_20" >
         
           
-          <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_20" id="__nav_4_20_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2291,8 +2315,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_20">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_20">
             <span class="md-nav__icon md-icon"></span>
             19. More Booleans and Conditionals
           </label>
@@ -2305,7 +2329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/19-booleans-and-conditionals/" class="md-nav__link">
+      <a href="../../../chapters/19-booleans-and-conditionals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2326,7 +2350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/19-booleans-and-conditionals/references/" class="md-nav__link">
+      <a href="../../../chapters/19-booleans-and-conditionals/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2347,7 +2371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/19-booleans-and-conditionals/quiz/" class="md-nav__link">
+      <a href="../../../chapters/19-booleans-and-conditionals/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2383,10 +2407,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_21" >
         
           
-          <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_21" id="__nav_4_21_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2397,8 +2421,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_21">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_21">
             <span class="md-nav__icon md-icon"></span>
             20. Tuples and Sets
           </label>
@@ -2411,7 +2435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/20-tuples-and-sets/" class="md-nav__link">
+      <a href="../../../chapters/20-tuples-and-sets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2432,7 +2456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/20-tuples-and-sets/references/" class="md-nav__link">
+      <a href="../../../chapters/20-tuples-and-sets/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2453,7 +2477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/20-tuples-and-sets/quiz/" class="md-nav__link">
+      <a href="../../../chapters/20-tuples-and-sets/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2489,10 +2513,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_22" >
         
           
-          <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_22" id="__nav_4_22_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2503,8 +2527,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_22">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_22">
             <span class="md-nav__icon md-icon"></span>
             21. Dictionaries
           </label>
@@ -2517,7 +2541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/21-dictionaries/" class="md-nav__link">
+      <a href="../../../chapters/21-dictionaries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2538,7 +2562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/21-dictionaries/references/" class="md-nav__link">
+      <a href="../../../chapters/21-dictionaries/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2559,7 +2583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/21-dictionaries/quiz/" class="md-nav__link">
+      <a href="../../../chapters/21-dictionaries/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2595,10 +2619,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_23" >
         
           
-          <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_23" id="__nav_4_23_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2609,8 +2633,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_23">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_23">
             <span class="md-nav__icon md-icon"></span>
             22. Advanced Collections and Built-in Functions
           </label>
@@ -2623,7 +2647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/22-advanced-collections/" class="md-nav__link">
+      <a href="../../../chapters/22-advanced-collections/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2644,7 +2668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/22-advanced-collections/references/" class="md-nav__link">
+      <a href="../../../chapters/22-advanced-collections/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2665,7 +2689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/22-advanced-collections/quiz/" class="md-nav__link">
+      <a href="../../../chapters/22-advanced-collections/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2701,10 +2725,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_24" >
         
           
-          <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_24" id="__nav_4_24_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2715,8 +2739,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_24">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_24">
             <span class="md-nav__icon md-icon"></span>
             23. Error Handling and Debugging
           </label>
@@ -2729,7 +2753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/23-error-handling-debugging/" class="md-nav__link">
+      <a href="../../../chapters/23-error-handling-debugging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2750,7 +2774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/23-error-handling-debugging/references/" class="md-nav__link">
+      <a href="../../../chapters/23-error-handling-debugging/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2771,7 +2795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/23-error-handling-debugging/quiz/" class="md-nav__link">
+      <a href="../../../chapters/23-error-handling-debugging/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2807,10 +2831,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_25" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_25" >
         
           
-          <label class="md-nav__link" for="__nav_3_25" id="__nav_3_25_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_25" id="__nav_4_25_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2821,8 +2845,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_25_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_25">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_25">
             <span class="md-nav__icon md-icon"></span>
             24. Recursion and Fractals
           </label>
@@ -2835,7 +2859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/24-recursion-and-fractals/" class="md-nav__link">
+      <a href="../../../chapters/24-recursion-and-fractals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2856,7 +2880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/24-recursion-and-fractals/references/" class="md-nav__link">
+      <a href="../../../chapters/24-recursion-and-fractals/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2877,7 +2901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/24-recursion-and-fractals/quiz/" class="md-nav__link">
+      <a href="../../../chapters/24-recursion-and-fractals/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2913,10 +2937,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_26" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_26" >
         
           
-          <label class="md-nav__link" for="__nav_3_26" id="__nav_3_26_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_26" id="__nav_4_26_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2927,8 +2951,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_26_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_26">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_26">
             <span class="md-nav__icon md-icon"></span>
             25. Object-Oriented Programming
           </label>
@@ -2941,7 +2965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/25-object-oriented-programming/" class="md-nav__link">
+      <a href="../../../chapters/25-object-oriented-programming/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2962,7 +2986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/25-object-oriented-programming/references/" class="md-nav__link">
+      <a href="../../../chapters/25-object-oriented-programming/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2983,7 +3007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/25-object-oriented-programming/quiz/" class="md-nav__link">
+      <a href="../../../chapters/25-object-oriented-programming/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3019,10 +3043,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_27" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_27" >
         
           
-          <label class="md-nav__link" for="__nav_3_27" id="__nav_3_27_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_27" id="__nav_4_27_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3033,8 +3057,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_27_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_27">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_27">
             <span class="md-nav__icon md-icon"></span>
             26. File Input and Output
           </label>
@@ -3047,7 +3071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/26-file-input-output/" class="md-nav__link">
+      <a href="../../../chapters/26-file-input-output/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3068,7 +3092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/26-file-input-output/references/" class="md-nav__link">
+      <a href="../../../chapters/26-file-input-output/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3089,7 +3113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/26-file-input-output/quiz/" class="md-nav__link">
+      <a href="../../../chapters/26-file-input-output/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3125,10 +3149,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_28" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_28" >
         
           
-          <label class="md-nav__link" for="__nav_3_28" id="__nav_3_28_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_28" id="__nav_4_28_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3139,8 +3163,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_28_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_28">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_28_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_28">
             <span class="md-nav__icon md-icon"></span>
             27. Standard Library and JSON
           </label>
@@ -3153,7 +3177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/27-standard-library-json/" class="md-nav__link">
+      <a href="../../../chapters/27-standard-library-json/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3174,7 +3198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/27-standard-library-json/references/" class="md-nav__link">
+      <a href="../../../chapters/27-standard-library-json/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3195,7 +3219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/27-standard-library-json/quiz/" class="md-nav__link">
+      <a href="../../../chapters/27-standard-library-json/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3231,10 +3255,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_29" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_29" >
         
           
-          <label class="md-nav__link" for="__nav_3_29" id="__nav_3_29_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_29" id="__nav_4_29_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3245,8 +3269,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_29_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_29">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_29_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_29">
             <span class="md-nav__icon md-icon"></span>
             28. Python Development Tools
           </label>
@@ -3259,7 +3283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/28-python-dev-tools/" class="md-nav__link">
+      <a href="../../../chapters/28-python-dev-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3280,7 +3304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/28-python-dev-tools/references/" class="md-nav__link">
+      <a href="../../../chapters/28-python-dev-tools/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3301,7 +3325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/28-python-dev-tools/quiz/" class="md-nav__link">
+      <a href="../../../chapters/28-python-dev-tools/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3337,10 +3361,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_30" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_30" >
         
           
-          <label class="md-nav__link" for="__nav_3_30" id="__nav_3_30_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_30" id="__nav_4_30_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3351,8 +3375,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_30_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_30">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_30_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_30">
             <span class="md-nav__icon md-icon"></span>
             29. Text Processing and Regular Expressions
           </label>
@@ -3365,7 +3389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/29-text-processing-regex/" class="md-nav__link">
+      <a href="../../../chapters/29-text-processing-regex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3386,7 +3410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/29-text-processing-regex/references/" class="md-nav__link">
+      <a href="../../../chapters/29-text-processing-regex/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3407,7 +3431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/29-text-processing-regex/quiz/" class="md-nav__link">
+      <a href="../../../chapters/29-text-processing-regex/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3443,10 +3467,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_31" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_31" >
         
           
-          <label class="md-nav__link" for="__nav_3_31" id="__nav_3_31_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_31" id="__nav_4_31_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3457,8 +3481,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_31_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_31">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_31">
             <span class="md-nav__icon md-icon"></span>
             30. Algorithms and Data Structures
           </label>
@@ -3471,7 +3495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/30-algorithms-data-structures/" class="md-nav__link">
+      <a href="../../../chapters/30-algorithms-data-structures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3492,7 +3516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/30-algorithms-data-structures/references/" class="md-nav__link">
+      <a href="../../../chapters/30-algorithms-data-structures/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3513,7 +3537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/30-algorithms-data-structures/quiz/" class="md-nav__link">
+      <a href="../../../chapters/30-algorithms-data-structures/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3549,10 +3573,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_32" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_32" >
         
           
-          <label class="md-nav__link" for="__nav_3_32" id="__nav_3_32_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_32" id="__nav_4_32_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3563,8 +3587,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_32_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_32">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_32_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_32">
             <span class="md-nav__icon md-icon"></span>
             31. Advanced Functions and OOP
           </label>
@@ -3577,7 +3601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/31-advanced-functions-oop/" class="md-nav__link">
+      <a href="../../../chapters/31-advanced-functions-oop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3598,7 +3622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/31-advanced-functions-oop/references/" class="md-nav__link">
+      <a href="../../../chapters/31-advanced-functions-oop/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3619,7 +3643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/31-advanced-functions-oop/quiz/" class="md-nav__link">
+      <a href="../../../chapters/31-advanced-functions-oop/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3655,10 +3679,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_33" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_33" >
         
           
-          <label class="md-nav__link" for="__nav_3_33" id="__nav_3_33_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_33" id="__nav_4_33_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3669,8 +3693,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_33_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_33">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_33_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_33">
             <span class="md-nav__icon md-icon"></span>
             32. Data Visualization with matplotlib
           </label>
@@ -3683,7 +3707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/32-data-visualization-matplotlib/" class="md-nav__link">
+      <a href="../../../chapters/32-data-visualization-matplotlib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3704,7 +3728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/32-data-visualization-matplotlib/references/" class="md-nav__link">
+      <a href="../../../chapters/32-data-visualization-matplotlib/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3725,7 +3749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/32-data-visualization-matplotlib/quiz/" class="md-nav__link">
+      <a href="../../../chapters/32-data-visualization-matplotlib/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3761,10 +3785,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_34" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_34" >
         
           
-          <label class="md-nav__link" for="__nav_3_34" id="__nav_3_34_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_34" id="__nav_4_34_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3775,8 +3799,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_34_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_34">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_34_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_34">
             <span class="md-nav__icon md-icon"></span>
             33. NumPy and Scientific Computing
           </label>
@@ -3789,7 +3813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/33-numpy-scientific-computing/" class="md-nav__link">
+      <a href="../../../chapters/33-numpy-scientific-computing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3810,7 +3834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/33-numpy-scientific-computing/references/" class="md-nav__link">
+      <a href="../../../chapters/33-numpy-scientific-computing/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3831,7 +3855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/33-numpy-scientific-computing/quiz/" class="md-nav__link">
+      <a href="../../../chapters/33-numpy-scientific-computing/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3867,10 +3891,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_35" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_35" >
         
           
-          <label class="md-nav__link" for="__nav_3_35" id="__nav_3_35_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_35" id="__nav_4_35_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3881,8 +3905,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_35_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_35">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_35_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_35">
             <span class="md-nav__icon md-icon"></span>
             34. Image Processing with Pillow
           </label>
@@ -3895,7 +3919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/34-image-processing-pillow/" class="md-nav__link">
+      <a href="../../../chapters/34-image-processing-pillow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3916,7 +3940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/34-image-processing-pillow/references/" class="md-nav__link">
+      <a href="../../../chapters/34-image-processing-pillow/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3937,7 +3961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/34-image-processing-pillow/quiz/" class="md-nav__link">
+      <a href="../../../chapters/34-image-processing-pillow/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3973,10 +3997,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_36" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_36" >
         
           
-          <label class="md-nav__link" for="__nav_3_36" id="__nav_3_36_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_36" id="__nav_4_36_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3987,8 +4011,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_36_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_36">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_36_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_36">
             <span class="md-nav__icon md-icon"></span>
             35. Advanced Turtle and Event-Driven Programming
           </label>
@@ -4001,7 +4025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/35-advanced-turtle-event-driven/" class="md-nav__link">
+      <a href="../../../chapters/35-advanced-turtle-event-driven/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4022,7 +4046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/35-advanced-turtle-event-driven/references/" class="md-nav__link">
+      <a href="../../../chapters/35-advanced-turtle-event-driven/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4043,7 +4067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/35-advanced-turtle-event-driven/quiz/" class="md-nav__link">
+      <a href="../../../chapters/35-advanced-turtle-event-driven/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4079,10 +4103,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_37" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_37" >
         
           
-          <label class="md-nav__link" for="__nav_3_37" id="__nav_3_37_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_37" id="__nav_4_37_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4093,8 +4117,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_37_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_37">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_37_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_37">
             <span class="md-nav__icon md-icon"></span>
             36. Computational Thinking and Best Practices
           </label>
@@ -4107,7 +4131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/36-computational-thinking-best-practices/" class="md-nav__link">
+      <a href="../../../chapters/36-computational-thinking-best-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4128,7 +4152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/36-computational-thinking-best-practices/references/" class="md-nav__link">
+      <a href="../../../chapters/36-computational-thinking-best-practices/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4149,7 +4173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/36-computational-thinking-best-practices/quiz/" class="md-nav__link">
+      <a href="../../../chapters/36-computational-thinking-best-practices/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4185,10 +4209,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_38" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_38" >
         
           
-          <label class="md-nav__link" for="__nav_3_38" id="__nav_3_38_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_38" id="__nav_4_38_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4199,8 +4223,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_38_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_38">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_38_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_38">
             <span class="md-nav__icon md-icon"></span>
             37. Machine Learning Foundations
           </label>
@@ -4213,7 +4237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/37-machine-learning-foundations/" class="md-nav__link">
+      <a href="../../../chapters/37-machine-learning-foundations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4234,7 +4258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/37-machine-learning-foundations/references/" class="md-nav__link">
+      <a href="../../../chapters/37-machine-learning-foundations/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4255,7 +4279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/37-machine-learning-foundations/quiz/" class="md-nav__link">
+      <a href="../../../chapters/37-machine-learning-foundations/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4291,10 +4315,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_39" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_39" >
         
           
-          <label class="md-nav__link" for="__nav_3_39" id="__nav_3_39_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_39" id="__nav_4_39_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4305,8 +4329,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_39_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_39">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_39_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_39">
             <span class="md-nav__icon md-icon"></span>
             38. Neural Networks and MNIST
           </label>
@@ -4319,7 +4343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/38-neural-networks-and-mnist/" class="md-nav__link">
+      <a href="../../../chapters/38-neural-networks-and-mnist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4340,7 +4364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/38-neural-networks-and-mnist/references/" class="md-nav__link">
+      <a href="../../../chapters/38-neural-networks-and-mnist/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4361,7 +4385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapters/38-neural-networks-and-mnist/quiz/" class="md-nav__link">
+      <a href="../../../chapters/38-neural-networks-and-mnist/quiz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4378,426 +4402,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Python Labs
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Python Labs
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    List of Labs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/01-turtle-commands/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    01. Turtle Commands
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/02-simple-square/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    02. Drawing a Square
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/03-variables/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    03. Variables
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/04-loops/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    04. Loops and Polygons
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/04a-stop-sign/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    04a. Stop Sign
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/05-conditionals/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    05. If-Else and Colors
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/06-functions-and-flowers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    06. Functions and Flowers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/07-function-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    07. Function Parameters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/08-random-circles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    08. Random Circles
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/08-color-lists/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    08. Color Lists
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/08b-random-stars/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    08b. Random Stars
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/10-debugging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    10. Reading Errors
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/11-user-input/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    11. User Input
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/12-fractal-tree/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    12. Fractal Tree
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/14-hex-colors/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    14. Hex Colors
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/15-sine-wave/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    15. Sine Wave
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python-labs/17-mouse-clicks/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    17. Mouse Clicks
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -4831,7 +4435,7 @@
             
   
   <span class="md-ellipsis">
-    Turtle Graphics Gallery
+    Python Labs
   </span>
   
 
@@ -4841,7 +4445,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Turtle Graphics Gallery
+            Python Labs
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4852,11 +4456,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/" class="md-nav__link">
+      <a href="../../../python-labs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Gallery
+    List of Labs
   </span>
   
 
@@ -4873,11 +4477,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/pattern-ideas/" class="md-nav__link">
+      <a href="../../../python-labs/01-turtle-commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Pattern Ideas
+    01. Turtle Commands
   </span>
   
 
@@ -4894,11 +4498,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/rainbow-square-spiral/" class="md-nav__link">
+      <a href="../../../python-labs/02-simple-square/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Rainbow Square Spiral
+    02. Drawing a Square
   </span>
   
 
@@ -4915,11 +4519,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/pinwheel-of-triangles/" class="md-nav__link">
+      <a href="../../../python-labs/03-variables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Pinwheel of Triangles
+    03. Variables
   </span>
   
 
@@ -4936,11 +4540,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/nested-circles/" class="md-nav__link">
+      <a href="../../../python-labs/04-loops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Nested Circles
+    04. Loops and Polygons
   </span>
   
 
@@ -4957,11 +4561,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/starburst/" class="md-nav__link">
+      <a href="../../../python-labs/04a-stop-sign/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Starburst
+    04a. Stop Sign
   </span>
   
 
@@ -4978,11 +4582,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/checkerboard-grid/" class="md-nav__link">
+      <a href="../../../python-labs/05-conditionals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Checkerboard Grid
+    05. If-Else and Colors
   </span>
   
 
@@ -4999,11 +4603,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/diagonal-stripe-field/" class="md-nav__link">
+      <a href="../../../python-labs/06-functions-and-flowers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Diagonal Stripe Field
+    06. Functions and Flowers
   </span>
   
 
@@ -5020,11 +4624,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/dotted-grid/" class="md-nav__link">
+      <a href="../../../python-labs/07-function-parameters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Dotted Grid
+    07. Function Parameters
   </span>
   
 
@@ -5041,11 +4645,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/color-wheel-wedges/" class="md-nav__link">
+      <a href="../../../python-labs/08-random-circles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Color Wheel Wedges
+    08. Random Circles
   </span>
   
 
@@ -5062,11 +4666,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/pentagon-chain/" class="md-nav__link">
+      <a href="../../../python-labs/08-color-lists/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Pentagon Chain
+    08. Color Lists
   </span>
   
 
@@ -5083,11 +4687,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/overlapping-squares/" class="md-nav__link">
+      <a href="../../../python-labs/08b-random-stars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Overlapping Squares
+    08b. Random Stars
   </span>
   
 
@@ -5104,11 +4708,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/flower-petal-function/" class="md-nav__link">
+      <a href="../../../python-labs/10-debugging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Flower with Petal Function
+    10. Reading Errors
   </span>
   
 
@@ -5125,11 +4729,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/honeycomb-grid/" class="md-nav__link">
+      <a href="../../../python-labs/11-user-input/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Honeycomb Grid
+    11. User Input
   </span>
   
 
@@ -5146,11 +4750,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/city-skyline/" class="md-nav__link">
+      <a href="../../../python-labs/12-fractal-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    City Skyline
+    12. Fractal Tree
   </span>
   
 
@@ -5167,11 +4771,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/snowflake-arms/" class="md-nav__link">
+      <a href="../../../python-labs/14-hex-colors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Snowflake Arms
+    14. Hex Colors
   </span>
   
 
@@ -5188,11 +4792,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/polka-dot-canvas/" class="md-nav__link">
+      <a href="../../../python-labs/15-sine-wave/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Polka Dot Canvas
+    15. Sine Wave
   </span>
   
 
@@ -5209,1292 +4813,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/brick-wall/" class="md-nav__link">
+      <a href="../../../python-labs/17-mouse-clicks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Brick Wall
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/stars-different-sizes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Stars of Different Sizes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/traffic-light/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Traffic Light Stack
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/fish-school/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fish School
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/mountain-range/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mountain Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/archimedean-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Archimedean Square Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/rainbow-line-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rainbow Line Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/hexagonal-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hexagonal Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/triangular-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Triangular Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/inward-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inward Collapsing Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/logarithmic-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Colored Logarithmic Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/double-helix-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Double Helix Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/fibonacci-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fibonacci Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/spiral-of-spirals/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Spiral of Spirals
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/pentagon-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Color-Banded Pentagon Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/koch-snowflake/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Koch Snowflake
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/sierpinski-triangle/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sierpinski Triangle
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/fractal-tree/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fractal Tree
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/l-system-plant/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    L-System Plant
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/turtle-maze/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Turtle Maze Generator
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/parametric-surface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Parametric Surface Projection
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/linden-snowflakes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lindenmayer Snowflake Collection
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/generative-art/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Generative Art Loop
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/bouncing-ball/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bouncing Ball
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/clock-face/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Clock Face
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/spirograph-drawer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Spirograph Drawer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/spiral-text/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Spiral Text
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/seven-segment/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Seven-Segment Display
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/circular-badge/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Circular Name Badge
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/block-letters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Name in Block Letters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/rotating-squares/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rotating Squares Illusion
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/cafe-wall/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Café Wall Illusion
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/moire-pattern/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Moiré Pattern
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/riley-waves/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bridget Riley Waves
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/expanding-hexagons/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Expanding Hexagons
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/lissajous-figure/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lissajous Figure
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/rose-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rose Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/spirograph/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Spirograph
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/butterfly-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Butterfly Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/epicycloid-star/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Epicycloid Star
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/sunflower-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sunflower Seed Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/spider-web/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Spider Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/lightning-bolt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lightning Bolt
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/galaxy-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Galaxy Spiral Arms
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/ripple-waves/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Ripple Waves
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/four-fold-doodle/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Four-Fold Symmetric Doodle
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/six-fold-mandala/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Six-Fold Mandala
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/mirror-butterfly/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mirror Butterfly
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/truchet-tiles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Truchet Tiles
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/islamic-star/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Islamic Geometric Star
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/mandelbrot-pixel-art/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mandelbrot Pixel Art
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/julia-set/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Julia Set Pixel Art
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/sierpinski-carpet/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sierpinski Carpet
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/barnsley-fern/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Barnsley Fern
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/anti-koch/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Anti-Koch Snowflake
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/pythagorean-tree/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Pythagorean Tree
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/t-square-fractal/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    T-Square Fractal
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/levy-c-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Levy C Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/gosper-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Gosper Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/dragon-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dragon Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/hilbert-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hilbert Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../turtle-graphics-gallery/cantor-dust/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cantor Dust
+    17. Mouse Clicks
   </span>
   
 
@@ -6532,7 +4855,7 @@
             
   
   <span class="md-ellipsis">
-    Intermediate Python
+    Turtle Graphics Gallery
   </span>
   
 
@@ -6542,7 +4865,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Intermediate Python
+            Turtle Graphics Gallery
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -6553,11 +4876,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/01-intro/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Introduction
+    Gallery
   </span>
   
 
@@ -6574,11 +4897,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/01-docker-python/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/pattern-ideas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Running Python in Docker
+    Pattern Ideas
   </span>
   
 
@@ -6595,11 +4918,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/01-variables-scope/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/rainbow-square-spiral/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Variables and Scope
+    Rainbow Square Spiral
   </span>
   
 
@@ -6616,11 +4939,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/02-data-types/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/pinwheel-of-triangles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Data Types
+    Pinwheel of Triangles
   </span>
   
 
@@ -6637,11 +4960,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/03-data-type-validation/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/nested-circles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Data Types & Function Parameters
+    Nested Circles
   </span>
   
 
@@ -6658,11 +4981,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/04-maps/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/starburst/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Maps
+    Starburst
   </span>
   
 
@@ -6679,11 +5002,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/05-files/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/checkerboard-grid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Files (local file system)
+    Checkerboard Grid
   </span>
   
 
@@ -6700,11 +5023,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/06-images/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/diagonal-stripe-field/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Images (local file system)
+    Diagonal Stripe Field
   </span>
   
 
@@ -6721,11 +5044,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/06-object-classes/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/dotted-grid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Object Classes
+    Dotted Grid
   </span>
   
 
@@ -6742,11 +5065,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/07-modules/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/color-wheel-wedges/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Modules
+    Color Wheel Wedges
   </span>
   
 
@@ -6763,11 +5086,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/08-dir/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/pentagon-chain/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Dir
+    Pentagon Chain
   </span>
   
 
@@ -6784,11 +5107,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/09-regex/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/overlapping-squares/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Regular Expressions
+    Overlapping Squares
   </span>
   
 
@@ -6805,11 +5128,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/10-debugging/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/flower-petal-function/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Debugging
+    Flower with Petal Function
   </span>
   
 
@@ -6826,11 +5149,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/12-plot-sin/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/honeycomb-grid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Plotting sine
+    Honeycomb Grid
   </span>
   
 
@@ -6847,11 +5170,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/bfsMaze/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/city-skyline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Maze Solving with BFS
+    City Skyline
   </span>
   
 
@@ -6868,11 +5191,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/dfsMaze/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/snowflake-arms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Maze Solving with DFS
+    Snowflake Arms
   </span>
   
 
@@ -6889,11 +5212,1313 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/20-installing-local-python/" class="md-nav__link">
+      <a href="../../../turtle-graphics-gallery/polka-dot-canvas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Installing Python
+    Polka Dot Canvas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/brick-wall/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brick Wall
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/stars-different-sizes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stars of Different Sizes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/traffic-light/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Traffic Light Stack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/fish-school/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fish School
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/mountain-range/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mountain Range
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/archimedean-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archimedean Square Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/rainbow-line-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rainbow Line Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/hexagonal-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hexagonal Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/triangular-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Triangular Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/inward-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inward Collapsing Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/logarithmic-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Colored Logarithmic Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/double-helix-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Double Helix Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/fibonacci-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fibonacci Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/spiral-of-spirals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spiral of Spirals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/pentagon-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Color-Banded Pentagon Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/koch-snowflake/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Koch Snowflake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/sierpinski-triangle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sierpinski Triangle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/fractal-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fractal Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/l-system-plant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L-System Plant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/turtle-maze/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turtle Maze Generator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/parametric-surface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parametric Surface Projection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/linden-snowflakes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lindenmayer Snowflake Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/generative-art/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generative Art Loop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/bouncing-ball/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bouncing Ball
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/clock-face/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clock Face
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/spirograph-drawer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spirograph Drawer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/spiral-text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spiral Text
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/seven-segment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seven-Segment Display
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/circular-badge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Circular Name Badge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/block-letters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Name in Block Letters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/rotating-squares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rotating Squares Illusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/cafe-wall/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Café Wall Illusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/moire-pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moiré Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/riley-waves/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bridget Riley Waves
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/expanding-hexagons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expanding Hexagons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/lissajous-figure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lissajous Figure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/rose-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rose Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/spirograph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spirograph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/butterfly-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Butterfly Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/epicycloid-star/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Epicycloid Star
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/sunflower-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sunflower Seed Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/spider-web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spider Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/lightning-bolt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lightning Bolt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/galaxy-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Galaxy Spiral Arms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/ripple-waves/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ripple Waves
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/four-fold-doodle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Four-Fold Symmetric Doodle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/six-fold-mandala/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Six-Fold Mandala
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/mirror-butterfly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mirror Butterfly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/truchet-tiles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Truchet Tiles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/islamic-star/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Islamic Geometric Star
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/mandelbrot-pixel-art/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mandelbrot Pixel Art
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/julia-set/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Julia Set Pixel Art
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/sierpinski-carpet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sierpinski Carpet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/barnsley-fern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Barnsley Fern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/anti-koch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anti-Koch Snowflake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/pythagorean-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pythagorean Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/t-square-fractal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T-Square Fractal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/levy-c-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Levy C Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/gosper-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gosper Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/dragon-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dragon Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/hilbert-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hilbert Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../turtle-graphics-gallery/cantor-dust/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cantor Dust
   </span>
   
 
@@ -6931,7 +6556,7 @@
             
   
   <span class="md-ellipsis">
-    Jupyter Notebooks
+    Intermediate Python
   </span>
   
 
@@ -6941,7 +6566,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            Jupyter Notebooks
+            Intermediate Python
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -6952,11 +6577,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jupyter/01-setup/" class="md-nav__link">
+      <a href="../../../intermediate/01-intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Setup Turtle on Jupyter
+    Introduction
   </span>
   
 
@@ -6973,11 +6598,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jupyter/02-draw-figure/" class="md-nav__link">
+      <a href="../../../intermediate/01-docker-python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Drawing Figure
+    Running Python in Docker
   </span>
   
 
@@ -6994,11 +6619,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jupyter/02-setup-canvas/" class="md-nav__link">
+      <a href="../../../intermediate/02-data-types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Setup Canvas on Jupyter Lab
+    Data Types
   </span>
   
 
@@ -7015,11 +6640,242 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jupyter/20-canvas-color-bars/" class="md-nav__link">
+      <a href="../../../intermediate/03-data-type-validation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Canvas Color Bars
+    Data Types & Function Parameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/04-maps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/05-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files (local file system)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/06-images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Images (local file system)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/06-object-classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Object Classes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/07-modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/08-dir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/10-debugging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/12-plot-sin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plotting sine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/bfsMaze/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maze Solving with BFS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/dfsMaze/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maze Solving with DFS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/20-installing-local-python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Python
   </span>
   
 
@@ -7057,7 +6913,7 @@
             
   
   <span class="md-ellipsis">
-    Advanced Python
+    Jupyter Notebooks
   </span>
   
 
@@ -7067,7 +6923,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Advanced Python
+            Jupyter Notebooks
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -7078,11 +6934,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/stocks/" class="md-nav__link">
+      <a href="../../../jupyter/01-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stock Ticker Analysis
+    Setup Turtle on Jupyter
   </span>
   
 
@@ -7099,11 +6955,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/mnist/" class="md-nav__link">
+      <a href="../../../jupyter/02-draw-figure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MNIST Digit Prediction
+    Drawing Figure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jupyter/02-setup-canvas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Canvas on Jupyter Lab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jupyter/20-canvas-color-bars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Canvas Color Bars
   </span>
   
 
@@ -7141,7 +7039,7 @@
             
   
   <span class="md-ellipsis">
-    Trinket Labs (deprecated)
+    Advanced Python
   </span>
   
 
@@ -7151,7 +7049,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            Trinket Labs (deprecated)
+            Advanced Python
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -7162,11 +7060,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../trinket/00-introduction/" class="md-nav__link">
+      <a href="../../../advanced/stocks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Introduction
+    Stock Ticker Analysis
   </span>
   
 
@@ -7183,452 +7081,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../trinket/01a-trinket-account/" class="md-nav__link">
+      <a href="../../../advanced/mnist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Setting Up Trinket
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/01b-turtle-graphics/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Turtle Graphics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/02-simple-square/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Turtle Square
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/03-variables/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Variables
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/04-loops/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Loops
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/04a-stop-sign/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Stop Sign
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/05-conditionals/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Conditional
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/06-functions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Functions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/07-flower/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Flower
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/07-function-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Function Parameters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/08-list/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lists
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/08c-turtle-shapes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    List of Turtle Shapes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/08-random/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Random Numbers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/08b-random-stars/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Random Stars
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/11-input/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Input
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/12-recursion/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Recursion
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/13-shape-module/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shape Module
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/14-color-picker/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Color Picker
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/15-sine-wave/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sine Wave
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/16-changing-background/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Changing background
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/17-controlling-mouseclicks/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Controlling mouseclicks
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../trinket/examples/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Other examples
+    MNIST Digit Prediction
   </span>
   
 
@@ -7666,7 +7123,7 @@
             
   
   <span class="md-ellipsis">
-    Learning Graph
+    Trinket Labs (deprecated)
   </span>
   
 
@@ -7676,7 +7133,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
-            Learning Graph
+            Trinket Labs (deprecated)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -7687,7 +7144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../learning-graph/" class="md-nav__link">
+      <a href="../../../trinket/00-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7708,11 +7165,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../learning-graph/course-description-assessment/" class="md-nav__link">
+      <a href="../../../trinket/01a-trinket-account/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Course Description Assessment
+    Setting Up Trinket
   </span>
   
 
@@ -7729,11 +7186,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../learning-graph/concept-list-v1/" class="md-nav__link">
+      <a href="../../../trinket/01b-turtle-graphics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Concept List v1
+    Turtle Graphics
   </span>
   
 
@@ -7750,11 +7207,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../learning-graph/concept-list/" class="md-nav__link">
+      <a href="../../../trinket/02-simple-square/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Concept List
+    Turtle Square
   </span>
   
 
@@ -7771,11 +7228,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../learning-graph/quality-metrics/" class="md-nav__link">
+      <a href="../../../trinket/03-variables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Graph Quality Analysis
+    Variables
   </span>
   
 
@@ -7792,11 +7249,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../learning-graph/concept-taxonomy/" class="md-nav__link">
+      <a href="../../../trinket/04-loops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Concept Taxonomy
+    Loops
   </span>
   
 
@@ -7813,11 +7270,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../learning-graph/taxonomy-distribution/" class="md-nav__link">
+      <a href="../../../trinket/04a-stop-sign/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Taxonomy Distribution Report
+    Stop Sign
   </span>
   
 
@@ -7834,11 +7291,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../learning-graph/mascot-test/" class="md-nav__link">
+      <a href="../../../trinket/05-conditionals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Mascot Style Guide
+    Conditional
   </span>
   
 
@@ -7855,11 +7312,305 @@
   
   
     <li class="md-nav__item">
-      <a href="../../learning-graph/faq-quality-report/" class="md-nav__link">
+      <a href="../../../trinket/06-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    FAQ Quality Report
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/07-flower/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flower
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/07-function-parameters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Function Parameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/08-list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lists
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/08c-turtle-shapes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of Turtle Shapes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/08-random/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Random Numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/08b-random-stars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Random Stars
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/11-input/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/12-recursion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recursion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/13-shape-module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/14-color-picker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Color Picker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/15-sine-wave/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sine Wave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/16-changing-background/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing background
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/17-controlling-mouseclicks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controlling mouseclicks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../trinket/examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other examples
   </span>
   
 
@@ -7897,7 +7648,7 @@
             
   
   <span class="md-ellipsis">
-    MicroSims
+    Learning Graph
   </span>
   
 
@@ -7907,7 +7658,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
-            MicroSims
+            Learning Graph
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -7918,11 +7669,179 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sims/graph-viewer/" class="md-nav__link">
+      <a href="../../../learning-graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Learning Graph Viewer
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/course-description-assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description Assessment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/concept-list-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept List v1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/concept-list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/quality-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph Quality Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/concept-taxonomy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Taxonomy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/taxonomy-distribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taxonomy Distribution Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/mascot-test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mascot Style Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../learning-graph/faq-quality-report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ Quality Report
   </span>
   
 
@@ -7960,7 +7879,7 @@
             
   
   <span class="md-ellipsis">
-    Contributing
+    MicroSims
   </span>
   
 
@@ -7970,9 +7889,95 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
-            Contributing
+            MicroSims
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sims/graph-viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Graph Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Teacher's Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Teacher's Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -7995,48 +8000,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
-        
-          
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Teacher's Guide
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
-            <span class="md-nav__icon md-icon"></span>
-            Teacher's Guide
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
@@ -8044,28 +8007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teachers-guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../teachers-guide/adding-custom-python-labs/" class="md-nav__link">
+      <a href="../../adding-custom-python-labs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8086,7 +8028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teachers-guide/code-mirror-example/" class="md-nav__link">
+      <a href="../../code-mirror-example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8107,7 +8049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teachers-guide/order-of-concepts/" class="md-nav__link">
+      <a href="../../order-of-concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8116,6 +8058,185 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_13_6" id="__nav_13_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sample Prompts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_13_6">
+            <span class="md-nav__icon md-icon"></span>
+            Sample Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of Prompts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-list-old-concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List Old Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-learning-graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-book-chapter-generator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Book Chapter Generator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Content Generation Strategy
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -8135,7 +8256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../glossary/" class="md-nav__link">
+      <a href="../../../glossary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8155,7 +8276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/" class="md-nav__link">
+      <a href="../../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8175,7 +8296,27 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact/" class="md-nav__link">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8222,7 +8363,7 @@
   
 
 
-  <h1>05 content generation strategy</h1>
+  <h1>Content Generation Strategy</h1>
 
 <p>Emphasize in both the CLAUDE.md file and the @CONTENT-GENERATION-GUIDELINES.md that the primary teaching tool in the early part of this textbook is to place interactive turtle graphics inline using the Skulpt libraries.  This is the core feature of this textbook - allow students to see a simple Python program and then encourage them to modify and run the program.  For important concepts, take  the opportunity to check their learning, create a new program that needs an additional line added or a small bug fixed.</p>
 <p>Add another section to the "Core Teaching Philosophy" that encourages a student to "guess" what a program will do BEFORE they run that program.</p>
@@ -8257,6 +8398,41 @@
         
   <footer class="md-footer">
     
+      <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="../04-book-chapter-generator/" title="Book Chapter Generator" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Previous
+                  </span>
+                  Book Chapter Generator
+                </span>
+              </div>
+            </a>
+          
+          
+            <a href="../../../glossary/" title="Glossary" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span class="md-footer-nav__direction">
+                    Next
+                  </span>
+                  Glossary
+                </span>
+              </div>
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+              </div>
+            </a>
+          
+        </nav>
+      </div>
+    
     <div class="md-footer-meta md-typeset">
       <div class="md-footer-meta__inner md-grid">
         <div class="md-footer-copyright">
@@ -8276,14 +8452,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../js/extra.js"></script>
+        <script src="../../../js/extra.js"></script>
       
-        <script src="../../js/docker-lab.js"></script>
+        <script src="../../../js/docker-lab.js"></script>
       
     
   </body>
