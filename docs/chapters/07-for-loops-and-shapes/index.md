@@ -137,6 +137,21 @@ for i in range(4):
 t.penup()             # ← NOT part of the loop (no indent)
 ```
 
+### See It: Step Through the Loop
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    In the stepper below, watch the value of `i` in the badge at the top.
+    What will `i` be on the very first trip — 1 or 0? And how many times will
+    the arrow jump back up to the `for` line? Make your guesses, then step
+    through and check!
+
+<iframe src="../../sims/for-loop-stepper/main.html" height="502" width="100%" scrolling="no"></iframe>
+
+[Explore the For-Loop Stepper MicroSim](../../sims/for-loop-stepper/index.md){ .md-button }
+
+Were you right? The **Countdown** program in the dropdown shows the same rhythm with print(), and **Running Total** previews the accumulator pattern you will meet later in this chapter.
+
 ## Understanding range()
 
 `range()` can take one, two, or three arguments:

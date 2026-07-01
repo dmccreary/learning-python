@@ -322,11 +322,14 @@ nav:
     - List of MicroSims: sims/index.md
     - Code Stepper: sims/code-stepper/index.md
     - Expression Evaluator: sims/expression-evaluator/index.md
+    - For-Loop Stepper: sims/for-loop-stepper/index.md
     - Function Call Flow: sims/function-call-flow/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
     - Modulo Clock: sims/modulo-clock/index.md
     - Turtle State Inspector: sims/turtle-state-inspector/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
+
+
 
 
 

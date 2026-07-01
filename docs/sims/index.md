@@ -65,3 +65,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     See the remainder as wrap-around counting on a dial and as leftover
     dots — the `%` operator made concrete. (Chapter 6)
 
+-   **[For-Loop Stepper](./for-loop-stepper/index.md)**
+
+    ---
+
+    ![For-Loop Stepper](./for-loop-stepper/for-loop-stepper.png)
+
+    Crank a for loop by hand: watch `i` change, the arrow jump back to the
+    top, and a turtle draw one square side per trip. (Chapter 7)
+
