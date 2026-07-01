@@ -47,3 +47,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Step through turtle commands while a dashboard reveals the turtle's
     hidden state: position, heading compass, and pen. (Chapter 5)
 
+-   **[Expression Evaluator](./expression-evaluator/index.md)**
+
+    ---
+
+    ![Expression Evaluator](./expression-evaluator/expression-evaluator.png)
+
+    Watch `2 + 3 * 4` collapse one operation at a time in the exact order
+    Python evaluates it — PEMDAS made visible. (Chapter 6)
+

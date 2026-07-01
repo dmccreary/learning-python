@@ -149,6 +149,21 @@ Python follows the same order of operations you use in math class — **PEMDAS**
 
 When in doubt, add parentheses. `(2 + 3) * 4` is clearer than `2 + 3 * 4`, and extra parentheses never cause errors.
 
+### See It: Watch an Expression Collapse
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    The MicroSim below starts with `2 + 3 * 4`. Which operation will Python
+    compute first — the `+` or the `*`? And what will the final answer be?
+    Make your guess, then click Next Step to watch the expression collapse
+    one operation at a time!
+
+<iframe src="../../sims/expression-evaluator/main.html" height="422" width="100%" scrolling="no"></iframe>
+
+[Explore the Expression Evaluator MicroSim](../../sims/expression-evaluator/index.md){ .md-button }
+
+Were you right? Try every expression in the dropdown — the last one, `17 // 5 + 17 % 5`, shows how `//` and `%` work as a team.
+
 ## Negative Numbers
 
 Negative numbers work exactly the way you'd expect — just put a minus sign in front:
