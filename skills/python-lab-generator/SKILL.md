@@ -89,14 +89,17 @@ Image path for `docs/python-labs/` files: **`../img/mascot/`** (one level deep).
 
 The `<script>` tags appear **once per page**, immediately before the first lab block.
 The last one, `codemirror-lab.js`, provides `initCmLab`, `runCmLab`, and `resetCmLab`.
-For `docs/python-labs/` files (one level deep) use `../js/codemirror-lab.js`:
+MkDocs builds each `docs/python-labs/SLUG.md` file into its own output directory
+(`site/python-labs/SLUG/index.html`), so the raw `<script src="...">` tag — which MkDocs does
+NOT rewrite, unlike markdown image links — must climb **two** levels to reach `site/js/`. Use
+`../../js/codemirror-lab.js`:
 
 ```html
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
-<script src="../js/codemirror-lab.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 ```
 
 ### Drawing Lab (turtle programs — use by default)
