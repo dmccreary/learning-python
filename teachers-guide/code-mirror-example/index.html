@@ -12,28 +12,28 @@
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/learning-python/strategy/">
+        <link rel="canonical" href="https://dmccreary.github.io/learning-python/teachers-guide/code-mirror-example/">
       
       
-        <link rel="prev" href="../trinket/examples/">
+        <link rel="prev" href="../adding-custom-python-labs/">
       
       
-        <link rel="next" href="order-of-concepts/">
+        <link rel="next" href="../order-of-concepts/">
       
       
-      <link rel="icon" href="../img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
-        <title>Introduction - Learning Python</title>
+        <title>CodeMirror Editor Example - Learning Python</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,13 +52,19 @@
       
     
     
-      <link rel="stylesheet" href="../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-      <link rel="stylesheet" href="../css/skulpt.css">
+      <link rel="stylesheet" href="../../css/mascot.css">
     
-      <link rel="stylesheet" href="../css/mascot.css">
+      <link rel="stylesheet" href="../../css/docker-lab.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+    
+      <link rel="stylesheet" href="../../css/codemirror-lab.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -77,11 +83,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Introduction - Learning Python" >
+        <meta  property="og:title"  content="CodeMirror Editor Example - Learning Python" >
       
         <meta  property="og:description"  content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers." >
       
-        <meta  property="og:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/strategy/index.png" >
+        <meta  property="og:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/teachers-guide/code-mirror-example.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -89,15 +95,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://dmccreary.github.io/learning-python/strategy/" >
+        <meta  property="og:url"  content="https://dmccreary.github.io/learning-python/teachers-guide/code-mirror-example/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Introduction - Learning Python" >
+        <meta  name="twitter:title"  content="CodeMirror Editor Example - Learning Python" >
       
         <meta  name="twitter:description"  content="Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers." >
       
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/strategy/index.png" >
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/teachers-guide/code-mirror-example.png" >
       
     
     
@@ -118,7 +124,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#teaching-strategies" class="md-skip">
+        <a href="#codemirror-python-editor" class="md-skip">
           Skip to content
         </a>
       
@@ -134,9 +140,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Learning Python" class="md-header__button md-logo" aria-label="Learning Python" data-md-component="logo">
+    <a href="../.." title="Learning Python" class="md-header__button md-logo" aria-label="Learning Python" data-md-component="logo">
       
-  <img src="../img/mascot/welcome.png" alt="logo">
+  <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -153,7 +159,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              CodeMirror Editor Example
             
           </span>
         </div>
@@ -231,6 +237,8 @@
           
             
               
+                
+              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -240,9 +248,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Learning Python" class="md-nav__button md-logo" aria-label="Learning Python" data-md-component="logo">
+    <a href="../.." title="Learning Python" class="md-nav__button md-logo" aria-label="Learning Python" data-md-component="logo">
       
-  <img src="../img/mascot/welcome.png" alt="logo">
+  <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
     Learning Python
@@ -269,7 +277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../course-description/" class="md-nav__link">
+      <a href="../../course-description/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -289,7 +297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -344,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/" class="md-nav__link">
+      <a href="../../chapters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -400,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/01-welcome-to-python/" class="md-nav__link">
+      <a href="../../chapters/01-welcome-to-python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -421,11 +429,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/01-welcome-to-python/references/" class="md-nav__link">
+      <a href="../../chapters/01-welcome-to-python/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/01-welcome-to-python/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -485,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/02-python-code-structure/" class="md-nav__link">
+      <a href="../../chapters/02-python-code-structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -506,11 +535,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/02-python-code-structure/references/" class="md-nav__link">
+      <a href="../../chapters/02-python-code-structure/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/02-python-code-structure/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -570,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/03-variables-and-numbers/" class="md-nav__link">
+      <a href="../../chapters/03-variables-and-numbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -591,11 +641,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/03-variables-and-numbers/references/" class="md-nav__link">
+      <a href="../../chapters/03-variables-and-numbers/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/03-variables-and-numbers/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -655,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/04-functions-and-objects/" class="md-nav__link">
+      <a href="../../chapters/04-functions-and-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -676,11 +747,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/04-functions-and-objects/references/" class="md-nav__link">
+      <a href="../../chapters/04-functions-and-objects/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/04-functions-and-objects/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -740,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/05-drawing-with-turtle/" class="md-nav__link">
+      <a href="../../chapters/05-drawing-with-turtle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,11 +853,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/05-drawing-with-turtle/references/" class="md-nav__link">
+      <a href="../../chapters/05-drawing-with-turtle/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/05-drawing-with-turtle/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -825,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/06-math-and-arithmetic/" class="md-nav__link">
+      <a href="../../chapters/06-math-and-arithmetic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -846,11 +959,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/06-math-and-arithmetic/references/" class="md-nav__link">
+      <a href="../../chapters/06-math-and-arithmetic/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/06-math-and-arithmetic/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -910,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/07-for-loops-and-shapes/" class="md-nav__link">
+      <a href="../../chapters/07-for-loops-and-shapes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,11 +1065,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/07-for-loops-and-shapes/references/" class="md-nav__link">
+      <a href="../../chapters/07-for-loops-and-shapes/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/07-for-loops-and-shapes/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -995,7 +1150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/08-working-with-strings/" class="md-nav__link">
+      <a href="../../chapters/08-working-with-strings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1016,11 +1171,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/08-working-with-strings/references/" class="md-nav__link">
+      <a href="../../chapters/08-working-with-strings/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/08-working-with-strings/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -1080,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/09-decisions-if-else/" class="md-nav__link">
+      <a href="../../chapters/09-decisions-if-else/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1101,11 +1277,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/09-decisions-if-else/references/" class="md-nav__link">
+      <a href="../../chapters/09-decisions-if-else/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/09-decisions-if-else/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -1165,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/10-while-loops-and-animation/" class="md-nav__link">
+      <a href="../../chapters/10-while-loops-and-animation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1186,11 +1383,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/10-while-loops-and-animation/references/" class="md-nav__link">
+      <a href="../../chapters/10-while-loops-and-animation/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/10-while-loops-and-animation/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -1250,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/11-functions-parameters-scope/" class="md-nav__link">
+      <a href="../../chapters/11-functions-parameters-scope/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,11 +1489,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/11-functions-parameters-scope/references/" class="md-nav__link">
+      <a href="../../chapters/11-functions-parameters-scope/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/11-functions-parameters-scope/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -1335,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/12-colors-fill-turtle-art/" class="md-nav__link">
+      <a href="../../chapters/12-colors-fill-turtle-art/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1356,11 +1595,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/12-colors-fill-turtle-art/references/" class="md-nav__link">
+      <a href="../../chapters/12-colors-fill-turtle-art/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/12-colors-fill-turtle-art/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -1420,7 +1680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/13-user-input-type-conversion/" class="md-nav__link">
+      <a href="../../chapters/13-user-input-type-conversion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1441,11 +1701,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/13-user-input-type-conversion/references/" class="md-nav__link">
+      <a href="../../chapters/13-user-input-type-conversion/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/13-user-input-type-conversion/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -1505,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/14-string-methods-formatting/" class="md-nav__link">
+      <a href="../../chapters/14-string-methods-formatting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1526,11 +1807,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/14-string-methods-formatting/references/" class="md-nav__link">
+      <a href="../../chapters/14-string-methods-formatting/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/14-string-methods-formatting/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -1590,7 +1892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/15-lists-basics/" class="md-nav__link">
+      <a href="../../chapters/15-lists-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1611,11 +1913,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/15-lists-basics/references/" class="md-nav__link">
+      <a href="../../chapters/15-lists-basics/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/15-lists-basics/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -1675,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/16-lists-methods-patterns/" class="md-nav__link">
+      <a href="../../chapters/16-lists-methods-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1696,11 +2019,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/16-lists-methods-patterns/references/" class="md-nav__link">
+      <a href="../../chapters/16-lists-methods-patterns/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/16-lists-methods-patterns/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -1760,7 +2104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/17-modules-and-random/" class="md-nav__link">
+      <a href="../../chapters/17-modules-and-random/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1781,11 +2125,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/17-modules-and-random/references/" class="md-nav__link">
+      <a href="../../chapters/17-modules-and-random/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/17-modules-and-random/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -1845,7 +2210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/18-math-module-turtle-projects/" class="md-nav__link">
+      <a href="../../chapters/18-math-module-turtle-projects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1866,11 +2231,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/18-math-module-turtle-projects/references/" class="md-nav__link">
+      <a href="../../chapters/18-math-module-turtle-projects/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/18-math-module-turtle-projects/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -1930,7 +2316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/19-booleans-and-conditionals/" class="md-nav__link">
+      <a href="../../chapters/19-booleans-and-conditionals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1951,11 +2337,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/19-booleans-and-conditionals/references/" class="md-nav__link">
+      <a href="../../chapters/19-booleans-and-conditionals/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/19-booleans-and-conditionals/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2015,7 +2422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/20-tuples-and-sets/" class="md-nav__link">
+      <a href="../../chapters/20-tuples-and-sets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2036,11 +2443,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/20-tuples-and-sets/references/" class="md-nav__link">
+      <a href="../../chapters/20-tuples-and-sets/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/20-tuples-and-sets/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2100,7 +2528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/21-dictionaries/" class="md-nav__link">
+      <a href="../../chapters/21-dictionaries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2121,11 +2549,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/21-dictionaries/references/" class="md-nav__link">
+      <a href="../../chapters/21-dictionaries/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/21-dictionaries/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2185,7 +2634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/22-advanced-collections/" class="md-nav__link">
+      <a href="../../chapters/22-advanced-collections/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2206,11 +2655,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/22-advanced-collections/references/" class="md-nav__link">
+      <a href="../../chapters/22-advanced-collections/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/22-advanced-collections/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2270,7 +2740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/23-error-handling-debugging/" class="md-nav__link">
+      <a href="../../chapters/23-error-handling-debugging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2291,11 +2761,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/23-error-handling-debugging/references/" class="md-nav__link">
+      <a href="../../chapters/23-error-handling-debugging/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/23-error-handling-debugging/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2355,7 +2846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/24-recursion-and-fractals/" class="md-nav__link">
+      <a href="../../chapters/24-recursion-and-fractals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2376,11 +2867,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/24-recursion-and-fractals/references/" class="md-nav__link">
+      <a href="../../chapters/24-recursion-and-fractals/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/24-recursion-and-fractals/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2440,7 +2952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/25-object-oriented-programming/" class="md-nav__link">
+      <a href="../../chapters/25-object-oriented-programming/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2461,11 +2973,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/25-object-oriented-programming/references/" class="md-nav__link">
+      <a href="../../chapters/25-object-oriented-programming/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/25-object-oriented-programming/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2525,7 +3058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/26-file-input-output/" class="md-nav__link">
+      <a href="../../chapters/26-file-input-output/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2546,11 +3079,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/26-file-input-output/references/" class="md-nav__link">
+      <a href="../../chapters/26-file-input-output/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/26-file-input-output/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2610,7 +3164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/27-standard-library-json/" class="md-nav__link">
+      <a href="../../chapters/27-standard-library-json/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2631,11 +3185,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/27-standard-library-json/references/" class="md-nav__link">
+      <a href="../../chapters/27-standard-library-json/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/27-standard-library-json/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2695,7 +3270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/28-python-dev-tools/" class="md-nav__link">
+      <a href="../../chapters/28-python-dev-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2716,11 +3291,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/28-python-dev-tools/references/" class="md-nav__link">
+      <a href="../../chapters/28-python-dev-tools/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/28-python-dev-tools/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2780,7 +3376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/29-text-processing-regex/" class="md-nav__link">
+      <a href="../../chapters/29-text-processing-regex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2801,11 +3397,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/29-text-processing-regex/references/" class="md-nav__link">
+      <a href="../../chapters/29-text-processing-regex/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/29-text-processing-regex/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2865,7 +3482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/30-algorithms-data-structures/" class="md-nav__link">
+      <a href="../../chapters/30-algorithms-data-structures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2886,11 +3503,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/30-algorithms-data-structures/references/" class="md-nav__link">
+      <a href="../../chapters/30-algorithms-data-structures/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/30-algorithms-data-structures/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -2950,7 +3588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/31-advanced-functions-oop/" class="md-nav__link">
+      <a href="../../chapters/31-advanced-functions-oop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2971,11 +3609,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/31-advanced-functions-oop/references/" class="md-nav__link">
+      <a href="../../chapters/31-advanced-functions-oop/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/31-advanced-functions-oop/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -3035,7 +3694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/32-data-visualization-matplotlib/" class="md-nav__link">
+      <a href="../../chapters/32-data-visualization-matplotlib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3056,11 +3715,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/32-data-visualization-matplotlib/references/" class="md-nav__link">
+      <a href="../../chapters/32-data-visualization-matplotlib/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/32-data-visualization-matplotlib/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -3120,7 +3800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/33-numpy-scientific-computing/" class="md-nav__link">
+      <a href="../../chapters/33-numpy-scientific-computing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3141,11 +3821,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/33-numpy-scientific-computing/references/" class="md-nav__link">
+      <a href="../../chapters/33-numpy-scientific-computing/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/33-numpy-scientific-computing/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -3205,7 +3906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/34-image-processing-pillow/" class="md-nav__link">
+      <a href="../../chapters/34-image-processing-pillow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3226,11 +3927,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/34-image-processing-pillow/references/" class="md-nav__link">
+      <a href="../../chapters/34-image-processing-pillow/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/34-image-processing-pillow/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -3290,7 +4012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/35-advanced-turtle-event-driven/" class="md-nav__link">
+      <a href="../../chapters/35-advanced-turtle-event-driven/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3311,11 +4033,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/35-advanced-turtle-event-driven/references/" class="md-nav__link">
+      <a href="../../chapters/35-advanced-turtle-event-driven/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/35-advanced-turtle-event-driven/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -3375,7 +4118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/36-computational-thinking-best-practices/" class="md-nav__link">
+      <a href="../../chapters/36-computational-thinking-best-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3396,11 +4139,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/36-computational-thinking-best-practices/references/" class="md-nav__link">
+      <a href="../../chapters/36-computational-thinking-best-practices/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/36-computational-thinking-best-practices/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -3460,7 +4224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/37-machine-learning-foundations/" class="md-nav__link">
+      <a href="../../chapters/37-machine-learning-foundations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3481,11 +4245,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/37-machine-learning-foundations/references/" class="md-nav__link">
+      <a href="../../chapters/37-machine-learning-foundations/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/37-machine-learning-foundations/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -3545,7 +4330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/38-neural-networks-and-mnist/" class="md-nav__link">
+      <a href="../../chapters/38-neural-networks-and-mnist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3566,11 +4351,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapters/38-neural-networks-and-mnist/references/" class="md-nav__link">
+      <a href="../../chapters/38-neural-networks-and-mnist/references/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Annotated References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/38-neural-networks-and-mnist/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
   </span>
   
 
@@ -3637,7 +4443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/" class="md-nav__link">
+      <a href="../../python-labs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3658,7 +4464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/01-turtle-commands/" class="md-nav__link">
+      <a href="../../python-labs/01-turtle-commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3679,7 +4485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/02-simple-square/" class="md-nav__link">
+      <a href="../../python-labs/02-simple-square/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3700,7 +4506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/03-variables/" class="md-nav__link">
+      <a href="../../python-labs/03-variables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3721,7 +4527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/04-loops/" class="md-nav__link">
+      <a href="../../python-labs/04-loops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3742,7 +4548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/04a-stop-sign/" class="md-nav__link">
+      <a href="../../python-labs/04a-stop-sign/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3763,7 +4569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/05-conditionals/" class="md-nav__link">
+      <a href="../../python-labs/05-conditionals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3784,7 +4590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/06-functions-and-flowers/" class="md-nav__link">
+      <a href="../../python-labs/06-functions-and-flowers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3805,7 +4611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/07-function-parameters/" class="md-nav__link">
+      <a href="../../python-labs/07-function-parameters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3826,7 +4632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/08-random-circles/" class="md-nav__link">
+      <a href="../../python-labs/08-random-circles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3847,7 +4653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/08-color-lists/" class="md-nav__link">
+      <a href="../../python-labs/08-color-lists/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3868,7 +4674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/08b-random-stars/" class="md-nav__link">
+      <a href="../../python-labs/08b-random-stars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3889,7 +4695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/10-debugging/" class="md-nav__link">
+      <a href="../../python-labs/10-debugging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3910,7 +4716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/11-user-input/" class="md-nav__link">
+      <a href="../../python-labs/11-user-input/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3931,7 +4737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/12-fractal-tree/" class="md-nav__link">
+      <a href="../../python-labs/12-fractal-tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3952,7 +4758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/14-hex-colors/" class="md-nav__link">
+      <a href="../../python-labs/14-hex-colors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3973,7 +4779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/15-sine-wave/" class="md-nav__link">
+      <a href="../../python-labs/15-sine-wave/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3994,7 +4800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-labs/17-mouse-clicks/" class="md-nav__link">
+      <a href="../../python-labs/17-mouse-clicks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4036,7 +4842,7 @@
             
   
   <span class="md-ellipsis">
-    Learning Graph
+    Turtle Graphics Gallery
   </span>
   
 
@@ -4046,7 +4852,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Learning Graph
+            Turtle Graphics Gallery
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4057,11 +4863,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-graph/" class="md-nav__link">
+      <a href="../../turtle-graphics-gallery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Introduction
+    Gallery
   </span>
   
 
@@ -4078,11 +4884,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-graph/course-description-assessment/" class="md-nav__link">
+      <a href="../../turtle-graphics-gallery/pattern-ideas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Course Description Assessment
+    Pattern Ideas
   </span>
   
 
@@ -4099,11 +4905,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-graph/concept-list-v1/" class="md-nav__link">
+      <a href="../../turtle-graphics-gallery/rainbow-square-spiral/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Concept List v1
+    Rainbow Square Spiral
   </span>
   
 
@@ -4120,11 +4926,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-graph/concept-list/" class="md-nav__link">
+      <a href="../../turtle-graphics-gallery/pinwheel-of-triangles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Concept List
+    Pinwheel of Triangles
   </span>
   
 
@@ -4141,11 +4947,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-graph/quality-metrics/" class="md-nav__link">
+      <a href="../../turtle-graphics-gallery/nested-circles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Graph Quality Analysis
+    Nested Circles
   </span>
   
 
@@ -4162,11 +4968,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-graph/concept-taxonomy/" class="md-nav__link">
+      <a href="../../turtle-graphics-gallery/starburst/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Concept Taxonomy
+    Starburst
   </span>
   
 
@@ -4183,11 +4989,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-graph/taxonomy-distribution/" class="md-nav__link">
+      <a href="../../turtle-graphics-gallery/checkerboard-grid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Taxonomy Distribution Report
+    Checkerboard Grid
   </span>
   
 
@@ -4204,11 +5010,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-graph/mascot-test/" class="md-nav__link">
+      <a href="../../turtle-graphics-gallery/diagonal-stripe-field/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Mascot Style Guide
+    Diagonal Stripe Field
   </span>
   
 
@@ -4225,11 +5031,1481 @@
   
   
     <li class="md-nav__item">
-      <a href="../learning-graph/faq-quality-report/" class="md-nav__link">
+      <a href="../../turtle-graphics-gallery/dotted-grid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    FAQ Quality Report
+    Dotted Grid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/color-wheel-wedges/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Color Wheel Wedges
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/pentagon-chain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pentagon Chain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/overlapping-squares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overlapping Squares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/flower-petal-function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flower with Petal Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/honeycomb-grid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Honeycomb Grid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/city-skyline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    City Skyline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/snowflake-arms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Snowflake Arms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/polka-dot-canvas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Polka Dot Canvas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/brick-wall/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brick Wall
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/stars-different-sizes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stars of Different Sizes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/traffic-light/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Traffic Light Stack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/fish-school/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fish School
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/mountain-range/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mountain Range
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/archimedean-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archimedean Square Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/rainbow-line-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rainbow Line Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/hexagonal-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hexagonal Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/triangular-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Triangular Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/inward-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inward Collapsing Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/logarithmic-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Colored Logarithmic Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/double-helix-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Double Helix Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/fibonacci-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fibonacci Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/spiral-of-spirals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spiral of Spirals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/pentagon-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Color-Banded Pentagon Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/koch-snowflake/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Koch Snowflake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/sierpinski-triangle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sierpinski Triangle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/fractal-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fractal Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/l-system-plant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L-System Plant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/turtle-maze/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turtle Maze Generator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/parametric-surface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parametric Surface Projection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/linden-snowflakes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lindenmayer Snowflake Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/generative-art/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generative Art Loop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/bouncing-ball/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bouncing Ball
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/clock-face/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clock Face
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/spirograph-drawer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spirograph Drawer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/spiral-text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spiral Text
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/seven-segment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seven-Segment Display
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/circular-badge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Circular Name Badge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/block-letters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Name in Block Letters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/rotating-squares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rotating Squares Illusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/cafe-wall/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Café Wall Illusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/moire-pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moiré Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/riley-waves/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bridget Riley Waves
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/expanding-hexagons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expanding Hexagons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/lissajous-figure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lissajous Figure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/rose-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rose Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/spirograph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spirograph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/butterfly-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Butterfly Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/epicycloid-star/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Epicycloid Star
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/sunflower-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sunflower Seed Spiral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/spider-web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spider Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/lightning-bolt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lightning Bolt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/galaxy-spiral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Galaxy Spiral Arms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/ripple-waves/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ripple Waves
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/four-fold-doodle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Four-Fold Symmetric Doodle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/six-fold-mandala/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Six-Fold Mandala
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/mirror-butterfly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mirror Butterfly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/truchet-tiles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Truchet Tiles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/islamic-star/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Islamic Geometric Star
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/mandelbrot-pixel-art/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mandelbrot Pixel Art
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/julia-set/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Julia Set Pixel Art
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/sierpinski-carpet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sierpinski Carpet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/barnsley-fern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Barnsley Fern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/anti-koch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anti-Koch Snowflake
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/pythagorean-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pythagorean Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/t-square-fractal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T-Square Fractal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/levy-c-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Levy C Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/gosper-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gosper Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/dragon-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dragon Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/hilbert-curve/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hilbert Curve
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turtle-graphics-gallery/cantor-dust/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cantor Dust
   </span>
   
 
@@ -4267,7 +6543,7 @@
             
   
   <span class="md-ellipsis">
-    Turtle Graphics Gallery
+    Intermediate Python
   </span>
   
 
@@ -4277,7 +6553,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Turtle Graphics Gallery
+            Intermediate Python
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4288,11 +6564,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/" class="md-nav__link">
+      <a href="../../intermediate/01-intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Gallery
+    Introduction
   </span>
   
 
@@ -4309,11 +6585,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/pattern-ideas/" class="md-nav__link">
+      <a href="../../intermediate/01-docker-python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Pattern Ideas
+    Running Python in Docker
   </span>
   
 
@@ -4330,11 +6606,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/rainbow-square-spiral/" class="md-nav__link">
+      <a href="../../intermediate/01-variables-scope/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Rainbow Square Spiral
+    Variables and Scope
   </span>
   
 
@@ -4351,11 +6627,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/pinwheel-of-triangles/" class="md-nav__link">
+      <a href="../../intermediate/02-data-types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Pinwheel of Triangles
+    Data Types
   </span>
   
 
@@ -4372,11 +6648,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/nested-circles/" class="md-nav__link">
+      <a href="../../intermediate/03-data-type-validation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Nested Circles
+    Data Types & Function Parameters
   </span>
   
 
@@ -4393,11 +6669,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/starburst/" class="md-nav__link">
+      <a href="../../intermediate/04-maps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Starburst
+    Maps
   </span>
   
 
@@ -4414,11 +6690,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/checkerboard-grid/" class="md-nav__link">
+      <a href="../../intermediate/05-files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Checkerboard Grid
+    Files (local file system)
   </span>
   
 
@@ -4435,11 +6711,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/diagonal-stripe-field/" class="md-nav__link">
+      <a href="../../intermediate/06-images/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Diagonal Stripe Field
+    Images (local file system)
   </span>
   
 
@@ -4456,11 +6732,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/dotted-grid/" class="md-nav__link">
+      <a href="../../intermediate/06-object-classes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Dotted Grid
+    Object Classes
   </span>
   
 
@@ -4477,11 +6753,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/color-wheel-wedges/" class="md-nav__link">
+      <a href="../../intermediate/07-modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Color Wheel Wedges
+    Modules
   </span>
   
 
@@ -4498,11 +6774,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/pentagon-chain/" class="md-nav__link">
+      <a href="../../intermediate/08-dir/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Pentagon Chain
+    Dir
   </span>
   
 
@@ -4519,11 +6795,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/overlapping-squares/" class="md-nav__link">
+      <a href="../../intermediate/09-regex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Overlapping Squares
+    Regular Expressions
   </span>
   
 
@@ -4540,11 +6816,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/flower-petal-function/" class="md-nav__link">
+      <a href="../../intermediate/10-debugging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Flower with Petal Function
+    Debugging
   </span>
   
 
@@ -4561,11 +6837,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/honeycomb-grid/" class="md-nav__link">
+      <a href="../../intermediate/12-plot-sin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Honeycomb Grid
+    Plotting sine
   </span>
   
 
@@ -4582,11 +6858,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/city-skyline/" class="md-nav__link">
+      <a href="../../intermediate/bfsMaze/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    City Skyline
+    Maze Solving with BFS
   </span>
   
 
@@ -4603,11 +6879,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/snowflake-arms/" class="md-nav__link">
+      <a href="../../intermediate/dfsMaze/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Snowflake Arms
+    Maze Solving with DFS
   </span>
   
 
@@ -4624,1313 +6900,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/polka-dot-canvas/" class="md-nav__link">
+      <a href="../../intermediate/20-installing-local-python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Polka Dot Canvas
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/brick-wall/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Brick Wall
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/stars-different-sizes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Stars of Different Sizes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/traffic-light/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Traffic Light Stack
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/fish-school/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fish School
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/mountain-range/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mountain Range
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/archimedean-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Archimedean Square Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/rainbow-line-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rainbow Line Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/hexagonal-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hexagonal Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/triangular-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Triangular Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/inward-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inward Collapsing Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/logarithmic-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Colored Logarithmic Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/double-helix-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Double Helix Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/fibonacci-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fibonacci Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/spiral-of-spirals/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Spiral of Spirals
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/pentagon-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Color-Banded Pentagon Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/koch-snowflake/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Koch Snowflake
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/sierpinski-triangle/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sierpinski Triangle
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/fractal-tree/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fractal Tree
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/l-system-plant/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    L-System Plant
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/turtle-maze/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Turtle Maze Generator
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/parametric-surface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Parametric Surface Projection
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/linden-snowflakes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lindenmayer Snowflake Collection
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/generative-art/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Generative Art Loop
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/bouncing-ball/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bouncing Ball
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/clock-face/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Clock Face
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/spirograph-drawer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Spirograph Drawer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/spiral-text/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Spiral Text
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/seven-segment/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Seven-Segment Display
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/circular-badge/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Circular Name Badge
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/block-letters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Name in Block Letters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/rotating-squares/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rotating Squares Illusion
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/cafe-wall/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Café Wall Illusion
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/moire-pattern/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Moiré Pattern
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/riley-waves/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bridget Riley Waves
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/expanding-hexagons/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Expanding Hexagons
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/lissajous-figure/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lissajous Figure
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/rose-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Rose Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/spirograph/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Spirograph
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/butterfly-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Butterfly Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/epicycloid-star/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Epicycloid Star
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/sunflower-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sunflower Seed Spiral
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/spider-web/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Spider Web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/lightning-bolt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lightning Bolt
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/galaxy-spiral/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Galaxy Spiral Arms
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/ripple-waves/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Ripple Waves
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/four-fold-doodle/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Four-Fold Symmetric Doodle
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/six-fold-mandala/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Six-Fold Mandala
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/mirror-butterfly/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mirror Butterfly
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/truchet-tiles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Truchet Tiles
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/islamic-star/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Islamic Geometric Star
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/mandelbrot-pixel-art/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mandelbrot Pixel Art
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/julia-set/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Julia Set Pixel Art
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/sierpinski-carpet/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sierpinski Carpet
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/barnsley-fern/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Barnsley Fern
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/anti-koch/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Anti-Koch Snowflake
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/pythagorean-tree/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Pythagorean Tree
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/t-square-fractal/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    T-Square Fractal
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/levy-c-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Levy C Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/gosper-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Gosper Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/dragon-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dragon Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/hilbert-curve/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hilbert Curve
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../turtle-graphics-gallery/cantor-dust/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cantor Dust
+    Installing Python
   </span>
   
 
@@ -5968,7 +6942,7 @@
             
   
   <span class="md-ellipsis">
-    Intermediate Python
+    Jupyter Notebooks
   </span>
   
 
@@ -5978,7 +6952,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            Intermediate Python
+            Jupyter Notebooks
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5989,11 +6963,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../intermediate/01-intro/" class="md-nav__link">
+      <a href="../../jupyter/01-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Introduction
+    Setup Turtle on Jupyter
   </span>
   
 
@@ -6010,11 +6984,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../intermediate/01-variables-scope/" class="md-nav__link">
+      <a href="../../jupyter/02-draw-figure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Variables and Scope
+    Drawing Figure
   </span>
   
 
@@ -6031,11 +7005,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../intermediate/02-data-types/" class="md-nav__link">
+      <a href="../../jupyter/02-setup-canvas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Data Types
+    Setup Canvas on Jupyter Lab
   </span>
   
 
@@ -6052,263 +7026,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../intermediate/03-data-type-validation/" class="md-nav__link">
+      <a href="../../jupyter/20-canvas-color-bars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Data Types & Function Parameters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/04-maps/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Maps
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/05-files/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Files (local file system)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/06-images/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Images (local file system)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/06-object-classes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Object Classes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/07-modules/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Modules
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/08-dir/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dir
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/09-regex/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Regular Expressions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/10-debugging/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Debugging
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/12-plot-sin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Plotting sine
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/bfsMaze/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Maze Solving with BFS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/dfsMaze/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Maze Solving with DFS
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intermediate/20-installing-local-python/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installing Python
+    Canvas Color Bars
   </span>
   
 
@@ -6346,7 +7068,7 @@
             
   
   <span class="md-ellipsis">
-    Jupyter Notebooks
+    Advanced Python
   </span>
   
 
@@ -6356,7 +7078,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Jupyter Notebooks
+            Advanced Python
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -6367,11 +7089,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../jupyter/01-setup/" class="md-nav__link">
+      <a href="../../advanced/stocks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Setup Turtle on Jupyter
+    Stock Ticker Analysis
   </span>
   
 
@@ -6388,53 +7110,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../jupyter/02-draw-figure/" class="md-nav__link">
+      <a href="../../advanced/mnist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Drawing Figure
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../jupyter/02-setup-canvas/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Setup Canvas on Jupyter Lab
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../jupyter/20-canvas-color-bars/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Canvas Color Bars
+    MNIST Digit Prediction
   </span>
   
 
@@ -6472,7 +7152,7 @@
             
   
   <span class="md-ellipsis">
-    Advanced Python
+    Trinket Labs (deprecated)
   </span>
   
 
@@ -6482,7 +7162,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            Advanced Python
+            Trinket Labs (deprecated)
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -6493,11 +7173,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/stocks/" class="md-nav__link">
+      <a href="../../trinket/00-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stock Ticker Analysis
+    Introduction
   </span>
   
 
@@ -6514,11 +7194,452 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/mnist/" class="md-nav__link">
+      <a href="../../trinket/01a-trinket-account/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MNIST Digit Prediction
+    Setting Up Trinket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/01b-turtle-graphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turtle Graphics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/02-simple-square/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turtle Square
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/03-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/04-loops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/04a-stop-sign/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stop Sign
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/05-conditionals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/06-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/07-flower/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flower
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/07-function-parameters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Function Parameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/08-list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lists
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/08c-turtle-shapes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of Turtle Shapes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/08-random/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Random Numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/08b-random-stars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Random Stars
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/11-input/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/12-recursion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recursion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/13-shape-module/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape Module
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/14-color-picker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Color Picker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/15-sine-wave/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sine Wave
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/16-changing-background/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changing background
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/17-controlling-mouseclicks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controlling mouseclicks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trinket/examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other examples
   </span>
   
 
@@ -6556,7 +7677,7 @@
             
   
   <span class="md-ellipsis">
-    Trinket (deprecated)
+    Learning Graph
   </span>
   
 
@@ -6566,7 +7687,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
-            Trinket (deprecated)
+            Learning Graph
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -6577,7 +7698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../trinket/00-introduction/" class="md-nav__link">
+      <a href="../../learning-graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6598,11 +7719,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../trinket/01a-trinket-account/" class="md-nav__link">
+      <a href="../../learning-graph/course-description-assessment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Setting Up Trinket
+    Course Description Assessment
   </span>
   
 
@@ -6619,11 +7740,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../trinket/01b-turtle-graphics/" class="md-nav__link">
+      <a href="../../learning-graph/concept-list-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Turtle Graphics
+    Concept List v1
   </span>
   
 
@@ -6640,11 +7761,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../trinket/02-simple-square/" class="md-nav__link">
+      <a href="../../learning-graph/concept-list/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Turtle Square
+    Concept List
   </span>
   
 
@@ -6661,11 +7782,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../trinket/03-variables/" class="md-nav__link">
+      <a href="../../learning-graph/quality-metrics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Variables
+    Graph Quality Analysis
   </span>
   
 
@@ -6682,11 +7803,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../trinket/04-loops/" class="md-nav__link">
+      <a href="../../learning-graph/concept-taxonomy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Loops
+    Concept Taxonomy
   </span>
   
 
@@ -6703,11 +7824,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../trinket/04a-stop-sign/" class="md-nav__link">
+      <a href="../../learning-graph/taxonomy-distribution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stop Sign
+    Taxonomy Distribution Report
   </span>
   
 
@@ -6724,11 +7845,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../trinket/05-conditionals/" class="md-nav__link">
+      <a href="../../learning-graph/mascot-test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Conditional
+    Mascot Style Guide
   </span>
   
 
@@ -6745,305 +7866,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../trinket/06-functions/" class="md-nav__link">
+      <a href="../../learning-graph/faq-quality-report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Functions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/07-flower/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Flower
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/07-function-parameters/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Function Parameters
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/08-list/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lists
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/08c-turtle-shapes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    List of Turtle Shapes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/08-random/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Random Numbers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/08b-random-stars/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Random Stars
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/11-input/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Input
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/12-recursion/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Recursion
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/13-shape-module/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shape Module
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/14-color-picker/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Color Picker
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/15-sine-wave/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sine Wave
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/16-changing-background/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Changing background
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/17-controlling-mouseclicks/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Controlling mouseclicks
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../trinket/examples/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Other examples
+    FAQ Quality Report
   </span>
   
 
@@ -7064,108 +7891,36 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    Strategy
+    MicroSims
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
-            Strategy
+            MicroSims
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#order-of-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Order of Concepts
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
             
               
                 
@@ -7174,11 +7929,11 @@
   
   
     <li class="md-nav__item">
-      <a href="order-of-concepts/" class="md-nav__link">
+      <a href="../../sims/graph-viewer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Order of Concepts
+    Learning Graph Viewer
   </span>
   
 
@@ -7216,7 +7971,7 @@
             
   
   <span class="md-ellipsis">
-    MicroSims
+    Contributing
   </span>
   
 
@@ -7225,69 +7980,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12">
-            <span class="md-nav__icon md-icon"></span>
-            MicroSims
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../sims/graph-viewer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Learning Graph Viewer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
-        
-          
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Contributing
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Contributing
           </label>
@@ -7300,7 +7992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contribute/" class="md-nav__link">
+      <a href="../../contribute/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7325,10 +8017,214 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Teacher's Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Teacher's Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../glossary/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-custom-python-labs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Custom Python Labs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CodeMirror Editor Example
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CodeMirror Editor Example
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-codemirror-adds" class="md-nav__link">
+    <span class="md-ellipsis">
+      What CodeMirror Adds
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-demo-fractal-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Live Demo — Fractal Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copying-this-into-your-own-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying This Into Your Own Page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-codemirror-vs-plain-textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use CodeMirror vs Plain Textarea
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../order-of-concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Order of Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7348,7 +8244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7368,7 +8264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contact/" class="md-nav__link">
+      <a href="../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7389,7 +8285,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -7408,9 +8306,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#order-of-concepts" class="md-nav__link">
+  <a href="#what-codemirror-adds" class="md-nav__link">
     <span class="md-ellipsis">
-      Order of Concepts
+      What CodeMirror Adds
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-demo-fractal-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Live Demo — Fractal Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copying-this-into-your-own-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying This Into Your Own Page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-codemirror-vs-plain-textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use CodeMirror vs Plain Textarea
     </span>
   </a>
   
@@ -7434,9 +8359,483 @@
   
 
 
-<h1 id="teaching-strategies">Teaching Strategies<a class="headerlink" href="#teaching-strategies" title="Permanent link">&para;</a></h1>
-<h2 id="order-of-concepts">Order of Concepts<a class="headerlink" href="#order-of-concepts" title="Permanent link">&para;</a></h2>
-<p><a href="order-of-concepts/">Order of Concepts</a></p>
+<h1 id="codemirror-python-editor">CodeMirror Python Editor<a class="headerlink" href="#codemirror-python-editor" title="Permanent link">&para;</a></h1>
+<p>The standard Skulpt labs use a plain <code>&lt;textarea&gt;</code> for code entry — intentionally
+minimal so that chapters 1–18 stay simple to deploy and share.
+For longer programs (20+ lines), a proper code editor with <strong>line numbers</strong> and
+<strong>syntax highlighting</strong> makes a meaningful difference: when Skulpt reports
+<code>NameError on line 27</code>, students can jump directly to the problem instead
+of counting lines manually.</p>
+<p>This page is a self-contained proof-of-concept.
+It loads <strong>CodeMirror 5</strong> from a CDN and wires it to Skulpt — all inside this
+single Markdown file, with no changes to shared CSS, JavaScript, or <code>mkdocs.yml</code>.</p>
+<h2 id="what-codemirror-adds">What CodeMirror Adds<a class="headerlink" href="#what-codemirror-adds" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Plain <code>textarea</code></th>
+<th>CodeMirror</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Line numbers</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Syntax highlighting</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Auto-indent on Enter</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Tab → 4 spaces</td>
+<td>manual</td>
+<td>built-in</td>
+</tr>
+<tr>
+<td>Bracket matching</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="live-demo-fractal-tree">Live Demo — Fractal Tree<a class="headerlink" href="#live-demo-fractal-tree" title="Permanent link">&para;</a></h2>
+<p>The program below is 37 lines.
+Without line numbers, <code>NameError on line 27</code> sends students scanning.
+With line numbers, they find the problem immediately.</p>
+<p>Click <strong>Run</strong> to grow the tree, then try editing <code>depth</code> (currently <code>6</code>)
+or the trunk length (currently <code>80</code>).</p>
+<!-- Skulpt runtime (same CDN used by all Skulpt labs in this textbook) -->
+<script src="https://skulpt.org/js/skulpt.min.js" type="text/javascript"></script>
+<script src="https://skulpt.org/js/skulpt-stdlib.js" type="text/javascript"></script>
+
+<!-- CodeMirror 5: editor core, Python language mode, Dracula dark theme -->
+<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css"></p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+
+<style>
+  #cm-lab { margin: 1rem 0; }
+  #cm-layout {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  #cm-editor-wrap { flex: 1; min-width: 300px; }
+  .CodeMirror {
+    height: auto;
+    min-height: 420px;
+    font-size: 14px;
+    border-radius: 4px;
+    line-height: 1.6;
+  }
+  .CodeMirror-scroll { min-height: 420px; }
+  #cm-turtle {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    flex-shrink: 0;
+    background: #fff;
+  }
+  #cm-controls { margin: 8px 0; display: flex; gap: 8px; }
+  #cm-controls button {
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  #cm-run-btn   { background: #4CAF50; color: white; }
+  #cm-run-btn:hover { background: #45a049; }
+  #cm-reset-btn { background: #888; color: white; }
+  #cm-reset-btn:hover { background: #666; }
+  #cm-output {
+    font-family: monospace;
+    font-size: 13px;
+    min-height: 24px;
+    padding: 4px 8px;
+    background: #282a36;
+    color: #f8f8f2;
+    border-radius: 4px;
+    margin-top: 8px;
+    white-space: pre-wrap;
+  }
+  .cm-err { color: #ff5555; }
+</style>
+
+<div id="cm-lab">
+  <div id="cm-layout">
+    <div id="cm-editor-wrap">
+      <div id="cm-editor"></div>
+      <div id="cm-controls">
+        <button id="cm-run-btn"   onclick="runCmLab()">&#9654; Run</button>
+        <button id="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+      </div>
+      <div id="cm-output"></div>
+    </div>
+    <div id="cm-turtle"></div>
+  </div>
+</div>
+
+<script>
+// Store the original code as an array of strings (avoids backtick escaping issues).
+var _cmLines = [
+  'import turtle',
+  '',
+  '# Create the drawing turtle',
+  't = turtle.Turtle()',
+  't.speed(0)',
+  't.hideturtle()',
+  't.left(90)  # Point upward',
+  '',
+  'def tree(branch_len, depth):',
+  '    """Draw one branch of a fractal tree, then recurse."""',
+  '    if branch_len < 5:',
+  '        return  # Base case — too short to continue',
+  '',
+  '    # Choose color and thickness based on depth',
+  '    if depth <= 2:',
+  '        t.pencolor("lime green")',
+  '        t.pensize(1)',
+  '    elif depth <= 4:',
+  '        t.pencolor("saddlebrown")',
+  '        t.pensize(2)',
+  '    else:',
+  '        t.pencolor("saddlebrown")',
+  '        t.pensize(5)',
+  '',
+  '    t.forward(branch_len)       # Draw this branch segment',
+  '',
+  '    t.left(25)',
+  '    tree(branch_len * 0.7, depth - 1)  # Left sub-branch',
+  '',
+  '    t.right(50)',
+  '    tree(branch_len * 0.7, depth - 1)  # Right sub-branch',
+  '',
+  '    t.left(25)',
+  '    t.backward(branch_len)      # Return to fork point',
+  '',
+  '# Grow the tree! Try changing 80 (trunk length) or 6 (depth)',
+  'tree(80, 6)'
+];
+var _cmOriginalCode = _cmLines.join('\n');
+
+var cmEditor = CodeMirror(document.getElementById('cm-editor'), {
+  value:          _cmOriginalCode,
+  mode:           'python',
+  theme:          'dracula',
+  lineNumbers:    true,
+  indentUnit:     4,
+  tabSize:        4,
+  indentWithTabs: false,
+  lineWrapping:   false,
+  extraKeys: {
+    Tab: function(cm) { cm.replaceSelection('    ', 'end'); }
+  }
+});
+
+function _esc(text) {
+  return text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function runCmLab() {
+  var code   = cmEditor.getValue();
+  var output = document.getElementById('cm-output');
+  var target = document.getElementById('cm-turtle');
+
+  target.innerHTML = '';
+  output.innerHTML = '';
+
+  Sk.configure({
+    output: function(text) { output.innerHTML += _esc(text); },
+    read: function(x) {
+      if (Sk.builtinFiles === undefined || Sk.builtinFiles['files'][x] === undefined)
+        throw "File not found: '" + x + "'";
+      return Sk.builtinFiles['files'][x];
+    },
+    __future__:    Sk.python3,
+    killableWhile: true,
+    killableFor:   true,
+  });
+
+  (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'cm-turtle';
+  Sk.TurtleGraphics.width  = 400;
+  Sk.TurtleGraphics.height = 400;
+
+  Sk.misceval.asyncToPromise(function() {
+    return Sk.importMainWithBody('<stdin>', false, code, true);
+  }).catch(function(err) {
+    output.innerHTML += '<span class="cm-err">' + _esc(err.toString()) + '</span>';
+  });
+}
+
+function resetCmLab() {
+  cmEditor.setValue(_cmOriginalCode);
+  document.getElementById('cm-turtle').innerHTML = '';
+  document.getElementById('cm-output').innerHTML = '';
+}
+</script>
+
+<hr />
+<h2 id="copying-this-into-your-own-page">Copying This Into Your Own Page<a class="headerlink" href="#copying-this-into-your-own-page" title="Permanent link">&para;</a></h2>
+<p>Paste these five blocks into any Markdown page to get a CodeMirror + Skulpt lab.
+Replace the Python code in <code>_cmLines</code> with your own program.</p>
+<p>This page is a standalone proof-of-concept: <code>runCmLab</code> and <code>resetCmLab</code> are
+defined <strong>inline</strong> and read from <code>cmEditor.getValue()</code>. The production labs
+throughout the textbook use the shared <code>js/codemirror-lab.js</code> instead, which
+handles multiple labs per page via a suffix registry (<code>initCmLab</code>).</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">&lt;!-- 1. Skulpt runtime --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://skulpt.org/js/skulpt.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://skulpt.org/js/skulpt-stdlib.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- 2. CodeMirror 5 (editor core + Python mode + Dracula theme) --&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- 3. Layout styles --&gt;</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">#</span><span class="nn">cm-lab</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">#</span><span class="nn">cm-layout</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">flex-start</span><span class="p">;</span><span class="w"> </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">#</span><span class="nn">cm-editor-wrap</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">flex</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="k">min-width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">CodeMirror</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="w"> </span><span class="k">min-height</span><span class="p">:</span><span class="w"> </span><span class="mi">420</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.6</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">CodeMirror-scroll</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">min-height</span><span class="p">:</span><span class="w"> </span><span class="mi">420</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">#</span><span class="nn">cm-turtle</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#555</span><span class="p">;</span><span class="w"> </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">flex-shrink</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">#</span><span class="nn">cm-controls</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"> </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">#</span><span class="nn">cm-controls</span><span class="w"> </span><span class="nt">button</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"> </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">#</span><span class="nn">cm-run-btn</span><span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#4CAF50</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">#</span><span class="nn">cm-run-btn</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#45a049</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">#</span><span class="nn">cm-reset-btn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#888</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">#</span><span class="nn">cm-reset-btn</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#666</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">#</span><span class="nn">cm-output</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="kc">monospace</span><span class="p">;</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#282a36</span><span class="p">;</span>
+<span class="w">               </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f8f8f2</span><span class="p">;</span><span class="w"> </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">white-space</span><span class="p">:</span><span class="w"> </span><span class="kc">pre-wrap</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">cm-err</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff5555</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- 4. Editor structure --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cm-lab&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cm-layout&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cm-editor-wrap&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cm-editor&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cm-controls&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cm-run-btn&quot;</span>   <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;runCmLab()&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#9654;</span> Run<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cm-reset-btn&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;resetCmLab()&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#8635;</span> Reset<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cm-output&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cm-turtle&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- 5. Editor initialisation and run/reset logic --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">_cmLines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s1">&#39;import turtle&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;# YOUR PYTHON PROGRAM HERE&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;t = turtle.Turtle()&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;t.forward(100)&#39;</span>
+<span class="p">];</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">_cmOriginalCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">_cmLines</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">cmEditor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">CodeMirror</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;cm-editor&#39;</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">value</span><span class="o">:</span><span class="w">          </span><span class="nx">_cmOriginalCode</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">mode</span><span class="o">:</span><span class="w">           </span><span class="s1">&#39;python&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">theme</span><span class="o">:</span><span class="w">          </span><span class="s1">&#39;dracula&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">lineNumbers</span><span class="o">:</span><span class="w">    </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">indentUnit</span><span class="o">:</span><span class="w">     </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">tabSize</span><span class="o">:</span><span class="w">        </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">indentWithTabs</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">extraKeys</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Tab</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">cm</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">cm</span><span class="p">.</span><span class="nx">replaceSelection</span><span class="p">(</span><span class="s1">&#39;    &#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;end&#39;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">_esc</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">t</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&amp;/g</span><span class="p">,</span><span class="s1">&#39;&amp;amp;&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;/g</span><span class="p">,</span><span class="s1">&#39;&amp;lt;&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&gt;/g</span><span class="p">,</span><span class="s1">&#39;&amp;gt;&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">runCmLab</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">code</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nx">cmEditor</span><span class="p">.</span><span class="nx">getValue</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;cm-output&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;cm-turtle&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">target</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">output</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nx">Sk</span><span class="p">.</span><span class="nx">configure</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">output</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">_esc</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">read</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">Sk</span><span class="p">.</span><span class="nx">builtinFiles</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">Sk</span><span class="p">.</span><span class="nx">builtinFiles</span><span class="p">[</span><span class="s1">&#39;files&#39;</span><span class="p">][</span><span class="nx">x</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span><span class="p">)</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;File not found: &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">Sk</span><span class="p">.</span><span class="nx">builtinFiles</span><span class="p">[</span><span class="s1">&#39;files&#39;</span><span class="p">][</span><span class="nx">x</span><span class="p">];</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">__future__</span><span class="o">:</span><span class="w"> </span><span class="nx">Sk</span><span class="p">.</span><span class="nx">python3</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">killableWhile</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">killableFor</span><span class="o">:</span><span class="w">   </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="p">(</span><span class="nx">Sk</span><span class="p">.</span><span class="nx">TurtleGraphics</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="nx">Sk</span><span class="p">.</span><span class="nx">TurtleGraphics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{})).</span><span class="nx">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;cm-turtle&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">Sk</span><span class="p">.</span><span class="nx">TurtleGraphics</span><span class="p">.</span><span class="nx">width</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mf">400</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">Sk</span><span class="p">.</span><span class="nx">TurtleGraphics</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">400</span><span class="p">;</span>
+
+<span class="w">  </span><span class="nx">Sk</span><span class="p">.</span><span class="nx">misceval</span><span class="p">.</span><span class="nx">asyncToPromise</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">Sk</span><span class="p">.</span><span class="nx">importMainWithBody</span><span class="p">(</span><span class="s1">&#39;&lt;stdin&gt;&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nx">code</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">output</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39;&lt;span class=&quot;cm-err&quot;&gt;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">_esc</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">toString</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&lt;/span&gt;&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">resetCmLab</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">cmEditor</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">_cmOriginalCode</span><span class="p">);</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;cm-turtle&#39;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;cm-output&#39;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="when-to-use-codemirror-vs-plain-textarea">When to Use CodeMirror vs Plain Textarea<a class="headerlink" href="#when-to-use-codemirror-vs-plain-textarea" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Use the plain <code>textarea</code> when…</th>
+<th>Use CodeMirror when…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Programs are 5–15 lines</td>
+<td>Programs are 20+ lines</td>
+</tr>
+<tr>
+<td>Focus is on one new concept</td>
+<td>Multiple functions or nested loops</td>
+</tr>
+<tr>
+<td>You are writing a standard textbook lab</td>
+<td>Teachers will project and navigate the code</td>
+</tr>
+<tr>
+<td>Simplicity of page authoring matters</td>
+<td>Students will read error messages with line numbers</td>
+</tr>
+</tbody>
+</table>
+<p>The standard Skulpt labs in chapters 1–18 stay with <code>&lt;textarea&gt;</code> — intentionally.
+CodeMirror is worth the extra setup for longer demonstrations where navigating to
+a specific line number is part of the lesson.</p>
 
 
 
@@ -7451,6 +8850,8 @@
 
   
 
+
+  
 
 
 
@@ -7470,7 +8871,7 @@
       <div class="md-footer-nav">
         <nav class="md-footer-nav__inner md-grid">
           
-            <a href="../trinket/examples/" title="Other examples" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <a href="../adding-custom-python-labs/" title="Adding Custom Python Labs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
                 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
               </div>
@@ -7479,13 +8880,13 @@
                   <span class="md-footer-nav__direction">
                     Previous
                   </span>
-                  Other examples
+                  Adding Custom Python Labs
                 </span>
               </div>
             </a>
           
           
-            <a href="order-of-concepts/" title="Order of Concepts" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../order-of-concepts/" title="Order of Concepts" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span class="md-footer-nav__direction">
@@ -7521,14 +8922,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../js/extra.js"></script>
+        <script src="../../js/extra.js"></script>
       
-        <script src="../js/skulpt.js"></script>
+        <script src="../../js/docker-lab.js"></script>
       
     
   </body>

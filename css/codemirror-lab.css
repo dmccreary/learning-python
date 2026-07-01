@@ -1,0 +1,96 @@
+/* CodeMirror lab layout — the shared styles for every Skulpt+CodeMirror lab.
+ * Uses the site palette (#642580 purple border, #41BAC1 teal accent).
+ *
+ * Primary lab: .cm-lab with children #cm-editor, #cm-output, #cm-turtle
+ * Second lab:  same classes, IDs suffixed with -2  (cm-editor-2, etc.)
+ */
+
+.cm-lab {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 1.5em 0;
+}
+
+.cm-editor-wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Override CodeMirror defaults to match the site's purple border */
+.cm-editor-wrap .CodeMirror {
+  height: auto;
+  min-height: 120px;
+  font-size: 14px;
+  border: 2px solid #642580;
+  border-radius: 6px 6px 0 0;
+  line-height: 1.5;
+}
+
+.cm-editor-wrap .CodeMirror-scroll {
+  min-height: 120px;
+}
+
+.cm-editor-wrap .CodeMirror-focused {
+  border-color: #41BAC1;
+}
+
+.cm-button-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cm-run-btn,
+.cm-reset-btn {
+  padding: 8px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cm-run-btn          { background: #642580; color: white; }
+.cm-run-btn:hover    { background: #7a2f9e; }
+.cm-reset-btn        { background: #41BAC1; color: white; }
+.cm-reset-btn:hover  { background: #2fa8b0; }
+
+.cm-output {
+  margin-top: 8px;
+  padding: 8px;
+  min-height: 36px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: monospace;
+  color: #222;
+  white-space: pre-wrap;
+}
+
+.cm-error { color: #c0392b; }
+
+.cm-canvas-wrap { flex: 0 0 auto; }
+
+[id="cm-turtle"],
+[id^="cm-turtle-"] {
+  width: 400px;
+  height: 400px;
+  border: 2px solid #642580;
+  border-radius: 6px;
+  background: white;
+  overflow: hidden;
+}
+
+/* Text-only labs: canvas panel hidden, editor stretches to full width */
+.cm-lab.cm-text-only .cm-canvas-wrap {
+  display: none;
+}
+
+.cm-lab.cm-text-only .cm-editor-wrap {
+  flex: 1 1 100%;
+  min-width: 0;
+}
