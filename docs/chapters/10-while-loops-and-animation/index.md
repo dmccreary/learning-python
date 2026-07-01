@@ -155,6 +155,16 @@ while count > 0:
 **How to fix it:** Every `while` loop needs at least one line inside it that eventually makes the condition `False`.
 Always double-check: "What changes inside this loop to eventually stop it?"
 
+### See It: Check, Run, Check Again
+
+A while loop has a rhythm: **check** the condition, **run** the body, jump back, **check** again. The stepper below stamps a True or False verdict every time the condition is checked. Before you click, predict: **for a countdown starting at 3, how many times does the body run — and how many times is the condition checked?** (They are not the same number!)
+
+<iframe src="../../sims/while-loop-stepper/main.html" height="502" width="100%" scrolling="no"></iframe>
+
+[Explore the While-Loop Stepper MicroSim](../../sims/while-loop-stepper/index.md){ .md-button }
+
+Then pick the **Infinite Bug** program — it is the exact missing-decrement bug from above, running in a safe cage. Watch the trip odometer spin and the condition stamp True, True, True... forever. Skulpt protects you from this in the labs, but real Python will not!
+
 ## The break Statement
 
 `break` exits a loop immediately, even if the condition is still `True`.

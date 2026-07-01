@@ -101,3 +101,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Wire True/False inputs into and, or, and not — and catch Python
     skipping the second input when the first one decides. (Chapters 9, 19)
 
+-   **[While-Loop Stepper](./while-loop-stepper/index.md)**
+
+    ---
+
+    ![While-Loop Stepper](./while-loop-stepper/while-loop-stepper.png)
+
+    Feel the check-run-check rhythm of a while loop — and safely watch an
+    infinite loop spin inside its cage. (Chapter 10)
+
