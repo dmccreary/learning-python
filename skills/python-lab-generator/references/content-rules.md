@@ -7,7 +7,7 @@ Condensed from `CONTENT-GENERATION-GUIDELINES.md` (project root). Read that file
 ## Teaching Philosophy
 
 Labs are built on the "See It, Run It, Modify It" cycle:
-1. **See it** — short working program in the editable textarea with prose explanation
+1. **See it** — short working program in the editable code editor with prose explanation
 2. **Run it** — student clicks Run, turtle draws on the canvas
 3. **Modify it** — Experiments section gives 3–5 specific invitations to change the code
 
@@ -127,7 +127,7 @@ Two types:
     [Describe the incorrect symptom; ask student to find and fix the mistake]
 ```
 
-The Learning Check Skulpt lab always uses the `-2` suffix on all IDs.
+The Learning Check lab always uses the `-2` suffix on the three element IDs (`cm-editor-2`, `cm-output-2`, `cm-turtle-2`) and in the `initCmLab` / `runCmLab` / `resetCmLab` calls.
 
 ---
 

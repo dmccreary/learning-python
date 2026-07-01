@@ -27,7 +27,7 @@ print(some_int)
 
 ```
 
-Let's try [running this on trinket.io](https://trinket.io/python/51fabe7c6c) and when asked to enter an int, let's enter a word!
+Let's try running this program and, when asked to enter an int, let's enter a word!
 
 As you can see we get a type error, because we're trying to convert an alphabetic string to an integer:
 

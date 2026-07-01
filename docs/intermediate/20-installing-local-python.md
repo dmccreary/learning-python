@@ -1,6 +1,6 @@
 # Installing a Local Desktop Python
 
-The next few labs are labs that must be run on your local computer because the will interact with the local operating system and local file system.  You will not be able to use Trinket to run these programs.
+The next few labs are labs that must be run on your local computer because the will interact with the local operating system and local file system.  You will not be able to run these programs in a browser-based Python environment like the Skulpt labs used in the beginning course.
 
 The main site for Python is here:
 [https://www.python.org/](https://www.python.org/)

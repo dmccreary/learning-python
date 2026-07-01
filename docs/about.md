@@ -44,10 +44,10 @@ visual, hands-on drawing exercises.
 After evaluating the alternatives, the decision was made to rewrite the book from scratch
 around **[Skulpt](https://skulpt.org/)** — a self-hosted, open-source Python implementation
 that runs entirely in the browser. Skulpt has no external dependencies, no account requirements,
-no free-tier caps, and full support for Python's `turtle` module. Every Skulpt lab in this
-book is embedded directly in the page using a small local JavaScript file (`skulpt.js`),
-which means the interactive coding environment will continue to work as long as the page itself
-loads — with no third-party service that can disappear.
+no free-tier caps, and full support for Python's `turtle` module. Every lab in this
+book is embedded directly in the page — the Skulpt runtime paired with the CodeMirror
+editor for line numbers and syntax highlighting — which means the interactive coding
+environment will continue to work as long as the page itself loads.
 
 The book was also formally renamed at this time from its CoderDojo-specific identity to
 **Beginning Python**, reflecting its broader mission as an open educational resource for

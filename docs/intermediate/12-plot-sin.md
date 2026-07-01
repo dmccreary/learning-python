@@ -1,6 +1,6 @@
-# Using Trinket to Learn MatPlotLib
-Python is notable for having a rich library of tools for viewing data.  In this lesson we will use
-Trinket to learn how to use the popular matplotlib - a Python library for plotting data.
+# Using MatPlotLib to Plot Data
+Python is notable for having a rich library of tools for viewing data.  In this lesson we will
+learn how to use the popular matplotlib - a Python library for plotting data.
 
 This example uses the trigonometry function Sine.  Don't worry if you have not taken a trigonometry yet.  It is just a simple function that generates a wave of vertical height that range between -1 and 1 as we move down the X axis.  Imagine a circle rotating and the sin() function will reflect the angle of a point on the edge of the circle going up and down and the circle turns.
 
@@ -9,7 +9,7 @@ See the [Wikipedia Article on Sine](https://en.wikipedia.org/wiki/Sine) for a de
 ## How Matploglib works
 In order to get a plot of any function on the screen we need to first generate a list of points.  Each point has an x and y coordinate and the point (0,0) is usually on the middle left corner of the screen.
 
-Trinket has a plotting area of about 200 by 200 pixels.  So we will generate 200 points and plot them to get our chart.
+For this example we will generate 200 points and plot them to get a smooth curve.
 
 One of the best ways to get started is to create two lists: one of x coordinates and one of y coordinates like this:
 

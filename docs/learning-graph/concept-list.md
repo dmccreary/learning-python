@@ -9,7 +9,7 @@ plus additional foundational and dependency concepts, expanded to 450 total.
 
 1. Python Interpreter Overview
 2. Python 2 vs Python 3
-3. Trinket.io Web Environment
+3. Browser-Based Python Environments
 4. Repl.it Online IDE
 5. Thonny Beginner IDE
 6. Spyder Scientific IDE

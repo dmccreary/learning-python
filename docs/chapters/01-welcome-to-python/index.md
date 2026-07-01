@@ -22,7 +22,7 @@ why Python is a great next step after Scratch.
 This chapter covers the following 9 concepts from the learning graph:
 
 1. Python Interpreter Overview
-2. Trinket.io Web Environment
+2. Browser-Based Python Environments
 3. Skulpt Browser Python
 4. print() Function
 5. Single-Line Comments
@@ -75,16 +75,24 @@ Python was invented in 1991 by a programmer named Guido van Rossum. He named it 
 
 Before you write your first line of Python, it helps to know *where* Python runs. There are several options, and each one has its place in this course.
 
-- **On your own computer** — You can install Python and run it from a terminal window. This is how professional programmers work, but it requires setup and is not where we start.
-- **Trinket.io** — A website where you type Python in one panel and see results in another, all inside your browser. No installation needed, and many Python courses use it.
-- **Skulpt (inline)** — This is the tool built right into *this* textbook. Skulpt is a version of Python that runs directly inside the web page you are reading right now. Every interactive code box in Chapters 1–18 is powered by Skulpt. You do not need to open a new tab, log in, or install anything. You click **Run** and the code executes here on the page.
+1. **Directly in a Webpage** — We use a powerful library called Skulpt that is built right into *this* textbook. Skulpt is a version of Python that runs directly inside the web page you are reading right now. Every interactive code box in Chapters 1–18 is powered by Skulpt. You do not need to open a new tab, log in, or install anything. You click **Run** and the code executes here on the page.
+The CodeMirror code editor is also used to display and make small changes to our examples.  The limitation is that some functions like reading and writing files from your local disk do not work with the in-browser approach.
+2. **On your own computer in a terminal** — You can install Python and run it from a terminal window. This is how professional programmers work, but it requires setup and is not where we start.
+3. **Using an Integrated Development Environment Tool (IDE)** - This is a tool like Thonny (recommended for beginners), Visual Studio Code or several other tools.
+4. **Using a Container (Docker)** - This process starts up and runs a small virtual machine to run Python.  Our Intermediate and Advanced labs use this approach.  We get consistent behavior on all systems but you must run the textbook on your local computer or have a docker runner configured for your school.  You can see the program that starts this in our GitHub scripts.
+5. **Jupyter Labs** - This is the approach for many data science projects.  However it
+is more complicated to configure.
+
+!!! Note
+  The first versions of this book used the free `Thonny` website to run our Python programs.
+  Unfortunately, Thonny is no longer supported and all the Thonny labs have been converted
+  to use our current tools.
 
 In this course, **Skulpt** is your main tool for the early chapters. The table below summarizes all three environments:
 
 | Environment | Where it runs | Needs install? | Best for |
 |------------|--------------|---------------|----------|
 | Your computer | Local terminal | Yes | Professional work |
-| Trinket.io | Website | No | Sharing projects online |
 | Skulpt (this book) | This web page | No | Instant in-lesson practice |
 
 ## Your First Python Line: print()

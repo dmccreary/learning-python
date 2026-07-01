@@ -1,8 +1,8 @@
 # Introduction to Intermediate Python
 
-This course assumes you are familiar with beginning concepts in Python such as variables, loops, conditionals, random numbers, functions, function parameters, lists and basic recursion.  We strongly suggest that you have completed the [Beginning Python Class](../trinket/00-introduction.md) BEFORE you do the intermediate labs.
+This course assumes you are familiar with beginning concepts in Python such as variables, loops, conditionals, random numbers, functions, function parameters, lists and basic recursion.  We strongly suggest that you have completed the [Beginning Python Class](../chapters/01-welcome-to-python/index.md) BEFORE you do the intermediate labs.
 
-Note that you can do the first four lessons using web-based Python programming tools like Trinket.io or repl.it.  Starting with lesson #5 on Files you will need to have Python installed on your local computer.  Please visit the [Python.org](http://python.org) web site for the installation instructions on your operating systems.  You can use the command-line version of Python from a Terminal or shell or you can install one of the Python Integrated Development Environments (IDEs).
+Note that you can do the first four lessons using a browser-based Python environment.  Starting with lesson #5 on Files you will need to have Python installed on your local computer.  Please visit the [Python.org](http://python.org) web site for the installation instructions on your operating systems.  You can use the command-line version of Python from a Terminal or shell or you can install one of the Python Integrated Development Environments (IDEs).
 
 The concepts in this course include:
 

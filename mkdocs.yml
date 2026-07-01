@@ -332,9 +332,7 @@ nav:
     - FAQ Quality Report: learning-graph/faq-quality-report.md
 
 
-  - Strategy:
-    - Introduction: strategy/index.md
-    - Order of Concepts: strategy/order-of-concepts.md
+
   - MicroSims:
     - Learning Graph Viewer: sims/graph-viewer/index.md
   - Contributing:
@@ -344,6 +342,7 @@ nav:
     - Overview: teachers-guide/index.md
     - Adding Custom Python Labs: teachers-guide/adding-custom-python-labs.md
     - CodeMirror Editor Example: teachers-guide/code-mirror-example.md
+    - Order of Concepts: teachers-guide/order-of-concepts.md
 
   - Glossary: glossary.md
   - FAQ: faq.md
@@ -389,7 +388,6 @@ plugins:
     - social
 extra_css:
   - css/extra.css
-  - css/skulpt.css
   - css/mascot.css
   - css/docker-lab.css
   - https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css
@@ -397,7 +395,6 @@ extra_css:
   - css/codemirror-lab.css
 extra_javascript:
   - js/extra.js
-  - js/skulpt.js
   - js/docker-lab.js
 # Google Analytics Site ID: G-EP38Z3PVD5
 extra:

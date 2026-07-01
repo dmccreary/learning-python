@@ -1,11 +1,11 @@
 ---
 name: python-lab-generator
-description: "Generates a complete, student-facing Python lab page for the Beginning Python intelligent textbook. Use when the user specifies a lab topic, concept, or exercise and wants it written as a finished Skulpt-powered markdown file in docs/python-labs/. Outputs two things: (1) a new docs/python-labs/SLUG.md file with interactive turtle graphics via Skulpt, prediction prompts, learning checks, experiments, and Monty mascot admonitions; (2) an updated entry in docs/python-labs/index.md using MkDocs grid-cards format. Triggers: create a lab for, generate a python lab about, make a new lab, write a lab on, add a python lab."
+description: "Generates a complete, student-facing Python lab page for the Beginning Python intelligent textbook. Use when the user specifies a lab topic, concept, or exercise and wants it written as a finished markdown file in docs/python-labs/ with an in-browser CodeMirror editor (line numbers, syntax highlighting) running Python via the Skulpt interpreter. Outputs two things: (1) a new docs/python-labs/SLUG.md file with interactive turtle graphics (CodeMirror editor wired to Skulpt), prediction prompts, learning checks, experiments, and Monty mascot admonitions; (2) an updated entry in docs/python-labs/index.md using MkDocs grid-cards format. Triggers: create a lab for, generate a python lab about, make a new lab, write a lab on, add a python lab."
 ---
 
 # Python Lab Generator
 
-Generates interactive Python lab pages for the Beginning Python textbook. Labs use Skulpt — an in-browser Python interpreter — so students run and edit code without installing anything.
+Generates interactive Python lab pages for the Beginning Python textbook. Each lab pairs the **CodeMirror** code editor — line numbers, syntax highlighting, and auto-indent — with the **Skulpt** in-browser Python interpreter, so students read, run, and edit code without installing anything.
 
 Before generating any lab, read `CONTENT-GENERATION-GUIDELINES.md` in the project root for the full rules. The condensed rules below are sufficient for most labs; check the guidelines for edge cases.
 
@@ -19,7 +19,7 @@ Before generating any lab, read `CONTENT-GENERATION-GUIDELINES.md` in the projec
 
 4. **Update index.md** — add a grid-card entry to `docs/python-labs/index.md` following the [Index Card Format](#index-card-format) below.
 
-5. **Verify** — confirm the Skulpt HTML IDs are correct and that no mascot admonitions appear back-to-back.
+5. **Verify** — confirm the CodeMirror lab IDs (`cm-editor`, `cm-output`, `cm-turtle`, with `-2`… suffixes for later labs) are correct and that no mascot admonitions appear back-to-back.
 
 ## Page Structure
 
@@ -41,7 +41,7 @@ By the end of this lesson you'll be able to:
 !!! mascot-thinking ...      ← prediction prompt, immediately before Try It Now
 ## Try It Now
 [CDN scripts — ONCE per page]
-[Skulpt HTML block — lab 1]
+[CodeMirror lab block — lab 1]
 Were you right? [one sentence]
 [Error note for early chapters only]
 ## How It Works
@@ -51,7 +51,7 @@ Were you right? [one sentence]
 [Optional mascot-tip or mascot-warning]
 ## Learning Check
 !!! mascot-thinking or mascot-warning ...
-[Skulpt HTML block — lab 2, with -2 suffix on ALL IDs]
+[CodeMirror lab block — lab 2, with -2 suffix on IDs and initCmLab]
 ## Experiments
 [3-5 numbered items, each ending with "You'll know it worked when..."]
 !!! mascot-celebration ...   ← always last; always present
@@ -85,81 +85,94 @@ Image path for `docs/python-labs/` files: **`../img/mascot/`** (one level deep).
 
 **Hard limits:** max 6 mascot admonitions per lab; never back-to-back; exactly one `mascot-welcome` (first) and one `mascot-celebration` (last).
 
-## Skulpt HTML Templates
+## CodeMirror + Skulpt HTML Templates
 
-The CDN `<script>` tags appear **once per page**, immediately before the first lab block:
+The `<script>` tags appear **once per page**, immediately before the first lab block.
+The last one, `codemirror-lab.js`, provides `initCmLab`, `runCmLab`, and `resetCmLab`.
+For `docs/python-labs/` files (one level deep) use `../js/codemirror-lab.js`:
 
 ```html
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../js/codemirror-lab.js"></script>
 ```
 
 ### Drawing Lab (turtle programs — use by default)
 
 ```html
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">PYTHON CODE HERE
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
     </div>
-    <pre id="output"></pre>
+    <pre class="cm-output" id="cm-output"></pre>
   </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
   </div>
 </div>
+<script>
+initCmLab('', `PYTHON CODE HERE`);
+</script>
 ```
 
 ### Text-Only Lab (print/variables/logic — no turtle)
 
-Add `class="skulpt-text-only"` to the outer div. The `turtle-target` div must still be present.
+Add `cm-text-only` to the lab's class list. The `cm-turtle` div must still be present.
 
 ```html
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">PYTHON CODE HERE
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
     </div>
-    <pre id="output"></pre>
+    <pre class="cm-output" id="cm-output"></pre>
   </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
   </div>
 </div>
+<script>
+initCmLab('', `PYTHON CODE HERE`);
+</script>
 ```
 
 ### Second (and Later) Labs — Suffix IDs
 
-Every lab after the first uses a `-2`, `-3`, … suffix on **every** ID and in the `onclick` handlers:
+Every lab after the first uses a `-2`, `-3`, … suffix on the three element IDs and in
+the `initCmLab` / `runCmLab` / `resetCmLab` calls:
 
 ```html
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">PYTHON CODE HERE
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
     </div>
-    <pre id="output-2"></pre>
+    <pre class="cm-output" id="cm-output-2"></pre>
   </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
   </div>
 </div>
+<script>
+initCmLab('-2', `PYTHON CODE HERE`);
+</script>
 ```
 
 **Critical rules:**
-- Do **not** set `height` or `rows` on `<textarea>` — skulpt.js auto-sizes it
-- Do **not** add inline `<style>` or `<script>` tags
+- Do **not** set a height on the editor — CodeMirror auto-sizes it
+- Do **not** add inline `<style>` or `<link>` tags — the CodeMirror CSS loads globally
 - Do **not** add the CDN `<script>` tags a second time
-- The Python code inside `<textarea>` must match the Sample Code fenced block exactly
+- The Python code inside the `initCmLab` template literal must match the Sample Code fenced block exactly
+- A literal backtick or backslash in the Python must be backslash-escaped (rare in beginner labs)
 
 ## Turtle Code Conventions
 
@@ -217,5 +230,5 @@ See `references/content-rules.md` for the full ruleset. Key rules:
 | Mascot cap | Max 6 admonitions; never consecutive; welcome first, celebration last |
 | Image paths | `../img/mascot/` for python-labs files (one level deep) |
 | No `<img>` tags | Always `![alt](path){ class="mascot-admonition-img" }` |
-| No `height`/`rows` | Never set these attributes on `<textarea>` |
-| No inline `<style>` | All styles come from skulpt.css via extra_css |
+| No fixed height | Never set a height on the editor — CodeMirror auto-sizes it |
+| No inline `<style>` | All styles come from codemirror-lab.css via extra_css |

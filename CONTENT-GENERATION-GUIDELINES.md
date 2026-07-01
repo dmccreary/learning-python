@@ -78,7 +78,7 @@ For every important concept, include at least one **Learning Check** — a secon
     The program below draws three sides of a square and then stops.
     Add **one line** so Monty completes the fourth side!
 
-[Skulpt lab block with the incomplete program in the textarea]
+[Skulpt lab block with the incomplete program in the editor]
 ```
 
 **Learning Check format — find the bug:**
@@ -89,7 +89,7 @@ For every important concept, include at least one **Learning Check** — a secon
     Something is wrong with the program below — Monty draws a straight line
     instead of a triangle. Can you find and fix the mistake?
 
-[Skulpt lab block with the buggy program in the textarea]
+[Skulpt lab block with the buggy program in the editor]
 ```
 
 ### Skulpt Lab Sizing for Turtle Programs
@@ -106,8 +106,8 @@ There are two Skulpt lab layouts. Choose based on whether the program uses turtl
 
 | Situation | Lab type | HTML class |
 |-----------|----------|------------|
-| Program uses `import turtle` or any turtle command | **Drawing lab** | *(no extra class — default)* |
-| Program uses only `print()`, variables, loops, functions, etc. | **Text-only lab** | `class="skulpt-text-only"` |
+| Program uses `import turtle` or any turtle command | **Drawing lab** | `class="cm-lab"` |
+| Program uses only `print()`, variables, loops, functions, etc. | **Text-only lab** | `class="cm-lab cm-text-only"` |
 
 **Drawing labs** (Chapters 1–18 turtle lessons) show a 400 × 400 px canvas to the right of the
 code editor where the turtle draws.
@@ -249,7 +249,7 @@ encountering it in new situations.
 ### Handling Skulpt Error Messages
 
 Students will produce errors while modifying code. Skulpt prints tracebacks to
-`<pre id="output">`. Lessons should prepare students to read errors calmly.
+the `<pre class="cm-output">` panel. Lessons should prepare students to read errors calmly.
 
 **By chapter range:**
 
@@ -465,19 +465,29 @@ then run it to check!
     Try the experiments above to go even further. Let's code it together!
 ```
 
-### Skulpt HTML Block
+### Lab HTML Block
 
 There are two lab templates. Pick based on whether the program uses turtle graphics
-(see [When to Use Each Lab Type](#when-to-use-each-lab-type)).
+(see [When to Use Each Lab Type](#when-to-use-each-lab-type)). Both use the
+**CodeMirror** editor — line numbers, syntax highlighting, and auto-indent — wired to
+the Skulpt runtime.
 
-The CDN `<script>` tags must appear **once per page**, before the first lab block.
-`skulpt.js` (via `extra_javascript`) and `skulpt.css` (via `extra_css`) provide the
-shared runtime and styles — do not add inline `<style>` or `<script>` tags.
+The `<script>` tags must appear **once per page**, before the first lab block. The
+CodeMirror CSS and `codemirror-lab.css` load globally via `mkdocs.yml`, so do not add
+inline `<style>` or `<link>` tags. The final script, `codemirror-lab.js`, defines the
+`initCmLab`, `runCmLab`, and `resetCmLab` functions the labs call:
 
 ```html
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="../../js/codemirror-lab.js"></script>
 ```
+
+**Path depth matters** on the last tag. Chapter pages are two levels deep
+(`chapters/05-.../index.md`) → `../../js/codemirror-lab.js`. Lab pages one level deep
+(`python-labs/02-simple-square.md`) → `../js/codemirror-lab.js`.
 
 #### Drawing Lab (turtle programs)
 
@@ -485,94 +495,94 @@ Use when the program calls `import turtle` or any turtle command.
 The canvas appears to the right of the code editor.
 
 ```html
-<div id="skulpt-lab">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">PYTHON CODE HERE
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
     </div>
-    <pre id="output"></pre>
+    <pre class="cm-output" id="cm-output"></pre>
   </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
   </div>
 </div>
+<script>
+initCmLab('', `PYTHON CODE HERE`);
+</script>
 ```
 
 #### Text-Only Lab (print/variables/logic — no turtle)
 
-Use when the program produces only text output. Add `class="skulpt-text-only"` to
-the outer div. The canvas container is hidden by CSS; the editor fills the full
-content width. The `turtle-target` div must still be present so `runSkulpt()` can
-initialise without errors — it just isn't visible.
+Use when the program produces only text output. Add `cm-text-only` to the lab's
+class list. The canvas container is hidden by CSS and the editor fills the full
+content width. The `cm-turtle` div must still be present so the lab initialises
+cleanly — it just isn't visible.
 
 ```html
-<div id="skulpt-lab" class="skulpt-text-only">
-  <div id="editor-container">
-    <textarea id="code" spellcheck="false">PYTHON CODE HERE
-</textarea>
-    <div id="button-row">
-      <button id="run-btn" onclick="runSkulpt()">&#9654; Run</button>
-      <button id="reset-btn" onclick="resetSkulpt()">&#8635; Reset</button>
+<div class="cm-lab cm-text-only">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
     </div>
-    <pre id="output"></pre>
+    <pre class="cm-output" id="cm-output"></pre>
   </div>
-  <div id="canvas-container">
-    <div id="turtle-target"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle"></div>
   </div>
 </div>
+<script>
+initCmLab('', `PYTHON CODE HERE`);
+</script>
 ```
 
 #### Rules that apply to both templates
 
-- The Python code inside `<textarea>` must match the Sample Code block exactly
-- **Do not set a `height` or `rows` attribute on the `<textarea>`** — `skulpt.js` auto-sizes it on page load so all code is visible without scrolling
-- The first lab on a page uses the plain IDs above; `skulpt.js` depends on them
+- The Python code goes inside the `initCmLab('', ...)` **template literal** (backticks),
+  and must match the Sample Code block exactly
+- Because the code sits in a JavaScript template literal, a literal backtick or
+  backslash in the Python must be backslash-escaped. Beginner turtle programs almost
+  never contain either; the bulk-conversion tooling escapes them automatically
+- **Do not set a height on the editor** — CodeMirror auto-sizes to the code, with a
+  `min-height` fallback from `codemirror-lab.css`
+- The first lab on a page uses the plain IDs (`cm-editor`, `cm-output`, `cm-turtle`)
+  and the empty suffix `''`
 
 #### Multiple labs on one page (Learning Checks, etc.)
 
-Every lab after the first must use a `-2`, `-3`, … suffix on **every** ID, and pass
-the matching suffix to the button `onclick` handlers. The `skulpt-text-only` class
-applies to multiple labs independently — a page may have a drawing lab first and a
-text-only lab second, or vice versa.
+Every lab after the first uses a `-2`, `-3`, … suffix on the three element IDs
+(`cm-editor-2`, `cm-output-2`, `cm-turtle-2`) and passes that same suffix to
+`initCmLab`, `runCmLab`, and `resetCmLab`. The `cm-text-only` class applies to each
+lab independently — a page may have a drawing lab first and a text-only lab second,
+or vice versa.
 
 ```html
 <!-- Second drawing lab -->
-<div id="skulpt-lab-2">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">PYTHON CODE HERE
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
+<div class="cm-lab">
+  <div class="cm-editor-wrap">
+    <div id="cm-editor-2"></div>
+    <div class="cm-button-row">
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
     </div>
-    <pre id="output-2"></pre>
+    <pre class="cm-output" id="cm-output-2"></pre>
   </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
+  <div class="cm-canvas-wrap">
+    <div id="cm-turtle-2"></div>
   </div>
 </div>
-
-<!-- Second text-only lab -->
-<div id="skulpt-lab-2" class="skulpt-text-only">
-  <div id="editor-container-2">
-    <textarea id="code-2" spellcheck="false">PYTHON CODE HERE
-</textarea>
-    <div id="button-row-2">
-      <button id="run-btn-2" onclick="runSkulpt('-2')">&#9654; Run</button>
-      <button id="reset-btn-2" onclick="resetSkulpt('-2')">&#8635; Reset</button>
-    </div>
-    <pre id="output-2"></pre>
-  </div>
-  <div id="canvas-container-2">
-    <div id="turtle-target-2"></div>
-  </div>
-</div>
+<script>
+initCmLab('-2', `PYTHON CODE HERE`);
+</script>
 ```
 
-Do not add the `<script>` CDN tags a second time — one copy per page is enough.
+For a text-only second lab, use `<div class="cm-lab cm-text-only">` with the same
+`-2` suffixes.
+
+Do not add the CDN `<script>` tags a second time — one copy per page is enough.
 
 ---
 

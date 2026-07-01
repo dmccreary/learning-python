@@ -69,7 +69,7 @@ Key rules to keep in mind at all times:
 - **Always open with `mascot-welcome`** and **close with `mascot-celebration`**
 - **Image path depth matters**: chapters live two levels deep → use `../../img/mascot/`
 - **Never use `<img>` tags** — always `![alt](path){ class="mascot-admonition-img" }`
-- **Skulpt element IDs are fixed** — `skulpt.js` depends on them; do not rename them
+- **CodeMirror lab IDs are fixed** — `codemirror-lab.js` depends on `cm-editor`, `cm-output`, and `cm-turtle` (with `-2`… suffixes for later labs); do not rename them
 - Instructor-facing content (teachers' guide, course description) does NOT use the mascot
 
 ## Chapter Structure

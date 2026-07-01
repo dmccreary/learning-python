@@ -37,8 +37,8 @@ No prior Python, no math beyond arithmetic, and no installation required.
 
 Every lesson in Chapters 1–18 contains one or more **Skulpt labs** — interactive code windows
 built right into the page. You click **Run** and Python executes immediately in your browser.
-No login, no account, no installation needed. For Chapters 19–38, some examples use external
-tools like Trinket.io or a locally installed Python, but Skulpt labs still appear throughout.
+No login, no account, no installation needed. For Chapters 19–38, some examples use a
+locally installed Python, but Skulpt labs still appear throughout.
 
 ### What is Skulpt and why do Chapters 1–18 use it?
 

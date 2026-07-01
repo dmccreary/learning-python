@@ -1890,11 +1890,11 @@ A function from the `time` module that pauses the program for a specified number
 
 **Example:** `time.sleep(2)` causes the program to wait two seconds before executing the next line.
 
-#### Trinket.io — web-based Python environment
+#### Trinket.io — web-based Python environment (deprecated)
 
-A free, browser-based tool that lets you write and run Python programs — including turtle graphics — directly in a web page without installing any software on your computer.
+A free, browser-based tool that let you write and run Python programs — including turtle graphics — directly in a web page without installing any software. This textbook originally used Trinket, but Trinket is [shutting down in August 2026](about.md#a-note-on-platform-history); the book now runs every lab with inline **Skulpt** editors instead.
 
-**Example:** A teacher can share a Trinket link and students click Run to see a turtle draw a square, all inside their web browser.
+**Example:** Early versions of this book shared a Trinket link so students could click Run and watch a turtle draw a square; today that same lab runs directly on the page with Skulpt.
 
 #### Truthiness and falsiness of values
 

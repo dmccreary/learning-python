@@ -15,7 +15,7 @@ By the end of this lesson you'll be able to:
 - Use the **Python REPL** (interactive shell) for quick experiments
 - Install packages with `pip` and understand **virtual environments**
 
-Skulpt and Trinket are great for learning — you don't need to install anything.
+Skulpt is great for learning — you don't need to install anything.
 But real Python projects use richer tools. This chapter is your map to the Python ecosystem.
 
 !!! mascot-welcome "Welcome to Chapter 28!"

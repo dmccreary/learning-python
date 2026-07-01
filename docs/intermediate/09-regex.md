@@ -18,7 +18,7 @@ else:
   print("Invalid data")
 ```
 
-[Run the regex-01 program on Trinket.io](https://trinket.io/python3/780b1810ad)
+Try running the regex-01 program in your local Python environment.
 
 If you run the program as-is, it will tell you that the string **'1234'** will pass the test and the string **We have four digits**, but if you change the my_input to be **123x** then the **Invalid data** will be returned.
 
@@ -48,7 +48,7 @@ else:
   print("Invalid data")
 ```
 
-[Run the regex-02 program on Trinket.io](https://trinket.io/library/trinkets/ef0666e0d3)
+Try running the regex-02 program in your local Python environment.
 
 ## Checking for one or more digits
 Sometimes we don't know exactly how many digits an input field should contain.  We might just want to say "look for one or more digits".  We can do this by using the **'+'** expression which says "look for one or more of the previous expression".  Here is a program that will check for one or more digits:

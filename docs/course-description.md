@@ -56,7 +56,7 @@ skills while keeping the experience joyful and motivating.
 
 ## Main Topics Covered
 
-1. **Python environments and tools** — Trinket.io, Skulpt (inline), Repl.it, Thonny,
+1. **Python environments and tools** — Skulpt (inline), Repl.it, Thonny,
    VS Code, Jupyter Notebooks, Raspberry Pi, and installing Python locally
 2. **Core Python syntax** — print, comments, indentation, keywords, variables, assignment,
    naming conventions, and basic arithmetic

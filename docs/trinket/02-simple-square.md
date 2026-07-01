@@ -1,3 +1,8 @@
+!!! warning "Deprecated Lab — Trinket is shutting down"
+    This lab was written for **Trinket.io**, which is [shutting down in August 2026](../about.md#a-note-on-platform-history). The embedded `trinket.io` links on this page will stop working after that date.
+
+    These pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt](https://skulpt.org/)** editor right in the page — no account or install needed. **Start at [Chapter 1: Welcome to Python](../chapters/01-welcome-to-python/index.md).**
+
 ## Drawing a Square
 The following code is an example of drawing a square using turtle graphics.  In this example the turtle moves forward 100 units and then turns right.  The angle for the right turn is 90 degrees.  It repeats these two functions four times to make a square.
 

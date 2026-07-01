@@ -216,10 +216,10 @@ function resetCmLab() {
 Paste these five blocks into any Markdown page to get a CodeMirror + Skulpt lab.
 Replace the Python code in `_cmLines` with your own program.
 
-The shared `js/skulpt.js` (loaded globally from `mkdocs.yml`) handles
-standard `<textarea>`-based labs and is **not** used here.
-`runCmLab` and `resetCmLab` are defined inline and read from
-`cmEditor.getValue()` instead of a textarea.
+This page is a standalone proof-of-concept: `runCmLab` and `resetCmLab` are
+defined **inline** and read from `cmEditor.getValue()`. The production labs
+throughout the textbook use the shared `js/codemirror-lab.js` instead, which
+handles multiple labs per page via a suffix registry (`initCmLab`).
 
 ```html
 <!-- 1. Skulpt runtime -->

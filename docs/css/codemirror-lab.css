@@ -1,4 +1,5 @@
-/* CodeMirror lab layout — visual style matches skulpt.css.
+/* CodeMirror lab layout — the shared styles for every Skulpt+CodeMirror lab.
+ * Uses the site palette (#642580 purple border, #41BAC1 teal accent).
  *
  * Primary lab: .cm-lab with children #cm-editor, #cm-output, #cm-turtle
  * Second lab:  same classes, IDs suffixed with -2  (cm-editor-2, etc.)
