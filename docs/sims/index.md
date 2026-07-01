@@ -10,3 +10,13 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
 
 <div class="grid cards" markdown>
 
+-   **[Code Stepper](./code-stepper/index.md)**
+
+    ---
+
+    ![Code Stepper](./code-stepper/code-stepper.png)
+
+    Step through a short Python program one line at a time and watch the
+    output appear — see top-to-bottom execution with your own eyes.
+    (Chapters 1-2)
+

@@ -182,6 +182,16 @@ print("They make programs easier to read.")
 
 Good programmers use comments constantly. A comment does not change what the program does — it just helps the next person (often you, six months later) understand what you were thinking.
 
+## See It: Step Through a Program
+
+You have learned that Python runs a program one line at a time, from top to bottom, and that it skips comments and blank lines. The Code Stepper below lets you *watch* that happen. Before you click anything, look at the program on the left and **predict exactly what the output panel will show when the program finishes**. Then click **Next Step** to check your prediction one line at a time.
+
+<iframe src="../../sims/code-stepper/main.html" height="452" width="100%" scrolling="no"></iframe>
+
+[Explore the Code Stepper MicroSim](../../sims/code-stepper/index.md){ .md-button }
+
+Try the **Comments Everywhere** program from the dropdown — how many lines do you think will print? Step through it to find out whether a `print()` hiding inside a comment ever runs.
+
 ## Case Sensitivity
 
 Python is **case-sensitive**, which means uppercase and lowercase letters are treated as completely different things. The command `print` and the word `Print` are not the same.
