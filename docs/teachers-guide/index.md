@@ -431,15 +431,35 @@ extra:
 - **Device breakdown** — what percentage of students use phones vs. computers
 - **Geographic distribution** — where your students are accessing from
 
-### Important: Student Data Privacy
+### xAPI Monitoring (Advanced)
+
+**xAPI** (Experience API, also called "Tin Can API") is an advanced standard for tracking detailed learning activities — not just page views, but specific interactions like "student ran the turtle graphics lab in Chapter 5" or "student answered quiz question 3 correctly."
+
+#### What is an LRS?
+
+An **LRS** (Learning Record Store) is a database that stores xAPI learning records. Think of it as a specialized analytics system designed specifically for education. If you use an LRS, you can track granular student learning data, such as which Skulpt labs a student ran, how many times they clicked Run before getting the expected output, and which learning checks they completed successfully.
+
+#### Important: Regulatory Considerations
 
 Before collecting student-specific data, be aware of these regulations:
 
-- **FERPA** (Family Educational Rights and Privacy Act) — U.S. federal law that protects student education records.
+- **FERPA** (Family Educational Rights and Privacy Act) — U.S. federal law that protects student education records. If you collect data that can identify individual students, you must comply with FERPA.
 - **COPPA** (Children's Online Privacy Protection Act) — U.S. federal law that applies to children under 13. Since this textbook targets ages 10–14, COPPA may apply to your students.
+- **State laws** — Many U.S. states have additional student privacy laws.
 - **GDPR** (General Data Protection Regulation) — European Union law that applies if any of your students are in the EU.
 
-**Recommendation**: The Google Analytics setup described above is anonymous by default — it tracks aggregate page views, not individual students. This is the safest approach for K–12 use. If you want individual student tracking, consult your school district's data privacy officer before proceeding.
+**Recommendation**: The Google Analytics setup described above is anonymous by default — it tracks aggregate page views, not individual students. This is the safest approach for K–12 use. If you want individual student tracking via xAPI, consult your school district's data privacy officer before proceeding.
+
+### Building a Student Progress Dashboard with AI
+
+As AI tools become more accessible, it is becoming possible to build custom dashboards that visualize student progress through the textbook. For example:
+
+- Which chapters each student has completed
+- Quiz scores over time
+- Skulpt lab engagement — how many labs a student ran and modified
+- Concepts that need re-teaching based on quiz performance
+
+Building such a dashboard requires programming knowledge (Python, JavaScript) and careful attention to student data privacy. This is an advanced topic beyond the scope of this guide, but the open-source nature of this textbook means all the data structures are available for developers to build upon.
 
 ## The Learning Graph
 

@@ -219,7 +219,11 @@ Replace the Python code in `_cmLines` with your own program.
 This page is a standalone proof-of-concept: `runCmLab` and `resetCmLab` are
 defined **inline** and read from `cmEditor.getValue()`. The production labs
 throughout the textbook use the shared `js/codemirror-lab.js` instead, which
-handles multiple labs per page via a suffix registry (`initCmLab`).
+handles multiple labs per page via a suffix registry (`initCmLab`) and adds
+a Run ⇄ Pause button: while a program runs, clicking **Pause** freezes the
+turtle drawing (handy for discussion or screenshots) and **Resume** continues
+it; **Reset** stops a running program. The minimal inline version below does
+not include the pause feature.
 
 ```html
 <!-- 1. Skulpt runtime -->
