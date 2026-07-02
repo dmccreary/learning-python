@@ -1,5 +1,5 @@
 ---
-title: "Unit Circle: Degrees and Radians"
+title: Unit Circle Degrees and Radians
 description: Drag a point around the unit circle and read the angle in degrees, radians, and multiples of pi, with sin and cos projection lines and a rotating turtle.
 image: /sims/unit-circle-radians/unit-circle-radians.png
 og:image: /sims/unit-circle-radians/unit-circle-radians.png
@@ -9,7 +9,7 @@ social:
 quality_score: 93
 ---
 
-# Unit Circle: Degrees and Radians
+# Unit Circle Degrees and Radians
 
 <iframe src="main.html" height="522" width="100%" scrolling="no"></iframe>
 
