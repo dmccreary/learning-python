@@ -42,7 +42,7 @@ Beyond the beginning level, the course extends into **intermediate Python** (dat
 dictionaries, file I/O, regular expressions, object-oriented basics, debugging, and
 graph algorithms) and **advanced Python** (data visualization with matplotlib, numerical
 computing with NumPy, image processing, and an introduction to machine learning with
-the MNIST handwritten-digit dataset). A comprehensive **[glossary](./glossary.md)**, an **[FAQ](./faq.md** section,
+the MNIST handwritten-digit dataset). A comprehensive **[glossary](./glossary.md)**, an **[FAQ](./faq.md)** section,
 **per-lesson quizzes**, and a **detailed [teacher's guide](./teachers-guide/index.md)** make the course equally
 valuable for self-directed students and classroom instructors.
 
