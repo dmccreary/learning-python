@@ -154,6 +154,20 @@ print("cos(0°):", math.cos(math.radians(0)))
 print("cos(90°):", round(math.cos(math.radians(90)), 10))`);
 </script>
 
+### See It: One Angle, Two Languages
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    The turtle speaks degrees, but `math.sin()` speaks radians. Before you
+    drag the orange point below, predict: **how many radians is half a turn
+    (180°)?** Drag the point there and check your answer!
+
+<iframe src="../../sims/unit-circle-radians/main.html" height="522" width="100%" scrolling="no"></iframe>
+
+[Explore the Unit Circle MicroSim](../../sims/unit-circle-radians/index.md){ .md-button }
+
+Were you right? Half a turn is exactly **π radians** (about 3.14). Watch the little turtle at the center — its heading always matches the angle, and the blue and green bars show `math.sin()` and `math.cos()` for whatever angle you choose.
+
 ## Project 1 — Sine Wave with Turtle
 
 A **sine wave** is the smooth, repeating S-shaped wave you see in physics and music.

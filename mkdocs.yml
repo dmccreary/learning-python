@@ -337,8 +337,11 @@ nav:
     - Stack and Queue Simulator: sims/stack-queue-simulator/index.md
     - String Slicer: sims/string-slicer/index.md
     - Turtle State Inspector: sims/turtle-state-inspector/index.md
+    - Unit Circle: Degrees and Radians: sims/unit-circle-radians/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
     - While-Loop Stepper: sims/while-loop-stepper/index.md
+
+
 
 
 

@@ -174,3 +174,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Drag amplitude, frequency, and phase sliders and watch
     `y = A × sin(f·x + p)` re-plot instantly. (Chapter 18)
 
+-   **[Unit Circle: Degrees and Radians](./unit-circle-radians/index.md)**
+
+    ---
+
+    ![Unit Circle](./unit-circle-radians/unit-circle-radians.png)
+
+    Drag a point around the unit circle and read the angle in degrees,
+    radians, and multiples of π — with sin and cos bars. (Chapter 18)
+
