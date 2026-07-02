@@ -283,6 +283,16 @@ queue.append("third")
 print(queue.pop(0))   # "first" — first in, first out
 ```
 
+### See It: Same Items, Different Exits
+
+The simulator below feeds the **same letters** into a stack of plates and a waiting line. Before you remove anything, predict: **after adding A, B, C, D, which letter leaves the stack first — and which leaves the queue first?**
+
+<iframe src="../../sims/stack-queue-simulator/main.html" height="512" width="100%" scrolling="no"></iframe>
+
+[Explore the Stack and Queue Simulator MicroSim](../../sims/stack-queue-simulator/index.md){ .md-button }
+
+Empty both structures and compare the two history strips: the stack gives back D, C, B, A (reversed!) while the queue gives back A, B, C, D (same order). One tiny difference in code — `pop()` versus `pop(0)` — flips the whole story.
+
 ## Learning Check
 
 !!! mascot-thinking "Your Turn — Build a Filtered List"

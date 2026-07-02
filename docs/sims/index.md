@@ -147,3 +147,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Append, insert, and pop a list of colored boxes and watch every index
     renumber — plus the TypeError a string gives instead. (Chapters 15-16)
 
+-   **[Stack and Queue Simulator](./stack-queue-simulator/index.md)**
+
+    ---
+
+    ![Stack and Queue Simulator](./stack-queue-simulator/stack-queue-simulator.png)
+
+    Feed the same letters into a stack of plates and a waiting line — then
+    watch them leave in opposite orders. (Chapters 16, 30)
+
