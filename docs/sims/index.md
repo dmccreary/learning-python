@@ -165,3 +165,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Roll 1, 100, or 1000 dice and watch chaos flatten into a pattern —
     then find the mountain hiding in two-dice sums. (Chapter 17)
 
+-   **[Sine Wave Explorer](./sine-wave-explorer/index.md)**
+
+    ---
+
+    ![Sine Wave Explorer](./sine-wave-explorer/sine-wave-explorer.png)
+
+    Drag amplitude, frequency, and phase sliders and watch
+    `y = A × sin(f·x + p)` re-plot instantly. (Chapter 18)
+

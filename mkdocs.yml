@@ -333,11 +333,14 @@ nav:
     - Range Explorer: sims/range-explorer/index.md
     - RGB Color Mixer: sims/rgb-color-mixer/index.md
     - Scope Inspector: sims/scope-inspector/index.md
+    - Sine Wave Explorer: sims/sine-wave-explorer/index.md
     - Stack and Queue Simulator: sims/stack-queue-simulator/index.md
     - String Slicer: sims/string-slicer/index.md
     - Turtle State Inspector: sims/turtle-state-inspector/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
     - While-Loop Stepper: sims/while-loop-stepper/index.md
+
+
 
 
 

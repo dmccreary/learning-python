@@ -203,6 +203,16 @@ t.hideturtle()`);
 
 Try changing `amplitude` to `150` for a taller wave or `frequency` to `0.1` for a faster wave.
 
+### See It: Play the Wave Like an Instrument
+
+Editing numbers and re-running works, but sliders are faster for building intuition. In the explorer below, predict first: **which slider makes the wave taller, and which packs more wiggles into the same space?** Then drag each slider one at a time and watch the equation update.
+
+<iframe src="../../sims/sine-wave-explorer/main.html" height="492" width="100%" scrolling="no"></iframe>
+
+[Explore the Sine Wave Explorer MicroSim](../../sims/sine-wave-explorer/index.md){ .md-button }
+
+Check **show plain sin(x)** to keep the original wave as a dotted reference — then slide the phase and watch your wave slide left past it. These are the exact `amplitude` and `frequency` variables from the turtle project above.
+
 ## Project 2 — Turtle Race Simulation
 
 Now let's combine `random` and a `for` loop to simulate a turtle race!
