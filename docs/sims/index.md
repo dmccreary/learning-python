@@ -266,3 +266,13 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     vs insertion on identical data — the winner depends on the data.
     (Chapter 30)
 
+-   **[Search Race](./search-race/index.md)**
+
+    ---
+
+    ![Search Race](./search-race/search-race.png)
+
+    Linear search plods box by box while binary search throws away half
+    the shelf per check — and a shuffled-shelf trap shows why sorted
+    matters. (Chapter 30)
+

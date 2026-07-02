@@ -412,6 +412,16 @@ def binary_search(sorted_list, target):
     return -1   # not found
 ```
 
+### See It: Linear vs Binary, Head to Head
+
+The race below runs both searches on the same shelf of 31 boxes. Before you click Step, predict: **how many checks will each search need to find 24?** (Linear starts at the left; binary starts in the middle.)
+
+<iframe src="../../sims/search-race/main.html" height="522" width="100%" scrolling="no"></iframe>
+
+[Explore the Search Race MicroSim](../../sims/search-race/index.md){ .md-button }
+
+Watch binary search throw away half the shelf with every check: 31 → 15 → 7 → 3 → 1. Then switch to the **shuffled shelf (trap!)** and search again — binary search can report NOT FOUND even when the target is sitting right there. Cutting the problem in half only works when the shelf is sorted, which is exactly why the function above is named `binary_search(sorted_list, ...)`.
+
 ## Big-O Notation — Time and Space Complexity
 
 **Big-O notation** describes how an algorithm's running time grows with input size.

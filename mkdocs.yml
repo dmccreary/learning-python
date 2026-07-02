@@ -340,6 +340,7 @@ nav:
     - Regex Match Lab: sims/regex-match-lab/index.md
     - RGB Color Mixer: sims/rgb-color-mixer/index.md
     - Scope Inspector: sims/scope-inspector/index.md
+    - Search Race: sims/search-race/index.md
     - Set Operations Venn: sims/set-operations-venn/index.md
     - Sine Wave Explorer: sims/sine-wave-explorer/index.md
     - Sorting Algorithm Comparer: sims/sorting-comparer/index.md
@@ -349,6 +350,8 @@ nav:
     - Unit Circle Degrees and Radians: sims/unit-circle-radians/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
     - While-Loop Stepper: sims/while-loop-stepper/index.md
+
+
 
 
 
