@@ -248,6 +248,16 @@ print("BFS is level-by-level; DFS goes deep before backtracking.")`);
 | Memory | More (stores whole frontier) | Less (stores one path) |
 | Best for | Shortest path, social networks | Exploring all paths, cycles |
 
+### See It: The Queue and the Stack Drive Everything
+
+The only difference between BFS and DFS is the row in that table's first line — which waiting node gets visited next. The explorer below shows the queue or stack **live** beside the graph while you step. Before you click, predict: **starting at A, which node does BFS visit third? Does DFS agree?**
+
+<iframe src="../../sims/graph-traversal-explorer/main.html" height="537" width="100%" scrolling="no"></iframe>
+
+[Explore the Graph Traversal Explorer MicroSim](../../sims/graph-traversal-explorer/index.md){ .md-button }
+
+Step all the way through BFS and watch the ripple move level by level — then the final step reveals the payoff: following the parents backward gives the **shortest path** from A to the goal. Switch to DFS and step again: same graph, same start, completely different order, because the stack always grabs the *newest* discovery.
+
 ## Applying BFS: Finding a Path Through a Maze
 
 A maze is just a graph — junctions and rooms are nodes, corridors are edges. BFS's queue already explores level by level, which means it can find the **shortest path**, not just answer "can I get there?" The trick is remembering **where you came from** at each step, so you can retrace your route once you reach the goal.

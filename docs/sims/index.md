@@ -276,3 +276,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     the shelf per check — and a shuffled-shelf trap shows why sorted
     matters. (Chapter 30)
 
+-   **[Graph Traversal Explorer](./graph-traversal-explorer/index.md)**
+
+    ---
+
+    ![Graph Traversal Explorer](./graph-traversal-explorer/graph-traversal-explorer.png)
+
+    Step BFS and DFS over the same graph with the live queue or stack
+    beside it — then watch BFS reveal the shortest path. (Chapter 30)
+
