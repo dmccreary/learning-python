@@ -324,6 +324,7 @@ nav:
     - Code Stepper: sims/code-stepper/index.md
     - Control Flow Explorer: sims/control-flow-explorer/index.md
     - Dice Roll Histogram: sims/dice-roll-histogram/index.md
+    - Dictionary Key Lookup: sims/dictionary-key-lookup/index.md
     - Expression Evaluator: sims/expression-evaluator/index.md
     - For-Loop Stepper: sims/for-loop-stepper/index.md
     - Function Call Flow: sims/function-call-flow/index.md
@@ -341,6 +342,8 @@ nav:
     - Unit Circle Degrees and Radians: sims/unit-circle-radians/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
     - While-Loop Stepper: sims/while-loop-stepper/index.md
+
+
 
 
 

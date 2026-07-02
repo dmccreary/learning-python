@@ -192,3 +192,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Type two sets, watch the chips land in the right regions, and light up
     union, intersection, and difference. (Chapter 20)
 
+-   **[Dictionary Key Lookup](./dictionary-key-lookup/index.md)**
+
+    ---
+
+    ![Dictionary Key Lookup](./dictionary-key-lookup/dictionary-key-lookup.png)
+
+    Type a key and the right drawer springs open in one hop — or hit a
+    KeyError — then race the dict against a list. (Chapter 21)
+
