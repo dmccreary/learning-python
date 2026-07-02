@@ -162,6 +162,20 @@ words = re.findall(r"[A-Za-z]+", text)
 print("Words found:", words)`);
 </script>
 
+### See It: The Regex Match Lab
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    The lab below starts with the pattern `\d{3}-\d{4}`. Read the chips under
+    the pattern box, then predict: **which pieces of the sample text will
+    light up — and how many matches will findall report?**
+
+<iframe src="../../sims/regex-match-lab/main.html" height="372" width="100%" scrolling="no"></iframe>
+
+[Explore the Regex Match Lab MicroSim](../../sims/regex-match-lab/index.md){ .md-button }
+
+Now experiment: delete the `-` from the pattern and watch the matches change instantly. Try each preset button, then build your own pattern one character at a time. The chip strip always translates your pattern into plain English — regex stops being magic once you can read it aloud.
+
 ## Character Classes
 
 A **character class** is a set of characters in square brackets. It matches any single character in the set.

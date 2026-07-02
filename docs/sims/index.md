@@ -247,3 +247,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Edit JSON on the left and watch the Python objects appear on the
     right — true becomes True, null becomes None. (Chapter 27)
 
+-   **[Regex Match Lab](./regex-match-lab/index.md)**
+
+    ---
+
+    ![Regex Match Lab](./regex-match-lab/regex-match-lab.png)
+
+    Type a pattern, watch matches light up live, and read the pattern as
+    plain-English chips — regex stops being magic. (Chapter 29)
+

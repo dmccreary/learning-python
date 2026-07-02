@@ -337,6 +337,7 @@ nav:
     - Object Instance Inspector: sims/object-instance-inspector/index.md
     - Range Explorer: sims/range-explorer/index.md
     - Recursion Call Stack: sims/recursion-call-stack/index.md
+    - Regex Match Lab: sims/regex-match-lab/index.md
     - RGB Color Mixer: sims/rgb-color-mixer/index.md
     - Scope Inspector: sims/scope-inspector/index.md
     - Set Operations Venn: sims/set-operations-venn/index.md
@@ -347,6 +348,8 @@ nav:
     - Unit Circle Degrees and Radians: sims/unit-circle-radians/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
     - While-Loop Stepper: sims/while-loop-stepper/index.md
+
+
 
 
 
