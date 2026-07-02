@@ -281,6 +281,16 @@ class Dog(Animal):
         print(f"{self.name} barks loudly!")   # overrides Animal.speak
 ```
 
+### See It: Watch the Method Lookup Climb
+
+When you call `d.eat()` on a Dog, Python quietly searches: first in `class Dog`, and if the method is not there, up in `class Animal`. Before you click anything in the explorer below, predict: **which of the three calls — `d.fetch()`, `d.speak()`, `d.eat()` — needs to climb up to Animal?**
+
+<iframe src="../../sims/inheritance-explorer/main.html" height="507" width="100%" scrolling="no"></iframe>
+
+[Explore the Inheritance Explorer MicroSim](../../sims/inheritance-explorer/index.md){ .md-button }
+
+Click all three calls and watch the highlights climb. Notice what happens after `d.speak()`: Animal's own `speak()` is marked **shadowed** — Dog's version won, exactly like the override example above. The last button shows `super()`, the polite way for a child class to run the parent's version anyway.
+
 ## Learning Check
 
 !!! mascot-thinking "Your Turn — Add a Method"

@@ -329,6 +329,7 @@ nav:
     - For-Loop Stepper: sims/for-loop-stepper/index.md
     - Fractal Tree Explorer: sims/fractal-tree-explorer/index.md
     - Function Call Flow: sims/function-call-flow/index.md
+    - Inheritance Explorer: sims/inheritance-explorer/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
     - List Index Explorer: sims/list-index-explorer/index.md
     - Modulo Clock: sims/modulo-clock/index.md
@@ -345,6 +346,8 @@ nav:
     - Unit Circle Degrees and Radians: sims/unit-circle-radians/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
     - While-Loop Stepper: sims/while-loop-stepper/index.md
+
+
 
 
 

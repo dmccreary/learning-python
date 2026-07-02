@@ -228,3 +228,13 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     A dashed blueprint, solid instance cards, and a glowing arrow that
     shows exactly which dog `self` is. (Chapter 25)
 
+-   **[Inheritance Explorer](./inheritance-explorer/index.md)**
+
+    ---
+
+    ![Inheritance Explorer](./inheritance-explorer/inheritance-explorer.png)
+
+    Click a method call and watch the lookup climb the class tree —
+    overrides shadow the parent, and super() climbs on purpose.
+    (Chapter 25)
+
