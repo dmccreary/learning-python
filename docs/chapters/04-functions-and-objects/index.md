@@ -236,6 +236,16 @@ The table below shows what each piece does:
 | `total = add(5, 3)` | Calls the function; the returned value `8` is stored in `total` |
 | `print(total)` | Prints `8` |
 
+## See It: Watch a Call Flow Through a Function
+
+The MicroSim below traces a function call in slow motion: the argument flies into the parameter slot, the body computes, and the return value flies back out to the call site. Before you click anything, read the program on the left and **predict the two numbers it will print**. Then step through and watch where your numbers come from.
+
+<iframe src="../../sims/function-call-flow/main.html" height="502" width="100%" scrolling="no"></iframe>
+
+[Explore the Function Call Flow MicroSim](../../sims/function-call-flow/index.md){ .md-button }
+
+Notice that the function machine is built once at the `def` step, then used **twice** — the same recipe with two different ingredients.
+
 ## Functions Returning None
 
 What happens if a function never uses `return`?

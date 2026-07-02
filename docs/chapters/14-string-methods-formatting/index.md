@@ -116,6 +116,16 @@ Were you right? `s[3:8]` gives you `"gramm"` — characters at positions 3, 4, 5
 
 The `::2` notation is a **step** — `s[::2]` takes every second character.
 
+### See It: Slice with Your Hands
+
+The slicer below turns slice notation into something you can grab. Drag the green **start** handle and the red **end** handle and watch the `word[2:7]` notation update live. Before you drag anything, predict: **where do the two handles need to sit to extract `"ROCKS"`?**
+
+<iframe src="../../sims/string-slicer/main.html" height="482" width="100%" scrolling="no"></iframe>
+
+[Explore the String Slicer MicroSim](../../sims/string-slicer/index.md){ .md-button }
+
+Notice that the red end handle always sits **one position past** the last selected letter — the end index is never included. Click any single tile to see plain indexing like `word[3]`, type your own word, or click **New Challenge** to practice.
+
 ## Split, Join, and Replace
 
 Three of the most-used string methods are `split()`, `join()`, and `replace()`.

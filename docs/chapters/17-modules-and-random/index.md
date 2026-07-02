@@ -118,6 +118,16 @@ for i in range(5):
 
 Run it a few times — the results change each time because the numbers are random.
 
+### See It: Randomness Has a Shape
+
+Five rolls look like pure chaos. But what happens after a **thousand** rolls? Before you click anything in the histogram below, predict: **after 1000 rolls of one die, will some faces come up way more than others, or will the bars be roughly even?**
+
+<iframe src="../../sims/dice-roll-histogram/main.html" height="482" width="100%" scrolling="no"></iframe>
+
+[Explore the Dice Roll Histogram MicroSim](../../sims/dice-roll-histogram/index.md){ .md-button }
+
+Now switch the dropdown to **Sum of two dice** and roll 1000 again. The flat skyline turns into a mountain with its peak at 7 — can you figure out why there are more ways to roll a 7 than a 2? That discovery is the seed of probability.
+
 ## `random.choice()` — Pick from a List
 
 `choice(seq)` picks one random item from a sequence (list, string, or tuple).

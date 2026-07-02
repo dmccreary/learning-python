@@ -288,6 +288,16 @@ Python evaluates the right side first: `score + 5` is `10 + 5`, which equals `15
 Then it stores `15` back into `score`.
 This pattern — "take the old value, add something, store the result back" — appears constantly in real programs.
 
+## See It: Boxes in Memory
+
+The MicroSim below lets you *watch* the sticky-note boxes as a script runs. Before you click anything, look at the script on the left and **predict how many boxes will exist when it finishes — and what value each box will hold**. Then click **Next Step** to check yourself, one line at a time.
+
+<iframe src="../../sims/variable-memory-model/main.html" height="482" width="100%" scrolling="no"></iframe>
+
+[Explore the Variable Memory Model MicroSim](../../sims/variable-memory-model/index.md){ .md-button }
+
+Do not miss the **Copy Surprise** program in the dropdown: after `b = a`, does changing `a` change `b`? Make your prediction, then step through to find out.
+
 ## None: The "Nothing" Value
 
 Python has one special value that is neither an integer nor a float.

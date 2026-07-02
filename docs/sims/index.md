@@ -10,3 +10,278 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
 
 <div class="grid cards" markdown>
 
+-   **[Code Stepper](./code-stepper/index.md)**
+
+    ---
+
+    ![Code Stepper](./code-stepper/code-stepper.png)
+
+    Step through a short Python program one line at a time and watch the
+    output appear — see top-to-bottom execution with your own eyes.
+    (Chapters 1-2)
+
+-   **[Variable Memory Model](./variable-memory-model/index.md)**
+
+    ---
+
+    ![Variable Memory Model](./variable-memory-model/variable-memory-model.png)
+
+    Watch labeled memory boxes get created, read, and replaced as a script
+    runs — the sticky-note metaphor made real. (Chapter 3)
+
+-   **[Function Call Flow](./function-call-flow/index.md)**
+
+    ---
+
+    ![Function Call Flow](./function-call-flow/function-call-flow.png)
+
+    Trace a function call in slow motion: the argument flies into the
+    parameter slot and the return value flies back. (Chapter 4)
+
+-   **[Turtle State Inspector](./turtle-state-inspector/index.md)**
+
+    ---
+
+    ![Turtle State Inspector](./turtle-state-inspector/turtle-state-inspector.png)
+
+    Step through turtle commands while a dashboard reveals the turtle's
+    hidden state: position, heading compass, and pen. (Chapter 5)
+
+-   **[Expression Evaluator](./expression-evaluator/index.md)**
+
+    ---
+
+    ![Expression Evaluator](./expression-evaluator/expression-evaluator.png)
+
+    Watch `2 + 3 * 4` collapse one operation at a time in the exact order
+    Python evaluates it — PEMDAS made visible. (Chapter 6)
+
+-   **[Modulo Clock](./modulo-clock/index.md)**
+
+    ---
+
+    ![Modulo Clock](./modulo-clock/modulo-clock.png)
+
+    See the remainder as wrap-around counting on a dial and as leftover
+    dots — the `%` operator made concrete. (Chapter 6)
+
+-   **[For-Loop Stepper](./for-loop-stepper/index.md)**
+
+    ---
+
+    ![For-Loop Stepper](./for-loop-stepper/for-loop-stepper.png)
+
+    Crank a for loop by hand: watch `i` change, the arrow jump back to the
+    top, and a turtle draw one square side per trip. (Chapter 7)
+
+-   **[Range Explorer](./range-explorer/index.md)**
+
+    ---
+
+    ![Range Explorer](./range-explorer/range-explorer.png)
+
+    Slide start, stop, and step and watch the number line light up — the
+    stop value is a hollow ring because it is never included. (Chapter 7)
+
+-   **[Control Flow Explorer](./control-flow-explorer/index.md)**
+
+    ---
+
+    ![Control Flow Explorer](./control-flow-explorer/control-flow-explorer.png)
+
+    Move a score slider and watch exactly one path through an if/elif/else
+    flowchart glow green — later checks are never even looked at. (Chapter 9)
+
+-   **[Boolean Logic Lab](./boolean-logic-lab/index.md)**
+
+    ---
+
+    ![Boolean Logic Lab](./boolean-logic-lab/boolean-logic-lab.png)
+
+    Wire True/False inputs into and, or, and not — and catch Python
+    skipping the second input when the first one decides. (Chapters 9, 19)
+
+-   **[While-Loop Stepper](./while-loop-stepper/index.md)**
+
+    ---
+
+    ![While-Loop Stepper](./while-loop-stepper/while-loop-stepper.png)
+
+    Feel the check-run-check rhythm of a while loop — and safely watch an
+    infinite loop spin inside its cage. (Chapter 10)
+
+-   **[Scope Inspector](./scope-inspector/index.md)**
+
+    ---
+
+    ![Scope Inspector](./scope-inspector/scope-inspector.png)
+
+    Variables live in rooms: watch a Function room appear during a call,
+    shadow the global, and vanish at return. (Chapter 11)
+
+-   **[RGB Color Mixer](./rgb-color-mixer/index.md)**
+
+    ---
+
+    ![RGB Color Mixer](./rgb-color-mixer/rgb-color-mixer.png)
+
+    Mix red, green, and blue, watch the hex code assemble itself, and copy
+    the pencolor line straight into your turtle art. (Chapter 12)
+
+-   **[String Slicer](./string-slicer/index.md)**
+
+    ---
+
+    ![String Slicer](./string-slicer/string-slicer.png)
+
+    Drag start and end handles over letter tiles and watch `word[2:7]`
+    build itself — the end is never included, and now you can see why.
+    (Chapters 8, 14)
+
+-   **[List Index Explorer](./list-index-explorer/index.md)**
+
+    ---
+
+    ![List Index Explorer](./list-index-explorer/list-index-explorer.png)
+
+    Append, insert, and pop a list of colored boxes and watch every index
+    renumber — plus the TypeError a string gives instead. (Chapters 15-16)
+
+-   **[Stack and Queue Simulator](./stack-queue-simulator/index.md)**
+
+    ---
+
+    ![Stack and Queue Simulator](./stack-queue-simulator/stack-queue-simulator.png)
+
+    Feed the same letters into a stack of plates and a waiting line — then
+    watch them leave in opposite orders. (Chapters 16, 30)
+
+-   **[Dice Roll Histogram](./dice-roll-histogram/index.md)**
+
+    ---
+
+    ![Dice Roll Histogram](./dice-roll-histogram/dice-roll-histogram.png)
+
+    Roll 1, 100, or 1000 dice and watch chaos flatten into a pattern —
+    then find the mountain hiding in two-dice sums. (Chapter 17)
+
+-   **[Sine Wave Explorer](./sine-wave-explorer/index.md)**
+
+    ---
+
+    ![Sine Wave Explorer](./sine-wave-explorer/sine-wave-explorer.png)
+
+    Drag amplitude, frequency, and phase sliders and watch
+    `y = A × sin(f·x + p)` re-plot instantly. (Chapter 18)
+
+-   **[Unit Circle Degrees and Radians](./unit-circle-radians/index.md)**
+
+    ---
+
+    ![Unit Circle](./unit-circle-radians/unit-circle-radians.png)
+
+    Drag a point around the unit circle and read the angle in degrees,
+    radians, and multiples of π — with sin and cos bars. (Chapter 18)
+
+-   **[Set Operations Venn](./set-operations-venn/index.md)**
+
+    ---
+
+    ![Set Operations Venn](./set-operations-venn/set-operations-venn.png)
+
+    Type two sets, watch the chips land in the right regions, and light up
+    union, intersection, and difference. (Chapter 20)
+
+-   **[Dictionary Key Lookup](./dictionary-key-lookup/index.md)**
+
+    ---
+
+    ![Dictionary Key Lookup](./dictionary-key-lookup/dictionary-key-lookup.png)
+
+    Type a key and the right drawer springs open in one hop — or hit a
+    KeyError — then race the dict against a list. (Chapter 21)
+
+-   **[Recursion Call Stack](./recursion-call-stack/index.md)**
+
+    ---
+
+    ![Recursion Call Stack](./recursion-call-stack/recursion-call-stack.png)
+
+    Watch factorial(4) stack frames pile up to the gold base case, then
+    unwind as each paused multiplication fills in. (Chapters 23-24)
+
+-   **[Fractal Tree Explorer](./fractal-tree-explorer/index.md)**
+
+    ---
+
+    ![Fractal Tree Explorer](./fractal-tree-explorer/fractal-tree-explorer.png)
+
+    Sculpt a recursive tree with angle, depth, and shrink sliders — every
+    recursion level wears its own color. (Chapter 24)
+
+-   **[Object Instance Inspector](./object-instance-inspector/index.md)**
+
+    ---
+
+    ![Object Instance Inspector](./object-instance-inspector/object-instance-inspector.png)
+
+    A dashed blueprint, solid instance cards, and a glowing arrow that
+    shows exactly which dog `self` is. (Chapter 25)
+
+-   **[Inheritance Explorer](./inheritance-explorer/index.md)**
+
+    ---
+
+    ![Inheritance Explorer](./inheritance-explorer/inheritance-explorer.png)
+
+    Click a method call and watch the lookup climb the class tree —
+    overrides shadow the parent, and super() climbs on purpose.
+    (Chapter 25)
+
+-   **[JSON to Python Type Mapper](./json-python-mapper/index.md)**
+
+    ---
+
+    ![JSON to Python Type Mapper](./json-python-mapper/json-python-mapper.png)
+
+    Edit JSON on the left and watch the Python objects appear on the
+    right — true becomes True, null becomes None. (Chapter 27)
+
+-   **[Regex Match Lab](./regex-match-lab/index.md)**
+
+    ---
+
+    ![Regex Match Lab](./regex-match-lab/regex-match-lab.png)
+
+    Type a pattern, watch matches light up live, and read the pattern as
+    plain-English chips — regex stops being magic. (Chapter 29)
+
+-   **[Sorting Algorithm Comparer](./sorting-comparer/index.md)**
+
+    ---
+
+    ![Sorting Algorithm Comparer](./sorting-comparer/sorting-comparer.png)
+
+    Step three classic sorts one comparison at a time, then race bubble
+    vs insertion on identical data — the winner depends on the data.
+    (Chapter 30)
+
+-   **[Search Race](./search-race/index.md)**
+
+    ---
+
+    ![Search Race](./search-race/search-race.png)
+
+    Linear search plods box by box while binary search throws away half
+    the shelf per check — and a shuffled-shelf trap shows why sorted
+    matters. (Chapter 30)
+
+-   **[Graph Traversal Explorer](./graph-traversal-explorer/index.md)**
+
+    ---
+
+    ![Graph Traversal Explorer](./graph-traversal-explorer/graph-traversal-explorer.png)
+
+    Step BFS and DFS over the same graph with the live queue or stack
+    beside it — then watch BFS reveal the shortest path. (Chapter 30)
+

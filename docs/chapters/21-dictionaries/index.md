@@ -122,6 +122,16 @@ print(grades.get("Dave", 0))        # 0 — custom default
 
 Use `get()` whenever you're not sure whether a key exists.
 
+### See It: A Cabinet of Labeled Drawers
+
+A dictionary works like a cabinet where every drawer has its key written on the front — Python jumps straight to the right drawer without opening the others. Before you try the lookup below, predict: **what happens if you type `Grace` with a capital G instead of `grace`?**
+
+<iframe src="../../sims/dictionary-key-lookup/main.html" height="532" width="100%" scrolling="no"></iframe>
+
+[Explore the Dictionary Key Lookup MicroSim](../../sims/dictionary-key-lookup/index.md){ .md-button }
+
+Try a missing key both ways: with square brackets you get the `KeyError` crash, and with the **.get()** checkbox you get a polite `None`. Then check **compare with a list search** — the list has to check drawer after drawer, while the dictionary always takes one hop. That difference is why phone books, glossaries, and game inventories all use dictionaries.
+
 ## Adding and Updating Entries
 
 Add a new key or update an existing one using the same assignment syntax:

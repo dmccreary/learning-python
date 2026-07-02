@@ -122,6 +122,20 @@ print("10! =", factorial(10))`);
 
 Were you right? `5! = 120`. Tracing it: `5 * factorial(4)` → `5 * 4 * factorial(3)` → ... → `5 * 4 * 3 * 2 * 1`.
 
+### See It: The Call Stack in Action
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Every recursive call gets its own **frame** on a stack, each remembering
+    its own `n`. For `factorial(4)`, predict: **how tall will the tower of
+    frames get before it starts coming back down?** Step through and count!
+
+<iframe src="../../sims/recursion-call-stack/main.html" height="562" width="100%" scrolling="no"></iframe>
+
+[Explore the Recursion Call Stack MicroSim](../../sims/recursion-call-stack/index.md){ .md-button }
+
+Watch the two phases: frames pile **up** with paused multiplications (`4 × ?`) until the gold base case, then the answers flow back **down** as each frame finishes its math. Then pick **Missing Base Case** from the dropdown to see exactly why every recursive function needs a stopping rule.
+
 ## Lambda Functions
 
 A **lambda** is a tiny anonymous function written on one line.
@@ -231,6 +245,16 @@ Try changing the angle from `25` to `35` or `15` to see how it changes the tree'
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
     Notice `t.backward(length)` at the end of `draw_tree`. This is the turtle going back to where it started *before* it drew the current branch.
     Without this, the turtle would wander off. Backtracking is what makes recursive drawing work — always return the turtle to where you found it.
+
+### See It: Sculpt a Fractal with Sliders
+
+Editing the turtle code and re-running works, but sliders reveal how *sensitive* a fractal is to its parameters. In the explorer below, every recursion level has its own color — the brown trunk is level 0, and the greenest twigs are the deepest calls. Before you drag anything, predict: **what happens to the "recursive calls" counter each time you raise the depth by 1?**
+
+<iframe src="../../sims/fractal-tree-explorer/main.html" height="552" width="100%" scrolling="no"></iframe>
+
+[Explore the Fractal Tree Explorer MicroSim](../../sims/fractal-tree-explorer/index.md){ .md-button }
+
+Roughly doubles every time — that is the two-recursive-calls pattern you just wrote in `draw_tree`. When you find a tree you love, click **Snapshot**, keep exploring, and compare against the gray ghost. Can you design a weeping willow? A tumbleweed?
 
 ## Learning Check
 

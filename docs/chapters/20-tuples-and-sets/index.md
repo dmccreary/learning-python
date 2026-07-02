@@ -267,6 +267,21 @@ print("In either class:", either)
 print("Only in Python:", only_python)`);
 </script>
 
+### See It: Set Operations on a Venn Diagram
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    In the diagram below, set A has dog, cat, fish, and bird; set B has cat,
+    bird, snake, and hamster. Before you click any operation button, predict:
+    **which animals will `A & B` give you?** Then click and see which region
+    lights up!
+
+<iframe src="../../sims/set-operations-venn/main.html" height="542" width="100%" scrolling="no"></iframe>
+
+[Explore the Set Operations Venn MicroSim](../../sims/set-operations-venn/index.md){ .md-button }
+
+Click all four operations and watch which region glows for each. Then edit the sets — type your own items, and try entering the same animal twice in one set to see the set collapse the duplicate. Notice that `A & B` with no shared items gives `set()`, Python's way of writing an empty set.
+
 ## Frozensets
 
 A **frozenset** is an immutable version of a set — you cannot add or remove items after creation.

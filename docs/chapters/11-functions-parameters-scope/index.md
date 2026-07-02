@@ -207,6 +207,21 @@ print("name is:", name)`);
 | `name` | Outside (global) | Yes | Yes |
 | `greeting` | Inside `greet()` (local) | Yes | No — NameError! |
 
+### See It: Rooms for Variables
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    In the **Shadowing Bug** program below, a function sets `score = 99` while
+    the global `score` is 10. After the function finishes, what will
+    `print(score)` show — 99 or 10? Make your prediction, then step through
+    and watch the rooms!
+
+<iframe src="../../sims/scope-inspector/main.html" height="512" width="100%" scrolling="no"></iframe>
+
+[Explore the Scope Inspector MicroSim](../../sims/scope-inspector/index.md){ .md-button }
+
+Watch how the Function room appears when a call starts and **vanishes at return, taking its variables with it**. Then run **The global Fix** to see the one case where a function writes straight into the Global room.
+
 ## The `global` Keyword
 
 By default, a function can *read* a global variable but cannot *change* it.

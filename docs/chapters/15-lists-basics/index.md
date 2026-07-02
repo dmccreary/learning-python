@@ -236,6 +236,16 @@ new_word = "H" + word[1:]   # must create a new string
 print("New word:", new_word)`);
 </script>
 
+### See It: A List Reshaping Itself
+
+Lists are **mutable** — they change shape in place, and every change renumbers the indices. In the explorer below, predict first: **if you insert a new color at index 1, what happens to the index of every color after it?** Then click `insert(1, ...)` and watch.
+
+<iframe src="../../sims/list-index-explorer/main.html" height="482" width="100%" scrolling="no"></iframe>
+
+[Explore the List Index Explorer MicroSim](../../sims/list-index-explorer/index.md){ .md-button }
+
+Try a few `append()` and `pop()` clicks and watch both index rows renumber. Then click **String Test** to see the exact `TypeError` a string gives when you try the same in-place change — the mutable/immutable divide in one screen.
+
 ## Learning Check
 
 !!! mascot-thinking "Your Turn — Find the Index Bug"

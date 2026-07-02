@@ -248,6 +248,16 @@ print("BFS is level-by-level; DFS goes deep before backtracking.")`);
 | Memory | More (stores whole frontier) | Less (stores one path) |
 | Best for | Shortest path, social networks | Exploring all paths, cycles |
 
+### See It: The Queue and the Stack Drive Everything
+
+The only difference between BFS and DFS is the row in that table's first line — which waiting node gets visited next. The explorer below shows the queue or stack **live** beside the graph while you step. Before you click, predict: **starting at A, which node does BFS visit third? Does DFS agree?**
+
+<iframe src="../../sims/graph-traversal-explorer/main.html" height="537" width="100%" scrolling="no"></iframe>
+
+[Explore the Graph Traversal Explorer MicroSim](../../sims/graph-traversal-explorer/index.md){ .md-button }
+
+Step all the way through BFS and watch the ripple move level by level — then the final step reveals the payoff: following the parents backward gives the **shortest path** from A to the goal. Switch to DFS and step again: same graph, same start, completely different order, because the stack always grabs the *newest* discovery.
+
 ## Applying BFS: Finding a Path Through a Maze
 
 A maze is just a graph — junctions and rooms are nodes, corridors are edges. BFS's queue already explores level by level, which means it can find the **shortest path**, not just answer "can I get there?" The trick is remembering **where you came from** at each step, so you can retrace your route once you reach the goal.
@@ -378,6 +388,16 @@ print("Insertion:", insertion_sort(data))
 print("Built-in:", sorted(data))`);
 </script>
 
+### See It: Sorting in Slow Motion
+
+The code above shows *what* each sort computes; the comparer below shows *how they move*. Every sort is just compares and swaps in a different choreography. Before you click Step, predict: **for 10 reversed values, roughly how many comparisons will bubble sort need?**
+
+<iframe src="../../sims/sorting-comparer/main.html" height="542" width="100%" scrolling="no"></iframe>
+
+[Explore the Sorting Algorithm Comparer MicroSim](../../sims/sorting-comparer/index.md){ .md-button }
+
+Step through each algorithm and watch its signature move: bubble sort's big values float right, selection sort hunts for the minimum, insertion sort slides each new value into place. Then pick **Race — Bubble vs Insertion**, switch the data to **nearly sorted**, and Auto-play: insertion sort demolishes bubble sort — the answer to "which sort is best?" is always *it depends on the data*.
+
 ## Binary Search
 
 **Binary search** finds an item in a *sorted* list in O(log n) time — far faster than linear search.
@@ -401,6 +421,16 @@ def binary_search(sorted_list, target):
             hi = mid - 1
     return -1   # not found
 ```
+
+### See It: Linear vs Binary, Head to Head
+
+The race below runs both searches on the same shelf of 31 boxes. Before you click Step, predict: **how many checks will each search need to find 24?** (Linear starts at the left; binary starts in the middle.)
+
+<iframe src="../../sims/search-race/main.html" height="522" width="100%" scrolling="no"></iframe>
+
+[Explore the Search Race MicroSim](../../sims/search-race/index.md){ .md-button }
+
+Watch binary search throw away half the shelf with every check: 31 → 15 → 7 → 3 → 1. Then switch to the **shuffled shelf (trap!)** and search again — binary search can report NOT FOUND even when the target is sitting right there. Cutting the problem in half only works when the shelf is sorted, which is exactly why the function above is named `binary_search(sorted_list, ...)`.
 
 ## Big-O Notation — Time and Space Complexity
 

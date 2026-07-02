@@ -172,6 +172,20 @@ for rgb, pos in zip(rgb_colors, positions):
 
 Try changing the numbers in the `rgb_colors` list. Each number goes from 0 (none) to 255 (full brightness).
 
+### See It: Mix Your Own Color
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Before you touch the sliders below, predict: to make a bright **yellow**,
+    which two sliders need to be high, and which one low? Mix it and check
+    the hex code you get!
+
+<iframe src="../../sims/rgb-color-mixer/main.html" height="482" width="100%" scrolling="no"></iframe>
+
+[Explore the RGB Color Mixer MicroSim](../../sims/rgb-color-mixer/index.md){ .md-button }
+
+Watch the hex code as you drag one slider — only that channel's **two digits** change, highlighted in yellow. When you find a color you love, copy the `t.pencolor(...)` line straight into any turtle lab in this chapter. Click **New Challenge** to play match-the-color.
+
 ## Background and Pen Colors
 
 Turtle lets you set two separate colors at once.

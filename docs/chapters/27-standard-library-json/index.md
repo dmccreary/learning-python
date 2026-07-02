@@ -204,6 +204,16 @@ print(new_json)`);
 
 `indent=2` makes the JSON human-readable with 2-space indentation.
 
+### See It: The Type Mapper
+
+JSON looks almost exactly like Python — which is exactly why it trips people up. In the mapper below, edit the JSON on the left and watch what `json.loads()` builds on the right. Before you touch it, predict: **what do JSON's `true` and `null` become in Python?**
+
+<iframe src="../../sims/json-python-mapper/main.html" height="442" width="100%" scrolling="no"></iframe>
+
+[Explore the JSON to Python Type Mapper MicroSim](../../sims/json-python-mapper/index.md){ .md-button }
+
+Click **The tricky trio** preset to see all three famous differences at once, then try both **Broken** presets — single quotes and trailing commas are legal in Python but crash JSON parsing. Hover any colored value on the right to see its type names in both worlds.
+
 ## Reading and Writing JSON from Files
 
 `json.load(file)` reads JSON directly from an open file.

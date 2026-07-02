@@ -137,6 +137,21 @@ for i in range(4):
 t.penup()             # ← NOT part of the loop (no indent)
 ```
 
+### See It: Step Through the Loop
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    In the stepper below, watch the value of `i` in the badge at the top.
+    What will `i` be on the very first trip — 1 or 0? And how many times will
+    the arrow jump back up to the `for` line? Make your guesses, then step
+    through and check!
+
+<iframe src="../../sims/for-loop-stepper/main.html" height="502" width="100%" scrolling="no"></iframe>
+
+[Explore the For-Loop Stepper MicroSim](../../sims/for-loop-stepper/index.md){ .md-button }
+
+Were you right? The **Countdown** program in the dropdown shows the same rhythm with print(), and **Running Total** previews the accumulator pattern you will meet later in this chapter.
+
 ## Understanding range()
 
 `range()` can take one, two, or three arguments:
@@ -155,6 +170,16 @@ for i in range(0, 360, 45):
 ```
 
 This is useful for drawing shapes at regular angular intervals — for example, drawing eight lines radiating from the center like spokes on a wheel, each 45° apart.
+
+### See It: The Range Explorer
+
+The trickiest thing about `range()` is that the **stop value is never included**. In the explorer below, the stop value is drawn as a hollow orange ring — the counting always stops just before it. Before you move anything, predict: **which numbers does `range(2, 12, 3)` produce?** Then check the number line.
+
+<iframe src="../../sims/range-explorer/main.html" height="482" width="100%" scrolling="no"></iframe>
+
+[Explore the Range Explorer MicroSim](../../sims/range-explorer/index.md){ .md-button }
+
+When you feel confident, click **New Challenge** — the sim shows green target rings, and your job is to find slider settings that light them up exactly.
 
 ## The Loop Counter Variable
 

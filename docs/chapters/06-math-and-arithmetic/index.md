@@ -131,6 +131,16 @@ Let's look more closely at the three operators that may be new to you.
 
 **`**` — Exponentiation.** Two stars together means "to the power of." `2 ** 8` = 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 = 256. `10 ** 3` = 10 × 10 × 10 = 1000.
 
+### See It: The Modulo Clock
+
+The remainder is easiest to understand as **wrap-around counting**. The Modulo Clock below shows `%` two ways at once: counting around a dial that wraps at the divisor, and splitting dots into equal rows with the leftovers highlighted in orange. Before you touch the sliders, predict: **what is `17 % 5`?** Then drag the sliders and check.
+
+<iframe src="../../sims/modulo-clock/main.html" height="502" width="100%" scrolling="no"></iframe>
+
+[Explore the Modulo Clock MicroSim](../../sims/modulo-clock/index.md){ .md-button }
+
+Slide the divisor down to **2** and move the dividend — the sim tells you whether each number is even or odd. That is exactly the `n % 2` trick you will use in later chapters.
+
 ## Order of Operations
 
 Python follows the same order of operations you use in math class — **PEMDAS**:
@@ -148,6 +158,21 @@ Python follows the same order of operations you use in math class — **PEMDAS**
 | `15 // 4 % 2` | `(15 // 4) % 2` = `3 % 2` | `1` |
 
 When in doubt, add parentheses. `(2 + 3) * 4` is clearer than `2 + 3 * 4`, and extra parentheses never cause errors.
+
+### See It: Watch an Expression Collapse
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    The MicroSim below starts with `2 + 3 * 4`. Which operation will Python
+    compute first — the `+` or the `*`? And what will the final answer be?
+    Make your guess, then click Next Step to watch the expression collapse
+    one operation at a time!
+
+<iframe src="../../sims/expression-evaluator/main.html" height="422" width="100%" scrolling="no"></iframe>
+
+[Explore the Expression Evaluator MicroSim](../../sims/expression-evaluator/index.md){ .md-button }
+
+Were you right? Try every expression in the dropdown — the last one, `17 // 5 + 17 % 5`, shows how `//` and `%` work as a team.
 
 ## Negative Numbers
 

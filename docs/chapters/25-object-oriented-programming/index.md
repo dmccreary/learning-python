@@ -147,6 +147,21 @@ for s in students:
     print(f"{s.name}: {s.score} → {s.grade()}")`);
 </script>
 
+### See It: Blueprint vs Real Dogs
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    In the inspector below, the program defines `class Dog` and then calls
+    `Dog(...)` twice. Predict: when `rex.bark()` runs, **how does Python know
+    which dog's name to print — Rex's or Bella's?** Step through and watch
+    the orange arrow!
+
+<iframe src="../../sims/object-instance-inspector/main.html" height="572" width="100%" scrolling="no"></iframe>
+
+[Explore the Object Instance Inspector MicroSim](../../sims/object-instance-inspector/index.md){ .md-button }
+
+The answer: `self` is always the object **left of the dot**. The class is just a dashed blueprint — the solid cards are the real objects, each with its own attribute boxes. The last step shows one more secret: `rex.species` is not on rex's card at all, so Python looks up to the blueprint, where the shared class variable lives.
+
 ## `__str__()` — String Representation
 
 `__str__()` defines what `print(obj)` and `str(obj)` show.
@@ -265,6 +280,16 @@ class Dog(Animal):
     def speak(self):
         print(f"{self.name} barks loudly!")   # overrides Animal.speak
 ```
+
+### See It: Watch the Method Lookup Climb
+
+When you call `d.eat()` on a Dog, Python quietly searches: first in `class Dog`, and if the method is not there, up in `class Animal`. Before you click anything in the explorer below, predict: **which of the three calls — `d.fetch()`, `d.speak()`, `d.eat()` — needs to climb up to Animal?**
+
+<iframe src="../../sims/inheritance-explorer/main.html" height="507" width="100%" scrolling="no"></iframe>
+
+[Explore the Inheritance Explorer MicroSim](../../sims/inheritance-explorer/index.md){ .md-button }
+
+Click all three calls and watch the highlights climb. Notice what happens after `d.speak()`: Animal's own `speak()` is marked **shadowed** — Dog's version won, exactly like the override example above. The last button shows `super()`, the polite way for a child class to run the parent's version anyway.
 
 ## Learning Check
 
