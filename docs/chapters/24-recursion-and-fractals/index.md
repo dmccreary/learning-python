@@ -246,6 +246,16 @@ Try changing the angle from `25` to `35` or `15` to see how it changes the tree'
     Notice `t.backward(length)` at the end of `draw_tree`. This is the turtle going back to where it started *before* it drew the current branch.
     Without this, the turtle would wander off. Backtracking is what makes recursive drawing work — always return the turtle to where you found it.
 
+### See It: Sculpt a Fractal with Sliders
+
+Editing the turtle code and re-running works, but sliders reveal how *sensitive* a fractal is to its parameters. In the explorer below, every recursion level has its own color — the brown trunk is level 0, and the greenest twigs are the deepest calls. Before you drag anything, predict: **what happens to the "recursive calls" counter each time you raise the depth by 1?**
+
+<iframe src="../../sims/fractal-tree-explorer/main.html" height="552" width="100%" scrolling="no"></iframe>
+
+[Explore the Fractal Tree Explorer MicroSim](../../sims/fractal-tree-explorer/index.md){ .md-button }
+
+Roughly doubles every time — that is the two-recursive-calls pattern you just wrote in `draw_tree`. When you find a tree you love, click **Snapshot**, keep exploring, and compare against the gray ghost. Can you design a weeping willow? A tumbleweed?
+
 ## Learning Check
 
 !!! mascot-thinking "Your Turn — Add Color to the Fractal Tree"

@@ -327,6 +327,7 @@ nav:
     - Dictionary Key Lookup: sims/dictionary-key-lookup/index.md
     - Expression Evaluator: sims/expression-evaluator/index.md
     - For-Loop Stepper: sims/for-loop-stepper/index.md
+    - Fractal Tree Explorer: sims/fractal-tree-explorer/index.md
     - Function Call Flow: sims/function-call-flow/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
     - List Index Explorer: sims/list-index-explorer/index.md
@@ -343,6 +344,8 @@ nav:
     - Unit Circle Degrees and Radians: sims/unit-circle-radians/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
     - While-Loop Stepper: sims/while-loop-stepper/index.md
+
+
 
 
 

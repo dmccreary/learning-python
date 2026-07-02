@@ -210,3 +210,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Watch factorial(4) stack frames pile up to the gold base case, then
     unwind as each paused multiplication fills in. (Chapters 23-24)
 
+-   **[Fractal Tree Explorer](./fractal-tree-explorer/index.md)**
+
+    ---
+
+    ![Fractal Tree Explorer](./fractal-tree-explorer/fractal-tree-explorer.png)
+
+    Sculpt a recursive tree with angle, depth, and shrink sliders — every
+    recursion level wears its own color. (Chapter 24)
+
