@@ -138,3 +138,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     build itself — the end is never included, and now you can see why.
     (Chapters 8, 14)
 
+-   **[List Index Explorer](./list-index-explorer/index.md)**
+
+    ---
+
+    ![List Index Explorer](./list-index-explorer/list-index-explorer.png)
+
+    Append, insert, and pop a list of colored boxes and watch every index
+    renumber — plus the TypeError a string gives instead. (Chapters 15-16)
+
