@@ -855,4 +855,257 @@ Each pattern is runnable in your browser — click the link to open the interact
 
     [:octicons-arrow-right-24: Open Lab](./hexagonal-spiral/index.md)
 
+-   **Kaleidoscope Slice**
+
+    ---
+
+    ![Kaleidoscope Slice](./kaleidoscope-slice/screen-image.png)
+
+    A 12-section kaleidoscope wheel of gold, crimson, and orchid darts — every other slice a mirror image of its neighbor.
+    Teaches: combining rotation and reflection to build radial symmetry from one 30° slice.
+
+    [:octicons-arrow-right-24: Open Lab](./kaleidoscope-slice/index.md)
+
+-   **Pinwheel Tiling**
+
+    ---
+
+    ![Pinwheel Tiling](./pinwheel-tiling/screen-image.png)
+
+    The Conway–Radin pinwheel dissection fills the square with 500 tiny right triangles colored by the direction each points.
+    Teaches: aperiodic tiling and recursion — every triangle splits into 5 smaller copies of itself.
+
+    [:octicons-arrow-right-24: Open Lab](./pinwheel-tiling/index.md)
+
+-   **Escher-Style Fish Tile**
+
+    ---
+
+    ![Escher-Style Fish Tile](./escher-fish/screen-image.png)
+
+    A 4×4 school of coral and sea-green fish whose noses, tails, backs, and bellies lock together with zero gaps.
+    Teaches: how Escher tessellations work — every bump out of one edge is a matching notch in the opposite edge.
+
+    [:octicons-arrow-right-24: Open Lab](./escher-fish/index.md)
+
+-   **Voronoi Color Regions**
+
+    ---
+
+    ![Voronoi Color Regions](./voronoi-regions/screen-image.png)
+
+    Twelve seed points carve the canvas into a stained-glass map of colored territories.
+    Teaches: the distance formula, nearest-neighbor classification, and raster drawing with `dot()`.
+
+    [:octicons-arrow-right-24: Open Lab](./voronoi-regions/index.md)
+
+-   **Penrose Rhombus Tiling**
+
+    ---
+
+    ![Penrose Rhombus Tiling](./penrose-rhombus/screen-image.png)
+
+    A sun of ten golden triangles deflates into gold thick and royal-blue thin rhombi with perfect five-fold symmetry.
+    Teaches: two-rule recursive subdivision, the golden ratio, and why the pattern never repeats.
+
+    [:octicons-arrow-right-24: Open Lab](./penrose-rhombus/index.md)
+
+-   **River Delta**
+
+    ---
+
+    ![River Delta](./river-delta/screen-image.png)
+
+    A wide navy river fans out into dozens of ever-thinner sky-blue streams across a sandy canvas.
+    Teaches: stochastic branching with pruning and `random.seed()` for repeatable randomness.
+
+    [:octicons-arrow-right-24: Open Lab](./river-delta/index.md)
+
+-   **Coral Branch**
+
+    ---
+
+    ![Coral Branch](./coral-branch/screen-image.png)
+
+    A dark red trunk bursts into a randomly forking fan that fades through crimson to a cloud of pale pink tips.
+    Teaches: variable-arity recursion, random angle variation, and color-by-depth gradients.
+
+    [:octicons-arrow-right-24: Open Lab](./coral-branch/index.md)
+
+-   **Leaf Venation**
+
+    ---
+
+    ![Leaf Venation](./leaf-venation/screen-image.png)
+
+    A filled pale-green leaf with a thick central vein, curving secondary veins, and tiny tertiary veins off each one.
+    Teaches: biological branching structure and smooth curves from small forward+turn steps.
+
+    [:octicons-arrow-right-24: Open Lab](./leaf-venation/index.md)
+
+-   **DNA Double Helix**
+
+    ---
+
+    ![DNA Double Helix](./dna-helix/screen-image.png)
+
+    Two bold sine waves — royal blue and crimson, offset by 180° — joined by gray rungs that shrink at each crossing.
+    Teaches: `math.sin()`, parametric plotting, and how a phase offset creates the helix illusion.
+
+    [:octicons-arrow-right-24: Open Lab](./dna-helix/index.md)
+
+-   **Topographic Map**
+
+    ---
+
+    ![Topographic Map](./topographic-map/screen-image.png)
+
+    Nested wobbly contour rings paint an island from dark green shores through brown slopes to a white summit.
+    Teaches: polar plotting, sine-perturbed radii, and outside-in filled elevation bands.
+
+    [:octicons-arrow-right-24: Open Lab](./topographic-map/index.md)
+
+-   **Epitrochoid**
+
+    ---
+
+    ![Epitrochoid](./epitrochoid/screen-image.png)
+
+    Five rainbow loops traced by a pen on a circle rolling around the outside of a bigger circle.
+    Teaches: outer vs. inner rolling — one sign change separates this from the Spirograph.
+
+    [:octicons-arrow-right-24: Open Lab](./epitrochoid/index.md)
+
+-   **Superellipse**
+
+    ---
+
+    ![Superellipse](./superellipse/screen-image.png)
+
+    A pointy star, a circle, and a rounded "squircle" — all from one equation with different exponents.
+    Teaches: how a single exponent morphs a shape continuously through a parametric family.
+
+    [:octicons-arrow-right-24: Open Lab](./superellipse/index.md)
+
+-   **Cassini Oval**
+
+    ---
+
+    ![Cassini Oval](./cassini-oval/screen-image.png)
+
+    A peanut-shaped oval, a figure-eight lemniscate, and two separate lobes — all from a constant product of distances to two foci.
+    Teaches: the distance-product rule and how one constant changes a curve's topology.
+
+    [:octicons-arrow-right-24: Open Lab](./cassini-oval/index.md)
+
+-   **Fermat's Spiral**
+
+    ---
+
+    ![Fermat's Spiral](./fermat-spiral/screen-image.png)
+
+    Two mirrored arms, crimson and blue, wind outward with rings that pack tighter as they grow.
+    Teaches: square-root scaling with `math.sqrt()` and how the ± sign creates mirrored arms.
+
+    [:octicons-arrow-right-24: Open Lab](./fermat-spiral/index.md)
+
+-   **Astroid**
+
+    ---
+
+    ![Astroid](./astroid/screen-image.png)
+
+    A four-cusped crimson star overlaid on silver string art — forty sliding-ladder segments whose envelope outlines the curve.
+    Teaches: hypocycloids, the cos³/sin³ parametric form, and curve envelopes.
+
+    [:octicons-arrow-right-24: Open Lab](./astroid/index.md)
+
+-   **Mach Bands**
+
+    ---
+
+    ![Mach Bands](./mach-bands/screen-image.png)
+
+    Ten flat gray rectangles step from near-black to near-white, yet phantom stripes appear at every edge.
+    Teaches: building hex color strings from a loop counter and perceptual edge enhancement.
+
+    [:octicons-arrow-right-24: Open Lab](./mach-bands/index.md)
+
+-   **Vasarely Sphere**
+
+    ---
+
+    ![Vasarely Sphere](./vasarely-sphere/screen-image.png)
+
+    A grid of navy dots swells near the center into a sphere bulging out of the flat page, op-art style.
+    Teaches: distorting a regular grid with a radial function and mapping distance to size.
+
+    [:octicons-arrow-right-24: Open Lab](./vasarely-sphere/index.md)
+
+-   **Scintillating Grid**
+
+    ---
+
+    ![Scintillating Grid](./scintillating-grid/screen-image.png)
+
+    Gray streets cross a dark background with white dots at each crossing — and phantom black dots flicker where you aren't looking.
+    Teaches: precise grid placement and how local contrast drives global perception.
+
+    [:octicons-arrow-right-24: Open Lab](./scintillating-grid/index.md)
+
+-   **Impossible Triangle**
+
+    ---
+
+    ![Impossible Triangle](./impossible-triangle/screen-image.png)
+
+    The Penrose triangle woven from three L-shaped beams, each seamlessly in front of the next all the way around.
+    Teaches: coordinate lists, point rotation with sin/cos, and how shading fakes 3-D.
+
+    [:octicons-arrow-right-24: Open Lab](./impossible-triangle/index.md)
+
+-   **Concentric Ring Pulsation**
+
+    ---
+
+    ![Concentric Ring Pulsation](./ring-pulsation/screen-image.png)
+
+    A bull's-eye of orange, blue, crimson, and teal rings that squeeze thinner toward the center and appear to shimmer.
+    Teaches: warm/cool color contrast and filled-circle layering, largest to smallest.
+
+    [:octicons-arrow-right-24: Open Lab](./ring-pulsation/index.md)
+
+-   **Binary Tree Name**
+
+    ---
+
+    ![Binary Tree Name](./binary-tree-name/screen-image.png)
+
+    Each letter of a name traces its own colored path down a binary tree — left for 0, right for 1 — landing on its own leaf.
+    Teaches: `ord()`, extracting binary bits with `//` and `%`, and visualizing data as a drawing.
+
+    [:octicons-arrow-right-24: Open Lab](./binary-tree-name/index.md)
+
+-   **Turtle Chase**
+
+    ---
+
+    ![Turtle Chase](./turtle-chase/screen-image.png)
+
+    A red hunter turtle chases a randomly wandering green prey, re-aiming every frame until "Caught!"
+    Teaches: two-turtle programs, `math.atan2()` targeting, and animation frame loops.
+
+    [:octicons-arrow-right-24: Open Lab](./turtle-chase/index.md)
+
+-   **Reaction-Diffusion Pattern**
+
+    ---
+
+    ![Reaction-Diffusion Pattern](./reaction-diffusion/screen-image.png)
+
+    Four seed squares grow into organic blobs and stripes — the Gray-Scott chemistry behind animal-skin patterns.
+    Teaches: grid simulation with lists, neighbor-based update rules, and emergence.
+
+    [:octicons-arrow-right-24: Open Lab](./reaction-diffusion/index.md)
+
 </div>

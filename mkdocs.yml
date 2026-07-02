@@ -270,6 +270,29 @@ nav:
     - Dragon Curve: turtle-graphics-gallery/dragon-curve/index.md
     - Hilbert Curve: turtle-graphics-gallery/hilbert-curve/index.md
     - Cantor Dust: turtle-graphics-gallery/cantor-dust/index.md
+    - Kaleidoscope Slice: turtle-graphics-gallery/kaleidoscope-slice/index.md
+    - Pinwheel Tiling: turtle-graphics-gallery/pinwheel-tiling/index.md
+    - Escher-Style Fish Tile: turtle-graphics-gallery/escher-fish/index.md
+    - Voronoi Color Regions: turtle-graphics-gallery/voronoi-regions/index.md
+    - Penrose Rhombus Tiling: turtle-graphics-gallery/penrose-rhombus/index.md
+    - River Delta: turtle-graphics-gallery/river-delta/index.md
+    - Coral Branch: turtle-graphics-gallery/coral-branch/index.md
+    - Leaf Venation: turtle-graphics-gallery/leaf-venation/index.md
+    - DNA Double Helix: turtle-graphics-gallery/dna-helix/index.md
+    - Topographic Map: turtle-graphics-gallery/topographic-map/index.md
+    - Epitrochoid: turtle-graphics-gallery/epitrochoid/index.md
+    - Superellipse: turtle-graphics-gallery/superellipse/index.md
+    - Cassini Oval: turtle-graphics-gallery/cassini-oval/index.md
+    - Fermat's Spiral: turtle-graphics-gallery/fermat-spiral/index.md
+    - Astroid: turtle-graphics-gallery/astroid/index.md
+    - Mach Bands: turtle-graphics-gallery/mach-bands/index.md
+    - Vasarely Sphere: turtle-graphics-gallery/vasarely-sphere/index.md
+    - Scintillating Grid: turtle-graphics-gallery/scintillating-grid/index.md
+    - Impossible Triangle: turtle-graphics-gallery/impossible-triangle/index.md
+    - Concentric Ring Pulsation: turtle-graphics-gallery/ring-pulsation/index.md
+    - Binary Tree Name: turtle-graphics-gallery/binary-tree-name/index.md
+    - Turtle Chase: turtle-graphics-gallery/turtle-chase/index.md
+    - Reaction-Diffusion Pattern: turtle-graphics-gallery/reaction-diffusion/index.md
 
   - Jupyter Notebooks:
     - List of Notebooks: jupyter/index.md
