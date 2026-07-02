@@ -128,3 +128,13 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Mix red, green, and blue, watch the hex code assemble itself, and copy
     the pencolor line straight into your turtle art. (Chapter 12)
 
+-   **[String Slicer](./string-slicer/index.md)**
+
+    ---
+
+    ![String Slicer](./string-slicer/string-slicer.png)
+
+    Drag start and end handles over letter tiles and watch `word[2:7]`
+    build itself — the end is never included, and now you can see why.
+    (Chapters 8, 14)
+
