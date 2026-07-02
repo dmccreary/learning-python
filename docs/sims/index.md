@@ -110,3 +110,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Feel the check-run-check rhythm of a while loop — and safely watch an
     infinite loop spin inside its cage. (Chapter 10)
 
+-   **[Scope Inspector](./scope-inspector/index.md)**
+
+    ---
+
+    ![Scope Inspector](./scope-inspector/scope-inspector.png)
+
+    Variables live in rooms: watch a Function room appear during a call,
+    shadow the global, and vanish at return. (Chapter 11)
+
