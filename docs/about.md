@@ -106,17 +106,17 @@ recommended, especially for chapters 1–18 where turtle graphics provide the vi
 
 The book includes:
 
-- **38 Chapters** covering core Python syntax, turtle graphics, control flow, functions,
+- **[38 Chapters](./chapters/index.md)** covering core Python syntax, turtle graphics, control flow, functions,
   collections, object-oriented programming, algorithms, data visualization, NumPy,
   image processing, and an introduction to machine learning
-- **Skulpt Labs** embedded in chapters — fully interactive Python editors that run in
+- **[Skulpt Labs](./python-labs/index.md)** embedded in chapters — fully interactive Python editors that run in
   your browser, no installation or account required
 - **Quizzes** at the end of each chapter to test understanding and retention
 - **Annotated References** linking to Wikipedia, Python documentation, and authoritative sources
-- **Glossary** with definitions for every key concept, written at an accessible reading level
-- **FAQ** answering common questions from students transitioning from block-based coding
-- **Learning Graph** visualizing all 450 concept dependencies across the course
-- **Teacher's Guide** with pacing recommendations, discussion questions, and CSTA alignment
+- **[Glossary](./glossary.md)** with definitions for every key concept, written at an accessible reading level
+- **[FAQ](./faq.md)** answering common questions from students transitioning from block-based coding
+- **[Learning Graph](./learning-graph/index.md)** visualizing all 450 concept dependencies across the course
+- **[Teacher's Guide](./teachers-guide/index.md)** with pacing recommendations, discussion questions, and CSTA alignment
 - **Search** available from any page using the search bar at the top
 
 The [Learning Graph](learning-graph/index.md) is especially useful if you want to explore
