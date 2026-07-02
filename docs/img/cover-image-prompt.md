@@ -4,7 +4,7 @@ Please generate a cover image for a "Learning Python" textbook that can be used 
 The image should follow the open graph image standards with a Wide landscape format  (1.91:1)
 format.
 
-A vibrant, friendly textbook cover illustration for a children's coding book titled "Learning Python", designed for ages 10–13. , suitable for a web book cover and social media preview card.
+A vibrant, friendly textbook cover illustration for a children's coding book titled "Learning Python", designed for "Ages 10 and Up", suitable for a web book cover and social media preview card.
 
 Left side: A cheerful cartoon green python snake named Monty sits center-left, wearing round reading glasses, looking curious and excited. Monty has a friendly, approachable expression — not scary at all. He is holding or pointing at a laptop or tablet screen that shows a simple Python for loop drawing a colorful spiral.  Use the attached image in this prompt.
 
