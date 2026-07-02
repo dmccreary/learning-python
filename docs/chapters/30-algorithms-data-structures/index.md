@@ -378,6 +378,16 @@ print("Insertion:", insertion_sort(data))
 print("Built-in:", sorted(data))`);
 </script>
 
+### See It: Sorting in Slow Motion
+
+The code above shows *what* each sort computes; the comparer below shows *how they move*. Every sort is just compares and swaps in a different choreography. Before you click Step, predict: **for 10 reversed values, roughly how many comparisons will bubble sort need?**
+
+<iframe src="../../sims/sorting-comparer/main.html" height="542" width="100%" scrolling="no"></iframe>
+
+[Explore the Sorting Algorithm Comparer MicroSim](../../sims/sorting-comparer/index.md){ .md-button }
+
+Step through each algorithm and watch its signature move: bubble sort's big values float right, selection sort hunts for the minimum, insertion sort slides each new value into place. Then pick **Race — Bubble vs Insertion**, switch the data to **nearly sorted**, and Auto-play: insertion sort demolishes bubble sort — the answer to "which sort is best?" is always *it depends on the data*.
+
 ## Binary Search
 
 **Binary search** finds an item in a *sorted* list in O(log n) time — far faster than linear search.

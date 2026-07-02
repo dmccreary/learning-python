@@ -256,3 +256,13 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Type a pattern, watch matches light up live, and read the pattern as
     plain-English chips — regex stops being magic. (Chapter 29)
 
+-   **[Sorting Algorithm Comparer](./sorting-comparer/index.md)**
+
+    ---
+
+    ![Sorting Algorithm Comparer](./sorting-comparer/sorting-comparer.png)
+
+    Step three classic sorts one comparison at a time, then race bubble
+    vs insertion on identical data — the winner depends on the data.
+    (Chapter 30)
+

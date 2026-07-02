@@ -342,12 +342,15 @@ nav:
     - Scope Inspector: sims/scope-inspector/index.md
     - Set Operations Venn: sims/set-operations-venn/index.md
     - Sine Wave Explorer: sims/sine-wave-explorer/index.md
+    - Sorting Algorithm Comparer: sims/sorting-comparer/index.md
     - Stack and Queue Simulator: sims/stack-queue-simulator/index.md
     - String Slicer: sims/string-slicer/index.md
     - Turtle State Inspector: sims/turtle-state-inspector/index.md
     - Unit Circle Degrees and Radians: sims/unit-circle-radians/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
     - While-Loop Stepper: sims/while-loop-stepper/index.md
+
+
 
 
 
