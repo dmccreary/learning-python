@@ -183,3 +183,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Drag a point around the unit circle and read the angle in degrees,
     radians, and multiples of π — with sin and cos bars. (Chapter 18)
 
+-   **[Set Operations Venn](./set-operations-venn/index.md)**
+
+    ---
+
+    ![Set Operations Venn](./set-operations-venn/set-operations-venn.png)
+
+    Type two sets, watch the chips land in the right regions, and light up
+    union, intersection, and difference. (Chapter 20)
+
