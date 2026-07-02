@@ -222,8 +222,12 @@ throughout the textbook use the shared `js/codemirror-lab.js` instead, which
 handles multiple labs per page via a suffix registry (`initCmLab`) and adds
 a Run ⇄ Pause button: while a program runs, clicking **Pause** freezes the
 turtle drawing (handy for discussion or screenshots) and **Resume** continues
-it; **Reset** stops a running program. The minimal inline version below does
-not include the pause feature.
+it. If the code is edited while paused, the button changes to **Run New
+Code** and starts a fresh run with the new code instead of resuming the old
+one. **Reset** stops a running program. See
+[The Run ⇄ Pause Button](run-pause-buttons.md) for the full behavior table
+and the design rationale. The minimal inline version below does not include
+the pause feature.
 
 ```html
 <!-- 1. Skulpt runtime -->

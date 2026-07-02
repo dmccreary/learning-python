@@ -356,6 +356,7 @@ nav:
     - Overview: teachers-guide/index.md
     - How to Contribute Examples: teachers-guide/contribute.md
     - Adding Custom Python Labs: teachers-guide/adding-custom-python-labs.md
+    - The Run ⇄ Pause Button: teachers-guide/run-pause-buttons.md
     - CodeMirror Editor Example: teachers-guide/code-mirror-example.md
     - Order of Concepts: teachers-guide/order-of-concepts.md
     - Sample Prompts:

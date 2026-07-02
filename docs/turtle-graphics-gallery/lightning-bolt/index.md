@@ -31,6 +31,7 @@ import random
 monty = turtle.Turtle()
 monty.speed(0)
 monty.hideturtle()
+turtle.bgcolor('black')
 random.seed(7)
 
 def lightning(x1, y1, x2, y2, depth):
@@ -91,6 +92,7 @@ import random
 monty = turtle.Turtle()
 monty.speed(0)
 monty.hideturtle()
+turtle.bgcolor('black')
 random.seed(7)
 
 def lightning(x1, y1, x2, y2, depth):
@@ -160,6 +162,7 @@ import random
 monty = turtle.Turtle()
 monty.speed(0)
 monty.hideturtle()
+turtle.bgcolor('black')
 random.seed(7)
 
 def lightning(x1, y1, x2, y2, depth):
@@ -194,7 +197,7 @@ Depth 7 produces a much more detailed, realistic bolt with tiny jags everywhere.
 
 2. **Draw multiple bolts.** Call `lightning()` three times with different x-starting positions. You'll know it worked when three separate bolts appear.
 
-3. **Change the color to white on a dark background.** Add `turtle.bgcolor('black')` and `monty.pencolor('white')`. You'll know it worked when the bolt looks like a real storm photo.
+3. **Change the bolt color to white.** Change `monty.pencolor('yellow')` to `monty.pencolor('white')`. You'll know it worked when the bolt looks like a real storm photo.
 
 4. **Increase displacement.** Change `0.3` to `0.6`. You'll know it worked when the bolt has wider, more dramatic bends.
 

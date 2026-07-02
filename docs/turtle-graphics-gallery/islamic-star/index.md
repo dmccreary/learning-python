@@ -20,7 +20,7 @@ A repeating pattern of 8-pointed stars and cross shapes — the kind found in mo
 
 ## How It Works
 
-An 8-pointed star is drawn as two overlapping squares rotated 45° from each other. A function `star(cx, cy, size)` draws one star at a given center. The outer loop tiles the stars in a grid with spacing that makes adjacent stars connect at their points.
+An 8-pointed star is drawn as two overlapping squares rotated 45° from each other, both centered on the same point. A function `star8(cx, cy, size, color)` draws one star at a given center. The outer loop tiles the stars in a grid, offsetting each star by a fixed spacing.
 
 ## Sample Code
 
@@ -34,7 +34,9 @@ def star8(cx, cy, size, color):
     monty.pencolor(color)
     for angle_offset in [0, 45]:
         monty.penup()
-        monty.goto(cx, cy - size)
+        monty.goto(cx, cy)
+        monty.setheading(angle_offset - 135)
+        monty.forward(size)
         monty.setheading(angle_offset)
         monty.pendown()
         for _ in range(4):
@@ -88,7 +90,9 @@ def star8(cx, cy, size, color):
     monty.pencolor(color)
     for angle_offset in [0, 45]:
         monty.penup()
-        monty.goto(cx, cy - size)
+        monty.goto(cx, cy)
+        monty.setheading(angle_offset - 135)
+        monty.forward(size)
         monty.setheading(angle_offset)
         monty.pendown()
         for _ in range(4):
@@ -109,13 +113,14 @@ The stars form a repeating grid pattern — like Islamic tile work. Were you rig
 
 ## How It Works
 
-An 8-pointed star is two squares rotated 45° from each other. The `for angle_offset in [0, 45]` loop draws each square in sequence. The starting position `cy - size` places the turtle at the bottom of the star so the square sweeps through the correct region.
+An 8-pointed star is two squares rotated 45° from each other, sharing the same center. The `for angle_offset in [0, 45]` loop draws each square in sequence. Before drawing, the turtle walks from the center `(cx, cy)` out to the square's starting corner: `setheading(angle_offset - 135)` points it toward the corner, and `forward(size)` steps out to it. Because both squares are positioned from the same center, their overlap forms a symmetric 8-pointed star.
 
 ## Explanation Table
 
 | Line | What it does |
 |------|-------------|
 | `for angle_offset in [0, 45]` | Draw two squares — one rotated 45° from the other |
+| `setheading(angle_offset - 135)` then `forward(size)` | Walk from the star's center to the square's starting corner |
 | `size * 1.4` | Side length adjusted so the two squares create points |
 | `spacing = 90` | Distance between star centers |
 | `(row + col) % 2` | Alternate colors in checkerboard pattern |
@@ -124,7 +129,7 @@ An 8-pointed star is two squares rotated 45° from each other. The `for angle_of
 
 !!! mascot-thinking "Your Turn — Change Spacing"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `spacing = 90` to `spacing = 70`. Will the stars overlap, spread apart, or touch perfectly?
+    Change `spacing = 90` to `spacing = 60`. Will the stars overlap, spread apart, or touch perfectly?
     Predict, then run it to find out!
 
 <div class="cm-lab">
@@ -150,14 +155,16 @@ def star8(cx, cy, size, color):
     monty.pencolor(color)
     for angle_offset in [0, 45]:
         monty.penup()
-        monty.goto(cx, cy - size)
+        monty.goto(cx, cy)
+        monty.setheading(angle_offset - 135)
+        monty.forward(size)
         monty.setheading(angle_offset)
         monty.pendown()
         for _ in range(4):
             monty.forward(size * 1.4)
             monty.left(90)
 
-spacing = 70
+spacing = 90
 colors = ['darkred', 'darkorange']
 for row in range(-2, 3):
     for col in range(-2, 3):
@@ -167,7 +174,7 @@ for row in range(-2, 3):
         star8(cx, cy, 30, color)`);
 </script>
 
-At `spacing = 70` the stars overlap, creating a dense interlocking weave — a different kind of Islamic geometric pattern.
+At `spacing = 60` the stars touch perfectly at their points, and the leftover space between them forms the cross shapes seen in real Islamic tile work.
 
 ## Experiments
 

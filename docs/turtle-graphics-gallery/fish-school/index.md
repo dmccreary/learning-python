@@ -6,11 +6,11 @@ hide:
 
 By the end of this lab you'll be able to:
 
-- Write a `fish(x, y, size)` function that draws a simple creature shape
+- Write a `fish(x, y, size)` function that draws a recognizable animal shape
 - Understand how one function with different arguments creates visual variation
-- Combine `circle()` arcs and triangles to build a recognizable animal form
+- Combine `circle()` arcs, triangles, and dots to build a fish with a body, tail fin, and eye
 
-Fifteen blue fish of varied sizes swim leftward across the canvas in a loosely grouped school — each one drawn by the same six-line function.
+A dozen blue fish of varied sizes swim leftward across the canvas in a loosely grouped school — each one drawn by the same function.
 
 !!! mascot-welcome "Welcome to the Fish School!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
@@ -20,11 +20,15 @@ Fifteen blue fish of varied sizes swim leftward across the canvas in a loosely g
 
 ## How the Fish Works
 
-Each fish is built from two parts:
-1. A **body**: a filled semicircle (half a `circle()`)
-2. A **tail**: a small filled triangle attached at the flat end of the semicircle
+Each fish is built from three parts:
 
-The turtle starts at the fish's left tip, draws the body arc, then draws the tail triangle and returns to the start.
+1. A **body**: a pointed oval made of two `circle()` arcs that meet at the nose and the tail
+2. A **tail fin**: a small filled triangle attached at the back of the body
+3. An **eye**: a white dot with a black pupil, near the nose
+
+The turtle starts at the fish's nose (the left tip), sweeps one arc along the belly to the
+tail point, turns, and sweeps a second arc along the back to return to the nose. Then it
+jumps to the tail point to draw the triangle fin, and finally stamps two dots for the eye.
 
 ## Sample Code
 
@@ -37,33 +41,44 @@ monty.hideturtle()
 random.seed(3)
 
 def fish(x, y, size):
+    # body: a pointed oval made of two arcs
     monty.penup()
-    monty.goto(x, y)
-    monty.setheading(0)
+    monty.goto(x, y)          # nose of the fish
+    monty.setheading(-60)
     monty.pendown()
-    monty.color('steelblue')
+    monty.color('midnightblue', 'steelblue')
     monty.begin_fill()
-    monty.circle(size, 180)
-    monty.right(90)
-    monty.forward(size)
-    monty.right(120)
-    monty.forward(size)
-    monty.right(120)
-    monty.forward(size)
+    monty.circle(size, 120)   # belly arc
+    monty.left(60)
+    monty.circle(size, 120)   # back arc
     monty.end_fill()
+    # tail fin: a triangle at the back
+    monty.penup()
+    monty.goto(x + size * 1.73, y)
+    monty.pendown()
+    monty.begin_fill()
+    monty.goto(x + size * 2.3, y + size * 0.5)
+    monty.goto(x + size * 2.3, y - size * 0.5)
+    monty.goto(x + size * 1.73, y)
+    monty.end_fill()
+    # eye near the nose
+    monty.penup()
+    monty.goto(x + size * 0.5, y + size * 0.15)
+    monty.dot(size // 3, 'white')
+    monty.dot(size // 6, 'black')
 
-for _ in range(15):
-    x = random.randint(-240, 160)
-    y = random.randint(-170, 170)
+for _ in range(12):
+    x = random.randint(-180, 60)
+    y = random.randint(-160, 160)
     size = random.randint(15, 45)
     fish(x, y, size)
 ```
 
 !!! mascot-thinking "What Do You Think Will Happen?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    `monty.circle(size, 180)` draws only a **180°** arc — half a circle.
-    Will the flat side of the half-circle face left, right, up, or down?
-    Think about which direction Monty is facing before clicking Run!
+    The body is drawn with **two** `monty.circle(size, 120)` arcs.
+    Will the finished body be a full circle, a half circle, or a pointed oval?
+    Make your guess, then run it to find out!
 
 ## Try It Now
 
@@ -95,44 +110,65 @@ monty.hideturtle()
 random.seed(3)
 
 def fish(x, y, size):
+    # body: a pointed oval made of two arcs
     monty.penup()
-    monty.goto(x, y)
-    monty.setheading(0)
+    monty.goto(x, y)          # nose of the fish
+    monty.setheading(-60)
     monty.pendown()
-    monty.color('steelblue')
+    monty.color('midnightblue', 'steelblue')
     monty.begin_fill()
-    monty.circle(size, 180)
-    monty.right(90)
-    monty.forward(size)
-    monty.right(120)
-    monty.forward(size)
-    monty.right(120)
-    monty.forward(size)
+    monty.circle(size, 120)   # belly arc
+    monty.left(60)
+    monty.circle(size, 120)   # back arc
     monty.end_fill()
+    # tail fin: a triangle at the back
+    monty.penup()
+    monty.goto(x + size * 1.73, y)
+    monty.pendown()
+    monty.begin_fill()
+    monty.goto(x + size * 2.3, y + size * 0.5)
+    monty.goto(x + size * 2.3, y - size * 0.5)
+    monty.goto(x + size * 1.73, y)
+    monty.end_fill()
+    # eye near the nose
+    monty.penup()
+    monty.goto(x + size * 0.5, y + size * 0.15)
+    monty.dot(size // 3, 'white')
+    monty.dot(size // 6, 'black')
 
-for _ in range(15):
-    x = random.randint(-240, 160)
-    y = random.randint(-170, 170)
+for _ in range(12):
+    x = random.randint(-180, 60)
+    y = random.randint(-160, 160)
     size = random.randint(15, 45)
     fish(x, y, size)`);
 </script>
 
-The flat side faces **left** — the tail is on the right and the fish swims to the left. Were you right?
+The two arcs meet in sharp points at the nose and the tail — a **pointed oval**, just the
+right shape for a fish body. Were you right?
 
 ## How It Works
 
-`circle(size, 180)` draws a semicircle, ending with the turtle 180° from where it started — facing left instead of right. `right(90)` then turns to face down to start drawing the triangle tail.
+Each `circle(size, 120)` call draws a 120° arc — one curved side of the body. The turtle
+starts at the nose heading `-60` degrees so the first arc bows downward along the belly and
+lands exactly on the tail point. `left(60)` aims the turtle for the second arc, which bows
+upward along the back and returns exactly to the nose. Two arcs, one closed shape.
 
-The tail is an equilateral triangle drawn with three `forward(size)` + `right(120)` steps. After the last step, the turtle is back at the junction of tail and body.
+The tail fin is a triangle drawn with three `goto()` calls: from the tail point out to two
+corners behind the fish and back. Because it sits between `begin_fill()` and `end_fill()`,
+it comes out solid.
+
+Finally, `dot()` draws a filled circle at the turtle's position — a big white dot with a
+smaller black dot on top makes a simple eye. The eye is what makes the fish come alive!
 
 ## Explanation Table
 
 | Line | What it does |
 |------|-------------|
-| `monty.setheading(0)` | Always start facing East — consistent orientation |
-| `monty.circle(size, 180)` | Draw a half-circle body (180° arc) |
-| `monty.right(90)` | Turn to face downward to start the tail |
-| Three `forward/right(120)` | Draw the equilateral triangle tail |
+| `monty.setheading(-60)` | Aim the turtle so the first arc curves along the belly |
+| `monty.circle(size, 120)` | Draw a 120° arc — one curved side of the body |
+| `monty.left(60)` | Turn at the tail point so the second arc curves back along the top |
+| Three `monty.goto(...)` calls | Draw the triangle tail fin behind the body |
+| `monty.dot(size // 3, 'white')` | Stamp the white of the eye near the nose |
 | `random.randint(15, 45)` | Random size for each fish |
 
 ## Learning Check
@@ -140,7 +176,7 @@ The tail is an equilateral triangle drawn with three `forward(size)` + `right(12
 !!! mascot-thinking "Your Turn — Color Each Fish Differently"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
     All the fish are the same `'steelblue'`. Add a `color` parameter to `fish()` and use it
-    to draw each fish in a random color from a list. Update the function definition and the call.
+    to fill each fish with a random color from a list. Update the function definition and the call.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -166,43 +202,55 @@ random.seed(3)
 fish_colors = ['steelblue','royalblue','teal','cornflowerblue','deepskyblue']
 
 def fish(x, y, size, color):
+    # body: a pointed oval made of two arcs
     monty.penup()
-    monty.goto(x, y)
-    monty.setheading(0)
+    monty.goto(x, y)          # nose of the fish
+    monty.setheading(-60)
     monty.pendown()
-    monty.color(color)
+    monty.color('midnightblue', color)
     monty.begin_fill()
-    monty.circle(size, 180)
-    monty.right(90)
-    monty.forward(size)
-    monty.right(120)
-    monty.forward(size)
-    monty.right(120)
-    monty.forward(size)
+    monty.circle(size, 120)   # belly arc
+    monty.left(60)
+    monty.circle(size, 120)   # back arc
     monty.end_fill()
+    # tail fin: a triangle at the back
+    monty.penup()
+    monty.goto(x + size * 1.73, y)
+    monty.pendown()
+    monty.begin_fill()
+    monty.goto(x + size * 2.3, y + size * 0.5)
+    monty.goto(x + size * 2.3, y - size * 0.5)
+    monty.goto(x + size * 1.73, y)
+    monty.end_fill()
+    # eye near the nose
+    monty.penup()
+    monty.goto(x + size * 0.5, y + size * 0.15)
+    monty.dot(size // 3, 'white')
+    monty.dot(size // 6, 'black')
 
-for _ in range(15):
-    x = random.randint(-240, 160)
-    y = random.randint(-170, 170)
+for _ in range(12):
+    x = random.randint(-180, 60)
+    y = random.randint(-160, 160)
     size = random.randint(15, 45)
     c = random.choice(fish_colors)
     fish(x, y, size, c)`);
 </script>
 
-The updated `fish()` takes `color` as a fourth argument and passes it to `monty.color()`.
+The updated `fish()` takes `color` as a fourth argument and passes it to `monty.color()` as
+the fill color, while the outline stays `'midnightblue'`.
 
 ## Experiments
 
-1. **Add a blue background.** Before the loop, draw a large filled blue rectangle as the ocean. You'll know it worked when the fish swim against a blue background.
+1. **Add a blue background.** Before the loop, draw a large filled light-blue rectangle as the ocean. You'll know it worked when the fish swim against a blue background.
 
-2. **Make a single giant fish.** Remove the loop and call `fish(0, 0, 100, 'royalblue')` directly. You'll know it worked when one large fish fills the canvas.
+2. **Make a single giant fish.** Remove the loop and call `fish(-100, 0, 80)` directly. You'll know it worked when one large fish fills the canvas.
 
-3. **Add an eye.** Inside `fish()`, after `end_fill()`, add `monty.penup(); monty.goto(x + size * 1.4, y + size * 0.6); monty.dot(size // 5, 'white')`. You'll know it worked when each fish has a white eye dot.
+3. **Add a dorsal fin.** Inside `fish()`, after the tail fin, draw a small triangle on top of the body: `goto(x + size * 0.6, y + size * 0.4)`, then fill a triangle through `(x + size * 0.85, y + size * 0.85)` and `(x + size * 1.2, y + size * 0.4)`. You'll know it worked when each fish has a fin on its back.
 
-4. **Flip the fish.** Change `setheading(0)` to `setheading(180)`. The fish will face right. You'll know it worked when the school swims in the opposite direction.
+4. **Grow the school.** Change `range(12)` to `range(25)`. You'll know it worked when the water gets crowded — do any fish overlap?
 
 !!! mascot-celebration "Splendid Work!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You built an entire underwater scene from a six-line function called 15 times!
+    You built an entire underwater scene from one function called 12 times!
     One function, infinite variation — that's the magic of parameterized code.
     Up next: **Mountain Range** — layering shapes to create depth.
