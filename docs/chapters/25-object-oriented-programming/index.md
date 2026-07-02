@@ -147,6 +147,21 @@ for s in students:
     print(f"{s.name}: {s.score} → {s.grade()}")`);
 </script>
 
+### See It: Blueprint vs Real Dogs
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    In the inspector below, the program defines `class Dog` and then calls
+    `Dog(...)` twice. Predict: when `rex.bark()` runs, **how does Python know
+    which dog's name to print — Rex's or Bella's?** Step through and watch
+    the orange arrow!
+
+<iframe src="../../sims/object-instance-inspector/main.html" height="572" width="100%" scrolling="no"></iframe>
+
+[Explore the Object Instance Inspector MicroSim](../../sims/object-instance-inspector/index.md){ .md-button }
+
+The answer: `self` is always the object **left of the dot**. The class is just a dashed blueprint — the solid cards are the real objects, each with its own attribute boxes. The last step shows one more secret: `rex.species` is not on rex's card at all, so Python looks up to the blueprint, where the shared class variable lives.
+
 ## `__str__()` — String Representation
 
 `__str__()` defines what `print(obj)` and `str(obj)` show.

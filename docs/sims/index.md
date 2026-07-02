@@ -219,3 +219,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Sculpt a recursive tree with angle, depth, and shrink sliders — every
     recursion level wears its own color. (Chapter 24)
 
+-   **[Object Instance Inspector](./object-instance-inspector/index.md)**
+
+    ---
+
+    ![Object Instance Inspector](./object-instance-inspector/object-instance-inspector.png)
+
+    A dashed blueprint, solid instance cards, and a glowing arrow that
+    shows exactly which dog `self` is. (Chapter 25)
+
