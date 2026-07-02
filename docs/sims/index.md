@@ -238,3 +238,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     overrides shadow the parent, and super() climbs on purpose.
     (Chapter 25)
 
+-   **[JSON to Python Type Mapper](./json-python-mapper/index.md)**
+
+    ---
+
+    ![JSON to Python Type Mapper](./json-python-mapper/json-python-mapper.png)
+
+    Edit JSON on the left and watch the Python objects appear on the
+    right — true becomes True, null becomes None. (Chapter 27)
+
