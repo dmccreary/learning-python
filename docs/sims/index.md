@@ -119,3 +119,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Variables live in rooms: watch a Function room appear during a call,
     shadow the global, and vanish at return. (Chapter 11)
 
+-   **[RGB Color Mixer](./rgb-color-mixer/index.md)**
+
+    ---
+
+    ![RGB Color Mixer](./rgb-color-mixer/rgb-color-mixer.png)
+
+    Mix red, green, and blue, watch the hex code assemble itself, and copy
+    the pencolor line straight into your turtle art. (Chapter 12)
+
