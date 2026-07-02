@@ -156,3 +156,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Feed the same letters into a stack of plates and a waiting line — then
     watch them leave in opposite orders. (Chapters 16, 30)
 
+-   **[Dice Roll Histogram](./dice-roll-histogram/index.md)**
+
+    ---
+
+    ![Dice Roll Histogram](./dice-roll-histogram/dice-roll-histogram.png)
+
+    Roll 1, 100, or 1000 dice and watch chaos flatten into a pattern —
+    then find the mountain hiding in two-dice sums. (Chapter 17)
+
