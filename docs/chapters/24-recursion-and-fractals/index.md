@@ -122,6 +122,20 @@ print("10! =", factorial(10))`);
 
 Were you right? `5! = 120`. Tracing it: `5 * factorial(4)` → `5 * 4 * factorial(3)` → ... → `5 * 4 * 3 * 2 * 1`.
 
+### See It: The Call Stack in Action
+
+!!! mascot-thinking "What Do You Think Will Happen?"
+    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Every recursive call gets its own **frame** on a stack, each remembering
+    its own `n`. For `factorial(4)`, predict: **how tall will the tower of
+    frames get before it starts coming back down?** Step through and count!
+
+<iframe src="../../sims/recursion-call-stack/main.html" height="562" width="100%" scrolling="no"></iframe>
+
+[Explore the Recursion Call Stack MicroSim](../../sims/recursion-call-stack/index.md){ .md-button }
+
+Watch the two phases: frames pile **up** with paused multiplications (`4 × ?`) until the gold base case, then the answers flow back **down** as each frame finishes its math. Then pick **Missing Base Case** from the dropdown to see exactly why every recursive function needs a stopping rule.
+
 ## Lambda Functions
 
 A **lambda** is a tiny anonymous function written on one line.

@@ -201,3 +201,12 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Type a key and the right drawer springs open in one hop — or hit a
     KeyError — then race the dict against a list. (Chapter 21)
 
+-   **[Recursion Call Stack](./recursion-call-stack/index.md)**
+
+    ---
+
+    ![Recursion Call Stack](./recursion-call-stack/recursion-call-stack.png)
+
+    Watch factorial(4) stack frames pile up to the gold base case, then
+    unwind as each paused multiplication fills in. (Chapters 23-24)
+

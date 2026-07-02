@@ -332,6 +332,7 @@ nav:
     - List Index Explorer: sims/list-index-explorer/index.md
     - Modulo Clock: sims/modulo-clock/index.md
     - Range Explorer: sims/range-explorer/index.md
+    - Recursion Call Stack: sims/recursion-call-stack/index.md
     - RGB Color Mixer: sims/rgb-color-mixer/index.md
     - Scope Inspector: sims/scope-inspector/index.md
     - Set Operations Venn: sims/set-operations-venn/index.md
@@ -342,6 +343,8 @@ nav:
     - Unit Circle Degrees and Radians: sims/unit-circle-radians/index.md
     - Variable Memory Model: sims/variable-memory-model/index.md
     - While-Loop Stepper: sims/while-loop-stepper/index.md
+
+
 
 
 
