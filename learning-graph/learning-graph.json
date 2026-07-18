@@ -3,7 +3,7 @@
     "title": "Beginning Python \u2014 From Blocks to Code with Monty",
     "description": "A fun, project-driven course that guides young programmers (ages 10-13) from block-based coding to writing real Python, covering core syntax, data types, control flow, functions, collections, turtle graphics, algorithms, and an introduction to machine learning.",
     "creator": "Dan McCreary",
-    "date": "2026-06-28",
+    "date": "2026-07-18",
     "version": "1.0",
     "format": "Learning Graph JSON v1.0",
     "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
@@ -2361,6 +2361,16 @@
       "id": 450,
       "label": "Debugging Strategies",
       "group": "ADV"
+    },
+    {
+      "id": 451,
+      "label": "uv",
+      "group": "ENV"
+    },
+    {
+      "id": 452,
+      "label": "Rust",
+      "group": "ENV"
     }
   ],
   "edges": [
@@ -5715,6 +5725,22 @@
     {
       "from": 450,
       "to": 271
+    },
+    {
+      "from": 451,
+      "to": 12
+    },
+    {
+      "from": 451,
+      "to": 14
+    },
+    {
+      "from": 452,
+      "to": 1
+    },
+    {
+      "from": 452,
+      "to": 19
     }
   ]
 }

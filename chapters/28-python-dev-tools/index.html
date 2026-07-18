@@ -3461,6 +3461,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#uv-a-fast-all-in-one-python-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      uv — A Fast, All-in-One Python Tool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-vs-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python vs. Rust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#virtual-environments" class="md-nav__link">
     <span class="md-ellipsis">
       Virtual Environments
@@ -9571,6 +9589,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#uv-a-fast-all-in-one-python-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      uv — A Fast, All-in-One Python Tool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-vs-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python vs. Rust
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#virtual-environments" class="md-nav__link">
     <span class="md-ellipsis">
       Virtual Environments
@@ -9666,7 +9702,8 @@
 <li>Describe the key Python development environments and when to use each one</li>
 <li>Install Python locally and run scripts from the terminal</li>
 <li>Use the <strong>Python REPL</strong> (interactive shell) for quick experiments</li>
-<li>Install packages with <code>pip</code> and understand <strong>virtual environments</strong></li>
+<li>Install packages with <code>pip</code> or <code>uv</code> and understand <strong>virtual environments</strong></li>
+<li>Explain when a slow Python task might be a good candidate for Rust</li>
 </ul>
 <p>Skulpt is great for learning — you don't need to install anything.
 But real Python projects use richer tools. This chapter is your map to the Python ecosystem.</p>
@@ -9828,6 +9865,88 @@ pip<span class="w"> </span>install<span class="w"> </span>pillow
 </code></pre></div></td></tr></table></div>
 <p>To see what's installed: <code>pip list</code></p>
 <p>To install a specific version: <code>pip install requests==2.31.0</code></p>
+<h2 id="uv-a-fast-all-in-one-python-tool"><code>uv</code> — A Fast, All-in-One Python Tool<a class="headerlink" href="#uv-a-fast-all-in-one-python-tool" title="Permanent link">&para;</a></h2>
+<p>As projects grow, you may need several tools to install Python, create a virtual environment,
+add packages, record exact package versions, run scripts, build a package, and publish it.
+<strong>uv</strong> combines many of those jobs in one tool. It is a Python package and project manager
+written in Rust, and it includes a familiar, <code>pip</code>-compatible interface.</p>
+<p>The uv team reports that it can be 10–100 times faster than <code>pip</code> in its benchmarks.
+The exact speedup depends on the project, computer, network, and whether packages are already
+in uv's cache. A <strong>cache</strong> keeps downloaded files so the tool can reuse them instead of
+downloading the same files again.</p>
+<p>Once uv is installed, these commands create a project, add the <code>requests</code> package, run its
+Python program, and build files that could be published as a package:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>uv<span class="w"> </span>init<span class="w"> </span>weather-app
+<span class="nb">cd</span><span class="w"> </span>weather-app
+uv<span class="w"> </span>add<span class="w"> </span>requests
+uv<span class="w"> </span>run<span class="w"> </span>main.py
+uv<span class="w"> </span>build
+</code></pre></div></td></tr></table></div>
+<p>For an existing project that already uses <code>pip</code>, uv also offers similar commands:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>uv<span class="w"> </span>venv
+uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>requests
+uv<span class="w"> </span>pip<span class="w"> </span>list
+</code></pre></div></td></tr></table></div>
+<p>uv can take the place of several separate tools, but its commands are not identical to every
+tool it replaces. Start with <code>uv pip</code> when you want a familiar workflow. Try the higher-level
+<code>uv add</code>, <code>uv lock</code>, <code>uv sync</code>, and <code>uv run</code> commands when you want uv to manage the whole
+project. See the <a href="https://docs.astral.sh/uv/">official uv documentation</a> for installation
+instructions for your operating system.</p>
+<h2 id="python-vs-rust">Python vs. Rust<a class="headerlink" href="#python-vs-rust" title="Permanent link">&para;</a></h2>
+<p>Python normally runs your source code through a Python interpreter. This makes Python quick
+to learn, change, and test. Rust is a <strong>compiled language</strong>: a compiler checks Rust source code
+and turns it into a machine-code program before you run it. Compiled Rust programs can be much
+faster for some kinds of work, but Rust usually takes more time to learn and write.</p>
+<p>Modern computers have several processor <strong>cores</strong>, like several workers that can do separate
+jobs at the same time. Rust has threads, message-passing channels, shared-state tools, and a
+type system that catches many unsafe concurrency mistakes while compiling. These features can
+help a carefully designed program spread CPU-heavy work across multiple cores. Rust does not
+make every program parallel automatically—the problem must contain work that can safely be
+split into independent parts.</p>
+<p>The comparison below summarizes when each language often fits best.</p>
+<table>
+<thead>
+<tr>
+<th>Choose Python when...</th>
+<th>Consider Rust when...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>You are learning, experimenting, or building a first version</td>
+<td>A measured slow section performs a huge amount of repeated computation</td>
+</tr>
+<tr>
+<td>Clear code and fast development matter most</td>
+<td>Runtime speed or low memory use is a major requirement</td>
+</tr>
+<tr>
+<td>Python libraries already solve the hard parts</td>
+<td>Work can be divided safely across several CPU cores</td>
+</tr>
+<tr>
+<td>The program spends most of its time waiting for files or the network</td>
+<td>The code must become a fast command-line tool or reusable Python extension</td>
+</tr>
+</tbody>
+</table>
+<p>An AI coding tool can help create a first Rust version of a small, well-tested Python function.
+This may be worth trying for image filters, simulations, data conversion, compression, or other
+CPU-heavy loops that run millions of times. First, <strong>profile</strong> the Python program—measure where
+it actually spends its time. Converting code that is not a real bottleneck adds complexity
+without making the program noticeably faster.</p>
+<p>AI conversion is a draft, not proof that the new program is correct. Python and Rust handle
+types, memory, errors, and parallel work differently, so a line-for-line translation may be
+wrong or slower than expected. Keep tests with known answers, compare the Python and Rust
+results, measure both versions, and have a person review the Rust code. Often the best design
+keeps most of the project in friendly, flexible Python and moves only one proven bottleneck
+into Rust.</p>
 <h2 id="virtual-environments">Virtual Environments<a class="headerlink" href="#virtual-environments" title="Permanent link">&para;</a></h2>
 <p>A <strong>virtual environment</strong> is an isolated Python installation for a specific project.
 It lets each project have its own set of packages without interfering with other projects.</p>
@@ -9960,6 +10079,10 @@ Libraries like <code>RPi.GPIO</code> let Python programs control physical pins.<
 <td>VS Code</td>
 </tr>
 <tr>
+<td>Fast package and project management</td>
+<td>uv</td>
+</tr>
+<tr>
 <td>Data science / ML</td>
 <td>Jupyter Notebook or JupyterLab</td>
 </tr>
@@ -10015,6 +10138,13 @@ initCmLab('-3', `# Scenario → Best tool
 # 4. A maker wants to control LEDs and sensors with Python on cheap hardware.
 #    Answer:
 
+# 5. A team wants one fast tool to create environments, add packages, and lock versions.
+#    Answer:
+
+# 6. Profiling shows that one image-processing loop uses nearly all the running time.
+#    Should the team keep all the code in Python, or test a Rust version of that loop?
+#    Answer:
+
 print("Scenarios answered above!")`);
 </script>
 
@@ -10034,7 +10164,8 @@ print("Scenarios answered above!")`);
    <strong>You'll know it worked when</strong> you see a very large number (9,223,372,036,854,775,807 on 64-bit systems).</p>
 </li>
 <li>
-<p>Research: look up what <code>pip show numpy</code> does (in a real terminal). Write a comment explaining it.
+<p>Compare <code>pip show numpy</code> with <code>uv pip show numpy</code> in a real terminal. Write a comment
+   explaining what both commands display.
    <strong>You'll know it worked when</strong> your comment describes the package version, author, and install location.</p>
 </li>
 <li>
