@@ -114,2263 +114,2715 @@
       "id": 1,
       "label": "Python Interpreter Overview",
       "group": "ENV",
-      "shape": "box"
+      "shape": "box",
+      "cis": 3393
     },
     {
       "id": 2,
       "label": "Python 2 vs Python 3",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     },
     {
       "id": 3,
       "label": "Browser-Based Python Environments",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 2
     },
     {
       "id": 4,
       "label": "Repl.it Online IDE",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     },
     {
       "id": 5,
       "label": "Thonny Beginner IDE",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     },
     {
       "id": 6,
       "label": "Spyder Scientific IDE",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     },
     {
       "id": 7,
       "label": "VS Code Editor",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     },
     {
       "id": 8,
       "label": "Jupyter Notebooks",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 8
     },
     {
       "id": 9,
       "label": "JupyterLab Environment",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     },
     {
       "id": 10,
       "label": "Conda Package Manager",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 8
     },
     {
       "id": 11,
       "label": "pip Package Installer",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 7
     },
     {
       "id": 12,
       "label": "Virtual Environments",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 2
     },
     {
       "id": 13,
       "label": "Installing Python Locally",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 4
     },
     {
       "id": 14,
       "label": "Running Scripts from Terminal",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 2
     },
     {
       "id": 15,
       "label": "Python REPL Shell",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     },
     {
       "id": 16,
       "label": "Raspberry Pi Python Platform",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     },
     {
       "id": 17,
       "label": "Skulpt Browser Python",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     },
     {
       "id": 18,
       "label": "Google Colab Environment",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     },
     {
       "id": 19,
       "label": "Command Line Basics",
       "group": "ENV",
-      "shape": "box"
+      "shape": "box",
+      "cis": 65
     },
     {
       "id": 20,
       "label": "File System Navigation",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 60
     },
     {
       "id": 21,
       "label": "print() Function",
-      "group": "SYN"
+      "group": "SYN",
+      "cis": 2802
     },
     {
       "id": 22,
       "label": "Single-Line Comments",
-      "group": "SYN"
+      "group": "SYN",
+      "cis": 5
     },
     {
       "id": 23,
       "label": "Multi-Line Strings",
-      "group": "SYN"
+      "group": "SYN",
+      "cis": 4
     },
     {
       "id": 24,
       "label": "Indentation as Syntax",
-      "group": "SYN"
+      "group": "SYN",
+      "cis": 899
     },
     {
       "id": 25,
       "label": "Case Sensitivity",
-      "group": "SYN"
+      "group": "SYN",
+      "cis": 1
     },
     {
       "id": 26,
       "label": "Python Keywords",
-      "group": "SYN"
+      "group": "SYN",
+      "cis": 2
     },
     {
       "id": 27,
       "label": "Blank Lines and Readability",
-      "group": "SYN"
+      "group": "SYN",
+      "cis": 1
     },
     {
       "id": 28,
       "label": "Code Block Structure",
-      "group": "SYN"
+      "group": "SYN",
+      "cis": 449
     },
     {
       "id": 29,
       "label": "Statement vs Expression",
-      "group": "SYN"
+      "group": "SYN",
+      "cis": 745
     },
     {
       "id": 30,
       "label": "Whitespace Rules",
-      "group": "SYN"
+      "group": "SYN",
+      "cis": 1
     },
     {
       "id": 31,
       "label": "Variable Definition and Assignment",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 744
     },
     {
       "id": 32,
       "label": "Variable Naming Rules",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 14
     },
     {
       "id": 33,
       "label": "Snake_case Convention",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 7
     },
     {
       "id": 34,
       "label": "Meaningful Variable Names",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 3
     },
     {
       "id": 35,
       "label": "Multiple Assignment",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 4
     },
     {
       "id": 36,
       "label": "Augmented Assignment Operators",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 37,
       "label": "Constants by Convention",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 38,
       "label": "Variable Reassignment",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 2
     },
     {
       "id": 39,
       "label": "Swap Two Variables",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 40,
       "label": "Naming Conflicts to Avoid",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 41,
       "label": "Integer Type",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 105
     },
     {
       "id": 42,
       "label": "Float Type",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 27
     },
     {
       "id": 43,
       "label": "Division Returns Float",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 44,
       "label": "Integer Division Operator",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 45,
       "label": "Modulo Operator",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 46,
       "label": "Exponentiation Operator",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 47,
       "label": "Arithmetic Operators",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 7
     },
     {
       "id": 48,
       "label": "Order of Operations",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 49,
       "label": "Negative Numbers",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 50,
       "label": "Scientific Notation Floats",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 51,
       "label": "Boolean Type",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 55
     },
     {
       "id": 52,
       "label": "Comparison Operators",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 22
     },
     {
       "id": 53,
       "label": "Logical Operators",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 4
     },
     {
       "id": 54,
       "label": "Truthiness and Falsiness",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 2
     },
     {
       "id": 55,
       "label": "Short-Circuit Evaluation",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 56,
       "label": "Boolean in Conditions",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 57,
       "label": "Chained Comparisons",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 58,
       "label": "String Type",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 77
     },
     {
       "id": 59,
       "label": "Single vs Double Quotes",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 60,
       "label": "String Concatenation",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 3
     },
     {
       "id": 61,
       "label": "String Repetition",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 3
     },
     {
       "id": 62,
       "label": "String Indexing",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 5
     },
     {
       "id": 63,
       "label": "String Slicing",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 4
     },
     {
       "id": 64,
       "label": "Escape Characters",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 4
     },
     {
       "id": 65,
       "label": "String Length with len()",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 2
     },
     {
       "id": 66,
       "label": "String lower() upper() strip()",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 3
     },
     {
       "id": 67,
       "label": "String split() join() replace()",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 3
     },
     {
       "id": 68,
       "label": "String startswith() endswith() find()",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 69,
       "label": "String isdigit() isalpha() isalnum()",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 70,
       "label": "String format() Method",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 3
     },
     {
       "id": 71,
       "label": "f-Strings",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 2
     },
     {
       "id": 72,
       "label": "String Immutability",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 2
     },
     {
       "id": 73,
       "label": "Raw Strings",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 2
     },
     {
       "id": 74,
       "label": "String Comparison",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 75,
       "label": "Multiline String Formatting",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 76,
       "label": "None Value and NoneType",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 5
     },
     {
       "id": 77,
       "label": "Functions Returning None",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 78,
       "label": "Checking for None with is",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 79,
       "label": "int() Conversion",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 4
     },
     {
       "id": 80,
       "label": "float() Conversion",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 4
     },
     {
       "id": 81,
       "label": "str() Conversion",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 3
     },
     {
       "id": 82,
       "label": "bool() Conversion",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 2
     },
     {
       "id": 83,
       "label": "type() Function",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 3
     },
     {
       "id": 84,
       "label": "isinstance() Function",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 85,
       "label": "Implicit vs Explicit Conversion",
-      "group": "DAT"
+      "group": "DAT",
+      "cis": 1
     },
     {
       "id": 86,
       "label": "input() Function",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 7
     },
     {
       "id": 87,
       "label": "Prompting the User",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 88,
       "label": "Converting Input to Numbers",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 89,
       "label": "Input Validation Basics",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 90,
       "label": "Reading Multiple Inputs",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 91,
       "label": "Strip Whitespace from Input",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 92,
       "label": "if Statement",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 13
     },
     {
       "id": 93,
       "label": "if...else Block",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 5
     },
     {
       "id": 94,
       "label": "elif Chains",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 2
     },
     {
       "id": 95,
       "label": "Nested if Statements",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 96,
       "label": "Conditional Ternary Expression",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 97,
       "label": "match/case Statement",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 98,
       "label": "Truthiness in Conditions",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 99,
       "label": "Compound Conditions",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 100,
       "label": "for Loop over Sequence",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 60
     },
     {
       "id": 101,
       "label": "for Loop with range()",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 18
     },
     {
       "id": 102,
       "label": "Range with Start Stop Step",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 10
     },
     {
       "id": 103,
       "label": "while Loop",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 6
     },
     {
       "id": 104,
       "label": "break Statement",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 2
     },
     {
       "id": 105,
       "label": "continue Statement",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 106,
       "label": "else Clause on Loops",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 107,
       "label": "Nested Loops",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 3
     },
     {
       "id": 108,
       "label": "Loop Counter Variable",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 4
     },
     {
       "id": 109,
       "label": "Infinite Loops to Avoid",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 110,
       "label": "enumerate() Function",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 2
     },
     {
       "id": 111,
       "label": "zip() Function",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 3
     },
     {
       "id": 112,
       "label": "Loop Accumulator Pattern",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 113,
       "label": "Loop with List Building",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 114,
       "label": "Countdown Loop",
-      "group": "CTL"
+      "group": "CTL",
+      "cis": 1
     },
     {
       "id": 115,
       "label": "Defining a Function with def",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 369
     },
     {
       "id": 116,
       "label": "Calling a Function",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 41
     },
     {
       "id": 117,
       "label": "Positional Parameters",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 17
     },
     {
       "id": 118,
       "label": "Default Parameter Values",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 2
     },
     {
       "id": 119,
       "label": "Keyword Arguments",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 1
     },
     {
       "id": 120,
       "label": "return Statement",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 4
     },
     {
       "id": 121,
       "label": "Functions Returning None",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 2
     },
     {
       "id": 122,
       "label": "Local Scope",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 5
     },
     {
       "id": 123,
       "label": "Global Scope",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 2
     },
     {
       "id": 124,
       "label": "global Keyword",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 1
     },
     {
       "id": 125,
       "label": "nonlocal Keyword",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 1
     },
     {
       "id": 126,
       "label": "Docstrings",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 2
     },
     {
       "id": 127,
       "label": "Pure Functions vs Side Effects",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 1
     },
     {
       "id": 128,
       "label": "Recursion Concept",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 15
     },
     {
       "id": 129,
       "label": "Recursion Base Case",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 6
     },
     {
       "id": 130,
       "label": "Recursion Depth and Stack",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 2
     },
     {
       "id": 131,
       "label": "Lambda Functions",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 5
     },
     {
       "id": 132,
       "label": "Variable Number of Arguments *args",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 1
     },
     {
       "id": 133,
       "label": "Keyword Variable Arguments **kwargs",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 1
     },
     {
       "id": 134,
       "label": "Function as Argument",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 3
     },
     {
       "id": 135,
       "label": "Nested Functions",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 2
     },
     {
       "id": 136,
       "label": "Returning Multiple Values",
-      "group": "FUN"
+      "group": "FUN",
+      "cis": 1
     },
     {
       "id": 137,
       "label": "List Type",
-      "group": "COL"
+      "group": "COL",
+      "cis": 195
     },
     {
       "id": 138,
       "label": "Creating a List",
-      "group": "COL"
+      "group": "COL",
+      "cis": 33
     },
     {
       "id": 139,
       "label": "List Indexing",
-      "group": "COL"
+      "group": "COL",
+      "cis": 8
     },
     {
       "id": 140,
       "label": "Negative Indexing",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 141,
       "label": "List Slicing",
-      "group": "COL"
+      "group": "COL",
+      "cis": 3
     },
     {
       "id": 142,
       "label": "len() for Lists",
-      "group": "COL"
+      "group": "COL",
+      "cis": 2
     },
     {
       "id": 143,
       "label": "List append() insert() extend()",
-      "group": "COL"
+      "group": "COL",
+      "cis": 19
     },
     {
       "id": 144,
       "label": "List remove() pop() clear()",
-      "group": "COL"
+      "group": "COL",
+      "cis": 20
     },
     {
       "id": 145,
       "label": "List sort() reverse() copy()",
-      "group": "COL"
+      "group": "COL",
+      "cis": 11
     },
     {
       "id": 146,
       "label": "List index() count()",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 147,
       "label": "Membership with in Operator",
-      "group": "COL"
+      "group": "COL",
+      "cis": 3
     },
     {
       "id": 148,
       "label": "List Concatenation and Repetition",
-      "group": "COL"
+      "group": "COL",
+      "cis": 2
     },
     {
       "id": 149,
       "label": "Iterating over a List",
-      "group": "COL"
+      "group": "COL",
+      "cis": 3
     },
     {
       "id": 150,
       "label": "Nested Lists",
-      "group": "COL"
+      "group": "COL",
+      "cis": 2
     },
     {
       "id": 151,
       "label": "List Comprehensions",
-      "group": "COL"
+      "group": "COL",
+      "cis": 2
     },
     {
       "id": 152,
       "label": "Mutable vs Immutable Types",
-      "group": "COL"
+      "group": "COL",
+      "cis": 2
     },
     {
       "id": 153,
       "label": "List as Stack",
-      "group": "COL"
+      "group": "COL",
+      "cis": 5
     },
     {
       "id": 154,
       "label": "List as Queue",
-      "group": "COL"
+      "group": "COL",
+      "cis": 12
     },
     {
       "id": 155,
       "label": "Tuple Type",
-      "group": "COL"
+      "group": "COL",
+      "cis": 11
     },
     {
       "id": 156,
       "label": "Creating a Tuple",
-      "group": "COL"
+      "group": "COL",
+      "cis": 7
     },
     {
       "id": 157,
       "label": "Tuple Indexing and Slicing",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 158,
       "label": "Tuple Unpacking",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 159,
       "label": "Tuples vs Lists",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 160,
       "label": "Single-Element Tuple Syntax",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 161,
       "label": "Named Tuple Concept",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 162,
       "label": "Tuple as Return Value",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 163,
       "label": "Dictionary Type",
-      "group": "COL"
+      "group": "COL",
+      "cis": 43
     },
     {
       "id": 164,
       "label": "Creating a Dictionary",
-      "group": "COL"
+      "group": "COL",
+      "cis": 10
     },
     {
       "id": 165,
       "label": "Accessing Values by Key",
-      "group": "COL"
+      "group": "COL",
+      "cis": 3
     },
     {
       "id": 166,
       "label": "dict get() Method",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 167,
       "label": "Adding and Updating Key-Value Pairs",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 168,
       "label": "Removing Entries pop() del",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 169,
       "label": "Dictionary keys() values() items()",
-      "group": "COL"
+      "group": "COL",
+      "cis": 2
     },
     {
       "id": 170,
       "label": "Iterating over a Dictionary",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 171,
       "label": "Key Membership with in",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 172,
       "label": "Nested Dictionaries",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 173,
       "label": "Dictionary Comprehensions",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 174,
       "label": "Default Dictionary Pattern",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 175,
       "label": "Dictionary from Two Lists with zip()",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 176,
       "label": "Set Type",
-      "group": "COL"
+      "group": "COL",
+      "cis": 9
     },
     {
       "id": 177,
       "label": "Creating a Set",
-      "group": "COL"
+      "group": "COL",
+      "cis": 5
     },
     {
       "id": 178,
       "label": "Set Union Intersection Difference",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 179,
       "label": "Set add() remove() discard()",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 180,
       "label": "Set Membership with in",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 181,
       "label": "Frozensets",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 182,
       "label": "print() Output Function",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 183,
       "label": "input() Read Input",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 184,
       "label": "len() Sequence Length",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 185,
       "label": "range() Number Sequence",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 186,
       "label": "type() Get Object Type",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 187,
       "label": "int() float() str() bool() Conversions",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 188,
       "label": "list() tuple() set() dict() Constructors",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 189,
       "label": "max() min() Functions",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 190,
       "label": "sum() Function",
-      "group": "COL"
+      "group": "COL",
+      "cis": 12
     },
     {
       "id": 191,
       "label": "abs() Absolute Value",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 192,
       "label": "round() Function",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 193,
       "label": "sorted() Function",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 194,
       "label": "reversed() Function",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 195,
       "label": "enumerate() with Index",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 196,
       "label": "zip() Combine Iterables",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 197,
       "label": "map() Apply Function",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 198,
       "label": "filter() Filter Items",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 199,
       "label": "dir() List Attributes",
-      "group": "COL"
+      "group": "COL",
+      "cis": 7
     },
     {
       "id": 200,
       "label": "help() Documentation",
-      "group": "COL"
+      "group": "COL",
+      "cis": 4
     },
     {
       "id": 201,
       "label": "id() Object Identity",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 202,
       "label": "hash() Function",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 203,
       "label": "any() and all() Functions",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 204,
       "label": "chr() and ord() Functions",
-      "group": "COL"
+      "group": "COL",
+      "cis": 1
     },
     {
       "id": 205,
       "label": "import Statement",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 435
     },
     {
       "id": 206,
       "label": "from...import Specific Names",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 2
     },
     {
       "id": 207,
       "label": "import...as Alias",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 208,
       "label": "from...import Star",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 209,
       "label": "Creating Custom Modules",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 17
     },
     {
       "id": 210,
       "label": "__name__ == \"__main__\" Guard",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 211,
       "label": "Standard Library Overview",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 182
     },
     {
       "id": 212,
       "label": "Module Search Path",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 2
     },
     {
       "id": 213,
       "label": "Reloading a Module",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 214,
       "label": "random Module Overview",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 8
     },
     {
       "id": 215,
       "label": "random.randint()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 2
     },
     {
       "id": 216,
       "label": "random.choice()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 217,
       "label": "random.shuffle()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 218,
       "label": "random.seed()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 219,
       "label": "random.random() Float",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 220,
       "label": "random.sample()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 221,
       "label": "math Module Overview",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 13
     },
     {
       "id": 222,
       "label": "math.sqrt() floor() ceil()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 223,
       "label": "math.sin() cos() pi",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 7
     },
     {
       "id": 224,
       "label": "math.radians() degrees()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 2
     },
     {
       "id": 225,
       "label": "math.log() exp()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 226,
       "label": "math.factorial()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 227,
       "label": "string Module Constants",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 228,
       "label": "time Module Overview",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 5
     },
     {
       "id": 229,
       "label": "time.sleep()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 4
     },
     {
       "id": 230,
       "label": "sys Module",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 2
     },
     {
       "id": 231,
       "label": "sys.path Search Path",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 232,
       "label": "os Module",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 6
     },
     {
       "id": 233,
       "label": "os.path Operations",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 3
     },
     {
       "id": 234,
       "label": "json Module Overview",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 6
     },
     {
       "id": 235,
       "label": "json.loads() json.dumps()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 2
     },
     {
       "id": 236,
       "label": "json.load() json.dump()",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 237,
       "label": "csv Module Basics",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 238,
       "label": "datetime Module Basics",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 239,
       "label": "collections Module",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 240,
       "label": "itertools Module Overview",
-      "group": "MOD"
+      "group": "MOD",
+      "cis": 1
     },
     {
       "id": 241,
       "label": "re Module Import",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 15
     },
     {
       "id": 242,
       "label": "re.search() First Match",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 2
     },
     {
       "id": 243,
       "label": "re.findall() All Matches",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 1
     },
     {
       "id": 244,
       "label": "re.split() Split by Pattern",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 1
     },
     {
       "id": 245,
       "label": "re.sub() Substitute Matches",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 1
     },
     {
       "id": 246,
       "label": "Digit Word Whitespace Patterns",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 8
     },
     {
       "id": 247,
       "label": "Anchors Start and End",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 1
     },
     {
       "id": 248,
       "label": "Character Classes",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 1
     },
     {
       "id": 249,
       "label": "Quantifiers Plus Star Question",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 1
     },
     {
       "id": 250,
       "label": "Alternation with Pipe",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 1
     },
     {
       "id": 251,
       "label": "Escaping Special Characters",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 1
     },
     {
       "id": 252,
       "label": "Raw Strings for Regex",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 1
     },
     {
       "id": 253,
       "label": "Regex Groups with Parentheses",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 1
     },
     {
       "id": 254,
       "label": "Compiled Regex Patterns",
-      "group": "TXT"
+      "group": "TXT",
+      "cis": 1
     },
     {
       "id": 255,
       "label": "open() Function",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 50
     },
     {
       "id": 256,
       "label": "File Modes r w a b",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 7
     },
     {
       "id": 257,
       "label": "file.read()",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 1
     },
     {
       "id": 258,
       "label": "file.readlines()",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 1
     },
     {
       "id": 259,
       "label": "file.readline()",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 1
     },
     {
       "id": 260,
       "label": "file.write()",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 3
     },
     {
       "id": 261,
       "label": "file.close()",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 10
     },
     {
       "id": 262,
       "label": "with Statement Context Manager",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 9
     },
     {
       "id": 263,
       "label": "Iterating over File Lines",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 2
     },
     {
       "id": 264,
       "label": "Text Processing strip() lower()",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 1
     },
     {
       "id": 265,
       "label": "CSV File Reading",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 2
     },
     {
       "id": 266,
       "label": "CSV File Writing",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 1
     },
     {
       "id": 267,
       "label": "Reading JSON from File",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 1
     },
     {
       "id": 268,
       "label": "Writing JSON to File",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 1
     },
     {
       "id": 269,
       "label": "File Path Handling",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 1
     },
     {
       "id": 270,
       "label": "Checking if File Exists",
-      "group": "FIO"
+      "group": "FIO",
+      "cis": 1
     },
     {
       "id": 271,
       "label": "Syntax vs Runtime vs Logic Errors",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 21
     },
     {
       "id": 272,
       "label": "Common Exception Types",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 15
     },
     {
       "id": 273,
       "label": "Reading a Traceback",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 2
     },
     {
       "id": 274,
       "label": "try...except Block",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 8
     },
     {
       "id": 275,
       "label": "Catching Specific Exceptions",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 1
     },
     {
       "id": 276,
       "label": "else Clause in try/except",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 1
     },
     {
       "id": 277,
       "label": "finally Clause",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 1
     },
     {
       "id": 278,
       "label": "raise Statement",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 4
     },
     {
       "id": 279,
       "label": "assert Statement",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 2
     },
     {
       "id": 280,
       "label": "Debugging with print()",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 2
     },
     {
       "id": 281,
       "label": "Using Search Engines to Debug",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 1
     },
     {
       "id": 282,
       "label": "Exception Hierarchy",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 3
     },
     {
       "id": 283,
       "label": "Custom Exception Classes",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 2
     },
     {
       "id": 284,
       "label": "Exception Chaining",
-      "group": "ERR"
+      "group": "ERR",
+      "cis": 1
     },
     {
       "id": 285,
       "label": "Objects and Classes Overview",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 174
     },
     {
       "id": 286,
       "label": "Attributes of an Object",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 3
     },
     {
       "id": 287,
       "label": "Methods of an Object",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 13
     },
     {
       "id": 288,
       "label": "class Keyword",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 43
     },
     {
       "id": 289,
       "label": "__init__() Constructor",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 13
     },
     {
       "id": 290,
       "label": "self Parameter",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 1
     },
     {
       "id": 291,
       "label": "Creating Class Instances",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 11
     },
     {
       "id": 292,
       "label": "Accessing Attributes and Methods",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 1
     },
     {
       "id": 293,
       "label": "String Methods as OOP Examples",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 1
     },
     {
       "id": 294,
       "label": "List Methods as OOP Examples",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 1
     },
     {
       "id": 295,
       "label": "Inheritance Basics",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 8
     },
     {
       "id": 296,
       "label": "__str__() String Representation",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 4
     },
     {
       "id": 297,
       "label": "__repr__() Developer Representation",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 2
     },
     {
       "id": 298,
       "label": "Subclasses and Method Overriding",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 2
     },
     {
       "id": 299,
       "label": "super() Function",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 1
     },
     {
       "id": 300,
       "label": "Class Variables vs Instance Variables",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 1
     },
     {
       "id": 301,
       "label": "Static Methods",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 1
     },
     {
       "id": 302,
       "label": "Properties with @property",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 1
     },
     {
       "id": 303,
       "label": "Dunder Methods Overview",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 1
     },
     {
       "id": 304,
       "label": "Object Composition",
-      "group": "OOP"
+      "group": "OOP",
+      "cis": 1
     },
     {
       "id": 305,
       "label": "import turtle",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 44
     },
     {
       "id": 306,
       "label": "turtle.Turtle() Object",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 32
     },
     {
       "id": 307,
       "label": "turtle.Screen() Object",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 10
     },
     {
       "id": 308,
       "label": "Screen Setup and bgcolor()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 2
     },
     {
       "id": 309,
       "label": "Movement forward() backward()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 9
     },
     {
       "id": 310,
       "label": "Turning left() right()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 3
     },
     {
       "id": 311,
       "label": "Absolute Positioning goto()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 312,
       "label": "Pen Control penup() pendown()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 313,
       "label": "Pen Size and Color",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 7
     },
     {
       "id": 314,
       "label": "Fill begin_fill() end_fill()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 315,
       "label": "Drawing circle() and Polygons",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 316,
       "label": "Turtle Appearance shape()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 317,
       "label": "Hiding and Showing Turtle",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 318,
       "label": "Writing Text with turtle.write()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 319,
       "label": "Clearing and Resetting",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 320,
       "label": "Position Query xcor() ycor()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 321,
       "label": "Speed Control speed()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 322,
       "label": "setheading() Direction",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 323,
       "label": "onscreenclick() Event Handler",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 2
     },
     {
       "id": 324,
       "label": "Animation with Turtle Loops",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 325,
       "label": "Color Picker with Turtle",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 326,
       "label": "Fractals with Recursion and Turtle",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 327,
       "label": "Sine Wave with Turtle and Math",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 328,
       "label": "Drawing Star Patterns",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 329,
       "label": "Turtle Race Simulation",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 330,
       "label": "Maze Visualization with Turtle",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 331,
       "label": "matplotlib Library Overview",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 15
     },
     {
       "id": 332,
       "label": "import matplotlib.pyplot as plt",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 14
     },
     {
       "id": 333,
       "label": "plt.plot() Line Plot",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 4
     },
     {
       "id": 334,
       "label": "plt.show() Display",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 335,
       "label": "Plot Title and Axis Labels",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 336,
       "label": "plt.grid() Grid Lines",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 337,
       "label": "Plotting a Sine Wave",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 338,
       "label": "Lists as XY Plot Data",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 339,
       "label": "plt.scatter() Scatter Plot",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 340,
       "label": "plt.bar() Bar Chart",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 341,
       "label": "plt.hist() Histogram",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 342,
       "label": "plt.legend() Legend",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 343,
       "label": "plt.savefig() Save Plot",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 344,
       "label": "Multiple Lines on One Plot",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 345,
       "label": "Subplots with plt.subplot()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 346,
       "label": "numpy Library Overview",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 60
     },
     {
       "id": 347,
       "label": "import numpy as np",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 25
     },
     {
       "id": 348,
       "label": "np.array() Creating Arrays",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 21
     },
     {
       "id": 349,
       "label": "np.argmax() Index of Max",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 350,
       "label": "Array Operations and Broadcasting",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 3
     },
     {
       "id": 351,
       "label": "Reshaping Arrays",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 3
     },
     {
       "id": 352,
       "label": "np.zeros() np.ones()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 353,
       "label": "np.linspace() Evenly Spaced Values",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 354,
       "label": "Array Slicing and Indexing",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 355,
       "label": "Element-wise Math Operations",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 356,
       "label": "np.mean() np.std()",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 357,
       "label": "PIL Pillow Library Overview",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 14
     },
     {
       "id": 358,
       "label": "Image.open() Open Image",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 13
     },
     {
       "id": 359,
       "label": "image.show() Display Image",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 360,
       "label": "Pixel Data and Image Arrays",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 8
     },
     {
       "id": 361,
       "label": "Image Resize and Crop",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 362,
       "label": "Image Color Conversion",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 363,
       "label": "Saving Images",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 364,
       "label": "Abstract Data Types Overview",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 19
     },
     {
       "id": 365,
       "label": "Stack LIFO Structure",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 4
     },
     {
       "id": 366,
       "label": "Queue FIFO Structure",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 11
     },
     {
       "id": 367,
       "label": "Queue enqueue() dequeue()",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 1
     },
     {
       "id": 368,
       "label": "Graph Nodes and Edges",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 15
     },
     {
       "id": 369,
       "label": "Adjacency List Representation",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 12
     },
     {
       "id": 370,
       "label": "Breadth-First Search BFS",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 8
     },
     {
       "id": 371,
       "label": "BFS Color Tracking",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 4
     },
     {
       "id": 372,
       "label": "BFS for Path Finding",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 3
     },
     {
       "id": 373,
       "label": "Depth-First Search DFS",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 3
     },
     {
       "id": 374,
       "label": "DFS with Recursion",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 2
     },
     {
       "id": 375,
       "label": "DFS and BFS for Maze Solving",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 1
     },
     {
       "id": 376,
       "label": "Sorting Algorithms Overview",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 9
     },
     {
       "id": 377,
       "label": "Bubble Sort",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 1
     },
     {
       "id": 378,
       "label": "Selection Sort",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 1
     },
     {
       "id": 379,
       "label": "Insertion Sort",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 1
     },
     {
       "id": 380,
       "label": "Binary Search Concept",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 3
     },
     {
       "id": 381,
       "label": "Time Complexity Big-O Overview",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 2
     },
     {
       "id": 382,
       "label": "Space Complexity Overview",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 1
     },
     {
       "id": 383,
       "label": "Linked List Concept",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 1
     },
     {
       "id": 384,
       "label": "Tree Data Structure Concept",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 2
     },
     {
       "id": 385,
       "label": "Binary Tree Basics",
-      "group": "ALG"
+      "group": "ALG",
+      "cis": 1
     },
     {
       "id": 386,
       "label": "Machine Learning Overview",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 28
     },
     {
       "id": 387,
       "label": "Supervised vs Unsupervised Learning",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 388,
       "label": "keras Library Overview",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 32
     },
     {
       "id": 389,
       "label": "Sequential Model",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 31
     },
     {
       "id": 390,
       "label": "Dense Fully Connected Layers",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 6
     },
     {
       "id": 391,
       "label": "Activation Functions relu softmax",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 392,
       "label": "Conv2D Convolutional Layers",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 7
     },
     {
       "id": 393,
       "label": "MaxPooling2D Pooling Layers",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 394,
       "label": "Dropout Regularization",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 395,
       "label": "Flatten Layer",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 396,
       "label": "model.compile()",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 4
     },
     {
       "id": 397,
       "label": "model.fit() Training",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 398,
       "label": "model.evaluate() Testing",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 399,
       "label": "model.predict() Inference",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 400,
       "label": "Categorical Crossentropy Loss",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 5
     },
     {
       "id": 401,
       "label": "Adam Optimizer",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 5
     },
     {
       "id": 402,
       "label": "Accuracy Metric",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 5
     },
     {
       "id": 403,
       "label": "Batch Size and Epochs",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 3
     },
     {
       "id": 404,
       "label": "MNIST Dataset",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 405,
       "label": "Data Normalization",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 406,
       "label": "Convolutional Neural Networks",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 407,
       "label": "Feedforward Networks",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 408,
       "label": "Recurrent Networks RNN Overview",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 409,
       "label": "LSTM Networks Overview",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 410,
       "label": "Autoencoders Overview",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 411,
       "label": "Training vs Validation vs Test Sets",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 6
     },
     {
       "id": 412,
       "label": "Overfitting Concept",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 413,
       "label": "Feature Extraction",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 414,
       "label": "ipycanvas Canvas in Jupyter",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 3
     },
     {
       "id": 415,
       "label": "mobilechelonian Turtle in Jupyter",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 416,
       "label": "Drawing Shapes on Canvas",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 417,
       "label": "Color Bars in Jupyter",
-      "group": "VIZ"
+      "group": "VIZ",
+      "cis": 1
     },
     {
       "id": 418,
       "label": "Event-Driven Programming Model",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 9
     },
     {
       "id": 419,
       "label": "Mouse Click Event Handlers",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 3
     },
     {
       "id": 420,
       "label": "Keyboard Event Handlers",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 421,
       "label": "Callback Functions",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 422,
       "label": "Animation Loops",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 423,
       "label": "Event Queue Concept",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 424,
       "label": "Timer-Based Events",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 425,
       "label": "Modularity in Code",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 15
     },
     {
       "id": 426,
       "label": "Code Reusability",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 3
     },
     {
       "id": 427,
       "label": "DRY Principle",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 428,
       "label": "Meaningful Names",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 429,
       "label": "Code Comments When and Why",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 430,
       "label": "Literate Programming in Jupyter",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 431,
       "label": "Reading Docs with help() and dir()",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 432,
       "label": "Version Control Basics",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 433,
       "label": "Searching Documentation",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 434,
       "label": "Code Refactoring",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 435,
       "label": "Test-Driven Thinking",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 436,
       "label": "Pair Programming Concept",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 437,
       "label": "Named Colors",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 23
     },
     {
       "id": 438,
       "label": "Hex Color Values",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 6
     },
     {
       "id": 439,
       "label": "RGB Color Model",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 5
     },
     {
       "id": 440,
       "label": "Color in Turtle Graphics",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 441,
       "label": "Background and Pen Colors",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 442,
       "label": "HSL Color Model",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 443,
       "label": "Color Theory Basics",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 444,
       "label": "Transparency and Alpha",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 445,
       "label": "Decomposition",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 7
     },
     {
       "id": 446,
       "label": "Pattern Recognition",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 447,
       "label": "Abstraction in Programming",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 3
     },
     {
       "id": 448,
       "label": "Algorithm Design",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 2
     },
     {
       "id": 449,
       "label": "Pseudocode Writing",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 450,
       "label": "Debugging Strategies",
-      "group": "ADV"
+      "group": "ADV",
+      "cis": 1
     },
     {
       "id": 451,
       "label": "uv",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     },
     {
       "id": 452,
       "label": "Rust",
-      "group": "ENV"
+      "group": "ENV",
+      "cis": 1
     }
   ],
   "edges": [
