@@ -1,7 +1,7 @@
 {
   "faq_version": "1.0",
   "generated_date": "2026-06-28",
-  "source_textbook": "Beginning Python — From Blocks to Code with Monty",
+  "source_textbook": "Learning Python — From Blocks to Code with Monty",
   "total_questions": 89,
   "categories": [
     "Getting Started",
@@ -16,7 +16,7 @@
       "id": "faq-001",
       "category": "Getting Started",
       "question": "What is this course about?",
-      "answer": "Beginning Python — From Blocks to Code with Monty is a project-driven course that takes students who have already learned Scratch and teaches them real Python. It starts with visual turtle graphics and builds toward variables, loops, functions, data structures, and machine learning. Monty the python-snake mascot guides every lesson.",
+      "answer": "Learning Python — From Blocks to Code with Monty is a project-driven course that takes students who have already learned Scratch and teaches them real Python. It starts with visual turtle graphics and builds toward variables, loops, functions, data structures, and machine learning. Monty the python-snake mascot guides every lesson.",
       "bloom_level": "Understand",
       "difficulty": "easy",
       "concepts": ["Python Interpreter Overview", "Skulpt Browser Python"],
