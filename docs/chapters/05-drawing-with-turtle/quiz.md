@@ -110,8 +110,6 @@ t.forward(100)
 
 #### 7. What does `t.pensize(5)` do?
 
-<parameter name="content">#### 7. What does `t.pensize(5)` do?
-
 <div class="upper-alpha" markdown>
 1. Makes the turtle move 5 times faster
 2. Sets the thickness of the lines the turtle draws to 5 pixels
