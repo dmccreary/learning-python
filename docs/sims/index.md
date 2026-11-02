@@ -285,3 +285,32 @@ Interactive Micro Simulations to help students beginning Python programming. Cli
     Step BFS and DFS over the same graph with the live queue or stack
     beside it — then watch BFS reveal the shortest path. (Chapter 30)
 
+
+-   **[I2C Bus Scanner](./i2c-scanner/index.md)**
+
+    ---
+
+    ![I2C Bus Scanner](./i2c-scanner/i2c-scanner.png)
+
+    Watch the CPU ask every address "is anyone there?" while an MPU-6050,
+    a compass and a display answer with an ACK. (Appendix A)
+
+-   **[I2C Two Sensors in a Maze](./i2c-two-sensors-maze/index.md)**
+
+    ---
+
+    ![I2C Two Sensors in a Maze](./i2c-two-sensors-maze/i2c-two-sensors-maze.png)
+
+    A robot drives a maze while one bus carries an accelerometer and a
+    gyroscope (or compass) that take turns, never at the same instant.
+    (Appendix A)
+
+-   **[I2C Five-Device Sensor Fusion](./i2c-sensor-fusion/index.md)**
+
+    ---
+
+    ![I2C Five-Device Sensor Fusion](./i2c-sensor-fusion/i2c-sensor-fusion.png)
+
+    Five devices share one bus on a to-scale timeline: see a display frame
+    block the sensors, then fuse accelerometer and gyroscope into one angle.
+    (Appendix A)
